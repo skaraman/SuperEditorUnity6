@@ -31,7 +31,7 @@ namespace SuperEditor.Favorites
             for (int i = 0; i < this.goIDs.Count; i++)
             {
                 GlobalObjectId globalObjectId;
-                GlobalObjectId.TryParse(this.goIDs[i], ref globalObjectId);
+                GlobalObjectId.TryParse(this.goIDs[i], out globalObjectId);
                 GameObject gameObject = GlobalObjectId.GlobalObjectIdentifierToObjectSlow(globalObjectId) as GameObject;
                 bool flag2 = !this.gos.Contains(gameObject);
                 if (flag2)
