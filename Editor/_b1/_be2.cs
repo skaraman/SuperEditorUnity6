@@ -42,7 +42,7 @@ namespace AHO
                 Vector2 center = focusedWindow.position.center;
                 window.position = new Rect((float)((int)(center.x - 180f)), (float)((int)(center.y - 130f)), 360f, 260f);
             }
-            bool flag2 = Application.platform == null || Application.platform == 7;
+            bool flag2 = Application.platform == RuntimePlatform.WindowsEditor;
             if (flag2)
             {
                 typeof(EditorWindow).GetMethod("ShowModal").Invoke(window, new object[0]);

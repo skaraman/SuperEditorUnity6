@@ -70,14 +70,14 @@ namespace AHO
         // Token: 0x060000C5 RID: 197 RVA: 0x00009E20 File Offset: 0x00008020
         internal static void AddItem(this GenericMenu menu, string osxText, string osxKey, string winText, string winKey, bool on, GenericMenu.MenuFunction func)
         {
-            bool flag = Application.platform == 0;
+            bool flag = Application.platform == RuntimePlatform.OSXEditor;
             if (flag)
             {
                 menu.AddItem(new GUIContent(osxText + " _" + osxKey), on, func);
             }
             else
             {
-                bool flag2 = (int)Application.platform == 16;
+                bool flag2 = Application.platform == RuntimePlatform.LinuxEditor;
                 if (flag2)
                 {
                     winKey = (winKey.Contains("enter") ? winKey.Replace("enter", "Return") : winKey);
@@ -97,7 +97,7 @@ namespace AHO
         // Token: 0x060000C6 RID: 198 RVA: 0x00009F64 File Offset: 0x00008164
         internal static void AddItem(this GenericMenu menu, string osxText, string osxKey, string winText, string winKey, bool on, GenericMenu.MenuFunction2 func, object userData)
         {
-            bool flag = Application.platform == 0;
+            bool flag = Application.platform == RuntimePlatform.OSXEditor;
             if (flag)
             {
                 menu.AddItem(new GUIContent(osxText), on, func, userData);

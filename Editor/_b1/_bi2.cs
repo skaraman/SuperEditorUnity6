@@ -35,7 +35,7 @@ namespace AHO
             bool enabled = GUI.enabled;
             GUI.enabled = true;
             rect.width -= 60f;
-            bool flag = Application.platform == 0;
+            bool flag = Application.platform == RuntimePlatform.OSXEditor;
             Vector2 vector = new Vector2(27f, 21f);
             Rect rect2 = new Rect(0f, rect.yMin, vector.x, vector.y);
             GUI.enabled = this.CanGoBack() && this.CanEdit();
@@ -9078,7 +9078,7 @@ namespace AHO
         {
             this._AFO.yMin = this._AFO.yMin + 21f;
             Rect rect = new Rect(this._AFO.xMin, this._AFO.yMin - 21f, this._AFO.width, 21f);
-            bool flag = Application.platform == 0;
+            bool flag = Application.platform == RuntimePlatform.OSXEditor;
             bool flag2 = !this._CHS.image;
             if (flag2)
             {
@@ -9128,7 +9128,7 @@ namespace AHO
             bool flag7 = (int)Event.current.type == 7;
             if (flag7)
             {
-                string text = (this._ABQ._ARV() ? "Loading..." : ((!EditorApplication.isCompiling && _bc5._AOO() && !this._ABQ._ALW()) ? ((Application.platform == null) ? "Saved,Press Command+S to compile" : "Saved,Press Ctrl+S to compile") : ((!EditorApplication.isCompiling) ? null : ((_bi2._CCX.Count > 0) ? "Compiling in background..." : ((_bi2._CCW == 0) ? "Compiling..." : ((this._ALW() && flag) ? "Cmd-Alt-R to reload assemblies..." : (this._ALW() ? "Ctrl+R to reload assemblies..." : (flag ? "Cmd-Alt-R or Save again to reload assemblies..." : "Ctrl+R or Save again to reload assemblies..."))))))));
+                string text = (this._ABQ._ARV() ? "Loading..." : ((!EditorApplication.isCompiling && _bc5._AOO() && !this._ABQ._ALW()) ? ((Application.platform == RuntimePlatform.OSXEditor) ? "Saved,Press Command+S to compile" : "Saved,Press Ctrl+S to compile") : ((!EditorApplication.isCompiling) ? null : ((_bi2._CCX.Count > 0) ? "Compiling in background..." : ((_bi2._CCW == 0) ? "Compiling..." : ((this._ALW() && flag) ? "Cmd-Alt-R to reload assemblies..." : (this._ALW() ? "Ctrl+R to reload assemblies..." : (flag ? "Cmd-Alt-R or Save again to reload assemblies..." : "Ctrl+R or Save again to reload assemblies..."))))))));
                 bool flag8 = text == null && rect2.width > 300f;
                 if (flag8)
                 {
@@ -9340,7 +9340,7 @@ namespace AHO
             if (flag8)
             {
                 this._CDT = this._CIF != null && this._CIF.HasFocus();
-                bool flag9 = Application.platform == 0;
+                bool flag9 = Application.platform == RuntimePlatform.OSXEditor;
                 bool flag10 = (int)Event.current.keyCode == 284 && !EditorGUI.actionKey;
                 if (flag10)
                 {
@@ -9490,7 +9490,7 @@ namespace AHO
                 bool flag10 = !this._CIF.HasFocus();
                 if (flag10)
                 {
-                    this._CIE = ((Application.platform == null) ? "command + F" : "ctrl + F");
+                    this._CIE = ((Application.platform == RuntimePlatform.OSXEditor) ? "command + F" : "ctrl + F");
                     GUI.enabled = false;
                     rect.x += 16f;
                     rect.y -= 3f;
@@ -9618,9 +9618,9 @@ namespace AHO
                     this._CGY = 0f;
                 }
                 bool flag3 = true;
-                bool flag4 = (int)Application.platform == 0;
-                bool flag5 = (int)Application.platform == 16;
-                bool flag6 = (int)Application.platform == 7;
+                bool flag4 = Application.platform == RuntimePlatform.OSXEditor;
+                bool flag5 = Application.platform == RuntimePlatform.LinuxEditor;
+                bool flag6 = Application.platform == RuntimePlatform.WindowsEditor;
                 EventModifiers eventModifiers = (EventModifiers)((int)current.modifiers & -113);
                 bool flag7 = ((int)current.modifiers & (flag4 ? 8 : 2)) > 0;
                 int num = -1;
@@ -10084,7 +10084,7 @@ namespace AHO
                                             bool flag68 = flag7 && EditorWindow.focusedWindow;
                                             if (flag68)
                                             {
-                                                bool flag69 = Application.platform == 0;
+                                                bool flag69 = Application.platform == RuntimePlatform.OSXEditor;
                                                 if (flag69)
                                                 {
                                                     current.Use();
@@ -12656,7 +12656,7 @@ namespace AHO
                                 {
                                     return;
                                 }
-                                bool flag50 = Application.platform == 0;
+                                bool flag50 = Application.platform == RuntimePlatform.OSXEditor;
                                 bool flag51 = (int)Event.current.type == 16 || (flag50 && (int)Event.current.type == 1 && Event.current.button == 1);
                                 bool flag52 = ((int)Event.current.type == 4 && ((int)Event.current.keyCode == 319 || Event.current.Equals(Event.KeyboardEvent("#f12")))) || (flag51 && this._AFO.Contains(Event.current.mousePosition));
                                 if (flag52)
@@ -14891,7 +14891,7 @@ namespace AHO
                         bool flag28 = Event.current.commandName == "Delete" && this.TryEdit();
                         if (flag28)
                         {
-                            bool flag29 = Application.platform == null || (this._ATW() == null && !_bg8._BAP);
+                            bool flag29 = Application.platform == RuntimePlatform.OSXEditor || (this._ATW() == null && !_bg8._BAP);
                             if (flag29)
                             {
                                 this.CommandDeleteLine();

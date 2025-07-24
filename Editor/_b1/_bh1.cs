@@ -121,7 +121,7 @@ namespace AHO
             Vector2 vector = new Vector2(width, height);
             base.minSize = vector;
             base.maxSize = vector;
-            bool flag = Application.platform == 0;
+            bool flag = Application.platform == RuntimePlatform.OSXEditor;
             if (flag)
             {
                 EditorApplication.delayCall = (EditorApplication.CallbackFunction)Delegate.Combine(EditorApplication.delayCall, new EditorApplication.CallbackFunction(base.Focus));
@@ -194,7 +194,7 @@ namespace AHO
                 bool flag3 = (int)Event.current.type == 4 && (int)Event.current.keyCode == 9;
                 if (flag3)
                 {
-                    bool flag4 = Application.platform == 0;
+                    bool flag4 = Application.platform == RuntimePlatform.OSXEditor;
                     bool flag5 = flag4;
                     if (flag5)
                     {
@@ -261,7 +261,7 @@ namespace AHO
                 EditorApplication.delayCall = (EditorApplication.CallbackFunction)Delegate.Combine(EditorApplication.delayCall, new EditorApplication.CallbackFunction(this.CloseAndSwitch));
             }
             EventModifiers eventModifiers = (EventModifiers)((int)Event.current.modifiers & -113);
-            bool flag3 = Application.platform == 0;
+            bool flag3 = Application.platform == RuntimePlatform.OSXEditor;
             bool flag4 = flag3;
             if (flag4)
             {
