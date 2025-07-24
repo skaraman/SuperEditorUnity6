@@ -394,6 +394,14 @@ namespace UnityEngine
 
 namespace UnityEditor
 {
+    public enum MessageType
+    {
+        None = 0,
+        Info = 1,
+        Warning = 2,
+        Error = 3
+    }
+
     public class EditorWindow : UnityEngine.ScriptableObject
     {
         public static T GetWindow<T>() where T : EditorWindow => null;
@@ -428,6 +436,9 @@ namespace UnityEditor
         public static int IntField(string label, int value) => value;
         public static float FloatField(string label, float value) => value;
         public static bool Toggle(string label, bool value) => value;
+        public static void HelpBox(string message, MessageType type) { }
+        public static void HelpBox(string message, MessageType type, bool wide) { }
+        public static UnityEngine.Rect GetControlRect(params UnityEngine.GUILayoutOption[] options) => new UnityEngine.Rect();
     }
 
     public static class EditorGUI
