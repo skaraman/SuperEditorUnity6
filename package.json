@@ -1,0 +1,14 @@
+{
+  "name": "com.supereditor.unity6",
+  "version": "1.0.0",
+  "displayName": "Super Editor Unity 6",
+  "description": "Super Editor for Unity 6 - Enhanced Unity Editor functionality",
+  "unity": "6000.1",
+  "unityRelease": "9f1",
+  "keywords": ["editor", "tools", "unity6"],
+  "author": {
+    "name": "SuperEditor",
+    "email": "support@supereditor.com"
+  },
+  "type": "library"
+}
