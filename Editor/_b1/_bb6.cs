@@ -564,7 +564,7 @@ namespace AHO
                 }
             }
             string text = AssetDatabase.GUIDToAssetPath(guid);
-            object @object = AssetDatabase.LoadAssetAtPath(text, typeof(MonoScript)) as MonoScript;
+            UnityEngine.Object @object = AssetDatabase.LoadAssetAtPath(text, typeof(MonoScript)) as MonoScript;
             if (@object == null) @object = AssetDatabase.LoadAssetAtPath(text, typeof(TextAsset)) as TextAsset;
             if (@object == null) @object = AssetDatabase.LoadAssetAtPath(text, typeof(Shader)) as Shader;
             if (@object == null) @object = AssetDatabase.LoadAssetAtPath(text, typeof(UnityEngine.Object));
