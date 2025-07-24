@@ -1,5 +1,5 @@
 {
-    "name": "SuperEditor",
+    "name": "SuperEditorUnity6.Editor",
     "rootNamespace": "SuperEditor",
     "references": [],
     "includePlatforms": [
