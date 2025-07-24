@@ -20,7 +20,7 @@ namespace AHO
         public static _be3 Create(GCE textBuffer, string path)
         {
             string text = Path.GetExtension(path) ?? string.Empty;
-            Type type;
+            Type type = null;
             bool flag = !_bj5.IsIgnoredScript(path) && _be3._AVX.TryGetValue(text, out type);
             _be3 _AVY;
             if (flag)

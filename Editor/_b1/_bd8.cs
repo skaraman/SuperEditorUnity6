@@ -2003,7 +2003,7 @@ namespace AHO
                         new Dictionary<string, string>()
                     };
                 }
-                string text2;
+                string text2 = null;
                 bool flag3 = GCE._AUR[startAtColumn % GCE._ASA].TryGetValue(s, out text2);
                 if (flag3)
                 {

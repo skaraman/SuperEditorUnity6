@@ -891,7 +891,7 @@ namespace AHO
         public _ba7 ImportReflectedMethod(MethodInfo info)
         {
             string name = info.Name;
-            _bh4 _AAH;
+            _bh4 _AAH = null;
             this._AAG.TryGetValue(name, 0, out _AAH);
             _ba7 _AAK = _AAH as _ba7;
             bool flag = _AAH != null && _AAK == null;

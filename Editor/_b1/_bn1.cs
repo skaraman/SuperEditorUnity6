@@ -45,7 +45,7 @@ namespace AHO
                     bool flag3 = !_AAH.IsAccessible(accessLevelMask);
                     if (!flag3)
                     {
-                        _bh4 _AAH2;
+                        _bh4 _AAH2 = null;
                         bool flag4 = _AAH._AAG.TryGetValue(id, num, out _AAH2);
                         if (flag4)
                         {
