@@ -111,7 +111,7 @@ namespace AHO
         // Token: 0x060004BA RID: 1210 RVA: 0x000CE8FC File Offset: 0x000CCAFC
         public static _bj5 FromAssembly(System.Reflection.Assembly assembly)
         {
-            _bj5 _AOS;
+            _bj5 _AOS = null;
             bool flag = !_bj5.DIBFNKBPDMFNEMNDIPLBONFLMFAKKCEPLILA.TryGetValue(assembly, out _AOS);
             if (flag)
             {
@@ -169,7 +169,7 @@ namespace AHO
                     }
                 }
             }
-            _bj5 _AOS;
+            _bj5 _AOS = null;
             bool flag3 = !_bj5.PJKEBCBBMNJPCABBHPIKIMEJMACMLDFJBDNH.TryGetValue(assemblyPath, out _AOS);
             if (flag3)
             {
@@ -605,7 +605,7 @@ namespace AHO
                     {
                         _AOS.EKNILLOGEAIKLJHEMKKAGIBGBNKMFENLCAFB = new Dictionary<string, _be7>();
                     }
-                    _be7 _CHH2;
+                    _be7 _CHH2 = null;
                     bool flag4 = !_AOS.EKNILLOGEAIKLJHEMKKAGIBGBNKMFENLCAFB.TryGetValue(assetPath, out _CHH2) || forceCreateNew;
                     if (flag4)
                     {
@@ -694,7 +694,7 @@ namespace AHO
                     bool isNested = type.IsNested;
                     if (!isNested)
                     {
-                        _be8 _AFK;
+                        _be8 _AFK = null;
                         bool flag2 = _bh4._BEJ.TryGetValue(type, out _AFK);
                         if (!flag2)
                         {
@@ -703,7 +703,7 @@ namespace AHO
                             bool flag3 = !string.IsNullOrEmpty(@namespace);
                             if (flag3)
                             {
-                                _bn1 _APR;
+                                _bn1 _APR = null;
                                 bool flag4 = dictionary.TryGetValue(@namespace, out _APR);
                                 if (flag4)
                                 {

@@ -2146,7 +2146,7 @@ namespace AHO
             // Token: 0x06000856 RID: 2134 RVA: 0x000F99A0 File Offset: 0x000F7BA0
             public int TokenToId(string s)
             {
-                int num;
+                int num = 0;
                 bool flag = !this._BEV.TryGetValue(s, out num);
                 if (flag)
                 {
