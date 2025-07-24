@@ -7,10 +7,35 @@
     <LangVersion>latest</LangVersion>
     <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
     <EnableDefaultEmbeddedResourceItems>false</EnableDefaultEmbeddedResourceItems>
+    <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
     <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+    <!-- Set a variable to track Unity availability -->
+    <UnityAvailable Condition="Exists('C:\Program Files\Unity\Hub\Editor\6000.1.9f1\Editor\Data\Managed\UnityEngine\UnityEngine.CoreModule.dll') OR Exists('/opt/unity/Editor/6000.1.9f1/Editor/Data/Managed/UnityEngine/UnityEngine.CoreModule.dll')">true</UnityAvailable>
+    <UnityAvailable Condition="'$(UnityAvailable)' == ''">false</UnityAvailable>
+  </PropertyGroup>
+
+  <!-- Define compilation symbols based on Unity availability -->
+  <PropertyGroup Condition="'$(UnityAvailable)' == 'true'">
+    <DefineConstants>$(DefineConstants);UNITY_AVAILABLE;UNITY_EDITOR</DefineConstants>
   </PropertyGroup>
   
-  <!-- Unity 6 Assembly References - Windows -->
+  <PropertyGroup Condition="'$(UnityAvailable)' == 'false'">
+    <DefineConstants>$(DefineConstants);NO_UNITY</DefineConstants>
+  </PropertyGroup>
+
+  <!-- Conditionally include source files only when Unity is available -->
+  <ItemGroup Condition="'$(UnityAvailable)' == 'true'">
+    <Compile Include="**/*.cs" Exclude="bin/**;obj/**;NoUnityStub.cs" />
+  </ItemGroup>
+
+  <!-- When Unity is not available, only include a stub file -->
+  <ItemGroup Condition="'$(UnityAvailable)' == 'false'">
+    <Compile Include="NoUnityStub.cs" />
+  </ItemGroup>
+  
+  <!-- Unity 6 Assembly References - Cross Platform -->
+  
+  <!-- Windows Unity Installation -->
   <ItemGroup Condition="Exists('C:\Program Files\Unity\Hub\Editor\6000.1.9f1\Editor\Data\Managed\UnityEngine\UnityEngine.CoreModule.dll')">
     <Reference Include="UnityEngine.CoreModule">
       <HintPath>C:\Program Files\Unity\Hub\Editor\6000.1.9f1\Editor\Data\Managed\UnityEngine\UnityEngine.CoreModule.dll</HintPath>
@@ -33,16 +58,75 @@
       <Private>False</Private>
     </Reference>
     <Reference Include="UnityEngine.UIElementsModule">
-  <HintPath>C:\Program Files\Unity\Hub\Editor\6000.1.9f1\Editor\Data\Managed\UnityEngine\UnityEngine.UIElementsModule.dll</HintPath>
-  <Private>False</Private>
-</Reference>
+      <HintPath>C:\Program Files\Unity\Hub\Editor\6000.1.9f1\Editor\Data\Managed\UnityEngine\UnityEngine.UIElementsModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
     <Reference Include="UnityEditor.UIElementsModule">
-  <HintPath>C:\Program Files\Unity\Hub\Editor\6000.1.9f1\Editor\Data\Managed\UnityEditor\UnityEditor.UIElementsModule.dll</HintPath>
-  <Private>False</Private>
-</Reference>
-
-
+      <HintPath>C:\Program Files\Unity\Hub\Editor\6000.1.9f1\Editor\Data\Managed\UnityEditor\UnityEditor.UIElementsModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <!-- Additional Windows Unity assemblies needed for full Editor support -->
+    <Reference Include="UnityEditor">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\6000.1.9f1\Editor\Data\Managed\UnityEditor.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\6000.1.9f1\Editor\Data\Managed\UnityEngine.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
   </ItemGroup>
+
+  <!-- Linux Unity Installation (common paths) -->
+  <ItemGroup Condition="Exists('/opt/unity/Editor/6000.1.9f1/Editor/Data/Managed/UnityEngine/UnityEngine.CoreModule.dll')">
+    <Reference Include="UnityEngine.CoreModule">
+      <HintPath>/opt/unity/Editor/6000.1.9f1/Editor/Data/Managed/UnityEngine/UnityEngine.CoreModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEditor.CoreModule">
+      <HintPath>/opt/unity/Editor/6000.1.9f1/Editor/Data/Managed/UnityEngine/UnityEditor.CoreModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.IMGUIModule">
+      <HintPath>/opt/unity/Editor/6000.1.9f1/Editor/Data/Managed/UnityEngine/UnityEngine.IMGUIModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.TextRenderingModule">
+      <HintPath>/opt/unity/Editor/6000.1.9f1/Editor/Data/Managed/UnityEngine/UnityEngine.TextRenderingModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.UnityWebRequestModule">
+      <HintPath>/opt/unity/Editor/6000.1.9f1/Editor/Data/Managed/UnityEngine/UnityEngine.UnityWebRequestModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.UIElementsModule">
+      <HintPath>/opt/unity/Editor/6000.1.9f1/Editor/Data/Managed/UnityEngine/UnityEngine.UIElementsModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEditor.UIElementsModule">
+      <HintPath>/opt/unity/Editor/6000.1.9f1/Editor/Data/Managed/UnityEditor/UnityEditor.UIElementsModule.dll</HintPath>  
+      <Private>False</Private>
+    </Reference>
+    <!-- Additional Linux Unity assemblies needed for full Editor support -->
+    <Reference Include="UnityEditor">
+      <HintPath>/opt/unity/Editor/6000.1.9f1/Editor/Data/Managed/UnityEditor.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine">
+      <HintPath>/opt/unity/Editor/6000.1.9f1/Editor/Data/Managed/UnityEngine.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+  </ItemGroup>
+
+  <!-- Show helpful messages about Unity availability -->
+  <Target Name="CheckUnityInstallation" BeforeTargets="Build">
+    <Message Text="Unity Availability: $(UnityAvailable)" Importance="high" />
+    <Warning Text="Unity 6000.1.9f1 installation not found. Building with stub implementation only." Condition="'$(UnityAvailable)' == 'false'" />
+    <Warning Text="Expected Unity installation paths:" Condition="'$(UnityAvailable)' == 'false'" />
+    <Warning Text="  Windows: C:\Program Files\Unity\Hub\Editor\6000.1.9f1\" Condition="'$(UnityAvailable)' == 'false'" />
+    <Warning Text="  Linux: /opt/unity/Editor/6000.1.9f1\" Condition="'$(UnityAvailable)' == 'false'" />
+    <Warning Text="For Unity Package usage, use the .asmdef file instead of building this .csproj directly." Condition="'$(UnityAvailable)' == 'false'" />
+    <Message Text="Building with Unity assemblies available." Importance="high" Condition="'$(UnityAvailable)' == 'true'" />
+  </Target>
   <ItemGroup>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
