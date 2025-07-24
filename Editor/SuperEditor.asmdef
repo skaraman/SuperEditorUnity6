@@ -1,7 +1,10 @@
 {
     "name": "SuperEditorUnity6.Editor",
     "rootNamespace": "SuperEditor",
-    "references": [],
+    "references": [
+        "UnityEngine.UIElementsModule",
+        "UnityEditor.UIElementsModule"
+    ],
     "includePlatforms": [
         "Editor"
     ],
