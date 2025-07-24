@@ -94,8 +94,8 @@ namespace OKPF
             {
                 _h2.ShowWindow();
             }
-            List<object> list;
-            List<object> list2;
+            List<UnityEngine.Object> list;
+            List<UnityEngine.Object> list2;
             this.CheckObject(_objects, out list, out list2);
             bool flag2 = list.Count > 0;
             if (flag2)
@@ -104,7 +104,7 @@ namespace OKPF
             }
             for (int i = 0; i < list.Count; i++)
             {
-                _h2.ShiftRight<object>(this.LBAF().Objects);
+                _h2.ShiftRight<UnityEngine.Object>(this.LBAF().Objects);
             }
             EditorUtility.SetDirty(_h2.JDPP());
             AssetDatabase.SaveAssets();
@@ -324,19 +324,16 @@ namespace OKPF
         // Token: 0x06000923 RID: 2339 RVA: 0x000FDB78 File Offset: 0x000FBD78
         private void DrawObj(UnityEngine.Object currentObject, Rect rect)
         {
-            Rect rect2;
-            rect2..ctor(rect);
+            Rect rect2 = new Rect(rect);
             rect2.y += 1f;
             rect2.height -= 4f;
             rect2.width = rect2.height;
-            Rect rect3;
-            rect3..ctor(rect);
+            Rect rect3 = new Rect(rect);
             rect3.y += 2f;
             rect3.height -= 4f;
             rect3.x += rect2.width;
             rect3.width -= rect2.width;
-            Rect rect4;
-            rect4..ctor(rect);
+            Rect rect4 = new Rect(rect);
             rect4.x = 0f;
             rect4.width = base.position.width;
             GUI.DrawTexture(rect2, AssetPreview.GetMiniThumbnail(currentObject), 2, true);
