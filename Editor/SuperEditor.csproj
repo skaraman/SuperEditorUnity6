@@ -23,6 +23,10 @@
     <DefineConstants>$(DefineConstants);NO_UNITY</DefineConstants>
   </PropertyGroup>
 
+  <PropertyGroup Condition="'$(ForceCompileAll)' == 'true'">
+    <DefineConstants>$(DefineConstants);FORCE_COMPILE_ALL</DefineConstants>
+  </PropertyGroup>
+
   <!-- Conditionally include source files only when Unity is available -->
   <ItemGroup Condition="'$(UnityAvailable)' == 'true'">
     <Compile Include="**/*.cs" Exclude="bin/**;obj/**;NoUnityStub.cs" />
@@ -31,6 +35,11 @@
   <!-- When Unity is not available, only include a stub file -->
   <ItemGroup Condition="'$(UnityAvailable)' == 'false'">
     <Compile Include="NoUnityStub.cs" />
+  </ItemGroup>
+
+  <!-- Force compilation of all files for error detection (temporary) -->
+  <ItemGroup Condition="'$(ForceCompileAll)' == 'true'">
+    <Compile Include="**/*.cs" Exclude="bin/**;obj/**;NoUnityStub.cs" />
   </ItemGroup>
   
   <!-- Unity 6 Assembly References - Cross Platform -->
