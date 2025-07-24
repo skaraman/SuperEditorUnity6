@@ -1515,7 +1515,7 @@ namespace AHO
             bool flag = Event.current.isKey && _bh1.OnGUIGlobal();
             if (!flag)
             {
-                bool flag2 = Application.platform == 0;
+                bool flag2 = Application.platform == RuntimePlatform.OSXEditor;
                 switch (Event.current.type)
                 {
                     case 4:
@@ -1902,9 +1902,9 @@ namespace AHO
             bool flag = !string.IsNullOrEmpty(this._AJX);
             if (flag)
             {
-                bool flag2 = (int)Application.platform == 0;
-                bool flag3 = (int)Application.platform == 7;
-                bool flag4 = (int)Application.platform == 16;
+                bool flag2 = Application.platform == RuntimePlatform.OSXEditor;
+                bool flag3 = Application.platform == RuntimePlatform.WindowsEditor;
+                bool flag4 = Application.platform == RuntimePlatform.LinuxEditor;
                 string assetPath = AssetDatabase.GUIDToAssetPath(this._AJX);
                 menu.AddItem("Locate", "&%l", "Locate", "%#l", false, delegate
                 {

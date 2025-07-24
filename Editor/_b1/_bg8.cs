@@ -69,7 +69,7 @@ namespace AHO
         // Token: 0x0600000C RID: 12 RVA: 0x00002794 File Offset: 0x00000994
         internal static void View()
         {
-            bool flag = Application.platform == 0;
+            bool flag = Application.platform == RuntimePlatform.OSXEditor;
             _bg8._AZV = 275f;
             _bg8._AZW = GUILayout.BeginScrollView(_bg8._AZW, Array.Empty<GUILayoutOption>());
             GUILayout.Label("Highlighting", EditorStyles.boldLabel, Array.Empty<GUILayoutOption>());
@@ -510,16 +510,16 @@ namespace AHO
         internal static _bf5 _BCE = _bg8.Create("CaptureShiftCtrlF", true);
 
         // Token: 0x0400003F RID: 63
-        internal static _bf5 _BCF = _bg8.Create("WordBreak_UseBothModifiers", Application.platform == 0);
+        internal static _bf5 _BCF = _bg8.Create("WordBreak_UseBothModifiers", Application.platform == RuntimePlatform.OSXEditor);
 
         // Token: 0x04000040 RID: 64
-        internal static _bf5 _BCG = _bg8.Create("WordBreak_StopOnSubwords", Application.platform == 0);
+        internal static _bf5 _BCG = _bg8.Create("WordBreak_StopOnSubwords", Application.platform == RuntimePlatform.OSXEditor);
 
         // Token: 0x04000041 RID: 65
-        internal static _bf5 _ATS = _bg8.Create("WordBreak_IgnorePunctuations", Application.platform == 0);
+        internal static _bf5 _ATS = _bg8.Create("WordBreak_IgnorePunctuations", Application.platform == RuntimePlatform.OSXEditor);
 
         // Token: 0x04000042 RID: 66
-        internal static _bf5 _ATT = _bg8.Create("WordBreak_RightArrowStopsAtWordEnd", Application.platform == 0);
+        internal static _bf5 _ATT = _bg8.Create("WordBreak_RightArrowStopsAtWordEnd", Application.platform == RuntimePlatform.OSXEditor);
 
         // Token: 0x04000043 RID: 67
         internal static _bf5 _BBB = _bg8.Create("MagicMethods.InsertWithComments", true);

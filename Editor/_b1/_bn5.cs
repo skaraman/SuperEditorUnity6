@@ -33,7 +33,7 @@ namespace AHO
         // Token: 0x060001DE RID: 478 RVA: 0x00018D04 File Offset: 0x00016F04
         static _bn5()
         {
-            bool flag = Application.platform == 7;
+            bool flag = Application.platform == RuntimePlatform.WindowsEditor;
             if (flag)
             {
                 EditorApplication.update = (EditorApplication.CallbackFunction)Delegate.Combine(EditorApplication.update, new EditorApplication.CallbackFunction(_bn5.SetHookOnFirstUpdate));
