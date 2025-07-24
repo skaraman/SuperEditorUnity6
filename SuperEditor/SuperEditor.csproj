@@ -1,288 +1,33 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
-  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
-    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
-    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{31EA4FF5-984A-4E3E-8093-4015464FBBC5}</ProjectGuid>
+    <TargetFramework>netstandard2.1</TargetFramework>
     <OutputType>Library</OutputType>
     <RootNamespace>SuperEditor</RootNamespace>
     <AssemblyName>SuperEditor</AssemblyName>
-    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
-    <FileAlignment>512</FileAlignment>
+    <LangVersion>latest</LangVersion>
+    <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
+    <EnableDefaultEmbeddedResourceItems>false</EnableDefaultEmbeddedResourceItems>
+    <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
   </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
-    <DebugSymbols>true</DebugSymbols>
-    <DebugType>full</DebugType>
-    <Optimize>false</Optimize>
-    <OutputPath>bin\Debug\</OutputPath>
-    <DefineConstants>DEBUG;TRACE</DefineConstants>
-    <ErrorReport>prompt</ErrorReport>
-    <WarningLevel>4</WarningLevel>
-  </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
-    <DebugType>pdbonly</DebugType>
-    <Optimize>true</Optimize>
-    <OutputPath>bin\Release\</OutputPath>
-    <DefineConstants>TRACE</DefineConstants>
-    <ErrorReport>prompt</ErrorReport>
-    <WarningLevel>4</WarningLevel>
-  </PropertyGroup>
-  <PropertyGroup>
-    <AutoGenerateBindingRedirects>false</AutoGenerateBindingRedirects>
-  </PropertyGroup>
-  <ItemGroup>
-    <Reference Include="netstandard">
-      <HintPath>..\..\..\..\..\..\..\Program Files\dotnet\shared\Microsoft.NETCore.App\10.0.0-preview.5.25277.114\netstandard.dll</HintPath>
-    </Reference>
-    <Reference Include="System">
-      <HintPath>..\..\..\..\..\..\..\Program Files\dotnet\shared\Microsoft.NETCore.App\10.0.0-preview.5.25277.114\System.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Core">
-      <HintPath>..\..\..\..\..\..\..\Program Files\dotnet\shared\Microsoft.NETCore.App\10.0.0-preview.5.25277.114\System.Core.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Xml">
-      <HintPath>..\..\..\..\..\..\..\Program Files\dotnet\shared\Microsoft.NETCore.App\10.0.0-preview.5.25277.114\System.Xml.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEngine">
+  
+  <!-- Unity 6 Assembly References - Windows -->
+  <ItemGroup Condition="Exists('C:\Program Files\Unity\Hub\Editor\6000.1.9f1\Editor\Data\Managed\UnityEngine\UnityEngine.CoreModule.dll')">
+    <Reference Include="UnityEngine.CoreModule">
       <HintPath>C:\Program Files\Unity\Hub\Editor\6000.1.9f1\Editor\Data\Managed\UnityEngine\UnityEngine.CoreModule.dll</HintPath>
+      <Private>False</Private>
     </Reference>
-    <Reference Include="UnityEditor">
+    <Reference Include="UnityEditor.CoreModule">
       <HintPath>C:\Program Files\Unity\Hub\Editor\6000.1.9f1\Editor\Data\Managed\UnityEngine\UnityEditor.CoreModule.dll</HintPath>
+      <Private>False</Private>
     </Reference>
     <Reference Include="UnityEngine.IMGUIModule">
       <HintPath>C:\Program Files\Unity\Hub\Editor\6000.1.9f1\Editor\Data\Managed\UnityEngine\UnityEngine.IMGUIModule.dll</HintPath>
+      <Private>False</Private>
     </Reference>
     <Reference Include="UnityEngine.TextRenderingModule">
       <HintPath>C:\Program Files\Unity\Hub\Editor\6000.1.9f1\Editor\Data\Managed\UnityEngine\UnityEngine.TextRenderingModule.dll</HintPath>
+      <Private>False</Private>
     </Reference>
-  </ItemGroup>
-  <ItemGroup>
-    <AppDesigner Include="Properties\" />
-  </ItemGroup>
-  <ItemGroup>
-    <Compile Include="AccessLevel.cs" />
-    <Compile Include="AccessLevelMask.cs" />
-    <Compile Include="_a1\_a2.cs" />
-    <Compile Include="_b1\_b2.cs" />
-    <Compile Include="_b1\_b3.cs" />
-    <Compile Include="_b1\_b4.cs" />
-    <Compile Include="_b1\_b5.cs" />
-    <Compile Include="_b1\_b6.cs" />
-    <Compile Include="_b1\_b7.cs" />
-    <Compile Include="_b1\_b8.cs" />
-    <Compile Include="_b1\_b9.cs" />
-    <Compile Include="_b1\_ba1.cs" />
-    <Compile Include="_b1\_ba2.cs" />
-    <Compile Include="_b1\_ba3.cs" />
-    <Compile Include="_b1\_ba4.cs" />
-    <Compile Include="_b1\_ba5.cs" />
-    <Compile Include="_b1\_ba6.cs" />
-    <Compile Include="_b1\_ba7.cs" />
-    <Compile Include="_b1\_ba8.cs" />
-    <Compile Include="_b1\_ba9.cs" />
-    <Compile Include="_b1\_bb1.cs" />
-    <Compile Include="_b1\_bb2.cs" />
-    <Compile Include="_b1\_bb3.cs" />
-    <Compile Include="_b1\_bb4.cs" />
-    <Compile Include="_b1\_bb5.cs" />
-    <Compile Include="_b1\_bb6.cs" />
-    <Compile Include="_b1\_bb7.cs" />
-    <Compile Include="_b1\_bb8.cs" />
-    <Compile Include="_b1\_bb9.cs" />
-    <Compile Include="_b1\_bc1.cs" />
-    <Compile Include="_b1\_bc2.cs" />
-    <Compile Include="_b1\_bc3.cs" />
-    <Compile Include="_b1\_bc4.cs" />
-    <Compile Include="_b1\_bc5.cs" />
-    <Compile Include="_b1\_bc6.cs" />
-    <Compile Include="_b1\_bc7.cs" />
-    <Compile Include="_b1\_bc8.cs" />
-    <Compile Include="_b1\_bc9.cs" />
-    <Compile Include="_b1\_bd1.cs" />
-    <Compile Include="_b1\_bd2.cs" />
-    <Compile Include="_b1\_bd3.cs" />
-    <Compile Include="_b1\_bd4.cs" />
-    <Compile Include="_b1\_bd5.cs" />
-    <Compile Include="_b1\_bd6.cs" />
-    <Compile Include="_b1\_bd7.cs" />
-    <Compile Include="_b1\_bd8.cs" />
-    <Compile Include="_b1\_bd9.cs" />
-    <Compile Include="_b1\_be1.cs" />
-    <Compile Include="_b1\_be2.cs" />
-    <Compile Include="_b1\_be3.cs" />
-    <Compile Include="_b1\_be4.cs" />
-    <Compile Include="_b1\_be5.cs" />
-    <Compile Include="_b1\_be6.cs" />
-    <Compile Include="_b1\_be7.cs" />
-    <Compile Include="_b1\_be8.cs" />
-    <Compile Include="_b1\_be9.cs" />
-    <Compile Include="_b1\_bf1.cs" />
-    <Compile Include="_b1\_bf2.cs" />
-    <Compile Include="_b1\_bf3.cs" />
-    <Compile Include="_b1\_bf4.cs" />
-    <Compile Include="_b1\_bf5.cs" />
-    <Compile Include="_b1\_bf6.cs" />
-    <Compile Include="_b1\_bf7.cs" />
-    <Compile Include="_b1\_bf8.cs" />
-    <Compile Include="_b1\_bf9.cs" />
-    <Compile Include="_b1\_bg1.cs" />
-    <Compile Include="_b1\_bg2.cs" />
-    <Compile Include="_b1\_bg3.cs" />
-    <Compile Include="_b1\_bg4.cs" />
-    <Compile Include="_b1\_bg5.cs" />
-    <Compile Include="_b1\_bg6.cs" />
-    <Compile Include="_b1\_bg7.cs" />
-    <Compile Include="_b1\_bg8.cs" />
-    <Compile Include="_b1\_bg9.cs" />
-    <Compile Include="_b1\_bh1.cs" />
-    <Compile Include="_b1\_bh2.cs" />
-    <Compile Include="_b1\_bh3.cs" />
-    <Compile Include="_b1\_bh4.cs" />
-    <Compile Include="_b1\_bh5.cs" />
-    <Compile Include="_b1\_bh6.cs" />
-    <Compile Include="_b1\_bh7.cs" />
-    <Compile Include="_b1\_bh8.cs" />
-    <Compile Include="_b1\_bh9.cs" />
-    <Compile Include="_b1\_bi1.cs" />
-    <Compile Include="_b1\_bi2.cs" />
-    <Compile Include="_b1\_bi3.cs" />
-    <Compile Include="_b1\_bi4.cs" />
-    <Compile Include="_b1\_bi5.cs" />
-    <Compile Include="_b1\_bi6.cs" />
-    <Compile Include="_b1\_bi7.cs" />
-    <Compile Include="_b1\_bi8.cs" />
-    <Compile Include="_b1\_bi9.cs" />
-    <Compile Include="_b1\_bj1.cs" />
-    <Compile Include="_b1\_bj2.cs" />
-    <Compile Include="_b1\_bj3.cs" />
-    <Compile Include="_b1\_bj4.cs" />
-    <Compile Include="_b1\_bj5.cs" />
-    <Compile Include="_b1\_bj6.cs" />
-    <Compile Include="_b1\_bj7.cs" />
-    <Compile Include="_b1\_bj8.cs" />
-    <Compile Include="_b1\_bj9.cs" />
-    <Compile Include="_b1\_bk1.cs" />
-    <Compile Include="_b1\_bk2.cs" />
-    <Compile Include="_b1\_bk3.cs" />
-    <Compile Include="_b1\_bk4.cs" />
-    <Compile Include="_b1\_bk5.cs" />
-    <Compile Include="_b1\_bk6.cs" />
-    <Compile Include="_b1\_bk7.cs" />
-    <Compile Include="_b1\_bk8.cs" />
-    <Compile Include="_b1\_bk9.cs" />
-    <Compile Include="_b1\_bl1.cs" />
-    <Compile Include="_b1\_bl2.cs" />
-    <Compile Include="_b1\_bl3.cs" />
-    <Compile Include="_b1\_bl4.cs" />
-    <Compile Include="_b1\_bl5.cs" />
-    <Compile Include="_b1\_bl6.cs" />
-    <Compile Include="_b1\_bl7.cs" />
-    <Compile Include="_b1\_bl8.cs" />
-    <Compile Include="_b1\_bl9.cs" />
-    <Compile Include="_b1\_bm1.cs" />
-    <Compile Include="_b1\_bm2.cs" />
-    <Compile Include="_b1\_bm3.cs" />
-    <Compile Include="_b1\_bm4.cs" />
-    <Compile Include="_b1\_bm5.cs" />
-    <Compile Include="_b1\_bm6.cs" />
-    <Compile Include="_b1\_bm7.cs" />
-    <Compile Include="_b1\_bm8.cs" />
-    <Compile Include="_b1\_bm9.cs" />
-    <Compile Include="_b1\_bn1.cs" />
-    <Compile Include="_b1\_bn2.cs" />
-    <Compile Include="_b1\_bn3.cs" />
-    <Compile Include="_b1\_bn4.cs" />
-    <Compile Include="_b1\_bn5.cs" />
-    <Compile Include="_b1\_bn6.cs" />
-    <Compile Include="_b1\_bn7.cs" />
-    <Compile Include="_b1\_bn8.cs" />
-    <Compile Include="CodeIssue.cs" />
-    <Compile Include="Favorites\FavoriteList.cs" />
-    <Compile Include="Favorites\FavoriteSave.cs" />
-    <Compile Include="_c1\_c2.cs" />
-    <Compile Include="_c1\_c3.cs" />
-    <Compile Include="_d1\_d2.cs" />
-    <Compile Include="_d1\_d3.cs" />
-    <Compile Include="_d1\_d4.cs" />
-    <Compile Include="_d1\_d5.cs" />
-    <Compile Include="_d1\_d6.cs" />
-    <Compile Include="_d1\_d7.cs" />
-    <Compile Include="_d1\_d8.cs" />
-    <Compile Include="_d1\_d9.cs" />
-    <Compile Include="_d1\_da1.cs" />
-    <Compile Include="_d1\_da2.cs" />
-    <Compile Include="_d1\_da3.cs" />
-    <Compile Include="_d1\_da4.cs" />
-    <Compile Include="_d1\_da5.cs" />
-    <Compile Include="_d1\_da6.cs" />
-    <Compile Include="_d1\_da7.cs" />
-    <Compile Include="_d1\_da8.cs" />
-    <Compile Include="FindReplace_LookFor.cs" />
-    <Compile Include="FindReplace_LookIn.cs" />
-    <Compile Include="Helper.cs" />
-    <Compile Include="Hierarchy\ComponentEnum.cs" />
-    <Compile Include="Hierarchy\HierarchySetting.cs" />
-    <Compile Include="Hierarchy\SettingChangedHandler.cs" />
-    <Compile Include="Hierarchy\TagAndLayerAligment.cs" />
-    <Compile Include="Hierarchy\TagAndLayerLabelSize.cs" />
-    <Compile Include="Hierarchy\TagAndLayerSizeType.cs" />
-    <Compile Include="Hierarchy\TagAndLayerType.cs" />
-    <Compile Include="_e1\Base64Texture.cs" />
-    <Compile Include="Modifiers.cs" />
-    <Compile Include="_f1\_f2.cs" />
-    <Compile Include="_f1\_f3.cs" />
-    <Compile Include="_f1\_f4.cs" />
-    <Compile Include="_f1\_f5.cs" />
-    <Compile Include="_f1\_f6.cs" />
-    <Compile Include="_f1\_f7.cs" />
-    <Compile Include="_f1\_f8.cs" />
-    <Compile Include="_f1\_f9.cs" />
-    <Compile Include="_f1\_fa1.cs" />
-    <Compile Include="_f1\_fa2.cs" />
-    <Compile Include="_f1\_fa3.cs" />
-    <Compile Include="_f1\_fa4.cs" />
-    <Compile Include="_f1\_fa5.cs" />
-    <Compile Include="_f1\_fa6.cs" />
-    <Compile Include="_f1\_fa7.cs" />
-    <Compile Include="_f1\_fa8.cs" />
-    <Compile Include="_f1\_fa9.cs" />
-    <Compile Include="_f1\_fb1.cs" />
-    <Compile Include="_f1\_fb2.cs" />
-    <Compile Include="_f1\_fb3.cs" />
-    <Compile Include="_f1\_fb4.cs" />
-    <Compile Include="_f1\_fb5.cs" />
-    <Compile Include="_g1\_g2.cs" />
-    <Compile Include="_h1\_h2.cs" />
-    <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Resources.resx</DependentUpon>
-    </Compile>
-    <Compile Include="Properties\Settings.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTimeSharedInput>True</DesignTimeSharedInput>
-      <DependentUpon>Settings.settings</DependentUpon>
-    </Compile>
-    <Compile Include="Settings.cs" />
-    <Compile Include="SuperEditorLocator.cs" />
-    <Compile Include="SymbolKind.cs" />
-    <Compile Include="SyntaxToken.cs" />
-    <Compile Include="TextOffset.cs" />
-    <Compile Include="TextPosition.cs" />
-    <Compile Include="TextSpan.cs" />
-    <Compile Include="Themes\Theme.cs" />
-    <Compile Include="Themes\ThemeTemplate.cs" />
-    <Compile Include="TypeAlias.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Properties\Settings.settings">
-      <Generator>SettingsSingleFileGenerator</Generator>
-      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
-    </None>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -290,5 +35,4 @@
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
   </ItemGroup>
-  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
