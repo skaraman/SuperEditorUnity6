@@ -45,6 +45,7 @@ namespace SuperEditor.Favorites
         // Token: 0x060008FA RID: 2298 RVA: 0x000FCF24 File Offset: 0x000FB124
         public void AddGo(GameObject go)
         {
+            if (go == null) return;
             this.goIDs.Add(GlobalObjectId.GetGlobalObjectIdSlow(go).ToString());
             this.gos.Add(go);
         }
@@ -52,16 +53,19 @@ namespace SuperEditor.Favorites
         // Token: 0x060008FB RID: 2299 RVA: 0x000FCF60 File Offset: 0x000FB160
         public void AddGo(List<GameObject> gos)
         {
+            if (gos == null) return;
             foreach (GameObject gameObject in gos)
             {
+                if (gameObject == null) continue;
                 this.goIDs.Add(GlobalObjectId.GetGlobalObjectIdSlow(gameObject).ToString());
-                gos.Add(gameObject);
+                this.gos.Add(gameObject);
             }
         }
 
         // Token: 0x060008FC RID: 2300 RVA: 0x000FCFD4 File Offset: 0x000FB1D4
         public void RemoveGos(GameObject go)
         {
+            if (go == null) return;
             this.goIDs.Remove(GlobalObjectId.GetGlobalObjectIdSlow(go).ToString());
             this.gos.Remove(go);
         }
@@ -83,6 +87,7 @@ namespace SuperEditor.Favorites
         // Token: 0x060008FF RID: 2303 RVA: 0x000FD048 File Offset: 0x000FB248
         public void InsertGo(int index, GameObject go)
         {
+            if (go == null) return;
             this.goIDs.Insert(index, GlobalObjectId.GetGlobalObjectIdSlow(go).ToString());
             this.gos.Insert(index, go);
         }
@@ -96,7 +101,7 @@ namespace SuperEditor.Favorites
         // Token: 0x06000901 RID: 2305 RVA: 0x000FD0A8 File Offset: 0x000FB2A8
         public GameObject GetGo(int _index)
         {
-            bool flag = this.gos.Count < _index;
+            bool flag = this.gos.Count <= _index || _index < 0;
             GameObject gameObject;
             if (flag)
             {
@@ -123,7 +128,7 @@ namespace SuperEditor.Favorites
         // Token: 0x06000903 RID: 2307 RVA: 0x000FD150 File Offset: 0x000FB350
         public UnityEngine.Object Get(int _index)
         {
-            bool flag = this.Objects.Count < _index;
+            bool flag = this.Objects.Count <= _index || _index < 0;
             UnityEngine.Object @object;
             if (flag)
             {
@@ -137,7 +142,7 @@ namespace SuperEditor.Favorites
         }
 
         // Token: 0x06000904 RID: 2308 RVA: 0x000FD184 File Offset: 0x000FB384
-        public bool Contains(System.Object _object)
+        public bool Contains(UnityEngine.Object _object)
         {
             return this.Objects.Contains(_object);
         }
@@ -145,18 +150,21 @@ namespace SuperEditor.Favorites
         // Token: 0x06000905 RID: 2309 RVA: 0x000FD1A2 File Offset: 0x000FB3A2
         public void Add(List<UnityEngine.Object> _objects)
         {
+            if (_objects == null) return;
             this.Objects.AddRange(_objects);
         }
 
         // Token: 0x06000906 RID: 2310 RVA: 0x000FD1B2 File Offset: 0x000FB3B2
         public void Add(UnityEngine.Object _object)
         {
+            if (_object == null) return;
             this.Objects.Add(_object);
         }
 
         // Token: 0x06000907 RID: 2311 RVA: 0x000FD1C4 File Offset: 0x000FB3C4
         public void Remove(List<UnityEngine.Object> _objects)
         {
+            if (_objects == null) return;
             foreach (UnityEngine.Object @object in _objects)
             {
                 this.Objects.Remove(@object);
