@@ -12,7 +12,7 @@ namespace FEOCJICFPEHKGMMCGOCFIOPPOJIAOLJNEKNO
         [MenuItem("Window/Super Editor/Open File... _&%o", false, 500)]
         private static void OpenFile()
         {
-            EditorGUIUtility.ShowObjectPicker<Object>(null, true, null, 332553);
+            EditorGUIUtility.ShowObjectPicker<UnityEngine.Object>(null, true, null, 332553);
             EditorApplication.update = (EditorApplication.CallbackFunction)Delegate.Combine(EditorApplication.update, new EditorApplication.CallbackFunction(HKAIMFAJFFLFHGGCFLIEGGMNPNPIFDNAAION.WaitForObjectPicker));
         }
 
@@ -39,6 +39,6 @@ namespace FEOCJICFPEHKGMMCGOCFIOPPOJIAOLJNEKNO
         }
 
         // Token: 0x0400092C RID: 2348
-        private static Object _BCL;
+        private static UnityEngine.Object _BCL;
     }
 }

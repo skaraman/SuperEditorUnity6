@@ -13,7 +13,7 @@ namespace AHO
         // Token: 0x06000389 RID: 905 RVA: 0x000A7038 File Offset: 0x000A5238
         internal static void LoadIcons(bool forDll = false)
         {
-            Object[] array = Resources.FindObjectsOfTypeAll(typeof(_bj2));
+            UnityEngine.Object[] array = Resources.FindObjectsOfTypeAll(typeof(_bj2));
             bool flag = array == null || array.Length == 0;
             if (!flag)
             {

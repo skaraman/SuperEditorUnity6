@@ -143,7 +143,7 @@ namespace AHO
                 GUIUtility.hotControl = 0;
                 string selectedGUID = _bh1.GetSelectedGUID();
                 base.Close();
-                Object.DestroyImmediate(this);
+                UnityEngine.Object.DestroyImmediate(this);
                 try
                 {
                     foreach (_bb6 _AKB in _bb6._AJZ())
@@ -175,7 +175,7 @@ namespace AHO
         public void CloseOnly()
         {
             base.Close();
-            Object.DestroyImmediate(this);
+            UnityEngine.Object.DestroyImmediate(this);
             _bh1._BCN = false;
         }
 

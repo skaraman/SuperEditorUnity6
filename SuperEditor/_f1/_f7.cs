@@ -91,7 +91,7 @@ namespace ODGL
                             if (flag3)
                             {
                                 this.GJFBPNOOLONPKHEINBDDOJAMFFOINGGPFDIE[scene].Merge(njahlagmgabdcnloedcemmeoblfchpnlhaac);
-                                Object.DestroyImmediate(njahlagmgabdcnloedcemmeoblfchpnlhaac.gameObject);
+                                UnityEngine.Object.DestroyImmediate(njahlagmgabdcnloedcemmeoblfchpnlhaac.gameObject);
                             }
                         }
                         else
@@ -137,7 +137,7 @@ namespace ODGL
                         bool flag9 = flag5;
                         if (flag9)
                         {
-                            Object[] array = list.ToArray();
+                            UnityEngine.Object[] array = list.ToArray();
                             Selection.objects = array;
                         }
                     }

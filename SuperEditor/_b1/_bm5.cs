@@ -56,11 +56,11 @@ namespace AHO
             if (!flag)
             {
                 object containerWindow = _bm5.GetContainerWindow(this);
-                bool flag2 = !(Object)containerWindow;
+                bool flag2 = !(UnityEngine.Object)containerWindow;
                 if (!flag2)
                 {
                     object containerWindow2 = _bm5.GetContainerWindow(window);
-                    bool flag3 = !(Object)containerWindow2;
+                    bool flag3 = !(UnityEngine.Object)containerWindow2;
                     if (!flag3)
                     {
                         _bm5.JGEKFNHHHJPAHMKOPILBBKFEFEKNAIAKLOKL.Invoke(containerWindow, new object[] { containerWindow2 });
@@ -87,7 +87,7 @@ namespace AHO
                         catch
                         {
                         }
-                        Object.DestroyImmediate(this);
+                        UnityEngine.Object.DestroyImmediate(this);
                     }
                 }));
             }

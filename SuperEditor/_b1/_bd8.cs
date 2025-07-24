@@ -94,7 +94,7 @@ namespace AHO
         }
 
         // Token: 0x060003F9 RID: 1017 RVA: 0x000C65A0 File Offset: 0x000C47A0
-        internal static GCE GetBuffer(Object target)
+        internal static GCE GetBuffer(UnityEngine.Object target)
         {
             return _bc5.GetBuffer(target);
         }

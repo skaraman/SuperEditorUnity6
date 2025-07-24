@@ -292,7 +292,7 @@ namespace AHO
                                 bool flag11 = text2 != null;
                                 if (flag11)
                                 {
-                                    Object @object = AssetDatabase.LoadAssetAtPath(text2, typeof(MonoScript));
+                                    UnityEngine.Object @object = AssetDatabase.LoadAssetAtPath(text2, typeof(MonoScript));
                                     _AMX = _bc5.GetBuffer(@object);
                                 }
                                 int num = _AMX.GetParseTreeNodeSpan(_AIO).line;
@@ -365,7 +365,7 @@ namespace AHO
                 }
             }
             base.Close();
-            Object.DestroyImmediate(this);
+            UnityEngine.Object.DestroyImmediate(this);
         }
 
         // Token: 0x060000CE RID: 206 RVA: 0x0000AAF4 File Offset: 0x00008CF4

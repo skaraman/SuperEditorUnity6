@@ -14,7 +14,7 @@ namespace SuperEditor.Favorites
         public FavoriteList(string _name = "Favorites")
         {
             this.Name = _name;
-            this.Objects = new List<Object>();
+            this.Objects = new List<UnityEngine.Object>();
             this.goIDs = new List<string>();
             this.gos = new List<GameObject>();
         }
@@ -112,11 +112,11 @@ namespace SuperEditor.Favorites
         // Token: 0x06000902 RID: 2306 RVA: 0x000FD0DC File Offset: 0x000FB2DC
         public void Update()
         {
-            this.Objects.RemoveAll((Object obj) => obj == null);
+            this.Objects.RemoveAll((UnityEngine.Object obj) => obj == null);
             bool @bool = EditorPrefs.GetBool("FavoritesSort", false);
             if (@bool)
             {
-                this.Objects.Sort((Object _a, Object _b) => new CaseInsensitiveComparer().Compare(_a.name, _b.name));
+                this.Objects.Sort((UnityEngine.Object _a, UnityEngine.Object _b) => new CaseInsensitiveComparer().Compare(_a.name, _b.name));
             }
         }
 
@@ -124,7 +124,7 @@ namespace SuperEditor.Favorites
         public UnityEngine.Object Get(int _index)
         {
             bool flag = this.Objects.Count < _index;
-            Object @object;
+            UnityEngine.Object @object;
             if (flag)
             {
                 @object = null;
@@ -143,28 +143,28 @@ namespace SuperEditor.Favorites
         }
 
         // Token: 0x06000905 RID: 2309 RVA: 0x000FD1A2 File Offset: 0x000FB3A2
-        public void Add(List<Object> _objects)
+        public void Add(List<UnityEngine.Object> _objects)
         {
             this.Objects.AddRange(_objects);
         }
 
         // Token: 0x06000906 RID: 2310 RVA: 0x000FD1B2 File Offset: 0x000FB3B2
-        public void Add(Object _object)
+        public void Add(UnityEngine.Object _object)
         {
             this.Objects.Add(_object);
         }
 
         // Token: 0x06000907 RID: 2311 RVA: 0x000FD1C4 File Offset: 0x000FB3C4
-        public void Remove(List<Object> _objects)
+        public void Remove(List<UnityEngine.Object> _objects)
         {
-            foreach (Object @object in _objects)
+            foreach (UnityEngine.Object @object in _objects)
             {
                 this.Objects.Remove(@object);
             }
         }
 
         // Token: 0x06000908 RID: 2312 RVA: 0x000FD21C File Offset: 0x000FB41C
-        public void Remove(Object _object)
+        public void Remove(UnityEngine.Object _object)
         {
             this.Objects.Remove(_object);
         }
@@ -185,7 +185,7 @@ namespace SuperEditor.Favorites
         public string Name;
 
         // Token: 0x04000785 RID: 1925
-        public List<Object> Objects;
+        public List<UnityEngine.Object> Objects;
 
         // Token: 0x04000786 RID: 1926
         public List<string> goIDs;

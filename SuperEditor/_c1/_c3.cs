@@ -480,7 +480,7 @@ namespace FEOCJICFPEHKGMMCGOCFIOPPOJIAOLJNEKNO
                                     bool flag22 = cuPath == null;
                                     if (!flag22)
                                     {
-                                        Object @object = AssetDatabase.LoadAssetAtPath(cuPath, typeof(MonoScript));
+                                        UnityEngine.Object @object = AssetDatabase.LoadAssetAtPath(cuPath, typeof(MonoScript));
                                         bool flag23 = @object == null;
                                         if (!flag23)
                                         {

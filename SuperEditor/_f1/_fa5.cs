@@ -162,7 +162,7 @@ namespace ODGL
                     bool flag8 = currentEvent.button == 1;
                     if (flag8)
                     {
-                        MethodInfo methodInfo = typeof(EditorUtility).GetMethods(BindingFlags.Static | BindingFlags.NonPublic).Single((MethodInfo method) => method.Name == "DisplayObjectContextMenu" && method.GetParameters()[1].ParameterType == typeof(Object));
+                        MethodInfo methodInfo = typeof(EditorUtility).GetMethods(BindingFlags.Static | BindingFlags.NonPublic).Single((MethodInfo method) => method.Name == "DisplayObjectContextMenu" && method.GetParameters()[1].ParameterType == typeof(UnityEngine.Object));
                         Undo.RecordObject(this.OPLK[num], "Remove Component");
                         methodInfo.Invoke(null, new object[]
                         {
@@ -198,6 +198,6 @@ namespace ODGL
         private bool KDEA;
 
         // Token: 0x0400082E RID: 2094
-        private static Action<Rect, Object, int> FDJJ;
+        private static Action<Rect, UnityEngine.Object, int> FDJJ;
     }
 }
