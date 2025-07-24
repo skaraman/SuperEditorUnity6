@@ -1029,7 +1029,7 @@ namespace AHO
                             }
                         }
                     }
-                    bool flag8 = !Event.current.alt && !Event.current.command && !Event.current.control && (text.IndexOf(Event.current.character) >= 0 || Event.current.keyCode == 271);
+                    bool flag8 = !Event.current.alt && !Event.current.command && !Event.current.control && (text.IndexOf(Event.current.character) >= 0 || (int)Event.current.keyCode == 271);
                     if (flag8)
                     {
                         bool flag9 = Event.current.shift && Event.current.character == '\t';
