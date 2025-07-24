@@ -42,6 +42,38 @@ This version has been updated for Unity 6 compatibility:
 - Unity Package Manager compatible structure
 - Conditional assembly references for cross-platform compatibility
 
+## Building
+
+### Unity Package Manager (Recommended)
+
+The primary way to use SuperEditor is through Unity's Package Manager:
+
+1. Open Unity 6.0.1f1 or later
+2. Import the package using the Package Manager
+3. Unity automatically handles compilation using the `.asmdef` file
+
+### Standalone Build (Development/CI)
+
+The project includes a `.csproj` file for standalone builds:
+
+```bash
+dotnet build SuperEditor.sln
+```
+
+**Unity Required**: The standalone build requires Unity 6.0.1f1 to be installed:
+- **Windows**: `C:\Program Files\Unity\Hub\Editor\6000.1.9f1\`
+- **Linux**: `/opt/unity/Editor/6000.1.9f1/`
+
+**Without Unity**: If Unity is not installed, the build succeeds with a stub implementation and helpful warnings about Unity requirements.
+
+### Build Configuration
+
+The build system automatically detects Unity installation and:
+- ✅ **With Unity**: Compiles full SuperEditor functionality
+- ⚠️ **Without Unity**: Creates stub assembly with usage guidance
+
+Both configurations produce valid .NET assemblies suitable for CI/CD pipelines.
+
 ## Support
 
 For issues and support, please use the GitHub issue tracker.
