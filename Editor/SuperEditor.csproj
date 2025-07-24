@@ -66,15 +66,18 @@
       <HintPath>C:\Program Files\Unity\Hub\Editor\6000.1.9f1\Editor\Data\Managed\UnityEditor\UnityEditor.UIElementsModule.dll</HintPath>
       <Private>False</Private>
     </Reference>
-    <!-- Additional Windows Unity assemblies needed for full Editor support -->
-    <Reference Include="UnityEditor">
-      <HintPath>C:\Program Files\Unity\Hub\Editor\6000.1.9f1\Editor\Data\Managed\UnityEditor.dll</HintPath>
+    <!-- Additional modular assemblies for complete Unity Editor functionality -->
+    <Reference Include="UnityEngine.AssetBundleModule">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\6000.1.9f1\Editor\Data\Managed\UnityEngine\UnityEngine.AssetBundleModule.dll</HintPath>
       <Private>False</Private>
     </Reference>
-    <Reference Include="UnityEngine">
-      <HintPath>C:\Program Files\Unity\Hub\Editor\6000.1.9f1\Editor\Data\Managed\UnityEngine.dll</HintPath>
+    <Reference Include="UnityEngine.JSONSerializeModule">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\6000.1.9f1\Editor\Data\Managed\UnityEngine\UnityEngine.JSONSerializeModule.dll</HintPath>
       <Private>False</Private>
     </Reference>
+    <!-- Legacy assemblies removed to fix CS0433 error -->
+    <!-- UnityEditor.dll and UnityEngine.dll conflict with modular assemblies -->
+    <!-- Using only modular assemblies (UnityEditor.CoreModule, etc.) for Unity 6 compatibility -->
   </ItemGroup>
 
   <!-- Linux Unity Installation (common paths) -->
@@ -107,15 +110,18 @@
       <HintPath>/opt/unity/Editor/6000.1.9f1/Editor/Data/Managed/UnityEditor/UnityEditor.UIElementsModule.dll</HintPath>  
       <Private>False</Private>
     </Reference>
-    <!-- Additional Linux Unity assemblies needed for full Editor support -->
-    <Reference Include="UnityEditor">
-      <HintPath>/opt/unity/Editor/6000.1.9f1/Editor/Data/Managed/UnityEditor.dll</HintPath>
+    <!-- Additional modular assemblies for complete Unity Editor functionality -->
+    <Reference Include="UnityEngine.AssetBundleModule">
+      <HintPath>/opt/unity/Editor/6000.1.9f1/Editor/Data/Managed/UnityEngine/UnityEngine.AssetBundleModule.dll</HintPath>
       <Private>False</Private>
     </Reference>
-    <Reference Include="UnityEngine">
-      <HintPath>/opt/unity/Editor/6000.1.9f1/Editor/Data/Managed/UnityEngine.dll</HintPath>
+    <Reference Include="UnityEngine.JSONSerializeModule">
+      <HintPath>/opt/unity/Editor/6000.1.9f1/Editor/Data/Managed/UnityEngine/UnityEngine.JSONSerializeModule.dll</HintPath>
       <Private>False</Private>
     </Reference>
+    <!-- Linux legacy assemblies removed to fix CS0443 error -->
+    <!-- UnityEditor.dll and UnityEngine.dll conflict with modular assemblies -->
+    <!-- Using only modular assemblies (UnityEditor.CoreModule, etc.) for Unity 6 compatibility -->
   </ItemGroup>
 
   <!-- Show helpful messages about Unity availability -->
