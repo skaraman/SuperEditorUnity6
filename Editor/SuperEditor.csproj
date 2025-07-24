@@ -75,6 +75,14 @@
       <HintPath>C:\Program Files\Unity\Hub\Editor\6000.1.9f1\Editor\Data\Managed\UnityEngine\UnityEngine.JSONSerializeModule.dll</HintPath>
       <Private>False</Private>
     </Reference>
+    <Reference Include="UnityEngine.ImageConversionModule">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\6000.1.9f1\Editor\Data\Managed\UnityEngine\UnityEngine.ImageConversionModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.SceneManagementModule">
+      <HintPath>C:\Program Files\Unity\Hub\Editor\6000.1.9f1\Editor\Data\Managed\UnityEngine\UnityEngine.SceneManagementModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
     <!-- Legacy assemblies removed to fix CS0433 error -->
     <!-- UnityEditor.dll and UnityEngine.dll conflict with modular assemblies -->
     <!-- Using only modular assemblies (UnityEditor.CoreModule, etc.) for Unity 6 compatibility -->
@@ -117,6 +125,14 @@
     </Reference>
     <Reference Include="UnityEngine.JSONSerializeModule">
       <HintPath>/opt/unity/Editor/6000.1.9f1/Editor/Data/Managed/UnityEngine/UnityEngine.JSONSerializeModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.ImageConversionModule">
+      <HintPath>/opt/unity/Editor/6000.1.9f1/Editor/Data/Managed/UnityEngine/UnityEngine.ImageConversionModule.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="UnityEngine.SceneManagementModule">
+      <HintPath>/opt/unity/Editor/6000.1.9f1/Editor/Data/Managed/UnityEngine/UnityEngine.SceneManagementModule.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <!-- Linux legacy assemblies removed to fix CS0443 error -->
