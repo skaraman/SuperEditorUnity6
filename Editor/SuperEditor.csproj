@@ -30,8 +30,7 @@
 
   <!-- When Unity is not available, include stub files and mock Unity implementation -->
   <ItemGroup Condition="'$(UnityAvailable)' == 'false'">
-    <Compile Include="NoUnityStub.cs" />
-    <Compile Include="MockUnity.cs" />
+    <Compile Include="**/*.cs" Exclude="bin/**;obj/**" />
   </ItemGroup>
   
   <!-- Unity 6 Assembly References - Cross Platform -->
