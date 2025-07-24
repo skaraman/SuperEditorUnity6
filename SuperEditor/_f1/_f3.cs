@@ -284,7 +284,7 @@ namespace ODGL
         private void AddTagOrLayerHandler(object value)
         {
             PropertyInfo property = typeof(EditorApplication).GetProperty("tagManager", BindingFlags.Static | BindingFlags.NonPublic | BindingFlags.GetProperty);
-            Object @object = (Object)property.GetValue(null, null);
+            UnityEngine.Object @object = (UnityEngine.Object)property.GetValue(null, null);
             @object.GetType().GetField("m_DefaultExpandedFoldout").SetValue(@object, value);
             Selection.activeObject = @object;
         }

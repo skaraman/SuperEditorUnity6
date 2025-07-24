@@ -84,7 +84,7 @@ namespace AHO
                     bool flag2 = _AMX != null;
                     if (flag2)
                     {
-                        Object.DestroyImmediate(_AMX);
+                        UnityEngine.Object.DestroyImmediate(_AMX);
                     }
                 }
             }
@@ -128,7 +128,7 @@ namespace AHO
                     if (flag8)
                     {
                         Debug.Log("Multiple managers resolved successfully :)");
-                        Object.DestroyImmediate(this);
+                        UnityEngine.Object.DestroyImmediate(this);
                     }
                     else
                     {
@@ -624,7 +624,7 @@ namespace AHO
         }
 
         // Token: 0x060003D2 RID: 978 RVA: 0x000C5C18 File Offset: 0x000C3E18
-        internal static GCE GetBuffer(Object target)
+        internal static GCE GetBuffer(UnityEngine.Object target)
         {
             string text = AssetDatabase.AssetPathToGUID(AssetDatabase.GetAssetPath(target));
             return _bc5.GetBuffer(text);
@@ -663,7 +663,7 @@ namespace AHO
         internal static void DestroyBuffer(GCE buffer)
         {
             _bc5.Instance()._AMW.Remove(buffer);
-            Object.DestroyImmediate(buffer);
+            UnityEngine.Object.DestroyImmediate(buffer);
         }
 
         // Token: 0x060003D5 RID: 981 RVA: 0x000C5D3C File Offset: 0x000C3F3C

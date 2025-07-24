@@ -67,7 +67,7 @@ namespace ODGL
                 Type type = Assembly.Load("UnityEditor").GetType("UnityEditor.IconSelector");
                 MethodInfo method = type.GetMethod("ShowAtPosition", BindingFlags.Static | BindingFlags.NonPublic, null, CallingConventions.Any, new Type[]
                 {
-                    typeof(Object),
+                    typeof(UnityEngine.Object),
                     typeof(Rect),
                     typeof(bool)
                 }, null);

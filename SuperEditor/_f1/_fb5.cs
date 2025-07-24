@@ -26,7 +26,7 @@ namespace ODGL
             if (flag)
             {
                 _fb5.FGNP.Remove(this);
-                Object.DestroyImmediate(base.gameObject);
+                UnityEngine.Object.DestroyImmediate(base.gameObject);
             }
             else
             {

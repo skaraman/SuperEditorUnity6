@@ -140,7 +140,7 @@ namespace OKPF
             }
             else
             {
-                Object @object = (Object)_object;
+                UnityEngine.Object @object = (UnityEngine.Object)_object;
                 bool flag2 = @object && this.LBAF().Contains(@object);
                 if (flag2)
                 {
@@ -302,7 +302,7 @@ namespace OKPF
         // Token: 0x06000921 RID: 2337 RVA: 0x000FDB10 File Offset: 0x000FBD10
         private void DrawFavoriteElement(Rect rect, int index, bool isActive, bool isFocused)
         {
-            Object @object = this.LBAF().Get(index);
+            UnityEngine.Object @object = this.LBAF().Get(index);
             bool flag = !@object;
             if (!flag)
             {
@@ -313,7 +313,7 @@ namespace OKPF
         // Token: 0x06000922 RID: 2338 RVA: 0x000FDB44 File Offset: 0x000FBD44
         private void DrawFavoriteElement2(Rect rect, int index, bool isActive, bool isFocused)
         {
-            Object go = this.LBAF().GetGo(index);
+            UnityEngine.Object go = this.LBAF().GetGo(index);
             bool flag = !go;
             if (!flag)
             {
@@ -322,7 +322,7 @@ namespace OKPF
         }
 
         // Token: 0x06000923 RID: 2339 RVA: 0x000FDB78 File Offset: 0x000FBD78
-        private void DrawObj(Object currentObject, Rect rect)
+        private void DrawObj(UnityEngine.Object currentObject, Rect rect)
         {
             Rect rect2;
             rect2..ctor(rect);
@@ -389,7 +389,7 @@ namespace OKPF
                     {
                         DragAndDrop.PrepareStartDrag();
                         DragAndDrop.SetGenericData("favorite", currentObject);
-                        DragAndDrop.objectReferences = new Object[] { currentObject };
+                        DragAndDrop.objectReferences = new UnityEngine.Object[] { currentObject };
                         Event.current.Use();
                     }
                     else
@@ -438,7 +438,7 @@ namespace OKPF
         }
 
         // Token: 0x06000924 RID: 2340 RVA: 0x000FDF38 File Offset: 0x000FC138
-        private void ShowGenericMenu(Object _object = null)
+        private void ShowGenericMenu(UnityEngine.Object _object = null)
         {
             GenericMenu genericMenu = this.RemoveCommon(_object);
             genericMenu.AddItem(new GUIContent("Move to First"), false, new GenericMenu.MenuFunction2(this.MoveToFirst), _object);
@@ -449,7 +449,7 @@ namespace OKPF
         }
 
         // Token: 0x06000925 RID: 2341 RVA: 0x000FDFA4 File Offset: 0x000FC1A4
-        private void ShowGenericMenu2(Object _object = null)
+        private void ShowGenericMenu2(UnityEngine.Object _object = null)
         {
             GenericMenu genericMenu = this.RemoveCommon(_object);
             genericMenu.AddItem(new GUIContent("Move to First"), false, new GenericMenu.MenuFunction2(this.MoveToFirst), _object);
@@ -458,7 +458,7 @@ namespace OKPF
         }
 
         // Token: 0x06000926 RID: 2342 RVA: 0x000FE000 File Offset: 0x000FC200
-        private GenericMenu RemoveCommon(Object _object = null)
+        private GenericMenu RemoveCommon(UnityEngine.Object _object = null)
         {
             GenericMenu genericMenu = new GenericMenu();
             bool flag = _object;
@@ -486,7 +486,7 @@ namespace OKPF
             }
             else
             {
-                Object @object = (Object)_object;
+                UnityEngine.Object @object = (UnityEngine.Object)_object;
                 bool flag2 = @object && this.LBAF().Contains(@object);
                 if (flag2)
                 {
@@ -641,8 +641,8 @@ namespace OKPF
                 if (flag15)
                 {
                     DragAndDrop.AcceptDrag();
-                    List<Object> list2 = new List<Object>();
-                    foreach (Object @object in DragAndDrop.objectReferences)
+                    List<UnityEngine.Object> list2 = new List<UnityEngine.Object>();
+                    foreach (UnityEngine.Object @object in DragAndDrop.objectReferences)
                     {
                         GameObject gameObject = @object as GameObject;
                         Component component = @object as Component;
@@ -815,7 +815,7 @@ namespace OKPF
         private Vector2 EDLI = Vector2.zero;
 
         // Token: 0x0400078E RID: 1934
-        private Object CMGO = null;
+        private UnityEngine.Object CMGO = null;
 
         // Token: 0x0400078F RID: 1935
         private double ADJL = 0.0;

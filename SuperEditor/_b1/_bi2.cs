@@ -2024,7 +2024,7 @@ namespace AHO
         }
 
         // Token: 0x06000283 RID: 643 RVA: 0x00025808 File Offset: 0x00023A08
-        internal void OnEnable(Object targetFile)
+        internal void OnEnable(UnityEngine.Object targetFile)
         {
             bool flag = this._ATW() != null && this._ATW()._ABI == -1;
             if (flag)
@@ -2739,13 +2739,13 @@ namespace AHO
         }
 
         // Token: 0x06000296 RID: 662 RVA: 0x000270EC File Offset: 0x000252EC
-        internal static T LoadEditorResource<T>(string indieAndProName) where T : Object
+        internal static T LoadEditorResource<T>(string indieAndProName) where T : UnityEngine.Object
         {
             return _bi2.LoadEditorResource<T>(indieAndProName, null);
         }
 
         // Token: 0x06000297 RID: 663 RVA: 0x00027108 File Offset: 0x00025308
-        internal static T LoadEditorResource<T>(string indieName, string proName) where T : Object
+        internal static T LoadEditorResource<T>(string indieName, string proName) where T : UnityEngine.Object
         {
             string text = ((proName == null) ? indieName : (EditorGUIUtility.isProSkin ? proName : indieName));
             string text2 = Path.Combine(_bi2.NPOF(), text);
@@ -4143,7 +4143,7 @@ namespace AHO
                 }
             }
             _bb6._AKL = true;
-            AssetDatabase.OpenAsset(AssetDatabase.LoadAssetAtPath(AssetDatabase.GUIDToAssetPath(this._ABQ._AMZ), typeof(Object)), this._ABH._ABI + 1);
+            AssetDatabase.OpenAsset(AssetDatabase.LoadAssetAtPath(AssetDatabase.GUIDToAssetPath(this._ABQ._AMZ), typeof(UnityEngine.Object)), this._ABH._ABI + 1);
         }
 
         // Token: 0x060002B3 RID: 691 RVA: 0x0002A968 File Offset: 0x00028B68
@@ -8331,7 +8331,7 @@ namespace AHO
                 }
                 else
                 {
-                    Object @object = AssetDatabase.LoadAssetAtPath(text, typeof(MonoScript));
+                    UnityEngine.Object @object = AssetDatabase.LoadAssetAtPath(text, typeof(MonoScript));
                     bool flag5 = @object == null;
                     if (flag5)
                     {
@@ -9892,7 +9892,7 @@ namespace AHO
                         }
                         else
                         {
-                            EditorGUIUtility.PingObject(AssetDatabase.LoadAssetAtPath<Object>(this._ABQ._ARQ()));
+                            EditorGUIUtility.PingObject(AssetDatabase.LoadAssetAtPath<UnityEngine.Object>(this._ABQ._ARQ()));
                             this.OBGEMALIEGDPMEGFAOJCKCIMLAKLMFFNDLKH.Focus();
                         }
                         return;
@@ -11606,7 +11606,7 @@ namespace AHO
                                     if (flag41)
                                     {
                                         DragAndDrop.PrepareStartDrag();
-                                        DragAndDrop.objectReferences = new Object[] { this._ABQ };
+                                        DragAndDrop.objectReferences = new UnityEngine.Object[] { this._ABQ };
                                         DragAndDrop.StartDrag("Dragging selected text");
                                         DragAndDrop.SetGenericData("SuperEditor.Text", this._ABQ.GetTextRange(this._ATW(), this._ABH));
                                         GUIUtility.hotControl = 0;

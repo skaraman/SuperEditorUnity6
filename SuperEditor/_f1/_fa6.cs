@@ -319,11 +319,11 @@ namespace ODGL
                             Type type;
                             if (flag5)
                             {
-                                type = Type.GetType(stringValue, false) ?? typeof(Object);
+                                type = Type.GetType(stringValue, false) ?? typeof(UnityEngine.Object);
                             }
                             else
                             {
-                                type = typeof(Object);
+                                type = typeof(UnityEngine.Object);
                             }
                             Type type2 = Type.GetType(serializedProperty.FindPropertyRelative("m_TypeName").stringValue, false);
                             bool flag6 = type2 == null;

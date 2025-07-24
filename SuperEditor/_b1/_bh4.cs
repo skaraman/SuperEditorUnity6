@@ -1667,7 +1667,7 @@ namespace AHO
                                 bool flag7 = flag5 || flag6;
                                 if (flag7)
                                 {
-                                    Object[] array = null;
+                                    UnityEngine.Object[] array = null;
                                     string text2 = "";
                                     bool flag8 = flag6;
                                     if (flag8)
@@ -1685,7 +1685,7 @@ namespace AHO
                                         }
                                         else
                                         {
-                                            array = Object.FindObjectsOfType(runtimeType);
+                                        array = UnityEngine.Object.FindObjectsOfType(runtimeType);
                                             bool flag11 = array.Length != 0;
                                             if (flag11)
                                             {

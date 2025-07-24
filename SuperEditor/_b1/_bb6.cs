@@ -973,12 +973,12 @@ namespace AHO
         // Token: 0x0600006B RID: 107 RVA: 0x00006E64 File Offset: 0x00005064
         internal static bool DestroyWindowIfOrphaned(EditorWindow wnd)
         {
-            Object @object = _bb6._ALB._ALH.GetValue(wnd) as Object;
+            UnityEngine.Object @object = _bb6._ALB._ALH.GetValue(wnd) as UnityEngine.Object;
             bool flag = !@object;
             bool flag2;
             if (flag)
             {
-                Object.DestroyImmediate(wnd);
+                UnityEngine.Object.DestroyImmediate(wnd);
                 flag2 = true;
             }
             else
@@ -1001,7 +1001,7 @@ namespace AHO
                         bool flag5 = !list.Contains(wnd);
                         if (flag5)
                         {
-                            Object.DestroyImmediate(wnd);
+                            UnityEngine.Object.DestroyImmediate(wnd);
                             flag2 = true;
                         }
                         else
@@ -1426,7 +1426,7 @@ namespace AHO
                 bool flag6 = !string.IsNullOrEmpty(text);
                 if (flag6)
                 {
-                    this._AKT = AssetDatabase.LoadAssetAtPath(text, typeof(Object));
+                    this._AKT = AssetDatabase.LoadAssetAtPath(text, typeof(UnityEngine.Object));
                 }
             }
             bool flag7 = this._AKT == null;
@@ -1460,7 +1460,7 @@ namespace AHO
                 catch
                 {
                 }
-                Object.DestroyImmediate(this);
+                UnityEngine.Object.DestroyImmediate(this);
             }
             else
             {
@@ -1608,8 +1608,8 @@ namespace AHO
                             if (flag12)
                             {
                                 bool flag13 = false;
-                                HashSet<Object> hashSet = new HashSet<Object>();
-                                foreach (Object @object in DragAndDrop.objectReferences)
+                                HashSet<UnityEngine.Object> hashSet = new HashSet<UnityEngine.Object>();
+                                foreach (UnityEngine.Object @object in DragAndDrop.objectReferences)
                                 {
                                     string text = AssetDatabase.GetAssetPath(@object);
                                     bool flag14 = text.EndsWith(".dll", StringComparison.OrdinalIgnoreCase) || text.EndsWith(".exe", StringComparison.OrdinalIgnoreCase);
@@ -1703,16 +1703,16 @@ namespace AHO
                                     bool flag27 = (int)Event.current.type == 10;
                                     if (flag27)
                                     {
-                                        Object[] sorted = hashSet.OrderBy((Object x) => x.name, StringComparer.OrdinalIgnoreCase).ToArray<Object>();
+                                        UnityEngine.Object[] sorted = hashSet.OrderBy((UnityEngine.Object x) => x.name, StringComparer.OrdinalIgnoreCase).ToArray<UnityEngine.Object>();
                                         bool flag28 = flag13 && sorted.Length > 1;
                                         if (flag28)
                                         {
                                             GenericMenu genericMenu = new GenericMenu();
-                                            Object[] sorted4 = sorted;
+                                            UnityEngine.Object[] sorted4 = sorted;
                                             for (int k = 0; k < sorted4.Length; k++)
                                             {
-                                                Object object2 = sorted4[k];
-                                                Object tempTarget = object2;
+                                                UnityEngine.Object object2 = sorted4[k];
+                                                UnityEngine.Object tempTarget = object2;
                                                 string fileName = Path.GetFileName(AssetDatabase.GetAssetPath(object2));
                                                 genericMenu.AddItem(new GUIContent("Open " + fileName), false, delegate
                                                 {
@@ -1722,7 +1722,7 @@ namespace AHO
                                             genericMenu.AddSeparator("");
                                             genericMenu.AddItem(new GUIContent("Open All"), false, delegate
                                             {
-                                                foreach (Object object4 in sorted)
+                                                foreach (UnityEngine.Object object4 in sorted)
                                                 {
                                                     _bb6.OpenNewWindow(object4, this, true);
                                                 }
@@ -1731,7 +1731,7 @@ namespace AHO
                                         }
                                         else
                                         {
-                                            foreach (Object object3 in sorted)
+                                            foreach (UnityEngine.Object object3 in sorted)
                                             {
                                                 _bb6.OpenNewWindow(object3, this, true);
                                             }
@@ -2230,21 +2230,21 @@ namespace AHO
                 _AKX.height -= 3f;
                 _bb6 _AKB = null;
                 _bb6 _AKB2 = null;
-                Object[] array2 = InternalEditorUtility.LoadSerializedFileAndForget(text);
+                UnityEngine.Object[] array2 = InternalEditorUtility.LoadSerializedFileAndForget(text);
                 try
                 {
                     File.Delete(text);
                 }
                 catch (IOException)
                 {
-                    foreach (Object @object in array2)
+                    foreach (UnityEngine.Object @object in array2)
                     {
-                        Object.DestroyImmediate(@object);
+                        UnityEngine.Object.DestroyImmediate(@object);
                     }
                     return;
                 }
                 bool flag2 = true;
-                foreach (Object object2 in array2)
+                foreach (UnityEngine.Object object2 in array2)
                 {
                     _bb6 _AKB3 = (_bb6)object2;
                     bool flag3 = flag2 || !_AKB3.TryDockNextToSimilarTab(_AKB2);
@@ -2324,7 +2324,7 @@ namespace AHO
                         _bb6._AMA = false;
                     }));
                     _bb6[] array5 = list.ToArray();
-                    Object[] array6 = array5;
+                    UnityEngine.Object[] array6 = array5;
                     InternalEditorUtility.SaveToSerializedFileAndForget(array6, text, true);
                     int num4 = array5.Length;
                     while (num4-- > 0)
@@ -2349,7 +2349,7 @@ namespace AHO
         // Token: 0x04000073 RID: 115
         [HideInInspector]
         [SerializeField]
-        internal Object _AKT;
+        internal UnityEngine.Object _AKT;
 
         // Token: 0x04000074 RID: 116
         [SerializeField]
@@ -2370,7 +2370,7 @@ namespace AHO
         internal static bool _AKD;
 
         // Token: 0x04000078 RID: 120
-        private static Object _AKW = null;
+        private static UnityEngine.Object _AKW = null;
 
         // Token: 0x04000079 RID: 121
         [HideInInspector]
@@ -2487,7 +2487,7 @@ namespace AHO
                 {
                     _bb6._ALB._AMH = type.GetMethod("CreateAsset", new Type[]
                     {
-                        typeof(Object),
+                        typeof(UnityEngine.Object),
                         typeof(string)
                     });
                 }
@@ -2506,7 +2506,7 @@ namespace AHO
             }
 
             // Token: 0x060000A4 RID: 164 RVA: 0x000097AC File Offset: 0x000079AC
-            internal static bool CreateAsset(Object asset, string pathName)
+            internal static bool CreateAsset(UnityEngine.Object asset, string pathName)
             {
                 bool flag = _bb6._ALB._AMH == null;
                 if (flag)
