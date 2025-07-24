@@ -191,7 +191,7 @@ namespace AHO
             }
             else
             {
-                bool flag3 = (int)Event.current.type == 4 && (int)Event.current.keyCode == 9;
+                bool flag3 = Event.current.type == EventType.KeyDown && (int)Event.current.keyCode == 9;
                 if (flag3)
                 {
                     bool flag4 = Application.platform == RuntimePlatform.OSXEditor;
@@ -303,7 +303,7 @@ namespace AHO
             }
             else
             {
-                bool flag9 = (int)Event.current.type == 4;
+                bool flag9 = Event.current.type == EventType.KeyDown;
                 if (flag9)
                 {
                     int num = _bh1._BCL;
@@ -365,7 +365,7 @@ namespace AHO
                 }
                 else
                 {
-                    bool flag20 = (int)Event.current.type == 8;
+                    bool flag20 = Event.current.type == EventType.Layout;
                     if (flag20)
                     {
                         EditorGUIUtility.SetIconSize(new Vector2(16f, 16f));
@@ -400,7 +400,7 @@ namespace AHO
                 {
                     GUI.Label(new Rect(0f, 0f, this._BCV, this._BCW), _bh1._BCK[_bh1._BCL], _bh1._BCT);
                 }
-                bool flag24 = (int)Event.current.type == 7;
+                bool flag24 = Event.current.type == EventType.Repaint;
                 if (flag24)
                 {
                     EditorGUIUtility.SetIconSize(new Vector2(16f, 16f));
@@ -412,7 +412,7 @@ namespace AHO
                 }
                 else
                 {
-                    bool flag25 = Event.current.type == 0;
+                    bool flag25 = Event.current.type == EventType.MouseDown;
                     if (flag25)
                     {
                         Event.current.Use();
@@ -431,7 +431,7 @@ namespace AHO
                     }
                     else
                     {
-                        bool flag28 = (int)Event.current.type == 1;
+                        bool flag28 = Event.current.type == EventType.MouseUp;
                         if (flag28)                        
                         {
                             Event.current.Use();

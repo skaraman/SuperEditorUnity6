@@ -454,7 +454,7 @@ namespace AHO
                         {
                             goto IL_1C3B;
                         }
-                        bool flag48 = GUI.Button(rect2, _CAQ, _CAK4._CAL ? guistyle2 : guistyle) || (l == this._CAH.Count - 1 && (int)Event.current.type == 4 && 
+                        bool flag48 = GUI.Button(rect2, _CAQ, _CAK4._CAL ? guistyle2 : guistyle) || (l == this._CAH.Count - 1 && Event.current.type == EventType.KeyDown && 
                             (int)eventModifiers == (flag ? 2 : 4) && (int)Event.current.keyCode == 109);
                         if (flag48)
                         {
@@ -9125,7 +9125,7 @@ namespace AHO
             GUI.contentColor = color;
             rect2.xMin = rect2.xMax + 8f;
             rect2.xMax = rect.xMax - 25f;
-            bool flag7 = (int)Event.current.type == 7;
+            bool flag7 = Event.current.type == EventType.Repaint;
             if (flag7)
             {
                 string text = (this._ABQ._ARV() ? "Loading..." : ((!EditorApplication.isCompiling && _bc5._AOO() && !this._ABQ._ALW()) ? ((Application.platform == RuntimePlatform.OSXEditor) ? "Saved,Press Command+S to compile" : "Saved,Press Ctrl+S to compile") : ((!EditorApplication.isCompiling) ? null : ((_bi2._CCX.Count > 0) ? "Compiling in background..." : ((_bi2._CCW == 0) ? "Compiling..." : ((this._ALW() && flag) ? "Cmd-Alt-R to reload assemblies..." : (this._ALW() ? "Ctrl+R to reload assemblies..." : (flag ? "Cmd-Alt-R or Save again to reload assemblies..." : "Ctrl+R or Save again to reload assemblies..."))))))));
@@ -9297,7 +9297,7 @@ namespace AHO
         // Token: 0x0600030C RID: 780 RVA: 0x00033788 File Offset: 0x00031988
         private void SearchBoxEvent(Rect position)
         {
-            bool flag = (int)Event.current.type == 13;
+            bool flag = Event.current.type == EventType.MouseUp;
             if (flag)
             {
                 bool flag2 = Event.current.commandName == "Find";
@@ -9309,7 +9309,7 @@ namespace AHO
             }
             else
             {
-                bool flag3 = (int)Event.current.type == 14;
+                bool flag3 = Event.current.type == EventType.MouseUp;
                 if (flag3)
                 {
                     bool flag4 = Event.current.commandName == "Find";
@@ -9336,7 +9336,7 @@ namespace AHO
                 this._CHM = -1;
                 this._CHO = false;
             }
-            bool flag8 = (int)Event.current.type == 4 && !Event.current.alt;
+            bool flag8 = Event.current.type == EventType.KeyDown && !Event.current.alt;
             if (flag8)
             {
                 this._CDT = this._CIF != null && this._CIF.HasFocus();
@@ -9369,7 +9369,7 @@ namespace AHO
                 this._CCI = true;
                 Event.current.Use();
             }
-            bool flag13 = this._CDT && (int)Event.current.type == 4;
+            bool flag13 = this._CDT && Event.current.type == EventType.KeyDown;
             if (flag13)
             {
                 bool flag14 = (int)Event.current.keyCode == 27;
@@ -9441,7 +9441,7 @@ namespace AHO
             if (hnfgmnokdfhdboojnfkjeehbpkbfioplmagk)
             {
                 this._CIF.SetFocus();
-                bool flag4 = (int)Event.current.type == 7;
+                bool flag4 = Event.current.type == EventType.Repaint;
                 if (flag4)
                 {
                     this._CIA = false;
@@ -12280,7 +12280,7 @@ namespace AHO
                     }
                 }
             }
-            bool flag6 = (int)Event.current.type == 4;
+            bool flag6 = Event.current.type == EventType.KeyDown;
             if (flag6)
             {
                 bool flag7 = _bi2.MightBePrintableKey(Event.current);
@@ -12309,7 +12309,7 @@ namespace AHO
             bool flag10 = this._ABQ == null;
             if (!flag10)
             {
-                bool flag11 = (int)Event.current.type == 7;
+                bool flag11 = Event.current.type == EventType.Repaint;
                 if (flag11)
                 {
                     this._CJX = this._ALM;
@@ -12376,7 +12376,7 @@ namespace AHO
                         if (!flag4)
                         {
                             this._ABQ._ABT = (this._ABT = (this._ABQ._ARR ? _bi2._CCM : _bi2._CCN));
-                            bool flag5 = (int)Event.current.type == 8;
+                            bool flag5 = Event.current.type == EventType.Layout;
                             if (flag5)
                             {
                                 this.Initialize();
@@ -12529,7 +12529,7 @@ namespace AHO
                                             try
                                             {
                                                 this.ProcessEditorKeyboard(Event.current, true);
-                                                bool flag35 = Event.current == null || (int)Event.current.type == 12;
+                                                bool flag35 = Event.current == null || Event.current.type == EventType.MouseUp;
                                                 if (flag35)
                                                 {
                                                     _bi2._AKS = false;
@@ -12639,7 +12639,7 @@ namespace AHO
                                         }
                                         GUIUtility.ExitGUI();
                                     }
-                                    bool flag47 = (int)Event.current.type == 12;
+                                    bool flag47 = Event.current.type == EventType.MouseUp;
                                     if (flag47)
                                     {
                                         return;
@@ -12657,8 +12657,8 @@ namespace AHO
                                     return;
                                 }
                                 bool flag50 = Application.platform == RuntimePlatform.OSXEditor;
-                                bool flag51 = (int)Event.current.type == 16 || (flag50 && (int)Event.current.type == 1 && Event.current.button == 1);
-                                bool flag52 = ((int)Event.current.type == 4 && ((int)Event.current.keyCode == 319 || Event.current.Equals(Event.KeyboardEvent("#f12")))) || (flag51 && this._AFO.Contains(Event.current.mousePosition));
+                                bool flag51 = Event.current.type == EventType.MouseUp || (flag50 && Event.current.type == EventType.MouseUp && Event.current.button == 1);
+                                bool flag52 = (Event.current.type == EventType.KeyDown && ((int)Event.current.keyCode == 319 || Event.current.Equals(Event.KeyboardEvent("#f12")))) || (flag51 && this._AFO.Contains(Event.current.mousePosition));
                                 if (flag52)
                                 {
                                     Event.current.Use();
@@ -13007,7 +13007,7 @@ namespace AHO
                                 if (isKey)
                                 {
                                     this.ProcessEditorKeyboard(Event.current, false);
-                                    bool flag89 = Event.current == null || (int)Event.current.type == 12;
+                                    bool flag89 = Event.current == null || Event.current.type == EventType.MouseUp;
                                     if (flag89)
                                     {
                                         _bi2._AKS = false;
@@ -13016,7 +13016,7 @@ namespace AHO
                                     }
                                 }
                             }
-                            bool flag90 = (int)Event.current.type == 6;
+                            bool flag90 = Event.current.type == EventType.ScrollWheel;
                             if (flag90)
                             {
                                 this._CDU = null;
@@ -13035,7 +13035,7 @@ namespace AHO
                             bool flag93 = _bg8._BAL;
                             if (flag93)
                             {
-                                bool flag94 = (int)Event.current.type == 6;
+                                bool flag94 = Event.current.type == EventType.ScrollWheel;
                                 if (flag94)
                                 {
                                     bool actionKey = EditorGUI.actionKey;
@@ -13071,7 +13071,7 @@ namespace AHO
                             float num5 = Mathf.Max(this._CKF.width - 8f, this._CKE);
                             float num6 = (this._CCH ? (this.GetLineOffset(this._ABQ.FLOg.Count) + 8f) : (8f + this._AEY().y * (float)this._ABQ._AQQ.Length));
                             this._CKF.Set(-4f, -4f, num5 + 8f, num6);
-                            bool flag97 = (int)Event.current.type != 8;
+                            bool flag97 = (int)Event.current.type != EventType.Layout;
                             if (flag97)
                             {
                                 this._CGA = 0f;
@@ -13111,7 +13111,7 @@ namespace AHO
                                     num8 = this._ABQ._AQQ.Length;
                                     num7 = Mathf.Max(0, Mathf.Min(num7, num8 - (int)(this._AFO.height / this._AEY().y)));
                                 }
-                                bool flag102 = this._ATO && (int)Event.current.type != 8;
+                                bool flag102 = this._ATO && (int)Event.current.type != EventType.Layout;
                                 if (flag102)
                                 {
                                     this._ATO = false;
@@ -13254,7 +13254,7 @@ namespace AHO
                                         continue;
                                     }
                                 }
-                                bool flag121 = this._CGY >= 1f && this._AFO.height > 1f && (int)Event.current.type == 8;
+                                bool flag121 = this._CGY >= 1f && this._AFO.height > 1f && Event.current.type == EventType.Layout;
                                 if (flag121)
                                 {
                                     bool flag122 = this._CHE.yMin < this._AFS.y + 30f || this._CHE.yMax > this._AFS.y + this._AFO.height - 50f;
@@ -13294,7 +13294,7 @@ namespace AHO
                                     }
                                     this._CGY = 0.999f;
                                 }
-                                bool flag127 = (int)Event.current.type == 7;
+                                bool flag127 = Event.current.type == EventType.Repaint;
                                 if (!flag127)
                                 {
                                     break;
@@ -13319,7 +13319,7 @@ namespace AHO
                                     }
                                 }
                             }
-                            bool flag130 = (int)Event.current.type == 8;
+                            bool flag130 = Event.current.type == EventType.Layout;
                             if (flag130)
                             {
                                 bool flag131 = this.CanEdit();
@@ -13368,7 +13368,7 @@ namespace AHO
                                         this._CKN = false;
                                     }
                                 }
-                                bool flag137 = (int)Event.current.type == 6 && this._AFO.Contains(Event.current.mousePosition);
+                                bool flag137 = Event.current.type == EventType.ScrollWheel && this._AFO.Contains(Event.current.mousePosition);
                                 bool flag138 = !this._CCH && flag137 && Event.current.shift;
                                 if (flag138)
                                 {
@@ -13388,7 +13388,7 @@ namespace AHO
                                 bool flag140 = _bg8._BBE && !_bi2._CIM && !flag137;
                                 if (flag140)
                                 {
-                                    bool flag141 = (int)Event.current.type == 7;
+                                    bool flag141 = Event.current.type == EventType.Repaint;
                                     if (flag141)
                                     {
                                         float num16 = Mathf.Clamp01((float)(_bi2._ATN - this._CKP).TotalSeconds);
@@ -13506,7 +13506,7 @@ namespace AHO
                                         {
                                             Input.imeCompositionMode = 1;
                                         }
-                                        bool flag154 = (int)Event.current.type != 8;
+                                        bool flag154 = (int)Event.current.type != EventType.Layout;
                                         if (flag154)
                                         {
                                             this._ALM.x = this._AFS.x + this._CGA;
@@ -13558,12 +13558,12 @@ namespace AHO
                                             this._ALM.yMin = Mathf.Ceil(this._ALM.y / this._AEY().y) * this._AEY().y;
                                             this._ALM.height = Mathf.Floor(this._ALM.height / this._AEY().y) * this._AEY().y;
                                         }
-                                        this._CFY = this._CCH && (int)Event.current.type == 7 && (this._CJX.width != this._ALM.width || _bg8._ASA != this._CKZ);
-                                        bool flag162 = (int)Event.current.type == 7;
+                                        this._CFY = this._CCH && Event.current.type == EventType.Repaint && (this._CJX.width != this._ALM.width || _bg8._ASA != this._CKZ);
+                                        bool flag162 = Event.current.type == EventType.Repaint;
                                         if (flag162)
                                         {
                                             Rect rect3 = default(Rect);
-                                            bool flag163 = (_bg8._AZY || _bg8._AZX) && !this._CBA && (int)Event.current.type == 7 && this._ABH._ABI >= num7 && this._ABH._ABI < num8 && !this._ARV();
+                                            bool flag163 = (_bg8._AZY || _bg8._AZX) && !this._CBA && Event.current.type == EventType.Repaint && this._ABH._ABI >= num7 && this._ABH._ABI < num8 && !this._ARV();
                                             if (flag163)
                                             {
                                                 int num17;
@@ -13738,7 +13738,7 @@ namespace AHO
                                                         bool flag184 = syntaxToken3.tokenKind == SyntaxToken.Kind.Missing;
                                                         if (flag184)
                                                         {
-                                                            bool flag185 = (int)Event.current.type == 7;
+                                                            bool flag185 = Event.current.type == EventType.Repaint;
                                                             if (flag185)
                                                             {
                                                                 Rect rect6 = new Rect(rect5.xMax, rect5.yMin, this._AEY().x * 2f, this._AEY().y);
@@ -13777,7 +13777,7 @@ namespace AHO
                                                                                 Application.OpenURL("mailto:" + syntaxToken3.text);
                                                                             }
                                                                         }
-                                                                        bool flag190 = (int)Event.current.type == 7;
+                                                                        bool flag190 = Event.current.type == EventType.Repaint;
                                                                         if (flag190)
                                                                         {
                                                                             EditorGUIUtility.AddCursorRect(rect5, (MouseCursor)4);
@@ -13812,7 +13812,7 @@ namespace AHO
                                                                                 }
                                                                             }
                                                                         }
-                                                                        bool flag196 = (int)Event.current.type == 7;
+                                                                        bool flag196 = Event.current.type == EventType.Repaint;
                                                                         if (flag196)
                                                                         {
                                                                             _bb4.DHBA _AMI = syntaxToken3.OOME;
@@ -13870,7 +13870,7 @@ namespace AHO
                                                 this._CKE = Mathf.Ceil(Mathf.Max(this._CKE, rect5.xMax));
                                             }
                                         }
-                                        bool flag202 = (int)Event.current.type == 7;
+                                        bool flag202 = Event.current.type == EventType.Repaint;
                                         if (flag202)
                                         {
                                             bool flag203 = !this._ARV() && !this._CBA && this._CGY == 0f && this._CFV < this._CFW && this._CFV.line >= 0 && this._CFV.line < this._ABQ._AQQ.Length && this._CFW.line >= 0 && this._CFW.line < this._ABQ._AQQ.Length && this._CFV.index < this._ABQ._AQQ[this._CFV.line].EOIA.Count && this._CFW.index < this._ABQ._AQQ[this._CFW.line].EOIA.Count && this.IsLineVisible(this._CFV.line);
@@ -13909,8 +13909,8 @@ namespace AHO
                                                 }
                                             }
                                         }
-                                        bool flag206 = (int)Event.current.type == 10 || (int)Event.current.type == 9;
-                                        bool flag207 = flag206 || Event.current.isMouse || ((int)Event.current.type == 7 && this._CDK);
+                                        bool flag206 = Event.current.type == EventType.MouseUp || Event.current.type == EventType.DragUpdated;
+                                        bool flag207 = flag206 || Event.current.isMouse || (Event.current.type == EventType.Repaint && this._CDK);
                                         if (flag207)
                                         {
                                             this._CDK = this._CDK && !Event.current.isMouse && !flag206;
@@ -13930,13 +13930,13 @@ namespace AHO
                                                 this._CDF = this._CDJ.mousePosition.y < this._ALM.y;
                                                 this._CDG = this._CDJ.mousePosition.y >= this._ALM.yMax;
                                             }
-                                            bool flag209 = (int)Event.current.type == 12;
+                                            bool flag209 = Event.current.type == EventType.MouseUp;
                                             if (flag209)
                                             {
                                                 goto IL_58A9;
                                             }
                                         }
-                                        bool flag210 = this._CDN() && (int)Event.current.type == 7 && this.CanEdit();
+                                        bool flag210 = this._CDN() && Event.current.type == EventType.Repaint && this.CanEdit();
                                         if (flag210)
                                         {
                                             GCE._AFA _ATD7 = ((this._CDL && this._CDM) ? this._CJF : this._ABH);
@@ -13971,7 +13971,7 @@ namespace AHO
                                                 GUI.Label(caretRect2, GUIContent.none, this._CDR ? this._ABT._CFI : this._ABT._CEK);
                                             }
                                         }
-                                        bool flag213 = (int)Event.current.type == 7;
+                                        bool flag213 = Event.current.type == EventType.Repaint;
                                         if (flag213)
                                         {
                                             bool flag214 = flag20 || this._CJR();
@@ -14148,13 +14148,13 @@ namespace AHO
                                             this.Repaint();
                                             return;
                                         }
-                                        bool flag230 = (int)Event.current.type == 7;
+                                        bool flag230 = Event.current.type == EventType.Repaint;
                                         if (flag230)
                                         {
                                             EditorGUIUtility.AddCursorRect(this._CCH ? new Rect(this._CKF.x, this._CKF.y, this._CKF.width, num6) : this._CKF, 1);
                                         }
                                         bool flag231;
-                                        if ((int)Event.current.type == 7 && this._CGY > 0f)
+                                        if (Event.current.type == EventType.Repaint && this._CGY > 0f)
                                         {
                                             DateTime _CKS3 = this._CHD;
                                             DateTime dateTime = default(DateTime);
@@ -14184,7 +14184,7 @@ namespace AHO
                                     }
                                     else
                                     {
-                                        bool flag234 = (int)Event.current.type == 7;
+                                        bool flag234 = Event.current.type == EventType.Repaint;
                                         if (flag234)
                                         {
                                             _bi2._CIM = false;
@@ -14205,7 +14205,7 @@ namespace AHO
                                     }
                                     this._CII = false;
                                     _bi2.EndScrollView(true);
-                                    bool flag236 = this._CDN() && (int)Event.current.type == 7 && this.CanEdit();
+                                    bool flag236 = this._CDN() && Event.current.type == EventType.Repaint && this.CanEdit();
                                     if (flag236)
                                     {
                                         Rect caretRect3 = this.GetCaretRect(this._ABH);
@@ -14233,7 +14233,7 @@ namespace AHO
             {
                 GCE._ALU = this;
             }
-            bool flag3 = (int)Event.current.type != 8;
+            bool flag3 = (int)Event.current.type != EventType.Layout;
             if (flag3)
             {
                 bool flag4 = this._CHX;
@@ -14264,7 +14264,7 @@ namespace AHO
                 Rect rect = new Rect(this._AFO.xMax - 21f, this._AFO.yMin - 17f, 21f, 16f);
             }
             Color color = GUI.color;
-            bool flag8 = !GUI.enabled && (int)Event.current.type == 7;
+            bool flag8 = !GUI.enabled && Event.current.type == EventType.Repaint;
             if (flag8)
             {
                 GUI.color = new Color(0.85f, 0.85f, 0.85f);
@@ -14311,7 +14311,7 @@ namespace AHO
             this._AFO.xMax = this._AFO.xMax + 4f;
             bool enabled = GUI.enabled;
             Color color = GUI.color;
-            bool flag = !GUI.enabled && (int)Event.current.type == 7;
+            bool flag = !GUI.enabled && Event.current.type == EventType.Repaint;
             if (flag)
             {
                 GUI.color = new Color(0.85f, 0.85f, 0.85f);
@@ -14363,7 +14363,7 @@ namespace AHO
                 }
                 else
                 {
-                    bool flag3 = !_bi2._CLC || (!this._CLD && (int)Event.current.type == 8);
+                    bool flag3 = !_bi2._CLC || (!this._CLD && Event.current.type == EventType.Layout);
                     if (flag3)
                     {
                         this._CLD = true;
@@ -14372,7 +14372,7 @@ namespace AHO
                     }
                     else
                     {
-                        bool flag4 = (int)Event.current.type == 8;
+                        bool flag4 = Event.current.type == EventType.Layout;
                         if (flag4)
                         {
                             bool flag5 = !_bi2.EditorVersionValid(20210);
@@ -14456,7 +14456,7 @@ namespace AHO
         {
             _bi2._CLF = GUI.skin.horizontalScrollbar;
             _bi2._CLG = GUI.skin.verticalScrollbar;
-            bool flag = (int)Event.current.type == 9 && position.Contains(Event.current.mousePosition);
+            bool flag = Event.current.type == EventType.DragUpdated && position.Contains(Event.current.mousePosition);
             if (flag)
             {
                 bool flag2 = Mathf.Abs(Event.current.mousePosition.y - position.y) < 8f;
@@ -14584,7 +14584,7 @@ namespace AHO
         private static void EndScrollView(bool handleScrollWheel = true)
         {
             GUI.EndClip();
-            bool flag = handleScrollWheel && (int)Event.current.type == 6 && _bi2._CLI._CLM.Contains(Event.current.mousePosition);
+            bool flag = handleScrollWheel && Event.current.type == EventType.ScrollWheel && _bi2._CLI._CLM.Contains(Event.current.mousePosition);
             if (flag)
             {
                 _bi2._CLI._AFS.x = Mathf.Clamp(_bi2._CLI._AFS.x + Event.current.delta.x * 20f, 0f, _bi2._CLI._CLO.width - _bi2._CLI._CLN.width);
@@ -14662,7 +14662,7 @@ namespace AHO
         // Token: 0x06000333 RID: 819 RVA: 0x00040D9C File Offset: 0x0003EF9C
         private bool ProcessCodeViewCommands()
         {
-            bool flag = (int)Event.current.type == 13;
+            bool flag = Event.current.type == EventType.MouseUp;
             if (flag)
             {
                 bool flag2 = Event.current.commandName == "SelectAll";
@@ -14729,7 +14729,7 @@ namespace AHO
                 {
                     return false;
                 }
-                bool flag12 = (int)Event.current.type == 14;
+                bool flag12 = Event.current.type == EventType.MouseUp;
                 if (flag12)
                 {
                     this._CGY = 0f;

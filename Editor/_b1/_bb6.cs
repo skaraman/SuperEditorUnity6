@@ -1518,7 +1518,7 @@ namespace AHO
                 bool flag2 = Application.platform == RuntimePlatform.OSXEditor;
                 switch (Event.current.type)
                 {
-                    case 4:
+                    case EventType.KeyDown:
                         {
                             bool flag3 = ((int)Event.current.modifiers & -113) == 2 && ((int)Event.current.keyCode == 280 || (int)Event.current.keyCode == 281);
                             if (flag3)
@@ -1592,7 +1592,7 @@ namespace AHO
                             }
                             break;
                         }
-                    case 8:
+                    case EventType.Layout:
                         {
                             bool flag11 = this.IsFloating() && GCE._ALU == this._AEK;
                             if (flag11)
@@ -1601,8 +1601,8 @@ namespace AHO
                             }
                             break;
                         }
-                    case 9:
-                    case 10:
+                    case EventType.DragUpdated:
+                    case EventType.DragPerform:
                         {
                             bool flag12 = DragAndDrop.objectReferences.Length != 0;
                             if (flag12)
@@ -1700,7 +1700,7 @@ namespace AHO
                                 {
                                     DragAndDrop.AcceptDrag();
                                     DragAndDrop.visualMode = (DragAndDropVisualMode)1;
-                                    bool flag27 = (int)Event.current.type == 10;
+                                    bool flag27 = Event.current.type == EventType.DragPerform;
                                     if (flag27)
                                     {
                                         UnityEngine.Object[] sorted = hashSet.OrderBy((UnityEngine.Object x) => x.name, StringComparer.OrdinalIgnoreCase).ToArray<UnityEngine.Object>();
@@ -1743,7 +1743,7 @@ namespace AHO
                             }
                             break;
                         }
-                    case 13:
+                    case EventType.ValidateCommand:
                         {
                             bool flag29 = Event.current.commandName == "SuperEditor.AddTab";
                             if (flag29)
@@ -1753,7 +1753,7 @@ namespace AHO
                             }
                             break;
                         }
-                    case 14:
+                    case EventType.ExecuteCommand:
                         {
                             bool flag30 = Event.current.commandName == "SuperEditor.AddTab";
                             if (flag30)

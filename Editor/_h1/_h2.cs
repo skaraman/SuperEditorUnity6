@@ -344,7 +344,7 @@ namespace OKPF
                 bool flag = Event.current.button == 0 && rect.Contains(Event.current.mousePosition);
                 if (flag)
                 {
-                    bool flag2 = Event.current.type == 0;
+                    bool flag2 = Event.current.type == EventType.MouseDown;
                     if (flag2)
                     {
                         Selection.activeObject = currentObject;
@@ -391,7 +391,7 @@ namespace OKPF
                     }
                     else
                     {
-                        bool flag8 = (int)Event.current.type == 3 && Event.current.button == 0 && DragAndDrop.GetGenericData("favorite") == currentObject;
+                        bool flag8 = Event.current.type == EventType.MouseDrag && Event.current.button == 0 && DragAndDrop.GetGenericData("favorite") == currentObject;
                         if (flag8)
                         {
                             DragAndDrop.StartDrag("Drag favorite");
@@ -399,7 +399,7 @@ namespace OKPF
                         }
                         else
                         {
-                            bool flag9 = (int)Event.current.type == 16 && rect.Contains(Event.current.mousePosition);
+                            bool flag9 = Event.current.type == EventType.MouseUp && rect.Contains(Event.current.mousePosition);
                             if (flag9)
                             {
                                 bool flag10 = currentObject as GameObject == null;
@@ -553,7 +553,7 @@ namespace OKPF
                 GUI.SetNextControlName("EditNameList");
                 text = (this.LBAF().Name = EditorGUILayout.TextField(this.LBAF().Name, EditorStyles.toolbarTextField, new GUILayoutOption[] { GUILayout.ExpandWidth(true) }));
                 EditorGUI.FocusTextInControl("EditNameList");
-                bool flag4 = ((int)Event.current.type == 1 && Event.current.button == 0) || ((int)Event.current.type == 5 && (int)Event.current.keyCode == 13);
+                bool flag4 = (Event.current.type == EventType.MouseUp && Event.current.button == 0) || (Event.current.type == EventType.KeyUp && (int)Event.current.keyCode == 13);
                 if (flag4)
                 {
                     bool flag5 = false;
@@ -619,7 +619,7 @@ namespace OKPF
             Color color = new Color(0f, 0f, 0f, 0.25f);
             EditorGUI.DrawRect(new Rect(0f, 20f, base.position.size.x, 1f), color);
             bool flag12 = Event.current.mousePosition.x >= 0f && Event.current.mousePosition.x <= base.position.width && Event.current.mousePosition.y >= 20f && Event.current.mousePosition.y <= base.position.height;
-            bool flag13 = (int)Event.current.type == 9 && flag12;
+            bool flag13 = Event.current.type == EventType.DragUpdated && flag12;
             if (flag13)
             {
                 bool flag14 = DragAndDrop.objectReferences.Length != 0;
@@ -634,7 +634,7 @@ namespace OKPF
             }
             else
             {
-                bool flag15 = (int)Event.current.type == 10 && flag12;
+                bool flag15 = Event.current.type == EventType.MouseUp && flag12;
                 if (flag15)
                 {
                     DragAndDrop.AcceptDrag();
@@ -709,14 +709,14 @@ namespace OKPF
                     this.AHIC.list = this.LBAF().Objects;
                     this.AHIC.draggable = !EditorPrefs.GetBool("FavoritesSort", false);
                     this.AHIC.DoLayoutList();
-                    bool flag23 = (int)Event.current.type == 16;
+                    bool flag23 = Event.current.type == EventType.MouseUp;
                     if (flag23)
                     {
                         this.ShowGenericMenu(null);
                     }
                     else
                     {
-                        bool flag24 = (int)Event.current.type == 1 && Event.current.button == 0;
+                        bool flag24 = Event.current.type == EventType.MouseUp && Event.current.button == 0;
                         if (flag24)
                         {
                             Selection.activeObject = null;
@@ -740,14 +740,14 @@ namespace OKPF
                     this.LBAF().gos.RemoveAll((GameObject obj) => obj == null);
                     this.BDKL.draggable = !EditorPrefs.GetBool("FavoritesSort", false);
                     this.BDKL.DoLayoutList();
-                    bool flag27 = (int)Event.current.type == 16;
+                    bool flag27 = Event.current.type == EventType.MouseUp;
                     if (flag27)
                     {
                         this.ShowGenericMenu2(null);
                     }
                     else
                     {
-                        bool flag28 = (int)Event.current.type == 1 && Event.current.button == 0;
+                        bool flag28 = Event.current.type == EventType.MouseUp && Event.current.button == 0;
                         if (flag28)
                         {
                             Selection.activeObject = null;

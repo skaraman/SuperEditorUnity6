@@ -382,7 +382,7 @@ namespace AHO
         // Token: 0x060000CF RID: 207 RVA: 0x0000AB54 File Offset: 0x00008D54
         public void OnGUI()
         {
-            bool flag = (!this.EBINNJIEDKILBKEDCAKOOHHEHNIOGIKHPKHN && this.AMAAEOCIBNDOADEFICMEICEDIPJCEEOODICK && Event.current.type == 2) || Event.current.type == 6 || (Event.current.type == 4 && Event.current.keyCode == 27) || this._AEK._ABT._CFT == null;
+            bool flag = (!this.EBINNJIEDKILBKEDCAKOOHHEHNIOGIKHPKHN && this.AMAAEOCIBNDOADEFICMEICEDIPJCEEOODICK && Event.current.type == EventType.MouseMove) || Event.current.type == EventType.ScrollWheel || (Event.current.type == EventType.KeyDown && Event.current.keyCode == 27) || this._AEK._ABT._CFT == null;
             if (flag)
             {
                 EditorApplication.delayCall = (EditorApplication.CallbackFunction)Delegate.Remove(EditorApplication.delayCall, new EditorApplication.CallbackFunction(this.Hide));
@@ -447,7 +447,7 @@ namespace AHO
                     {
                         this.HJDNGHINOLHEPMFIEMMOHDJIGGDACMDELLHB = _ba4.GetSymbolIcon(this.APEIGILDGNBKKGCAAEECFHGOODFOLNFFBLJA._AAB());
                     }
-                    bool flag7 = Event.current.type == 8;
+                    bool flag7 = Event.current.type == EventType.Layout;
                     if (flag7)
                     {
                         this.BMIJJAMJFPPMBPOLCFFAONNEBBEGNOHLFHNP.fixedWidth = 0f;
@@ -521,7 +521,7 @@ namespace AHO
         // Token: 0x060000D0 RID: 208 RVA: 0x0000B18C File Offset: 0x0000938C
         public void OnOwnerGUI()
         {
-            bool flag = this.AMAAEOCIBNDOADEFICMEICEDIPJCEEOODICK && Event.current.type == 8;
+            bool flag = this.AMAAEOCIBNDOADEFICMEICEDIPJCEEOODICK && Event.current.type == EventType.Layout;
             if (flag)
             {
                 Vector2 vector = GUIUtility.GUIToScreenPoint(Event.current.mousePosition);
@@ -532,14 +532,14 @@ namespace AHO
                     return;
                 }
             }
-            bool flag3 = Event.current.type == 6;
+            bool flag3 = Event.current.type == EventType.ScrollWheel;
             if (flag3)
             {
                 this.Hide();
             }
             else
             {
-                bool flag4 = Event.current.type == 4;
+                bool flag4 = Event.current.type == EventType.KeyDown;
                 if (flag4)
                 {
                     bool flag5 = !Event.current.alt && !Event.current.command && !Event.current.control && !Event.current.shift;
