@@ -37,7 +37,7 @@ namespace AHO
         private void OnGUI()
         {
             bool flag = this._AMP != "" && this._AMP != this._AMN._AW;
-            bool flag2 = flag && (int)Event.current.type == 4 && Event.current.character == '\n';
+            bool flag2 = flag && Event.current.type == EventType.KeyDown && Event.current.character == '\n';
             if (flag2)
             {
                 _bh6.RenameSymbol(this._AMN, this._AMO, this._AMP);
@@ -45,7 +45,7 @@ namespace AHO
             }
             else
             {
-                bool flag3 = (int)Event.current.type == 4 && (int)Event.current.keyCode == 27;
+                bool flag3 = Event.current.type == EventType.KeyDown && (int)Event.current.keyCode == 27;
                 if (flag3)
                 {
                     base.Close();

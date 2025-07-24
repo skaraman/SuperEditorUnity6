@@ -123,7 +123,7 @@ namespace FEOCJICFPEHKGMMCGOCFIOPPOJIAOLJNEKNO
                 Vector2 vector = EditorStyles.label.CalcSize(_c3._CAA);
                 Rect rect = headerRect;
                 headerRect.xMax -= vector.x + 4f;
-                bool flag3 = Event.current.type == 7;
+                bool flag3 = Event.current.type == EventType.Repaint;
                 if (flag3)
                 {
                     rect.xMin = rect.xMax - vector.x;
@@ -296,7 +296,7 @@ namespace FEOCJICFPEHKGMMCGOCFIOPPOJIAOLJNEKNO
                     bool flag4 = this.DGGABCKPMNOOMLMCBLMPCNGADOHFLHOMBNBG != null;
                     if (flag4)
                     {
-                        bool flag5 = Event.current.type == 7;
+                        bool flag5 = Event.current.type == EventType.Repaint;
                         if (flag5)
                         {
                             this.HNNPIDINLKJHIBEFFDJBLGACBGDHIPHJBHOF.Draw(position, false, false, false, false);
@@ -378,7 +378,7 @@ namespace FEOCJICFPEHKGMMCGOCFIOPPOJIAOLJNEKNO
             {
                 this.MEHPOJFCHBNKIOIOMPCIKMICIBMCEEDDEAMH.Invoke(rect, index, isactive, isfocused);
             }
-            bool flag7 = isactive && isfocused && Event.current.type == 4 && Event.current.character == '\n';
+            bool flag7 = isactive && isfocused && Event.current.type == EventType.KeyDown && Event.current.character == '\n';
             if (flag7)
             {
                 flag5 = true;
@@ -386,7 +386,7 @@ namespace FEOCJICFPEHKGMMCGOCFIOPPOJIAOLJNEKNO
             bool enabled = GUI.enabled;
             GUI.enabled = flag;
             bool flag8 = GUI.Button(rect2, "...", EditorStyles.miniButtonRight);
-            bool flag9 = flag && (flag8 || (flag5 && Event.current.type != 12));
+            bool flag9 = flag && (flag8 || (flag5 && Event.current.type != EventType.MouseUp));
             if (flag9)
             {
                 _bh4 definition = _bl9.ForType(methodInfo.DeclaringType).definition;

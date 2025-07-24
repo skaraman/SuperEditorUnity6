@@ -1068,7 +1068,7 @@ namespace AHO
         // Token: 0x060000FE RID: 254 RVA: 0x0000D7E8 File Offset: 0x0000B9E8
         private void OnGUIKey()
         {
-            bool flag = (int)Event.current.type == 4;
+            bool flag = Event.current.type == EventType.KeyDown;
             if (flag)
             {
                 bool flag2 = !Event.current.alt && !Event.current.shift && !EditorGUI.actionKey;
@@ -1598,7 +1598,7 @@ namespace AHO
             Rect rect2 = new Rect(0f, 20f, EditorGUIUtility.currentViewWidth, 1f);
             Color color = (EditorGUIUtility.isProSkin ? new Color(0f, 0f, 0f, 0.35f) : new Color(0f, 0f, 0f, 0.25f));
             EditorGUI.DrawRect(rect2, color);
-            bool flag28 = (int)Event.current.type == 7 && this.JIIOHDOBNLKGCMANELJKKPBPDDAAJCAICHKD.Count > 0;
+            bool flag28 = Event.current.type == EventType.Repaint && this.JIIOHDOBNLKGCMANELJKKPBPDDAAJCAICHKD.Count > 0;
             if (flag28)
             {
                 float num2 = ((float)this.MCMFONFOECBBJCKIHIGBIHNLNGBDHLBBOMHK + 1f + (float)this.EJCBEHODBLENOJPKNNCCEKJEGJGFADAIGCAH.Count) / (float)this.JIIOHDOBNLKGCMANELJKKPBPDDAAJCAICHKD.Count;
@@ -1643,7 +1643,7 @@ namespace AHO
                         num++;
                         Rect rect = GUILayoutUtility.GetRect(GUIContent.none, guistyle, _bk5.INOKGCJHKHFHOCCBGNAGIOJDICPEJKBCAHCK);
                         rect.xMin = 0f;
-                        bool flag4 = (int)Event.current.type == 7;
+                        bool flag4 = Event.current.type == EventType.Repaint;
                         if (flag4)
                         {
                             guistyle.Draw(rect, GUIContent.none, false, false, i == this._ADS, this == EditorWindow.focusedWindow);
@@ -1745,7 +1745,7 @@ namespace AHO
                                 iobcmjadenalgemehnfhliaillknadbhioan._BCL = GUI.Toggle(rect3, iobcmjadenalgemehnfhliaillknadbhioan._BCL, GUIContent.none);
                             }
                         }
-                        bool flag19 = this.KAPJGFDEIKMIJMLLNOLBIHAANHPKDKOMOOCJ && i == this._ADS && (int)Event.current.type == 7;
+                        bool flag19 = this.KAPJGFDEIKMIJMLLNOLBIHAANHPKDKOMOOCJ && i == this._ADS && Event.current.type == EventType.Repaint;
                         if (flag19)
                         {
                             bool flag20 = rect.yMin < this._AFS.y;
@@ -1851,7 +1851,7 @@ namespace AHO
                                     }
                                 }
                             }
-                            bool flag33 = (int)Event.current.type == 7;
+                            bool flag33 = Event.current.type == EventType.Repaint;
                             if (flag33)
                             {
                                 bool flag34 = iobcmjadenalgemehnfhliaillknadbhioan.JKFAOBNFIELFFJCAMDHLEKPEMKBBHAHNHBCO != null;
@@ -1928,7 +1928,7 @@ namespace AHO
                 }
             }
             GUILayout.BeginHorizontal(Array.Empty<GUILayoutOption>());
-            bool flag41 = this.HBKBKBFLOLLHNJEEENKFBBJIJCHBKDIKHPLJ != 0f && (int)Event.current.type == 8;
+            bool flag41 = this.HBKBKBFLOLLHNJEEENKFBBJIJCHBKDIKHPLJ != 0f && Event.current.type == EventType.Layout;
             if (flag41)
             {
                 bool flag42 = base.titleContent.text == "Replace";
@@ -1960,7 +1960,7 @@ namespace AHO
             GUILayout.EndHorizontal();
             GUILayout.FlexibleSpace();
             GUILayout.EndScrollView();
-            bool flag45 = (int)Event.current.type == 7;
+            bool flag45 = Event.current.type == EventType.Repaint;
             if (flag45)
             {
                 bool _CKJ = this._CIL;

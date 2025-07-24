@@ -57,12 +57,12 @@ namespace ODGL
         // Token: 0x06000950 RID: 2384 RVA: 0x000FF858 File Offset: 0x000FDA58
         public void HierarchyWindowItemOnGUIHandler(int instanceId, Rect selectionRect)
         {
-            bool flag = Event.current.type == 20;
+            bool flag = Event.current.type == EventType.MouseEnterWindow;
             if (flag)
             {
                 _fa1.IGPC = true;
             }
-            bool flag2 = Event.current.type == 21;
+            bool flag2 = Event.current.type == EventType.MouseLeaveWindow;
             if (flag2)
             {
                 _fa1.IGPC = false;
@@ -100,7 +100,7 @@ namespace ODGL
         {
             Rect rect;
             rect..ctor(curRect);
-            bool flag = Event.current.type == 7;
+            bool flag = Event.current.type == EventType.Repaint;
             if (flag)
             {
                 int i = 0;

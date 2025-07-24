@@ -287,7 +287,7 @@ namespace AHO
         // Token: 0x060001C6 RID: 454 RVA: 0x00017C70 File Offset: 0x00015E70
         private void OnGUI()
         {
-            bool flag = (int)Event.current.type == 4;
+            bool flag = Event.current.type == EventType.KeyDown;
             if (flag)
             {
                 bool flag2 = (int)Event.current.keyCode == 13 || (int)Event.current.keyCode == 271;

@@ -54,7 +54,7 @@ namespace AHO
             {
                 flag2 = int.TryParse(this._ABG, out num);
             }
-            bool flag3 = flag2 && (int)Event.current.type == 4 && Event.current.character == '\n';
+            bool flag3 = flag2 && Event.current.type == EventType.KeyDown && Event.current.character == '\n';
             if (flag3)
             {
                 bool flag4 = num < 1;
@@ -73,7 +73,7 @@ namespace AHO
             }
             else
             {
-                bool flag6 = (int)Event.current.type == 4 && (int)Event.current.keyCode == 27;
+                bool flag6 = Event.current.type == EventType.KeyDown && (int)Event.current.keyCode == 27;
                 if (flag6)
                 {
                     base.Close();

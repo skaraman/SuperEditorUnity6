@@ -709,10 +709,10 @@ namespace AHO
             bool flag = this._ADR == null || this._ADT.Count == 0;
             if (!flag)
             {
-                bool flag2 = (int)Event.current.type == 8;
+                bool flag2 = Event.current.type == EventType.Layout;
                 if (!flag2)
                 {
-                    bool flag3 = (int)Event.current.type == 6;
+                    bool flag3 = Event.current.type == EventType.ScrollWheel;
                     if (flag3)
                     {
                         _ba4._AFP += Event.current.delta.y * (float)_ba4._AFQ;
@@ -810,7 +810,7 @@ namespace AHO
                             _ba4._AFW.SetValue(null, obj);
                         }
                     }
-                    bool flag15 = (int)Event.current.type == 7;
+                    bool flag15 = Event.current.type == EventType.Repaint;
                     if (flag15)
                     {
                         float num2 = 100f;
@@ -920,7 +920,7 @@ namespace AHO
                             }
                             else
                             {
-                                bool flag32 = (int)Event.current.type == 7;
+                                bool flag32 = Event.current.type == EventType.Repaint;
                                 if (flag32)
                                 {
                                     _ba4._AEF.Draw(rect2, guicontent3, false, flag20, flag20, flag19);
@@ -934,12 +934,12 @@ namespace AHO
                     {
                         this._AEK.FocusCodeView();
                     }
-                    bool flag34 = (int)Event.current.type == 14 || (int)Event.current.type == 13 || Event.current.isKey;
+                    bool flag34 = Event.current.type == EventType.MouseUp || Event.current.type == EventType.MouseUp || Event.current.isKey;
                     if (flag34)
                     {
                         this._AEX.SendEvent(Event.current);
                     }
-                    bool flag35 = (int)Event.current.type == 4;
+                    bool flag35 = Event.current.type == EventType.KeyDown;
                     if (flag35)
                     {
                         bool flag36 = Event.current.button == 0 && (this._ADT.Count <= 8 || Event.current.mousePosition.x < rect.x);
@@ -980,7 +980,7 @@ namespace AHO
         public _bh4 OnOwnerGUI()
         {
             int _AFY = this._ADS;
-            bool flag = (int)Event.current.type == 6;
+            bool flag = Event.current.type == EventType.ScrollWheel;
             _bh4 _AAH;
             if (flag)
             {
@@ -999,7 +999,7 @@ namespace AHO
             }
             else
             {
-                bool flag3 = (int)Event.current.type == 4;
+                bool flag3 = Event.current.type == EventType.KeyDown;
                 if (flag3)
                 {
                     string text = ((this._ADS < 0) ? "\t" : "\t\n {}[]().,:;+-*/%&|^!~=<>?@#'\"\\");
