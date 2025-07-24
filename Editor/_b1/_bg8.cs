@@ -95,7 +95,7 @@ namespace AHO
             _bg8.Draw("Keep Last Highlighted Symbol", _bg8._BAH, true, null);
             _bg8.Draw("Highlight Writes in Red", _bg8._BAI, true, null);
             _bg8.Draw("Inspect Values of Properties", _bg8._BAJ, true, null);
-            EditorGUILayout.HelpBox("Inspecting values of properties will slow down Tooltip", (MessageType)(_bg8._BAJ ? 2 : 1), true);
+            EditorGUILayout.HelpBox("Inspecting values of properties will slow down Tooltip", _bg8._BAJ ? MessageType.Warning : MessageType.Info, true);
             GUILayout.Label("More Options...", EditorStyles.boldLabel, Array.Empty<GUILayoutOption>());
             _bg8.Draw("Show thicker caret", _bg8._BAK, true, null);
             bool flag2 = flag;
@@ -152,7 +152,7 @@ namespace AHO
             bool flag3 = _bg8._BAN.GNIO();
             if (flag3)
             {
-                EditorGUILayout.HelpBox("Old Mode takes the traditional Unity workflow mode of double-clicking the script to open the external IDE and only upgrades Unity Inspector's display", _bg8._BBD ? 2 : 1, true);
+                EditorGUILayout.HelpBox("Old Mode takes the traditional Unity workflow mode of double-clicking the script to open the external IDE and only upgrades Unity Inspector's display", _bg8._BBD ? MessageType.Warning : MessageType.Info, true);
             }
             EditorGUILayout.Space();
             GUILayout.Label("Editor Keyboard", EditorStyles.boldLabel, Array.Empty<GUILayoutOption>());
@@ -218,7 +218,7 @@ namespace AHO
             EditorGUILayout.Space();
             GUILayout.Label("More Options...", EditorStyles.boldLabel, Array.Empty<GUILayoutOption>());
             _bg8.Draw("Boost text/reference search speed", _bg8._BBD, true, null);
-            EditorGUILayout.HelpBox("Enable it can nearly double the speed of text/reference searches, but can cause unity editor to stall during the search", _bg8._BBD ? 2 : 1, true);
+            EditorGUILayout.HelpBox("Enable it can nearly double the speed of text/reference searches, but can cause unity editor to stall during the search", _bg8._BBD ? MessageType.Warning : MessageType.Info, true);
             bool flag10 = !_bg8.EAIK;
             if (flag10)
             {
