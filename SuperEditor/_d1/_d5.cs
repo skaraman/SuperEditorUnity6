@@ -13,15 +13,15 @@ namespace FEPKBIPDOHCNNFAKLHKGGCCCPGMCNPGGOCGM
         // Token: 0x060009E1 RID: 2529 RVA: 0x00107698 File Offset: 0x00105898
         static _d5()
         {
-            _bi2.AddTheme(_d5.OCJCCBBKNNLIAJBPBMMFHLHIAJEAFBMOIOFM, _d5.CMPOPFLJBNNNHDELDGDDKDJONFFGEBIGEPDL);
-            _bi2.CILPDAECBAHABNCJKNDKGGINMCLJFJKGEBAO++;
+            _bi2.AddTheme(_d5._CLS, _d5.CMPOPFLJBNNNHDELDGDDKDJONFFGEBIGEPDL);
+            _bi2._CBY++;
         }
 
         // Token: 0x040008D6 RID: 2262
         private static string CMPOPFLJBNNNHDELDGDDKDJONFFGEBIGEPDL = "VS Dark with Resharper";
 
         // Token: 0x040008D7 RID: 2263
-        internal static Theme OCJCCBBKNNLIAJBPBMMFHLHIAJEAFBMOIOFM = new Theme
+        internal static Theme _CLS = new Theme
         {
             background = new Color32(30, 30, 30, byte.MaxValue),
             text = new Color32(220, 220, 220, byte.MaxValue),

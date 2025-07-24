@@ -48,11 +48,11 @@ namespace AHO
         {
             for (_bm6 _AQI = this; _AQI != null; _AQI = _AQI._AMJ())
             {
-                _be7 hebiehngcbipegicgdnhcaaoamfabehlcmkf = _AQI as _be7;
-                bool flag = hebiehngcbipegicgdnhcaaoamfabehlcmkf != null;
+                _be7 _CHH = _AQI as _be7;
+                bool flag = _CHH != null;
                 if (flag)
                 {
-                    return hebiehngcbipegicgdnhcaaoamfabehlcmkf._AN;
+                    return _CHH._AN;
                 }
             }
             throw new Exception("No Assembly for scope???");

@@ -31,30 +31,27 @@ namespace AHO
         internal float DoCodeNavigationToolbar()
         {
             this._AFO.yMin = this._AFO.yMin + 21f;
-            Rect rect;
-            rect..ctor(this._AFO.xMin, this._AFO.yMin - 21f, this._AFO.width, 21f);
+            Rect rect = new Rect(this._AFO.xMin, this._AFO.yMin - 21f, this._AFO.width, 21f);
             bool enabled = GUI.enabled;
             GUI.enabled = true;
             rect.width -= 60f;
             bool flag = Application.platform == 0;
-            Vector2 vector;
-            vector..ctor(27f, 21f);
-            Rect rect2;
-            rect2..ctor(0f, rect.yMin, vector.x, vector.y);
+            Vector2 vector = new Vector2(27f, 21f);
+            Rect rect2 = new Rect(0f, rect.yMin, vector.x, vector.y);
             GUI.enabled = this.CanGoBack() && this.CanEdit();
-            _bi2.FADGCFAIAJEFHCBLKDGGHBGJJNBKJBMIOOEM.image = null;
-            _bi2.FADGCFAIAJEFHCBLKDGGHBGJJNBKJBMIOOEM.text = "←";
-            _bi2.FADGCFAIAJEFHCBLKDGGHBGJJNBKJBMIOOEM.tooltip = (_bg8._BCF ? (flag ? "Go Back\n(Command+Alt+Left)" : "Go Back\n(Ctrl+Alt+Left)") : "Go Back\n(Alt+Left)");
-            bool flag2 = GUI.Button(rect2, _bi2.FADGCFAIAJEFHCBLKDGGHBGJJNBKJBMIOOEM, EditorStyles.toolbarButton);
+            _bi2._CAA.image = null;
+            _bi2._CAA.text = "←";
+            _bi2._CAA.tooltip = (_bg8._BCF ? (flag ? "Go Back\n(Command+Alt+Left)" : "Go Back\n(Ctrl+Alt+Left)") : "Go Back\n(Alt+Left)");
+            bool flag2 = GUI.Button(rect2, _bi2._CAA, EditorStyles.toolbarButton);
             if (flag2)
             {
                 this.GoToRecentLocation(false);
             }
             rect2.x += vector.x;
             GUI.enabled = this.CanGoForward() && this.CanEdit();
-            _bi2.FADGCFAIAJEFHCBLKDGGHBGJJNBKJBMIOOEM.text = "→";
-            _bi2.FADGCFAIAJEFHCBLKDGGHBGJJNBKJBMIOOEM.tooltip = (_bg8._BCF ? (flag ? "Go Forward\n(Command+Alt+Right)" : "Go Forward\n(Ctrl+Alt+Right)") : "Go Forward\n(Alt+Right)");
-            bool flag3 = GUI.Button(rect2, _bi2.FADGCFAIAJEFHCBLKDGGHBGJJNBKJBMIOOEM, EditorStyles.toolbarButton);
+            _bi2._CAA.text = "→";
+            _bi2._CAA.tooltip = (_bg8._BCF ? (flag ? "Go Forward\n(Command+Alt+Right)" : "Go Forward\n(Ctrl+Alt+Right)") : "Go Forward\n(Alt+Right)");
+            bool flag3 = GUI.Button(rect2, _bi2._CAA, EditorStyles.toolbarButton);
             if (flag3)
             {
                 this.GoToRecentLocation(true);
@@ -74,8 +71,8 @@ namespace AHO
                 SyntaxToken syntaxToken = null;
                 int num2 = this._ABH._AEU;
                 GCE.PHFG[] _AQS = this._ABQ._AQQ;
-                List<string> flogicchcfaljohninkpcdacoidcghkimhpo = this._ABQ.FLOg;
-                int count = flogicchcfaljohninkpcdacoidcghkimhpo.Count;
+                List<string> _CAB = this._ABQ.FLOg;
+                int count = _CAB.Count;
                 int num3 = this._ABH._ABI;
                 while (syntaxToken == null && num3 < count)
                 {
@@ -219,48 +216,48 @@ namespace AHO
                             }
                         }
                     }
-                    bool flag25 = _bi2.CNPBICHBNGEHDEDGNGNKNHKJEFGMFKJKBPCM == null;
+                    bool flag25 = _bi2._CAC == null;
                     if (flag25)
                     {
-                        bool flag26 = _bi2.CNPBICHBNGEHDEDGNGNKNHKJEFGMFKJKBPCM == null;
+                        bool flag26 = _bi2._CAC == null;
                         if (flag26)
                         {
-                            _bi2.CNPBICHBNGEHDEDGNGNKNHKJEFGMFKJKBPCM = new GUIStyle(EditorStyles.foldout);
-                            _bi2.CKGHHCOKLFNM_AWHNHHDHJIGMAAHLCELHJIF = new GUIStyle(EditorStyles.foldout);
-                            _bi2.CKGHHCOKLFNM_AWHNHHDHJIGMAAHLCELHJIF.normal = _bi2.CKGHHCOKLFNM_AWHNHHDHJIGMAAHLCELHJIF.onNormal;
-                            _bi2.CKGHHCOKLFNM_AWHNHHDHJIGMAAHLCELHJIF.active = _bi2.CKGHHCOKLFNM_AWHNHHDHJIGMAAHLCELHJIF.onActive;
-                            _bi2.CKGHHCOKLFNM_AWHNHHDHJIGMAAHLCELHJIF.hover = _bi2.CKGHHCOKLFNM_AWHNHHDHJIGMAAHLCELHJIF.onHover;
-                            _bi2.CKGHHCOKLFNM_AWHNHHDHJIGMAAHLCELHJIF.focused = _bi2.CKGHHCOKLFNM_AWHNHHDHJIGMAAHLCELHJIF.onFocused;
-                            _bi2.HKMOIMKALMOPECMHELNEKJKCMDLMGOPMCELB = _bi2.CNPBICHBNGEHDEDGNGNKNHKJEFGMFKJKBPCM;
-                            _bi2.FPHFIPDJDADEJBALAJFCMIPIJEOODGLEDEEP = _bi2.CKGHHCOKLFNM_AWHNHHDHJIGMAAHLCELHJIF;
+                            _bi2._CAC = new GUIStyle(EditorStyles.foldout);
+                            _bi2._CAD = new GUIStyle(EditorStyles.foldout);
+                            _bi2._CAD.normal = _bi2._CAD.onNormal;
+                            _bi2._CAD.active = _bi2._CAD.onActive;
+                            _bi2._CAD.hover = _bi2._CAD.onHover;
+                            _bi2._CAD.focused = _bi2._CAD.onFocused;
+                            _bi2._CAE = _bi2._CAC;
+                            _bi2._CAF = _bi2._CAD;
                         }
                         else
                         {
-                            _bi2.CNPBICHBNGEHDEDGNGNKNHKJEFGMFKJKBPCM = new GUIStyle(_bi2.CNPBICHBNGEHDEDGNGNKNHKJEFGMFKJKBPCM);
-                            _bi2.CNPBICHBNGEHDEDGNGNKNHKJEFGMFKJKBPCM.padding.top--;
-                            _bi2.CNPBICHBNGEHDEDGNGNKNHKJEFGMFKJKBPCM.padding.left = 0;
-                            _bi2.CNPBICHBNGEHDEDGNGNKNHKJEFGMFKJKBPCM.alignment = 0;
-                            _bi2.CKGHHCOKLFNM_AWHNHHDHJIGMAAHLCELHJIF = new GUIStyle(_bi2.CNPBICHBNGEHDEDGNGNKNHKJEFGMFKJKBPCM);
-                            _bi2.CKGHHCOKLFNM_AWHNHHDHJIGMAAHLCELHJIF.normal = _bi2.CKGHHCOKLFNM_AWHNHHDHJIGMAAHLCELHJIF.onNormal;
-                            _bi2.CKGHHCOKLFNM_AWHNHHDHJIGMAAHLCELHJIF.active = _bi2.CKGHHCOKLFNM_AWHNHHDHJIGMAAHLCELHJIF.onActive;
-                            _bi2.CKGHHCOKLFNM_AWHNHHDHJIGMAAHLCELHJIF.hover = _bi2.CKGHHCOKLFNM_AWHNHHDHJIGMAAHLCELHJIF.onHover;
-                            _bi2.CKGHHCOKLFNM_AWHNHHDHJIGMAAHLCELHJIF.focused = _bi2.CKGHHCOKLFNM_AWHNHHDHJIGMAAHLCELHJIF.onFocused;
-                            _bi2.CNPBICHBNGEHDEDGNGNKNHKJEFGMFKJKBPCM.onNormal = _bi2.CNPBICHBNGEHDEDGNGNKNHKJEFGMFKJKBPCM.normal;
-                            _bi2.CNPBICHBNGEHDEDGNGNKNHKJEFGMFKJKBPCM.onActive = _bi2.CNPBICHBNGEHDEDGNGNKNHKJEFGMFKJKBPCM.active;
-                            _bi2.CNPBICHBNGEHDEDGNGNKNHKJEFGMFKJKBPCM.onHover = _bi2.CNPBICHBNGEHDEDGNGNKNHKJEFGMFKJKBPCM.hover;
-                            _bi2.CNPBICHBNGEHDEDGNGNKNHKJEFGMFKJKBPCM.onFocused = _bi2.CNPBICHBNGEHDEDGNGNKNHKJEFGMFKJKBPCM.focused;
-                            _bi2.HKMOIMKALMOPECMHELNEKJKCMDLMGOPMCELB = new GUIStyle(_bi2.HKMOIMKALMOPECMHELNEKJKCMDLMGOPMCELB);
-                            _bi2.HKMOIMKALMOPECMHELNEKJKCMDLMGOPMCELB.padding.top--;
-                            _bi2.HKMOIMKALMOPECMHELNEKJKCMDLMGOPMCELB.alignment = 0;
-                            _bi2.FPHFIPDJDADEJBALAJFCMIPIJEOODGLEDEEP = new GUIStyle(_bi2.HKMOIMKALMOPECMHELNEKJKCMDLMGOPMCELB);
-                            _bi2.FPHFIPDJDADEJBALAJFCMIPIJEOODGLEDEEP.normal = _bi2.FPHFIPDJDADEJBALAJFCMIPIJEOODGLEDEEP.onNormal;
-                            _bi2.FPHFIPDJDADEJBALAJFCMIPIJEOODGLEDEEP.active = _bi2.FPHFIPDJDADEJBALAJFCMIPIJEOODGLEDEEP.onActive;
-                            _bi2.FPHFIPDJDADEJBALAJFCMIPIJEOODGLEDEEP.hover = _bi2.FPHFIPDJDADEJBALAJFCMIPIJEOODGLEDEEP.onHover;
-                            _bi2.FPHFIPDJDADEJBALAJFCMIPIJEOODGLEDEEP.focused = _bi2.FPHFIPDJDADEJBALAJFCMIPIJEOODGLEDEEP.onFocused;
-                            _bi2.HKMOIMKALMOPECMHELNEKJKCMDLMGOPMCELB.onNormal = _bi2.HKMOIMKALMOPECMHELNEKJKCMDLMGOPMCELB.normal;
-                            _bi2.HKMOIMKALMOPECMHELNEKJKCMDLMGOPMCELB.onActive = _bi2.HKMOIMKALMOPECMHELNEKJKCMDLMGOPMCELB.active;
-                            _bi2.HKMOIMKALMOPECMHELNEKJKCMDLMGOPMCELB.onHover = _bi2.HKMOIMKALMOPECMHELNEKJKCMDLMGOPMCELB.hover;
-                            _bi2.HKMOIMKALMOPECMHELNEKJKCMDLMGOPMCELB.onFocused = _bi2.HKMOIMKALMOPECMHELNEKJKCMDLMGOPMCELB.focused;
+                            _bi2._CAC = new GUIStyle(_bi2._CAC);
+                            _bi2._CAC.padding.top--;
+                            _bi2._CAC.padding.left = 0;
+                            _bi2._CAC.alignment = 0;
+                            _bi2._CAD = new GUIStyle(_bi2._CAC);
+                            _bi2._CAD.normal = _bi2._CAD.onNormal;
+                            _bi2._CAD.active = _bi2._CAD.onActive;
+                            _bi2._CAD.hover = _bi2._CAD.onHover;
+                            _bi2._CAD.focused = _bi2._CAD.onFocused;
+                            _bi2._CAC.onNormal = _bi2._CAC.normal;
+                            _bi2._CAC.onActive = _bi2._CAC.active;
+                            _bi2._CAC.onHover = _bi2._CAC.hover;
+                            _bi2._CAC.onFocused = _bi2._CAC.focused;
+                            _bi2._CAE = new GUIStyle(_bi2._CAE);
+                            _bi2._CAE.padding.top--;
+                            _bi2._CAE.alignment = 0;
+                            _bi2._CAF = new GUIStyle(_bi2._CAE);
+                            _bi2._CAF.normal = _bi2._CAF.onNormal;
+                            _bi2._CAF.active = _bi2._CAF.onActive;
+                            _bi2._CAF.hover = _bi2._CAF.onHover;
+                            _bi2._CAF.focused = _bi2._CAF.onFocused;
+                            _bi2._CAE.onNormal = _bi2._CAE.normal;
+                            _bi2._CAE.onActive = _bi2._CAE.active;
+                            _bi2._CAE.onHover = _bi2._CAE.hover;
+                            _bi2._CAE.onFocused = _bi2._CAE.focused;
                         }
                     }
                     bool flag27 = _AAH != null && !_AAH.IsValid();
@@ -268,17 +265,17 @@ namespace AHO
                     {
                         _AAH = null;
                     }
-                    bool flag28 = _AAH != this.EIHOAOKGDIECDKLLIHNPGPFALCCKMALIPMFP || this.EDFABJAMKHOONBEDBDMFIPINKHADJLABOKOA.Count == 0;
+                    bool flag28 = _AAH != this._CAG || this._CAH.Count == 0;
                     if (flag28)
                     {
-                        this.EIHOAOKGDIECDKLLIHNPGPFALCCKMALIPMFP = _AAH;
-                        this.EDFABJAMKHOONBEDBDMFIPINKHADJLABOKOA.Clear();
+                        this._CAG = _AAH;
+                        this._CAH.Clear();
                         bool flag29 = _AAH == null;
                         if (flag29)
                         {
-                            this.EDFABJAMKHOONBEDBDMFIPINKHADJLABOKOA.Add(new _bi2.LCGOEHPFJAKIIHCHKLFJCHMKGJNEAJJIPKMP
+                            this._CAH.Add(new _bi2._CAI
                             {
-                                IJLADEDJGGFCNGLKJELKEMPGOAMJIAIBDENM = new GUIContent("...")
+                                _CAJ = new GUIContent("...")
                             });
                         }
                         else
@@ -300,13 +297,13 @@ namespace AHO
                                             text3 = text3 + "(" + _AAN.PrintParameters(_AAN.GetParameters(), true) + ")";
                                         }
                                     }
-                                    _bi2.LCGOEHPFJAKIIHCHKLFJCHMKGJNEAJJIPKMP lcgoehpfjakiihchklfjchmkgjneajjipkmp = new _bi2.LCGOEHPFJAKIIHCHKLFJCHMKGJNEAJJIPKMP
+                                    _bi2._CAI _CAK = new _bi2._CAI
                                     {
                                         _AMN = _AAH,
-                                        IJLADEDJGGFCNGLKJELKEMPGOAMJIAIBDENM = new GUIContent(" " + text3 + " ", _ba4.GetSymbolIcon(_AAH)),
-                                        MACGPHIBANLBNBMKLNGPAGIFGHDICBLPINBC = (this.EDFABJAMKHOONBEDBDMFIPINKHADJLABOKOA.Count == 0)
+                                        _CAJ = new GUIContent(" " + text3 + " ", _ba4.GetSymbolIcon(_AAH)),
+                                        _CAL = (this._CAH.Count == 0)
                                     };
-                                    this.EDFABJAMKHOONBEDBDMFIPINKHADJLABOKOA.Insert(0, lcgoehpfjakiihchklfjchmkgjneajjipkmp);
+                                    this._CAH.Insert(0, _CAK);
                                 }
                                 else
                                 {
@@ -330,56 +327,56 @@ namespace AHO
                                         {
                                             text4 = text4 + "(" + _AAN2.PrintParameters(_AAN2.GetParameters(), true) + ")";
                                         }
-                                        _bi2.LCGOEHPFJAKIIHCHKLFJCHMKGJNEAJJIPKMP lcgoehpfjakiihchklfjchmkgjneajjipkmp2 = new _bi2.LCGOEHPFJAKIIHCHKLFJCHMKGJNEAJJIPKMP
+                                        _bi2._CAI _CAK2 = new _bi2._CAI
                                         {
                                             _AMN = _AAH,
-                                            IJLADEDJGGFCNGLKJELKEMPGOAMJIAIBDENM = new GUIContent(" " + text4 + " ", _ba4.GetSymbolIcon(_AAH)),
-                                            MACGPHIBANLBNBMKLNGPAGIFGHDICBLPINBC = (this.EDFABJAMKHOONBEDBDMFIPINKHADJLABOKOA.Count == 0)
+                                            _CAJ = new GUIContent(" " + text4 + " ", _ba4.GetSymbolIcon(_AAH)),
+                                            _CAL = (this._CAH.Count == 0)
                                         };
-                                        _bb7 cinfdnhmckaokjkkdoakfmmnfcljhlbojbmd = _AAH as _bb7;
-                                        bool flag37 = cinfdnhmckaokjkkdoakfmmnfcljhlbojbmd != null;
+                                        _bb7 _CAM = _AAH as _bb7;
+                                        bool flag37 = _CAM != null;
                                         if (flag37)
                                         {
-                                            text4 = text4 + " this[" + cinfdnhmckaokjkkdoakfmmnfcljhlbojbmd.PrintParameters(cinfdnhmckaokjkkdoakfmmnfcljhlbojbmd.GetParameters(), true) + "]";
+                                            text4 = text4 + " this[" + _CAM.PrintParameters(_CAM.GetParameters(), true) + "]";
                                             _bh4 _AAH2 = new _bh4();
                                             _AAH2._AT = SymbolKind.Property;
-                                            _AAH2.EFBEFFMKKMDKGGOJJGINKADLJOBNDGMEICFB(_AAH._AFH());
-                                            _AAH2.NNBOMNBKBEALNJMFFCLMGKELEOOBAGIOJFPM(_AAH._AFJ());
-                                            _AAH2.MNHNMADHLFHFEMIBKHINNEDLNHDLBDGCDILB(_AAH._AFI());
-                                            lcgoehpfjakiihchklfjchmkgjneajjipkmp2.IJLADEDJGGFCNGLKJELKEMPGOAMJIAIBDENM = new GUIContent(" " + text4 + " ", _ba4.GetSymbolIcon(_AAH2));
+                                            _AAH2._CAN(_AAH._AFH());
+                                            _AAH2._CAO(_AAH._AFJ());
+                                            _AAH2._CAP(_AAH._AFI());
+                                            _CAK2._CAJ = new GUIContent(" " + text4 + " ", _ba4.GetSymbolIcon(_AAH2));
                                         }
-                                        this.EDFABJAMKHOONBEDBDMFIPINKHADJLABOKOA.Insert(0, lcgoehpfjakiihchklfjchmkgjneajjipkmp2);
+                                        this._CAH.Insert(0, _CAK2);
                                     }
                                 }
                                 _AAH = _AAH._AO;
                             }
-                            bool flag38 = this.EIHOAOKGDIECDKLLIHNPGPFALCCKMALIPMFP._AT == SymbolKind.Class || this.EIHOAOKGDIECDKLLIHNPGPFALCCKMALIPMFP._AT == SymbolKind.Enum || this.EIHOAOKGDIECDKLLIHNPGPFALCCKMALIPMFP._AT == SymbolKind.Interface || this.EIHOAOKGDIECDKLLIHNPGPFALCCKMALIPMFP._AT == SymbolKind.Namespace || this.EIHOAOKGDIECDKLLIHNPGPFALCCKMALIPMFP._AT == SymbolKind.Struct;
+                            bool flag38 = this._CAG._AT == SymbolKind.Class || this._CAG._AT == SymbolKind.Enum || this._CAG._AT == SymbolKind.Interface || this._CAG._AT == SymbolKind.Namespace || this._CAG._AT == SymbolKind.Struct;
                             if (flag38)
                             {
-                                this.EDFABJAMKHOONBEDBDMFIPINKHADJLABOKOA.Add(new _bi2.LCGOEHPFJAKIIHCHKLFJCHMKGJNEAJJIPKMP
+                                this._CAH.Add(new _bi2._CAI
                                 {
-                                    IJLADEDJGGFCNGLKJELKEMPGOAMJIAIBDENM = new GUIContent("...")
+                                    _CAJ = new GUIContent("...")
                                 });
                             }
                         }
                     }
-                    GUIStyle guistyle = _bi2.CNPBICHBNGEHDEDGNGNKNHKJEFGMFKJKBPCM;
-                    GUIStyle guistyle2 = _bi2.CKGHHCOKLFNM_AWHNHHDHJIGMAAHLCELHJIF;
+                    GUIStyle guistyle = _bi2._CAC;
+                    GUIStyle guistyle2 = _bi2._CAD;
                     int num5 = -1;
                     int num6 = 0;
                     string text5 = "";
                     List<_bh4> list = new List<_bh4>();
-                    for (int j = 0; j < this.EDFABJAMKHOONBEDBDMFIPINKHADJLABOKOA.Count; j++)
+                    for (int j = 0; j < this._CAH.Count; j++)
                     {
-                        _bi2.LCGOEHPFJAKIIHCHKLFJCHMKGJNEAJJIPKMP lcgoehpfjakiihchklfjchmkgjneajjipkmp3 = this.EDFABJAMKHOONBEDBDMFIPINKHADJLABOKOA[j];
-                        bool flag39 = lcgoehpfjakiihchklfjchmkgjneajjipkmp3._AMN == null;
+                        _bi2._CAI _CAK3 = this._CAH[j];
+                        bool flag39 = _CAK3._AMN == null;
                         if (!flag39)
                         {
-                            bool flag40 = lcgoehpfjakiihchklfjchmkgjneajjipkmp3._AMN._AT == SymbolKind.Namespace;
+                            bool flag40 = _CAK3._AMN._AT == SymbolKind.Namespace;
                             if (flag40)
                             {
-                                list.Add(lcgoehpfjakiihchklfjchmkgjneajjipkmp3._AMN);
-                                List<FKI> list2 = _bh6.FindDeclarations(lcgoehpfjakiihchklfjchmkgjneajjipkmp3._AMN);
+                                list.Add(_CAK3._AMN);
+                                List<FKI> list2 = _bh6.FindDeclarations(_CAK3._AMN);
                                 bool flag41 = list2 == null;
                                 if (flag41)
                                 {
@@ -387,7 +384,7 @@ namespace AHO
                                 }
                                 else
                                 {
-                                    foreach (FKI _AFF in lcgoehpfjakiihchklfjchmkgjneajjipkmp3._AMN._AEI)
+                                    foreach (FKI _AFF in _CAK3._AMN._AEI)
                                     {
                                         bool flag42 = !_AFF.IsValid();
                                         if (flag42)
@@ -412,25 +409,25 @@ namespace AHO
                         }
                     }
                     int l = 0;
-                    while (l < this.EDFABJAMKHOONBEDBDMFIPINKHADJLABOKOA.Count)
+                    while (l < this._CAH.Count)
                     {
                         bool flag44 = rect2.x >= rect.xMax;
                         if (flag44)
                         {
                             break;
                         }
-                        _bi2.LCGOEHPFJAKIIHCHKLFJCHMKGJNEAJJIPKMP lcgoehpfjakiihchklfjchmkgjneajjipkmp4 = this.EDFABJAMKHOONBEDBDMFIPINKHADJLABOKOA[l];
-                        GUIContent ijladedjggfcnglkjelkempgoamjiaibdenm = lcgoehpfjakiihchklfjchmkgjneajjipkmp4.IJLADEDJGGFCNGLKJELKEMPGOAMJIAIBDENM;
-                        this.NCNKKLKOFJAKAPPFFHMDALGLDGPBKGLCNIIA.text = ijladedjggfcnglkjelkempgoamjiaibdenm.text;
-                        Vector2 vector2 = guistyle.CalcSize(this.NCNKKLKOFJAKAPPFFHMDALGLDGPBKGLCNIIA);
+                        _bi2._CAI _CAK4 = this._CAH[l];
+                        GUIContent _CAQ = _CAK4._CAJ;
+                        this._CAR.text = _CAQ.text;
+                        Vector2 vector2 = guistyle.CalcSize(this._CAR);
                         vector2.x += 16f;
                         vector2.y += 16f;
                         rect2.width = vector2.x;
                         bool flag45 = l == num6;
                         if (!flag45)
                         {
-                            guistyle = _bi2.CNPBICHBNGEHDEDGNGNKNHKJEFGMFKJKBPCM;
-                            guistyle2 = _bi2.CKGHHCOKLFNM_AWHNHHDHJIGMAAHLCELHJIF;
+                            guistyle = _bi2._CAC;
+                            guistyle2 = _bi2._CAD;
                             goto IL_1047;
                         }
                         guistyle = new GUIStyle(EditorStyles.label);
@@ -438,11 +435,11 @@ namespace AHO
                         rect2.width -= 12f;
                         rect2.x += 5f;
                         guistyle2 = guistyle;
-                        _bh4 jjloddnfldggiplhldhkjnbhjfnbpoplkgdd = this.EDFABJAMKHOONBEDBDMFIPINKHADJLABOKOA[l]._AMN;
-                        bool flag46 = jjloddnfldggiplhldhkjnbhjfnbpoplkgdd != null && jjloddnfldggiplhldhkjnbhjfnbpoplkgdd._AT == SymbolKind.Namespace;
+                        _bh4 _CAS = this._CAH[l]._AMN;
+                        bool flag46 = _CAS != null && _CAS._AT == SymbolKind.Namespace;
                         if (flag46)
                         {
-                            ijladedjggfcnglkjelkempgoamjiaibdenm.text = text5;
+                            _CAQ.text = text5;
                             goto IL_1047;
                         }
                         goto IL_10DA;
@@ -450,32 +447,33 @@ namespace AHO
                         l++;
                         continue;
                     IL_10DA:
-                        EventModifiers eventModifiers = Event.current.modifiers & -113;
-                        _bh4 jjloddnfldggiplhldhkjnbhjfnbpoplkgdd2 = lcgoehpfjakiihchklfjchmkgjneajjipkmp4._AMN;
-                        bool flag47 = jjloddnfldggiplhldhkjnbhjfnbpoplkgdd2 != null && jjloddnfldggiplhldhkjnbhjfnbpoplkgdd2._AT == SymbolKind.Namespace && l != num6;
+                        EventModifiers eventModifiers = (EventModifiers)((int)Event.current.modifiers & -113);
+                        _bh4 _CAS2 = _CAK4._AMN;
+                        bool flag47 = _CAS2 != null && _CAS2._AT == SymbolKind.Namespace && l != num6;
                         if (flag47)
                         {
                             goto IL_1C3B;
                         }
-                        bool flag48 = GUI.Button(rect2, ijladedjggfcnglkjelkempgoamjiaibdenm, lcgoehpfjakiihchklfjchmkgjneajjipkmp4.MACGPHIBANLBNBMKLNGPAGIFGHDICBLPINBC ? guistyle2 : guistyle) || (l == this.EDFABJAMKHOONBEDBDMFIPINKHADJLABOKOA.Count - 1 && Event.current.type == 4 && eventModifiers == (flag ? 2 : 4) && Event.current.keyCode == 109);
+                        bool flag48 = GUI.Button(rect2, _CAQ, _CAK4._CAL ? guistyle2 : guistyle) || (l == this._CAH.Count - 1 && (int)Event.current.type == 4 && 
+                            (int)eventModifiers == (flag ? 2 : 4) && (int)Event.current.keyCode == 109);
                         if (flag48)
                         {
                             Event.current.Use();
-                            _bh4 jjloddnfldggiplhldhkjnbhjfnbpoplkgdd3 = lcgoehpfjakiihchklfjchmkgjneajjipkmp4._AMN;
-                            bool flag49 = !lcgoehpfjakiihchklfjchmkgjneajjipkmp4.MACGPHIBANLBNBMKLNGPAGIFGHDICBLPINBC && lcgoehpfjakiihchklfjchmkgjneajjipkmp4._AMN != null;
+                            _bh4 _CAS3 = _CAK4._AMN;
+                            bool flag49 = !_CAK4._CAL && _CAK4._AMN != null;
                             if (flag49)
                             {
-                                this.GoToSymbol(jjloddnfldggiplhldhkjnbhjfnbpoplkgdd3);
+                                this.GoToSymbol(_CAS3);
                             }
                             else
                             {
                                 GenericMenu genericMenu = new GenericMenu();
-                                _bb4._ACW jlgembmpdbbhbaphjijihkhepgpnbojcconn = this._ABQ._AOU()._AQT()._AIT;
+                                _bb4._ACW _CAW = this._ABQ._AOU()._AQT()._AIT;
                                 bool flag50 = l == num6;
                                 if (flag50)
                                 {
                                     List<FKI> list3 = new List<FKI>();
-                                    _bi2.EnumScopeDeclarations(jlgembmpdbbhbaphjijihkhepgpnbojcconn, new Action<FKI>(list3.Add));
+                                    _bi2.EnumScopeDeclarations(_CAW, new Action<FKI>(list3.Add));
                                     list3.Sort((FKI x, FKI y) => x.Name.CompareTo(y.Name));
                                     List<string> list4 = new List<string>(list3.Count);
                                     bool flag51 = _bg8._BBA;
@@ -531,7 +529,7 @@ namespace AHO
                                                 text8 = text9 + "/" + text8;
                                             }
                                         }
-                                        bool flag57 = decl._ACV == this.EDFABJAMKHOONBEDBDMFIPINKHADJLABOKOA[0]._AMN;
+                                        bool flag57 = decl._ACV == this._CAH[0]._AMN;
                                         switch (decl._AT)
                                         {
                                             case SymbolKind.Namespace:
@@ -561,26 +559,26 @@ namespace AHO
                                 }
                                 else
                                 {
-                                    _bh4.AANJKEKCHABAMPJEAMNFDPMGKHPFMLNPIMNB mdgiinhnoodfkloojkbbphjnnbonmlflmioa = this.EDFABJAMKHOONBEDBDMFIPINKHADJLABOKOA[l - 1]._AMN._AAG;
-                                    List<_bh4> list5 = new List<_bh4>(mdgiinhnoodfkloojkbbphjnnbonmlflmioa.Count);
+                                    _bh4._CAT _CAU = this._CAH[l - 1]._AMN._AAG;
+                                    List<_bh4> list5 = new List<_bh4>(_CAU.Count);
                                     int num9 = 0;
-                                    while (num9 < mdgiinhnoodfkloojkbbphjnnbonmlflmioa.Count)
+                                    while (num9 < _CAU.Count)
                                     {
-                                        _bh4 _AAH3 = mdgiinhnoodfkloojkbbphjnnbonmlflmioa._AAI(num9);
+                                        _bh4 _AAH3 = _CAU._AAI(num9);
                                         bool flag58 = _AAH3._AT == SymbolKind.MethodGroup;
                                         if (flag58)
                                         {
                                             _ba7 _AAK = (_ba7)_AAH3;
                                             foreach (_bb3 _AAN3 in _AAK._AAM)
                                             {
-                                                List<FKI> jdlafinmknbedpejmjahhodcpgnkklelobcd = _AAN3._AEI;
-                                                bool flag59 = jdlafinmknbedpejmjahhodcpgnkklelobcd == null || jdlafinmknbedpejmjahhodcpgnkklelobcd.Count == 0;
+                                                List<FKI> _CAV = _AAN3._AEI;
+                                                bool flag59 = _CAV == null || _CAV.Count == 0;
                                                 if (!flag59)
                                                 {
-                                                    for (int num10 = 0; num10 < jdlafinmknbedpejmjahhodcpgnkklelobcd.Count; num10++)
+                                                    for (int num10 = 0; num10 < _CAV.Count; num10++)
                                                     {
-                                                        FKI _AFF4 = jdlafinmknbedpejmjahhodcpgnkklelobcd[num10];
-                                                        bool flag60 = !_AFF4.IsValid() || !jlgembmpdbbhbaphjijihkhepgpnbojcconn.IsAncestorOf(_AFF4._AEJ);
+                                                        FKI _AFF4 = _CAV[num10];
+                                                        bool flag60 = !_AFF4.IsValid() || !_CAW.IsAncestorOf(_AFF4._AEJ);
                                                         if (!flag60)
                                                         {
                                                             list5.Add(_AAN3);
@@ -591,14 +589,14 @@ namespace AHO
                                         }
                                         else
                                         {
-                                            List<FKI> jdlafinmknbedpejmjahhodcpgnkklelobcd2 = _AAH3._AEI;
-                                            bool flag61 = jdlafinmknbedpejmjahhodcpgnkklelobcd2 == null || jdlafinmknbedpejmjahhodcpgnkklelobcd2.Count == 0;
+                                            List<FKI> _CAV2 = _AAH3._AEI;
+                                            bool flag61 = _CAV2 == null || _CAV2.Count == 0;
                                             if (!flag61)
                                             {
-                                                for (int num11 = 0; num11 < jdlafinmknbedpejmjahhodcpgnkklelobcd2.Count; num11++)
+                                                for (int num11 = 0; num11 < _CAV2.Count; num11++)
                                                 {
-                                                    FKI _AFF5 = jdlafinmknbedpejmjahhodcpgnkklelobcd2[num11];
-                                                    bool flag62 = !_AFF5.IsValid() || !jlgembmpdbbhbaphjijihkhepgpnbojcconn.IsAncestorOf(_AFF5._AEJ);
+                                                    FKI _AFF5 = _CAV2[num11];
+                                                    bool flag62 = !_AFF5.IsValid() || !_CAW.IsAncestorOf(_AFF5._AEJ);
                                                     if (!flag62)
                                                     {
                                                         list5.Add(_AAH3);
@@ -609,7 +607,6 @@ namespace AHO
                                     IL_16A4:
                                         num9++;
                                         continue;
-                                        goto IL_16A4;
                                     }
                                     bool flag63 = _bg8._BAZ;
                                     if (flag63)
@@ -758,11 +755,11 @@ namespace AHO
                                                 }
                                             }
                                         }
-                                        _bb7 cinfdnhmckaokjkkdoakfmmnfcljhlbojbmd2 = target as _bb7;
-                                        bool flag72 = cinfdnhmckaokjkkdoakfmmnfcljhlbojbmd2 != null;
+                                        _bb7 _CAM2 = target as _bb7;
+                                        bool flag72 = _CAM2 != null;
                                         if (flag72)
                                         {
-                                            text12 = "Indexer this[" + cinfdnhmckaokjkkdoakfmmnfcljhlbojbmd2.PrintParameters(cinfdnhmckaokjkkdoakfmmnfcljhlbojbmd2.GetParameters(), true) + "]";
+                                            text12 = "Indexer this[" + _CAM2.PrintParameters(_CAM2.GetParameters(), true) + "]";
                                         }
                                         switch (target._AT)
                                         {
@@ -808,7 +805,7 @@ namespace AHO
                                                 text12 = text13 + "/" + text12;
                                             }
                                         }
-                                        bool flag75 = target == this.EDFABJAMKHOONBEDBDMFIPINKHADJLABOKOA[l]._AMN;
+                                        bool flag75 = target == this._CAH[l]._AMN;
                                         genericMenu.AddItem(new GUIContent(text12), flag75, delegate
                                         {
                                             this.GoToSymbol(target);
@@ -822,15 +819,15 @@ namespace AHO
                         }
                         rect2.x += vector2.x;
                     IL_1C2B:
-                        guistyle = _bi2.HKMOIMKALMOPECMHELNEKJKCMDLMGOPMCELB;
-                        guistyle2 = _bi2.FPHFIPDJDADEJBALAJFCMIPIJEOODGLEDEEP;
+                        guistyle = _bi2._CAE;
+                        guistyle2 = _bi2._CAF;
                         goto IL_1C3B;
                     IL_1047:
                         bool flag76;
                         if (_bg8._BAY)
                         {
-                            _bh4 jjloddnfldggiplhldhkjnbhjfnbpoplkgdd4 = this.EDFABJAMKHOONBEDBDMFIPINKHADJLABOKOA[l]._AMN;
-                            flag76 = jjloddnfldggiplhldhkjnbhjfnbpoplkgdd4 != null && jjloddnfldggiplhldhkjnbhjfnbpoplkgdd4._AT == SymbolKind.Namespace;
+                            _bh4 _CAS4 = this._CAH[l]._AMN;
+                            flag76 = _CAS4 != null && _CAS4._AT == SymbolKind.Namespace;
                         }
                         else
                         {
@@ -883,7 +880,7 @@ namespace AHO
                 {
                     _AUB = null;
                 }
-                GUIContent guicontent = ((_AUB != null) ? this.DGKGFJBJNCKONKKACKJDNJPLGPCKNJDIBJBL : _bi2.LLBPLBCAPNJMEDNAGOOJBIANDIBLAMGOBDLE);
+                GUIContent guicontent = ((_AUB != null) ? this._CAX : _bi2._CAY);
                 bool flag82 = _AUB != null;
                 if (flag82)
                 {
@@ -894,10 +891,10 @@ namespace AHO
                         if (flag83)
                         {
                             string text14 = _AUB.EOIA[count5].text;
-                            bool flag84 = this.DGKGFJBJNCKONKKACKJDNJPLGPCKNJDIBJBL.text.Length != "#region ".Length + text14.Length || !this.DGKGFJBJNCKONKKACKJDNJPLGPCKNJDIBJBL.text.EndsWith(text14, StringComparison.Ordinal);
+                            bool flag84 = this._CAX.text.Length != "#region ".Length + text14.Length || !this._CAX.text.EndsWith(text14, StringComparison.Ordinal);
                             if (flag84)
                             {
-                                this.DGKGFJBJNCKONKKACKJDNJPLGPCKNJDIBJBL.text = "#region " + text14;
+                                this._CAX.text = "#region " + text14;
                             }
                             break;
                         }
@@ -913,12 +910,12 @@ namespace AHO
                     rect2.xMin = rect2.xMax - vector3.x;
                 }
                 bool flag86 = false;
-                this.HCOPKDNNJMCJODPEEAMFFJOHKLANGEEOCNOF = new List<GCE._ABW>();
-                this.ListAllRegions(this._ABQ._AUY, this.HCOPKDNNJMCJODPEEAMFFJOHKLANGEEOCNOF);
-                bool flag87 = this.HCOPKDNNJMCJODPEEAMFFJOHKLANGEEOCNOF.Count > 0;
+                this._CAZ = new List<GCE._ABW>();
+                this.ListAllRegions(this._ABQ._AUY, this._CAZ);
+                bool flag87 = this._CAZ.Count > 0;
                 if (flag87)
                 {
-                    foreach (GCE._ABW _AVO2 in this.HCOPKDNNJMCJODPEEAMFFJOHKLANGEEOCNOF)
+                    foreach (GCE._ABW _AVO2 in this._CAZ)
                     {
                         bool flag88 = _AVO2._AT == (GCE._ABW._ABX)1 || _AVO2._AT == (GCE._ABW._ABX)6;
                         if (flag88)
@@ -933,14 +930,14 @@ namespace AHO
                     bool flag90 = !_bg8._BCD;
                     if (flag90)
                     {
-                        this.HCOPKDNNJMCJODPEEAMFFJOHKLANGEEOCNOF.Sort((GCE._ABW a, GCE._ABW b) => a._ABI.JIKB.CompareTo(b._ABI.JIKB));
+                        this._CAZ.Sort((GCE._ABW a, GCE._ABW b) => a._ABI.JIKB.CompareTo(b._ABI.JIKB));
                     }
-                    string[] array = new string[this.HCOPKDNNJMCJODPEEAMFFJOHKLANGEEOCNOF.Count];
-                    int count6 = this.HCOPKDNNJMCJODPEEAMFFJOHKLANGEEOCNOF.Count;
+                    string[] array = new string[this._CAZ.Count];
+                    int count6 = this._CAZ.Count;
                     while (count6-- > 0)
                     {
                         array[count6] = "";
-                        GCE._ABW _AVO3 = this.HCOPKDNNJMCJODPEEAMFFJOHKLANGEEOCNOF[count6];
+                        GCE._ABW _AVO3 = this._CAZ[count6];
                         List<SyntaxToken> _ABS3 = _AVO3._ABI.EOIA;
                         for (int num16 = 0; num16 < _ABS3.Count; num16++)
                         {
@@ -952,7 +949,7 @@ namespace AHO
                             }
                         }
                     }
-                    GCE._ABW[] array2 = this.HCOPKDNNJMCJODPEEAMFFJOHKLANGEEOCNOF.ToArray();
+                    GCE._ABW[] array2 = this._CAZ.ToArray();
                     bool flag92 = _bg8._BCD;
                     if (flag92)
                     {
@@ -990,24 +987,24 @@ namespace AHO
         // Token: 0x06000277 RID: 631 RVA: 0x00023C2C File Offset: 0x00021E2C
         private void Autocomplete(bool suggestionsOnly)
         {
-            bool flag = this.BODJHGOIEFMIPPGPLNBAIBNIEFNGEJODGHFL || !this._ABQ._ASC;
+            bool flag = this._CBA || !this._ABQ._ASC;
             if (!flag)
             {
-                bool flag2 = this.EEJFFFONEBHEFJKECHMCKDFAFABLNECBNBDO == null;
+                bool flag2 = this._CBB == null;
                 if (flag2)
                 {
                     Rect caretRect = this.GetCaretRect(this._ABH);
                     caretRect.x += 4f + this._AFO.x - this._AFS.x;
                     caretRect.y += 4f + this._AFO.y - this._AFS.y;
-                    this.EEJFFFONEBHEFJKECHMCKDFAFABLNECBNBDO = _ba4.Create(this, caretRect, this.KBBCMMCMDLMOHHGNAPNIJGLHBLBGGPODLFEB != null && !this.KBBCMMCMDLMOHHGNAPNIJGLHBLBGGPODLFEB.OLLEJPDNBBODLEICOBPMPIPPIJBOBOOHEKFP());
-                    bool flag3 = this.EEJFFFONEBHEFJKECHMCKDFAFABLNECBNBDO == null;
+                    this._CBB = _ba4.Create(this, caretRect, this._CBC != null && !this._CBC._CBD());
+                    bool flag3 = this._CBB == null;
                     if (!flag3)
                     {
-                        this.EEJFFFONEBHEFJKECHMCKDFAFABLNECBNBDO.UpdateTypedInPart();
-                        bool flag4 = this.KBBCMMCMDLMOHHGNAPNIJGLHBLBGGPODLFEB != null;
+                        this._CBB.UpdateTypedInPart();
+                        bool flag4 = this._CBC != null;
                         if (flag4)
                         {
-                            this.KBBCMMCMDLMOHHGNAPNIJGLHBLBGGPODLFEB._AEW(!this.EEJFFFONEBHEFJKECHMCKDFAFABLNECBNBDO.OLLEJPDNBBODLEICOBPMPIPPIJBOBOOHEKFP());
+                            this._CBC._AEW(!this._CBB._CBD());
                         }
                         HashSet<_bh4> hashSet = new HashSet<_bh4>();
                         _ba4._AFC = false;
@@ -1050,73 +1047,73 @@ namespace AHO
                         {
                             _bh2._AJH _BDV = this._ABK()._AOU().MoveAfterLeaf((syntaxToken != null) ? syntaxToken.OOME : null);
                             _bb4._ACW _AGZ = ((_BDV != null) ? _BDV._AJT : null);
-                            _bm2 oajkkabajliogpdkoahpmclnkpppodpdfgmj = _bm2._AGM();
+                            _bm2 _CBF = _bm2._AGM();
                             _bh2._AGI _BEC = new _bh2._AGI();
                             bool flag13 = _BDV != null;
                             if (flag13)
                             {
                                 _BDV.CollectCompletions(_BEC);
                                 _BDV.Delete();
-                                bool flag14 = this.JHONFKMHPKCLKLHKMOEBEHPGNBLADGBBEHIL && _BEC.Matches(oajkkabajliogpdkoahpmclnkpppodpdfgmj.KAHJDLLICNDGMPOOEJNMMBBFFBAMEFDPHNAD);
+                                bool flag14 = this._CBE && _BEC.Matches(_CBF._CBG);
                                 if (flag14)
                                 {
                                     this.CloseAutocomplete();
                                     return;
                                 }
                             }
-                            int hbppbagcfpcgcnfakinahhhifamjkfgmkimc = oajkkabajliogpdkoahpmclnkpppodpdfgmj.HBPPBAGCFPCGCNFAKINAHHHIFAMJKFGMKIMC;
-                            bool flag15 = suggestionsOnly && !_BEC.Matches(hbppbagcfpcgcnfakinahhhifamjkfgmkimc) && (syntaxToken == null || syntaxToken.text != "override");
+                            int _CBH = _CBF._CBI;
+                            bool flag15 = suggestionsOnly && !_BEC.Matches(_CBH) && (syntaxToken == null || syntaxToken.text != "override");
                             if (flag15)
                             {
                                 this.CloseAutocomplete();
                                 return;
                             }
-                            _BEC.Remove(oajkkabajliogpdkoahpmclnkpppodpdfgmj.GHLHPHLFDEMBHDBMGMEBAMMKDPPKIHIMODCN);
-                            bool flag16 = _BEC.Remove(oajkkabajliogpdkoahpmclnkpppodpdfgmj.EFJDEBNLGANKFFGCHEOIJMBIMGFKDMLLBDAB);
+                            _BEC.Remove(_CBF._CBJ);
+                            bool flag16 = _BEC.Remove(_CBF._CBK);
                             if (flag16)
                             {
-                                bool flag17 = !this.EEJFFFONEBHEFJKECHMCKDFAFABLNECBNBDO._ADK();
+                                bool flag17 = !this._CBB._ADK();
                                 if (flag17)
                                 {
-                                    hashSet.Add(new _bi2.OIPMPHOIKPLMAMMOLNHCFKPGJKPLDOKECMAK("null"));
+                                    hashSet.Add(new _bi2._CBL("null"));
                                 }
                             }
                             _bb4._ACW _AGZ2 = _bm2.EnclosingScopeNode(_AGZ);
                             _bm6 _AQI = ((_AGZ2 != null) ? _AGZ2._AJW : null);
-                            _bh2._BCX getParser = oajkkabajliogpdkoahpmclnkpppodpdfgmj.GetParser;
-                            int ijfpnidkifchjmbgdkgmfeacoeckeoeobhbm = oajkkabajliogpdkoahpmclnkpppodpdfgmj.IJFPNIDKIFCHJMBGDKGMFEACOECKEOEOBHBM;
-                            int ihmbkpmcamjflmleaacbohgclgbcodfocafl = oajkkabajliogpdkoahpmclnkpppodpdfgmj.IHMBKPMCAMJFLMLEAACBOHGCLGBCODFOCAFL;
+                            _bh2._BCX getParser = _CBF.GetParser;
+                            int _CBM = _CBF._CBN;
+                            int _CBO = _CBF._CBP;
                             BitArray bitArray;
                             int dataSet = _BEC.GetDataSet(out bitArray);
-                            bool flag18 = flag5 || this.EEJFFFONEBHEFJKECHMCKDFAFABLNECBNBDO._ADK();
+                            bool flag18 = flag5 || this._CBB._ADK();
                             bool flag19 = false;
                             bool flag20 = false;
                             _b2 _AAC = null;
                             bool flag21 = dataSet != -1;
                             if (flag21)
                             {
-                                bool flag22 = dataSet == ijfpnidkifchjmbgdkgmfeacoeckeoeobhbm;
+                                bool flag22 = dataSet == _CBM;
                                 if (flag22)
                                 {
                                     flag18 = true;
                                 }
                                 else
                                 {
-                                    bool flag23 = dataSet == ihmbkpmcamjflmleaacbohgclgbcodfocafl;
+                                    bool flag23 = dataSet == _CBO;
                                     if (flag23)
                                     {
                                         flag20 = true;
                                     }
                                     else
                                     {
-                                        bool flag24 = !this.EEJFFFONEBHEFJKECHMCKDFAFABLNECBNBDO._ADK();
+                                        bool flag24 = !this._CBB._ADK();
                                         if (flag24)
                                         {
                                             string token = getParser.GetToken(dataSet);
                                             bool flag25 = token[0] == '_' || char.IsLetterOrDigit(token[0]);
                                             if (flag25)
                                             {
-                                                hashSet.Add(new _bi2.OIPMPHOIKPLMAMMOLNHCFKPGJKPLDOKECMAK(token));
+                                                hashSet.Add(new _bi2._CBL(token));
                                                 flag19 = true;
                                             }
                                         }
@@ -1133,7 +1130,7 @@ namespace AHO
                                         bool flag27 = bitArray[i];
                                         if (flag27)
                                         {
-                                            bool flag28 = i == hbppbagcfpcgcnfakinahhhifamjkfgmkimc;
+                                            bool flag28 = i == _CBH;
                                             if (flag28)
                                             {
                                                 int num3 = -1;
@@ -1270,7 +1267,7 @@ namespace AHO
                                                                 if (text2 == "argumentList")
                                                                 {
                                                                     _AIO = _AGZ.OOME;
-                                                                    num3 = this.DBPNPLAGPNIFADNFHOKFFCPKKIHHKOPIGFBG;
+                                                                    num3 = this._CBQ;
                                                                 }
                                                             }
                                                         }
@@ -1318,7 +1315,7 @@ namespace AHO
                                                             }
                                                             else if (text2 == "throwStatement")
                                                             {
-                                                                _AAC = _bh4.PALGJHLFMADEDCFPKIHLMGPEBCNEJGINDGBD;
+                                                                _AAC = _bh4._CBR;
                                                             }
                                                         }
                                                         else if (text2 == "localVariableInitializer")
@@ -1358,7 +1355,7 @@ namespace AHO
                                                                 if (text2 == "argument")
                                                                 {
                                                                     _AIO = _AGZ.OOME.OOME;
-                                                                    num3 = this.DBPNPLAGPNIFADNFHOKFFCPKKIHHKOPIGFBG;
+                                                                    num3 = this._CBQ;
                                                                 }
                                                             }
                                                         }
@@ -1409,7 +1406,7 @@ namespace AHO
                                                                 bool flag37 = _AAK == null && _BFS != null;
                                                                 if (flag37)
                                                                 {
-                                                                    _AAK = _BFS.MAPALBBIIIJIGCOOHOOIFPIBFPLDBDGNCBOI() as _ba7;
+                                                                    _AAK = _BFS._CBS() as _ba7;
                                                                 }
                                                                 bool flag38 = _AAK != null;
                                                                 if (flag38)
@@ -1452,28 +1449,28 @@ namespace AHO
                                             }
                                             else
                                             {
-                                                bool flag43 = i == ijfpnidkifchjmbgdkgmfeacoeckeoeobhbm;
+                                                bool flag43 = i == _CBM;
                                                 if (flag43)
                                                 {
                                                     flag18 = true;
                                                 }
                                                 else
                                                 {
-                                                    bool flag44 = i == ihmbkpmcamjflmleaacbohgclgbcodfocafl;
+                                                    bool flag44 = i == _CBO;
                                                     if (flag44)
                                                     {
                                                         flag20 = true;
                                                     }
                                                     else
                                                     {
-                                                        bool flag45 = !this.EEJFFFONEBHEFJKECHMCKDFAFABLNECBNBDO._ADK();
+                                                        bool flag45 = !this._CBB._ADK();
                                                         if (flag45)
                                                         {
                                                             string token2 = getParser.GetToken(i);
                                                             bool flag46 = token2[0] == '_' || char.IsLetterOrDigit(token2[0]);
                                                             if (flag46)
                                                             {
-                                                                hashSet.Add(new _bi2.OIPMPHOIKPLMAMMOLNHCFKPGJKPLDOKECMAK(token2));
+                                                                hashSet.Add(new _bi2._CBL(token2));
                                                                 flag19 = true;
                                                             }
                                                         }
@@ -1485,16 +1482,16 @@ namespace AHO
                                 }
                                 else
                                 {
-                                    bool flag47 = !this.EEJFFFONEBHEFJKECHMCKDFAFABLNECBNBDO._ADK();
+                                    bool flag47 = !this._CBB._ADK();
                                     if (flag47)
                                     {
                                         foreach (string text3 in this._ABQ._AOU().Keywords)
                                         {
-                                            hashSet.Add(new _bi2.OIPMPHOIKPLMAMMOLNHCFKPGJKPLDOKECMAK(text3));
+                                            hashSet.Add(new _bi2._CBL(text3));
                                         }
                                         foreach (string text4 in this._ABQ._AOU().BuiltInLiterals)
                                         {
-                                            hashSet.Add(new _bi2.OIPMPHOIKPLMAMMOLNHCFKPGJKPLDOKECMAK(text4));
+                                            hashSet.Add(new _bi2._CBL(text4));
                                         }
                                         flag18 = true;
                                         flag19 = true;
@@ -1526,25 +1523,25 @@ namespace AHO
                                         }
                                     }
                                 }
-                                _bf4 igbagdlmmpchfdhmhnbcifpkofpfgdokblkb = oajkkabajliogpdkoahpmclnkpppodpdfgmj.GetCompletionTypes(_AIO2);
+                                _bf4 _CBT = _CBF.GetCompletionTypes(_AIO2);
                                 bool flag52 = flag20;
                                 if (flag52)
                                 {
                                     bool flag53 = !flag19;
                                     if (flag53)
                                     {
-                                        igbagdlmmpchfdhmhnbcifpkofpfgdokblkb = (_bf4)8192;
+                                        _CBT = (_bf4)8192;
                                     }
                                     else
                                     {
-                                        igbagdlmmpchfdhmhnbcifpkofpfgdokblkb |= (_bf4)8192;
+                                        _CBT |= (_bf4)8192;
                                     }
                                 }
-                                _bc9.GetCompletions(igbagdlmmpchfdhmhnbcifpkofpfgdokblkb, _AIO2, hashSet, this._ABQ._ARQ());
+                                _bc9.GetCompletions(_CBT, _AIO2, hashSet, this._ABQ._ARQ());
                                 hashSet.RemoveWhere((_bh4 x) => !x.IsValid() || x._AW == "" || x._AW[0] == '<' || x._AW[0] == '.');
-                                _ba4._AFC = (igbagdlmmpchfdhmhnbcifpkofpfgdokblkb & (_bf4)256) > (_bf4)0;
-                                bool khgnnjeplkfpgofgnkcaafnpllncgbaafogp = _ba4._AFC;
-                                if (khgnnjeplkfpgofgnkcaafnpllncgbaafogp)
+                                _ba4._AFC = (_CBT & (_bf4)256) > (_bf4)0;
+                                bool _CBU = _ba4._AFC;
+                                if (_CBU)
                                 {
                                     this.FilterCompletions(hashSet);
                                 }
@@ -1555,8 +1552,8 @@ namespace AHO
                                     bool flag55 = _AAC._AT == SymbolKind.Delegate;
                                     if (flag55)
                                     {
-                                        bool jhonfkmhpkclklhkmoebehpgnbladgbbehil = this.JHONFKMHPKCLKLHKMOEBEHPGNBLADGBBEHIL;
-                                        if (jhonfkmhpkclklhkmoebehpgnbladgbbehil)
+                                        bool _CBV = this._CBE;
+                                        if (_CBV)
                                         {
                                             flag6 = true;
                                         }
@@ -1570,10 +1567,10 @@ namespace AHO
                                             if (flag57)
                                             {
                                                 string text5 = _AAC.RelativeName(_AQI);
-                                                _bi2.OIPMPHOIKPLMAMMOLNHCFKPGJKPLDOKECMAK oipmphoikplmammolnhcfkpgjkpldokecmak = new _bi2.OIPMPHOIKPLMAMMOLNHCFKPGJKPLDOKECMAK(text5);
-                                                oipmphoikplmammolnhcfkpgjkpldokecmak._AT = SymbolKind.Enum;
-                                                hashSet.Add(oipmphoikplmammolnhcfkpgjkpldokecmak);
-                                                _AAH2 = _AAH2 ?? oipmphoikplmammolnhcfkpgjkpldokecmak;
+                                                _bi2._CBL _CBW = new _bi2._CBL(text5);
+                                                _CBW._AT = SymbolKind.Enum;
+                                                hashSet.Add(_CBW);
+                                                _AAH2 = _AAH2 ?? _CBW;
                                             }
                                             else
                                             {
@@ -1598,10 +1595,10 @@ namespace AHO
                                                         else
                                                         {
                                                             string text6 = _AAC.RelativeName(_AQI);
-                                                            _bi2.OIPMPHOIKPLMAMMOLNHCFKPGJKPLDOKECMAK oipmphoikplmammolnhcfkpgjkpldokecmak2 = new _bi2.OIPMPHOIKPLMAMMOLNHCFKPGJKPLDOKECMAK(text6);
-                                                            oipmphoikplmammolnhcfkpgjkpldokecmak2._AT = SymbolKind.Enum;
-                                                            hashSet.Add(oipmphoikplmammolnhcfkpgjkpldokecmak2);
-                                                            _AAH2 = _AAH2 ?? oipmphoikplmammolnhcfkpgjkpldokecmak2;
+                                                            _bi2._CBL _CBW2 = new _bi2._CBL(text6);
+                                                            _CBW2._AT = SymbolKind.Enum;
+                                                            hashSet.Add(_CBW2);
+                                                            _AAH2 = _AAH2 ?? _CBW2;
                                                         }
                                                     }
                                                 }
@@ -1639,9 +1636,9 @@ namespace AHO
                                 }
                                 try
                                 {
-                                    foreach (_be5 gnahabjnnpkneoolbdnkmbpaeplmlkmclkcl in _ba6.EnumSnippets(this.EIHOAOKGDIECDKLLIHNPGPFALCCKMALIPMFP, _BEC, syntaxToken, _AQI))
+                                    foreach (_be5 _CBX in _ba6.EnumSnippets(this._CAG, _BEC, syntaxToken, _AQI))
                                     {
-                                        hashSet.Add(gnahabjnnpkneoolbdnkmbpaeplmlkmclkcl);
+                                        hashSet.Add(_CBX);
                                     }
                                 }
                                 catch (Exception ex)
@@ -1656,9 +1653,9 @@ namespace AHO
                             bool flag67 = flag6;
                             if (flag67)
                             {
-                                this.EEJFFFONEBHEFJKECHMCKDFAFABLNECBNBDO._ADZ = true;
+                                this._CBB._ADZ = true;
                             }
-                            bool flag68 = this.EEJFFFONEBHEFJKECHMCKDFAFABLNECBNBDO.SetCompletionData(hashSet);
+                            bool flag68 = this._CBB.SetCompletionData(hashSet);
                             bool flag69 = !flag68;
                             if (flag69)
                             {
@@ -1709,19 +1706,19 @@ namespace AHO
         {
             List<Theme> list = new List<Theme>();
             List<string> list2 = new List<string>();
-            int num = _bi2.BGBI.Count - _bi2.CILPDAECBAHABNCJKNDKGGINMCLJFJKGEBAO;
-            bool flag = _bi2.NFKLDALAOOLJNIPCPGLGHLNHCNDAFBLLHCKN().Count == 0;
+            int num = _bi2.BGBI.Count - _bi2._CBY;
+            bool flag = _bi2._CBZ().Count == 0;
             if (flag)
             {
                 for (int i = 0; i < num; i++)
                 {
-                    _bi2.BPDG.Remove(_bi2.BPDG[_bi2.CILPDAECBAHABNCJKNDKGGINMCLJFJKGEBAO]);
-                    _bi2.BGBI.Remove(_bi2.BGBI[_bi2.CILPDAECBAHABNCJKNDKGGINMCLJFJKGEBAO]);
+                    _bi2.BPDG.Remove(_bi2.BPDG[_bi2._CBY]);
+                    _bi2.BGBI.Remove(_bi2.BGBI[_bi2._CBY]);
                 }
             }
             else
             {
-                foreach (ThemeTemplate themeTemplate in _bi2.NFKLDALAOOLJNIPCPGLGHLNHCNDAFBLLHCKN())
+                foreach (ThemeTemplate themeTemplate in _bi2._CBZ())
                 {
                     list.Add(themeTemplate.colorTheme);
                     list2.Add(themeTemplate.name);
@@ -1730,33 +1727,33 @@ namespace AHO
                 int num2 = 0;
                 while (j < num)
                 {
-                    bool flag2 = !list2.Contains(_bi2.BGBI[_bi2.CILPDAECBAHABNCJKNDKGGINMCLJFJKGEBAO + j + num2]);
+                    bool flag2 = !list2.Contains(_bi2.BGBI[_bi2._CBY + j + num2]);
                     if (flag2)
                     {
-                        _bi2.BGBI.Remove(_bi2.BGBI[_bi2.CILPDAECBAHABNCJKNDKGGINMCLJFJKGEBAO + j + num2]);
-                        _bi2.BPDG.Remove(_bi2.BPDG[_bi2.CILPDAECBAHABNCJKNDKGGINMCLJFJKGEBAO + j + num2]);
+                        _bi2.BGBI.Remove(_bi2.BGBI[_bi2._CBY + j + num2]);
+                        _bi2.BPDG.Remove(_bi2.BPDG[_bi2._CBY + j + num2]);
                         num2--;
                     }
                     j++;
                 }
-                _bi2.NFKLDALAOOLJNIPCPGLGHLNHCNDAFBLLHCKN().RemoveAll((ThemeTemplate obj) => obj == null);
+                _bi2._CBZ().RemoveAll((ThemeTemplate obj) => obj == null);
             }
         }
 
         // Token: 0x0600027B RID: 635 RVA: 0x00025100 File Offset: 0x00023300
         private bool TryEdit()
         {
-            bool flag = this.KPOKBHDGCMLBFEPIHIPEKAIPDGAAGIMNLFCD == (_bi2.PEFGKHDNIOOJKNNHMIBNIFOKLBMEDOGOBDKD)0;
+            bool flag = this._CCA == (_bi2._CCB)0;
             bool flag3;
             if (flag)
             {
                 bool flag2 = this._ABQ.TryEdit();
-                this.KPOKBHDGCMLBFEPIHIPEKAIPDGAAGIMNLFCD = (flag2 ? ((_bi2.PEFGKHDNIOOJKNNHMIBNIFOKLBMEDOGOBDKD)1) : ((_bi2.PEFGKHDNIOOJKNNHMIBNIFOKLBMEDOGOBDKD)2));
+                this._CCA = (flag2 ? ((_bi2._CCB)1) : ((_bi2._CCB)2));
                 flag3 = flag2;
             }
             else
             {
-                flag3 = this.KPOKBHDGCMLBFEPIHIPEKAIPDGAAGIMNLFCD == (_bi2.PEFGKHDNIOOJKNNHMIBNIFOKLBMEDOGOBDKD)1;
+                flag3 = this._CCA == (_bi2._CCB)1;
             }
             return flag3;
         }
@@ -1764,7 +1761,7 @@ namespace AHO
         // Token: 0x0600027C RID: 636 RVA: 0x00025148 File Offset: 0x00023348
         internal bool IsLineVisible(int lineIndex)
         {
-            bool flag = this.KOIHKOPAJAHOJBIDDOPAPJCKBHPOGDGPOEJP.Count == 0;
+            bool flag = this._CCC.Count == 0;
             bool flag2;
             if (flag)
             {
@@ -1779,7 +1776,7 @@ namespace AHO
                 }
                 else
                 {
-                    int num = this.KOIHKOPAJAHOJBIDDOPAPJCKBHPOGDGPOEJP.BinarySearch(lineIndex);
+                    int num = this._CCC.BinarySearch(lineIndex);
                     bool flag4 = num >= 0;
                     if (flag4)
                     {
@@ -1796,7 +1793,7 @@ namespace AHO
                         else
                         {
                             num--;
-                            flag2 = lineIndex >= this.KOIHKOPAJAHOJBIDDOPAPJCKBHPOGDGPOEJP[num] + this.NCJPNOOAENPCCMAMKAFNBIIKKPBEJIMJNJKI[num];
+                            flag2 = lineIndex >= this._CCC[num] + this._CCD[num];
                         }
                     }
                 }
@@ -1816,38 +1813,38 @@ namespace AHO
         // Token: 0x0600027E RID: 638 RVA: 0x00025208 File Offset: 0x00023408
         internal void HideLine(int lineIndex)
         {
-            int num = this.KOIHKOPAJAHOJBIDDOPAPJCKBHPOGDGPOEJP.BinarySearch(lineIndex);
+            int num = this._CCC.BinarySearch(lineIndex);
             bool flag = num >= 0;
             if (!flag)
             {
                 num = ~num;
-                bool flag2 = num < this.KOIHKOPAJAHOJBIDDOPAPJCKBHPOGDGPOEJP.Count;
+                bool flag2 = num < this._CCC.Count;
                 if (flag2)
                 {
-                    bool flag3 = this.KOIHKOPAJAHOJBIDDOPAPJCKBHPOGDGPOEJP[num] == lineIndex + 1;
+                    bool flag3 = this._CCC[num] == lineIndex + 1;
                     if (flag3)
                     {
-                        List<int> koihkopajahojbiddopapjckbhpogdgpoejp = this.KOIHKOPAJAHOJBIDDOPAPJCKBHPOGDGPOEJP;
+                        List<int> _CCE = this._CCC;
                         int num2 = num;
-                        int num3 = koihkopajahojbiddopapjckbhpogdgpoejp[num2] - 1;
-                        koihkopajahojbiddopapjckbhpogdgpoejp[num2] = num3;
-                        List<int> ncjpnooaenpccmamkafnbiikkpbejimjnjki = this.NCJPNOOAENPCCMAMKAFNBIIKKPBEJIMJNJKI;
+                        int num3 = _CCE[num2] - 1;
+                        _CCE[num2] = num3;
+                        List<int> _CCF = this._CCD;
                         num3 = num;
-                        num2 = ncjpnooaenpccmamkafnbiikkpbejimjnjki[num3] + 1;
-                        ncjpnooaenpccmamkafnbiikkpbejimjnjki[num3] = num2;
-                        bool flag4 = num > 0 && this.KOIHKOPAJAHOJBIDDOPAPJCKBHPOGDGPOEJP[num - 1] + this.NCJPNOOAENPCCMAMKAFNBIIKKPBEJIMJNJKI[num - 1] == lineIndex;
+                        num2 = _CCF[num3] + 1;
+                        _CCF[num3] = num2;
+                        bool flag4 = num > 0 && this._CCC[num - 1] + this._CCD[num - 1] == lineIndex;
                         if (flag4)
                         {
-                            List<int> ncjpnooaenpccmamkafnbiikkpbejimjnjki2 = this.NCJPNOOAENPCCMAMKAFNBIIKKPBEJIMJNJKI;
+                            List<int> _CCF2 = this._CCD;
                             num2 = num - 1;
-                            ncjpnooaenpccmamkafnbiikkpbejimjnjki2[num2] += this.NCJPNOOAENPCCMAMKAFNBIIKKPBEJIMJNJKI[num];
-                            this.KOIHKOPAJAHOJBIDDOPAPJCKBHPOGDGPOEJP.RemoveAt(num);
-                            this.NCJPNOOAENPCCMAMKAFNBIIKKPBEJIMJNJKI.RemoveAt(num);
+                            _CCF2[num2] += this._CCD[num];
+                            this._CCC.RemoveAt(num);
+                            this._CCD.RemoveAt(num);
                         }
-                        bool flag5 = this.JKLCMHOFNIJEKGHFAFDFNEIMANIEOAIMBKPC != null;
+                        bool flag5 = this._CCG != null;
                         if (flag5)
                         {
-                            this.JKLCMHOFNIJEKGHFAFDFNEIMANIEOAIMBKPC.Clear();
+                            this._CCG.Clear();
                         }
                         return;
                     }
@@ -1855,32 +1852,32 @@ namespace AHO
                 bool flag6 = num > 0;
                 if (flag6)
                 {
-                    bool flag7 = lineIndex < this.KOIHKOPAJAHOJBIDDOPAPJCKBHPOGDGPOEJP[num - 1] + this.NCJPNOOAENPCCMAMKAFNBIIKKPBEJIMJNJKI[num - 1];
+                    bool flag7 = lineIndex < this._CCC[num - 1] + this._CCD[num - 1];
                     if (flag7)
                     {
                         return;
                     }
-                    bool flag8 = lineIndex == this.KOIHKOPAJAHOJBIDDOPAPJCKBHPOGDGPOEJP[num - 1] + this.NCJPNOOAENPCCMAMKAFNBIIKKPBEJIMJNJKI[num - 1];
+                    bool flag8 = lineIndex == this._CCC[num - 1] + this._CCD[num - 1];
                     if (flag8)
                     {
-                        List<int> ncjpnooaenpccmamkafnbiikkpbejimjnjki3 = this.NCJPNOOAENPCCMAMKAFNBIIKKPBEJIMJNJKI;
+                        List<int> _CCF3 = this._CCD;
                         int num2 = num - 1;
-                        int num3 = ncjpnooaenpccmamkafnbiikkpbejimjnjki3[num2] + 1;
-                        ncjpnooaenpccmamkafnbiikkpbejimjnjki3[num2] = num3;
-                        bool flag9 = this.JKLCMHOFNIJEKGHFAFDFNEIMANIEOAIMBKPC != null;
+                        int num3 = _CCF3[num2] + 1;
+                        _CCF3[num2] = num3;
+                        bool flag9 = this._CCG != null;
                         if (flag9)
                         {
-                            this.JKLCMHOFNIJEKGHFAFDFNEIMANIEOAIMBKPC.Clear();
+                            this._CCG.Clear();
                         }
                         return;
                     }
                 }
-                this.KOIHKOPAJAHOJBIDDOPAPJCKBHPOGDGPOEJP.Insert(num, lineIndex);
-                this.NCJPNOOAENPCCMAMKAFNBIIKKPBEJIMJNJKI.Insert(num, 1);
-                bool flag10 = this.JKLCMHOFNIJEKGHFAFDFNEIMANIEOAIMBKPC != null;
+                this._CCC.Insert(num, lineIndex);
+                this._CCD.Insert(num, 1);
+                bool flag10 = this._CCG != null;
                 if (flag10)
                 {
-                    this.JKLCMHOFNIJEKGHFAFDFNEIMANIEOAIMBKPC.Clear();
+                    this._CCG.Clear();
                 }
             }
         }
@@ -1888,7 +1885,7 @@ namespace AHO
         // Token: 0x0600027F RID: 639 RVA: 0x00025410 File Offset: 0x00023610
         internal float GetLineOffset(int index)
         {
-            bool flag = !this.BOPCDIIIAACDAILGPOFHGPKBBOLAIFBDFADO && this.KOIHKOPAJAHOJBIDDOPAPJCKBHPOGDGPOEJP.Count == 0;
+            bool flag = !this._CCH && this._CCC.Count == 0;
             float num;
             if (flag)
             {
@@ -1903,48 +1900,48 @@ namespace AHO
                 }
                 else
                 {
-                    bool flag3 = this.JKLCMHOFNIJEKGHFAFDFNEIMANIEOAIMBKPC == null || this.JKLCMHOFNIJEKGHFAFDFNEIMANIEOAIMBKPC.Count != this._ABQ.FLOg.Count;
+                    bool flag3 = this._CCG == null || this._CCG.Count != this._ABQ.FLOg.Count;
                     if (flag3)
                     {
                         int num2 = 0;
-                        int count = this.KOIHKOPAJAHOJBIDDOPAPJCKBHPOGDGPOEJP.Count;
+                        int count = this._CCC.Count;
                         float num3 = 0f;
-                        bool flag4 = this.JKLCMHOFNIJEKGHFAFDFNEIMANIEOAIMBKPC != null;
+                        bool flag4 = this._CCG != null;
                         if (flag4)
                         {
-                            this.JKLCMHOFNIJEKGHFAFDFNEIMANIEOAIMBKPC.Clear();
+                            this._CCG.Clear();
                         }
                         else
                         {
-                            this.JKLCMHOFNIJEKGHFAFDFNEIMANIEOAIMBKPC = new List<float>(this._ABQ.FLOg.Count);
+                            this._CCG = new List<float>(this._ABQ.FLOg.Count);
                         }
                         for (int i = 0; i < this._ABQ.FLOg.Count; i++)
                         {
-                            bool flag5 = num2 < count && i == this.KOIHKOPAJAHOJBIDDOPAPJCKBHPOGDGPOEJP[num2];
+                            bool flag5 = num2 < count && i == this._CCC[num2];
                             if (flag5)
                             {
-                                i += this.NCJPNOOAENPCCMAMKAFNBIIKKPBEJIMJNJKI[num2] - 1;
-                                int num4 = this.NCJPNOOAENPCCMAMKAFNBIIKKPBEJIMJNJKI[num2++];
+                                i += this._CCD[num2] - 1;
+                                int num4 = this._CCD[num2++];
                                 while (num4-- > 0)
                                 {
-                                    this.JKLCMHOFNIJEKGHFAFDFNEIMANIEOAIMBKPC.Add(num3);
+                                    this._CCG.Add(num3);
                                 }
                             }
                             else
                             {
                                 num3 += this._AEY().y * (float)(this.GetSoftLineBreaks(i).Count + 1);
-                                this.JKLCMHOFNIJEKGHFAFDFNEIMANIEOAIMBKPC.Add(num3);
+                                this._CCG.Add(num3);
                             }
                         }
                     }
-                    bool flag6 = index > this.JKLCMHOFNIJEKGHFAFDFNEIMANIEOAIMBKPC.Count;
+                    bool flag6 = index > this._CCG.Count;
                     if (flag6)
                     {
-                        num = ((this.JKLCMHOFNIJEKGHFAFDFNEIMANIEOAIMBKPC.Count > 0) ? this.JKLCMHOFNIJEKGHFAFDFNEIMANIEOAIMBKPC[this.JKLCMHOFNIJEKGHFAFDFNEIMANIEOAIMBKPC.Count - 1] : 0f);
+                        num = ((this._CCG.Count > 0) ? this._CCG[this._CCG.Count - 1] : 0f);
                     }
                     else
                     {
-                        num = this.JKLCMHOFNIJEKGHFAFDFNEIMANIEOAIMBKPC[index - 1];
+                        num = this._CCG[index - 1];
                     }
                 }
             }
@@ -1954,7 +1951,7 @@ namespace AHO
         // Token: 0x06000280 RID: 640 RVA: 0x00025608 File Offset: 0x00023808
         internal int GetLineAt(float yOffset)
         {
-            bool flag = (!this.BOPCDIIIAACDAILGPOFHGPKBBOLAIFBDFADO && this.KOIHKOPAJAHOJBIDDOPAPJCKBHPOGDGPOEJP.Count == 0) || this._ABQ.FLOg.Count <= 1;
+            bool flag = (!this._CCH && this._CCC.Count == 0) || this._ABQ.FLOg.Count <= 1;
             int num;
             if (flag)
             {
@@ -1963,19 +1960,19 @@ namespace AHO
             else
             {
                 this.GetLineOffset(this._ABQ.FLOg.Count);
-                int num2 = _bi2.FindFirstIndexGreaterThanOrEqualTo<float>(this.JKLCMHOFNIJEKGHFAFDFNEIMANIEOAIMBKPC, yOffset + 1f);
-                bool flag2 = num2 >= this.JKLCMHOFNIJEKGHFAFDFNEIMANIEOAIMBKPC.Count;
+                int num2 = _bi2.FindFirstIndexGreaterThanOrEqualTo<float>(this._CCG, yOffset + 1f);
+                bool flag2 = num2 >= this._CCG.Count;
                 if (flag2)
                 {
-                    num2 = this.JKLCMHOFNIJEKGHFAFDFNEIMANIEOAIMBKPC.Count - 1;
+                    num2 = this._CCG.Count - 1;
                 }
                 bool flag3 = !this.IsLineVisible(num2);
                 if (flag3)
                 {
-                    bool flag4 = num2 >= this.KOIHKOPAJAHOJBIDDOPAPJCKBHPOGDGPOEJP[this.KOIHKOPAJAHOJBIDDOPAPJCKBHPOGDGPOEJP.Count - 1];
+                    bool flag4 = num2 >= this._CCC[this._CCC.Count - 1];
                     if (flag4)
                     {
-                        num2 = this.KOIHKOPAJAHOJBIDDOPAPJCKBHPOGDGPOEJP[this.KOIHKOPAJAHOJBIDDOPAPJCKBHPOGDGPOEJP.Count - 1] - 1;
+                        num2 = this._CCC[this._CCC.Count - 1] - 1;
                     }
                     else
                     {
@@ -1994,31 +1991,31 @@ namespace AHO
         internal void FocusCodeView()
         {
             this._ATM = default(DateTime);
-            this.POAAHKKEFHAFHHJDHLCDIOKHAKGHNKOKPPFG = true;
+            this._CCI = true;
             this.Repaint();
         }
 
         // Token: 0x06000282 RID: 642 RVA: 0x00025764 File Offset: 0x00023964
         private static void InitializeFont(bool forText)
         {
-            bool flag = string.IsNullOrEmpty(_bi2.LJKHDAPCHJBAPKJLHCFIANJIODFKNMHPAMOC);
+            bool flag = string.IsNullOrEmpty(_bi2._CCJ);
             if (flag)
             {
-                _bi2.LJKHDAPCHJBAPKJLHCFIANJIODFKNMHPAMOC = _bg8._BBT;
-                bool flag2 = _bi2.LJKHDAPCHJBAPKJLHCFIANJIODFKNMHPAMOC == null;
+                _bi2._CCJ = _bg8._BBT;
+                bool flag2 = _bi2._CCJ == null;
                 if (flag2)
                 {
-                    _bi2.LJKHDAPCHJBAPKJLHCFIANJIODFKNMHPAMOC = Array.Find<string>(_bi2.MALGDKADEDLONPFACJAGNOJFCCJHGAELLKBK(), (string x) => x.Contains("SourceCodePro"));
+                    _bi2._CCJ = Array.Find<string>(_bi2._CCK(), (string x) => x.Contains("SourceCodePro"));
                 }
-                bool flag3 = _bi2.LJKHDAPCHJBAPKJLHCFIANJIODFKNMHPAMOC == null;
+                bool flag3 = _bi2._CCJ == null;
                 if (flag3)
                 {
-                    _bi2.LJKHDAPCHJBAPKJLHCFIANJIODFKNMHPAMOC = _bi2.MALGDKADEDLONPFACJAGNOJFCCJHGAELLKBK()[0];
+                    _bi2._CCJ = _bi2._CCK()[0];
                 }
-                bool flag4 = _bi2.LJKHDAPCHJBAPKJLHCFIANJIODFKNMHPAMOC == "VeraMono";
+                bool flag4 = _bi2._CCJ == "VeraMono";
                 if (flag4)
                 {
-                    _bi2.LJKHDAPCHJBAPKJLHCFIANJIODFKNMHPAMOC = _bi2.MALGDKADEDLONPFACJAGNOJFCCJHGAELLKBK()[0];
+                    _bi2._CCJ = _bi2._CCK()[0];
                 }
             }
         }
@@ -2031,12 +2028,12 @@ namespace AHO
             {
                 this._ATL(null);
             }
-            this.EIMJAKFHOFKPPHINOOONMDAPCKAAPELJKAIL = !(targetFile is MonoScript) && !(targetFile is Shader);
+            this._CCL = !(targetFile is MonoScript) && !(targetFile is Shader);
             GCE _AMX = targetFile as GCE;
             bool flag2 = _AMX != null;
             if (flag2)
             {
-                this.EIMJAKFHOFKPPHINOOONMDAPCKAAPELJKAIL = _AMX._ARR;
+                this._CCL = _AMX._ARR;
                 bool flag3 = this._ABQ == null;
                 if (flag3)
                 {
@@ -2058,27 +2055,27 @@ namespace AHO
                     return;
                 }
             }
-            _bi2.InitializeFont(this.EIMJAKFHOFKPPHINOOONMDAPCKAAPELJKAIL);
-            this._ABT = (this.EIMJAKFHOFKPPHINOOONMDAPCKAAPELJKAIL ? _bi2.EMGEKEIEHPNEFMOMMCIFEEGIFJDEJFOKPAFM : _bi2.FKIPBDDJJKDBAABDMLPKIGEAKBOODIOIIJEE);
+            _bi2.InitializeFont(this._CCL);
+            this._ABT = (this._CCL ? _bi2._CCM : _bi2._CCN);
             this._ABQ._ABT = this._ABT;
             this.Initialize();
             this._ABQ.Initialize();
-            GCE cdghkglnkfhjenlebomgbogcmlafoejmngmj = this._ABQ;
-            cdghkglnkfhjenlebomgbogcmlafoejmngmj._ASW = (GCE._AVE)Delegate.Remove(cdghkglnkfhjenlebomgbogcmlafoejmngmj._ASW, new GCE._AVE(this.Repaint));
-            GCE cdghkglnkfhjenlebomgbogcmlafoejmngmj2 = this._ABQ;
-            cdghkglnkfhjenlebomgbogcmlafoejmngmj2._ASW = (GCE._AVE)Delegate.Combine(cdghkglnkfhjenlebomgbogcmlafoejmngmj2._ASW, new GCE._AVE(this.Repaint));
-            GCE cdghkglnkfhjenlebomgbogcmlafoejmngmj3 = this._ABQ;
-            cdghkglnkfhjenlebomgbogcmlafoejmngmj3._AUZ = (GCE._AVF)Delegate.Remove(cdghkglnkfhjenlebomgbogcmlafoejmngmj3._AUZ, new GCE._AVF(this.OnLineFormatted));
-            GCE cdghkglnkfhjenlebomgbogcmlafoejmngmj4 = this._ABQ;
-            cdghkglnkfhjenlebomgbogcmlafoejmngmj4._AUZ = (GCE._AVF)Delegate.Combine(cdghkglnkfhjenlebomgbogcmlafoejmngmj4._AUZ, new GCE._AVF(this.OnLineFormatted));
-            GCE cdghkglnkfhjenlebomgbogcmlafoejmngmj5 = this._ABQ;
-            cdghkglnkfhjenlebomgbogcmlafoejmngmj5._AUI = (GCE._AVG)Delegate.Remove(cdghkglnkfhjenlebomgbogcmlafoejmngmj5._AUI, new GCE._AVG(this.OnInsertedLines));
-            GCE cdghkglnkfhjenlebomgbogcmlafoejmngmj6 = this._ABQ;
-            cdghkglnkfhjenlebomgbogcmlafoejmngmj6._AUI = (GCE._AVG)Delegate.Combine(cdghkglnkfhjenlebomgbogcmlafoejmngmj6._AUI, new GCE._AVG(this.OnInsertedLines));
-            GCE cdghkglnkfhjenlebomgbogcmlafoejmngmj7 = this._ABQ;
-            cdghkglnkfhjenlebomgbogcmlafoejmngmj7._AUM = (GCE._AVK)Delegate.Remove(cdghkglnkfhjenlebomgbogcmlafoejmngmj7._AUM, new GCE._AVK(this.OnRemovedLines));
-            GCE cdghkglnkfhjenlebomgbogcmlafoejmngmj8 = this._ABQ;
-            cdghkglnkfhjenlebomgbogcmlafoejmngmj8._AUM = (GCE._AVK)Delegate.Combine(cdghkglnkfhjenlebomgbogcmlafoejmngmj8._AUM, new GCE._AVK(this.OnRemovedLines));
+            GCE _CCO = this._ABQ;
+            _CCO._ASW = (GCE._AVE)Delegate.Remove(_CCO._ASW, new GCE._AVE(this.Repaint));
+            GCE _CCO2 = this._ABQ;
+            _CCO2._ASW = (GCE._AVE)Delegate.Combine(_CCO2._ASW, new GCE._AVE(this.Repaint));
+            GCE _CCO3 = this._ABQ;
+            _CCO3._AUZ = (GCE._AVF)Delegate.Remove(_CCO3._AUZ, new GCE._AVF(this.OnLineFormatted));
+            GCE _CCO4 = this._ABQ;
+            _CCO4._AUZ = (GCE._AVF)Delegate.Combine(_CCO4._AUZ, new GCE._AVF(this.OnLineFormatted));
+            GCE _CCO5 = this._ABQ;
+            _CCO5._AUI = (GCE._AVG)Delegate.Remove(_CCO5._AUI, new GCE._AVG(this.OnInsertedLines));
+            GCE _CCO6 = this._ABQ;
+            _CCO6._AUI = (GCE._AVG)Delegate.Combine(_CCO6._AUI, new GCE._AVG(this.OnInsertedLines));
+            GCE _CCO7 = this._ABQ;
+            _CCO7._AUM = (GCE._AVK)Delegate.Remove(_CCO7._AUM, new GCE._AVK(this.OnRemovedLines));
+            GCE _CCO8 = this._ABQ;
+            _CCO8._AUM = (GCE._AVK)Delegate.Combine(_CCO8._AUM, new GCE._AVK(this.OnRemovedLines));
             this._ABQ.AddEditor(this);
             EditorApplication.update = (EditorApplication.CallbackFunction)Delegate.Remove(EditorApplication.update, new EditorApplication.CallbackFunction(this.OnUpdate));
             EditorApplication.update = (EditorApplication.CallbackFunction)Delegate.Combine(EditorApplication.update, new EditorApplication.CallbackFunction(this.OnUpdate));
@@ -2086,10 +2083,10 @@ namespace AHO
             EditorApplication.update = (EditorApplication.CallbackFunction)Delegate.Combine(EditorApplication.update, new EditorApplication.CallbackFunction(this.SearchOnLoaded));
             _bi2.InitCustomThemes();
             _bi2.RemoveTheme();
-            bool flag5 = _bi2.NFKLDALAOOLJNIPCPGLGHLNHCNDAFBLLHCKN().Count > 0;
+            bool flag5 = _bi2._CBZ().Count > 0;
             if (flag5)
             {
-                foreach (ThemeTemplate themeTemplate in _bi2.NFKLDALAOOLJNIPCPGLGHLNHCNDAFBLLHCKN())
+                foreach (ThemeTemplate themeTemplate in _bi2._CBZ())
                 {
                     _bi2.AddTheme(themeTemplate.colorTheme, themeTemplate.name);
                 }
@@ -2104,86 +2101,86 @@ namespace AHO
             if (flag)
             {
                 EditorApplication.update = (EditorApplication.CallbackFunction)Delegate.Remove(EditorApplication.update, new EditorApplication.CallbackFunction(this.SearchOnLoaded));
-                string fnablfjgddbbclnclglmabbfifelkogmeffj = _bi2.FNABLFJGDDBBCLNCLGLMABBFIFELKOGMEFFJ;
-                this.SetSearchText(this.FEDKNBJPGLNNBLCBJGPAICAGEHEAFOEDMJOD);
-                _bi2.FNABLFJGDDBBCLNCLGLMABBFIFELKOGMEFFJ = fnablfjgddbbclnclglmabbfifelkogmeffj;
+                string _CCP = _bi2._CCQ;
+                this.SetSearchText(this._CCR);
+                _bi2._CCQ = _CCP;
             }
         }
 
         // Token: 0x06000285 RID: 645 RVA: 0x00025BCC File Offset: 0x00023DCC
         private void InvalidateSoftLineBreaks()
         {
-            bool flag = this.LOMAMECAAIALIGHCOLCOOGEHJBAMPBLPEMKH != null;
+            bool flag = this._CCS != null;
             if (flag)
             {
-                for (int i = 0; i < this.LOMAMECAAIALIGHCOLCOOGEHJBAMPBLPEMKH.Count; i++)
+                for (int i = 0; i < this._CCS.Count; i++)
                 {
-                    this.LOMAMECAAIALIGHCOLCOOGEHJBAMPBLPEMKH[i] = null;
+                    this._CCS[i] = null;
                 }
             }
-            bool flag2 = this.JKLCMHOFNIJEKGHFAFDFNEIMANIEOAIMBKPC != null;
+            bool flag2 = this._CCG != null;
             if (flag2)
             {
-                this.JKLCMHOFNIJEKGHFAFDFNEIMANIEOAIMBKPC.Clear();
+                this._CCG.Clear();
             }
         }
 
         // Token: 0x06000286 RID: 646 RVA: 0x00025C28 File Offset: 0x00023E28
         private void OnLineFormatted(int line)
         {
-            bool flag = this.LOMAMECAAIALIGHCOLCOOGEHJBAMPBLPEMKH != null && line < this.LOMAMECAAIALIGHCOLCOOGEHJBAMPBLPEMKH.Count;
+            bool flag = this._CCS != null && line < this._CCS.Count;
             if (flag)
             {
-                this.LOMAMECAAIALIGHCOLCOOGEHJBAMPBLPEMKH[line] = null;
+                this._CCS[line] = null;
             }
         }
 
         // Token: 0x06000287 RID: 647 RVA: 0x00025C64 File Offset: 0x00023E64
         private void OnInsertedLines(int lineIndex, int numLines)
         {
-            bool flag = this.LOMAMECAAIALIGHCOLCOOGEHJBAMPBLPEMKH != null && lineIndex <= this.LOMAMECAAIALIGHCOLCOOGEHJBAMPBLPEMKH.Count;
+            bool flag = this._CCS != null && lineIndex <= this._CCS.Count;
             if (flag)
             {
-                this.LOMAMECAAIALIGHCOLCOOGEHJBAMPBLPEMKH.InsertRange(lineIndex, new List<int>[numLines]);
+                this._CCS.InsertRange(lineIndex, new List<int>[numLines]);
             }
-            bool flag2 = this.JKLCMHOFNIJEKGHFAFDFNEIMANIEOAIMBKPC != null && lineIndex < this.JKLCMHOFNIJEKGHFAFDFNEIMANIEOAIMBKPC.Count;
+            bool flag2 = this._CCG != null && lineIndex < this._CCG.Count;
             if (flag2)
             {
-                this.JKLCMHOFNIJEKGHFAFDFNEIMANIEOAIMBKPC.RemoveRange(lineIndex, this.JKLCMHOFNIJEKGHFAFDFNEIMANIEOAIMBKPC.Count - lineIndex);
+                this._CCG.RemoveRange(lineIndex, this._CCG.Count - lineIndex);
             }
-            bool flag3 = lineIndex < this.AINBDLCEICDFCIMEOFNOEFAHLLPOHEECOPNE;
+            bool flag3 = lineIndex < this._CCT;
             if (flag3)
             {
-                this.LPAPJBHKOMFLPDIFIIJEHJBMOEFHHAIBGJBF = 0f;
-                this.AINBDLCEICDFCIMEOFNOEFAHLLPOHEECOPNE += numLines;
+                this._CCU = 0f;
+                this._CCT += numLines;
             }
         }
 
         // Token: 0x06000288 RID: 648 RVA: 0x00025D08 File Offset: 0x00023F08
         private void OnRemovedLines(int lineIndex, int numLines)
         {
-            bool flag = this.LOMAMECAAIALIGHCOLCOOGEHJBAMPBLPEMKH != null && lineIndex < this.LOMAMECAAIALIGHCOLCOOGEHJBAMPBLPEMKH.Count;
+            bool flag = this._CCS != null && lineIndex < this._CCS.Count;
             if (flag)
             {
-                this.LOMAMECAAIALIGHCOLCOOGEHJBAMPBLPEMKH.RemoveRange(lineIndex, Math.Min(numLines, this.LOMAMECAAIALIGHCOLCOOGEHJBAMPBLPEMKH.Count - lineIndex));
+                this._CCS.RemoveRange(lineIndex, Math.Min(numLines, this._CCS.Count - lineIndex));
             }
-            bool flag2 = this.JKLCMHOFNIJEKGHFAFDFNEIMANIEOAIMBKPC != null && lineIndex < this.JKLCMHOFNIJEKGHFAFDFNEIMANIEOAIMBKPC.Count;
+            bool flag2 = this._CCG != null && lineIndex < this._CCG.Count;
             if (flag2)
             {
-                this.JKLCMHOFNIJEKGHFAFDFNEIMANIEOAIMBKPC.RemoveRange(lineIndex, this.JKLCMHOFNIJEKGHFAFDFNEIMANIEOAIMBKPC.Count - lineIndex);
+                this._CCG.RemoveRange(lineIndex, this._CCG.Count - lineIndex);
             }
-            bool flag3 = lineIndex < this.AINBDLCEICDFCIMEOFNOEFAHLLPOHEECOPNE;
+            bool flag3 = lineIndex < this._CCT;
             if (flag3)
             {
-                this.LPAPJBHKOMFLPDIFIIJEHJBMOEFHHAIBGJBF = 0f;
-                bool flag4 = lineIndex + numLines <= this.AINBDLCEICDFCIMEOFNOEFAHLLPOHEECOPNE;
+                this._CCU = 0f;
+                bool flag4 = lineIndex + numLines <= this._CCT;
                 if (flag4)
                 {
-                    this.AINBDLCEICDFCIMEOFNOEFAHLLPOHEECOPNE -= numLines;
+                    this._CCT -= numLines;
                 }
                 else
                 {
-                    this.AINBDLCEICDFCIMEOFNOEFAHLLPOHEECOPNE = lineIndex;
+                    this._CCT = lineIndex;
                 }
             }
         }
@@ -2201,10 +2198,10 @@ namespace AHO
                     bool flag3 = !this._ABQ.Save();
                     if (!flag3)
                     {
-                        bool flag4 = this.EIMJAKFHOFKPPHINOOONMDAPCKAAPELJKAIL || this._ABQ._ARO;
+                        bool flag4 = this._CCL || this._ABQ._ARO;
                         if (flag4)
                         {
-                            AssetDatabase.ImportAsset(this.NOKEHFCAKDDOPKCFMLCLBACCAHNLKLHBCEDC());
+                            AssetDatabase.ImportAsset(this._CCV());
                         }
                         else
                         {
@@ -2213,8 +2210,8 @@ namespace AHO
                             bool flag5 = _bg8._BBZ && !_bg8._BBY;
                             if (flag5)
                             {
-                                _bi2.MIEOJDKEHOCEGDGBNGALKEANHMLJDPKPBDEN = 1;
-                                _bi2.CNCBOMMHGCFHFIHPLKAAODEAJHLKCFAPMILL.Clear();
+                                _bi2._CCW = 1;
+                                _bi2._CCX.Clear();
                                 EditorApplication.update = (EditorApplication.CallbackFunction)Delegate.Combine(EditorApplication.update, new EditorApplication.CallbackFunction(_bi2.HoldReloadingAssemblies));
                             }
                             bool flag6 = _bg8._BBZ;
@@ -2241,10 +2238,10 @@ namespace AHO
             bool flag = !EditorApplication.isCompiling && !_bc5._AMU();
             if (!flag)
             {
-                bool flag2 = _bi2.MIEOJDKEHOCEGDGBNGALKEANHMLJDPKPBDEN > 0;
+                bool flag2 = _bi2._CCW > 0;
                 if (flag2)
                 {
-                    _bi2.MIEOJDKEHOCEGDGBNGALKEANHMLJDPKPBDEN = 0;
+                    _bi2._CCW = 0;
                     EditorApplication.update = (EditorApplication.CallbackFunction)Delegate.Remove(EditorApplication.update, new EditorApplication.CallbackFunction(_bi2.HoldReloadingAssemblies));
                     EditorApplication.update = (EditorApplication.CallbackFunction)Delegate.Combine(EditorApplication.update, new EditorApplication.CallbackFunction(_bi2.ReloadAssemblies));
                     EditorApplication.UnlockReloadAssemblies();
@@ -2257,8 +2254,8 @@ namespace AHO
                         bool flag4 = _bg8._BBZ && !_bg8._BBY;
                         if (flag4)
                         {
-                            _bi2.MIEOJDKEHOCEGDGBNGALKEANHMLJDPKPBDEN = 1;
-                            _bi2.CNCBOMMHGCFHFIHPLKAAODEAJHLKCFAPMILL.Clear();
+                            _bi2._CCW = 1;
+                            _bi2._CCX.Clear();
                             EditorApplication.update = (EditorApplication.CallbackFunction)Delegate.Combine(EditorApplication.update, new EditorApplication.CallbackFunction(_bi2.HoldReloadingAssemblies));
                         }
                         bool flag5 = _bg8._BBZ;
@@ -2279,7 +2276,7 @@ namespace AHO
             {
                 EditorApplication.update = (EditorApplication.CallbackFunction)Delegate.Remove(EditorApplication.update, new EditorApplication.CallbackFunction(_bi2.HoldReloadingAssemblies));
                 EditorApplication.update = (EditorApplication.CallbackFunction)Delegate.Combine(EditorApplication.update, new EditorApplication.CallbackFunction(_bi2.ReloadAssemblies));
-                _bi2.MIEOJDKEHOCEGDGBNGALKEANHMLJDPKPBDEN = 10;
+                _bi2._CCW = 10;
             }
             else
             {
@@ -2293,7 +2290,7 @@ namespace AHO
                         bool flag4 = process.ProcessName == "mono";
                         if (flag4)
                         {
-                            _bi2.CNCBOMMHGCFHFIHPLKAAODEAJHLKCFAPMILL.Add(process);
+                            _bi2._CCX.Add(process);
                             bool flag5 = process.ExitCode != 0;
                             if (flag5)
                             {
@@ -2307,11 +2304,11 @@ namespace AHO
                     {
                     }
                 }
-                _bi2.CNCBOMMHGCFHFIHPLKAAODEAJHLKCFAPMILL.RemoveWhere((Process x) => x.HasExited && x.ExitCode == 0);
+                _bi2._CCX.RemoveWhere((Process x) => x.HasExited && x.ExitCode == 0);
                 bool flag6;
                 if (!flag3)
                 {
-                    flag6 = _bi2.CNCBOMMHGCFHFIHPLKAAODEAJHLKCFAPMILL.Any((Process x) => x.HasExited && x.ExitCode != 0);
+                    flag6 = _bi2._CCX.Any((Process x) => x.HasExited && x.ExitCode != 0);
                 }
                 else
                 {
@@ -2326,22 +2323,22 @@ namespace AHO
                 }
                 else
                 {
-                    bool flag8 = flag2 || _bi2.MIEOJDKEHOCEGDGBNGALKEANHMLJDPKPBDEN < 10;
+                    bool flag8 = flag2 || _bi2._CCW < 10;
                     if (flag8)
                     {
                         bool flag9 = !flag2;
                         if (flag9)
                         {
-                            _bi2.MIEOJDKEHOCEGDGBNGALKEANHMLJDPKPBDEN++;
+                            _bi2._CCW++;
                         }
                         EditorApplication.LockReloadAssemblies();
                     }
                     else
                     {
-                        bool flag10 = !flag2 && _bi2.CNCBOMMHGCFHFIHPLKAAODEAJHLKCFAPMILL.Count == 0;
+                        bool flag10 = !flag2 && _bi2._CCX.Count == 0;
                         if (flag10)
                         {
-                            _bi2.MIEOJDKEHOCEGDGBNGALKEANHMLJDPKPBDEN = 10;
+                            _bi2._CCW = 10;
                             EditorApplication.update = (EditorApplication.CallbackFunction)Delegate.Remove(EditorApplication.update, new EditorApplication.CallbackFunction(_bi2.HoldReloadingAssemblies));
                             _bi2.RepaintAllInstances();
                         }
@@ -2353,20 +2350,20 @@ namespace AHO
         // Token: 0x0600028C RID: 652 RVA: 0x00026228 File Offset: 0x00024428
         private static void ReloadAssemblies()
         {
-            _bi2.MIEOJDKEHOCEGDGBNGALKEANHMLJDPKPBDEN = 0;
-            _bi2.CNCBOMMHGCFHFIHPLKAAODEAJHLKCFAPMILL.Clear();
+            _bi2._CCW = 0;
+            _bi2._CCX.Clear();
             for (int i = 0; i < 10; i++)
             {
                 EditorApplication.UnlockReloadAssemblies();
             }
-            bool flag = !_bi2.IBJPBLKKEKFIOKLKOAHFHFNKPAEBABFIBMEN || (EditorApplication.isCompiling && !EditorApplication.isUpdating);
+            bool flag = !_bi2._CCY || (EditorApplication.isCompiling && !EditorApplication.isUpdating);
             if (flag)
             {
-                bool flag2 = !_bi2.IBJPBLKKEKFIOKLKOAHFHFNKPAEBABFIBMEN;
+                bool flag2 = !_bi2._CCY;
                 if (flag2)
                 {
-                    _bi2.DKJCMMDHBKEIIHAPOIPCGOGHBAKOMEGIGHPC = EditorWindow.focusedWindow;
-                    _bi2.IBJPBLKKEKFIOKLKOAHFHFNKPAEBABFIBMEN = true;
+                    _bi2._CCZ = EditorWindow.focusedWindow;
+                    _bi2._CCY = true;
                     EditorUtility.DisplayProgressBar("Code Window", "Reloading assemblies...", 0f);
                     AppDomain.CurrentDomain.DomainUnload -= _bi2.HideProgressBarOnUnload;
                     AppDomain.CurrentDomain.DomainUnload += _bi2.HideProgressBarOnUnload;
@@ -2374,14 +2371,14 @@ namespace AHO
                 }
             }
             EditorApplication.update = (EditorApplication.CallbackFunction)Delegate.Remove(EditorApplication.update, new EditorApplication.CallbackFunction(_bi2.ReloadAssemblies));
-            _bi2.IBJPBLKKEKFIOKLKOAHFHFNKPAEBABFIBMEN = false;
+            _bi2._CCY = false;
             EditorUtility.ClearProgressBar();
-            bool flag3 = _bi2.DKJCMMDHBKEIIHAPOIPCGOGHBAKOMEGIGHPC;
+            bool flag3 = _bi2._CCZ;
             if (flag3)
             {
-                _bi2.DKJCMMDHBKEIIHAPOIPCGOGHBAKOMEGIGHPC.Focus();
+                _bi2._CCZ.Focus();
             }
-            _bi2.DKJCMMDHBKEIIHAPOIPCGOGHBAKOMEGIGHPC = null;
+            _bi2._CCZ = null;
             _bi2.RepaintAllInstances();
         }
 
@@ -2398,10 +2395,10 @@ namespace AHO
             bool flag = EditorWindow.focusedWindow == this._ABJ();
             if (!flag)
             {
-                bool flag2 = EditorWindow.focusedWindow == this.EEJFFFONEBHEFJKECHMCKDFAFABLNECBNBDO;
+                bool flag2 = EditorWindow.focusedWindow == this._CBB;
                 if (!flag2)
                 {
-                    bool flag3 = EditorWindow.focusedWindow == this.KBBCMMCMDLMOHHGNAPNIJGLHBLBGGPODLFEB;
+                    bool flag3 = EditorWindow.focusedWindow == this._CBC;
                     if (flag3)
                     {
                         this.CloseAllPopups();
@@ -2421,25 +2418,25 @@ namespace AHO
         // Token: 0x0600028F RID: 655 RVA: 0x000263E0 File Offset: 0x000245E0
         private void OnReallyLostFocus()
         {
-            bool iagmgplnbonfccinlnnelhhbejpihbhhpgha = _bi2.IAGMGPLNBONFCCINLNNELHHBEJPIHBHHPGHA;
+            bool iagmgplnbonfccinlnnelhhbejpihbhhpgha = _bi2._CDB;
             if (iagmgplnbonfccinlnnelhhbejpihbhhpgha)
             {
                 this.AddRecentLocation(0, true);
             }
-            _bi2.IAGMGPLNBONFCCINLNNELHHBEJPIHBHHPGHA = true;
+            _bi2._CDB = true;
         }
 
         // Token: 0x06000290 RID: 656 RVA: 0x00026408 File Offset: 0x00024608
         public void OnLostFocus()
         {
-            bool flag = this.ADJPMDHKMMDMAGNDGAHMHFBBEEALGMEDJGFP != null || this.EEJFFFONEBHEFJKECHMCKDFAFABLNECBNBDO != null || this.KBBCMMCMDLMOHHGNAPNIJGLHBLBGGPODLFEB != null;
+            bool flag = this._CDA != null || this._CBB != null || this._CBC != null;
             if (flag)
             {
-                bool flag2 = this.ADJPMDHKMMDMAGNDGAHMHFBBEEALGMEDJGFP != null;
+                bool flag2 = this._CDA != null;
                 if (flag2)
                 {
-                    this.ADJPMDHKMMDMAGNDGAHMHFBBEEALGMEDJGFP.Hide();
-                    this.ADJPMDHKMMDMAGNDGAHMHFBBEEALGMEDJGFP = null;
+                    this._CDA.Hide();
+                    this._CDA = null;
                 }
                 EditorApplication.update = (EditorApplication.CallbackFunction)Delegate.Combine(EditorApplication.update, new EditorApplication.CallbackFunction(this.CheckFocusDelayed));
             }
@@ -2457,7 +2454,7 @@ namespace AHO
         // Token: 0x06000291 RID: 657 RVA: 0x000264A8 File Offset: 0x000246A8
         public void OnDisable()
         {
-            bool flag = this.EEJFFFONEBHEFJKECHMCKDFAFABLNECBNBDO != null;
+            bool flag = this._CBB != null;
             if (flag)
             {
                 this.CloseAutocomplete();
@@ -2468,14 +2465,14 @@ namespace AHO
             if (flag2)
             {
                 this._ABQ.RemoveEditor(this);
-                GCE cdghkglnkfhjenlebomgbogcmlafoejmngmj = this._ABQ;
-                cdghkglnkfhjenlebomgbogcmlafoejmngmj._ASW = (GCE._AVE)Delegate.Remove(cdghkglnkfhjenlebomgbogcmlafoejmngmj._ASW, new GCE._AVE(this.Repaint));
-                GCE cdghkglnkfhjenlebomgbogcmlafoejmngmj2 = this._ABQ;
-                cdghkglnkfhjenlebomgbogcmlafoejmngmj2._AUZ = (GCE._AVF)Delegate.Remove(cdghkglnkfhjenlebomgbogcmlafoejmngmj2._AUZ, new GCE._AVF(this.OnLineFormatted));
-                GCE cdghkglnkfhjenlebomgbogcmlafoejmngmj3 = this._ABQ;
-                cdghkglnkfhjenlebomgbogcmlafoejmngmj3._AUI = (GCE._AVG)Delegate.Remove(cdghkglnkfhjenlebomgbogcmlafoejmngmj3._AUI, new GCE._AVG(this.OnInsertedLines));
-                GCE cdghkglnkfhjenlebomgbogcmlafoejmngmj4 = this._ABQ;
-                cdghkglnkfhjenlebomgbogcmlafoejmngmj4._AUM = (GCE._AVK)Delegate.Remove(cdghkglnkfhjenlebomgbogcmlafoejmngmj4._AUM, new GCE._AVK(this.OnRemovedLines));
+                GCE _CCO = this._ABQ;
+                _CCO._ASW = (GCE._AVE)Delegate.Remove(_CCO._ASW, new GCE._AVE(this.Repaint));
+                GCE _CCO2 = this._ABQ;
+                _CCO2._AUZ = (GCE._AVF)Delegate.Remove(_CCO2._AUZ, new GCE._AVF(this.OnLineFormatted));
+                GCE _CCO3 = this._ABQ;
+                _CCO3._AUI = (GCE._AVG)Delegate.Remove(_CCO3._AUI, new GCE._AVG(this.OnInsertedLines));
+                GCE _CCO4 = this._ABQ;
+                _CCO4._AUM = (GCE._AVK)Delegate.Remove(_CCO4._AUM, new GCE._AVK(this.OnRemovedLines));
             }
             bool flag3 = GCE._ALU == this;
             if (flag3)
@@ -2510,45 +2507,45 @@ namespace AHO
         // Token: 0x06000295 RID: 661 RVA: 0x000267E4 File Offset: 0x000249E4
         public void OnUpdate()
         {
-            bool flag = this.FNLMKBLHLEDPNOLIJLANGCMHHAKNHDJGFCFN != Vector2.zero || this.MCGNCIKLJIGDHCHFMOIJFAHKLHHKFFJKAJEA || this.PEGFBNGNMIIMHJHBGGJMIPPGCENEDFKBJIPF || this.DJGNBJKIOLLPFOCBADELJOOKBOBDJDHIFHLC || this.ALLEDCEJLCOEBNDPEPFIJNFCIFIDIDNEHKFJ;
+            bool flag = this._CDC != Vector2.zero || this._CDD || this._CDE || this._CDF || this._CDG;
             if (flag)
             {
-                float num = (float)(_bi2._ATN - this.LAHBGBFFABHOMBCEKEOONHEFBNAHFPKDNLNM).TotalSeconds;
-                bool flag2 = !this.MCGNCIKLJIGDHCHFMOIJFAHKLHHKFFJKAJEA && !this.PEGFBNGNMIIMHJHBGGJMIPPGCENEDFKBJIPF;
+                float num = (float)(_bi2._ATN - this._CDH).TotalSeconds;
+                bool flag2 = !this._CDD && !this._CDE;
                 if (flag2)
                 {
-                    this.FNLMKBLHLEDPNOLIJLANGCMHHAKNHDJGFCFN.x = this.FNLMKBLHLEDPNOLIJLANGCMHHAKNHDJGFCFN.x * 0.9f;
-                    bool flag3 = this.FNLMKBLHLEDPNOLIJLANGCMHHAKNHDJGFCFN.x != 0f;
+                    this._CDC.x = this._CDC.x * 0.9f;
+                    bool flag3 = this._CDC.x != 0f;
                     if (flag3)
                     {
-                        this.FNLMKBLHLEDPNOLIJLANGCMHHAKNHDJGFCFN.x = ((this.FNLMKBLHLEDPNOLIJLANGCMHHAKNHDJGFCFN.x > 0f) ? Mathf.Max(0f, this.FNLMKBLHLEDPNOLIJLANGCMHHAKNHDJGFCFN.x - 50f * num) : Mathf.Min(0f, this.FNLMKBLHLEDPNOLIJLANGCMHHAKNHDJGFCFN.x + 50f * num));
+                        this._CDC.x = ((this._CDC.x > 0f) ? Mathf.Max(0f, this._CDC.x - 50f * num) : Mathf.Min(0f, this._CDC.x + 50f * num));
                     }
                 }
                 else
                 {
-                    this.FNLMKBLHLEDPNOLIJLANGCMHHAKNHDJGFCFN.x = Mathf.Clamp(this.FNLMKBLHLEDPNOLIJLANGCMHHAKNHDJGFCFN.x + (this.MCGNCIKLJIGDHCHFMOIJFAHKLHHKFFJKAJEA ? (-500f) : 500f) * num, -2000f, 2000f);
+                    this._CDC.x = Mathf.Clamp(this._CDC.x + (this._CDD ? (-500f) : 500f) * num, -2000f, 2000f);
                 }
-                bool flag4 = !this.DJGNBJKIOLLPFOCBADELJOOKBOBDJDHIFHLC && !this.ALLEDCEJLCOEBNDPEPFIJNFCIFIDIDNEHKFJ;
+                bool flag4 = !this._CDF && !this._CDG;
                 if (flag4)
                 {
-                    this.FNLMKBLHLEDPNOLIJLANGCMHHAKNHDJGFCFN.y = this.FNLMKBLHLEDPNOLIJLANGCMHHAKNHDJGFCFN.y * 0.9f;
-                    bool flag5 = this.FNLMKBLHLEDPNOLIJLANGCMHHAKNHDJGFCFN.y != 0f;
+                    this._CDC.y = this._CDC.y * 0.9f;
+                    bool flag5 = this._CDC.y != 0f;
                     if (flag5)
                     {
-                        this.FNLMKBLHLEDPNOLIJLANGCMHHAKNHDJGFCFN.y = ((this.FNLMKBLHLEDPNOLIJLANGCMHHAKNHDJGFCFN.y > 0f) ? Mathf.Max(0f, this.FNLMKBLHLEDPNOLIJLANGCMHHAKNHDJGFCFN.y - 50f * num) : Mathf.Min(0f, this.FNLMKBLHLEDPNOLIJLANGCMHHAKNHDJGFCFN.y + 50f * num));
+                        this._CDC.y = ((this._CDC.y > 0f) ? Mathf.Max(0f, this._CDC.y - 50f * num) : Mathf.Min(0f, this._CDC.y + 50f * num));
                     }
                 }
                 else
                 {
-                    this.FNLMKBLHLEDPNOLIJLANGCMHHAKNHDJGFCFN.y = Mathf.Clamp(this.FNLMKBLHLEDPNOLIJLANGCMHHAKNHDJGFCFN.y + (this.DJGNBJKIOLLPFOCBADELJOOKBOBDJDHIFHLC ? (-500f) : 500f) * num, -2000f, 2000f);
+                    this._CDC.y = Mathf.Clamp(this._CDC.y + (this._CDF ? (-500f) : 500f) * num, -2000f, 2000f);
                 }
-                this.DAOLEHELIBAIPNAPOFMDOLIAOEHCLFOGLHGI = this.FNLMKBLHLEDPNOLIJLANGCMHHAKNHDJGFCFN * num;
-                bool flag6 = this.ONLNKGAOOFOBMBIEIDHCODGLAIFOEPJMMHGA != null;
+                this._CDI = this._CDC * num;
+                bool flag6 = this._CDJ != null;
                 if (flag6)
                 {
-                    this.FCOMEABJIHMPEJIHMAOBEGODANCJHOFGCDKI = this.PNBFHJBPGLJPBOMMOHFIHHJONMJLBKBGFFLL && !this.CIOLLBEJAOJGGEDHBAFDIIEPHPNCCNJPFNCI;
+                    this._CDK = this._CDL && !this._CDM;
                 }
-                this.LAHBGBFFABHOMBCEKEOONHEFBNAHFPKDNLNM = _bi2._ATN;
+                this._CDH = _bi2._ATN;
                 bool flag7 = EditorWindow.focusedWindow == this._ABJ();
                 if (flag7)
                 {
@@ -2558,12 +2555,12 @@ namespace AHO
             }
             else
             {
-                bool flag8 = this.GJDLGEEKCBIHCFECOIOFLIFNOCPOAPGNHJMK();
+                bool flag8 = this._CDN();
                 if (flag8)
                 {
-                    this.LAHBGBFFABHOMBCEKEOONHEFBNAHFPKDNLNM = _bi2._ATN;
+                    this._CDH = _bi2._ATN;
                     float num2 = (float)(_bi2._ATN - this._ATM).TotalSeconds % 1f;
-                    bool flag9 = !this.BODJHGOIEFMIPPGPLNBAIBNIEFNGEJODGHFL && this.FHJLFMFHAGFPFMJLEGINHPPNDKNNANJLLHHH != this._ATM;
+                    bool flag9 = !this._CBA && this._CDO != this._ATM;
                     if (flag9)
                     {
                         int num3;
@@ -2590,15 +2587,15 @@ namespace AHO
                             bool flag15 = syntaxToken != null;
                             if (flag15)
                             {
-                                this.FHJLFMFHAGFPFMJLEGINHPPNDKNNANJLLHHH = this._ATM;
+                                this._CDO = this._ATM;
                                 bool flag16 = syntaxToken.OOME != null && syntaxToken.OOME._AAB() != null && (syntaxToken.tokenKind == SyntaxToken.Kind.Identifier || syntaxToken.tokenKind == SyntaxToken.Kind.ContextualKeyword || syntaxToken.tokenKind == SyntaxToken.Kind.Keyword) && syntaxToken.OOME._AAB()._AT != SymbolKind.Error;
                                 if (flag16)
                                 {
-                                    bool flag17 = this.EPLFFMMBLDBGHFONANEPOMGLDJEBDGHFEKCI != syntaxToken.OOME._AAB();
+                                    bool flag17 = this._CDP != syntaxToken.OOME._AAB();
                                     if (flag17)
                                     {
-                                        this.EPLFFMMBLDBGHFONANEPOMGLDJEBDGHFEKCI = syntaxToken.OOME._AAB().GetGenericSymbol();
-                                        this.ECFNGKOPKNOCJICAIJMDNLOMFCBIADJGGDGH = null;
+                                        this._CDP = syntaxToken.OOME._AAB().GetGenericSymbol();
+                                        this._CDQ = null;
                                         this.Repaint();
                                         return;
                                     }
@@ -2608,16 +2605,16 @@ namespace AHO
                                     bool flag18 = syntaxToken.tokenKind == SyntaxToken.Kind.PreprocessorSymbol;
                                     if (flag18)
                                     {
-                                        this.EPLFFMMBLDBGHFONANEPOMGLDJEBDGHFEKCI = null;
-                                        this.ECFNGKOPKNOCJICAIJMDNLOMFCBIADJGGDGH = syntaxToken.text;
+                                        this._CDP = null;
+                                        this._CDQ = syntaxToken.text;
                                         this.Repaint();
                                         return;
                                     }
-                                    bool flag19 = !_bg8._BAH && (this.EPLFFMMBLDBGHFONANEPOMGLDJEBDGHFEKCI != null || this.ECFNGKOPKNOCJICAIJMDNLOMFCBIADJGGDGH != null);
+                                    bool flag19 = !_bg8._BAH && (this._CDP != null || this._CDQ != null);
                                     if (flag19)
                                     {
-                                        this.EPLFFMMBLDBGHFONANEPOMGLDJEBDGHFEKCI = null;
-                                        this.ECFNGKOPKNOCJICAIJMDNLOMFCBIADJGGDGH = null;
+                                        this._CDP = null;
+                                        this._CDQ = null;
                                         this.Repaint();
                                         return;
                                     }
@@ -2625,11 +2622,11 @@ namespace AHO
                             }
                             else
                             {
-                                bool flag20 = !_bg8._BAH && (this.EPLFFMMBLDBGHFONANEPOMGLDJEBDGHFEKCI != null || this.ECFNGKOPKNOCJICAIJMDNLOMFCBIADJGGDGH != null);
+                                bool flag20 = !_bg8._BAH && (this._CDP != null || this._CDQ != null);
                                 if (flag20)
                                 {
-                                    this.EPLFFMMBLDBGHFONANEPOMGLDJEBDGHFEKCI = null;
-                                    this.ECFNGKOPKNOCJICAIJMDNLOMFCBIADJGGDGH = null;
+                                    this._CDP = null;
+                                    this._CDQ = null;
                                     this.Repaint();
                                     return;
                                 }
@@ -2637,26 +2634,26 @@ namespace AHO
                         }
                         else
                         {
-                            bool flag21 = !_bg8._BAH && this.EPLFFMMBLDBGHFONANEPOMGLDJEBDGHFEKCI != null;
+                            bool flag21 = !_bg8._BAH && this._CDP != null;
                             if (flag21)
                             {
-                                bool flag22 = syntaxToken == null || syntaxToken.OOME == null || syntaxToken.OOME._AAB() == null || syntaxToken.OOME._AAB()._AT == SymbolKind.Error || (syntaxToken.tokenKind != SyntaxToken.Kind.Identifier && syntaxToken.tokenKind != SyntaxToken.Kind.ContextualKeyword && syntaxToken.tokenKind != SyntaxToken.Kind.Keyword) || (this.EPLFFMMBLDBGHFONANEPOMGLDJEBDGHFEKCI != syntaxToken.OOME._AAB() && this.EPLFFMMBLDBGHFONANEPOMGLDJEBDGHFEKCI != syntaxToken.OOME._AAB().GetGenericSymbol());
+                                bool flag22 = syntaxToken == null || syntaxToken.OOME == null || syntaxToken.OOME._AAB() == null || syntaxToken.OOME._AAB()._AT == SymbolKind.Error || (syntaxToken.tokenKind != SyntaxToken.Kind.Identifier && syntaxToken.tokenKind != SyntaxToken.Kind.ContextualKeyword && syntaxToken.tokenKind != SyntaxToken.Kind.Keyword) || (this._CDP != syntaxToken.OOME._AAB() && this._CDP != syntaxToken.OOME._AAB().GetGenericSymbol());
                                 if (flag22)
                                 {
-                                    this.EPLFFMMBLDBGHFONANEPOMGLDJEBDGHFEKCI = null;
+                                    this._CDP = null;
                                     this.Repaint();
                                     return;
                                 }
                             }
                             else
                             {
-                                bool flag23 = !_bg8._BAH && this.ECFNGKOPKNOCJICAIJMDNLOMFCBIADJGGDGH != null;
+                                bool flag23 = !_bg8._BAH && this._CDQ != null;
                                 if (flag23)
                                 {
                                     bool flag24 = syntaxToken == null || syntaxToken.tokenKind != SyntaxToken.Kind.PreprocessorSymbol;
                                     if (flag24)
                                     {
-                                        this.ECFNGKOPKNOCJICAIJMDNLOMFCBIADJGGDGH = null;
+                                        this._CDQ = null;
                                         this.Repaint();
                                         return;
                                     }
@@ -2670,72 +2667,72 @@ namespace AHO
                         EditorWindow.focusedWindow.wantsMouseMove = true;
                     }
                     bool flag26 = num2 < 0.5f;
-                    bool flag27 = this.PJJNCLILMNNHAGCFMAEOAHDAGGAKDOIMCAEI != flag26;
+                    bool flag27 = this._CDR != flag26;
                     if (flag27)
                     {
                         this.Repaint();
                     }
                 }
             }
-            bool flag28 = this.DFEJMEJFBMCNDGKMAAEBPLKAAGIDNBHMMLFM != null && this.GJDLGEEKCBIHCFECOIOFLIFNOCPOAPGNHJMK();
+            bool flag28 = this._CDS != null && this._CDN();
             if (flag28)
             {
-                this.ShowArgumentsHint(this.DFEJMEJFBMCNDGKMAAEBPLKAAGIDNBHMMLFM);
-                this.DFEJMEJFBMCNDGKMAAEBPLKAAGIDNBHMMLFM = null;
+                this.ShowArgumentsHint(this._CDS);
+                this._CDS = null;
             }
             else
             {
-                bool flag29 = this.DFEJMEJFBMCNDGKMAAEBPLKAAGIDNBHMMLFM != null;
+                bool flag29 = this._CDS != null;
                 if (!flag29)
                 {
-                    bool flag30 = this.ADJPMDHKMMDMAGNDGAHMHFBBEEALGMEDJGFP == null && (this.GJDLGEEKCBIHCFECOIOFLIFNOCPOAPGNHJMK() || this.PKEDGKNPLDKJDFNDFLIOAEPLNNJAMOHKEHKM);
+                    bool flag30 = this._CDA == null && (this._CDN() || this._CDT);
                     if (flag30)
                     {
-                        bool flag31 = this.GPLPKMAECBMBIFJFHBAOKAKOILAEHLNFKIII != null && this.OEDBMEGKONIDNGNNNBOJKCNPNCEJPOGPBNHC != default(DateTime) && (float)(_bi2._ATN - this.OEDBMEGKONIDNGNNNBOJKCNPNCEJPOGPBNHC).TotalSeconds > 0.25f;
+                        bool flag31 = this._CDU != null && this._CDV != default(DateTime) && (float)(_bi2._ATN - this._CDV).TotalSeconds > 0.25f;
                         if (flag31)
                         {
-                            bool flag32 = this.GPLPKMAECBMBIFJFHBAOKAKOILAEHLNFKIII.OOME != null && EditorWindow.mouseOverWindow == this._ABJ();
+                            bool flag32 = this._CDU.OOME != null && EditorWindow.mouseOverWindow == this._ABJ();
                             if (flag32)
                             {
-                                _bh4 _AAH = this.GPLPKMAECBMBIFJFHBAOKAKOILAEHLNFKIII.OOME._AAB();
+                                _bh4 _AAH = this._CDU.OOME._AAB();
                                 bool flag33 = _AAH == null || !_AAH.IsValid() || _AAH._AT == SymbolKind.Error;
                                 if (flag33)
                                 {
-                                    this.GPLPKMAECBMBIFJFHBAOKAKOILAEHLNFKIII.OOME._ACY(null);
-                                    _bc9.ResolveNode(this.GPLPKMAECBMBIFJFHBAOKAKOILAEHLNFKIII.OOME.OOME);
+                                    this._CDU.OOME._ACY(null);
+                                    _bc9.ResolveNode(this._CDU.OOME.OOME);
                                 }
-                                bool flag34 = this.GPLPKMAECBMBIFJFHBAOKAKOILAEHLNFKIII.OOME._AAB() != null;
+                                bool flag34 = this._CDU.OOME._AAB() != null;
                                 if (flag34)
                                 {
-                                    this.ADJPMDHKMMDMAGNDGAHMHFBBEEALGMEDJGFP = _bk9.Create(this, this.HMBHHLIKJCBCEFKDGKPNLHMOKOOLHJDKLBOL, this.GPLPKMAECBMBIFJFHBAOKAKOILAEHLNFKIII.OOME, false, true, false);
+                                    this._CDA = _bk9.Create(this, this._CDW, this._CDU.OOME, false, true, false);
                                 }
                                 else
                                 {
-                                    bool flag35 = this.GPLPKMAECBMBIFJFHBAOKAKOILAEHLNFKIII.OOME._AJB != null || this.GPLPKMAECBMBIFJFHBAOKAKOILAEHLNFKIII.OOME._AJF != null;
+                                    bool flag35 = this._CDU.OOME._AJB != null || this._CDU.OOME._AJF != null;
                                     if (flag35)
                                     {
-                                        this.ADJPMDHKMMDMAGNDGAHMHFBBEEALGMEDJGFP = _bk9.Create(this, this.HMBHHLIKJCBCEFKDGKPNLHMOKOOLHJDKLBOL, this.GPLPKMAECBMBIFJFHBAOKAKOILAEHLNFKIII.OOME, false, true, false);
+                                        this._CDA = _bk9.Create(this, this._CDW, this._CDU.OOME, false, true, false);
                                     }
                                 }
                             }
                             else
                             {
-                                this.GPLPKMAECBMBIFJFHBAOKAKOILAEHLNFKIII = null;
+                                this._CDU = null;
                             }
                         }
                     }
                     else
                     {
-                        bool flag36 = this.OEDBMEGKONIDNGNNNBOJKCNPNCEJPOGPBNHC == default(DateTime) && this.ADJPMDHKMMDMAGNDGAHMHFBBEEALGMEDJGFP != null;
+                        bool flag36 = this._CDV == default(DateTime) && this._CDA != null;
                         if (flag36)
                         {
-                            this.ADJPMDHKMMDMAGNDGAHMHFBBEEALGMEDJGFP.Hide();
+                            this._CDA.Hide();
                         }
                     }
                 }
             }
-            _bi2.RepaintChangedTheme(this.EIMJAKFHOFKPPHINOOONMDAPCKAAPELJKAIL);
-            _bi2.RepaintChangedTheme(!this.EIMJAKFHOFKPPHINOOONMDAPCKAAPELJKAIL);
+            _bi2.RepaintChangedTheme(this._CCL);
+            _bi2.RepaintChangedTheme(!this._CCL);
         }
 
         // Token: 0x06000296 RID: 662 RVA: 0x000270EC File Offset: 0x000252EC
@@ -2772,50 +2769,50 @@ namespace AHO
         // Token: 0x06000299 RID: 665 RVA: 0x0002719C File Offset: 0x0002539C
         public void Initialize()
         {
-            Vector2 vector = ((this._ABT._ABV != null && this._ABT._ABV.font != null) ? this._ABT._ABV.CalcSize(_bi2.JKEGIJCLAEEMOEKPHALMICPOHFLNNBDPPAIK) : this._AEY());
+            Vector2 vector = ((this._ABT._ABV != null && this._ABT._ABV.font != null) ? this._ABT._ABV.CalcSize(_bi2._CDX) : this._AEY());
             bool flag = this._ABQ != null && this._ABQ._ARR;
-            bool flag2 = (flag ? _bi2.LAMCCIBPLNNJDOIKIKNLEKKMPAEIIAHGEGDH : _bi2.PJOMAIJGCAPMFLENCDNIAPJJKNGLFDICIFLL);
+            bool flag2 = (flag ? _bi2._CDY : _bi2._CDZ);
             bool flag3 = vector != this._AEY() || this._ABT._ABV == null || this._ABT._ABV.font == null || _bg8._AEP == 0 != (this._ABT._ABV.fontSize == 0) || flag2;
             if (flag3)
             {
-                this.LOMAMECAAIALIGHCOLCOOGEHJBAMPBLPEMKH = null;
-                this.JKLCMHOFNIJEKGHFAFDFNEIMANIEOAIMBKPC = null;
-                this.PKFNCAIDJDMDDHBBFMKAGPDLNGLMMHKHHFOD.Clear();
+                this._CCS = null;
+                this._CCG = null;
+                this._CEA.Clear();
                 bool flag4 = flag;
                 if (flag4)
                 {
-                    _bi2.LAMCCIBPLNNJDOIKIKNLEKKMPAEIIAHGEGDH = false;
+                    _bi2._CDY = false;
                 }
                 else
                 {
-                    _bi2.PJOMAIJGCAPMFLENCDNIAPJJKNGLFDICIFLL = false;
+                    _bi2._CDZ = false;
                 }
                 _bi2.LoadStyles(this._ABT, flag);
-                this.HOPMPOOFCKGLAFDCFAAODFFEMMMOJHGAOJMI((this._ABT._ABV.font != null) ? this._ABT._ABV.CalcSize(_bi2.JKEGIJCLAEEMOEKPHALMICPOHFLNNBDPPAIK) : this._AEY());
+                this._CEB((this._ABT._ABV.font != null) ? this._ABT._ABV.CalcSize(_bi2._CDX) : this._AEY());
             }
         }
 
         // Token: 0x0600029A RID: 666 RVA: 0x000272F8 File Offset: 0x000254F8
         internal static _bi2._AVA GetStyles(bool forText)
         {
-            _bi2._AVA gpioonjlkbmhjkddepbfbbnpijalemmekbbm = (forText ? _bi2.EMGEKEIEHPNEFMOMMCIFEEGIFJDEJFOKPAFM : _bi2.FKIPBDDJJKDBAABDMLPKIGEAKBOODIOIIJEE);
-            bool flag = gpioonjlkbmhjkddepbfbbnpijalemmekbbm._ABV == null;
+            _bi2._AVA _CEC = (forText ? _bi2._CCM : _bi2._CCN);
+            bool flag = _CEC._ABV == null;
             if (flag)
             {
                 _bi2.InitializeFont(forText);
-                _bi2.LoadStyles(gpioonjlkbmhjkddepbfbbnpijalemmekbbm, forText);
+                _bi2.LoadStyles(_CEC, forText);
             }
-            return gpioonjlkbmhjkddepbfbbnpijalemmekbbm;
+            return _CEC;
         }
 
         // Token: 0x0600029B RID: 667 RVA: 0x0002733C File Offset: 0x0002553C
         internal static void LoadIcons(bool forDll = false)
         {
-            _bi2.FJHJMLPMPICJDJHGPHKCHLPDABECAPHNLBDL = _a2.GetInstance().GetTexture(Base64Texture.SaveIcon);
-            _bi2.IKAJMFCHNHPALEOMJJLHJFIOOABGCPIIBMMF = _a2.GetInstance().GetTexture(Base64Texture.EditUndoIcon);
-            _bi2.PKNNMKEEKOEEDPPADOBGGMNPANFDLFEKELML = _a2.GetInstance().GetTexture(Base64Texture.EditRedoIcon);
-            _bi2.NLKLFFEHGAOCPBJMKILBAJBPHJMHBJEKHOFA = _a2.GetInstance().GetTexture(Base64Texture.WavyUnderline);
-            _bi2.PFGMEJLLJPMAPPHJDBPLAODICICMBLHNKKAB = _a2.GetInstance().GetTexture(Base64Texture.WhitePing);
+            _bi2._CED = _a2.GetInstance().GetTexture(Base64Texture.SaveIcon);
+            _bi2._CEE = _a2.GetInstance().GetTexture(Base64Texture.EditUndoIcon);
+            _bi2._CEF = _a2.GetInstance().GetTexture(Base64Texture.EditRedoIcon);
+            _bi2._CEG = _a2.GetInstance().GetTexture(Base64Texture.WavyUnderline);
+            _bi2._CEH = _a2.GetInstance().GetTexture(Base64Texture.WhitePing);
         }
 
         // Token: 0x0600029C RID: 668 RVA: 0x000273A4 File Offset: 0x000255A4
@@ -2827,23 +2824,23 @@ namespace AHO
             {
                 int num = _bi2.BGBI.IndexOf(EditorGUIUtility.isProSkin ? "VS Dark with VA X" : "Xcode");
                 num = ((num < 0) ? 0 : num);
-                _bi2.NEJDBEMCGLKCAHENKLCFDOMOFGNHCBAIIDLF = _bi2.BPDG[num];
-                _bi2.LMHCAPKMBCKPJCOFDJBKMEFJDCENENGPPKKN = _bi2.BPDG[num];
-                _bi2.LoadStyles(_bi2.EMGEKEIEHPNEFMOMMCIFEEGIFJDEJFOKPAFM, true);
-                _bi2.LoadStyles(_bi2.FKIPBDDJJKDBAABDMLPKIGEAKBOODIOIIJEE, false);
+                _bi2._CEI = _bi2.BPDG[num];
+                _bi2._CEJ = _bi2.BPDG[num];
+                _bi2.LoadStyles(_bi2._CCM, true);
+                _bi2.LoadStyles(_bi2._CCN, false);
                 _bi2.SelectTheme(num, true);
                 _bi2.SelectTheme(num, false);
                 EditorPrefs.DeleteKey("Vik.SuperEditor.ThemeNameCode");
                 EditorPrefs.DeleteKey("Vik.SuperEditor.ThemeNameText");
-                for (int i = 0; i < _bi2.MALGDKADEDLONPFACJAGNOJFCCJHGAELLKBK().Length; i++)
+                for (int i = 0; i < _bi2._CCK().Length; i++)
                 {
-                    bool flag2 = _bi2.MALGDKADEDLONPFACJAGNOJFCCJHGAELLKBK()[i].Equals("Fonts/PTMono.ttc");
+                    bool flag2 = _bi2._CCK()[i].Equals("Fonts/PTMono.ttc");
                     if (flag2)
                     {
-                        _bg8._BBT._AIF(_bi2.LJKHDAPCHJBAPKJLHCFIANJIODFKNMHPAMOC = _bi2.MALGDKADEDLONPFACJAGNOJFCCJHGAELLKBK()[i]);
+                        _bg8._BBT._AIF(_bi2._CCJ = _bi2._CCK()[i]);
                         break;
                     }
-                    _bg8._BBT._AIF(_bi2.LJKHDAPCHJBAPKJLHCFIANJIODFKNMHPAMOC = _bi2.MALGDKADEDLONPFACJAGNOJFCCJHGAELLKBK()[0]);
+                    _bg8._BBT._AIF(_bi2._CCJ = _bi2._CCK()[0]);
                 }
             }
             else
@@ -2852,30 +2849,30 @@ namespace AHO
                 num2 = ((num2 < 0) ? 0 : num2);
                 if (forText)
                 {
-                    _bi2.NEJDBEMCGLKCAHENKLCFDOMOFGNHCBAIIDLF = _bi2.BPDG[num2];
+                    _bi2._CEI = _bi2.BPDG[num2];
                 }
                 else
                 {
-                    _bi2.LMHCAPKMBCKPJCOFDJBKMEFJDCENENGPPKKN = _bi2.BPDG[num2];
+                    _bi2._CEJ = _bi2.BPDG[num2];
                 }
-                styles.MNAINPPJCJGPLHBFJICPBAPKHGGPKHFKGHKI = styles.MNAINPPJCJGPLHBFJICPBAPKHGGPKHFKGHKI ?? new GUIStyle(GUIStyle.none);
-                styles.EEHEIDPKDPFECCNEMEAOEDHDMOCMLHIMGBIO = styles.EEHEIDPKDPFECCNEMEAOEDHDMOCMLHIMGBIO ?? new GUIStyle(GUIStyle.none);
+                styles._CEK = styles._CEK ?? new GUIStyle(GUIStyle.none);
+                styles._CEL = styles._CEL ?? new GUIStyle(GUIStyle.none);
                 styles._ABV = styles._ABV ?? new GUIStyle(GUIStyle.none);
                 styles._ABV.richText = false;
-                string text = _bi2.LJKHDAPCHJBAPKJLHCFIANJIODFKNMHPAMOC;
+                string text = _bi2._CCJ;
                 bool flag3 = text != null;
                 if (flag3)
                 {
                     styles._ABV.font = _bi2.LoadEditorResource<Font>(text);
                     int num3 = 0;
-                    while (styles._ABV.font == null && num3 < _bi2.MALGDKADEDLONPFACJAGNOJFCCJHGAELLKBK().Length)
+                    while (styles._ABV.font == null && num3 < _bi2._CCK().Length)
                     {
-                        _bi2.LJKHDAPCHJBAPKJLHCFIANJIODFKNMHPAMOC = _bi2.MALGDKADEDLONPFACJAGNOJFCCJHGAELLKBK()[num3];
-                        text = _bi2.LJKHDAPCHJBAPKJLHCFIANJIODFKNMHPAMOC;
+                        _bi2._CCJ = _bi2._CCK()[num3];
+                        text = _bi2._CCJ;
                         styles._ABV.font = _bi2.LoadEditorResource<Font>(text);
                         num3++;
                     }
-                    _bi2.LJKHDAPCHJBAPKJLHCFIANJIODFKNMHPAMOC = null;
+                    _bi2._CCJ = null;
                 }
                 int dynamicFontSize = _bi2.GetDynamicFontSize(styles._ABV.font);
                 bool flag4 = dynamicFontSize != 0;
@@ -2888,8 +2885,8 @@ namespace AHO
                 {
                     styles._ABV.fontSize = 0;
                 }
-                styles.MLINBOOFJJFOOJDFIODGPBCGFAFGFGHIINAK = styles.MLINBOOFJJFOOJDFIODGPBCGFAFGFGHIINAK ?? new GUIStyle(styles._ABV);
-                styles.LPMHKIAKCIJCOALOPOKIGFPOBAHPLGHMDGJE = styles.LPMHKIAKCIJCOALOPOKIGFPOBAHPLGHMDGJE ?? new GUIStyle(styles.MLINBOOFJJFOOJDFIODGPBCGFAFGFGHIINAK);
+                styles._CEM = styles._CEM ?? new GUIStyle(styles._ABV);
+                styles._CEN = styles._CEN ?? new GUIStyle(styles._CEM);
                 styles._ACK = styles._ACK ?? new GUIStyle(styles._ABV);
                 styles._ACF = styles._ACF ?? new GUIStyle(styles._ABV);
                 styles._ACE = styles._ACE ?? new GUIStyle(styles._ABV);
@@ -2897,32 +2894,32 @@ namespace AHO
                 styles._ACG = styles._ACG ?? new GUIStyle(styles._ABV);
                 styles._ACH = styles._ACH ?? new GUIStyle(styles._ABV);
                 styles._ACN = styles._ACN ?? new GUIStyle(styles._ABV);
-                styles.ABFOGCOCKGPDGCECELHDDPLJPLOMFINBMDFB = styles.ABFOGCOCKGPDGCECELHDDPLJPLOMFINBMDFB ?? new GUIStyle(styles._ABV);
-                styles.FEPCGBBLADFJIOAOEGONMDEELEFFPMAGDNLD = styles.FEPCGBBLADFJIOAOEGONMDEELEFFPMAGDNLD ?? new GUIStyle(styles._ABV);
-                styles.AFJAELGAFCMBADAHILPMPIMHNBLJOHPBDMFL = styles.AFJAELGAFCMBADAHILPMPIMHNBLJOHPBDMFL ?? new GUIStyle(styles._ABV);
-                styles.NKFJNHICAHKHIKAHLOCGMGMOPDGCGCHDBEKC = styles.NKFJNHICAHKHIKAHLOCGMGMOPDGCGCHDBEKC ?? new GUIStyle(styles._ABV);
+                styles._CEO = styles._CEO ?? new GUIStyle(styles._ABV);
+                styles._CEP = styles._CEP ?? new GUIStyle(styles._ABV);
+                styles._CEQ = styles._CEQ ?? new GUIStyle(styles._ABV);
+                styles._CER = styles._CER ?? new GUIStyle(styles._ABV);
                 styles._ACI = styles._ACI ?? new GUIStyle(styles._ABV);
                 styles._ACJ = styles._ACJ ?? new GUIStyle(styles._ABV);
-                styles.MBNAKPHMLKEJFEHCAKCELDLDCKFHLGHAFPCM = styles.MBNAKPHMLKEJFEHCAKCELDLDCKFHLGHAFPCM ?? new GUIStyle(styles._ABV);
-                styles.IEHHNFHGANAAGPCGFGLGFPPIEACCGPNBCGHP = styles.IEHHNFHGANAAGPCGFGLGFPPIEACCGPNBCGHP ?? new GUIStyle(styles._ABV);
-                styles.IBECDLBCDCMKNOFEGCLBDBHJLCOPJIIDOENE = styles.IBECDLBCDCMKNOFEGCLBDBHJLCOPJIIDOENE ?? new GUIStyle(styles._ABV);
-                styles.LKPEKDFLBIFFAFLONCNILICBNHJMBOHPDHOK = styles.LKPEKDFLBIFFAFLONCNILICBNHJMBOHPDHOK ?? new GUIStyle(styles._ABV);
-                styles.CIAPHJPLJPJFPFHKIGOLEPILKEDJCEBKOGLI = styles.CIAPHJPLJPJFPFHKIGOLEPILKEDJCEBKOGLI ?? new GUIStyle(styles._ABV);
-                styles.PBOJOMJKIBIKNDAOLEDPDHJIAOCOCDFBCPMG = styles.PBOJOMJKIBIKNDAOLEDPDHJIAOCOCDFBCPMG ?? new GUIStyle(styles._ABV);
-                styles.FFKKHGMKNOAEDPHBACLDPIHIAMCLDLKCHMDP = styles.FFKKHGMKNOAEDPHBACLDPIHIAMCLDLKCHMDP ?? new GUIStyle(styles._ABV);
-                styles.JMJPFJGGIEEPNKMMFKFKBMEALOBACMLKKGDD = styles.JMJPFJGGIEEPNKMMFKFKBMEALOBACMLKKGDD ?? new GUIStyle(styles._ABV);
-                styles.IDEBBOAIFDBCFICJJCOCOIBKDOPNMGADPJBI = styles.IDEBBOAIFDBCFICJJCOCOIBKDOPNMGADPJBI ?? new GUIStyle(styles._ABV);
+                styles._CES = styles._CES ?? new GUIStyle(styles._ABV);
+                styles._CET = styles._CET ?? new GUIStyle(styles._ABV);
+                styles._CEU = styles._CEU ?? new GUIStyle(styles._ABV);
+                styles._CEV = styles._CEV ?? new GUIStyle(styles._ABV);
+                styles._CEW = styles._CEW ?? new GUIStyle(styles._ABV);
+                styles._CEX = styles._CEX ?? new GUIStyle(styles._ABV);
+                styles._CEY = styles._CEY ?? new GUIStyle(styles._ABV);
+                styles._CEZ = styles._CEZ ?? new GUIStyle(styles._ABV);
+                styles._CFA = styles._CFA ?? new GUIStyle(styles._ABV);
                 styles._ACC = styles._ACC ?? new GUIStyle(styles._ABV);
                 styles._ACD = styles._ACD ?? new GUIStyle(styles._ABV);
                 styles._ACA = styles._ACA ?? new GUIStyle(styles._ABV);
                 styles._ACB = styles._ACB ?? new GUIStyle(styles._ABV);
-                styles.BBOLFNEKGDIMCIMDGFBDONKOHIMAFOOONJLI = styles.BBOLFNEKGDIMCIMDGFBDONKOHIMAFOOONJLI ?? new GUIStyle(styles._ABV);
-                styles.AIIPFPOMAMLAHOHOBJPDNLMGIIIEFJAIEALI = styles.AIIPFPOMAMLAHOHOBJPDNLMGIIIEFJAIEALI ?? new GUIStyle(styles._ABV);
-                styles.FKNGDNMIFFNDKLBIMPEOABJDFILGGHFFEKNM = styles.FKNGDNMIFFNDKLBIMPEOABJDFILGGHFFEKNM ?? new GUIStyle(styles._ABV);
-                styles.DHLIECBFHFIOLJODNKHAIFAMDEFLDKDPBLJH = styles.DHLIECBFHFIOLJODNKHAIFAMDEFLDKDPBLJH ?? new GUIStyle(styles._ABV);
-                styles.OFHACCJKFEDEPPHBLPBAGNDAFFAJECCJDKBK = styles.OFHACCJKFEDEPPHBLPBAGNDAFFAJECCJDKBK ?? new GUIStyle(styles._ABV);
-                styles.MLINBOOFJJFOOJDFIODGPBCGFAFGFGHIINAK.font = styles._ABV.font;
-                styles.LPMHKIAKCIJCOALOPOKIGFPOBAHPLGHMDGJE.font = styles._ABV.font;
+                styles._CFB = styles._CFB ?? new GUIStyle(styles._ABV);
+                styles._CFC = styles._CFC ?? new GUIStyle(styles._ABV);
+                styles._CFD = styles._CFD ?? new GUIStyle(styles._ABV);
+                styles._CFE = styles._CFE ?? new GUIStyle(styles._ABV);
+                styles._CFF = styles._CFF ?? new GUIStyle(styles._ABV);
+                styles._CEM.font = styles._ABV.font;
+                styles._CEN.font = styles._ABV.font;
                 styles._ACK.font = styles._ABV.font;
                 styles._ACF.font = styles._ABV.font;
                 styles._ACE.font = styles._ABV.font;
@@ -2930,35 +2927,35 @@ namespace AHO
                 styles._ACG.font = styles._ABV.font;
                 styles._ACH.font = styles._ABV.font;
                 styles._ACN.font = styles._ABV.font;
-                styles.ABFOGCOCKGPDGCECELHDDPLJPLOMFINBMDFB.font = styles._ABV.font;
-                styles.FEPCGBBLADFJIOAOEGONMDEELEFFPMAGDNLD.font = styles._ABV.font;
-                styles.AFJAELGAFCMBADAHILPMPIMHNBLJOHPBDMFL.font = styles._ABV.font;
-                styles.NKFJNHICAHKHIKAHLOCGMGMOPDGCGCHDBEKC.font = styles._ABV.font;
+                styles._CEO.font = styles._ABV.font;
+                styles._CEP.font = styles._ABV.font;
+                styles._CEQ.font = styles._ABV.font;
+                styles._CER.font = styles._ABV.font;
                 styles._ACI.font = styles._ABV.font;
                 styles._ACJ.font = styles._ABV.font;
-                styles.MBNAKPHMLKEJFEHCAKCELDLDCKFHLGHAFPCM.font = styles._ABV.font;
-                styles.IEHHNFHGANAAGPCGFGLGFPPIEACCGPNBCGHP.font = styles._ABV.font;
-                styles.IBECDLBCDCMKNOFEGCLBDBHJLCOPJIIDOENE.font = styles._ABV.font;
-                styles.LKPEKDFLBIFFAFLONCNILICBNHJMBOHPDHOK.font = styles._ABV.font;
-                styles.CIAPHJPLJPJFPFHKIGOLEPILKEDJCEBKOGLI.font = styles._ABV.font;
-                styles.PBOJOMJKIBIKNDAOLEDPDHJIAOCOCDFBCPMG.font = styles._ABV.font;
-                styles.FFKKHGMKNOAEDPHBACLDPIHIAMCLDLKCHMDP.font = styles._ABV.font;
-                styles.JMJPFJGGIEEPNKMMFKFKBMEALOBACMLKKGDD.font = styles._ABV.font;
-                styles.IDEBBOAIFDBCFICJJCOCOIBKDOPNMGADPJBI.font = styles._ABV.font;
+                styles._CES.font = styles._ABV.font;
+                styles._CET.font = styles._ABV.font;
+                styles._CEU.font = styles._ABV.font;
+                styles._CEV.font = styles._ABV.font;
+                styles._CEW.font = styles._ABV.font;
+                styles._CEX.font = styles._ABV.font;
+                styles._CEY.font = styles._ABV.font;
+                styles._CEZ.font = styles._ABV.font;
+                styles._CFA.font = styles._ABV.font;
                 styles._ACC.font = styles._ABV.font;
                 styles._ACD.font = styles._ABV.font;
                 styles._ACA.font = styles._ABV.font;
                 styles._ACB.font = styles._ABV.font;
-                styles.BBOLFNEKGDIMCIMDGFBDONKOHIMAFOOONJLI.font = styles._ABV.font;
-                styles.AIIPFPOMAMLAHOHOBJPDNLMGIIIEFJAIEALI.font = styles._ABV.font;
-                styles.FKNGDNMIFFNDKLBIMPEOABJDFILGGHFFEKNM.font = styles._ABV.font;
-                styles.OFHACCJKFEDEPPHBLPBAGNDAFFAJECCJDKBK.font = styles._ABV.font;
-                styles.OFHACCJKFEDEPPHBLPBAGNDAFFAJECCJDKBK.wordWrap = true;
+                styles._CFB.font = styles._ABV.font;
+                styles._CFC.font = styles._ABV.font;
+                styles._CFD.font = styles._ABV.font;
+                styles._CFF.font = styles._ABV.font;
+                styles._CFF.wordWrap = true;
                 bool flag6 = flag4;
                 if (flag6)
                 {
-                    styles.MLINBOOFJJFOOJDFIODGPBCGFAFGFGHIINAK.fontSize = styles._ABV.fontSize;
-                    styles.LPMHKIAKCIJCOALOPOKIGFPOBAHPLGHMDGJE.fontSize = styles._ABV.fontSize;
+                    styles._CEM.fontSize = styles._ABV.fontSize;
+                    styles._CEN.fontSize = styles._ABV.fontSize;
                     styles._ACK.fontSize = styles._ABV.fontSize;
                     styles._ACF.fontSize = styles._ABV.fontSize;
                     styles._ACE.fontSize = styles._ABV.fontSize;
@@ -2966,35 +2963,35 @@ namespace AHO
                     styles._ACG.fontSize = styles._ABV.fontSize;
                     styles._ACH.fontSize = styles._ABV.fontSize;
                     styles._ACN.fontSize = styles._ABV.fontSize;
-                    styles.ABFOGCOCKGPDGCECELHDDPLJPLOMFINBMDFB.fontSize = styles._ABV.fontSize;
-                    styles.FEPCGBBLADFJIOAOEGONMDEELEFFPMAGDNLD.fontSize = styles._ABV.fontSize;
-                    styles.AFJAELGAFCMBADAHILPMPIMHNBLJOHPBDMFL.fontSize = styles._ABV.fontSize;
-                    styles.NKFJNHICAHKHIKAHLOCGMGMOPDGCGCHDBEKC.fontSize = styles._ABV.fontSize;
+                    styles._CEO.fontSize = styles._ABV.fontSize;
+                    styles._CEP.fontSize = styles._ABV.fontSize;
+                    styles._CEQ.fontSize = styles._ABV.fontSize;
+                    styles._CER.fontSize = styles._ABV.fontSize;
                     styles._ACI.fontSize = styles._ABV.fontSize;
                     styles._ACJ.fontSize = styles._ABV.fontSize;
-                    styles.MBNAKPHMLKEJFEHCAKCELDLDCKFHLGHAFPCM.fontSize = styles._ABV.fontSize;
-                    styles.IEHHNFHGANAAGPCGFGLGFPPIEACCGPNBCGHP.fontSize = styles._ABV.fontSize;
-                    styles.IBECDLBCDCMKNOFEGCLBDBHJLCOPJIIDOENE.fontSize = styles._ABV.fontSize;
-                    styles.LKPEKDFLBIFFAFLONCNILICBNHJMBOHPDHOK.fontSize = styles._ABV.fontSize;
-                    styles.CIAPHJPLJPJFPFHKIGOLEPILKEDJCEBKOGLI.fontSize = styles._ABV.fontSize;
-                    styles.PBOJOMJKIBIKNDAOLEDPDHJIAOCOCDFBCPMG.fontSize = styles._ABV.fontSize;
-                    styles.FFKKHGMKNOAEDPHBACLDPIHIAMCLDLKCHMDP.fontSize = styles._ABV.fontSize;
-                    styles.JMJPFJGGIEEPNKMMFKFKBMEALOBACMLKKGDD.fontSize = styles._ABV.fontSize;
-                    styles.IDEBBOAIFDBCFICJJCOCOIBKDOPNMGADPJBI.fontSize = styles._ABV.fontSize;
+                    styles._CES.fontSize = styles._ABV.fontSize;
+                    styles._CET.fontSize = styles._ABV.fontSize;
+                    styles._CEU.fontSize = styles._ABV.fontSize;
+                    styles._CEV.fontSize = styles._ABV.fontSize;
+                    styles._CEW.fontSize = styles._ABV.fontSize;
+                    styles._CEX.fontSize = styles._ABV.fontSize;
+                    styles._CEY.fontSize = styles._ABV.fontSize;
+                    styles._CEZ.fontSize = styles._ABV.fontSize;
+                    styles._CFA.fontSize = styles._ABV.fontSize;
                     styles._ACC.fontSize = styles._ABV.fontSize;
                     styles._ACD.fontSize = styles._ABV.fontSize;
                     styles._ACA.fontSize = styles._ABV.fontSize;
                     styles._ACB.fontSize = styles._ABV.fontSize;
-                    styles.BBOLFNEKGDIMCIMDGFBDONKOHIMAFOOONJLI.fontSize = styles._ABV.fontSize;
-                    styles.AIIPFPOMAMLAHOHOBJPDNLMGIIIEFJAIEALI.fontSize = styles._ABV.fontSize;
-                    styles.FKNGDNMIFFNDKLBIMPEOABJDFILGGHFFEKNM.fontSize = styles._ABV.fontSize;
-                    styles.OFHACCJKFEDEPPHBLPBAGNDAFFAJECCJDKBK.fontSize = styles._ABV.fontSize;
+                    styles._CFB.fontSize = styles._ABV.fontSize;
+                    styles._CFC.fontSize = styles._ABV.fontSize;
+                    styles._CFD.fontSize = styles._ABV.fontSize;
+                    styles._CFF.fontSize = styles._ABV.fontSize;
                 }
                 else
                 {
                     styles._ABV.fontSize = 0;
-                    styles.MLINBOOFJJFOOJDFIODGPBCGFAFGFGHIINAK.fontSize = 0;
-                    styles.LPMHKIAKCIJCOALOPOKIGFPOBAHPLGHMDGJE.fontSize = 0;
+                    styles._CEM.fontSize = 0;
+                    styles._CEN.fontSize = 0;
                     styles._ACK.fontSize = 0;
                     styles._ACF.fontSize = 0;
                     styles._ACE.fontSize = 0;
@@ -3002,73 +2999,73 @@ namespace AHO
                     styles._ACG.fontSize = 0;
                     styles._ACH.fontSize = 0;
                     styles._ACN.fontSize = 0;
-                    styles.ABFOGCOCKGPDGCECELHDDPLJPLOMFINBMDFB.fontSize = 0;
-                    styles.FEPCGBBLADFJIOAOEGONMDEELEFFPMAGDNLD.fontSize = 0;
-                    styles.AFJAELGAFCMBADAHILPMPIMHNBLJOHPBDMFL.fontSize = 0;
-                    styles.NKFJNHICAHKHIKAHLOCGMGMOPDGCGCHDBEKC.fontSize = 0;
+                    styles._CEO.fontSize = 0;
+                    styles._CEP.fontSize = 0;
+                    styles._CEQ.fontSize = 0;
+                    styles._CER.fontSize = 0;
                     styles._ACI.fontSize = 0;
                     styles._ACJ.fontSize = 0;
-                    styles.MBNAKPHMLKEJFEHCAKCELDLDCKFHLGHAFPCM.fontSize = 0;
-                    styles.IEHHNFHGANAAGPCGFGLGFPPIEACCGPNBCGHP.fontSize = 0;
-                    styles.IBECDLBCDCMKNOFEGCLBDBHJLCOPJIIDOENE.fontSize = 0;
-                    styles.LKPEKDFLBIFFAFLONCNILICBNHJMBOHPDHOK.fontSize = 0;
-                    styles.CIAPHJPLJPJFPFHKIGOLEPILKEDJCEBKOGLI.fontSize = 0;
-                    styles.PBOJOMJKIBIKNDAOLEDPDHJIAOCOCDFBCPMG.fontSize = 0;
-                    styles.FFKKHGMKNOAEDPHBACLDPIHIAMCLDLKCHMDP.fontSize = 0;
-                    styles.JMJPFJGGIEEPNKMMFKFKBMEALOBACMLKKGDD.fontSize = 0;
-                    styles.IDEBBOAIFDBCFICJJCOCOIBKDOPNMGADPJBI.fontSize = 0;
+                    styles._CES.fontSize = 0;
+                    styles._CET.fontSize = 0;
+                    styles._CEU.fontSize = 0;
+                    styles._CEV.fontSize = 0;
+                    styles._CEW.fontSize = 0;
+                    styles._CEX.fontSize = 0;
+                    styles._CEY.fontSize = 0;
+                    styles._CEZ.fontSize = 0;
+                    styles._CFA.fontSize = 0;
                     styles._ACC.fontSize = 0;
                     styles._ACD.fontSize = 0;
                     styles._ACA.fontSize = 0;
                     styles._ACB.fontSize = 0;
-                    styles.BBOLFNEKGDIMCIMDGFBDONKOHIMAFOOONJLI.fontSize = 0;
-                    styles.AIIPFPOMAMLAHOHOBJPDNLMGIIIEFJAIEALI.fontSize = 0;
-                    styles.FKNGDNMIFFNDKLBIMPEOABJDFILGGHFFEKNM.fontSize = 0;
-                    styles.OFHACCJKFEDEPPHBLPBAGNDAFFAJECCJDKBK.fontSize = 0;
+                    styles._CFB.fontSize = 0;
+                    styles._CFC.fontSize = 0;
+                    styles._CFD.fontSize = 0;
+                    styles._CFF.fontSize = 0;
                 }
-                styles.FKPDLHMDAGCDBKHOJAABIDBDBPCOGPOPIOJC = styles.FKPDLHMDAGCDBKHOJAABIDBDBPCOGPOPIOJC ?? new GUIStyle();
-                styles.IICGPMAMBHPFKAIGDAKKDFCDPAKDCNNGOAOF = styles.IICGPMAMBHPFKAIGDAKKDFCDPAKDCNNGOAOF ?? new GUIStyle();
-                styles.OAHNJENALMPCNGMEAFGPAOPDCFGGJFIMDLCK = styles.OAHNJENALMPCNGMEAFGPAOPDCFGGJFIMDLCK ?? new GUIStyle();
-                styles.LCGFHIJHPLEJMFEAAMLOGEKDKLGPGLCKJHKN = styles.LCGFHIJHPLEJMFEAAMLOGEKDKLGPGLCKJHKN ?? new GUIStyle();
-                styles.MGHDGDOIBIKACABHDJMHENIACBOCIOEAJJJH = styles.MGHDGDOIBIKACABHDJMHENIACBOCIOEAJJJH ?? new GUIStyle();
-                styles.MNIDILAEJNANLBJOKMBBFAPKMBLJPHDOOKHC = styles.MNIDILAEJNANLBJOKMBBFAPKMBLJPHDOOKHC ?? new GUIStyle();
-                styles.FIJCFMEBKKCPHHDEICAFJGNHALMFHHDFMJCF = styles.FIJCFMEBKKCPHHDEICAFJGNHALMFHHDFMJCF ?? new GUIStyle();
-                styles.EFFPDLCPLHCEJBKAEOGCFKCJMEJJCGNOEAJC = styles.EFFPDLCPLHCEJBKAEOGCFKCJMEJJCGNOEAJC ?? new GUIStyle();
-                styles.LMJFOHEICFJKKJDPABNJJMODGIAGGCDCGIDG = styles.LMJFOHEICFJKKJDPABNJJMODGIAGGCDCGIDG ?? new GUIStyle();
-                styles.MENCECOHFEKPKPJCHBPHPLNADBLKDNLOFBMJ = styles.MENCECOHFEKPKPJCHBPHPLNADBLKDNLOFBMJ ?? new GUIStyle();
-                styles.EDPELGLOHBEDHHGMAFPGLEMGKFNEHIMBHLBE = styles.EDPELGLOHBEDHHGMAFPGLEMGKFNEHIMBHLBE ?? new GUIStyle();
-                styles.CDKDJIHGIELEEDGFLEBKFMAICBICIONFMOMH = styles.CDKDJIHGIELEEDGFLEBKFMAICBICIONFMOMH ?? new GUIStyle();
-                styles.GJOPALBNPHOPNFJCBICFHFIBJHAADOBENDJP = styles.GJOPALBNPHOPNFJCBICFHFIBJHAADOBENDJP ?? new GUIStyle();
-                styles.EABGPJDDADACGMHPOGOFNJCDNONPNHNPJIMK = styles.EABGPJDDADACGMHPOGOFNJCDNONPNHNPJIMK ?? new GUIStyle();
+                styles._CFG = styles._CFG ?? new GUIStyle();
+                styles._CFH = styles._CFH ?? new GUIStyle();
+                styles._CFI = styles._CFI ?? new GUIStyle();
+                styles._CFJ = styles._CFJ ?? new GUIStyle();
+                styles._CFK = styles._CFK ?? new GUIStyle();
+                styles._CFL = styles._CFL ?? new GUIStyle();
+                styles._CFM = styles._CFM ?? new GUIStyle();
+                styles._CFN = styles._CFN ?? new GUIStyle();
+                styles._CFO = styles._CFO ?? new GUIStyle();
+                styles._CFP = styles._CFP ?? new GUIStyle();
+                styles._CFQ = styles._CFQ ?? new GUIStyle();
+                styles._CFR = styles._CFR ?? new GUIStyle();
+                styles._CFS = styles._CFS ?? new GUIStyle();
+                styles._CFT = styles._CFT ?? new GUIStyle();
                 styles._AFT = styles._AFT ?? new GUIStyle();
                 styles._AFU = styles._AFU ?? new GUIStyle();
-                styles.KCCBAEPPGOEMGHPDPNEBIICOFIIMDOFPPNPP = styles.KCCBAEPPGOEMGHPDPNEBIICOFIIMDOFPPNPP ?? new GUIStyle();
-                styles.KCCBAEPPGOEMGHPDPNEBIICOFIIMDOFPPNPP.richText = false;
-                styles.KCCBAEPPGOEMGHPDPNEBIICOFIIMDOFPPNPP.normal.background = _bi2.PFGMEJLLJPMAPPHJDBPLAODICICMBLHNKKAB;
-                styles.KCCBAEPPGOEMGHPDPNEBIICOFIIMDOFPPNPP.normal.textColor = Color.black;
-                styles.KCCBAEPPGOEMGHPDPNEBIICOFIIMDOFPPNPP.font = styles._ABV.font;
+                styles._CFU = styles._CFU ?? new GUIStyle();
+                styles._CFU.richText = false;
+                styles._CFU.normal.background = _bi2._CEH;
+                styles._CFU.normal.textColor = Color.black;
+                styles._CFU.font = styles._ABV.font;
                 bool flag7 = flag4;
                 if (flag7)
                 {
-                    styles.KCCBAEPPGOEMGHPDPNEBIICOFIIMDOFPPNPP.fontSize = styles._ABV.fontSize;
+                    styles._CFU.fontSize = styles._ABV.fontSize;
                 }
                 else
                 {
-                    styles.KCCBAEPPGOEMGHPDPNEBIICOFIIMDOFPPNPP.fontSize = 0;
+                    styles._CFU.fontSize = 0;
                 }
                 bool flag8 = _bg8._AEP > 0;
                 if (flag8)
                 {
-                    styles.KCCBAEPPGOEMGHPDPNEBIICOFIIMDOFPPNPP.border = new RectOffset(10, 10, 10, 10);
+                    styles._CFU.border = new RectOffset(10, 10, 10, 10);
                 }
                 else
                 {
-                    styles.KCCBAEPPGOEMGHPDPNEBIICOFIIMDOFPPNPP.border = new RectOffset(10 + (int)((float)_bg8._AEP * 0.5f), 10 + (int)((float)_bg8._AEP * 0.5f), 10 + (int)((float)_bg8._AEP * 0.5f), 10 + (int)((float)_bg8._AEP * 0.5f));
+                    styles._CFU.border = new RectOffset(10 + (int)((float)_bg8._AEP * 0.5f), 10 + (int)((float)_bg8._AEP * 0.5f), 10 + (int)((float)_bg8._AEP * 0.5f), 10 + (int)((float)_bg8._AEP * 0.5f));
                 }
-                styles.KCCBAEPPGOEMGHPDPNEBIICOFIIMDOFPPNPP.overflow = new RectOffset(6, 6, 6, 6);
-                styles.KCCBAEPPGOEMGHPDPNEBIICOFIIMDOFPPNPP.stretchWidth = false;
-                styles.KCCBAEPPGOEMGHPDPNEBIICOFIIMDOFPPNPP.stretchHeight = false;
-                _bi2.ApplyTheme(styles, forText ? _bi2.NEJDBEMCGLKCAHENKLCFDOMOFGNHCBAIIDLF : _bi2.LMHCAPKMBCKPJCOFDJBKMEFJDCENENGPPKKN);
+                styles._CFU.overflow = new RectOffset(6, 6, 6, 6);
+                styles._CFU.stretchWidth = false;
+                styles._CFU.stretchHeight = false;
+                _bi2.ApplyTheme(styles, forText ? _bi2._CEI : _bi2._CEJ);
             }
         }
 
@@ -3078,20 +3075,20 @@ namespace AHO
             bool flag = styles == null || currentTheme == null;
             if (!flag)
             {
-                styles.MNAINPPJCJGPLHBFJICPBAPKHGGPKHFKGHKI.normal.background = _bi2.FlatColorTexture(currentTheme.background);
-                styles.EEHEIDPKDPFECCNEMEAOEDHDMOCMLHIMGBIO.normal.background = _bi2.FlatColorTexture(currentTheme.searchResults);
-                styles.OAHNJENALMPCNGMEAFGPAOPDCFGGJFIMDLCK.normal.background = _bi2.FlatColorTexture(currentTheme.text);
-                styles.LCGFHIJHPLEJMFEAAMLOGEKDKLGPGLCKJHKN.normal.background = _bi2.FlatColorTexture(currentTheme.activeSelection);
-                styles.MGHDGDOIBIKACABHDJMHENIACBOCIOEAJJJH.normal.background = _bi2.FlatColorTexture(currentTheme.passiveSelection);
-                styles.FIJCFMEBKKCPHHDEICAFJGNHALMFHHDFMJCF.normal.background = _bi2.FlatColorTexture(currentTheme.trackChanged);
-                styles.MNIDILAEJNANLBJOKMBBFAPKMBLJPHDOOKHC.normal.background = _bi2.FlatColorTexture(currentTheme.trackSaved);
-                styles.EFFPDLCPLHCEJBKAEOGCFKCJMEJJCGNOEAJC.normal.background = _bi2.FlatColorTexture(currentTheme.trackReverted);
-                styles.LMJFOHEICFJKKJDPABNJJMODGIAGGCDCGIDG.normal.background = _bi2.FlatColorTexture(currentTheme.currentLine);
-                styles.MENCECOHFEKPKPJCHBPHPLNADBLKDNLOFBMJ.normal.background = _bi2.FlatColorTexture(currentTheme.currentLineInactive);
-                styles.EDPELGLOHBEDHHGMAFPGLEMGKFNEHIMBHLBE.normal.background = _bi2.FlatColorTexture(currentTheme.referenceHighlight);
-                styles.CDKDJIHGIELEEDGFLEBKFMAICBICIONFMOMH.normal.background = _bi2.FlatColorTexture(currentTheme.referenceModifyHighlight);
-                styles.GJOPALBNPHOPNFJCBICFHFIBJHAADOBENDJP.normal.background = _bi2.FlatColorTexture(currentTheme.tooltipBackground);
-                styles.EABGPJDDADACGMHPOGOFNJCDNONPNHNPJIMK.normal.background = _bi2.FlatColorTexture(currentTheme.tooltipFrame);
+                styles._CEK.normal.background = _bi2.FlatColorTexture(currentTheme.background);
+                styles._CEL.normal.background = _bi2.FlatColorTexture(currentTheme.searchResults);
+                styles._CFI.normal.background = _bi2.FlatColorTexture(currentTheme.text);
+                styles._CFJ.normal.background = _bi2.FlatColorTexture(currentTheme.activeSelection);
+                styles._CFK.normal.background = _bi2.FlatColorTexture(currentTheme.passiveSelection);
+                styles._CFM.normal.background = _bi2.FlatColorTexture(currentTheme.trackChanged);
+                styles._CFL.normal.background = _bi2.FlatColorTexture(currentTheme.trackSaved);
+                styles._CFN.normal.background = _bi2.FlatColorTexture(currentTheme.trackReverted);
+                styles._CFO.normal.background = _bi2.FlatColorTexture(currentTheme.currentLine);
+                styles._CFP.normal.background = _bi2.FlatColorTexture(currentTheme.currentLineInactive);
+                styles._CFQ.normal.background = _bi2.FlatColorTexture(currentTheme.referenceHighlight);
+                styles._CFR.normal.background = _bi2.FlatColorTexture(currentTheme.referenceModifyHighlight);
+                styles._CFS.normal.background = _bi2.FlatColorTexture(currentTheme.tooltipBackground);
+                styles._CFT.normal.background = _bi2.FlatColorTexture(currentTheme.tooltipFrame);
                 styles._AFT.normal.background = _bi2.FlatColorTexture((currentTheme.listPopupFrame == Color.clear) ? currentTheme.fold : currentTheme.listPopupFrame);
                 styles._AFU.normal.background = _bi2.FlatColorTexture(currentTheme.listPopupBackground);
                 styles._ABV.normal.textColor = currentTheme.text;
@@ -3102,74 +3099,74 @@ namespace AHO
                 styles._ACG.normal.textColor = currentTheme.operators;
                 styles._ACH.normal.textColor = ((currentTheme.punctuators.a > 0f) ? currentTheme.punctuators : currentTheme.text);
                 styles._ACN.normal.textColor = currentTheme.referenceTypes;
-                styles.ABFOGCOCKGPDGCECELHDDPLJPLOMFINBMDFB.normal.textColor = currentTheme.valueTypes;
-                styles.FEPCGBBLADFJIOAOEGONMDEELEFFPMAGDNLD.normal.textColor = currentTheme.interfaceTypes;
-                styles.AFJAELGAFCMBADAHILPMPIMHNBLJOHPBDMFL.normal.textColor = currentTheme.enumTypes;
-                styles.NKFJNHICAHKHIKAHLOCGMGMOPDGCGCHDBEKC.normal.textColor = currentTheme.delegateTypes;
+                styles._CEO.normal.textColor = currentTheme.valueTypes;
+                styles._CEP.normal.textColor = currentTheme.interfaceTypes;
+                styles._CEQ.normal.textColor = currentTheme.enumTypes;
+                styles._CER.normal.textColor = currentTheme.delegateTypes;
                 styles._ACI.normal.textColor = ((currentTheme.builtInTypes.a > 0f) ? currentTheme.builtInTypes : currentTheme.referenceTypes);
                 styles._ACJ.normal.textColor = ((currentTheme.builtInTypes.a > 0f) ? currentTheme.builtInTypes : currentTheme.valueTypes);
-                styles.MBNAKPHMLKEJFEHCAKCELDLDCKFHLGHAFPCM.normal.textColor = currentTheme.namespaces;
-                styles.IEHHNFHGANAAGPCGFGLGFPPIEACCGPNBCGHP.normal.textColor = currentTheme.methods;
-                styles.IBECDLBCDCMKNOFEGCLBDBHJLCOPJIIDOENE.normal.textColor = currentTheme.fields;
-                styles.LKPEKDFLBIFFAFLONCNILICBNHJMBOHPDHOK.normal.textColor = currentTheme.properties;
-                styles.CIAPHJPLJPJFPFHKIGOLEPILKEDJCEBKOGLI.normal.textColor = currentTheme.events;
-                styles.PBOJOMJKIBIKNDAOLEDPDHJIAOCOCDFBCPMG.normal.textColor = currentTheme.parameters;
-                styles.FFKKHGMKNOAEDPHBACLDPIHIAMCLDLKCHMDP.normal.textColor = currentTheme.variables;
-                styles.JMJPFJGGIEEPNKMMFKFKBMEALOBACMLKKGDD.normal.textColor = currentTheme.typeParameters;
-                styles.IDEBBOAIFDBCFICJJCOCOIBKDOPNMGADPJBI.normal.textColor = ((currentTheme.enumMembers.a != 0f) ? currentTheme.enumMembers : currentTheme.text);
+                styles._CES.normal.textColor = currentTheme.namespaces;
+                styles._CET.normal.textColor = currentTheme.methods;
+                styles._CEU.normal.textColor = currentTheme.fields;
+                styles._CEV.normal.textColor = currentTheme.properties;
+                styles._CEW.normal.textColor = currentTheme.events;
+                styles._CEX.normal.textColor = currentTheme.parameters;
+                styles._CEY.normal.textColor = currentTheme.variables;
+                styles._CEZ.normal.textColor = currentTheme.typeParameters;
+                styles._CFA.normal.textColor = ((currentTheme.enumMembers.a != 0f) ? currentTheme.enumMembers : currentTheme.text);
                 styles._ACC.normal.textColor = currentTheme.preprocessor;
                 styles._ACD.normal.textColor = currentTheme.defineSymbols;
                 styles._ACA.normal.textColor = currentTheme.inactiveCode;
                 styles._ACB.normal.textColor = currentTheme.comments;
-                styles.BBOLFNEKGDIMCIMDGFBDONKOHIMAFOOONJLI.normal.textColor = currentTheme.xmlDocs;
-                styles.AIIPFPOMAMLAHOHOBJPDNLMGIIIEFJAIEALI.normal.textColor = currentTheme.xmlDocsTags;
-                styles.OFHACCJKFEDEPPHBLPBAGNDAFFAJECCJDKBK.normal.textColor = (_bg8._BAF ? currentTheme.text : currentTheme.tooltipText);
-                styles.MLINBOOFJJFOOJDFIODGPBCGFAFGFGHIINAK.normal.textColor = currentTheme.hyperlinks;
-                styles.LPMHKIAKCIJCOALOPOKIGFPOBAHPLGHMDGJE.normal.textColor = currentTheme.hyperlinks;
-                styles.MLINBOOFJJFOOJDFIODGPBCGFAFGFGHIINAK.normal.background = (styles.LPMHKIAKCIJCOALOPOKIGFPOBAHPLGHMDGJE.normal.background = _bi2.UnderlineTexture(currentTheme.hyperlinks, (int)styles.LPMHKIAKCIJCOALOPOKIGFPOBAHPLGHMDGJE.lineHeight));
-                styles.FKPDLHMDAGCDBKHOJAABIDBDBPCOGPOPIOJC.normal.background = _bi2.FlatColorTexture(currentTheme.lineNumbersBackground);
-                styles.IICGPMAMBHPFKAIGDAKKDFCDPAKDCNNGOAOF.normal.background = _bi2.FlatColorTexture(currentTheme.fold);
-                styles.FKNGDNMIFFNDKLBIMPEOABJDFILGGHFFEKNM.normal.textColor = currentTheme.lineNumbers;
-                styles.FKNGDNMIFFNDKLBIMPEOABJDFILGGHFFEKNM.hover.textColor = currentTheme.lineNumbersHighlight;
-                styles.FKNGDNMIFFNDKLBIMPEOABJDFILGGHFFEKNM.hover.background = styles.FKPDLHMDAGCDBKHOJAABIDBDBPCOGPOPIOJC.normal.background;
-                styles.FKNGDNMIFFNDKLBIMPEOABJDFILGGHFFEKNM.alignment = 2;
+                styles._CFB.normal.textColor = currentTheme.xmlDocs;
+                styles._CFC.normal.textColor = currentTheme.xmlDocsTags;
+                styles._CFF.normal.textColor = (_bg8._BAF ? currentTheme.text : currentTheme.tooltipText);
+                styles._CEM.normal.textColor = currentTheme.hyperlinks;
+                styles._CEN.normal.textColor = currentTheme.hyperlinks;
+                styles._CEM.normal.background = (styles._CEN.normal.background = _bi2.UnderlineTexture(currentTheme.hyperlinks, (int)styles._CEN.lineHeight));
+                styles._CFG.normal.background = _bi2.FlatColorTexture(currentTheme.lineNumbersBackground);
+                styles._CFH.normal.background = _bi2.FlatColorTexture(currentTheme.fold);
+                styles._CFD.normal.textColor = currentTheme.lineNumbers;
+                styles._CFD.hover.textColor = currentTheme.lineNumbersHighlight;
+                styles._CFD.hover.background = styles._CFG.normal.background;
+                styles._CFD.alignment = 2;
                 bool flag2 = _bi2.GetDynamicFontSize(styles._ABV.font) != 0;
-                int num = ((_bi2.LJKHDAPCHJBAPKJLHCFIANJIODFKNMHPAMOC == "Fonts/DejaVu Sans Mono.ttf") ? 3 : 2);
+                int num = ((_bi2._CCJ == "Fonts/DejaVu Sans Mono.ttf") ? 3 : 2);
                 styles._ACB.fontStyle = (flag2 ? (currentTheme.commentsStyle & num) : 0);
                 styles._ACE.fontStyle = (flag2 ? (currentTheme.stringsStyle & num) : 0);
                 styles._ACK.fontStyle = (flag2 ? (currentTheme.keywordsStyle & num) : 0);
                 styles._ACF.fontStyle = (flag2 ? (currentTheme.constantsStyle & num) : 0);
                 styles._ACN.fontStyle = (flag2 ? (currentTheme.typesStyle & num) : 0);
-                styles.ABFOGCOCKGPDGCECELHDDPLJPLOMFINBMDFB.fontStyle = (flag2 ? (currentTheme.typesStyle & num) : 0);
-                styles.FEPCGBBLADFJIOAOEGONMDEELEFFPMAGDNLD.fontStyle = (flag2 ? (currentTheme.typesStyle & num) : 0);
-                styles.AFJAELGAFCMBADAHILPMPIMHNBLJOHPBDMFL.fontStyle = (flag2 ? (currentTheme.typesStyle & num) : 0);
-                styles.NKFJNHICAHKHIKAHLOCGMGMOPDGCGCHDBEKC.fontStyle = (flag2 ? (currentTheme.typesStyle & num) : 0);
+                styles._CEO.fontStyle = (flag2 ? (currentTheme.typesStyle & num) : 0);
+                styles._CEP.fontStyle = (flag2 ? (currentTheme.typesStyle & num) : 0);
+                styles._CEQ.fontStyle = (flag2 ? (currentTheme.typesStyle & num) : 0);
+                styles._CER.fontStyle = (flag2 ? (currentTheme.typesStyle & num) : 0);
                 styles._ACI.fontStyle = (flag2 ? (((currentTheme.builtInTypes == Color.clear) ? currentTheme.typesStyle : currentTheme.keywordsStyle) & num) : 0);
                 styles._ACJ.fontStyle = (flag2 ? (((currentTheme.builtInTypes == Color.clear) ? currentTheme.typesStyle : currentTheme.keywordsStyle) & num) : 0);
-                styles.MBNAKPHMLKEJFEHCAKCELDLDCKFHLGHAFPCM.fontStyle = (flag2 ? (currentTheme.namespacesStyle & num) : 0);
-                styles.IEHHNFHGANAAGPCGFGLGFPPIEACCGPNBCGHP.fontStyle = (flag2 ? (currentTheme.methodsStyle & num) : 0);
-                styles.IBECDLBCDCMKNOFEGCLBDBHJLCOPJIIDOENE.fontStyle = (flag2 ? (currentTheme.fieldsStyle & num) : 0);
-                styles.LKPEKDFLBIFFAFLONCNILICBNHJMBOHPDHOK.fontStyle = (flag2 ? (currentTheme.propertiesStyle & num) : 0);
-                styles.CIAPHJPLJPJFPFHKIGOLEPILKEDJCEBKOGLI.fontStyle = (flag2 ? (currentTheme.eventsStyle & num) : 0);
-                styles.MLINBOOFJJFOOJDFIODGPBCGFAFGFGHIINAK.fontStyle = (flag2 ? (currentTheme.hyperlinksStyle & num) : 0);
-                styles.LPMHKIAKCIJCOALOPOKIGFPOBAHPLGHMDGJE.fontStyle = (flag2 ? (currentTheme.hyperlinksStyle & num) : 0);
+                styles._CES.fontStyle = (flag2 ? (currentTheme.namespacesStyle & num) : 0);
+                styles._CET.fontStyle = (flag2 ? (currentTheme.methodsStyle & num) : 0);
+                styles._CEU.fontStyle = (flag2 ? (currentTheme.fieldsStyle & num) : 0);
+                styles._CEV.fontStyle = (flag2 ? (currentTheme.propertiesStyle & num) : 0);
+                styles._CEW.fontStyle = (flag2 ? (currentTheme.eventsStyle & num) : 0);
+                styles._CEM.fontStyle = (flag2 ? (currentTheme.hyperlinksStyle & num) : 0);
+                styles._CEN.fontStyle = (flag2 ? (currentTheme.hyperlinksStyle & num) : 0);
                 styles._ACC.fontStyle = (flag2 ? (currentTheme.preprocessorStyle & num) : 0);
                 styles._ACD.fontStyle = (flag2 ? (currentTheme.preprocessorStyle & num) : 0);
                 styles._ACA.fontStyle = (flag2 ? (currentTheme.inactiveCodeStyle & num) : 0);
-                styles.PBOJOMJKIBIKNDAOLEDPDHJIAOCOCDFBCPMG.fontStyle = (flag2 ? (currentTheme.parametersStyle & num) : 0);
-                styles.FFKKHGMKNOAEDPHBACLDPIHIAMCLDLKCHMDP.fontStyle = (flag2 ? (currentTheme.variablesStyle & num) : 0);
-                styles.JMJPFJGGIEEPNKMMFKFKBMEALOBACMLKKGDD.fontStyle = (flag2 ? (currentTheme.typeParametersStyle & num) : 0);
-                styles.IDEBBOAIFDBCFICJJCOCOIBKDOPNMGADPJBI.fontStyle = (flag2 ? (currentTheme.enumMembersStyle & num) : 0);
+                styles._CEX.fontStyle = (flag2 ? (currentTheme.parametersStyle & num) : 0);
+                styles._CEY.fontStyle = (flag2 ? (currentTheme.variablesStyle & num) : 0);
+                styles._CEZ.fontStyle = (flag2 ? (currentTheme.typeParametersStyle & num) : 0);
+                styles._CFA.fontStyle = (flag2 ? (currentTheme.enumMembersStyle & num) : 0);
             }
         }
 
         // Token: 0x0600029E RID: 670 RVA: 0x00028D18 File Offset: 0x00026F18
         internal static Texture2D FlatColorTexture(Color color)
         {
-            Texture2D texture2D = new Texture2D(1, 1, 4, false, false);
+            Texture2D texture2D = new Texture2D(1, 1, (TextureFormat)4, false, false);
             texture2D.SetPixels(new Color[] { color });
             texture2D.Apply();
-            texture2D.hideFlags = 61;
+            texture2D.hideFlags = (HideFlags)61;
             return texture2D;
         }
 
@@ -3182,14 +3179,14 @@ namespace AHO
         // Token: 0x060002A0 RID: 672 RVA: 0x00028D7C File Offset: 0x00026F7C
         private static Texture2D CreateUnderlineTexture(Color color, int lineHeight, Color bgColor)
         {
-            Texture2D texture2D = new Texture2D(1, lineHeight, 4, false, true);
+            Texture2D texture2D = new Texture2D(1, lineHeight, (TextureFormat)4, false, true);
             texture2D.SetPixel(0, 0, color);
             for (int i = 1; i < lineHeight; i++)
             {
                 texture2D.SetPixel(0, i, new Color32(0, 0, 0, 0));
             }
             texture2D.Apply();
-            texture2D.hideFlags = 61;
+            texture2D.hideFlags = (HideFlags)61;
             return texture2D;
         }
 
@@ -3211,21 +3208,21 @@ namespace AHO
                 }
                 else
                 {
-                    bool flag3 = evt.keyCode >= 323 && evt.keyCode <= 329;
+                    bool flag3 = (int)evt.keyCode >= 323 && (int)evt.keyCode <= 329;
                     if (flag3)
                     {
                         flag2 = false;
                     }
                     else
                     {
-                        bool flag4 = evt.keyCode >= 330;
+                        bool flag4 = (int)evt.keyCode >= 330;
                         if (flag4)
                         {
                             flag2 = false;
                         }
                         else
                         {
-                            bool flag5 = evt.keyCode >= 282 && evt.keyCode <= 296;
+                            bool flag5 = (int)evt.keyCode >= 282 && (int)evt.keyCode <= 296;
                             if (flag5)
                             {
                                 flag2 = false;
@@ -3234,27 +3231,27 @@ namespace AHO
                             {
                                 KeyCode keyCode = evt.keyCode;
                                 KeyCode keyCode2 = keyCode;
-                                if (keyCode2 <= 12)
+                                if ((int)keyCode2 <= 12)
                                 {
                                     if (keyCode2 == null)
                                     {
                                         return evt.character > '\0';
                                     }
-                                    if (keyCode2 != 8 && keyCode2 != 12)
+                                    if ((int)keyCode2 != 8 && (int)keyCode2 != 12)
                                     {
                                         goto IL_01DC;
                                     }
                                 }
-                                else if (keyCode2 <= 27)
+                                else if ((int)keyCode2 <= 27)
                                 {
-                                    if (keyCode2 != 19 && keyCode2 != 27)
+                                    if ((int)keyCode2 != 19 && (int)keyCode2 != 27)
                                     {
                                         goto IL_01DC;
                                     }
                                 }
-                                else if (keyCode2 != 127)
+                                else if ((int)keyCode2 != 127)
                                 {
-                                    switch (keyCode2)
+                                    switch ((int)keyCode2)
                                     {
                                         case 273:
                                         case 274:
@@ -3323,7 +3320,7 @@ namespace AHO
         // Token: 0x060002A2 RID: 674 RVA: 0x00028FCC File Offset: 0x000271CC
         private void UpdateMatchingBraces()
         {
-            this.DBCDHOGMLKDLIIGDJKGEMBKDOKBFHBEPOACH = (this.AINAPHEFHKPMIMHDICFLJBJPOPICCAJNCCAL = default(TextPosition));
+            this._CFV = (this._CFW = default(TextPosition));
             int num;
             int num2;
             bool flag;
@@ -3364,8 +3361,8 @@ namespace AHO
                             }
                         }
                     }
-                    this.DBCDHOGMLKDLIIGDJKGEMBKDOKBFHBEPOACH = this._ABQ.GetOpeningBraceLeftOf(num3, num2, -1);
-                    this.AINAPHEFHKPMIMHDICFLJBJPOPICCAJNCCAL = this._ABQ.GetClosingBraceRightOf(num, num2, -1);
+                    this._CFV = this._ABQ.GetOpeningBraceLeftOf(num3, num2, -1);
+                    this._CFW = this._ABQ.GetClosingBraceRightOf(num, num2, -1);
                 }
             }
         }
@@ -3373,50 +3370,50 @@ namespace AHO
         // Token: 0x060002A3 RID: 675 RVA: 0x00029224 File Offset: 0x00027424
         private List<int> GetSoftLineBreaks(int line)
         {
-            bool flag = !this.BOPCDIIIAACDAILGPOFHGPKBBOLAIFBDFADO;
+            bool flag = !this._CCH;
             List<int> list;
             if (flag)
             {
-                list = _bi2.BJBOLEFDMGLIONMHPMDJCJEKHJKIKHJHFGDC;
+                list = _bi2._CFX;
             }
             else
             {
-                bool flag2 = this.LOMAMECAAIALIGHCOLCOOGEHJBAMPBLPEMKH == null;
+                bool flag2 = this._CCS == null;
                 if (flag2)
                 {
-                    this.LOMAMECAAIALIGHCOLCOOGEHJBAMPBLPEMKH = new List<List<int>>(this._ABQ.FLOg.Count);
+                    this._CCS = new List<List<int>>(this._ABQ.FLOg.Count);
                 }
-                bool flag3 = line < this.LOMAMECAAIALIGHCOLCOOGEHJBAMPBLPEMKH.Count && this.LOMAMECAAIALIGHCOLCOOGEHJBAMPBLPEMKH[line] != null;
+                bool flag3 = line < this._CCS.Count && this._CCS[line] != null;
                 if (flag3)
                 {
-                    list = this.LOMAMECAAIALIGHCOLCOOGEHJBAMPBLPEMKH[line];
+                    list = this._CCS[line];
                 }
                 else
                 {
-                    bool flag4 = line >= this.LOMAMECAAIALIGHCOLCOOGEHJBAMPBLPEMKH.Count;
+                    bool flag4 = line >= this._CCS.Count;
                     if (flag4)
                     {
-                        bool flag5 = this.LOMAMECAAIALIGHCOLCOOGEHJBAMPBLPEMKH.Capacity < this._ABQ.FLOg.Count;
+                        bool flag5 = this._CCS.Capacity < this._ABQ.FLOg.Count;
                         if (flag5)
                         {
-                            this.LOMAMECAAIALIGHCOLCOOGEHJBAMPBLPEMKH.Capacity = this._ABQ.FLOg.Count;
+                            this._CCS.Capacity = this._ABQ.FLOg.Count;
                         }
-                        for (int i = this.LOMAMECAAIALIGHCOLCOOGEHJBAMPBLPEMKH.Count; i < this._ABQ.FLOg.Count; i++)
+                        for (int i = this._CCS.Count; i < this._ABQ.FLOg.Count; i++)
                         {
-                            this.LOMAMECAAIALIGHCOLCOOGEHJBAMPBLPEMKH.Add(null);
+                            this._CCS.Add(null);
                         }
                     }
                     bool flag6 = this._AEY().x == 0f || this._AEY().x * 2f > this._ALM.width;
                     if (flag6)
                     {
-                        list = _bi2.BJBOLEFDMGLIONMHPMDJCJEKHJKIKHJHFGDC;
+                        list = _bi2._CFX;
                     }
                     else
                     {
                         bool flag7 = line >= this._ABQ._AQQ.Length;
                         if (flag7)
                         {
-                            list = _bi2.BJBOLEFDMGLIONMHPMDJCJEKHJKIKHJHFGDC;
+                            list = _bi2._CFX;
                         }
                         else
                         {
@@ -3424,14 +3421,14 @@ namespace AHO
                             bool flag8 = _AUB.EOIA == null;
                             if (flag8)
                             {
-                                list = _bi2.BJBOLEFDMGLIONMHPMDJCJEKHJKIKHJHFGDC;
+                                list = _bi2._CFX;
                             }
                             else
                             {
-                                List<int> list2 = (this.LOMAMECAAIALIGHCOLCOOGEHJBAMPBLPEMKH[line] = _bi2.BJBOLEFDMGLIONMHPMDJCJEKHJKIKHJHFGDC);
+                                List<int> list2 = (this._CCS[line] = _bi2._CFX);
                                 float num = this._ALM.width;
                                 num = ((num < 8f * this._AEY().x) ? (8f * this._AEY().x) : num);
-                                this.BBNCFBJBOKMILIDIMJKJKEHCDAFMDFNDNGGI = false;
+                                this._CFY = false;
                                 int num2 = 0;
                                 float num3 = 0f;
                                 foreach (SyntaxToken syntaxToken in _AUB.EOIA)
@@ -3455,10 +3452,10 @@ namespace AHO
                                                 }
                                                 else
                                                 {
-                                                    bool flag13 = list2 == _bi2.BJBOLEFDMGLIONMHPMDJCJEKHJKIKHJHFGDC;
+                                                    bool flag13 = list2 == _bi2._CFX;
                                                     if (flag13)
                                                     {
-                                                        list2 = (this.LOMAMECAAIALIGHCOLCOOGEHJBAMPBLPEMKH[line] = new List<int>());
+                                                        list2 = (this._CCS[line] = new List<int>());
                                                     }
                                                     bool flag14 = num3 > 0f;
                                                     if (flag14)
@@ -3499,10 +3496,10 @@ namespace AHO
                                                 bool flag17 = num3 >= num;
                                                 if (flag17)
                                                 {
-                                                    bool flag18 = list2 == _bi2.BJBOLEFDMGLIONMHPMDJCJEKHJKIKHJHFGDC;
+                                                    bool flag18 = list2 == _bi2._CFX;
                                                     if (flag18)
                                                     {
-                                                        list2 = (this.LOMAMECAAIALIGHCOLCOOGEHJBAMPBLPEMKH[line] = new List<int>());
+                                                        list2 = (this._CCS[line] = new List<int>());
                                                     }
                                                     bool flag19 = num6 >= num5;
                                                     if (flag19)
@@ -3531,20 +3528,20 @@ namespace AHO
                                         }
                                     }
                                 }
-                                bool flag21 = this.JKLCMHOFNIJEKGHFAFDFNEIMANIEOAIMBKPC != null && this.JKLCMHOFNIJEKGHFAFDFNEIMANIEOAIMBKPC.Count > line;
+                                bool flag21 = this._CCG != null && this._CCG.Count > line;
                                 if (flag21)
                                 {
-                                    float num7 = ((line > 0) ? this.JKLCMHOFNIJEKGHFAFDFNEIMANIEOAIMBKPC[line - 1] : 0f);
+                                    float num7 = ((line > 0) ? this._CCG[line - 1] : 0f);
                                     float num8 = (this.IsLineVisible(line) ? (num7 + this._AEY().y * (float)(list2.Count + 1)) : num7);
-                                    bool flag22 = num8 != this.JKLCMHOFNIJEKGHFAFDFNEIMANIEOAIMBKPC[line];
+                                    bool flag22 = num8 != this._CCG[line];
                                     if (flag22)
                                     {
-                                        num7 = num8 - this.JKLCMHOFNIJEKGHFAFDFNEIMANIEOAIMBKPC[line];
-                                        for (int l = line; l < this.JKLCMHOFNIJEKGHFAFDFNEIMANIEOAIMBKPC.Count; l++)
+                                        num7 = num8 - this._CCG[line];
+                                        for (int l = line; l < this._CCG.Count; l++)
                                         {
-                                            List<float> jklcmhofnijekghfafdfneimanieoaimbkpc = this.JKLCMHOFNIJEKGHFAFDFNEIMANIEOAIMBKPC;
+                                            List<float> _CFZ = this._CCG;
                                             int num9 = l;
-                                            jklcmhofnijekghfafdfneimanieoaimbkpc[num9] += num7;
+                                            _CFZ[num9] += num7;
                                         }
                                     }
                                 }
@@ -3565,7 +3562,7 @@ namespace AHO
             GUIStyle guistyle2;
             if (flag)
             {
-                guistyle = ((token.text == "value") ? this._ABQ._ABT.PBOJOMJKIBIKNDAOLEDPDHJIAOCOCDFBCPMG : this._ABQ._ABT._ACK);
+                guistyle = ((token.text == "value") ? this._ABQ._ABT._CEX : this._ABQ._ABT._ACK);
                 bool flag2 = token.text == "var" && token.OOME != null && (token.OOME._AAB() == null || token.OOME._AAB()._AT == SymbolKind.Error);
                 if (flag2)
                 {
@@ -3604,22 +3601,22 @@ namespace AHO
                                 switch (_AMI._AAB()._AT)
                                 {
                                     case SymbolKind.Namespace:
-                                        guistyle = this._ABQ._ABT.MBNAKPHMLKEJFEHCAKCELDLDCKFHLGHAFPCM;
+                                        guistyle = this._ABQ._ABT._CES;
                                         break;
                                     case SymbolKind.Interface:
-                                        guistyle = this._ABQ._ABT.FEPCGBBLADFJIOAOEGONMDEELEFFPMAGDNLD;
+                                        guistyle = this._ABQ._ABT._CEP;
                                         break;
                                     case SymbolKind.Enum:
-                                        guistyle = this._ABQ._ABT.AFJAELGAFCMBADAHILPMPIMHNBLJOHPBDMFL;
+                                        guistyle = this._ABQ._ABT._CEQ;
                                         break;
                                     case SymbolKind.Struct:
-                                        guistyle = this._ABQ._ABT.ABFOGCOCKGPDGCECELHDDPLJPLOMFINBMDFB;
+                                        guistyle = this._ABQ._ABT._CEO;
                                         break;
                                     case SymbolKind.Class:
                                         guistyle = this._ABQ._ABT._ACN;
                                         break;
                                     case SymbolKind.Delegate:
-                                        guistyle = this._ABQ._ABT.NKFJNHICAHKHIKAHLOCGMGMOPDGCGCHDBEKC;
+                                        guistyle = this._ABQ._ABT._CER;
                                         break;
                                     case SymbolKind.Field:
                                     case SymbolKind.ConstantField:
@@ -3627,7 +3624,7 @@ namespace AHO
                                             bool flag9 = _AMI._AAB()._AO != null && _AMI._AAB()._AO._AT == SymbolKind.Enum;
                                             if (flag9)
                                             {
-                                                guistyle = this._ABQ._ABT.IDEBBOAIFDBCFICJJCOCOIBKDOPNMGADPJBI;
+                                                guistyle = this._ABQ._ABT._CFA;
                                             }
                                             else
                                             {
@@ -3635,11 +3632,11 @@ namespace AHO
                                                 bool flag10 = _AAH != null && _AAH._AT == SymbolKind.Delegate;
                                                 if (flag10)
                                                 {
-                                                    guistyle = this._ABQ._ABT.CIAPHJPLJPJFPFHKIGOLEPILKEDJCEBKOGLI;
+                                                    guistyle = this._ABQ._ABT._CEW;
                                                 }
                                                 else
                                                 {
-                                                    guistyle = this._ABQ._ABT.IBECDLBCDCMKNOFEGCLBDBHJLCOPJIIDOENE;
+                                                    guistyle = this._ABQ._ABT._CEU;
                                                 }
                                             }
                                             break;
@@ -3648,31 +3645,31 @@ namespace AHO
                                     case SymbolKind.Variable:
                                     case SymbolKind.ForEachVariable:
                                     case SymbolKind.FromClauseVariable:
-                                        guistyle = this._ABQ._ABT.FFKKHGMKNOAEDPHBACLDPIHIAMCLDLKCHMDP;
+                                        guistyle = this._ABQ._ABT._CEY;
                                         break;
                                     case SymbolKind.EnumMember:
                                     case SymbolKind.Label:
-                                        guistyle = this._ABQ._ABT.IDEBBOAIFDBCFICJJCOCOIBKDOPNMGADPJBI;
+                                        guistyle = this._ABQ._ABT._CFA;
                                         break;
                                     case SymbolKind.Property:
-                                        guistyle = this._ABQ._ABT.LKPEKDFLBIFFAFLONCNILICBNHJMBOHPDHOK;
+                                        guistyle = this._ABQ._ABT._CEV;
                                         break;
                                     case SymbolKind.Event:
-                                        guistyle = this._ABQ._ABT.CIAPHJPLJPJFPFHKIGOLEPILKEDJCEBKOGLI;
+                                        guistyle = this._ABQ._ABT._CEW;
                                         break;
                                     case SymbolKind.Method:
                                     case SymbolKind.MethodGroup:
                                     case SymbolKind.Constructor:
                                     case SymbolKind.Destructor:
                                     case SymbolKind.Accessor:
-                                        guistyle = this._ABQ._ABT.IEHHNFHGANAAGPCGFGLGFPPIEACCGPNBCGHP;
+                                        guistyle = this._ABQ._ABT._CET;
                                         break;
                                     case SymbolKind.Parameter:
                                     case SymbolKind.CatchParameter:
-                                        guistyle = this._ABQ._ABT.PBOJOMJKIBIKNDAOLEDPDHJIAOCOCDFBCPMG;
+                                        guistyle = this._ABQ._ABT._CEX;
                                         break;
                                     case SymbolKind.TypeParameter:
-                                        guistyle = this._ABQ._ABT.JMJPFJGGIEEPNKMMFKFKBMEALOBACMLKKGDD;
+                                        guistyle = this._ABQ._ABT._CEZ;
                                         break;
                                     case SymbolKind.Null:
                                         guistyle = this._ABQ._ABT._ACL;
@@ -3694,10 +3691,10 @@ namespace AHO
             GUI.color = color;
             rect.yMin = rect.yMax - 2f;
             rect.yMax += 1f;
-            bool flag = _bi2.NLKLFFEHGAOCPBJMKILBAJBPHJMHBJEKHOFA != null;
+            bool flag = _bi2._CEG != null;
             if (flag)
             {
-                GUI.DrawTextureWithTexCoords(rect, _bi2.NLKLFFEHGAOCPBJMKILBAJBPHJMHBJEKHOFA, new Rect(rect.xMin / 6f, 0f, rect.width / 6f, 1f));
+                GUI.DrawTextureWithTexCoords(rect, _bi2._CEG, new Rect(rect.xMin / 6f, 0f, rect.width / 6f, 1f));
             }
             GUI.color = color2;
         }
@@ -3708,10 +3705,10 @@ namespace AHO
             bool flag = style == null;
             if (flag)
             {
-                style = (this.GJDLGEEKCBIHCFECOIOFLIFNOCPOAPGNHJMK() ? this._ABT.LCGFHIJHPLEJMFEAAMLOGEKDKLGPGLCKJHKN : this._ABT.MGHDGDOIBIKACABHDJMHENIACBOCIOEAJJJH);
+                style = (this._CDN() ? this._ABT._CFJ : this._ABT._CFK);
             }
-            bool flag2 = !this.PNBFHJBPGLJPBOMMOHFIHHJONMJLBKBGFFLL && style == this._ABT.LCGFHIJHPLEJMFEAAMLOGEKDKLGPGLCKJHKN;
-            bool flag3 = !this.BOPCDIIIAACDAILGPOFHGPKBBOLAIFBDFADO;
+            bool flag2 = !this._CDL && style == this._ABT._CFJ;
+            bool flag3 = !this._CCH;
             if (flag3)
             {
                 float lineOffset = this.GetLineOffset(line);
@@ -3721,13 +3718,12 @@ namespace AHO
                 {
                     num += this._AEY().x;
                 }
-                Rect rect;
-                rect..ctor(charXOffset + this.JPPFMECFJCDOMNMEIPPNOEIICFJPJCAFJLMK, lineOffset, num - charXOffset, this._AEY().y);
+                Rect rect = new Rect(charXOffset + this._CGA, lineOffset, num - charXOffset, this._AEY().y);
                 GUI.Label(rect, GUIContent.none, style);
                 bool flag4 = flag2;
                 if (flag4)
                 {
-                    EditorGUIUtility.AddCursorRect(rect, 8);
+                    EditorGUIUtility.AddCursorRect(rect, (MouseCursor)8);
                 }
             }
             else
@@ -3745,13 +3741,12 @@ namespace AHO
                 if (flag6)
                 {
                     float charXOffset2 = this.GetCharXOffset(startCharIndex, line, num4);
-                    Rect rect2;
-                    rect2..ctor(charXOffset2 + this.JPPFMECFJCDOMNMEIPPNOEIICFJPJCAFJLMK, num2 + (float)num3 * this._AEY().y, this._AEY().x, this._AEY().y);
+                    Rect rect2 = new Rect(charXOffset2 + this._CGA, num2 + (float)num3 * this._AEY().y, this._AEY().x, this._AEY().y);
                     GUI.Label(rect2, GUIContent.none, style);
                     bool flag7 = flag2;
                     if (flag7)
                     {
-                        EditorGUIUtility.AddCursorRect(rect2, 8);
+                        EditorGUIUtility.AddCursorRect(rect2, (MouseCursor)8);
                     }
                 }
                 else
@@ -3764,13 +3759,12 @@ namespace AHO
                         int num6 = Math.Min(numChars, num5 - startCharIndex);
                         float charXOffset3 = this.GetCharXOffset(num4 + startCharIndex, line, num4);
                         float num7 = this.GetCharXOffset(num4 + startCharIndex + num6, line, num4) + ((numChars == num6 && newLine) ? this._AEY().x : 0f);
-                        Rect rect3;
-                        rect3..ctor(charXOffset3 + this.JPPFMECFJCDOMNMEIPPNOEIICFJPJCAFJLMK, num2, num7 - charXOffset3, this._AEY().y);
+                        Rect rect3 = new Rect(charXOffset3 + this._CGA, num2, num7 - charXOffset3, this._AEY().y);
                         GUI.Label(rect3, GUIContent.none, style);
                         bool flag8 = flag2;
                         if (flag8)
                         {
-                            EditorGUIUtility.AddCursorRect(rect3, 8);
+                            EditorGUIUtility.AddCursorRect(rect3, (MouseCursor)8);
                         }
                         numChars -= num6;
                         num4 += num5;
@@ -3785,7 +3779,7 @@ namespace AHO
         // Token: 0x060002A7 RID: 679 RVA: 0x00029F40 File Offset: 0x00028140
         public GUIStyle GetReferenceHighlightStyle(SyntaxToken token)
         {
-            GUIStyle guistyle = this._ABT.EDPELGLOHBEDHHGMAFPGLEMGKFNEHIMBHLBE;
+            GUIStyle guistyle = this._ABT._CFQ;
             bool flag = !_bg8._BAI;
             GUIStyle guistyle2;
             if (flag)
@@ -3794,10 +3788,10 @@ namespace AHO
             }
             else
             {
-                bool flag2 = this.EPLFFMMBLDBGHFONANEPOMGLDJEBDGHFEKCI != null && _bc9.IsWriteReference(token);
+                bool flag2 = this._CDP != null && _bc9.IsWriteReference(token);
                 if (flag2)
                 {
-                    guistyle = this._ABT.CDKDJIHGIELEEDGFLEBKFMAICBICIONFMOMH;
+                    guistyle = this._ABT._CFR;
                 }
                 guistyle2 = guistyle;
             }
@@ -3811,10 +3805,10 @@ namespace AHO
             if (flag)
             {
                 this.ValidateCaret(ref this._ABH);
-                bool bodjhgoiefmippgplnbaibniefngejodghfl = this.BODJHGOIEFMIPPGPLNBAIBNIEFNGEJODGHFL;
-                if (bodjhgoiefmippgplnbaibniefngejodghfl)
+                bool _CGB = this._CBA;
+                if (_CGB)
                 {
-                    this.ValidateCaret(ref this.GLAAHLAEKKCKGBFLOGGJOIAHHBGOIFHFLJOL);
+                    this.ValidateCaret(ref this._CGC);
                 }
                 this.Repaint();
             }
@@ -3864,8 +3858,7 @@ namespace AHO
         private Rect GetCaretRect(GCE._AFA position)
         {
             Vector2 vector = this.BufferToViewPosition(position);
-            Rect rect;
-            rect..ctor(vector.x + this.JPPFMECFJCDOMNMEIPPNOEIICFJPJCAFJLMK, vector.y + this.GetLineOffset(position._ABI), 1f, this._AEY().y);
+            Rect rect = new Rect(vector.x + this._CGA, vector.y + this.GetLineOffset(position._ABI), 1f, this._AEY().y);
             bool flag = _bg8._BAK;
             if (flag)
             {
@@ -3901,16 +3894,15 @@ namespace AHO
         {
             Vector2 vector = this.BufferToViewPosition(span.line, span.index, false);
             float textWidth = this.GetTextWidth(span.line, span.index, span.index + span.indexOffset, vector.x);
-            Rect rect;
-            rect..ctor(vector.x + this.JPPFMECFJCDOMNMEIPPNOEIICFJPJCAFJLMK, vector.y + this.GetLineOffset(span.line), textWidth, this._AEY().y);
+            Rect rect = new Rect(vector.x + this._CGA, vector.y + this.GetLineOffset(span.line), textWidth, this._AEY().y);
             return rect;
         }
 
         // Token: 0x060002AD RID: 685 RVA: 0x0002A2A4 File Offset: 0x000284A4
         private float GetTextWidth(int line, int fromChar, int toChar, float xOffset)
         {
-            List<string> flogicchcfaljohninkpcdacoidcghkimhpo = this._ABQ.FLOg;
-            bool flag = line >= flogicchcfaljohninkpcdacoidcghkimhpo.Count;
+            List<string> _CAB = this._ABQ.FLOg;
+            bool flag = line >= _CAB.Count;
             float num;
             if (flag)
             {
@@ -3918,7 +3910,7 @@ namespace AHO
             }
             else
             {
-                string text = flogicchcfaljohninkpcdacoidcghkimhpo[line];
+                string text = _CAB[line];
                 bool flag2 = fromChar >= text.Length;
                 if (flag2)
                 {
@@ -3967,8 +3959,8 @@ namespace AHO
                                             break;
                                         }
                                     }
-                                    _bi2.FADGCFAIAJEFHCBLKDGGHBGJJNBKJBMIOOEM.text = text.Substring(i, j - i);
-                                    num4 = this._ABT._ABV.CalcSize(_bi2.FADGCFAIAJEFHCBLKDGGHBGJJNBKJBMIOOEM).x;
+                                    _bi2._CAA.text = text.Substring(i, j - i);
+                                    num4 = this._ABT._ABV.CalcSize(_bi2._CAA).x;
                                     i = j - 1;
                                 }
                             }
@@ -3986,11 +3978,11 @@ namespace AHO
         private void ToggleFolding(int line)
         {
             string regionName = this._ABQ._AQQ[line].GetRegionName();
-            int num = this.FDJNLNLEAGGCEHMOOPKBCCCLCKEMHMBENEAF.IndexOf(regionName);
+            int num = this._CGD.IndexOf(regionName);
             bool flag = num < 0;
             if (flag)
             {
-                this.FDJNLNLEAGGCEHMOOPKBCCCLCKEMHMBENEAF.Add(regionName);
+                this._CGD.Add(regionName);
                 GCE._ABW _AUX = this._ABQ._AQQ[line]._ABZ;
                 while (++line < this._ABQ._AQQ.Length)
                 {
@@ -4008,7 +4000,7 @@ namespace AHO
             }
             else
             {
-                this.FDJNLNLEAGGCEHMOOPKBCCCLCKEMHMBENEAF.RemoveAt(num);
+                this._CGD.RemoveAt(num);
                 GCE._ABW _AUX2 = this._ABQ._AQQ[line]._ABZ;
                 while (++line < this._ABQ._AQQ.Length)
                 {
@@ -4023,8 +4015,8 @@ namespace AHO
                         break;
                     }
                 }
-                this.KOIHKOPAJAHOJBIDDOPAPJCKBHPOGDGPOEJP.Clear();
-                this.NCJPNOOAENPCCMAMKAFNBIIKKPBEJIMJNJKI.Clear();
+                this._CCC.Clear();
+                this._CCD.Clear();
             }
         }
 
@@ -4065,7 +4057,7 @@ namespace AHO
                             bool flag8 = _AAH == null || _AAH._AT == SymbolKind.Error || !_AAH.IsValid();
                             if (!flag8)
                             {
-                                _bh6.FindAllReferences(_AAH, this.NOKEHFCAKDDOPKCFMLCLBACCAHNLKLHBCEDC());
+                                _bh6.FindAllReferences(_AAH, this._CCV());
                             }
                         }
                     }
@@ -4078,9 +4070,9 @@ namespace AHO
         {
             this.ProcessEditorKeyboard(new Event
             {
-                type = 4,
-                keyCode = 127,
-                modifiers = 1
+                type = (EventType)4,
+                keyCode = (KeyCode)127,
+                modifiers = (EventModifiers)1
             }, true);
         }
 
@@ -4222,13 +4214,13 @@ namespace AHO
                     TextSpan tokenSpan = this._ABQ.GetTokenSpan(num, num2);
                     string text = this._ABQ.FLOg[num].Substring(tokenSpan.index, this._ABH._AEU - tokenSpan.index);
                     string text2 = ((completion != null) ? completion.Expand() : null);
-                    text2 = text2 ?? _ba6.Get(text, this.EIHOAOKGDIECDKLLIHNPGPFALCCKMALIPMFP, null);
+                    text2 = text2 ?? _ba6.Get(text, this._CAG, null);
                     bool flag5 = completion != null;
                     if (flag5)
                     {
                         string text3 = completion.ToString();
                         text3 = text3.Substring(0, text3.Length - 3).Substring(8);
-                        string text4 = _ba6.Get(text3, this.EIHOAOKGDIECDKLLIHNPGPFALCCKMALIPMFP, null);
+                        string text4 = _ba6.Get(text3, this._CAG, null);
                         string[] array = text3.Split(new char[] { ' ' });
                         int length = array[array.Length - 1].Length;
                         bool flag6 = text4 != null;
@@ -4259,10 +4251,10 @@ namespace AHO
                             num3 = text6.Length;
                         }
                         string text7 = text6.Substring(0, num3);
-                        _ba6.Substitute(ref text7, this.EIHOAOKGDIECDKLLIHNPGPFALCCKMALIPMFP);
+                        _ba6.Substitute(ref text7, this._CAG);
                         this._ABH = this._ABQ.InsertText(this._ABH, text7);
-                        bool bopcdiiiaacdailgpofhgpkbbolaifbdfado = this.BOPCDIIIAACDAILGPOFHGPKBBOLAIFBDFADO;
-                        if (bopcdiiiaacdailgpofhgpkbbolaifbdfado)
+                        bool _CGE = this._CCH;
+                        if (_CGE)
                         {
                             this._ABH._ATG = (this._ABH._ATF = this.CharIndexToColumn(this._ABH._AEU, this._ABH._ABI));
                         }
@@ -4270,7 +4262,7 @@ namespace AHO
                         if (flag9)
                         {
                             text7 = text6.Substring(num3 + 5);
-                            _ba6.Substitute(ref text7, this.EIHOAOKGDIECDKLLIHNPGPFALCCKMALIPMFP);
+                            _ba6.Substitute(ref text7, this._CAG);
                             this._ABQ.InsertText(this._ABH, text7);
                         }
                         this._ABQ.UpdateHighlighting(num, num + text2.Count((char x) => x == '\n'), false);
@@ -4321,8 +4313,8 @@ namespace AHO
                             this._ABH = this._ABQ.DeleteText(_ATD, this._ABH);
                         }
                         this._ABH = this._ABQ.InsertText(this._ABH, "\t");
-                        bool bopcdiiiaacdailgpofhgpkbbolaifbdfado = this.BOPCDIIIAACDAILGPOFHGPKBBOLAIFBDFADO;
-                        if (bopcdiiiaacdailgpofhgpkbbolaifbdfado)
+                        bool _CGE = this._CCH;
+                        if (_CGE)
                         {
                             this._ABH._ATG = (this._ABH._ATF = this.CharIndexToColumn(this._ABH._AEU, this._ABH._ABI));
                         }
@@ -4409,8 +4401,8 @@ namespace AHO
                 {
                     this._ATL(null);
                 }
-                bool bopcdiiiaacdailgpofhgpkbbolaifbdfado = this.BOPCDIIIAACDAILGPOFHGPKBBOLAIFBDFADO;
-                if (bopcdiiiaacdailgpofhgpkbbolaifbdfado)
+                bool _CGE = this._CCH;
+                if (_CGE)
                 {
                     this._ABH._ATG = (this._ABH._ATF = this.CharIndexToColumn(this._ABH._AEU, this._ABH._ABI));
                     bool flag12 = this._ATW() != null;
@@ -4473,11 +4465,11 @@ namespace AHO
                     {
                         GCE._AFA _ATD5 = _ATD4;
                         GCE._AFA _ATD6 = _ATD4;
-                        GCE cdghkglnkfhjenlebomgbogcmlafoejmngmj = this._ABQ;
+                        GCE _CCO = this._ABQ;
                         GCE._AFA _ATD7 = _ATD4;
                         int num3 = _ATD7._AEU + 1;
                         _ATD7._AEU = num3;
-                        _ATD5._ATG = (_ATD6._ATF = cdghkglnkfhjenlebomgbogcmlafoejmngmj.CharIndexToColumn(num3, _ATD4._ABI));
+                        _ATD5._ATG = (_ATD6._ATF = _CCO.CharIndexToColumn(num3, _ATD4._ABI));
                         bool flag8 = _ATD4._ATG == _bg8._ASA;
                         if (flag8)
                         {
@@ -4539,8 +4531,8 @@ namespace AHO
                 {
                     this._ATL(null);
                 }
-                bool bopcdiiiaacdailgpofhgpkbbolaifbdfado = this.BOPCDIIIAACDAILGPOFHGPKBBOLAIFBDFADO;
-                if (bopcdiiiaacdailgpofhgpkbbolaifbdfado)
+                bool _CGE = this._CCH;
+                if (_CGE)
                 {
                     this._ABH._ATG = (this._ABH._ATF = this.CharIndexToColumn(this._ABH._AEU, this._ABH._ABI));
                     bool flag17 = this._ATW() != null;
@@ -4556,8 +4548,8 @@ namespace AHO
         // Token: 0x060002B8 RID: 696 RVA: 0x0002B7F8 File Offset: 0x000299F8
         internal void ShowArgumentsHint(_bb4.DHBA methodLeaf)
         {
-            this.OOKEDGDAPFGOMCMDMNKICHAECDBNCBGJNMKN = null;
-            this.EGKFACOBOCJNEILBKNNIKOJMKGJHNFAHPJDN = new TextPosition(-1, -1);
+            this._CGF = null;
+            this._CGG = new TextPosition(-1, -1);
             bool flag = methodLeaf._AAB() == null;
             if (flag)
             {
@@ -4567,10 +4559,10 @@ namespace AHO
             bool flag2 = _AAH == null;
             if (flag2)
             {
-                bool flag3 = this.KBBCMMCMDLMOHHGNAPNIJGLHBLBGGPODLFEB != null;
+                bool flag3 = this._CBC != null;
                 if (flag3)
                 {
-                    this.KBBCMMCMDLMOHHGNAPNIJGLHBLBGGPODLFEB.Hide();
+                    this._CBC.Hide();
                 }
             }
             else
@@ -4579,37 +4571,37 @@ namespace AHO
                 if (flag4)
                 {
                     bool flag5 = false;
-                    bool flag6 = this.KBBCMMCMDLMOHHGNAPNIJGLHBLBGGPODLFEB != null;
+                    bool flag6 = this._CBC != null;
                     if (flag6)
                     {
-                        flag5 = this.KBBCMMCMDLMOHHGNAPNIJGLHBLBGGPODLFEB.OLLEJPDNBBODLEICOBPMPIPPIJBOBOOHEKFP();
-                        this.KBBCMMCMDLMOHHGNAPNIJGLHBLBGGPODLFEB.Hide();
+                        flag5 = this._CBC._CBD();
+                        this._CBC.Hide();
                     }
-                    this.KBBCMMCMDLMOHHGNAPNIJGLHBLBGGPODLFEB = _bk9.CreateTokenWidget(this, this.MEBADINKGFMGNLFBPFEOMIEJLMDPMOLFCOAB, methodLeaf, false);
-                    bool flag7 = this.KBBCMMCMDLMOHHGNAPNIJGLHBLBGGPODLFEB;
+                    this._CBC = _bk9.CreateTokenWidget(this, this._CGH, methodLeaf, false);
+                    bool flag7 = this._CBC;
                     if (flag7)
                     {
-                        this.KBBCMMCMDLMOHHGNAPNIJGLHBLBGGPODLFEB.BPFOKIKKJCELJLDEACHGMOGPJLKFLLDCCOLH(this.DBPNPLAGPNIFADNFHOKFFCPKKIHHKOPIGFBG);
-                        this.OOKEDGDAPFGOMCMDMNKICHAECDBNCBGJNMKN = methodLeaf._AAB();
-                        this.EGKFACOBOCJNEILBKNNIKOJMKGJHNFAHPJDN = new TextPosition(methodLeaf.line, methodLeaf._AJG());
-                        bool flag8 = this.GetSoftLineBreaks(this._ABH._ABI) != _bi2.BJBOLEFDMGLIONMHPMDJCJEKHJKIKHJHFGDC;
+                        this._CBC._CGI(this._CBQ);
+                        this._CGF = methodLeaf._AAB();
+                        this._CGG = new TextPosition(methodLeaf.line, methodLeaf._AJG());
+                        bool flag8 = this.GetSoftLineBreaks(this._ABH._ABI) != _bi2._CFX;
                         if (flag8)
                         {
-                            this.KBBCMMCMDLMOHHGNAPNIJGLHBLBGGPODLFEB._AEW(true);
+                            this._CBC._AEW(true);
                         }
                         else
                         {
-                            bool flag9 = (flag5 && this.EEJFFFONEBHEFJKECHMCKDFAFABLNECBNBDO == null) || methodLeaf.line < this._ABH._ABI;
+                            bool flag9 = (flag5 && this._CBB == null) || methodLeaf.line < this._ABH._ABI;
                             if (flag9)
                             {
-                                this.KBBCMMCMDLMOHHGNAPNIJGLHBLBGGPODLFEB._AEW(true);
+                                this._CBC._AEW(true);
                             }
                             else
                             {
-                                bool flag10 = this.EEJFFFONEBHEFJKECHMCKDFAFABLNECBNBDO != null;
+                                bool flag10 = this._CBB != null;
                                 if (flag10)
                                 {
-                                    this.EEJFFFONEBHEFJKECHMCKDFAFABLNECBNBDO._AEW(!this.KBBCMMCMDLMOHHGNAPNIJGLHBLBGGPODLFEB.OLLEJPDNBBODLEICOBPMPIPPIJBOBOOHEKFP());
+                                    this._CBB._AEW(!this._CBC._CBD());
                                 }
                             }
                         }
@@ -4621,7 +4613,7 @@ namespace AHO
         // Token: 0x060002B9 RID: 697 RVA: 0x0002B9C1 File Offset: 0x00029BC1
         private void FilterCompletions(HashSet<_bh4> data)
         {
-            data.RemoveWhere((_bh4 x) => !this.DerivesFromOrContains(x, _bi2.FODMINEMHCODAKPMOCKCHANGHHFDPFCJONPH(), true));
+            data.RemoveWhere((_bh4 x) => !this.DerivesFromOrContains(x, _bi2._CGJ(), true));
         }
 
         // Token: 0x060002BA RID: 698 RVA: 0x0002B9D8 File Offset: 0x00029BD8
@@ -4642,11 +4634,11 @@ namespace AHO
                 if (checkReferencedAssemblies)
                 {
                     _bn1 _APR = (_bn1)symbol;
-                    _bj5 ilbdcihgkpfpcljfbhlgkohdpnlncpijnlfg = ((_be7)this._ABQ._AOU()._AQT()._AIT._AJW)._AN;
-                    bool flag3 = ilbdcihgkpfpcljfbhlgkohdpnlncpijnlfg != null;
+                    _bj5 _CGK = ((_be7)this._ABQ._AOU()._AQT()._AIT._AJW)._AN;
+                    bool flag3 = _CGK != null;
                     if (flag3)
                     {
-                        foreach (_bj5 _AOS in ilbdcihgkpfpcljfbhlgkohdpnlncpijnlfg.KLGDDLJGIKKDDHDOECDICLMOMBNLNLCDCJDH())
+                        foreach (_bj5 _AOS in _CGK._CGL())
                         {
                             _bn1 _APR2 = _AOS.FindSameNamespace(_APR);
                             bool flag4 = _APR2 != null;
@@ -4685,17 +4677,17 @@ namespace AHO
         // Token: 0x060002BB RID: 699 RVA: 0x0002BB40 File Offset: 0x00029D40
         public void CloseAllPopups()
         {
-            bool flag = this.ADJPMDHKMMDMAGNDGAHMHFBBEEALGMEDJGFP != null;
+            bool flag = this._CDA != null;
             if (flag)
             {
-                this.ADJPMDHKMMDMAGNDGAHMHFBBEEALGMEDJGFP.Hide();
+                this._CDA.Hide();
             }
-            bool flag2 = this.KBBCMMCMDLMOHHGNAPNIJGLHBLBGGPODLFEB != null;
+            bool flag2 = this._CBC != null;
             if (flag2)
             {
                 this.CloseArgumentsHint();
             }
-            bool flag3 = this.EEJFFFONEBHEFJKECHMCKDFAFABLNECBNBDO != null;
+            bool flag3 = this._CBB != null;
             if (flag3)
             {
                 this.CloseAutocomplete();
@@ -4705,11 +4697,11 @@ namespace AHO
         // Token: 0x060002BC RID: 700 RVA: 0x0002BB98 File Offset: 0x00029D98
         public void CloseAutocomplete()
         {
-            bool flag = this.EEJFFFONEBHEFJKECHMCKDFAFABLNECBNBDO != null;
+            bool flag = this._CBB != null;
             if (flag)
             {
-                EditorApplication.delayCall = (EditorApplication.CallbackFunction)Delegate.Combine(EditorApplication.delayCall, new EditorApplication.CallbackFunction(this.EEJFFFONEBHEFJKECHMCKDFAFABLNECBNBDO.Close));
-                this.EEJFFFONEBHEFJKECHMCKDFAFABLNECBNBDO = null;
+                EditorApplication.delayCall = (EditorApplication.CallbackFunction)Delegate.Combine(EditorApplication.delayCall, new EditorApplication.CallbackFunction(this._CBB.Close));
+                this._CBB = null;
             }
             _ba4._AFR = (_ba4._AFP = 0f);
         }
@@ -4717,13 +4709,13 @@ namespace AHO
         // Token: 0x060002BD RID: 701 RVA: 0x0002BBF4 File Offset: 0x00029DF4
         public void CloseArgumentsHint()
         {
-            bool flag = this.KBBCMMCMDLMOHHGNAPNIJGLHBLBGGPODLFEB != null;
+            bool flag = this._CBC != null;
             if (flag)
             {
-                this.KBBCMMCMDLMOHHGNAPNIJGLHBLBGGPODLFEB.Hide();
-                this.KBBCMMCMDLMOHHGNAPNIJGLHBLBGGPODLFEB = null;
-                this.OOKEDGDAPFGOMCMDMNKICHAECDBNCBGJNMKN = null;
-                this.EGKFACOBOCJNEILBKNNIKOJMKGJHNFAHPJDN = new TextPosition(-1, -1);
+                this._CBC.Hide();
+                this._CBC = null;
+                this._CGF = null;
+                this._CGG = new TextPosition(-1, -1);
             }
         }
 
@@ -4774,8 +4766,8 @@ namespace AHO
         // Token: 0x060002C1 RID: 705 RVA: 0x0002BDD4 File Offset: 0x00029FD4
         public float GetCharXOffset(int charIndex, int line, int start)
         {
-            List<string> flogicchcfaljohninkpcdacoidcghkimhpo = this._ABQ.FLOg;
-            bool flag = line >= flogicchcfaljohninkpcdacoidcghkimhpo.Count;
+            List<string> _CAB = this._ABQ.FLOg;
+            bool flag = line >= _CAB.Count;
             float num;
             if (flag)
             {
@@ -4783,7 +4775,7 @@ namespace AHO
             }
             else
             {
-                string text = flogicchcfaljohninkpcdacoidcghkimhpo[line];
+                string text = _CAB[line];
                 bool flag2 = text.Length < charIndex;
                 if (flag2)
                 {
@@ -4824,8 +4816,8 @@ namespace AHO
                                         break;
                                     }
                                 }
-                                _bi2.FADGCFAIAJEFHCBLKDGGHBGJJNBKJBMIOOEM.text = text.Substring(i, j - i);
-                                num3 += this._ABT._ABV.CalcSize(_bi2.FADGCFAIAJEFHCBLKDGGHBGJJNBKJBMIOOEM).x;
+                                _bi2._CAA.text = text.Substring(i, j - i);
+                                num3 += this._ABT._ABV.CalcSize(_bi2._CAA).x;
                                 i = j - 1;
                             }
                         }
@@ -4865,8 +4857,8 @@ namespace AHO
                     }
                     else
                     {
-                        _bi2.FADGCFAIAJEFHCBLKDGGHBGJJNBKJBMIOOEM.text = text[i].ToString();
-                        num6 = this._ABT._ABV.CalcSize(_bi2.FADGCFAIAJEFHCBLKDGGHBGJJNBKJBMIOOEM).x;
+                        _bi2._CAA.text = text[i].ToString();
+                        num6 = this._ABT._ABV.CalcSize(_bi2._CAA).x;
                     }
                 }
                 bool flag3 = x <= num6;
@@ -4925,7 +4917,7 @@ namespace AHO
         public GCE._AFA GetLinesOffset(GCE._AFA position, int linesDown)
         {
             GCE._AFA _ATD = position.Clone();
-            bool flag = !this.BOPCDIIIAACDAILGPOFHGPKBBOLAIFBDFADO;
+            bool flag = !this._CCH;
             if (flag)
             {
                 _ATD._ABI += linesDown;
@@ -6400,7 +6392,7 @@ namespace AHO
                         return null;
                     }
                 }
-                bool flag6 = !symbolAssembly.PPFHKDOLLCGGPJAFEKHMNABKNMLONAJANCLJ;
+                bool flag6 = !symbolAssembly._CHJ;
                 if (flag6)
                 {
                     list = null;
@@ -6437,16 +6429,16 @@ namespace AHO
                             bool flag12 = _BFS != null;
                             if (flag12)
                             {
-                                _AAK = _BFS.MAPALBBIIIJIGCOOHOOIFPIBFPLDBDGNCBOI() as _ba7;
+                                _AAK = _BFS._CBS() as _ba7;
                             }
                         }
                         foreach (_bb3 _AAN in _AAK._AAM)
                         {
-                            List<FKI> jdlafinmknbedpejmjahhodcpgnkklelobcd = _AAN._AEI;
-                            bool flag13 = jdlafinmknbedpejmjahhodcpgnkklelobcd != null;
+                            List<FKI> _CAV = _AAN._AEI;
+                            bool flag13 = _CAV != null;
                             if (flag13)
                             {
-                                list2.AddRange(jdlafinmknbedpejmjahhodcpgnkklelobcd);
+                                list2.AddRange(_CAV);
                             }
                         }
                     }
@@ -6623,7 +6615,7 @@ namespace AHO
         private void AfterCharecterTyped(string text, int nextCaretLine, int nextCharacterIndex)
         {
             bool flag = false;
-            bool flag2 = text.Length == 1 && this.EEJFFFONEBHEFJKECHMCKDFAFABLNECBNBDO == null;
+            bool flag2 = text.Length == 1 && this._CBB == null;
             if (flag2)
             {
                 SyntaxToken syntaxToken = this.GetTokenAtPosition(nextCaretLine, nextCharacterIndex);
@@ -6647,7 +6639,7 @@ namespace AHO
                         if (flag5)
                         {
                             flag = true;
-                            this.LLJFBDFABMBMPEBEDAKOJBDMGGFBOJEKCPKD = true;
+                            this._CGM = true;
                         }
                     }
                 }
@@ -6657,7 +6649,7 @@ namespace AHO
                     if (flag6)
                     {
                         flag = true;
-                        this.LLJFBDFABMBMPEBEDAKOJBDMGGFBOJEKCPKD = true;
+                        this._CGM = true;
                     }
                     else
                     {
@@ -6718,7 +6710,7 @@ namespace AHO
             bool flag16 = flag;
             if (flag16)
             {
-                this.JHONFKMHPKCLKLHKMOEBEHPGNBLADGBBEHIL = true;
+                this._CBE = true;
             }
         }
 
@@ -6727,65 +6719,65 @@ namespace AHO
         {
             TextPosition textPosition = new TextPosition(fromPos._ABI, fromPos._AEU);
             TextPosition textPosition2 = new TextPosition(toPos._ABI, toPos._AEU);
-            int count = this.KGNJCNNMIFPKALPOGAHDGCDKCMMDLDBDLILH.Count;
+            int count = this._CGN.Count;
             while (count-- > 0)
             {
-                _bi2.EPAFFDDCAEGGCPDGEEBEBADBOBLMGPDEPLEA epaffddcaeggcpdgeebebadboblmgpdeplea = this.KGNJCNNMIFPKALPOGAHDGCDKCMMDLDBDLILH[count];
-                bool flag = textPosition <= epaffddcaeggcpdgeebebadboblmgpdeplea.OJKLJINFJBEPHBPPEABIJNJCDOPNEJGPAGND;
+                _bi2._CGO _CGP = this._CGN[count];
+                bool flag = textPosition <= _CGP._CGQ;
                 if (flag)
                 {
-                    bool flag2 = textPosition2 > epaffddcaeggcpdgeebebadboblmgpdeplea.OJKLJINFJBEPHBPPEABIJNJCDOPNEJGPAGND;
+                    bool flag2 = textPosition2 > _CGP._CGQ;
                     if (flag2)
                     {
-                        this.KGNJCNNMIFPKALPOGAHDGCDKCMMDLDBDLILH.RemoveAt(count);
+                        this._CGN.RemoveAt(count);
                     }
                     else
                     {
-                        bool flag3 = textPosition2.line == epaffddcaeggcpdgeebebadboblmgpdeplea.OJKLJINFJBEPHBPPEABIJNJCDOPNEJGPAGND.line;
+                        bool flag3 = textPosition2.line == _CGP._CGQ.line;
                         if (flag3)
                         {
-                            epaffddcaeggcpdgeebebadboblmgpdeplea.OJKLJINFJBEPHBPPEABIJNJCDOPNEJGPAGND.index = epaffddcaeggcpdgeebebadboblmgpdeplea.OJKLJINFJBEPHBPPEABIJNJCDOPNEJGPAGND.index - (textPosition2.index - textPosition.index);
+                            _CGP._CGQ.index = _CGP._CGQ.index - (textPosition2.index - textPosition.index);
                         }
-                        bool flag4 = textPosition2.line == epaffddcaeggcpdgeebebadboblmgpdeplea.AGJBFOPCGMOGGDJKCDLBNMJAILHEKLMGPALB.line;
+                        bool flag4 = textPosition2.line == _CGP._CGR.line;
                         if (flag4)
                         {
-                            epaffddcaeggcpdgeebebadboblmgpdeplea.AGJBFOPCGMOGGDJKCDLBNMJAILHEKLMGPALB.index = epaffddcaeggcpdgeebebadboblmgpdeplea.AGJBFOPCGMOGGDJKCDLBNMJAILHEKLMGPALB.index - (textPosition2.index - textPosition.index);
+                            _CGP._CGR.index = _CGP._CGR.index - (textPosition2.index - textPosition.index);
                         }
-                        epaffddcaeggcpdgeebebadboblmgpdeplea.OJKLJINFJBEPHBPPEABIJNJCDOPNEJGPAGND.line = epaffddcaeggcpdgeebebadboblmgpdeplea.OJKLJINFJBEPHBPPEABIJNJCDOPNEJGPAGND.line - (textPosition2.line - textPosition.line);
-                        epaffddcaeggcpdgeebebadboblmgpdeplea.AGJBFOPCGMOGGDJKCDLBNMJAILHEKLMGPALB.line = epaffddcaeggcpdgeebebadboblmgpdeplea.AGJBFOPCGMOGGDJKCDLBNMJAILHEKLMGPALB.line - (textPosition2.line - textPosition.line);
-                        this.KGNJCNNMIFPKALPOGAHDGCDKCMMDLDBDLILH[count] = epaffddcaeggcpdgeebebadboblmgpdeplea;
+                        _CGP._CGQ.line = _CGP._CGQ.line - (textPosition2.line - textPosition.line);
+                        _CGP._CGR.line = _CGP._CGR.line - (textPosition2.line - textPosition.line);
+                        this._CGN[count] = _CGP;
                     }
                 }
                 else
                 {
-                    bool flag5 = textPosition <= epaffddcaeggcpdgeebebadboblmgpdeplea.AGJBFOPCGMOGGDJKCDLBNMJAILHEKLMGPALB;
+                    bool flag5 = textPosition <= _CGP._CGR;
                     if (flag5)
                     {
-                        bool flag6 = textPosition2 > epaffddcaeggcpdgeebebadboblmgpdeplea.AGJBFOPCGMOGGDJKCDLBNMJAILHEKLMGPALB;
+                        bool flag6 = textPosition2 > _CGP._CGR;
                         if (flag6)
                         {
-                            this.KGNJCNNMIFPKALPOGAHDGCDKCMMDLDBDLILH.RemoveAt(count);
+                            this._CGN.RemoveAt(count);
                         }
                         else
                         {
-                            bool flag7 = textPosition2.line == epaffddcaeggcpdgeebebadboblmgpdeplea.AGJBFOPCGMOGGDJKCDLBNMJAILHEKLMGPALB.line;
+                            bool flag7 = textPosition2.line == _CGP._CGR.line;
                             if (flag7)
                             {
-                                epaffddcaeggcpdgeebebadboblmgpdeplea.AGJBFOPCGMOGGDJKCDLBNMJAILHEKLMGPALB.index = epaffddcaeggcpdgeebebadboblmgpdeplea.AGJBFOPCGMOGGDJKCDLBNMJAILHEKLMGPALB.index - (textPosition2.index - textPosition.index);
+                                _CGP._CGR.index = _CGP._CGR.index - (textPosition2.index - textPosition.index);
                             }
-                            epaffddcaeggcpdgeebebadboblmgpdeplea.AGJBFOPCGMOGGDJKCDLBNMJAILHEKLMGPALB.line = epaffddcaeggcpdgeebebadboblmgpdeplea.AGJBFOPCGMOGGDJKCDLBNMJAILHEKLMGPALB.line - (textPosition2.line - textPosition.line);
-                            this.KGNJCNNMIFPKALPOGAHDGCDKCMMDLDBDLILH[count] = epaffddcaeggcpdgeebebadboblmgpdeplea;
+                            _CGP._CGR.line = _CGP._CGR.line - (textPosition2.line - textPosition.line);
+                            this._CGN[count] = _CGP;
                         }
                     }
                 }
             }
-            bool flag8 = this.KGNJCNNMIFPKALPOGAHDGCDKCMMDLDBDLILH.Count == 0;
+            bool flag8 = this._CGN.Count == 0;
             if (flag8)
             {
-                GCE cdghkglnkfhjenlebomgbogcmlafoejmngmj = this._ABQ;
-                cdghkglnkfhjenlebomgbogcmlafoejmngmj._AUK = (GCE._AVI)Delegate.Remove(cdghkglnkfhjenlebomgbogcmlafoejmngmj._AUK, new GCE._AVI(this.OnInsertedText));
-                GCE cdghkglnkfhjenlebomgbogcmlafoejmngmj2 = this._ABQ;
-                cdghkglnkfhjenlebomgbogcmlafoejmngmj2._AUO = (GCE._AVM)Delegate.Remove(cdghkglnkfhjenlebomgbogcmlafoejmngmj2._AUO, new GCE._AVM(this.OnRemovedText));
+                GCE _CCO = this._ABQ;
+                _CCO._AUK = (GCE._AVI)Delegate.Remove(_CCO._AUK, new GCE._AVI(this.OnInsertedText));
+                GCE _CCO2 = this._ABQ;
+                _CCO2._AUO = (GCE._AVM)Delegate.Remove(_CCO2._AUO, new GCE._AVM(this.OnRemovedText));
             }
         }
 
@@ -6794,40 +6786,40 @@ namespace AHO
         {
             TextPosition textPosition = new TextPosition(fromPos._ABI, fromPos._AEU);
             TextPosition textPosition2 = new TextPosition(toPos._ABI, toPos._AEU);
-            bool flag = textPosition <= this.CHHDGGEFPPLGNDHEEKADDPLNNJIAKMIPDKOD;
+            bool flag = textPosition <= this._CGS;
             if (flag)
             {
-                bool flag2 = textPosition2 > this.CHHDGGEFPPLGNDHEEKADDPLNNJIAKMIPDKOD;
+                bool flag2 = textPosition2 > this._CGS;
                 if (flag2)
                 {
-                    this.CHHDGGEFPPLGNDHEEKADDPLNNJIAKMIPDKOD = textPosition;
+                    this._CGS = textPosition;
                 }
                 else
                 {
-                    bool flag3 = textPosition2.line == this.CHHDGGEFPPLGNDHEEKADDPLNNJIAKMIPDKOD.line;
+                    bool flag3 = textPosition2.line == this._CGS.line;
                     if (flag3)
                     {
-                        this.CHHDGGEFPPLGNDHEEKADDPLNNJIAKMIPDKOD.index = this.CHHDGGEFPPLGNDHEEKADDPLNNJIAKMIPDKOD.index - (textPosition2.index - textPosition.index);
+                        this._CGS.index = this._CGS.index - (textPosition2.index - textPosition.index);
                     }
-                    this.CHHDGGEFPPLGNDHEEKADDPLNNJIAKMIPDKOD.line = this.CHHDGGEFPPLGNDHEEKADDPLNNJIAKMIPDKOD.line - (textPosition2.line - textPosition.line);
+                    this._CGS.line = this._CGS.line - (textPosition2.line - textPosition.line);
                 }
             }
-            bool flag4 = textPosition <= this.CHPBGFIBMHEHHEPCOFLHBLJABIHHBHJCPPHO;
+            bool flag4 = textPosition <= this._CGT;
             if (flag4)
             {
-                bool flag5 = textPosition2 > this.CHPBGFIBMHEHHEPCOFLHBLJABIHHBHJCPPHO;
+                bool flag5 = textPosition2 > this._CGT;
                 if (flag5)
                 {
-                    this.CHPBGFIBMHEHHEPCOFLHBLJABIHHBHJCPPHO = textPosition;
+                    this._CGT = textPosition;
                 }
                 else
                 {
-                    bool flag6 = textPosition2.line == this.CHPBGFIBMHEHHEPCOFLHBLJABIHHBHJCPPHO.line;
+                    bool flag6 = textPosition2.line == this._CGT.line;
                     if (flag6)
                     {
-                        this.CHPBGFIBMHEHHEPCOFLHBLJABIHHBHJCPPHO.index = this.CHPBGFIBMHEHHEPCOFLHBLJABIHHBHJCPPHO.index - (textPosition2.index - textPosition.index);
+                        this._CGT.index = this._CGT.index - (textPosition2.index - textPosition.index);
                     }
-                    this.CHPBGFIBMHEHHEPCOFLHBLJABIHHBHJCPPHO.line = this.CHPBGFIBMHEHHEPCOFLHBLJABIHHBHJCPPHO.line - (textPosition2.line - textPosition.line);
+                    this._CGT.line = this._CGT.line - (textPosition2.line - textPosition.line);
                 }
             }
         }
@@ -6837,39 +6829,39 @@ namespace AHO
         {
             TextPosition textPosition = new TextPosition(fromPos._ABI, fromPos._AEU);
             TextPosition textPosition2 = new TextPosition(toPos._ABI, toPos._AEU);
-            int count = this.KGNJCNNMIFPKALPOGAHDGCDKCMMDLDBDLILH.Count;
+            int count = this._CGN.Count;
             while (count-- > 0)
             {
-                _bi2.EPAFFDDCAEGGCPDGEEBEBADBOBLMGPDEPLEA epaffddcaeggcpdgeebebadboblmgpdeplea = this.KGNJCNNMIFPKALPOGAHDGCDKCMMDLDBDLILH[count];
-                bool flag = textPosition <= epaffddcaeggcpdgeebebadboblmgpdeplea.OJKLJINFJBEPHBPPEABIJNJCDOPNEJGPAGND;
+                _bi2._CGO _CGP = this._CGN[count];
+                bool flag = textPosition <= _CGP._CGQ;
                 if (flag)
                 {
-                    bool flag2 = textPosition.line == epaffddcaeggcpdgeebebadboblmgpdeplea.OJKLJINFJBEPHBPPEABIJNJCDOPNEJGPAGND.line;
+                    bool flag2 = textPosition.line == _CGP._CGQ.line;
                     if (flag2)
                     {
-                        epaffddcaeggcpdgeebebadboblmgpdeplea.OJKLJINFJBEPHBPPEABIJNJCDOPNEJGPAGND.index = epaffddcaeggcpdgeebebadboblmgpdeplea.OJKLJINFJBEPHBPPEABIJNJCDOPNEJGPAGND.index + (textPosition2.index - textPosition.index);
+                        _CGP._CGQ.index = _CGP._CGQ.index + (textPosition2.index - textPosition.index);
                     }
-                    bool flag3 = textPosition.line == epaffddcaeggcpdgeebebadboblmgpdeplea.AGJBFOPCGMOGGDJKCDLBNMJAILHEKLMGPALB.line;
+                    bool flag3 = textPosition.line == _CGP._CGR.line;
                     if (flag3)
                     {
-                        epaffddcaeggcpdgeebebadboblmgpdeplea.AGJBFOPCGMOGGDJKCDLBNMJAILHEKLMGPALB.index = epaffddcaeggcpdgeebebadboblmgpdeplea.AGJBFOPCGMOGGDJKCDLBNMJAILHEKLMGPALB.index + (textPosition2.index - textPosition.index);
+                        _CGP._CGR.index = _CGP._CGR.index + (textPosition2.index - textPosition.index);
                     }
-                    epaffddcaeggcpdgeebebadboblmgpdeplea.OJKLJINFJBEPHBPPEABIJNJCDOPNEJGPAGND.line = epaffddcaeggcpdgeebebadboblmgpdeplea.OJKLJINFJBEPHBPPEABIJNJCDOPNEJGPAGND.line + (textPosition2.line - textPosition.line);
-                    epaffddcaeggcpdgeebebadboblmgpdeplea.AGJBFOPCGMOGGDJKCDLBNMJAILHEKLMGPALB.line = epaffddcaeggcpdgeebebadboblmgpdeplea.AGJBFOPCGMOGGDJKCDLBNMJAILHEKLMGPALB.line + (textPosition2.line - textPosition.line);
-                    this.KGNJCNNMIFPKALPOGAHDGCDKCMMDLDBDLILH[count] = epaffddcaeggcpdgeebebadboblmgpdeplea;
+                    _CGP._CGQ.line = _CGP._CGQ.line + (textPosition2.line - textPosition.line);
+                    _CGP._CGR.line = _CGP._CGR.line + (textPosition2.line - textPosition.line);
+                    this._CGN[count] = _CGP;
                 }
                 else
                 {
-                    bool flag4 = textPosition <= epaffddcaeggcpdgeebebadboblmgpdeplea.AGJBFOPCGMOGGDJKCDLBNMJAILHEKLMGPALB;
+                    bool flag4 = textPosition <= _CGP._CGR;
                     if (flag4)
                     {
-                        bool flag5 = textPosition.line == epaffddcaeggcpdgeebebadboblmgpdeplea.AGJBFOPCGMOGGDJKCDLBNMJAILHEKLMGPALB.line;
+                        bool flag5 = textPosition.line == _CGP._CGR.line;
                         if (flag5)
                         {
-                            epaffddcaeggcpdgeebebadboblmgpdeplea.AGJBFOPCGMOGGDJKCDLBNMJAILHEKLMGPALB.index = epaffddcaeggcpdgeebebadboblmgpdeplea.AGJBFOPCGMOGGDJKCDLBNMJAILHEKLMGPALB.index + (textPosition2.index - textPosition.index);
+                            _CGP._CGR.index = _CGP._CGR.index + (textPosition2.index - textPosition.index);
                         }
-                        epaffddcaeggcpdgeebebadboblmgpdeplea.AGJBFOPCGMOGGDJKCDLBNMJAILHEKLMGPALB.line = epaffddcaeggcpdgeebebadboblmgpdeplea.AGJBFOPCGMOGGDJKCDLBNMJAILHEKLMGPALB.line + (textPosition2.line - textPosition.line);
-                        this.KGNJCNNMIFPKALPOGAHDGCDKCMMDLDBDLILH[count] = epaffddcaeggcpdgeebebadboblmgpdeplea;
+                        _CGP._CGR.line = _CGP._CGR.line + (textPosition2.line - textPosition.line);
+                        this._CGN[count] = _CGP;
                     }
                 }
             }
@@ -6880,28 +6872,28 @@ namespace AHO
         {
             TextPosition textPosition = new TextPosition(fromPos._ABI, fromPos._AEU);
             TextPosition textPosition2 = new TextPosition(toPos._ABI, toPos._AEU);
-            bool fdilmobikgloafgdfhgbclbhnpnhklokdcnn = this.FDILMOBIKGLOAFGDFHGBCLBHNPNHKLOKDCNN;
-            if (fdilmobikgloafgdfhgbclbhnpnhklokdcnn)
+            bool _CGU = this._CGV;
+            if (_CGU)
             {
-                bool flag = textPosition <= this.CHHDGGEFPPLGNDHEEKADDPLNNJIAKMIPDKOD;
+                bool flag = textPosition <= this._CGS;
                 if (flag)
                 {
-                    bool flag2 = textPosition.line == this.CHHDGGEFPPLGNDHEEKADDPLNNJIAKMIPDKOD.line;
+                    bool flag2 = textPosition.line == this._CGS.line;
                     if (flag2)
                     {
-                        this.CHHDGGEFPPLGNDHEEKADDPLNNJIAKMIPDKOD.index = this.CHHDGGEFPPLGNDHEEKADDPLNNJIAKMIPDKOD.index + (textPosition2.index - textPosition.index);
+                        this._CGS.index = this._CGS.index + (textPosition2.index - textPosition.index);
                     }
-                    this.CHHDGGEFPPLGNDHEEKADDPLNNJIAKMIPDKOD.line = this.CHHDGGEFPPLGNDHEEKADDPLNNJIAKMIPDKOD.line + (textPosition2.line - textPosition.line);
+                    this._CGS.line = this._CGS.line + (textPosition2.line - textPosition.line);
                 }
-                bool flag3 = textPosition <= this.CHPBGFIBMHEHHEPCOFLHBLJABIHHBHJCPPHO;
+                bool flag3 = textPosition <= this._CGT;
                 if (flag3)
                 {
-                    bool flag4 = textPosition.line == this.CHPBGFIBMHEHHEPCOFLHBLJABIHHBHJCPPHO.line;
+                    bool flag4 = textPosition.line == this._CGT.line;
                     if (flag4)
                     {
-                        this.CHPBGFIBMHEHHEPCOFLHBLJABIHHBHJCPPHO.index = this.CHPBGFIBMHEHHEPCOFLHBLJABIHHBHJCPPHO.index + (textPosition2.index - textPosition.index);
+                        this._CGT.index = this._CGT.index + (textPosition2.index - textPosition.index);
                     }
-                    this.CHPBGFIBMHEHHEPCOFLHBLJABIHHBHJCPPHO.line = this.CHPBGFIBMHEHHEPCOFLHBLJABIHHBHJCPPHO.line + (textPosition2.line - textPosition.line);
+                    this._CGT.line = this._CGT.line + (textPosition2.line - textPosition.line);
                 }
             }
         }
@@ -6909,24 +6901,24 @@ namespace AHO
         // Token: 0x060002D4 RID: 724 RVA: 0x0002EFD8 File Offset: 0x0002D1D8
         public void BeginRefactoring(string description)
         {
-            bool fdilmobikgloafgdfhgbclbhnpnhklokdcnn = this.FDILMOBIKGLOAFGDFHGBCLBHNPNHKLOKDCNN;
-            if (!fdilmobikgloafgdfhgbclbhnpnhklokdcnn)
+            bool _CGU = this._CGV;
+            if (!_CGU)
             {
-                GCE cdghkglnkfhjenlebomgbogcmlafoejmngmj = this._ABQ;
-                cdghkglnkfhjenlebomgbogcmlafoejmngmj._AUK = (GCE._AVI)Delegate.Combine(cdghkglnkfhjenlebomgbogcmlafoejmngmj._AUK, new GCE._AVI(this.OnInsertedTextTrackSelection));
-                GCE cdghkglnkfhjenlebomgbogcmlafoejmngmj2 = this._ABQ;
-                cdghkglnkfhjenlebomgbogcmlafoejmngmj2._AUO = (GCE._AVM)Delegate.Combine(cdghkglnkfhjenlebomgbogcmlafoejmngmj2._AUO, new GCE._AVM(this.OnRemovedTextTrackSelection));
+                GCE _CCO = this._ABQ;
+                _CCO._AUK = (GCE._AVI)Delegate.Combine(_CCO._AUK, new GCE._AVI(this.OnInsertedTextTrackSelection));
+                GCE _CCO2 = this._ABQ;
+                _CCO2._AUO = (GCE._AVM)Delegate.Combine(_CCO2._AUO, new GCE._AVM(this.OnRemovedTextTrackSelection));
                 this._ABQ.BeginEdit("Refactoring");
-                this.FDILMOBIKGLOAFGDFHGBCLBHNPNHKLOKDCNN = true;
-                this.CHHDGGEFPPLGNDHEEKADDPLNNJIAKMIPDKOD = new TextPosition(this._ABH._ABI, this._ABH._AEU);
+                this._CGV = true;
+                this._CGS = new TextPosition(this._ABH._ABI, this._ABH._AEU);
                 bool flag = this._ATW() != null;
                 if (flag)
                 {
-                    this.CHPBGFIBMHEHHEPCOFLHBLJABIHHBHJCPPHO = new TextPosition(this._ATW()._ABI, this._ATW()._AEU);
+                    this._CGT = new TextPosition(this._ATW()._ABI, this._ATW()._AEU);
                 }
                 else
                 {
-                    this.CHPBGFIBMHEHHEPCOFLHBLJABIHHBHJCPPHO = TextPosition.invalid;
+                    this._CGT = TextPosition.invalid;
                 }
             }
         }
@@ -6934,45 +6926,45 @@ namespace AHO
         // Token: 0x060002D5 RID: 725 RVA: 0x0002F0BC File Offset: 0x0002D2BC
         public void EndRefactoring()
         {
-            bool flag = !this.FDILMOBIKGLOAFGDFHGBCLBHNPNHKLOKDCNN;
+            bool flag = !this._CGV;
             if (flag)
             {
                 Debug.LogError("EndRefactoring() called without calling BeginRefactoring()");
             }
-            GCE cdghkglnkfhjenlebomgbogcmlafoejmngmj = this._ABQ;
-            cdghkglnkfhjenlebomgbogcmlafoejmngmj._AUK = (GCE._AVI)Delegate.Remove(cdghkglnkfhjenlebomgbogcmlafoejmngmj._AUK, new GCE._AVI(this.OnInsertedTextTrackSelection));
-            GCE cdghkglnkfhjenlebomgbogcmlafoejmngmj2 = this._ABQ;
-            cdghkglnkfhjenlebomgbogcmlafoejmngmj2._AUO = (GCE._AVM)Delegate.Remove(cdghkglnkfhjenlebomgbogcmlafoejmngmj2._AUO, new GCE._AVM(this.OnRemovedTextTrackSelection));
-            this.FDILMOBIKGLOAFGDFHGBCLBHNPNHKLOKDCNN = false;
-            int num = this.CharIndexToColumn(this.CHHDGGEFPPLGNDHEEKADDPLNNJIAKMIPDKOD.index, this.CHHDGGEFPPLGNDHEEKADDPLNNJIAKMIPDKOD.line);
+            GCE _CCO = this._ABQ;
+            _CCO._AUK = (GCE._AVI)Delegate.Remove(_CCO._AUK, new GCE._AVI(this.OnInsertedTextTrackSelection));
+            GCE _CCO2 = this._ABQ;
+            _CCO2._AUO = (GCE._AVM)Delegate.Remove(_CCO2._AUO, new GCE._AVM(this.OnRemovedTextTrackSelection));
+            this._CGV = false;
+            int num = this.CharIndexToColumn(this._CGS.index, this._CGS.line);
             this._ABH = new GCE._AFA
             {
-                _ABI = this.CHHDGGEFPPLGNDHEEKADDPLNNJIAKMIPDKOD.line,
-                _AEU = this.CHHDGGEFPPLGNDHEEKADDPLNNJIAKMIPDKOD.index,
+                _ABI = this._CGS.line,
+                _AEU = this._CGS.index,
                 _ATG = num,
                 _ATF = num
             };
             this._ATL(null);
-            bool flag2 = this.CHPBGFIBMHEHHEPCOFLHBLJABIHHBHJCPPHO.line >= 0 && this.CHPBGFIBMHEHHEPCOFLHBLJABIHHBHJCPPHO != this.CHHDGGEFPPLGNDHEEKADDPLNNJIAKMIPDKOD;
+            bool flag2 = this._CGT.line >= 0 && this._CGT != this._CGS;
             if (flag2)
             {
-                num = this.CharIndexToColumn(this.CHPBGFIBMHEHHEPCOFLHBLJABIHHBHJCPPHO.index, this.CHPBGFIBMHEHHEPCOFLHBLJABIHHBHJCPPHO.line);
+                num = this.CharIndexToColumn(this._CGT.index, this._CGT.line);
                 this._ATL(new GCE._AFA
                 {
-                    _ABI = this.CHPBGFIBMHEHHEPCOFLHBLJABIHHBHJCPPHO.line,
-                    _AEU = this.CHPBGFIBMHEHHEPCOFLHBLJABIHHBHJCPPHO.index,
+                    _ABI = this._CGT.line,
+                    _AEU = this._CGT.index,
                     _ATG = num,
                     _ATF = num
                 });
             }
             this.ValidateCarets();
-            bool flag3 = this.BODJHGOIEFMIPPGPLNBAIBNIEFNGEJODGHFL && this._ATW().IsSameAs(this._ABH);
+            bool flag3 = this._CBA && this._ATW().IsSameAs(this._ABH);
             if (flag3)
             {
                 this._ATL(null);
             }
             this._ATM = _bi2._ATN;
-            this.DJLIKNMAIPOALAMANDOGJHEODLHBGBBNBMIA = false;
+            this._CGW = false;
             this._ATO = true;
             this._ABQ.EndEdit();
             this.AddRecentLocation(1, true);
@@ -6984,14 +6976,14 @@ namespace AHO
             string text = this._ABQ.FLOg[this._ABH._ABI];
             int i = this._ABH._AEU;
             int num = text.Length;
-            bool flag = this.KGNJCNNMIFPKALPOGAHDGCDKCMMDLDBDLILH.Count > 0;
+            bool flag = this._CGN.Count > 0;
             if (flag)
             {
-                TextPosition agjbfopcgmoggdjkcdlbnmjailheklmgpalb = this.KGNJCNNMIFPKALPOGAHDGCDKCMMDLDBDLILH.Last<_bi2.EPAFFDDCAEGGCPDGEEBEBADBOBLMGPDEPLEA>().AGJBFOPCGMOGGDJKCDLBNMJAILHEKLMGPALB;
-                bool flag2 = agjbfopcgmoggdjkcdlbnmjailheklmgpalb.line == this._ABH._ABI;
+                TextPosition _CGX = this._CGN.Last<_bi2._CGO>()._CGR;
+                bool flag2 = _CGX.line == this._ABH._ABI;
                 if (flag2)
                 {
-                    num = Math.Min(agjbfopcgmoggdjkcdlbnmjailheklmgpalb.index, text.Length);
+                    num = Math.Min(_CGX.index, text.Length);
                 }
             }
             while (i < num)
@@ -7009,7 +7001,7 @@ namespace AHO
         // Token: 0x060002D7 RID: 727 RVA: 0x0002F334 File Offset: 0x0002D534
         public void ReindentLines(int from, int to)
         {
-            bool flag = this.EEJFFFONEBHEFJKECHMCKDFAFABLNECBNBDO != null;
+            bool flag = this._CBB != null;
             if (!flag)
             {
                 this._ABQ.BeginEdit("Auto-indent");
@@ -7064,8 +7056,8 @@ namespace AHO
         // Token: 0x060002D8 RID: 728 RVA: 0x0002F544 File Offset: 0x0002D744
         private void UpdateArgumentsHint(bool canShow)
         {
-            this.DFEJMEJFBMCNDGKMAAEBPLKAAGIDNBHMMLFM = null;
-            this.DBPNPLAGPNIFADNFHOKFFCPKKIHHKOPIGFBG = -1;
+            this._CDS = null;
+            this._CBQ = -1;
             bool flag = this._ABH._ABI >= this._ABQ._AQQ.Length;
             if (!flag)
             {
@@ -7096,14 +7088,14 @@ namespace AHO
                         bool flag6 = _AGZ._AHB() == "argumentList";
                         if (flag6)
                         {
-                            this.DBPNPLAGPNIFADNFHOKFFCPKKIHHKOPIGFBG = (int)((syntaxToken.OOME._AIL + 1) / 2);
+                            this._CBQ = (int)((syntaxToken.OOME._AIL + 1) / 2);
                         }
                         else
                         {
                             bool flag7 = _AGZ._AHB() == "arguments";
                             if (flag7)
                             {
-                                this.DBPNPLAGPNIFADNFHOKFFCPKKIHHKOPIGFBG = 0;
+                                this._CBQ = 0;
                             }
                         }
                         while (_AGZ != null && _AGZ._AHB() != "arguments")
@@ -7111,7 +7103,7 @@ namespace AHO
                             bool flag8 = _AGZ._AHB() == "argument" || (_AGZ.OOME != null && _AGZ.OOME._AHB() == "argumentList");
                             if (flag8)
                             {
-                                this.DBPNPLAGPNIFADNFHOKFFCPKKIHHKOPIGFBG = (int)((_AGZ._AIL + 1) / 2);
+                                this._CBQ = (int)((_AGZ._AIL + 1) / 2);
                             }
                             bool flag9 = _AGZ._AHB() == "lambdaExpressionBody" || _AGZ._AHB() == "objectOrCollectionInitializer";
                             if (flag9)
@@ -7160,23 +7152,23 @@ namespace AHO
                                     bool flag17 = _AEM2.OOME != null;
                                     if (flag17)
                                     {
-                                        this.DFEJMEJFBMCNDGKMAAEBPLKAAGIDNBHMMLFM = _AEM2;
+                                        this._CDS = _AEM2;
                                     }
                                 }
                                 else
                                 {
-                                    this.DFEJMEJFBMCNDGKMAAEBPLKAAGIDNBHMMLFM = _AEM;
+                                    this._CDS = _AEM;
                                 }
                             }
                         }
                     }
                 }
-                bool flag18 = this.DFEJMEJFBMCNDGKMAAEBPLKAAGIDNBHMMLFM == null;
+                bool flag18 = this._CDS == null;
                 if (flag18)
                 {
-                    this.OOKEDGDAPFGOMCMDMNKICHAECDBNCBGJNMKN = null;
-                    this.EGKFACOBOCJNEILBKNNIKOJMKGJHNFAHPJDN = new TextPosition(-1, -1);
-                    bool flag19 = this.KBBCMMCMDLMOHHGNAPNIJGLHBLBGGPODLFEB != null;
+                    this._CGF = null;
+                    this._CGG = new TextPosition(-1, -1);
+                    bool flag19 = this._CBC != null;
                     if (flag19)
                     {
                         this.CloseArgumentsHint();
@@ -7187,86 +7179,86 @@ namespace AHO
                     bool flag20 = !canShow;
                     if (flag20)
                     {
-                        bool flag21 = this.EGKFACOBOCJNEILBKNNIKOJMKGJHNFAHPJDN.line >= 0 && (this.EGKFACOBOCJNEILBKNNIKOJMKGJHNFAHPJDN.line != this.DFEJMEJFBMCNDGKMAAEBPLKAAGIDNBHMMLFM.line || this.EGKFACOBOCJNEILBKNNIKOJMKGJHNFAHPJDN.index != this.DFEJMEJFBMCNDGKMAAEBPLKAAGIDNBHMMLFM._AJG());
+                        bool flag21 = this._CGG.line >= 0 && (this._CGG.line != this._CDS.line || this._CGG.index != this._CDS._AJG());
                         if (flag21)
                         {
                             this.CloseArgumentsHint();
                         }
                         else
                         {
-                            bool flag22 = this.KBBCMMCMDLMOHHGNAPNIJGLHBLBGGPODLFEB;
+                            bool flag22 = this._CBC;
                             if (flag22)
                             {
-                                this.KBBCMMCMDLMOHHGNAPNIJGLHBLBGGPODLFEB.BPFOKIKKJCELJLDEACHGMOGPJLKFLLDCCOLH(this.DBPNPLAGPNIFADNFHOKFFCPKKIHHKOPIGFBG);
-                                bool flag23 = this.GetSoftLineBreaks(this._ABH._ABI) != _bi2.BJBOLEFDMGLIONMHPMDJCJEKHJKIKHJHFGDC;
+                                this._CBC._CGI(this._CBQ);
+                                bool flag23 = this.GetSoftLineBreaks(this._ABH._ABI) != _bi2._CFX;
                                 if (flag23)
                                 {
-                                    this.KBBCMMCMDLMOHHGNAPNIJGLHBLBGGPODLFEB._AEW(true);
+                                    this._CBC._AEW(true);
                                 }
                                 else
                                 {
-                                    bool flag24 = this.EGKFACOBOCJNEILBKNNIKOJMKGJHNFAHPJDN.line < this._ABH._ABI;
+                                    bool flag24 = this._CGG.line < this._ABH._ABI;
                                     if (flag24)
                                     {
-                                        this.KBBCMMCMDLMOHHGNAPNIJGLHBLBGGPODLFEB._AEW(true);
+                                        this._CBC._AEW(true);
                                     }
                                 }
-                                bool flag25 = this.EEJFFFONEBHEFJKECHMCKDFAFABLNECBNBDO != null;
+                                bool flag25 = this._CBB != null;
                                 if (flag25)
                                 {
-                                    this.EEJFFFONEBHEFJKECHMCKDFAFABLNECBNBDO._AEW(!this.KBBCMMCMDLMOHHGNAPNIJGLHBLBGGPODLFEB.OLLEJPDNBBODLEICOBPMPIPPIJBOBOOHEKFP());
+                                    this._CBB._AEW(!this._CBC._CBD());
                                 }
                             }
                         }
-                        this.DFEJMEJFBMCNDGKMAAEBPLKAAGIDNBHMMLFM = null;
+                        this._CDS = null;
                     }
                     else
                     {
-                        bool flag26 = this.DFEJMEJFBMCNDGKMAAEBPLKAAGIDNBHMMLFM._AAB() == null;
+                        bool flag26 = this._CDS._AAB() == null;
                         if (flag26)
                         {
-                            _bc9.ResolveNode(this.DFEJMEJFBMCNDGKMAAEBPLKAAGIDNBHMMLFM.OOME.OOME);
+                            _bc9.ResolveNode(this._CDS.OOME.OOME);
                         }
-                        bool flag27 = this.OOKEDGDAPFGOMCMDMNKICHAECDBNCBGJNMKN == this.DFEJMEJFBMCNDGKMAAEBPLKAAGIDNBHMMLFM._AAB();
+                        bool flag27 = this._CGF == this._CDS._AAB();
                         if (flag27)
                         {
-                            bool flag28 = this.EGKFACOBOCJNEILBKNNIKOJMKGJHNFAHPJDN.line != this.DFEJMEJFBMCNDGKMAAEBPLKAAGIDNBHMMLFM.line || this.EGKFACOBOCJNEILBKNNIKOJMKGJHNFAHPJDN.index != this.DFEJMEJFBMCNDGKMAAEBPLKAAGIDNBHMMLFM._AJG();
+                            bool flag28 = this._CGG.line != this._CDS.line || this._CGG.index != this._CDS._AJG();
                             if (flag28)
                             {
                                 this.CloseArgumentsHint();
                             }
-                            bool flag29 = this.KBBCMMCMDLMOHHGNAPNIJGLHBLBGGPODLFEB;
+                            bool flag29 = this._CBC;
                             if (flag29)
                             {
-                                this.KBBCMMCMDLMOHHGNAPNIJGLHBLBGGPODLFEB.BPFOKIKKJCELJLDEACHGMOGPJLKFLLDCCOLH(this.DBPNPLAGPNIFADNFHOKFFCPKKIHHKOPIGFBG);
+                                this._CBC._CGI(this._CBQ);
                             }
-                            this.DFEJMEJFBMCNDGKMAAEBPLKAAGIDNBHMMLFM = null;
+                            this._CDS = null;
                         }
                         else
                         {
-                            bool flag30 = this.KBBCMMCMDLMOHHGNAPNIJGLHBLBGGPODLFEB;
+                            bool flag30 = this._CBC;
                             if (flag30)
                             {
-                                this.KBBCMMCMDLMOHHGNAPNIJGLHBLBGGPODLFEB.BPFOKIKKJCELJLDEACHGMOGPJLKFLLDCCOLH(this.DBPNPLAGPNIFADNFHOKFFCPKKIHHKOPIGFBG);
+                                this._CBC._CGI(this._CBQ);
                             }
                             else
                             {
-                                bool flag31 = this.EGKFACOBOCJNEILBKNNIKOJMKGJHNFAHPJDN.line == this.DFEJMEJFBMCNDGKMAAEBPLKAAGIDNBHMMLFM.line && this.EGKFACOBOCJNEILBKNNIKOJMKGJHNFAHPJDN.index == this.DFEJMEJFBMCNDGKMAAEBPLKAAGIDNBHMMLFM._AJG();
+                                bool flag31 = this._CGG.line == this._CDS.line && this._CGG.index == this._CDS._AJG();
                                 if (flag31)
                                 {
-                                    this.DFEJMEJFBMCNDGKMAAEBPLKAAGIDNBHMMLFM = null;
+                                    this._CDS = null;
                                     return;
                                 }
                             }
-                            bool flag32 = this.KBBCMMCMDLMOHHGNAPNIJGLHBLBGGPODLFEB && this.OOKEDGDAPFGOMCMDMNKICHAECDBNCBGJNMKN != null;
+                            bool flag32 = this._CBC && this._CGF != null;
                             if (flag32)
                             {
-                                _bh4 _AAH = this.OOKEDGDAPFGOMCMDMNKICHAECDBNCBGJNMKN;
+                                _bh4 _AAH = this._CGF;
                                 while (_AAH != null && _AAH._AT == SymbolKind.Method)
                                 {
                                     _AAH = _AAH._AO;
                                 }
-                                _bh4 _AAH2 = this.DFEJMEJFBMCNDGKMAAEBPLKAAGIDNBHMMLFM._AAB();
+                                _bh4 _AAH2 = this._CDS._AAB();
                                 while (_AAH2 != null && _AAH2._AT == SymbolKind.Method)
                                 {
                                     _AAH2 = _AAH2._AO;
@@ -7274,13 +7266,13 @@ namespace AHO
                                 bool flag33 = _AAH == _AAH2;
                                 if (flag33)
                                 {
-                                    this.DFEJMEJFBMCNDGKMAAEBPLKAAGIDNBHMMLFM = null;
+                                    this._CDS = null;
                                     return;
                                 }
                             }
-                            this.MEBADINKGFMGNLFBPFEOMIEJLMDPMOLFCOAB = this.GetTokenRect(this.DFEJMEJFBMCNDGKMAAEBPLKAAGIDNBHMMLFM._ACX);
-                            this.MEBADINKGFMGNLFBPFEOMIEJLMDPMOLFCOAB.y = this.MEBADINKGFMGNLFBPFEOMIEJLMDPMOLFCOAB.y - 2f;
-                            this.MEBADINKGFMGNLFBPFEOMIEJLMDPMOLFCOAB.height = this.MEBADINKGFMGNLFBPFEOMIEJLMDPMOLFCOAB.height + 4f;
+                            this._CGH = this.GetTokenRect(this._CDS._ACX);
+                            this._CGH.y = this._CGH.y - 2f;
+                            this._CGH.height = this._CGH.height + 4f;
                         }
                     }
                 }
@@ -7290,17 +7282,17 @@ namespace AHO
         // Token: 0x060002D9 RID: 729 RVA: 0x0002FBCC File Offset: 0x0002DDCC
         private void DrawPing(float indent, Rect rcPing, bool bgOnly)
         {
-            bool flag = this._ABT.KCCBAEPPGOEMGHPDPNEBIICOFIIMDOFPPNPP == null;
+            bool flag = this._ABT._CFU == null;
             if (!flag)
             {
-                float num = (1f - this.PLNPCENGAKFOMJMLMFIMLBMEBCMJAICLKBCC) * 64f;
+                float num = (1f - this._CGY) * 64f;
                 bool flag2 = num > 0f && num < 64f;
                 if (flag2)
                 {
                     rcPing.x += indent;
-                    GUIStyle kccbaeppgoemghpdpnebiicofiimdofppnpp = this._ABT.KCCBAEPPGOEMGHPDPNEBIICOFIIMDOFPPNPP;
-                    int left = kccbaeppgoemghpdpnebiicofiimdofppnpp.padding.left;
-                    kccbaeppgoemghpdpnebiicofiimdofppnpp.padding.left = 0;
+                    GUIStyle _CGZ = this._ABT._CFU;
+                    int left = _CGZ.padding.left;
+                    _CGZ.padding.left = 0;
                     Color color = GUI.color;
                     Color backgroundColor = GUI.backgroundColor;
                     bool flag3 = num > 4f;
@@ -7309,21 +7301,21 @@ namespace AHO
                         bool flag4 = !bgOnly;
                         if (flag4)
                         {
-                            GUI.backgroundColor = new Color(this.FDPCNBHGMAKONNHGIDPBGOCAAFAJOMNOANAH.r, this.FDPCNBHGMAKONNHGIDPBGOCAAFAJOMNOANAH.g, this.FDPCNBHGMAKONNHGIDPBGOCAAFAJOMNOANAH.b, this.FDPCNBHGMAKONNHGIDPBGOCAAFAJOMNOANAH.a * (8f - num) * 0.125f);
+                            GUI.backgroundColor = new Color(this._CHA.r, this._CHA.g, this._CHA.b, this._CHA.a * (8f - num) * 0.125f);
                         }
                         else
                         {
-                            GUI.backgroundColor = this.FDPCNBHGMAKONNHGIDPBGOCAAFAJOMNOANAH;
+                            GUI.backgroundColor = this._CHA;
                         }
                         bool flag5 = num > 56f;
                         if (flag5)
                         {
-                            GUI.color = new Color(color.r, color.g, color.b, this.FDPCNBHGMAKONNHGIDPBGOCAAFAJOMNOANAH.a * (64f - num) * 0.125f);
+                            GUI.color = new Color(color.r, color.g, color.b, this._CHA.a * (64f - num) * 0.125f);
                         }
                     }
                     else
                     {
-                        GUI.backgroundColor = this.FDPCNBHGMAKONNHGIDPBGOCAAFAJOMNOANAH;
+                        GUI.backgroundColor = this._CHA;
                     }
                     Matrix4x4 matrix = GUI.matrix;
                     bool flag6 = num < 4f;
@@ -7333,9 +7325,9 @@ namespace AHO
                         Vector2 center = rcPing.center;
                         GUIUtility.ScaleAroundPivot(new Vector2(num2, num2), center);
                     }
-                    kccbaeppgoemghpdpnebiicofiimdofppnpp.Draw(rcPing, bgOnly ? GUIContent.none : this.ALEFBKKGNIEBNDEELINNCPMNIEFPJDMODNML, false, false, false, false);
+                    _CGZ.Draw(rcPing, bgOnly ? GUIContent.none : this._CHB, false, false, false, false);
                     GUI.matrix = matrix;
-                    kccbaeppgoemghpdpnebiicofiimdofppnpp.padding.left = left;
+                    _CGZ.padding.left = left;
                     GUI.color = color;
                     GUI.backgroundColor = backgroundColor;
                 }
@@ -7539,7 +7531,7 @@ namespace AHO
                         this._ABH = _ATD;
                     }
                     this._ATM = _bi2._ATN;
-                    this.DJLIKNMAIPOALAMANDOGJHEODLHBGBBNBMIA = false;
+                    this._CGW = false;
                     this._ATO = true;
                     this._ABQ.EndEdit();
                     this.AddRecentLocation(1, true);
@@ -7564,8 +7556,8 @@ namespace AHO
             int num = this._ABQ.FirstNonWhitespace(line - 1);
             int num2 = this.CharIndexToColumn(num, line - 1);
             string text = this._ABQ.FLOg[line - 1];
-            this.ALEFBKKGNIEBNDEELINNCPMNIEFPJDMODNML.text = text.Trim(_bi2.JHCFMJHGFHIGMNHFMLDCNLHAMGHANGOPFJNN);
-            bool flag3 = !string.IsNullOrEmpty(this.ALEFBKKGNIEBNDEELINNCPMNIEFPJDMODNML.text);
+            this._CHB.text = text.Trim(_bi2._CHC);
+            bool flag3 = !string.IsNullOrEmpty(this._CHB.text);
             if (flag3)
             {
                 int length = text.Length;
@@ -7609,13 +7601,13 @@ namespace AHO
                     this._ATL(null);
                 }
             }
-            this.PLNPCENGAKFOMJMLMFIMLBMEBCMJAICLKBCC = 1f;
-            this.CEIOIDHACNPFGACJAEPBFOKGBDKAJDNJBOHO = _bi2._ATN;
-            this.FDPCNBHGMAKONNHGIDPBGOCAAFAJOMNOANAH = _bi2._ALN;
-            this.EKIIIOBHDBPDDBJFCMEGHBHLMOEGCCODHDFF.x = this.GetCharXOffset(num, this._ABH._ABI, 0);
-            this.EKIIIOBHDBPDDBJFCMEGHBHLMOEGCCODHDFF.y = this.GetLineOffset(this._ABH._ABI);
-            this.EKIIIOBHDBPDDBJFCMEGHBHLMOEGCCODHDFF.xMax = this.GetCharXOffset(num + this.ALEFBKKGNIEBNDEELINNCPMNIEFPJDMODNML.text.Length, this._ABH._ABI, 0);
-            this.EKIIIOBHDBPDDBJFCMEGHBHLMOEGCCODHDFF.height = this._AEY().y;
+            this._CGY = 1f;
+            this._CHD = _bi2._ATN;
+            this._CHA = _bi2._ALN;
+            this._CHE.x = this.GetCharXOffset(num, this._ABH._ABI, 0);
+            this._CHE.y = this.GetLineOffset(this._ABH._ABI);
+            this._CHE.xMax = this.GetCharXOffset(num + this._CHB.text.Length, this._ABH._ABI, 0);
+            this._CHE.height = this._AEY().y;
             this._ATM = _bi2._ATN;
             this.Repaint();
         }
@@ -7632,8 +7624,8 @@ namespace AHO
             }
             else
             {
-                int pkhkdckmdjbmelkjcjigdbppeickfgfokpia = _bc5.Instance()._AOH;
-                bool flag3 = pkhkdckmdjbmelkjcjigdbppeickfgfokpia < _AOL.Count - 1;
+                int _CHF = _bc5.Instance()._AOH;
+                bool flag3 = _CHF < _AOL.Count - 1;
                 if (flag3)
                 {
                     flag2 = true;
@@ -7666,8 +7658,8 @@ namespace AHO
             else
             {
                 List<_ba3> _AOL = _bc5.Instance()._AOI;
-                int pkhkdckmdjbmelkjcjigdbppeickfgfokpia = _bc5.Instance()._AOH;
-                bool flag3 = _AOL.Count <= pkhkdckmdjbmelkjcjigdbppeickfgfokpia;
+                int _CHF = _bc5.Instance()._AOH;
+                bool flag3 = _AOL.Count <= _CHF;
                 if (flag3)
                 {
                     _bc5.AddRecentLocation(this._AKQ(), this._ABH, false);
@@ -7675,9 +7667,9 @@ namespace AHO
                 }
                 else
                 {
-                    _ba3 _AOJ = _AOL[_AOL.Count - 1 - pkhkdckmdjbmelkjcjigdbppeickfgfokpia];
+                    _ba3 _AOJ = _AOL[_AOL.Count - 1 - _CHF];
                     int num = Mathf.Abs(this._ABH._ABI - _AOJ._ABI);
-                    _ba3 _AOJ2 = ((pkhkdckmdjbmelkjcjigdbppeickfgfokpia > 0) ? _AOL[_AOL.Count - pkhkdckmdjbmelkjcjigdbppeickfgfokpia] : null);
+                    _ba3 _AOJ2 = ((_CHF > 0) ? _AOL[_AOL.Count - _CHF] : null);
                     int num2 = ((_AOJ2 != null) ? Mathf.Abs(this._ABH._ABI - _AOJ2._ABI) : (-1));
                     bool flag4 = (_AOJ._ADF != this._AKQ() || (num >= minLinesDistance && (num > 0 || this._ABH._AEU != _AOJ.JIKB))) && (_AOJ2 == null || _AOJ2._ADF != this._AKQ() || (num2 >= minLinesDistance && (num2 > 0 || this._ABH._AEU != _AOJ2.JIKB)));
                     if (flag4)
@@ -7728,7 +7720,7 @@ namespace AHO
             }
             else
             {
-                _bi2.IAGMGPLNBONFCCINLNNELHHBEJPIHBHHPGHA = false;
+                _bi2._CDB = false;
                 _bb6.OpenAssetInTab(_AOJ2._ADF, _AOJ2._ABI, _AOJ2.JIKB, 0, !_bg8.EAIK.GNIO());
             }
         }
@@ -7746,20 +7738,20 @@ namespace AHO
                 _ATF = num
             };
             this.ValidateCaret(ref this._ABH);
-            bool flag = !this.FDILMOBIKGLOAFGDFHGBCLBHNPNHKLOKDCNN;
+            bool flag = !this._CGV;
             if (flag)
             {
                 this._ATO = true;
                 this._ATM = _bi2._ATN;
-                this.ALEFBKKGNIEBNDEELINNCPMNIEFPJDMODNML = new GUIContent();
-                this.FDPCNBHGMAKONNHGIDPBGOCAAFAJOMNOANAH = _bi2._ALN;
-                this.FDPCNBHGMAKONNHGIDPBGOCAAFAJOMNOANAH.a = 0.4f;
-                this.PLNPCENGAKFOMJMLMFIMLBMEBCMJAICLKBCC = 1f;
-                this.CEIOIDHACNPFGACJAEPBFOKGBDKAJDNJBOHO = _bi2._ATN;
-                this.EKIIIOBHDBPDDBJFCMEGHBHLMOEGCCODHDFF.x = this._AEY().x * (float)this._ABH._ATG - 3f;
-                this.EKIIIOBHDBPDDBJFCMEGHBHLMOEGCCODHDFF.y = this.GetLineOffset(this._ABH._ABI);
-                this.EKIIIOBHDBPDDBJFCMEGHBHLMOEGCCODHDFF.width = 6f;
-                this.EKIIIOBHDBPDDBJFCMEGHBHLMOEGCCODHDFF.height = this._AEY().y;
+                this._CHB = new GUIContent();
+                this._CHA = _bi2._ALN;
+                this._CHA.a = 0.4f;
+                this._CGY = 1f;
+                this._CHD = _bi2._ATN;
+                this._CHE.x = this._AEY().x * (float)this._ABH._ATG - 3f;
+                this._CHE.y = this.GetLineOffset(this._ABH._ABI);
+                this._CHE.width = 6f;
+                this._CHE.height = this._AEY().y;
                 this.Repaint();
             }
         }
@@ -8261,14 +8253,14 @@ namespace AHO
                 bool flag = _AGZ == null;
                 if (!flag)
                 {
-                    _bc1 cojbeknpolcfmdflbkcmhcjkjpdhcmkmgdof = _AGZ._AJO();
-                    _bc1 cojbeknpolcfmdflbkcmhcjkjpdhcmkmgdof2 = cojbeknpolcfmdflbkcmhcjkjpdhcmkmgdof & _bc1.SymbolDeclarationsMask;
-                    bool flag2 = _AGZ.EFI != null && (cojbeknpolcfmdflbkcmhcjkjpdhcmkmgdof2 == _bc1.ExternAlias || cojbeknpolcfmdflbkcmhcjkjpdhcmkmgdof2 == _bc1.NamespaceDeclaration || cojbeknpolcfmdflbkcmhcjkjpdhcmkmgdof2 == _bc1.ClassDeclaration || cojbeknpolcfmdflbkcmhcjkjpdhcmkmgdof2 == _bc1.StructDeclaration || cojbeknpolcfmdflbkcmhcjkjpdhcmkmgdof2 == _bc1.InterfaceDeclaration || cojbeknpolcfmdflbkcmhcjkjpdhcmkmgdof2 == _bc1.EnumDeclaration || cojbeknpolcfmdflbkcmhcjkjpdhcmkmgdof2 == _bc1.DelegateDeclaration);
+                    _bc1 _CHG = _AGZ._AJO();
+                    _bc1 _CHG2 = _CHG & _bc1.SymbolDeclarationsMask;
+                    bool flag2 = _AGZ.EFI != null && (_CHG2 == _bc1.ExternAlias || _CHG2 == _bc1.NamespaceDeclaration || _CHG2 == _bc1.ClassDeclaration || _CHG2 == _bc1.StructDeclaration || _CHG2 == _bc1.InterfaceDeclaration || _CHG2 == _bc1.EnumDeclaration || _CHG2 == _bc1.DelegateDeclaration);
                     if (flag2)
                     {
                         action(_AGZ.EFI);
                     }
-                    bool flag3 = (cojbeknpolcfmdflbkcmhcjkjpdhcmkmgdof & _bc1.ScopesMask) == _bc1.None;
+                    bool flag3 = (_CHG & _bc1.ScopesMask) == _bc1.None;
                     if (flag3)
                     {
                         _bi2.EnumScopeDeclarations(_AGZ, action);
@@ -8316,11 +8308,11 @@ namespace AHO
                 string text = null;
                 for (_bm6 _AQI = declaration._AJW; _AQI != null; _AQI = _AQI._AMJ())
                 {
-                    _be7 hebiehngcbipegicgdnhcaaoamfabehlcmkf = _AQI as _be7;
-                    bool flag3 = hebiehngcbipegicgdnhcaaoamfabehlcmkf != null;
+                    _be7 _CHH = _AQI as _be7;
+                    bool flag3 = _CHH != null;
                     if (flag3)
                     {
-                        text = hebiehngcbipegicgdnhcaaoamfabehlcmkf._AWJ;
+                        text = _CHH._AWJ;
                         break;
                     }
                 }
@@ -8363,11 +8355,11 @@ namespace AHO
                 string cuPath = null;
                 for (_bm6 _AQI = declaration._AJW; _AQI != null; _AQI = _AQI._AMJ())
                 {
-                    _be7 hebiehngcbipegicgdnhcaaoamfabehlcmkf = _AQI as _be7;
-                    bool flag3 = hebiehngcbipegicgdnhcaaoamfabehlcmkf != null;
+                    _be7 _CHH = _AQI as _be7;
+                    bool flag3 = _CHH != null;
                     if (flag3)
                     {
-                        cuPath = hebiehngcbipegicgdnhcaaoamfabehlcmkf._AWJ;
+                        cuPath = _CHH._AWJ;
                         break;
                     }
                 }
@@ -8507,8 +8499,8 @@ namespace AHO
                         }
                         else
                         {
-                            bool ppfhkdollcggpjafekhmnabknmlonajanclj = _AOS.PPFHKDOLLCGGPJAFEKHMNABKNMLONAJANCLJ;
-                            if (ppfhkdollcggpjafekhmnabknmlonajanclj)
+                            bool _CHI = _AOS._CHJ;
+                            if (_CHI)
                             {
                                 List<FKI> declarations = symbolType._AEI;
                                 bool flag11 = declarations == null || declarations.Count == 0;
@@ -8585,7 +8577,7 @@ namespace AHO
         // Token: 0x060002EF RID: 751 RVA: 0x00031D18 File Offset: 0x0002FF18
         private void OpenInNewTab()
         {
-            bool flag = this.OBGEMALIEGDPMEGFAOJCKCIMLAKLMFFNDLKH != null;
+            bool flag = this._CHK != null;
             if (flag)
             {
                 _bb6.OpenAssetInTab(this._AKQ());
@@ -8627,10 +8619,10 @@ namespace AHO
         // Token: 0x060002F2 RID: 754 RVA: 0x00031DD8 File Offset: 0x0002FFD8
         private void SearchPrevious()
         {
-            bool flag = this.KEGJHDFHDLGNNJHGDCGACGKHOGLEMOAPJFAH != this._ABQ._ASJ;
+            bool flag = this._CHL != this._ABQ._ASJ;
             if (flag)
             {
-                this.SetSearchText(this.FEDKNBJPGLNNBLCBJGPAICAGEHEAFOEDMJOD);
+                this.SetSearchText(this._CCR);
             }
             GCE._AFA _ATD = this._ABH;
             bool flag2 = this._ATW() != null && this._ATW() < this._ABH;
@@ -8638,37 +8630,37 @@ namespace AHO
             {
                 _ATD = this._ATW();
             }
-            this.HNJLNADMDKDENNBDPEGJAIJBFAEKFABKLGJD = _bi2.FindFirstIndexGreaterThanOrEqualTo<GCE._AFA>(this.DFBJCNCLBOHCOOEENDPAPNJEPKICJHFHLHFH, _ATD) - 1;
-            this.HNJLNADMDKDENNBDPEGJAIJBFAEKFABKLGJD = Math.Min(this.DFBJCNCLBOHCOOEENDPAPNJEPKICJHFHLHFH.Count - 1, this.HNJLNADMDKDENNBDPEGJAIJBFAEKFABKLGJD);
-            bool flag3 = this.HNJLNADMDKDENNBDPEGJAIJBFAEKFABKLGJD == -1;
+            this._CHM = _bi2.FindFirstIndexGreaterThanOrEqualTo<GCE._AFA>(this._CHN, _ATD) - 1;
+            this._CHM = Math.Min(this._CHN.Count - 1, this._CHM);
+            bool flag3 = this._CHM == -1;
             if (flag3)
             {
-                bool flag4 = this.IEBKNKNJPHMNKJBGPLICNBIKHCFFODECEOHG && _bg8._BCB;
+                bool flag4 = this._CHO && _bg8._BCB;
                 if (flag4)
                 {
-                    this.HNJLNADMDKDENNBDPEGJAIJBFAEKFABKLGJD = this.DFBJCNCLBOHCOOEENDPAPNJEPKICJHFHLHFH.Count - 1;
-                    this.IEBKNKNJPHMNKJBGPLICNBIKHCFFODECEOHG = this.DFBJCNCLBOHCOOEENDPAPNJEPKICJHFHLHFH.Count == 1;
+                    this._CHM = this._CHN.Count - 1;
+                    this._CHO = this._CHN.Count == 1;
                 }
                 else
                 {
-                    this.HNJLNADMDKDENNBDPEGJAIJBFAEKFABKLGJD = 0;
-                    this.IEBKNKNJPHMNKJBGPLICNBIKHCFFODECEOHG = true;
+                    this._CHM = 0;
+                    this._CHO = true;
                 }
             }
             else
             {
-                this.IEBKNKNJPHMNKJBGPLICNBIKHCFFODECEOHG = this.DFBJCNCLBOHCOOEENDPAPNJEPKICJHFHLHFH.Count == 1;
+                this._CHO = this._CHN.Count == 1;
             }
-            this.ShowSearchResult(this.HNJLNADMDKDENNBDPEGJAIJBFAEKFABKLGJD);
+            this.ShowSearchResult(this._CHM);
         }
 
         // Token: 0x060002F3 RID: 755 RVA: 0x00031F00 File Offset: 0x00030100
         private void SearchNext()
         {
-            bool flag = this.KEGJHDFHDLGNNJHGDCGACGKHOGLEMOAPJFAH != this._ABQ._ASJ;
+            bool flag = this._CHL != this._ABQ._ASJ;
             if (flag)
             {
-                this.SetSearchText(this.FEDKNBJPGLNNBLCBJGPAICAGEHEAFOEDMJOD);
+                this.SetSearchText(this._CCR);
             }
             GCE._AFA _ATD = this._ABH;
             bool flag2 = this._ATW() != null && this._ATW() > this._ABH;
@@ -8676,57 +8668,57 @@ namespace AHO
             {
                 _ATD = this._ATW();
             }
-            this.HNJLNADMDKDENNBDPEGJAIJBFAEKFABKLGJD = _bi2.FindFirstIndexGreaterThanOrEqualTo<GCE._AFA>(this.DFBJCNCLBOHCOOEENDPAPNJEPKICJHFHLHFH, _ATD);
-            this.HNJLNADMDKDENNBDPEGJAIJBFAEKFABKLGJD = Math.Max(0, this.HNJLNADMDKDENNBDPEGJAIJBFAEKFABKLGJD);
-            bool flag3 = this.HNJLNADMDKDENNBDPEGJAIJBFAEKFABKLGJD >= this.DFBJCNCLBOHCOOEENDPAPNJEPKICJHFHLHFH.Count;
+            this._CHM = _bi2.FindFirstIndexGreaterThanOrEqualTo<GCE._AFA>(this._CHN, _ATD);
+            this._CHM = Math.Max(0, this._CHM);
+            bool flag3 = this._CHM >= this._CHN.Count;
             if (flag3)
             {
-                bool flag4 = this.IEBKNKNJPHMNKJBGPLICNBIKHCFFODECEOHG && _bg8._BCB;
+                bool flag4 = this._CHO && _bg8._BCB;
                 if (flag4)
                 {
-                    this.HNJLNADMDKDENNBDPEGJAIJBFAEKFABKLGJD = 0;
-                    this.IEBKNKNJPHMNKJBGPLICNBIKHCFFODECEOHG = this.DFBJCNCLBOHCOOEENDPAPNJEPKICJHFHLHFH.Count == 1;
+                    this._CHM = 0;
+                    this._CHO = this._CHN.Count == 1;
                 }
                 else
                 {
-                    this.HNJLNADMDKDENNBDPEGJAIJBFAEKFABKLGJD = this.DFBJCNCLBOHCOOEENDPAPNJEPKICJHFHLHFH.Count - 1;
-                    this.IEBKNKNJPHMNKJBGPLICNBIKHCFFODECEOHG = true;
+                    this._CHM = this._CHN.Count - 1;
+                    this._CHO = true;
                 }
             }
             else
             {
-                this.IEBKNKNJPHMNKJBGPLICNBIKHCFFODECEOHG = this.DFBJCNCLBOHCOOEENDPAPNJEPKICJHFHLHFH.Count == 1;
+                this._CHO = this._CHN.Count == 1;
             }
-            this.ShowSearchResult(this.HNJLNADMDKDENNBDPEGJAIJBFAEKFABKLGJD);
+            this.ShowSearchResult(this._CHM);
         }
 
         // Token: 0x060002F4 RID: 756 RVA: 0x00032024 File Offset: 0x00030224
         private void ShowSearchResult(int index)
         {
-            bool flag = !this.DJLIKNMAIPOALAMANDOGJHEODLHBGBBNBMIA;
+            bool flag = !this._CGW;
             if (flag)
             {
-                this.DJLIKNMAIPOALAMANDOGJHEODLHBGBBNBMIA = true;
+                this._CGW = true;
                 this.AddRecentLocation(0, true);
             }
-            bool flag2 = this.KEGJHDFHDLGNNJHGDCGACGKHOGLEMOAPJFAH != this._ABQ._ASJ;
+            bool flag2 = this._CHL != this._ABQ._ASJ;
             if (flag2)
             {
-                this.SetSearchText(this.FEDKNBJPGLNNBLCBJGPAICAGEHEAFOEDMJOD);
+                this.SetSearchText(this._CCR);
             }
-            bool flag3 = index >= 0 && index < this.DFBJCNCLBOHCOOEENDPAPNJEPKICJHFHLHFH.Count;
+            bool flag3 = index >= 0 && index < this._CHN.Count;
             if (flag3)
             {
-                this.PingText(this.DFBJCNCLBOHCOOEENDPAPNJEPKICJHFHLHFH[index], this.FEDKNBJPGLNNBLCBJGPAICAGEHEAFOEDMJOD.Length, this.IEBKNKNJPHMNKJBGPLICNBIKHCFFODECEOHG ? _bi2.LPOHMAKKMINPLMFKLACCFKJDLPMPAPBBAECP : _bi2._ALN);
+                this.PingText(this._CHN[index], this._CCR.Length, this._CHO ? _bi2._CHP : _bi2._ALN);
             }
         }
 
         // Token: 0x060002F5 RID: 757 RVA: 0x000320C8 File Offset: 0x000302C8
         private int CharIndexToColumn(int charIndex, int line)
         {
-            bool bopcdiiiaacdailgpofhgpkbbolaifbdfado = this.BOPCDIIIAACDAILGPOFHGPKBBOLAIFBDFADO;
+            bool _CGE = this._CCH;
             int num2;
-            if (bopcdiiiaacdailgpofhgpkbbolaifbdfado)
+            if (_CGE)
             {
                 List<int> softLineBreaks = this.GetSoftLineBreaks(line);
                 int num = _bi2.FindFirstIndexGreaterThanOrEqualTo<int>(softLineBreaks, charIndex);
@@ -8764,13 +8756,13 @@ namespace AHO
             };
             this._ATM = _bi2._ATN;
             Vector2 vector = this.BufferToViewPosition(this._ATW());
-            this.EKIIIOBHDBPDDBJFCMEGHBHLMOEGCCODHDFF = new Rect(vector.x, vector.y + this.GetLineOffset(this._ATW()._ABI), this.GetTextWidth(this._ATW()._ABI, this._ATW()._AEU, num, vector.x), this._AEY().y);
-            int kggnbkifblghnondpjanhfhhhjflkghelefk = this._ATW()._AEU;
-            this.PLNPCENGAKFOMJMLMFIMLBMEBCMJAICLKBCC = 1f;
-            this.CEIOIDHACNPFGACJAEPBFOKGBDKAJDNJBOHO = _bi2._ATN;
-            numChars = Mathf.Min(numChars, text.Length - kggnbkifblghnondpjanhfhhhjflkghelefk);
-            this.ALEFBKKGNIEBNDEELINNCPMNIEFPJDMODNML.text = text.Substring(kggnbkifblghnondpjanhfhhhjflkghelefk, numChars);
-            this.FDPCNBHGMAKONNHGIDPBGOCAAFAJOMNOANAH = color;
+            this._CHE = new Rect(vector.x, vector.y + this.GetLineOffset(this._ATW()._ABI), this.GetTextWidth(this._ATW()._ABI, this._ATW()._AEU, num, vector.x), this._AEY().y);
+            int _CHQ = this._ATW()._AEU;
+            this._CGY = 1f;
+            this._CHD = _bi2._ATN;
+            numChars = Mathf.Min(numChars, text.Length - _CHQ);
+            this._CHB.text = text.Substring(_CHQ, numChars);
+            this._CHA = color;
             this.Repaint();
         }
 
@@ -8881,14 +8873,14 @@ namespace AHO
         {
             if (forText)
             {
-                _bi2.NEJDBEMCGLKCAHENKLCFDOMOFGNHCBAIIDLF = _bi2.BPDG[themeIndex];
-                _bi2.ApplyTheme(_bi2.EMGEKEIEHPNEFMOMMCIFEEGIFJDEJFOKPAFM, _bi2.BPDG[themeIndex]);
+                _bi2._CEI = _bi2.BPDG[themeIndex];
+                _bi2.ApplyTheme(_bi2._CCM, _bi2.BPDG[themeIndex]);
                 _bg8._BBX._AIF(_bi2.BGBI[themeIndex]);
             }
             else
             {
-                _bi2.LMHCAPKMBCKPJCOFDJBKMEFJDCENENGPPKKN = _bi2.BPDG[themeIndex];
-                _bi2.ApplyTheme(_bi2.FKIPBDDJJKDBAABDMLPKIGEAKBOODIOIIJEE, _bi2.BPDG[themeIndex]);
+                _bi2._CEJ = _bi2.BPDG[themeIndex];
+                _bi2.ApplyTheme(_bi2._CCN, _bi2.BPDG[themeIndex]);
                 _bg8._BBW._AIF(_bi2.BGBI[themeIndex]);
             }
             _bi2.RepaintAllInstances();
@@ -8899,97 +8891,97 @@ namespace AHO
         internal static void ResetFontSize()
         {
             _bg8._AEP._AIF(-2);
-            _bi2.PJOMAIJGCAPMFLENCDNIAPJJKNGLFDICIFLL = true;
-            _bi2.LAMCCIBPLNNJDOIKIKNLEKKMPAEIIAHGEGDH = true;
-            bool flag = _bi2.FKIPBDDJJKDBAABDMLPKIGEAKBOODIOIIJEE._ABV != null;
+            _bi2._CDZ = true;
+            _bi2._CDY = true;
+            bool flag = _bi2._CCN._ABV != null;
             if (flag)
             {
-                _bi2.FKIPBDDJJKDBAABDMLPKIGEAKBOODIOIIJEE._ABV.fontSize = 0;
-                _bi2.FKIPBDDJJKDBAABDMLPKIGEAKBOODIOIIJEE.MLINBOOFJJFOOJDFIODGPBCGFAFGFGHIINAK.fontSize = 0;
-                _bi2.FKIPBDDJJKDBAABDMLPKIGEAKBOODIOIIJEE.LPMHKIAKCIJCOALOPOKIGFPOBAHPLGHMDGJE.fontSize = 0;
-                _bi2.FKIPBDDJJKDBAABDMLPKIGEAKBOODIOIIJEE._ACK.fontSize = 0;
-                _bi2.FKIPBDDJJKDBAABDMLPKIGEAKBOODIOIIJEE._ACF.fontSize = 0;
-                _bi2.FKIPBDDJJKDBAABDMLPKIGEAKBOODIOIIJEE._ACN.fontSize = 0;
-                _bi2.FKIPBDDJJKDBAABDMLPKIGEAKBOODIOIIJEE._ACB.fontSize = 0;
-                _bi2.FKIPBDDJJKDBAABDMLPKIGEAKBOODIOIIJEE._ACE.fontSize = 0;
-                _bi2.FKIPBDDJJKDBAABDMLPKIGEAKBOODIOIIJEE.FKNGDNMIFFNDKLBIMPEOABJDFILGGHFFEKNM.fontSize = 0;
-                _bi2.FKIPBDDJJKDBAABDMLPKIGEAKBOODIOIIJEE._ACC.fontSize = 0;
-                _bi2.FKIPBDDJJKDBAABDMLPKIGEAKBOODIOIIJEE.PBOJOMJKIBIKNDAOLEDPDHJIAOCOCDFBCPMG.fontSize = 0;
-                _bi2.FKIPBDDJJKDBAABDMLPKIGEAKBOODIOIIJEE.JMJPFJGGIEEPNKMMFKFKBMEALOBACMLKKGDD.fontSize = 0;
-                _bi2.FKIPBDDJJKDBAABDMLPKIGEAKBOODIOIIJEE.IDEBBOAIFDBCFICJJCOCOIBKDOPNMGADPJBI.fontSize = 0;
-                _bi2.FKIPBDDJJKDBAABDMLPKIGEAKBOODIOIIJEE.OFHACCJKFEDEPPHBLPBAGNDAFFAJECCJDKBK.fontSize = 0;
-                _bi2.FKIPBDDJJKDBAABDMLPKIGEAKBOODIOIIJEE.KCCBAEPPGOEMGHPDPNEBIICOFIIMDOFPPNPP.fontSize = 0;
-                _bi2.FKIPBDDJJKDBAABDMLPKIGEAKBOODIOIIJEE._ABV.fontStyle = 0;
-                _bi2.FKIPBDDJJKDBAABDMLPKIGEAKBOODIOIIJEE.MLINBOOFJJFOOJDFIODGPBCGFAFGFGHIINAK.fontStyle = 0;
-                _bi2.FKIPBDDJJKDBAABDMLPKIGEAKBOODIOIIJEE.LPMHKIAKCIJCOALOPOKIGFPOBAHPLGHMDGJE.fontStyle = 0;
-                _bi2.FKIPBDDJJKDBAABDMLPKIGEAKBOODIOIIJEE._ACK.fontStyle = 0;
-                _bi2.FKIPBDDJJKDBAABDMLPKIGEAKBOODIOIIJEE._ACF.fontStyle = 0;
-                _bi2.FKIPBDDJJKDBAABDMLPKIGEAKBOODIOIIJEE._ACN.fontStyle = 0;
-                _bi2.FKIPBDDJJKDBAABDMLPKIGEAKBOODIOIIJEE._ACB.fontStyle = 0;
-                _bi2.FKIPBDDJJKDBAABDMLPKIGEAKBOODIOIIJEE._ACE.fontStyle = 0;
-                _bi2.FKIPBDDJJKDBAABDMLPKIGEAKBOODIOIIJEE.FKNGDNMIFFNDKLBIMPEOABJDFILGGHFFEKNM.fontStyle = 0;
-                _bi2.FKIPBDDJJKDBAABDMLPKIGEAKBOODIOIIJEE._ACC.fontStyle = 0;
-                _bi2.FKIPBDDJJKDBAABDMLPKIGEAKBOODIOIIJEE.PBOJOMJKIBIKNDAOLEDPDHJIAOCOCDFBCPMG.fontStyle = 0;
-                _bi2.FKIPBDDJJKDBAABDMLPKIGEAKBOODIOIIJEE.JMJPFJGGIEEPNKMMFKFKBMEALOBACMLKKGDD.fontStyle = 0;
-                _bi2.FKIPBDDJJKDBAABDMLPKIGEAKBOODIOIIJEE.IDEBBOAIFDBCFICJJCOCOIBKDOPNMGADPJBI.fontStyle = 0;
-                _bi2.FKIPBDDJJKDBAABDMLPKIGEAKBOODIOIIJEE.KCCBAEPPGOEMGHPDPNEBIICOFIIMDOFPPNPP.fontStyle = 0;
+                _bi2._CCN._ABV.fontSize = 0;
+                _bi2._CCN._CEM.fontSize = 0;
+                _bi2._CCN._CEN.fontSize = 0;
+                _bi2._CCN._ACK.fontSize = 0;
+                _bi2._CCN._ACF.fontSize = 0;
+                _bi2._CCN._ACN.fontSize = 0;
+                _bi2._CCN._ACB.fontSize = 0;
+                _bi2._CCN._ACE.fontSize = 0;
+                _bi2._CCN._CFD.fontSize = 0;
+                _bi2._CCN._ACC.fontSize = 0;
+                _bi2._CCN._CEX.fontSize = 0;
+                _bi2._CCN._CEZ.fontSize = 0;
+                _bi2._CCN._CFA.fontSize = 0;
+                _bi2._CCN._CFF.fontSize = 0;
+                _bi2._CCN._CFU.fontSize = 0;
+                _bi2._CCN._ABV.fontStyle = 0;
+                _bi2._CCN._CEM.fontStyle = 0;
+                _bi2._CCN._CEN.fontStyle = 0;
+                _bi2._CCN._ACK.fontStyle = 0;
+                _bi2._CCN._ACF.fontStyle = 0;
+                _bi2._CCN._ACN.fontStyle = 0;
+                _bi2._CCN._ACB.fontStyle = 0;
+                _bi2._CCN._ACE.fontStyle = 0;
+                _bi2._CCN._CFD.fontStyle = 0;
+                _bi2._CCN._ACC.fontStyle = 0;
+                _bi2._CCN._CEX.fontStyle = 0;
+                _bi2._CCN._CEZ.fontStyle = 0;
+                _bi2._CCN._CFA.fontStyle = 0;
+                _bi2._CCN._CFU.fontStyle = 0;
             }
-            bool flag2 = _bi2.EMGEKEIEHPNEFMOMMCIFEEGIFJDEJFOKPAFM._ABV != null;
+            bool flag2 = _bi2._CCM._ABV != null;
             if (flag2)
             {
-                _bi2.EMGEKEIEHPNEFMOMMCIFEEGIFJDEJFOKPAFM._ABV.fontSize = 0;
-                _bi2.EMGEKEIEHPNEFMOMMCIFEEGIFJDEJFOKPAFM.MLINBOOFJJFOOJDFIODGPBCGFAFGFGHIINAK.fontSize = 0;
-                _bi2.EMGEKEIEHPNEFMOMMCIFEEGIFJDEJFOKPAFM.LPMHKIAKCIJCOALOPOKIGFPOBAHPLGHMDGJE.fontSize = 0;
-                _bi2.EMGEKEIEHPNEFMOMMCIFEEGIFJDEJFOKPAFM._ACK.fontSize = 0;
-                _bi2.EMGEKEIEHPNEFMOMMCIFEEGIFJDEJFOKPAFM._ACF.fontSize = 0;
-                _bi2.EMGEKEIEHPNEFMOMMCIFEEGIFJDEJFOKPAFM._ACN.fontSize = 0;
-                _bi2.EMGEKEIEHPNEFMOMMCIFEEGIFJDEJFOKPAFM._ACB.fontSize = 0;
-                _bi2.EMGEKEIEHPNEFMOMMCIFEEGIFJDEJFOKPAFM._ACE.fontSize = 0;
-                _bi2.EMGEKEIEHPNEFMOMMCIFEEGIFJDEJFOKPAFM.FKNGDNMIFFNDKLBIMPEOABJDFILGGHFFEKNM.fontSize = 0;
-                _bi2.EMGEKEIEHPNEFMOMMCIFEEGIFJDEJFOKPAFM._ACC.fontSize = 0;
-                _bi2.EMGEKEIEHPNEFMOMMCIFEEGIFJDEJFOKPAFM.PBOJOMJKIBIKNDAOLEDPDHJIAOCOCDFBCPMG.fontSize = 0;
-                _bi2.EMGEKEIEHPNEFMOMMCIFEEGIFJDEJFOKPAFM.JMJPFJGGIEEPNKMMFKFKBMEALOBACMLKKGDD.fontSize = 0;
-                _bi2.EMGEKEIEHPNEFMOMMCIFEEGIFJDEJFOKPAFM.IDEBBOAIFDBCFICJJCOCOIBKDOPNMGADPJBI.fontSize = 0;
-                _bi2.EMGEKEIEHPNEFMOMMCIFEEGIFJDEJFOKPAFM.OFHACCJKFEDEPPHBLPBAGNDAFFAJECCJDKBK.fontSize = 0;
-                _bi2.EMGEKEIEHPNEFMOMMCIFEEGIFJDEJFOKPAFM.KCCBAEPPGOEMGHPDPNEBIICOFIIMDOFPPNPP.fontSize = 0;
-                _bi2.EMGEKEIEHPNEFMOMMCIFEEGIFJDEJFOKPAFM._ABV.fontStyle = 0;
-                _bi2.EMGEKEIEHPNEFMOMMCIFEEGIFJDEJFOKPAFM.MLINBOOFJJFOOJDFIODGPBCGFAFGFGHIINAK.fontStyle = 0;
-                _bi2.EMGEKEIEHPNEFMOMMCIFEEGIFJDEJFOKPAFM.LPMHKIAKCIJCOALOPOKIGFPOBAHPLGHMDGJE.fontStyle = 0;
-                _bi2.EMGEKEIEHPNEFMOMMCIFEEGIFJDEJFOKPAFM._ACK.fontStyle = 0;
-                _bi2.EMGEKEIEHPNEFMOMMCIFEEGIFJDEJFOKPAFM._ACF.fontStyle = 0;
-                _bi2.EMGEKEIEHPNEFMOMMCIFEEGIFJDEJFOKPAFM._ACN.fontStyle = 0;
-                _bi2.EMGEKEIEHPNEFMOMMCIFEEGIFJDEJFOKPAFM._ACB.fontStyle = 0;
-                _bi2.EMGEKEIEHPNEFMOMMCIFEEGIFJDEJFOKPAFM._ACE.fontStyle = 0;
-                _bi2.EMGEKEIEHPNEFMOMMCIFEEGIFJDEJFOKPAFM.FKNGDNMIFFNDKLBIMPEOABJDFILGGHFFEKNM.fontStyle = 0;
-                _bi2.EMGEKEIEHPNEFMOMMCIFEEGIFJDEJFOKPAFM._ACC.fontStyle = 0;
-                _bi2.EMGEKEIEHPNEFMOMMCIFEEGIFJDEJFOKPAFM.PBOJOMJKIBIKNDAOLEDPDHJIAOCOCDFBCPMG.fontStyle = 0;
-                _bi2.EMGEKEIEHPNEFMOMMCIFEEGIFJDEJFOKPAFM.JMJPFJGGIEEPNKMMFKFKBMEALOBACMLKKGDD.fontStyle = 0;
-                _bi2.EMGEKEIEHPNEFMOMMCIFEEGIFJDEJFOKPAFM.IDEBBOAIFDBCFICJJCOCOIBKDOPNMGADPJBI.fontStyle = 0;
-                _bi2.EMGEKEIEHPNEFMOMMCIFEEGIFJDEJFOKPAFM.KCCBAEPPGOEMGHPDPNEBIICOFIIMDOFPPNPP.fontStyle = 0;
+                _bi2._CCM._ABV.fontSize = 0;
+                _bi2._CCM._CEM.fontSize = 0;
+                _bi2._CCM._CEN.fontSize = 0;
+                _bi2._CCM._ACK.fontSize = 0;
+                _bi2._CCM._ACF.fontSize = 0;
+                _bi2._CCM._ACN.fontSize = 0;
+                _bi2._CCM._ACB.fontSize = 0;
+                _bi2._CCM._ACE.fontSize = 0;
+                _bi2._CCM._CFD.fontSize = 0;
+                _bi2._CCM._ACC.fontSize = 0;
+                _bi2._CCM._CEX.fontSize = 0;
+                _bi2._CCM._CEZ.fontSize = 0;
+                _bi2._CCM._CFA.fontSize = 0;
+                _bi2._CCM._CFF.fontSize = 0;
+                _bi2._CCM._CFU.fontSize = 0;
+                _bi2._CCM._ABV.fontStyle = 0;
+                _bi2._CCM._CEM.fontStyle = 0;
+                _bi2._CCM._CEN.fontStyle = 0;
+                _bi2._CCM._ACK.fontStyle = 0;
+                _bi2._CCM._ACF.fontStyle = 0;
+                _bi2._CCM._ACN.fontStyle = 0;
+                _bi2._CCM._ACB.fontStyle = 0;
+                _bi2._CCM._ACE.fontStyle = 0;
+                _bi2._CCM._CFD.fontStyle = 0;
+                _bi2._CCM._ACC.fontStyle = 0;
+                _bi2._CCM._CEX.fontStyle = 0;
+                _bi2._CCM._CEZ.fontStyle = 0;
+                _bi2._CCM._CFA.fontStyle = 0;
+                _bi2._CCM._CFU.fontStyle = 0;
             }
         }
 
         // Token: 0x06000302 RID: 770 RVA: 0x00032919 File Offset: 0x00030B19
         private static void SelectFont(int fontIndex)
         {
-            _bi2.PJOMAIJGCAPMFLENCDNIAPJJKNGLFDICIFLL = true;
-            _bi2.LAMCCIBPLNNJDOIKIKNLEKKMPAEIIAHGEGDH = true;
-            _bg8._BBT._AIF(_bi2.LJKHDAPCHJBAPKJLHCFIANJIODFKNMHPAMOC = _bi2.MALGDKADEDLONPFACJAGNOJFCCJHGAELLKBK()[fontIndex]);
+            _bi2._CDZ = true;
+            _bi2._CDY = true;
+            _bg8._BBT._AIF(_bi2._CCJ = _bi2._CCK()[fontIndex]);
         }
 
         // Token: 0x06000303 RID: 771 RVA: 0x00032940 File Offset: 0x00030B40
         private static void ToggleFontHinting()
         {
-            _bi2.PJOMAIJGCAPMFLENCDNIAPJJKNGLFDICIFLL = true;
-            _bi2.LAMCCIBPLNNJDOIKIKNLEKKMPAEIIAHGEGDH = true;
+            _bi2._CDZ = true;
+            _bi2._CDY = true;
             _bg8._BBU.Toggle();
         }
 
         // Token: 0x06000304 RID: 772 RVA: 0x0003295A File Offset: 0x00030B5A
         private void ModifyFontSize(int delta)
         {
-            _bi2.PJOMAIJGCAPMFLENCDNIAPJJKNGLFDICIFLL = true;
-            _bi2.LAMCCIBPLNNJDOIKIKNLEKKMPAEIIAHGEGDH = true;
+            _bi2._CDZ = true;
+            _bi2._CDY = true;
             _bg8._AEP._AIF(Math.Max(-10, Math.Min(10, _bg8._AEP + Math.Sign(delta))));
         }
 
@@ -9003,7 +8995,7 @@ namespace AHO
         // Token: 0x06000306 RID: 774 RVA: 0x000329B0 File Offset: 0x00030BB0
         private static void InitCustomThemes()
         {
-            _bi2.JMFFKMDENDGHKKBOFMDHJLMPKAKCGLBLJIFP = new List<ThemeTemplate>();
+            _bi2._CHR = new List<ThemeTemplate>();
             string text = _bi2.NPOF() + "/Themes";
             bool flag = !AssetDatabase.IsValidFolder(text);
             if (!flag)
@@ -9014,7 +9006,7 @@ namespace AHO
                 {
                     foreach (string text2 in array)
                     {
-                        _bi2.JMFFKMDENDGHKKBOFMDHJLMPKAKCGLBLJIFP.Add(AssetDatabase.LoadAssetAtPath<ThemeTemplate>(AssetDatabase.GUIDToAssetPath(text2)));
+                        _bi2._CHR.Add(AssetDatabase.LoadAssetAtPath<ThemeTemplate>(AssetDatabase.GUIDToAssetPath(text2)));
                     }
                 }
             }
@@ -9030,28 +9022,28 @@ namespace AHO
                 AssetDatabase.CreateFolder(_bi2.NPOF(), "Themes");
             }
             ThemeTemplate themeTemplate = ScriptableObject.CreateInstance<ThemeTemplate>();
-            _bi2.NFKLDALAOOLJNIPCPGLGHLNHCNDAFBLLHCKN().Add(themeTemplate);
+            _bi2._CBZ().Add(themeTemplate);
             ProjectWindowUtil.CreateAsset(themeTemplate, text + "/Theme.asset");
         }
 
         // Token: 0x06000308 RID: 776 RVA: 0x00032AA0 File Offset: 0x00030CA0
         internal static void RepaintChangedTheme(bool isText)
         {
-            bool flag = _bi2.NFKLDALAOOLJNIPCPGLGHLNHCNDAFBLLHCKN() == null;
+            bool flag = _bi2._CBZ() == null;
             if (!flag)
             {
-                foreach (ThemeTemplate themeTemplate in _bi2.NFKLDALAOOLJNIPCPGLGHLNHCNDAFBLLHCKN())
+                foreach (ThemeTemplate themeTemplate in _bi2._CBZ())
                 {
                     bool changed = themeTemplate.changed;
                     if (changed)
                     {
                         if (isText)
                         {
-                            _bi2.ApplyTheme(_bi2.EMGEKEIEHPNEFMOMMCIFEEGIFJDEJFOKPAFM, _bi2.NEJDBEMCGLKCAHENKLCFDOMOFGNHCBAIIDLF);
+                            _bi2.ApplyTheme(_bi2._CCM, _bi2._CEI);
                         }
                         else
                         {
-                            _bi2.ApplyTheme(_bi2.FKIPBDDJJKDBAABDMLPKIGEAKBOODIOIIJEE, _bi2.LMHCAPKMBCKPJCOFDJBKMEFJDCENENGPPKKN);
+                            _bi2.ApplyTheme(_bi2._CCN, _bi2._CEJ);
                         }
                         _bi2.RepaintAllInstances();
                         themeTemplate.changed = false;
@@ -9065,19 +9057,19 @@ namespace AHO
         {
             int num = _bi2.BGBI.IndexOf(_bg8._BBX);
             int num2 = _bi2.BGBI.IndexOf(_bg8._BBW);
-            _bi2.LoadStyles(_bi2.EMGEKEIEHPNEFMOMMCIFEEGIFJDEJFOKPAFM, true);
-            _bi2.LoadStyles(_bi2.FKIPBDDJJKDBAABDMLPKIGEAKBOODIOIIJEE, false);
+            _bi2.LoadStyles(_bi2._CCM, true);
+            _bi2.LoadStyles(_bi2._CCN, false);
             bool flag = num > 0;
             if (flag)
             {
-                _bi2.NEJDBEMCGLKCAHENKLCFDOMOFGNHCBAIIDLF = _bi2.BPDG[num];
-                _bi2.ApplyTheme(_bi2.EMGEKEIEHPNEFMOMMCIFEEGIFJDEJFOKPAFM, _bi2.NEJDBEMCGLKCAHENKLCFDOMOFGNHCBAIIDLF);
+                _bi2._CEI = _bi2.BPDG[num];
+                _bi2.ApplyTheme(_bi2._CCM, _bi2._CEI);
             }
             bool flag2 = num2 > 0;
             if (flag2)
             {
-                _bi2.LMHCAPKMBCKPJCOFDJBKMEFJDCENENGPPKKN = _bi2.BPDG[num2];
-                _bi2.ApplyTheme(_bi2.FKIPBDDJJKDBAABDMLPKIGEAKBOODIOIIJEE, _bi2.LMHCAPKMBCKPJCOFDJBKMEFJDCENENGPPKKN);
+                _bi2._CEJ = _bi2.BPDG[num2];
+                _bi2.ApplyTheme(_bi2._CCN, _bi2._CEJ);
             }
         }
 
@@ -9085,66 +9077,62 @@ namespace AHO
         private float DoToolbar()
         {
             this._AFO.yMin = this._AFO.yMin + 21f;
-            Rect rect;
-            rect..ctor(this._AFO.xMin, this._AFO.yMin - 21f, this._AFO.width, 21f);
+            Rect rect = new Rect(this._AFO.xMin, this._AFO.yMin - 21f, this._AFO.width, 21f);
             bool flag = Application.platform == 0;
-            bool flag2 = !this.KDLLNFPMJDJLLNBHCKGJIGPICHOPAOFCMKAF.image;
+            bool flag2 = !this._CHS.image;
             if (flag2)
             {
-                string fileName = Path.GetFileName(this.NOKEHFCAKDDOPKCFMLCLBACCAHNLKLHBCEDC());
+                string fileName = Path.GetFileName(this._CCV());
                 bool flag3 = flag;
                 if (flag3)
                 {
-                    this.KDLLNFPMJDJLLNBHCKGJIGPICHOPAOFCMKAF = new GUIContent(_bi2.FJHJMLPMPICJDJHGPHKCHLPDABECAPHNLBDL, "Save " + fileName + "\n(Command+S)");
-                    this.HAIFADBGDJMADHMOCHGILGGMCJCPGEODJBPH = new GUIContent(_bi2.IKAJMFCHNHPALEOMJJLHJFIOOABGCPIIBMMF, "Undo\n(Command+Z)");
-                    this.JPLMCBDFMNFFHLLHIAECHLBFKNLEGBEOLBBC = new GUIContent(_bi2.PKNNMKEEKOEEDPPADOBGGMNPANFDLFEKELML, "Redo\n(Shift+Command+Z)");
+                    this._CHS = new GUIContent(_bi2._CED, "Save " + fileName + "\n(Command+S)");
+                    this._CHT = new GUIContent(_bi2._CEE, "Undo\n(Command+Z)");
+                    this._CHU = new GUIContent(_bi2._CEF, "Redo\n(Shift+Command+Z)");
                 }
                 else
                 {
-                    this.KDLLNFPMJDJLLNBHCKGJIGPICHOPAOFCMKAF = new GUIContent(_bi2.FJHJMLPMPICJDJHGPHKCHLPDABECAPHNLBDL, "Save " + fileName + "\n(Ctrl+S)");
-                    this.HAIFADBGDJMADHMOCHGILGGMCJCPGEODJBPH = new GUIContent(_bi2.IKAJMFCHNHPALEOMJJLHJFIOOABGCPIIBMMF, "Undo\n(Ctrl+Z)");
-                    this.JPLMCBDFMNFFHLLHIAECHLBFKNLEGBEOLBBC = new GUIContent(_bi2.PKNNMKEEKOEEDPPADOBGGMNPANFDLFEKELML, "Redo\n(Ctrl+Shift+Z)");
+                    this._CHS = new GUIContent(_bi2._CED, "Save " + fileName + "\n(Ctrl+S)");
+                    this._CHT = new GUIContent(_bi2._CEE, "Undo\n(Ctrl+Z)");
+                    this._CHU = new GUIContent(_bi2._CEF, "Redo\n(Ctrl+Shift+Z)");
                 }
             }
             Color color = GUI.color;
             GUI.contentColor = EditorStyles.toolbarButton.normal.textColor;
-            Vector2 vector;
-            vector..ctor(27f, 21f);
+            Vector2 vector = new Vector2(27f, 21f);
             GUI.enabled = this.CanEdit() && this._ALW();
-            Rect rect2;
-            rect2..ctor(rect.xMin, rect.yMin, vector.x, vector.y);
-            bool flag4 = GUI.Button(rect2, this.KDLLNFPMJDJLLNBHCKGJIGPICHOPAOFCMKAF, EditorStyles.toolbarButton);
+            Rect rect2 = new Rect(rect.xMin, rect.yMin, vector.x, vector.y);
+            bool flag4 = GUI.Button(rect2, this._CHS, EditorStyles.toolbarButton);
             if (flag4)
             {
                 this.SaveBuffer();
             }
-            GUI.enabled = this.CanUndo();
-            rect2..ctor(rect2.xMax, rect.yMin, vector.x, vector.y);
-            bool flag5 = GUI.Button(rect2, this.HAIFADBGDJMADHMOCHGILGGMCJCPGEODJBPH, EditorStyles.toolbarButton);
+            rect2 = new Rect(rect2.xMax, rect.yMin, vector.x, vector.y);
+            bool flag5 = GUI.Button(rect2, this._CHT, EditorStyles.toolbarButton);
             if (flag5)
             {
-                this.POAAHKKEFHAFHHJDHLCDIOKHAKGHNKOKPPFG = true;
+                this._CCI = true;
                 this.Undo();
             }
             GUI.enabled = this.CanRedo();
-            rect2..ctor(rect2.xMax, rect.yMin, vector.x, vector.y);
-            bool flag6 = GUI.Button(rect2, this.JPLMCBDFMNFFHLLHIAECHLBFKNLEGBEOLBBC, EditorStyles.toolbarButton);
+            rect2 = new Rect(rect2.xMax, rect.yMin, vector.x, vector.y);
+            bool flag6 = GUI.Button(rect2, this._CHU, EditorStyles.toolbarButton);
             if (flag6)
             {
-                this.POAAHKKEFHAFHHJDHLCDIOKHAKGHNKOKPPFG = true;
+                this._CCI = true;
                 this.Redo();
             }
             GUI.contentColor = color;
             rect2.xMin = rect2.xMax + 8f;
             rect2.xMax = rect.xMax - 25f;
-            bool flag7 = Event.current.type == 7;
+            bool flag7 = (int)Event.current.type == 7;
             if (flag7)
             {
-                string text = (this._ABQ._ARV() ? "Loading..." : ((!EditorApplication.isCompiling && _bc5._AOO() && !this._ABQ._ALW()) ? ((Application.platform == null) ? "Saved,Press Command+S to compile" : "Saved,Press Ctrl+S to compile") : ((!EditorApplication.isCompiling) ? null : ((_bi2.CNCBOMMHGCFHFIHPLKAAODEAJHLKCFAPMILL.Count > 0) ? "Compiling in background..." : ((_bi2.MIEOJDKEHOCEGDGBNGALKEANHMLJDPKPBDEN == 0) ? "Compiling..." : ((this._ALW() && flag) ? "Cmd-Alt-R to reload assemblies..." : (this._ALW() ? "Ctrl+R to reload assemblies..." : (flag ? "Cmd-Alt-R or Save again to reload assemblies..." : "Ctrl+R or Save again to reload assemblies..."))))))));
+                string text = (this._ABQ._ARV() ? "Loading..." : ((!EditorApplication.isCompiling && _bc5._AOO() && !this._ABQ._ALW()) ? ((Application.platform == null) ? "Saved,Press Command+S to compile" : "Saved,Press Ctrl+S to compile") : ((!EditorApplication.isCompiling) ? null : ((_bi2._CCX.Count > 0) ? "Compiling in background..." : ((_bi2._CCW == 0) ? "Compiling..." : ((this._ALW() && flag) ? "Cmd-Alt-R to reload assemblies..." : (this._ALW() ? "Ctrl+R to reload assemblies..." : (flag ? "Cmd-Alt-R or Save again to reload assemblies..." : "Ctrl+R or Save again to reload assemblies..."))))))));
                 bool flag8 = text == null && rect2.width > 300f;
                 if (flag8)
                 {
-                    FileInfo fileInfo = new FileInfo(this.NOKEHFCAKDDOPKCFMLCLBACCAHNLKLHBCEDC());
+                    FileInfo fileInfo = new FileInfo(this._CCV());
                     GUI.enabled = false;
                     bool flag9 = !fileInfo.Exists;
                     if (flag9)
@@ -9164,7 +9152,7 @@ namespace AHO
                             bool flag11 = _bg8._BAU;
                             if (flag11)
                             {
-                                EditorStyles.label.Draw(rect2, this.NOKEHFCAKDDOPKCFMLCLBACCAHNLKLHBCEDC(), false, false, false, false);
+                                EditorStyles.label.Draw(rect2, this._CCV(), false, false, false, false);
                             }
                             else
                             {
@@ -9180,13 +9168,13 @@ namespace AHO
                 else
                 {
                     GUI.enabled = true;
-                    bool flag13 = this.NADMKBHKCNFNCNCBDFLCHFIPGKOGNONBFNIL == null;
+                    bool flag13 = this._CHV == null;
                     if (flag13)
                     {
-                        this.NADMKBHKCNFNCNCBDFLCHFIPGKOGNONBFNIL = new GUIStyle(EditorStyles.boldLabel);
-                        this.NADMKBHKCNFNCNCBDFLCHFIPGKOGNONBFNIL.normal.textColor = (EditorGUIUtility.isProSkin ? new Color(1f, 0.5f, 0f) : new Color(0.9f, 0.4f, 0f));
+                        this._CHV = new GUIStyle(EditorStyles.boldLabel);
+                        this._CHV.normal.textColor = (EditorGUIUtility.isProSkin ? new Color(1f, 0.5f, 0f) : new Color(0.9f, 0.4f, 0f));
                     }
-                    this.NADMKBHKCNFNCNCBDFLCHFIPGKOGNONBFNIL.Draw(rect2, text, false, false, false, false);
+                    this._CHV.Draw(rect2, text, false, false, false, false);
                 }
             }
             GUI.enabled = this.CanEdit();
@@ -9196,25 +9184,24 @@ namespace AHO
                 rect2.xMin = rect2.xMax * 0.618f;
             }
             this.DoSearchBox(rect2);
-            this.ANOBINGJIAOEAFAMODAAAGGONPMOKEGBCMLJ = new GUIContent(EditorGUIUtility.IconContent("Settings").image, "Settings");
-            vector = EditorStyles.toolbarButton.CalcSize(this.ANOBINGJIAOEAFAMODAAAGGONPMOKEGBCMLJ);
-            Rect rect3;
-            rect3..ctor(rect.xMax - 25f, rect.yMin, vector.x, vector.y);
-            bool flag15 = GUI.Button(rect3, this.ANOBINGJIAOEAFAMODAAAGGONPMOKEGBCMLJ, EditorStyles.toolbarButton);
+            this._CHW = new GUIContent(EditorGUIUtility.IconContent("Settings").image, "Settings");
+            vector = EditorStyles.toolbarButton.CalcSize(this._CHW);
+            Rect rect3 = new Rect(rect.xMax - 25f, rect.yMin, vector.x, vector.y);
+            bool flag15 = GUI.Button(rect3, this._CHW, EditorStyles.toolbarButton);
             if (flag15)
             {
                 GenericMenu genericMenu = new GenericMenu();
                 _bi2.InitCustomThemes();
-                bool flag16 = _bi2.NFKLDALAOOLJNIPCPGLGHLNHCNDAFBLLHCKN().Count > 0;
+                bool flag16 = _bi2._CBZ().Count > 0;
                 if (flag16)
                 {
-                    foreach (ThemeTemplate themeTemplate in _bi2.NFKLDALAOOLJNIPCPGLGHLNHCNDAFBLLHCKN())
+                    foreach (ThemeTemplate themeTemplate in _bi2._CBZ())
                     {
                         _bi2.AddTheme(themeTemplate.colorTheme, themeTemplate.name);
                     }
                 }
                 _bi2.RemoveTheme();
-                bool flag17 = this.OGJMAADHJNFCLONPJGOCCAKPODNCOKEOJFMF == null;
+                bool flag17 = this._CHX == null;
                 bool fcbalhajjbkhbjlanclocpgjfliaieoolbjk = this._ABQ._ARR;
                 if (fcbalhajjbkhbjlanclocpgjfliaieoolbjk)
                 {
@@ -9230,9 +9217,9 @@ namespace AHO
                     genericMenu.AddItem(new GUIContent("View Options/Line Numbers"), flag17 ? _bg8._BBN : _bg8._BAB, new GenericMenu.MenuFunction(_bi2.ToggleLineNumbersCode));
                     genericMenu.AddItem(new GUIContent("View Options/Track Changes"), flag17 ? _bg8._BBP : _bg8._BAD, new GenericMenu.MenuFunction(_bi2.ToggleTrackChangesCode));
                 }
-                for (int i = 0; i < _bi2.MALGDKADEDLONPFACJAGNOJFCCJHGAELLKBK().Length; i++)
+                for (int i = 0; i < _bi2._CCK().Length; i++)
                 {
-                    genericMenu.AddItem(new GUIContent("Font/" + Path.GetFileNameWithoutExtension(_bi2.MALGDKADEDLONPFACJAGNOJFCCJHGAELLKBK()[i])), _bg8._BBT.GNIO() == _bi2.MALGDKADEDLONPFACJAGNOJFCCJHGAELLKBK()[i], delegate (object x)
+                    genericMenu.AddItem(new GUIContent("Font/" + Path.GetFileNameWithoutExtension(_bi2._CCK()[i])), _bg8._BBT.GNIO() == _bi2._CCK()[i], delegate (object x)
                     {
                         _bi2.SelectFont((int)x);
                     }, i);
@@ -9245,14 +9232,14 @@ namespace AHO
                     bool fcbalhajjbkhbjlanclocpgjfliaieoolbjk2 = this._ABQ._ARR;
                     if (fcbalhajjbkhbjlanclocpgjfliaieoolbjk2)
                     {
-                        genericMenu.AddItem(new GUIContent("Color Theme/" + array[j]), _bi2.NEJDBEMCGLKCAHENKLCFDOMOFGNHCBAIIDLF == _bi2.BPDG[num], delegate (object x)
+                        genericMenu.AddItem(new GUIContent("Color Theme/" + array[j]), _bi2._CEI == _bi2.BPDG[num], delegate (object x)
                         {
                             _bi2.SelectTheme((int)x, true);
                         }, num);
                     }
                     else
                     {
-                        genericMenu.AddItem(new GUIContent("Color Theme/" + array[j]), _bi2.LMHCAPKMBCKPJCOFDJBKMEFJDCENENGPPKKN == _bi2.BPDG[num], delegate (object x)
+                        genericMenu.AddItem(new GUIContent("Color Theme/" + array[j]), _bi2._CEJ == _bi2.BPDG[num], delegate (object x)
                         {
                             _bi2.SelectTheme((int)x, false);
                         }, num);
@@ -9268,7 +9255,7 @@ namespace AHO
                 {
                     Application.OpenURL("https://github.com/UnitySuperEditor/SuperEditor");
                 });
-                rect2..ctor(this._AFO.xMax - 27f, this._AFO.yMin - 17f, 18f, 16f);
+                rect2 = new Rect(this._AFO.xMax - 27f, this._AFO.yMin - 17f, 18f, 16f);
                 genericMenu.DropDown(rect2);
                 GUIUtility.ExitGUI();
             }
@@ -9279,39 +9266,38 @@ namespace AHO
         // Token: 0x0600030B RID: 779 RVA: 0x0003364C File Offset: 0x0003184C
         private void DoSearchBox(Rect position = default(Rect))
         {
-            _bi2.JCOIBCPNFDEEEKEJBMMLNNCHKHFFNFMKPGOP = EditorPrefs.GetBool("SuperEditorDynamicSearchbar", false);
+            _bi2._CHZ = EditorPrefs.GetBool("SuperEditorDynamicSearchbar", false);
             this.SearchBoxEvent(position);
             string text = string.Empty;
             bool flag = position == default(Rect);
             if (flag)
             {
-                bool jcoibcpnfdeeekejbmmlnnchkhffnfmkpgop = _bi2.JCOIBCPNFDEEEKEJBMMLNNCHKHFFNFMKPGOP;
-                if (jcoibcpnfdeeekejbmmlnnchkhffnfmkpgop)
+                bool _CHY = _bi2._CHZ;
+                if (_CHY)
                 {
                     this._AFO.yMin = this._AFO.yMin + 21f;
-                    position..ctor(this._AFO.xMin, this._AFO.yMin - 21f, this._AFO.width, 21f);
-                    text = this.ToolbarSearchField(position, this.FEDKNBJPGLNNBLCBJGPAICAGEHEAFOEDMJOD);
-                    Color color;
-                    color..ctor(0f, 0f, 0f, 0.25f);
+                    position = new Rect(this._AFO.xMin, this._AFO.yMin - 21f, this._AFO.width, 21f);
+                    text = this.ToolbarSearchField(position, this._CCR);
+                    Color color = new Color(0f, 0f, 0f, 0.25f);
                     EditorGUI.DrawRect(new Rect(this._AFO.xMin, this._AFO.yMin - 1f, this._AFO.xMin, 1f), color);
                 }
             }
             else
             {
-                text = this.ToolbarSearchField(position, this.FEDKNBJPGLNNBLCBJGPAICAGEHEAFOEDMJOD);
+                text = this.ToolbarSearchField(position, this._CCR);
             }
-            bool flag2 = this.FEDKNBJPGLNNBLCBJGPAICAGEHEAFOEDMJOD != text;
+            bool flag2 = this._CCR != text;
             if (flag2)
             {
-                this.FEDKNBJPGLNNBLCBJGPAICAGEHEAFOEDMJOD = text;
-                this.SetSearchText(this.FEDKNBJPGLNNBLCBJGPAICAGEHEAFOEDMJOD);
+                this._CCR = text;
+                this.SetSearchText(this._CCR);
             }
         }
 
         // Token: 0x0600030C RID: 780 RVA: 0x00033788 File Offset: 0x00031988
         private void SearchBoxEvent(Rect position)
         {
-            bool flag = Event.current.type == 13;
+            bool flag = (int)Event.current.type == 13;
             if (flag)
             {
                 bool flag2 = Event.current.commandName == "Find";
@@ -9323,7 +9309,7 @@ namespace AHO
             }
             else
             {
-                bool flag3 = Event.current.type == 14;
+                bool flag3 = (int)Event.current.type == 14;
                 if (flag3)
                 {
                     bool flag4 = Event.current.commandName == "Find";
@@ -9334,28 +9320,28 @@ namespace AHO
                         {
                             EditorPrefs.SetBool("SuperEditorDynamicSearchbar", true);
                         }
-                        bool flag6 = this.GJDLGEEKCBIHCFECOIOFLIFNOCPOAPGNHJMK();
+                        bool flag6 = this._CDN();
                         if (flag6)
                         {
                             this.UseSelectionForSearch();
                         }
-                        this.HNFGMNOKDFHDBOOJNFKJEEHBPKBFIOPLMAGK = true;
+                        this._CIA = true;
                         Event.current.Use();
                     }
                 }
             }
-            bool flag7 = this._ABQ._ASJ != this.KEGJHDFHDLGNNJHGDCGACGKHOGLEMOAPJFAH;
+            bool flag7 = this._ABQ._ASJ != this._CHL;
             if (flag7)
             {
-                this.HNJLNADMDKDENNBDPEGJAIJBFAEKFABKLGJD = -1;
-                this.IEBKNKNJPHMNKJBGPLICNBIKHCFFODECEOHG = false;
+                this._CHM = -1;
+                this._CHO = false;
             }
-            bool flag8 = Event.current.type == 4 && !Event.current.alt;
+            bool flag8 = (int)Event.current.type == 4 && !Event.current.alt;
             if (flag8)
             {
-                this.PKEDGKNPLDKJDFNDFLIOAEPLNNJAMOHKEHKM = this.EJIPALGACBAGINMGHOMAGBLDNJCOAKLJGPHP != null && this.EJIPALGACBAGINMGHOMAGBLDNJCOAKLJGPHP.HasFocus();
+                this._CDT = this._CIF != null && this._CIF.HasFocus();
                 bool flag9 = Application.platform == 0;
-                bool flag10 = Event.current.keyCode == 284 && !EditorGUI.actionKey;
+                bool flag10 = (int)Event.current.keyCode == 284 && !EditorGUI.actionKey;
                 if (flag10)
                 {
                     bool shift = Event.current.shift;
@@ -9369,51 +9355,51 @@ namespace AHO
                     }
                     Event.current.Use();
                 }
-                EventModifiers eventModifiers = Event.current.modifiers & -113;
-                bool flag11 = Event.current.keyCode == 115 && (eventModifiers == 2 || eventModifiers == 8);
+                EventModifiers eventModifiers = (EventModifiers)((int)Event.current.modifiers & -113);
+                bool flag11 = (int)Event.current.keyCode == 115 && ((int)eventModifiers == 2 || (int)eventModifiers == 8);
                 if (flag11)
                 {
                     Event.current.Use();
                     this.SaveBuffer();
                 }
             }
-            bool flag12 = Event.current.rawType == 5 && (Event.current.keyCode == 27 || Event.current.keyCode == 9);
+            bool flag12 = (int)Event.current.rawType == 5 && ((int)Event.current.keyCode == 27 || (int)Event.current.keyCode == 9);
             if (flag12)
             {
-                this.POAAHKKEFHAFHHJDHLCDIOKHAKGHNKOKPPFG = true;
+                this._CCI = true;
                 Event.current.Use();
             }
-            bool flag13 = this.PKEDGKNPLDKJDFNDFLIOAEPLNNJAMOHKEHKM && Event.current.type == 4;
+            bool flag13 = this._CDT && (int)Event.current.type == 4;
             if (flag13)
             {
-                bool flag14 = Event.current.keyCode == 27;
+                bool flag14 = (int)Event.current.keyCode == 27;
                 if (flag14)
                 {
                     EditorPrefs.SetBool("SuperEditorDynamicSearchbar", false);
                     Event.current.Use();
-                    this.PKEDGKNPLDKJDFNDFLIOAEPLNNJAMOHKEHKM = false;
+                    this._CDT = false;
                 }
                 else
                 {
-                    bool flag15 = Event.current.keyCode == 273 || (Event.current.shift && (Event.current.keyCode == 13 || Event.current.keyCode == 271));
+                    bool flag15 = (int)Event.current.keyCode == 273 || (Event.current.shift && ((int)Event.current.keyCode == 13 || (int)Event.current.keyCode == 271));
                     if (flag15)
                     {
                         this.SearchPrevious();
-                        this.HNFGMNOKDFHDBOOJNFKJEEHBPKBFIOPLMAGK = true;
+                        this._CIA = true;
                         Event.current.Use();
                     }
                     else
                     {
-                        bool flag16 = Event.current.keyCode == 274 || (!Event.current.shift && (Event.current.keyCode == 13 || Event.current.keyCode == 271));
+                        bool flag16 = (int)Event.current.keyCode == 274 || (!Event.current.shift && ((int)Event.current.keyCode == 13 || (int)Event.current.keyCode == 271));
                         if (flag16)
                         {
                             this.SearchNext();
-                            this.HNFGMNOKDFHDBOOJNFKJEEHBPKBFIOPLMAGK = true;
+                            this._CIA = true;
                             Event.current.Use();
                         }
                         else
                         {
-                            bool flag17 = Event.current.keyCode == 9;
+                            bool flag17 = (int)Event.current.keyCode == 9;
                             if (flag17)
                             {
                                 Event.current.Use();
@@ -9427,38 +9413,38 @@ namespace AHO
         // Token: 0x0600030D RID: 781 RVA: 0x00033AF8 File Offset: 0x00031CF8
         private string ToolbarSearchField(Rect position, string text)
         {
-            bool flag = this._ABT.GLLDPBLCJGHJEOCPKMGICIEJOIDFAEIKAEKE == null;
+            bool flag = this._ABT._CIB == null;
             if (flag)
             {
-                this._ABT.GLLDPBLCJGHJEOCPKMGICIEJOIDFAEIKAEKE = new GUIStyle(this._ABT._ABV);
-                this._ABT.GLLDPBLCJGHJEOCPKMGICIEJOIDFAEIKAEKE.font = EditorStyles.textField.font;
-                this._ABT.GLLDPBLCJGHJEOCPKMGICIEJOIDFAEIKAEKE.fontSize = EditorStyles.textField.fontSize - 1;
-                this._ABT.GLLDPBLCJGHJEOCPKMGICIEJOIDFAEIKAEKE.alignment = 5;
-                this._ABT.GLLDPBLCJGHJEOCPKMGICIEJOIDFAEIKAEKE.normal.textColor = (EditorGUIUtility.isProSkin ? new Color(0.824f, 0.824f, 0.824f, 1f) : new Color(0.035f, 0.035f, 0.035f, 1f));
+                this._ABT._CIB = new GUIStyle(this._ABT._ABV);
+                this._ABT._CIB.font = EditorStyles.textField.font;
+                this._ABT._CIB.fontSize = EditorStyles.textField.fontSize - 1;
+                this._ABT._CIB.alignment = (TextAnchor)5;
+                this._ABT._CIB.normal.textColor = (EditorGUIUtility.isProSkin ? new Color(0.824f, 0.824f, 0.824f, 1f) : new Color(0.035f, 0.035f, 0.035f, 1f));
             }
-            bool flag2 = this.EJIPALGACBAGINMGHOMAGBLDNJCOAKLJGPHP == null;
+            bool flag2 = this._CIF == null;
             if (flag2)
             {
-                this.EJIPALGACBAGINMGHOMAGBLDNJCOAKLJGPHP = new SearchField();
+                this._CIF = new SearchField();
             }
             Rect rect = position;
             rect.width -= 50f;
             rect.y += 2f;
-            bool flag3 = _bi2.JCOIBCPNFDEEEKEJBMMLNNCHKHFFNFMKPGOP && !_bg8._BAR;
+            bool flag3 = _bi2._CHZ && !_bg8._BAR;
             if (flag3)
             {
                 rect.x += 2f;
                 rect.width -= 24f;
             }
-            text = this.EJIPALGACBAGINMGHOMAGBLDNJCOAKLJGPHP.OnToolbarGUI(rect, text);
-            bool hnfgmnokdfhdboojnfkjeehbpkbfioplmagk = this.HNFGMNOKDFHDBOOJNFKJEEHBPKBFIOPLMAGK;
+            text = this._CIF.OnToolbarGUI(rect, text);
+            bool hnfgmnokdfhdboojnfkjeehbpkbfioplmagk = this._CIA;
             if (hnfgmnokdfhdboojnfkjeehbpkbfioplmagk)
             {
-                this.EJIPALGACBAGINMGHOMAGBLDNJCOAKLJGPHP.SetFocus();
-                bool flag4 = Event.current.type == 7;
+                this._CIF.SetFocus();
+                bool flag4 = (int)Event.current.type == 7;
                 if (flag4)
                 {
-                    this.HNFGMNOKDFHDBOOJNFKJEEHBPKBFIOPLMAGK = false;
+                    this._CIA = false;
                 }
             }
             bool flag5 = !string.IsNullOrEmpty(text);
@@ -9467,32 +9453,32 @@ namespace AHO
                 GUI.enabled = false;
                 rect.width -= 16f;
                 rect.y -= 2f;
-                bool flag6 = this.DFBJCNCLBOHCOOEENDPAPNJEPKICJHFHLHFH.Count > 0;
+                bool flag6 = this._CHN.Count > 0;
                 if (flag6)
                 {
-                    bool flag7 = this.FEDKNBJPGLNNBLCBJGPAICAGEHEAFOEDMJOD == null || this.DFBJCNCLBOHCOOEENDPAPNJEPKICJHFHLHFH.Count != this.JJIAPPLKBPOHJIJHNMNENIKEMLNDFKILKHKH || this.HNJLNADMDKDENNBDPEGJAIJBFAEKFABKLGJD != this.KOGJPGADGOFLMJHNPBMLJCOIKHJCKGHKKNAF;
+                    bool flag7 = this._CCR == null || this._CHN.Count != this._CIC || this._CHM != this._CID;
                     if (flag7)
                     {
-                        this.KOGJPGADGOFLMJHNPBMLJCOIKHJCKGHKKNAF = this.HNJLNADMDKDENNBDPEGJAIJBFAEKFABKLGJD;
-                        this.JJIAPPLKBPOHJIJHNMNENIKEMLNDFKILKHKH = this.DFBJCNCLBOHCOOEENDPAPNJEPKICJHFHLHFH.Count;
-                        this.FBMOFGALBJNAKOJCGHOMPOIAOMOHKNPFLACL = ((this.HNJLNADMDKDENNBDPEGJAIJBFAEKFABKLGJD >= 0) ? ((this.HNJLNADMDKDENNBDPEGJAIJBFAEKFABKLGJD + 1).ToString() + " of " + this.JJIAPPLKBPOHJIJHNMNENIKEMLNDFKILKHKH.ToString()) : (this.JJIAPPLKBPOHJIJHNMNENIKEMLNDFKILKHKH.ToString() + " results")) + "\u00a0";
+                        this._CID = this._CHM;
+                        this._CIC = this._CHN.Count;
+                        this._CIE = ((this._CHM >= 0) ? ((this._CHM + 1).ToString() + " of " + this._CIC.ToString()) : (this._CIC.ToString() + " results")) + "\u00a0";
                     }
-                    float x = this._ABT.GLLDPBLCJGHJEOCPKMGICIEJOIDFAEIKAEKE.CalcSize(new GUIContent(text)).x;
-                    float x2 = this._ABT.GLLDPBLCJGHJEOCPKMGICIEJOIDFAEIKAEKE.CalcSize(new GUIContent(this.FBMOFGALBJNAKOJCGHOMPOIAOMOHKNPFLACL)).x;
+                    float x = this._ABT._CIB.CalcSize(new GUIContent(text)).x;
+                    float x2 = this._ABT._CIB.CalcSize(new GUIContent(this._CIE)).x;
                     bool flag8 = x + x2 < rect.width - 16f;
                     if (flag8)
                     {
-                        EditorGUI.LabelField(rect, this.FBMOFGALBJNAKOJCGHOMPOIAOMOHKNPFLACL, this._ABT.GLLDPBLCJGHJEOCPKMGICIEJOIDFAEIKAEKE);
+                        EditorGUI.LabelField(rect, this._CIE, this._ABT._CIB);
                     }
                 }
                 else
                 {
-                    float x3 = this._ABT.GLLDPBLCJGHJEOCPKMGICIEJOIDFAEIKAEKE.CalcSize(new GUIContent(text)).x;
-                    float x4 = this._ABT.GLLDPBLCJGHJEOCPKMGICIEJOIDFAEIKAEKE.CalcSize(new GUIContent("no results")).x;
+                    float x3 = this._ABT._CIB.CalcSize(new GUIContent(text)).x;
+                    float x4 = this._ABT._CIB.CalcSize(new GUIContent("no results")).x;
                     bool flag9 = x3 + x4 < rect.width - 16f;
                     if (flag9)
                     {
-                        EditorGUI.LabelField(rect, "no results\u00a0", this._ABT.GLLDPBLCJGHJEOCPKMGICIEJOIDFAEIKAEKE);
+                        EditorGUI.LabelField(rect, "no results\u00a0", this._ABT._CIB);
                     }
                 }
                 GUI.enabled = true;
@@ -9501,16 +9487,16 @@ namespace AHO
             }
             else
             {
-                bool flag10 = !this.EJIPALGACBAGINMGHOMAGBLDNJCOAKLJGPHP.HasFocus();
+                bool flag10 = !this._CIF.HasFocus();
                 if (flag10)
                 {
-                    this.FBMOFGALBJNAKOJCGHOMPOIAOMOHKNPFLACL = ((Application.platform == null) ? "command + F" : "ctrl + F");
+                    this._CIE = ((Application.platform == null) ? "command + F" : "ctrl + F");
                     GUI.enabled = false;
                     rect.x += 16f;
                     rect.y -= 3f;
-                    this._ABT.GLLDPBLCJGHJEOCPKMGICIEJOIDFAEIKAEKE.alignment = 3;
-                    EditorGUI.LabelField(rect, this.FBMOFGALBJNAKOJCGHOMPOIAOMOHKNPFLACL, this._ABT.GLLDPBLCJGHJEOCPKMGICIEJOIDFAEIKAEKE);
-                    this._ABT.GLLDPBLCJGHJEOCPKMGICIEJOIDFAEIKAEKE.alignment = 5;
+                    this._ABT._CIB.alignment = (TextAnchor)3;
+                    EditorGUI.LabelField(rect, this._CIE, this._ABT._CIB);
+                    this._ABT._CIB.alignment = (TextAnchor)5;
                     GUI.enabled = true;
                     rect.x -= 16f;
                     rect.y += 3f;
@@ -9518,21 +9504,21 @@ namespace AHO
             }
             rect.y -= 2f;
             rect.width += 62f;
-            this.PKEDGKNPLDKJDFNDFLIOAEPLNNJAMOHKEHKM = this.EJIPALGACBAGINMGHOMAGBLDNJCOAKLJGPHP.HasFocus();
+            this._CDT = this._CIF.HasFocus();
             bool flag11 = text == string.Empty;
-            bool flag12 = !this.PKEDGKNPLDKJDFNDFLIOAEPLNNJAMOHKEHKM && !flag11 && text.Trim() == "";
+            bool flag12 = !this._CDT && !flag11 && text.Trim() == "";
             if (flag12)
             {
-                GUI.Label(rect, text.Replace("\t", "<tab>").Replace(" ", "<space>"), this._ABT.GLLDPBLCJGHJEOCPKMGICIEJOIDFAEIKAEKE);
+                GUI.Label(rect, text.Replace("\t", "<tab>").Replace(" ", "<space>"), this._ABT._CIB);
             }
             rect.width = 24f;
             rect.x += position.width - 48f;
-            bool flag13 = _bi2.JCOIBCPNFDEEEKEJBMMLNNCHKHFFNFMKPGOP && !_bg8._BAR;
+            bool flag13 = _bi2._CHZ && !_bg8._BAR;
             if (flag13)
             {
                 rect.x -= 24f;
             }
-            bool flag14 = !flag11 && this.DFBJCNCLBOHCOOEENDPAPNJEPKICJHFHLHFH.Count != 0;
+            bool flag14 = !flag11 && this._CHN.Count != 0;
             if (flag14)
             {
                 bool flag15 = GUI.Button(rect, new GUIContent("<", "Search Previous\n(UpArrow)"), EditorStyles.toolbarButton);
@@ -9557,11 +9543,11 @@ namespace AHO
                 rect.x += 24f;
                 GUI.enabled = true;
             }
-            bool flag17 = _bi2.JCOIBCPNFDEEEKEJBMMLNNCHKHFFNFMKPGOP && !_bg8._BAR && GUI.Button(rect, new GUIContent("x"), EditorStyles.toolbarButton);
+            bool flag17 = _bi2._CHZ && !_bg8._BAR && GUI.Button(rect, new GUIContent("x"), EditorStyles.toolbarButton);
             if (flag17)
             {
                 text = string.Empty;
-                this.POAAHKKEFHAFHHJDHLCDIOKHAKGHNKOKPPFG = true;
+                this._CCI = true;
                 EditorPrefs.SetBool("SuperEditorDynamicSearchbar", false);
             }
             return text;
@@ -9574,7 +9560,7 @@ namespace AHO
             bool flag = searchTextFromSelection != "";
             if (flag)
             {
-                this.FEDKNBJPGLNNBLCBJGPAICAGEHEAFOEDMJOD = searchTextFromSelection;
+                this._CCR = searchTextFromSelection;
                 this.SetSearchText(searchTextFromSelection);
             }
         }
@@ -9582,10 +9568,10 @@ namespace AHO
         // Token: 0x0600030F RID: 783 RVA: 0x00034218 File Offset: 0x00032418
         private void SetSearchText(string text)
         {
-            this.KEGJHDFHDLGNNJHGDCGACGKHOGLEMOAPJFAH = this._ABQ._ASJ;
-            _bi2.FNABLFJGDDBBCLNCLGLMABBFIFELKOGMEFFJ = text;
-            this.DFBJCNCLBOHCOOEENDPAPNJEPKICJHFHLHFH.Clear();
-            this.HNJLNADMDKDENNBDPEGJAIJBFAEKFABKLGJD = -1;
+            this._CHL = this._ABQ._ASJ;
+            _bi2._CCQ = text;
+            this._CHN.Clear();
+            this._CHM = -1;
             int length = text.Length;
             bool flag = length == 0;
             if (flag)
@@ -9594,10 +9580,10 @@ namespace AHO
             }
             else
             {
-                List<string> flogicchcfaljohninkpcdacoidcghkimhpo = this._ABQ.FLOg;
-                for (int i = 0; i < flogicchcfaljohninkpcdacoidcghkimhpo.Count; i++)
+                List<string> _CAB = this._ABQ.FLOg;
+                for (int i = 0; i < _CAB.Count; i++)
                 {
-                    string text2 = flogicchcfaljohninkpcdacoidcghkimhpo[i];
+                    string text2 = _CAB[i];
                     int num = 0;
                     while ((num = text2.IndexOf(text, num, StringComparison.OrdinalIgnoreCase)) != -1)
                     {
@@ -9609,11 +9595,11 @@ namespace AHO
                             _ATG = num2,
                             _ATF = num2
                         };
-                        this.DFBJCNCLBOHCOOEENDPAPNJEPKICJHFHLHFH.Add(_ATD);
+                        this._CHN.Add(_ATD);
                         num += length;
                     }
                 }
-                this.LPDHPJNAHLLADJCFMGCEECABJMPHIPPIFMPC = text != "";
+                this._CIG = text != "";
                 this.Repaint();
             }
         }
@@ -9621,81 +9607,82 @@ namespace AHO
         // Token: 0x06000310 RID: 784 RVA: 0x00034320 File Offset: 0x00032520
         private void ProcessEditorKeyboard(Event current, bool acceptingAutoComplete)
         {
-            this.IFOOFJEHFDEEDMEJMCKOLIBPDFBJEFLOBCEM = null;
+            this._CIK = null;
             bool flag = !this.CanEdit();
             if (!flag)
             {
-                bool flag2 = current.type == 4 && current.keyCode != 306 && current.keyCode != 305 && current.keyCode != 310 && current.keyCode != 309 && current.keyCode != 304 && current.keyCode != 303;
+                bool flag2 = (int)current.type == 4 && (int)current.keyCode != 306 && (int)current.keyCode != 305 && 
+                    (int)current.keyCode != 310 && (int)current.keyCode != 309 && (int)current.keyCode != 304 && (int)current.keyCode != 303;
                 if (flag2)
                 {
-                    this.PLNPCENGAKFOMJMLMFIMLBMEBCMJAICLKBCC = 0f;
+                    this._CGY = 0f;
                 }
                 bool flag3 = true;
-                bool flag4 = Application.platform == 0;
-                bool flag5 = Application.platform == 16;
-                bool flag6 = Application.platform == 7;
-                EventModifiers eventModifiers = current.modifiers & -113;
-                bool flag7 = (current.modifiers & (flag4 ? 8 : 2)) > 0;
+                bool flag4 = (int)Application.platform == 0;
+                bool flag5 = (int)Application.platform == 16;
+                bool flag6 = (int)Application.platform == 7;
+                EventModifiers eventModifiers = (EventModifiers)((int)current.modifiers & -113);
+                bool flag7 = ((int)current.modifiers & (flag4 ? 8 : 2)) > 0;
                 int num = -1;
                 int num2 = -1;
-                bool flag8 = flag4 && current.type == 4;
+                bool flag8 = flag4 && (int)current.type == 4;
                 if (flag8)
                 {
-                    bool flag9 = current.keyCode == 122;
+                    bool flag9 = (int)current.keyCode == 122;
                     if (flag9)
                     {
-                        bool flag10 = eventModifiers == 2 || eventModifiers == 8 || eventModifiers == 12;
+                        bool flag10 = (int)eventModifiers == 2 || (int)eventModifiers == 8 || (int)eventModifiers == 12;
                         if (flag10)
                         {
                             this.Undo();
                             current.Use();
-                            this.GFKALDCDCJKDLLFGKMBFPABMPCNBGCFEJEIN = true;
+                            this._CII = true;
                             return;
                         }
-                        bool flag11 = eventModifiers == 3 || eventModifiers == 9 || eventModifiers == 13;
+                        bool flag11 = (int)eventModifiers == 3 || (int)eventModifiers == 9 || (int)eventModifiers == 13;
                         if (flag11)
                         {
                             this.Redo();
                             current.Use();
-                            this.GFKALDCDCJKDLLFGKMBFPABMPCNBGCFEJEIN = true;
+                            this._CII = true;
                             return;
                         }
                     }
                     else
                     {
-                        bool flag12 = (current.keyCode == 97 && eventModifiers == 2) || (current.keyCode == 276 && flag7 && (eventModifiers & 4) == 0);
+                        bool flag12 = ((int)current.keyCode == 97 && (int)eventModifiers == 2) || ((int)current.keyCode == 276 && flag7 && ((int)eventModifiers & 4) == 0);
                         if (flag12)
                         {
                             current.Use();
                             Event @event = Event.KeyboardEvent("home");
-                            @event.modifiers = eventModifiers & 1;
+                            @event.modifiers = (EventModifiers)((int)eventModifiers & 1);
                             this.ProcessEditorKeyboard(@event, false);
                             return;
                         }
-                        bool flag13 = (current.keyCode == 101 && eventModifiers == 2) || (current.keyCode == 275 && flag7 && (eventModifiers & 4) == 0);
+                        bool flag13 = ((int)current.keyCode == 101 && (int)eventModifiers == 2) || ((int)current.keyCode == 275 && flag7 && ((int)eventModifiers & 4) == 0);
                         if (flag13)
                         {
                             current.Use();
                             Event event2 = Event.KeyboardEvent("end");
-                            event2.modifiers = eventModifiers & 1;
+                            event2.modifiers = (EventModifiers)((int)eventModifiers & 1);
                             this.ProcessEditorKeyboard(event2, false);
                             return;
                         }
-                        bool flag14 = current.keyCode == 115 && (eventModifiers == 2 || eventModifiers == 8);
+                        bool flag14 = (int)current.keyCode == 115 && ((int)eventModifiers == 2 || (int)eventModifiers == 8);
                         if (flag14)
                         {
                             current.Use();
                             this.SaveBuffer();
                             return;
                         }
-                        bool flag15 = current.keyCode == 114 && eventModifiers == 9;
+                        bool flag15 = (int)current.keyCode == 114 && (int)eventModifiers == 9;
                         if (flag15)
                         {
                             current.Use();
                             this.CommandFindAllReferences();
                             return;
                         }
-                        bool flag16 = current.keyCode == 103 && eventModifiers == 2;
+                        bool flag16 = (int)current.keyCode == 103 && (int)eventModifiers == 2;
                         if (flag16)
                         {
                             current.Use();
@@ -9705,20 +9692,20 @@ namespace AHO
                             }));
                             return;
                         }
-                        bool flag17 = current.keyCode == 274 && eventModifiers == 12;
+                        bool flag17 = (int)current.keyCode == 274 && (int)eventModifiers == 12;
                         if (flag17)
                         {
                             this.CommandDuplicateLinesDown();
                             current.Use();
-                            this.GFKALDCDCJKDLLFGKMBFPABMPCNBGCFEJEIN = true;
+                            this._CII = true;
                             return;
                         }
                     }
                 }
-                bool flag18 = current.type == 4 && !current.shift && !current.alt && (flag4 ? (!current.control) : (!current.command));
+                bool flag18 = (int)current.type == 4 && !current.shift && !current.alt && (flag4 ? (!current.control) : (!current.command));
                 if (flag18)
                 {
-                    bool flag19 = (flag7 && current.keyCode == 39) || (!flag4 && !current.control && current.keyCode == 282);
+                    bool flag19 = (flag7 && (int)current.keyCode == 39) || (!flag4 && !current.control && (int)current.keyCode == 282);
                     if (flag19)
                     {
                         string text = this.HelpURL();
@@ -9739,7 +9726,7 @@ namespace AHO
                     }
                     else
                     {
-                        bool flag22 = (flag4 && current.command && current.keyCode == 121) || (!current.control && !current.command && current.keyCode == 293);
+                        bool flag22 = (flag4 && current.command && (int)current.keyCode == 121) || (!current.control && !current.command && (int)current.keyCode == 293);
                         if (flag22)
                         {
                             current.Use();
@@ -9764,7 +9751,7 @@ namespace AHO
                         }
                         else
                         {
-                            bool flag25 = (flag4 ? (current.command && (current.keyCode == 108 || current.keyCode == 103)) : (current.control && current.keyCode == 103));
+                            bool flag25 = (flag4 ? (current.command && ((int)current.keyCode == 108 || (int)current.keyCode == 103)) : (current.control && (int)current.keyCode == 103));
                             if (flag25)
                             {
                                 current.Use();
@@ -9774,7 +9761,7 @@ namespace AHO
                                 }));
                                 return;
                             }
-                            bool flag26 = (flag4 ? (current.command && current.keyCode == 101) : (current.control && current.keyCode == 101));
+                            bool flag26 = (flag4 ? (current.command && (int)current.keyCode == 101) : (current.control && (int)current.keyCode == 101));
                             if (flag26)
                             {
                                 current.Use();
@@ -9784,64 +9771,64 @@ namespace AHO
                         }
                     }
                 }
-                bool flag27 = flag7 && current.type == 4;
+                bool flag27 = flag7 && (int)current.type == 4;
                 if (flag27)
                 {
-                    EventModifiers eventModifiers2 = eventModifiers & -11;
-                    bool flag28 = current.keyCode == 32 && eventModifiers2 == 0;
+                    EventModifiers eventModifiers2 = (EventModifiers)((int)eventModifiers & -11);
+                    bool flag28 = (int)current.keyCode == 32 && eventModifiers2 == 0;
                     if (flag28)
                     {
                         current.Use();
                         this.Autocomplete(false);
                         return;
                     }
-                    bool flag29 = current.keyCode == 116 && eventModifiers2 == 0;
+                    bool flag29 = (int)current.keyCode == 116 && eventModifiers2 == 0;
                     if (flag29)
                     {
                         current.Use();
                         EditorApplication.delayCall = (EditorApplication.CallbackFunction)Delegate.Combine(EditorApplication.delayCall, new EditorApplication.CallbackFunction(this.OpenInNewTab));
                         return;
                     }
-                    bool flag30 = (current.keyCode == 107 || current.keyCode == 47) && eventModifiers2 == 0;
+                    bool flag30 = ((int)current.keyCode == 107 || (int)current.keyCode == 47) && eventModifiers2 == 0;
                     if (flag30)
                     {
                         current.Use();
                         this.ToggleCommentSelection();
                         return;
                     }
-                    bool flag31 = flag5 && current.keyCode == 122 && eventModifiers == 2;
+                    bool flag31 = flag5 && (int)current.keyCode == 122 && (int)eventModifiers == 2;
                     if (flag31)
                     {
                         current.Use();
                         this.Undo();
-                        this.GFKALDCDCJKDLLFGKMBFPABMPCNBGCFEJEIN = true;
+                        this._CII = true;
                         return;
                     }
-                    bool flag32 = flag5 && current.keyCode == 122 && eventModifiers == 3;
+                    bool flag32 = flag5 && (int)current.keyCode == 122 && (int)eventModifiers == 3;
                     if (flag32)
                     {
                         current.Use();
                         this.Redo();
-                        this.GFKALDCDCJKDLLFGKMBFPABMPCNBGCFEJEIN = true;
+                        this._CII = true;
                         return;
                     }
-                    bool flag33 = flag6 && current.keyCode == 122 && eventModifiers2 == 1;
+                    bool flag33 = flag6 && (int)current.keyCode == 122 && (int)eventModifiers2 == 1;
                     if (flag33)
                     {
                         current.Use();
                         this.Undo();
-                        this.GFKALDCDCJKDLLFGKMBFPABMPCNBGCFEJEIN = true;
+                        this._CII = true;
                         return;
                     }
-                    bool flag34 = flag6 && current.keyCode == 121 && eventModifiers2 == 1;
+                    bool flag34 = flag6 && (int)current.keyCode == 121 && (int)eventModifiers2 == 1;
                     if (flag34)
                     {
                         current.Use();
                         this.Redo();
-                        this.GFKALDCDCJKDLLFGKMBFPABMPCNBGCFEJEIN = true;
+                        this._CII = true;
                         return;
                     }
-                    bool flag35 = current.keyCode == 115 && (eventModifiers2 & -2) == 4;
+                    bool flag35 = (int)current.keyCode == 115 && ((int)eventModifiers2 & -2) == 4;
                     if (flag35)
                     {
                         current.Use();
@@ -9849,28 +9836,28 @@ namespace AHO
                         this.Repaint();
                         return;
                     }
-                    bool flag36 = current.keyCode == 115 && eventModifiers2 == 4;
+                    bool flag36 = (int)current.keyCode == 115 && (int)eventModifiers2 == 4;
                     if (flag36)
                     {
                         current.Use();
                         this.SaveBuffer();
                         return;
                     }
-                    bool flag37 = current.keyCode == 102 && (eventModifiers2 & -5) == 1;
+                    bool flag37 = (int)current.keyCode == 102 && ((int)eventModifiers2 & -5) == 1;
                     if (flag37)
                     {
                         current.Use();
                         _bg3.ShowFindInFilesWindow();
                         return;
                     }
-                    bool flag38 = current.keyCode == 114 && (eventModifiers2 & -5) != 1;
+                    bool flag38 = (int)current.keyCode == 114 && ((int)eventModifiers2 & -5) != 1;
                     if (flag38)
                     {
                         current.Use();
                         _bg3.ShowReplaceInFilesWindow();
                         return;
                     }
-                    bool flag39 = current.keyCode == 114 && eventModifiers2 == (flag4 ? 4 : 1);
+                    bool flag39 = (int)current.keyCode == 114 && (int)eventModifiers2 == (flag4 ? 4 : 1);
                     if (flag39)
                     {
                         current.Use();
@@ -9878,7 +9865,7 @@ namespace AHO
                         this.Repaint();
                         return;
                     }
-                    bool flag40 = current.keyCode == 108 && (eventModifiers2 & -5) == 1;
+                    bool flag40 = (int)current.keyCode == 108 && ((int)eventModifiers2 & -5) == 1;
                     if (flag40)
                     {
                         current.Use();
@@ -9893,21 +9880,21 @@ namespace AHO
                         else
                         {
                             EditorGUIUtility.PingObject(AssetDatabase.LoadAssetAtPath<UnityEngine.Object>(this._ABQ._ARQ()));
-                            this.OBGEMALIEGDPMEGFAOJCKCIMLAKLMFFNDLKH.Focus();
+                            this._CHK.Focus();
                         }
                         return;
                     }
                     bool flag42 = !current.alt;
                     if (flag42)
                     {
-                        bool flag43 = current.keyCode == 45 || current.keyCode == 269;
+                        bool flag43 = (int)current.keyCode == 45 || (int)current.keyCode == 269;
                         if (flag43)
                         {
                             current.Use();
                             this.ModifyFontSize(-1);
                             return;
                         }
-                        bool flag44 = current.keyCode == 43 || current.keyCode == 61 || current.keyCode == 270;
+                        bool flag44 = (int)current.keyCode == 43 || (int)current.keyCode == 61 || (int)current.keyCode == 270;
                         if (flag44)
                         {
                             current.Use();
@@ -9916,14 +9903,14 @@ namespace AHO
                         }
                     }
                 }
-                bool flag45 = current.type == 4;
+                bool flag45 = (int)current.type == 4;
                 if (flag45)
                 {
-                    bool flag46 = (eventModifiers == 8 || eventModifiers == 2) && (current.keyCode == 46 || current.keyCode == 266);
+                    bool flag46 = ((int)eventModifiers == 8 || (int)eventModifiers == 2) && ((int)current.keyCode == 46 || (int)current.keyCode == 266);
                     if (flag46)
                     {
-                        bool mljcflpnjpehbilbamiacglghfegimgdpmnb = this._ABQ._ASC;
-                        if (mljcflpnjpehbilbamiacglghfegimgdpmnb)
+                        bool _CIH = this._ABQ._ASC;
+                        if (_CIH)
                         {
                             int num3;
                             int i;
@@ -9955,9 +9942,9 @@ namespace AHO
                                     {
                                         current.Use();
                                         GenericMenu genericMenu = new GenericMenu();
-                                        foreach (_AQA kclolinkdgmfifeiidoolpiiejameegabmlg in fixes)
+                                        foreach (_AQA _CIJ in fixes)
                                         {
-                                            _AQA captured = kclolinkdgmfifeiidoolpiiejameegabmlg;
+                                            _AQA captured = _CIJ;
                                             genericMenu.AddItem(new GUIContent(captured.GetTitle(token)), false, delegate
                                             {
                                                 this.BeginRefactoring(captured.GetTitle(token));
@@ -9973,7 +9960,7 @@ namespace AHO
                                         tokenRect.y += vector.y - tokenRect.y;
                                         genericMenu.DropDown(tokenRect);
                                         this._ATM = _bi2._ATN;
-                                        this.DJLIKNMAIPOALAMANDOGJHEODLHBGBBNBMIA = false;
+                                        this._CGW = false;
                                         this._ATO = true;
                                         this.AddRecentLocation(2, true);
                                         return;
@@ -9985,7 +9972,7 @@ namespace AHO
                         }
                     }
                 }
-                bool flag53 = flag4 && current.type == 4 && current.keyCode == 115 && eventModifiers == 6;
+                bool flag53 = flag4 && (int)current.type == 4 && (int)current.keyCode == 115 && (int)eventModifiers == 6;
                 if (flag53)
                 {
                     current.Use();
@@ -9993,7 +9980,7 @@ namespace AHO
                 }
                 else
                 {
-                    bool flag54 = current.type == 4 && current.keyCode == 293 && eventModifiers == 1;
+                    bool flag54 = (int)current.type == 4 && (int)current.keyCode == 293 && (int)eventModifiers == 1;
                     if (flag54)
                     {
                         current.Use();
@@ -10001,7 +9988,7 @@ namespace AHO
                     }
                     else
                     {
-                        bool flag55 = (_bg8._BCF ? ((eventModifiers & 6) > 0) : (flag4 ? ((eventModifiers & 2) > 0) : flag7));
+                        bool flag55 = (_bg8._BCF ? (((int)eventModifiers & 6) > 0) : (flag4 ? (((int)eventModifiers & 2) > 0) : flag7));
                         bool flag56 = false;
                         bool flag57 = _bg8._BCG && !_bg8._BCF;
                         if (flag57)
@@ -10013,7 +10000,7 @@ namespace AHO
                             bool flag58 = _bg8._BCF;
                             if (flag58)
                             {
-                                flag56 = (eventModifiers & 6) == (flag4 ? 2 : 4);
+                                flag56 = ((int)eventModifiers & 6) == (flag4 ? 2 : 4);
                             }
                         }
                         int num4 = this._ABH._AEU;
@@ -10021,19 +10008,19 @@ namespace AHO
                         int num6 = this._ABH._ABI;
                         bool flag59 = false;
                         bool flag60 = false;
-                        bool flag61 = current.type == 4;
+                        bool flag61 = (int)current.type == 4;
                         if (flag61)
                         {
                             KeyCode keyCode = current.keyCode;
                             KeyCode keyCode2 = keyCode;
-                            if (keyCode2 <= 27)
+                            if ((int)keyCode2 <= 27)
                             {
-                                if (keyCode2 != 13)
+                                if ((int)keyCode2 != 13)
                                 {
-                                    if (keyCode2 == 27)
+                                    if ((int)keyCode2 == 27)
                                     {
                                         flag3 = false;
-                                        bool flag62 = this.EEJFFFONEBHEFJKECHMCKDFAFABLNECBNBDO != null;
+                                        bool flag62 = this._CBB != null;
                                         if (flag62)
                                         {
                                             this.CloseAutocomplete();
@@ -10041,20 +10028,20 @@ namespace AHO
                                         }
                                         else
                                         {
-                                            bool flag63 = this.KBBCMMCMDLMOHHGNAPNIJGLHBLBGGPODLFEB != null;
+                                            bool flag63 = this._CBC != null;
                                             if (flag63)
                                             {
-                                                this.KBBCMMCMDLMOHHGNAPNIJGLHBLBGGPODLFEB.Hide();
-                                                this.KBBCMMCMDLMOHHGNAPNIJGLHBLBGGPODLFEB = null;
+                                                this._CBC.Hide();
+                                                this._CBC = null;
                                                 current.Use();
                                             }
                                             else
                                             {
-                                                bool flag64 = !string.IsNullOrEmpty(this.FEDKNBJPGLNNBLCBJGPAICAGEHEAFOEDMJOD) && this.KEGJHDFHDLGNNJHGDCGACGKHOGLEMOAPJFAH == this._ABQ._ASJ;
+                                                bool flag64 = !string.IsNullOrEmpty(this._CCR) && this._CHL == this._ABQ._ASJ;
                                                 if (flag64)
                                                 {
-                                                    this.KEGJHDFHDLGNNJHGDCGACGKHOGLEMOAPJFAH = -1;
-                                                    this.IEBKNKNJPHMNKJBGPLICNBIKHCFFODECEOHG = false;
+                                                    this._CHL = -1;
+                                                    this._CHO = false;
                                                     current.Use();
                                                 }
                                                 else
@@ -10074,10 +10061,10 @@ namespace AHO
                                                             this.Autocomplete(false);
                                                             return;
                                                         }
-                                                        bool flag67 = this.EPLFFMMBLDBGHFONANEPOMGLDJEBDGHFEKCI != null;
+                                                        bool flag67 = this._CDP != null;
                                                         if (flag67)
                                                         {
-                                                            this.EPLFFMMBLDBGHFONANEPOMGLDJEBDGHFEKCI = null;
+                                                            this._CDP = null;
                                                             current.Use();
                                                             return;
                                                         }
@@ -10090,7 +10077,7 @@ namespace AHO
                             }
                             else
                             {
-                                switch (keyCode2)
+                                switch ((int)keyCode2)
                                 {
                                     case 271:
                                         {
@@ -10113,7 +10100,7 @@ namespace AHO
                                         break;
                                     case 273:
                                         {
-                                            bool flag70 = flag4 && eventModifiers == 8;
+                                            bool flag70 = flag4 && (int)eventModifiers == 8;
                                             if (flag70)
                                             {
                                                 flag59 = true;
@@ -10122,7 +10109,7 @@ namespace AHO
                                             }
                                             else
                                             {
-                                                bool flag71 = eventModifiers == 4;
+                                                bool flag71 = (int)eventModifiers == 4;
                                                 if (flag71)
                                                 {
                                                     int num7 = this._ABH._ABI;
@@ -10180,7 +10167,7 @@ namespace AHO
                                                     bool flag77 = this._ATW() != null;
                                                     if (flag77)
                                                     {
-                                                        eventModifiers |= 1;
+                                                        eventModifiers |= (EventModifiers)1;
                                                         this._ATL(this._ATW().Clone());
                                                         this._ATW()._ABI--;
                                                     }
@@ -10214,16 +10201,16 @@ namespace AHO
                                                             {
                                                                 this._AFS.y = 0f;
                                                             }
-                                                            this.AINBDLCEICDFCIMEOFNOEFAHLLPOHEECOPNE = this.GetLineAt(this._AFS.y);
-                                                            this.LPAPJBHKOMFLPDIFIIJEHJBMOEFHHAIBGJBF = this._AFS.y - this.GetLineOffset(this.AINBDLCEICDFCIMEOFNOEFAHLLPOHEECOPNE);
-                                                            this.FAABIAGAJJGAMJHJFFCKGGMDOFHDOLELPKPN = true;
+                                                            this._CCT = this.GetLineAt(this._AFS.y);
+                                                            this._CCU = this._AFS.y - this.GetLineOffset(this._CCT);
+                                                            this._CIL = true;
                                                             current.Use();
                                                             return;
                                                         }
                                                         this.UseSelectionForSearch();
                                                         this.SearchPrevious();
                                                         current.Use();
-                                                        this.POAAHKKEFHAFHHJDHLCDIOKHAKGHNKOKPPFG = true;
+                                                        this._CCI = true;
                                                         return;
                                                     }
                                                 }
@@ -10234,7 +10221,7 @@ namespace AHO
                                         }
                                     case 274:
                                         {
-                                            bool flag82 = flag4 && eventModifiers == 8;
+                                            bool flag82 = flag4 && (int)eventModifiers == 8;
                                             if (flag82)
                                             {
                                                 flag59 = true;
@@ -10243,7 +10230,7 @@ namespace AHO
                                             }
                                             else
                                             {
-                                                bool flag83 = eventModifiers == 4;
+                                                bool flag83 = (int)eventModifiers == 4;
                                                 if (flag83)
                                                 {
                                                     int num10 = this._ABH._ABI;
@@ -10305,7 +10292,7 @@ namespace AHO
                                                     bool flag89 = this._ATW() != null;
                                                     if (flag89)
                                                     {
-                                                        eventModifiers |= 1;
+                                                        eventModifiers |= (EventModifiers)1;
                                                         this._ATL(this._ATW().Clone());
                                                         this._ATW()._ABI++;
                                                     }
@@ -10334,16 +10321,16 @@ namespace AHO
                                                         if (flag92)
                                                         {
                                                             this._AFS.y = this._AFS.y + this._AEY().y;
-                                                            this.AINBDLCEICDFCIMEOFNOEFAHLLPOHEECOPNE = this.GetLineAt(this._AFS.y);
-                                                            this.LPAPJBHKOMFLPDIFIIJEHJBMOEFHHAIBGJBF = this._AFS.y - this.GetLineOffset(this.AINBDLCEICDFCIMEOFNOEFAHLLPOHEECOPNE);
-                                                            this.FAABIAGAJJGAMJHJFFCKGGMDOFHDOLELPKPN = true;
+                                                            this._CCT = this.GetLineAt(this._AFS.y);
+                                                            this._CCU = this._AFS.y - this.GetLineOffset(this._CCT);
+                                                            this._CIL = true;
                                                             current.Use();
                                                             return;
                                                         }
                                                         this.UseSelectionForSearch();
                                                         this.SearchNext();
                                                         current.Use();
-                                                        this.POAAHKKEFHAFHHJDHLCDIOKHAKGHNKOKPPFG = true;
+                                                        this._CCI = true;
                                                         return;
                                                     }
                                                 }
@@ -10354,7 +10341,7 @@ namespace AHO
                                         }
                                     case 275:
                                         {
-                                            bool flag93 = eventModifiers == (4 | (_bg8._BCF ? (flag4 ? 8 : 2) : 0));
+                                            bool flag93 = (int)eventModifiers == (4 | (_bg8._BCF ? (flag4 ? 8 : 2) : 0));
                                             if (flag93)
                                             {
                                                 current.Use();
@@ -10422,7 +10409,7 @@ namespace AHO
                                         }
                                     case 276:
                                         {
-                                            bool flag101 = eventModifiers == (4 | (_bg8._BCF ? (flag4 ? 8 : 2) : 0));
+                                            bool flag101 = (int)eventModifiers == (4 | (_bg8._BCF ? (flag4 ? 8 : 2) : 0));
                                             if (flag101)
                                             {
                                                 current.Use();
@@ -10558,11 +10545,11 @@ namespace AHO
                                                 num6 = linesOffset3._ABI;
                                                 num5 = linesOffset3._ATF;
                                                 num4 = linesOffset3._AEU;
-                                                this.AINBDLCEICDFCIMEOFNOEFAHLLPOHEECOPNE = this.GetLinesOffset(new GCE._AFA
+                                                this._CCT = this.GetLinesOffset(new GCE._AFA
                                                 {
-                                                    _ABI = this.AINBDLCEICDFCIMEOFNOEFAHLLPOHEECOPNE
+                                                    _ABI = this._CCT
                                                 }, -(int)(this._ALM.height / this._AEY().y))._ABI;
-                                                _bi2.JKLAPMECMLAAJBICDAKNMBFEMBLIJGBBDGCM = true;
+                                                _bi2._CIM = true;
                                                 flag3 = false;
                                             }
                                             current.Use();
@@ -10583,20 +10570,20 @@ namespace AHO
                                                 num6 = linesOffset4._ABI;
                                                 num5 = linesOffset4._ATF;
                                                 num4 = linesOffset4._AEU;
-                                                this.AINBDLCEICDFCIMEOFNOEFAHLLPOHEECOPNE = this.GetLinesOffset(new GCE._AFA
+                                                this._CCT = this.GetLinesOffset(new GCE._AFA
                                                 {
-                                                    _ABI = this.AINBDLCEICDFCIMEOFNOEFAHLLPOHEECOPNE
+                                                    _ABI = this._CCT
                                                 }, (int)(this._ALM.height / this._AEY().y))._ABI;
-                                                _bi2.JKLAPMECMLAAJBICDAKNMBFEMBLIJGBBDGCM = true;
+                                                _bi2._CIM = true;
                                                 flag3 = false;
                                             }
                                             current.Use();
                                             break;
                                         }
                                     default:
-                                        if (keyCode2 != 326)
+                                        if ((int)keyCode2 != 326)
                                         {
-                                            if (keyCode2 == 327)
+                                            if ((int)keyCode2 == 327)
                                             {
                                                 current.Use();
                                                 bool flag116 = this.CanGoForward();
@@ -10619,22 +10606,22 @@ namespace AHO
                                 }
                             }
                         }
-                        bool flag118 = current.shift && current.keyCode == 32;
+                        bool flag118 = current.shift && (int)current.keyCode == 32;
                         if (flag118)
                         {
                             current.Use();
                             flag3 = false;
                         }
-                        bool flag119 = current.type == 4;
+                        bool flag119 = (int)current.type == 4;
                         if (flag119)
                         {
-                            bool flag120 = eventModifiers == 2 && current.character == ' ';
+                            bool flag120 = (int)eventModifiers == 2 && current.character == ' ';
                             if (flag120)
                             {
                                 current.Use();
                                 return;
                             }
-                            bool flag121 = flag7 && (current.character == '\n' || current.keyCode == 13) && !current.shift && !current.alt;
+                            bool flag121 = flag7 && (current.character == '\n' || (int)current.keyCode == 13) && !current.shift && !current.alt;
                             if (flag121)
                             {
                                 this.AddRecentLocation(1, true);
@@ -10646,13 +10633,13 @@ namespace AHO
                                 current.Use();
                                 return;
                             }
-                            bool flag123 = (current.keyCode == 9 || current.character == '\t' || current.character == '\u0019') && (eventModifiers & -2) == 0;
+                            bool flag123 = ((int)current.keyCode == 9 || current.character == '\t' || current.character == '\u0019') && ((int)eventModifiers & -2) == 0;
                             if (flag123)
                             {
-                                bool flag124 = current.keyCode != 9;
+                                bool flag124 = (int)current.keyCode != 9;
                                 if (flag124)
                                 {
-                                    bool flag125 = eventModifiers == 1;
+                                    bool flag125 = (int)eventModifiers == 1;
                                     if (flag125)
                                     {
                                         this.IndentLess();
@@ -10661,18 +10648,18 @@ namespace AHO
                                     {
                                         this.IndentMoreOrInsertTab(!acceptingAutoComplete);
                                     }
-                                    this.POAAHKKEFHAFHHJDHLCDIOKHAKGHNKOKPPFG = true;
+                                    this._CCI = true;
                                     this._ATM = _bi2._ATN;
-                                    this.DJLIKNMAIPOALAMANDOGJHEODLHBGBBNBMIA = false;
-                                    this.FAABIAGAJJGAMJHJFFCKGGMDOFHDOLELPKPN = true;
+                                    this._CGW = false;
+                                    this._CIL = true;
                                 }
                                 current.Use();
                                 return;
                             }
-                            bool flag126 = flag7 && (current.keyCode == 91 || current.keyCode == 93);
+                            bool flag126 = flag7 && ((int)current.keyCode == 91 || (int)current.keyCode == 93);
                             if (flag126)
                             {
-                                bool flag127 = current.keyCode == 91;
+                                bool flag127 = (int)current.keyCode == 91;
                                 if (flag127)
                                 {
                                     this.IndentLess();
@@ -10681,18 +10668,19 @@ namespace AHO
                                 {
                                     this.IndentMore();
                                 }
-                                this.POAAHKKEFHAFHHJDHLCDIOKHAKGHNKOKPPFG = true;
+                                this._CCI = true;
                                 this._ATM = _bi2._ATN;
-                                this.DJLIKNMAIPOALAMANDOGJHEODLHBGBBNBMIA = false;
-                                this.FAABIAGAJJGAMJHJFFCKGGMDOFHDOLELPKPN = true;
+                                this._CGW = false;
+                                this._CIL = true;
                                 current.Use();
                                 return;
                             }
-                            bool flag128 = (current.character >= ' ' || current.character == '\n' || (current.character == '\0' && Input.compositionString != "")) && (!flag7 || ((eventModifiers & 8) == null && current.keyCode == null)) && this.TryEdit();
+                            bool flag128 = (current.character >= ' ' || current.character == '\n' || (current.character == '\0' && Input.compositionString != "")) && 
+                                (!flag7 || (((int)eventModifiers & 8) == null && current.keyCode == null)) && this.TryEdit();
                             if (flag128)
                             {
                                 char character = current.character;
-                                bool flag129 = character == '\n' && eventModifiers == 1 && this._ATW() == null;
+                                bool flag129 = character == '\n' && (int)eventModifiers == 1 && this._ATW() == null;
                                 if (flag129)
                                 {
                                     this._ABH._AEU = this._ABQ.FLOg[this._ABH._ABI].Length;
@@ -10700,14 +10688,14 @@ namespace AHO
                                 string text4 = ((character != '\0') ? character.ToString() : Input.compositionString);
                                 string text5 = null;
                                 TextPosition textPosition = TextPosition.invalid;
-                                bool flag130 = this.KGNJCNNMIFPKALPOGAHDGCDKCMMDLDBDLILH.Count > 0 && "}])\">".IndexOf(character) != -1;
+                                bool flag130 = this._CGN.Count > 0 && "}])\">".IndexOf(character) != -1;
                                 if (flag130)
                                 {
                                     bool flag131 = this._ATW() == null;
                                     if (flag131)
                                     {
                                         TextPosition textPosition2 = this._ABQ.FirstNonWhitespacePos(this._ABH._ABI, this._ABH._AEU);
-                                        bool flag132 = textPosition2 == this.KGNJCNNMIFPKALPOGAHDGCDKCMMDLDBDLILH.Last<_bi2.EPAFFDDCAEGGCPDGEEBEBADBOBLMGPDEPLEA>().AGJBFOPCGMOGGDJKCDLBNMJAILHEKLMGPALB && this._ABQ.FLOg[textPosition2.line][textPosition2.index] == character;
+                                        bool flag132 = textPosition2 == this._CGN.Last<_bi2._CGO>()._CGR && this._ABQ.FLOg[textPosition2.line][textPosition2.index] == character;
                                         if (flag132)
                                         {
                                             this._ATL(new GCE._AFA
@@ -10716,14 +10704,14 @@ namespace AHO
                                                 _AEU = textPosition2.index + 1
                                             });
                                             this._ATW()._ATG = (this._ATW()._ATF = this.CharIndexToColumn(this._ATW()._AEU, this._ATW()._ABI));
-                                            this.KGNJCNNMIFPKALPOGAHDGCDKCMMDLDBDLILH.RemoveAt(this.KGNJCNNMIFPKALPOGAHDGCDKCMMDLDBDLILH.Count - 1);
-                                            bool flag133 = this.KGNJCNNMIFPKALPOGAHDGCDKCMMDLDBDLILH.Count == 0;
+                                            this._CGN.RemoveAt(this._CGN.Count - 1);
+                                            bool flag133 = this._CGN.Count == 0;
                                             if (flag133)
                                             {
-                                                GCE cdghkglnkfhjenlebomgbogcmlafoejmngmj = this._ABQ;
-                                                cdghkglnkfhjenlebomgbogcmlafoejmngmj._AUK = (GCE._AVI)Delegate.Remove(cdghkglnkfhjenlebomgbogcmlafoejmngmj._AUK, new GCE._AVI(this.OnInsertedText));
-                                                GCE cdghkglnkfhjenlebomgbogcmlafoejmngmj2 = this._ABQ;
-                                                cdghkglnkfhjenlebomgbogcmlafoejmngmj2._AUO = (GCE._AVM)Delegate.Remove(cdghkglnkfhjenlebomgbogcmlafoejmngmj2._AUO, new GCE._AVM(this.OnRemovedText));
+                                                GCE _CCO = this._ABQ;
+                                                _CCO._AUK = (GCE._AVI)Delegate.Remove(_CCO._AUK, new GCE._AVI(this.OnInsertedText));
+                                                GCE _CCO2 = this._ABQ;
+                                                _CCO2._AUO = (GCE._AVM)Delegate.Remove(_CCO2._AUO, new GCE._AVM(this.OnRemovedText));
                                             }
                                         }
                                     }
@@ -10810,10 +10798,10 @@ namespace AHO
                                                 }
                                             }
                                         }
-                                        bool flag148 = this.KBBCMMCMDLMOHHGNAPNIJGLHBLBGGPODLFEB != null;
+                                        bool flag148 = this._CBC != null;
                                         if (flag148)
                                         {
-                                            this.KBBCMMCMDLMOHHGNAPNIJGLHBLBGGPODLFEB._AEW(true);
+                                            this._CBC._AEW(true);
                                         }
                                     }
                                 }
@@ -10875,19 +10863,19 @@ namespace AHO
                                     bool flag156 = character != '\n';
                                     if (flag156)
                                     {
-                                        _bi2.EPAFFDDCAEGGCPDGEEBEBADBOBLMGPDEPLEA epaffddcaeggcpdgeebebadboblmgpdeplea = new _bi2.EPAFFDDCAEGGCPDGEEBEBADBOBLMGPDEPLEA
+                                        _bi2._CGO _CGP = new _bi2._CGO
                                         {
-                                            OJKLJINFJBEPHBPPEABIJNJCDOPNEJGPAGND = new TextPosition(this._ABH._ABI, this._ABH._AEU),
-                                            AGJBFOPCGMOGGDJKCDLBNMJAILHEKLMGPALB = new TextPosition(this._ABH._ABI, this._ABH._AEU + 1)
+                                            _CGQ = new TextPosition(this._ABH._ABI, this._ABH._AEU),
+                                            _CGR = new TextPosition(this._ABH._ABI, this._ABH._AEU + 1)
                                         };
-                                        this.KGNJCNNMIFPKALPOGAHDGCDKCMMDLDBDLILH.Add(epaffddcaeggcpdgeebebadboblmgpdeplea);
-                                        bool flag157 = this.KGNJCNNMIFPKALPOGAHDGCDKCMMDLDBDLILH.Count == 1;
+                                        this._CGN.Add(_CGP);
+                                        bool flag157 = this._CGN.Count == 1;
                                         if (flag157)
                                         {
-                                            GCE cdghkglnkfhjenlebomgbogcmlafoejmngmj3 = this._ABQ;
-                                            cdghkglnkfhjenlebomgbogcmlafoejmngmj3._AUO = (GCE._AVM)Delegate.Combine(cdghkglnkfhjenlebomgbogcmlafoejmngmj3._AUO, new GCE._AVM(this.OnRemovedText));
-                                            GCE cdghkglnkfhjenlebomgbogcmlafoejmngmj4 = this._ABQ;
-                                            cdghkglnkfhjenlebomgbogcmlafoejmngmj4._AUK = (GCE._AVI)Delegate.Combine(cdghkglnkfhjenlebomgbogcmlafoejmngmj4._AUK, new GCE._AVI(this.OnInsertedText));
+                                            GCE _CCO3 = this._ABQ;
+                                            _CCO3._AUO = (GCE._AVM)Delegate.Combine(_CCO3._AUO, new GCE._AVM(this.OnRemovedText));
+                                            GCE _CCO4 = this._ABQ;
+                                            _CCO4._AUK = (GCE._AVI)Delegate.Combine(_CCO4._AUK, new GCE._AVI(this.OnInsertedText));
                                         }
                                     }
                                 }
@@ -10906,19 +10894,19 @@ namespace AHO
                                     num = _ARC2;
                                     num2 = num16;
                                 }
-                                eventModifiers &= -2;
+                                eventModifiers &= (EventModifiers)(-2);
                                 current.Use();
                                 bool flag160 = !acceptingAutoComplete;
                                 if (flag160)
                                 {
                                     this.AfterCharecterTyped(text4, num6, num4);
-                                    this.GFKALDCDCJKDLLFGKMBFPABMPCNBGCFEJEIN = true;
+                                    this._CII = true;
                                 }
-                                this.IFOOFJEHFDEEDMEJMCKOLIBPDFBJEFLOBCEM = text4;
+                                this._CIK = text4;
                             }
                             else
                             {
-                                bool flag161 = current.keyCode == 127 && eventModifiers == 1 && this._ATW() == null && this.TryEdit();
+                                bool flag161 = (int)current.keyCode == 127 &&  (int)eventModifiers == 1 && this._ATW() == null && this.TryEdit();
                                 if (flag161)
                                 {
                                     eventModifiers = 0;
@@ -10953,20 +10941,20 @@ namespace AHO
                                 }
                                 else
                                 {
-                                    bool flag163 = (current.keyCode == 8 || current.keyCode == 127) && this.TryEdit();
+                                    bool flag163 = ((int)current.keyCode == 8 || (int)current.keyCode == 127) && this.TryEdit();
                                     if (flag163)
                                     {
-                                        eventModifiers &= -2;
+                                        eventModifiers &= ((EventModifiers)(-2));
                                         GCE._AFA _ATD10 = this._ABH.Clone();
                                         bool flag164 = this._ATW() == null;
                                         if (flag164)
                                         {
                                             Event event3 = new Event(current);
                                             bool flag165 = false;
-                                            bool flag166 = current.keyCode == 127;
+                                            bool flag166 = (int)current.keyCode == 127;
                                             if (flag166)
                                             {
-                                                event3.keyCode = 275;
+                                                event3.keyCode = (KeyCode)275;
                                                 bool flag167 = this._ABH._AEU == this._ABQ.FLOg[this._ABH._ABI].Length && this._ABH._ABI + 1 < this._ABQ.FLOg.Count;
                                                 if (flag167)
                                                 {
@@ -10987,68 +10975,68 @@ namespace AHO
                                             }
                                             else
                                             {
-                                                event3.keyCode = 276;
+                                                event3.keyCode = (KeyCode)276;
                                                 flag165 = true;
                                             }
                                             bool flag169 = event3 != null;
                                             if (flag169)
                                             {
-                                                event3.modifiers |= 1;
+                                                event3.modifiers |= (EventModifiers)1;
                                                 this.ProcessEditorKeyboard(event3, true);
                                             }
-                                            bool flag170 = flag165 && this.KGNJCNNMIFPKALPOGAHDGCDKCMMDLDBDLILH.Count > 0;
+                                            bool flag170 = flag165 && this._CGN.Count > 0;
                                             if (flag170)
                                             {
-                                                _bi2.EPAFFDDCAEGGCPDGEEBEBADBOBLMGPDEPLEA epaffddcaeggcpdgeebebadboblmgpdeplea2 = this.KGNJCNNMIFPKALPOGAHDGCDKCMMDLDBDLILH.Last<_bi2.EPAFFDDCAEGGCPDGEEBEBADBOBLMGPDEPLEA>();
-                                                TextPosition ojkljinfjbephbppeabijnjcdopnejgpagnd = epaffddcaeggcpdgeebebadboblmgpdeplea2.OJKLJINFJBEPHBPPEABIJNJCDOPNEJGPAGND;
-                                                bool flag171 = ojkljinfjbephbppeabijnjcdopnejgpagnd.line == this._ABH._ABI && ojkljinfjbephbppeabijnjcdopnejgpagnd.index == this._ABH._AEU;
+                                                _bi2._CGO _CGP2 = this._CGN.Last<_bi2._CGO>();
+                                                TextPosition _CIN = _CGP2._CGQ;
+                                                bool flag171 = _CIN.line == this._ABH._ABI && _CIN.index == this._ABH._AEU;
                                                 if (flag171)
                                                 {
-                                                    ojkljinfjbephbppeabijnjcdopnejgpagnd.Move(this._ABQ, 1);
-                                                    while (ojkljinfjbephbppeabijnjcdopnejgpagnd < epaffddcaeggcpdgeebebadboblmgpdeplea2.AGJBFOPCGMOGGDJKCDLBNMJAILHEKLMGPALB)
+                                                    _CIN.Move(this._ABQ, 1);
+                                                    while (_CIN < _CGP2._CGR)
                                                     {
-                                                        string text9 = this._ABQ.FLOg[ojkljinfjbephbppeabijnjcdopnejgpagnd.line];
-                                                        int num17 = ((ojkljinfjbephbppeabijnjcdopnejgpagnd.line == epaffddcaeggcpdgeebebadboblmgpdeplea2.AGJBFOPCGMOGGDJKCDLBNMJAILHEKLMGPALB.line) ? epaffddcaeggcpdgeebebadboblmgpdeplea2.AGJBFOPCGMOGGDJKCDLBNMJAILHEKLMGPALB.index : text9.Length);
-                                                        while (ojkljinfjbephbppeabijnjcdopnejgpagnd.index < num17)
+                                                        string text9 = this._ABQ.FLOg[_CIN.line];
+                                                        int num17 = ((_CIN.line == _CGP2._CGR.line) ? _CGP2._CGR.index : text9.Length);
+                                                        while (_CIN.index < num17)
                                                         {
-                                                            bool flag172 = !char.IsWhiteSpace(text9, ojkljinfjbephbppeabijnjcdopnejgpagnd.index);
+                                                            bool flag172 = !char.IsWhiteSpace(text9, _CIN.index);
                                                             if (flag172)
                                                             {
                                                                 break;
                                                             }
-                                                            ojkljinfjbephbppeabijnjcdopnejgpagnd.index++;
+                                                            _CIN.index++;
                                                         }
-                                                        bool flag173 = ojkljinfjbephbppeabijnjcdopnejgpagnd.index < num17;
+                                                        bool flag173 = _CIN.index < num17;
                                                         if (flag173)
                                                         {
                                                             break;
                                                         }
-                                                        ojkljinfjbephbppeabijnjcdopnejgpagnd.index = 0;
-                                                        ojkljinfjbephbppeabijnjcdopnejgpagnd.line++;
+                                                        _CIN.index = 0;
+                                                        _CIN.line++;
                                                     }
-                                                    bool flag174 = ojkljinfjbephbppeabijnjcdopnejgpagnd >= epaffddcaeggcpdgeebebadboblmgpdeplea2.AGJBFOPCGMOGGDJKCDLBNMJAILHEKLMGPALB;
+                                                    bool flag174 = _CIN >= _CGP2._CGR;
                                                     if (flag174)
                                                     {
                                                         this._ATL(new GCE._AFA
                                                         {
-                                                            _ABI = epaffddcaeggcpdgeebebadboblmgpdeplea2.AGJBFOPCGMOGGDJKCDLBNMJAILHEKLMGPALB.line,
-                                                            _AEU = epaffddcaeggcpdgeebebadboblmgpdeplea2.AGJBFOPCGMOGGDJKCDLBNMJAILHEKLMGPALB.index + 1
+                                                            _ABI = _CGP2._CGR.line,
+                                                            _AEU = _CGP2._CGR.index + 1
                                                         });
                                                         this._ATW()._ATG = (this._ATW()._ATF = this.CharIndexToColumn(this._ATW()._AEU, this._ATW()._ABI));
-                                                        this.KGNJCNNMIFPKALPOGAHDGCDKCMMDLDBDLILH.RemoveAt(this.KGNJCNNMIFPKALPOGAHDGCDKCMMDLDBDLILH.Count - 1);
-                                                        bool flag175 = this.KGNJCNNMIFPKALPOGAHDGCDKCMMDLDBDLILH.Count == 0;
+                                                        this._CGN.RemoveAt(this._CGN.Count - 1);
+                                                        bool flag175 = this._CGN.Count == 0;
                                                         if (flag175)
                                                         {
-                                                            GCE cdghkglnkfhjenlebomgbogcmlafoejmngmj5 = this._ABQ;
-                                                            cdghkglnkfhjenlebomgbogcmlafoejmngmj5._AUK = (GCE._AVI)Delegate.Remove(cdghkglnkfhjenlebomgbogcmlafoejmngmj5._AUK, new GCE._AVI(this.OnInsertedText));
-                                                            GCE cdghkglnkfhjenlebomgbogcmlafoejmngmj6 = this._ABQ;
-                                                            cdghkglnkfhjenlebomgbogcmlafoejmngmj6._AUO = (GCE._AVM)Delegate.Remove(cdghkglnkfhjenlebomgbogcmlafoejmngmj6._AUO, new GCE._AVM(this.OnRemovedText));
+                                                            GCE _CCO5 = this._ABQ;
+                                                            _CCO5._AUK = (GCE._AVI)Delegate.Remove(_CCO5._AUK, new GCE._AVI(this.OnInsertedText));
+                                                            GCE _CCO6 = this._ABQ;
+                                                            _CCO6._AUO = (GCE._AVM)Delegate.Remove(_CCO6._AUO, new GCE._AVM(this.OnRemovedText));
                                                         }
                                                     }
                                                 }
                                             }
                                         }
-                                        eventModifiers &= -2;
+                                        eventModifiers &= ((EventModifiers)(-2));
                                         bool flag176 = this._ATW() != null;
                                         if (flag176)
                                         {
@@ -11061,16 +11049,16 @@ namespace AHO
                                             this._ABQ.UpdateHighlighting(_ATD10._ABI, _ATD10._ABI, false);
                                             current.Use();
                                         }
-                                        this.GFKALDCDCJKDLLFGKMBFPABMPCNBGCFEJEIN = true;
+                                        this._CII = true;
                                     }
                                 }
                             }
                         }
-                        bool flag177 = current.type == 12;
+                        bool flag177 = (int)current.type == 12;
                         if (flag177)
                         {
                             this._ATM = _bi2._ATN;
-                            this.DJLIKNMAIPOALAMANDOGJHEODLHBGBBNBMIA = false;
+                            this._CGW = false;
                             bool flag178 = this._ATW() == null && current.shift;
                             if (flag178)
                             {
@@ -11100,8 +11088,8 @@ namespace AHO
                             bool flag182 = flag59;
                             if (flag182)
                             {
-                                bool bopcdiiiaacdailgpofhgpkbbolaifbdfado = this.BOPCDIIIAACDAILGPOFHGPKBBOLAIFBDFADO;
-                                if (bopcdiiiaacdailgpofhgpkbbolaifbdfado)
+                                bool _CGE = this._CCH;
+                                if (_CGE)
                                 {
                                     List<int> softLineBreaks = this.GetSoftLineBreaks(num6);
                                     int num18 = _bi2.FindFirstIndexGreaterThanOrEqualTo<int>(softLineBreaks, num4);
@@ -11129,14 +11117,14 @@ namespace AHO
                             bool flag185 = current.character != '\0' || Input.compositionString == "";
                             if (flag185)
                             {
-                                bool flag186 = flag60 || (this._ATW() != null && ((eventModifiers & 1) == null || this._ATW() == this._ABH));
+                                bool flag186 = flag60 || (this._ATW() != null && (((int)eventModifiers & 1) == null || this._ATW() == this._ABH));
                                 if (flag186)
                                 {
                                     this._ATL(null);
                                 }
                             }
                             this._ATO = true;
-                            this.FAABIAGAJJGAMJHJFFCKGGMDOFHDOLELPKPN = true;
+                            this._CIL = true;
                             bool flag187 = num >= 0 && num <= num2 && this._ABQ.CanEdit();
                             if (flag187)
                             {
@@ -11147,10 +11135,10 @@ namespace AHO
                             {
                                 this.AddRecentLocation(0, true);
                             }
-                            bool flag189 = _bg8._BAQ && !this.IKLLHBOIKJFIAHLFHOEAIKOEOIPKDFMKPMPH && this.IFOOFJEHFDEEDMEJMCKOLIBPDFBJEFLOBCEM == ";";
+                            bool flag189 = _bg8._BAQ && !this._CIO && this._CIK == ";";
                             if (flag189)
                             {
-                                this.IFOOFJEHFDEEDMEJMCKOLIBPDFBJEFLOBCEM = null;
+                                this._CIK = null;
                                 SyntaxToken tokenAtPosition = this.GetTokenAtPosition(this._ABH._ABI, this._ABH._AEU);
                                 bool flag190 = tokenAtPosition != null && tokenAtPosition.tokenKind == SyntaxToken.Kind.Punctuator;
                                 if (flag190)
@@ -11180,17 +11168,17 @@ namespace AHO
                                                 };
                                                 this._ABH._ATG = this.CharIndexToColumn(this._ABH._AEU, this._ABH._ABI);
                                                 this._ABH._ATF = this._ABH._ATG;
-                                                this.IKLLHBOIKJFIAHLFHOEAIKOEOIPKDFMKPMPH = true;
+                                                this._CIO = true;
                                                 this.ProcessEditorKeyboard(Event.KeyboardEvent(";"), false);
-                                                this.IKLLHBOIKJFIAHLFHOEAIKOEOIPKDFMKPMPH = false;
-                                                this.IFOOFJEHFDEEDMEJMCKOLIBPDFBJEFLOBCEM = null;
+                                                this._CIO = false;
+                                                this._CIK = null;
                                                 return;
                                             }
                                         }
                                     }
                                 }
                             }
-                            bool flag194 = this.IFOOFJEHFDEEDMEJMCKOLIBPDFBJEFLOBCEM == "/";
+                            bool flag194 = this._CIK == "/";
                             if (flag194)
                             {
                                 SyntaxToken tokenAtPosition2 = this.GetTokenAtPosition(this._ABH._ABI, this._ABH._AEU);
@@ -11288,7 +11276,7 @@ namespace AHO
                                                     int _ARC4 = this._ABQ.InsertText(this._ABH, stringBuilder.ToString())._ABI;
                                                     _bc5._AOM = false;
                                                     this._ABQ.UpdateHighlighting(_ARC3, _ARC4, false);
-                                                    this.IFOOFJEHFDEEDMEJMCKOLIBPDFBJEFLOBCEM = null;
+                                                    this._CIK = null;
                                                 }
                                             }
                                         }
@@ -11304,19 +11292,19 @@ namespace AHO
         // Token: 0x06000311 RID: 785 RVA: 0x00037EC0 File Offset: 0x000360C0
         private void ProcessEditorMouse(float margin, Event current)
         {
-            bool flag = current.type == 3 || current.type == 0;
+            bool flag = (int)current.type == 3 || current.type == 0;
             if (flag)
             {
-                this.PLNPCENGAKFOMJMLMFIMLBMEBCMJAICLKBCC = 0f;
+                this._CGY = 0f;
             }
             bool flag2 = !this.CanEdit();
             if (!flag2)
             {
-                bool flag3 = GUIUtility.hotControl != 0 && GUIUtility.hotControl != _bi2.BLPCHGOBMBLGEAPDFHEIFAEBPBCJAFEONIIC && DragAndDrop.GetGenericData("SuperEditor.Text") == null;
+                bool flag3 = GUIUtility.hotControl != 0 && GUIUtility.hotControl != _bi2._CIQ && DragAndDrop.GetGenericData("SuperEditor.Text") == null;
                 if (!flag3)
                 {
-                    this.GHAALLBLGMBDHHPIMPOIIIDIJCJBGDDBKHIC._ABI = -1;
-                    this.DGFPNNENOAAGOMLLCKFKADELBMKMIEIFNJBJ._ABI = -1;
+                    this._CIP._ABI = -1;
+                    this._CIR._ABI = -1;
                     bool flag4 = current.type == 0;
                     if (flag4)
                     {
@@ -11324,11 +11312,11 @@ namespace AHO
                         bool flag5 = current.button == 0;
                         if (flag5)
                         {
-                            this.BLGGAMPHPAAEJEABCOGEBGGCAMIEELCDPMNE = true;
-                            bool flhmmgogabacngebpcfefgpmfnakdpiglabb = this.FLHMMGOGABACNGEBPCFEFGPMFNAKDPIGLABB;
-                            if (flhmmgogabacngebpcfefgpmfnakdpiglabb)
+                            this._CIS = true;
+                            bool _CIT = this._CIU;
+                            if (_CIT)
                             {
-                                bool flag6 = current.mousePosition.x >= this.JPPFMECFJCDOMNMEIPPNOEIICFJPJCAFJLMK - this._AEY().x - 6f + this.OKJELGDKOEAMANJFODNINLMCPLBNCFHKDNNE.x && current.mousePosition.x < this.JPPFMECFJCDOMNMEIPPNOEIICFJPJCAFJLMK - this._AEY().x - 6f + this._AEY().x + this.OKJELGDKOEAMANJFODNINLMCPLBNCFHKDNNE.x;
+                                bool flag6 = current.mousePosition.x >= this._CGA - this._AEY().x - 6f + this._CIV.x && current.mousePosition.x < this._CGA - this._AEY().x - 6f + this._AEY().x + this._CIV.x;
                                 if (flag6)
                                 {
                                     int lineAt = this.GetLineAt(current.mousePosition.y);
@@ -11349,7 +11337,7 @@ namespace AHO
                                                     bool flag11 = _AQZ == lineAt;
                                                     if (flag11)
                                                     {
-                                                        this.AKNDCMEKCLNECEIINAOBBODFNCODAADFNILP = lineAt;
+                                                        this._CIW = lineAt;
                                                     }
                                                 }
                                             }
@@ -11357,51 +11345,51 @@ namespace AHO
                                     }
                                 }
                             }
-                            bool lfgcffnkdedpogflakndcphcnedjkmpjmdfg = this.LFGCFFNKDEDPOGFLAKNDCPHCNEDJKMPJMDFG;
-                            if (lfgcffnkdedpogflakndcphcnedjkmpjmdfg)
+                            bool _CIX = this._CIY;
+                            if (_CIX)
                             {
-                                bool flag12 = current.mousePosition.x >= this.OKJELGDKOEAMANJFODNINLMCPLBNCFHKDNNE.x && current.mousePosition.x < this.BHANPCDIOAHCJKEGENEHNEHACADLNINEFAKG + this._AEY().x + this.OKJELGDKOEAMANJFODNINLMCPLBNCFHKDNNE.x;
+                                bool flag12 = current.mousePosition.x >= this._CIV.x && current.mousePosition.x < this._CIZ + this._AEY().x + this._CIV.x;
                                 if (flag12)
                                 {
                                     int lineAt2 = this.GetLineAt(current.mousePosition.y);
                                     bool flag13 = lineAt2 >= 0 && lineAt2 < this._ABQ.FLOg.Count;
                                     if (flag13)
                                     {
-                                        this.MDKDMJHJKJKGBMLNFDHCKDIJDONPLLKDFGKC = lineAt2;
+                                        this._CJA = lineAt2;
                                     }
-                                    bool flag14 = !this.CFGMIHPKGHMFFINDHELODHEJGENHNKBBHPGK.Contains(this.MDKDMJHJKJKGBMLNFDHCKDIJDONPLLKDFGKC);
+                                    bool flag14 = !this._CJB.Contains(this._CJA);
                                     if (flag14)
                                     {
-                                        this.CFGMIHPKGHMFFINDHELODHEJGENHNKBBHPGK.Add(this.MDKDMJHJKJKGBMLNFDHCKDIJDONPLLKDFGKC);
+                                        this._CJB.Add(this._CJA);
                                     }
                                     else
                                     {
-                                        this.CFGMIHPKGHMFFINDHELODHEJGENHNKBBHPGK.Remove(this.MDKDMJHJKJKGBMLNFDHCKDIJDONPLLKDFGKC);
+                                        this._CJB.Remove(this._CJA);
                                     }
                                 }
                             }
                         }
                     }
-                    bool flag15 = !this.BLGGAMPHPAAEJEABCOGEBGGCAMIEELCDPMNE && current.button == 0 && current.rawType != 1 && current.type != 2;
+                    bool flag15 = !this._CIS && current.button == 0 && (int)current.rawType != 1 && (int)current.type != 2;
                     if (!flag15)
                     {
-                        bool flag16 = current.rawType == 1 && current.button == 0;
+                        bool flag16 = (int)current.rawType == 1 && current.button == 0;
                         if (flag16)
                         {
-                            this.BLGGAMPHPAAEJEABCOGEBGGCAMIEELCDPMNE = false;
-                            this.PNBFHJBPGLJPBOMMOHFIHHJONMJLBKBGFFLL = false;
-                            this.KOLAGFCMKEFOAKDPPHCEBJPFDNEGLGMBLODK = false;
+                            this._CIS = false;
+                            this._CDL = false;
+                            this._CJC = false;
                         }
                         EventType type = current.type;
-                        EventModifiers eventModifiers = current.modifiers & -113;
-                        bool flag17 = type == 3 && current.button == 0;
+                        EventModifiers eventModifiers = (EventModifiers)((int)current.modifiers & -113);
+                        bool flag17 = (int)type == 3 && current.button == 0;
                         int num = this._ABH._ATF;
                         int num2 = this._ABH._AEU;
                         int num3 = this._ABH._ABI;
-                        this.MGLMBDNKELHNGEPMGCMBLIGJGEOLPCLHKPBN._ABI = this._ABH._ABI;
-                        this.MGLMBDNKELHNGEPMGCMBLIGJGEOLPCLHKPBN._AEU = this._ABH._AEU;
-                        this.MGLMBDNKELHNGEPMGCMBLIGJGEOLPCLHKPBN._ATG = this._ABH._ATG;
-                        this.MGLMBDNKELHNGEPMGCMBLIGJGEOLPCLHKPBN._ATF = this._ABH._ATF;
+                        this._CJD._ABI = this._ABH._ABI;
+                        this._CJD._AEU = this._ABH._AEU;
+                        this._CJD._ATG = this._ABH._ATG;
+                        this._CJD._ATF = this._ABH._ATF;
                         float num4 = current.mousePosition.x;
                         float num5 = current.mousePosition.y;
                         bool flag18 = flag17;
@@ -11417,7 +11405,7 @@ namespace AHO
                         int num8 = (int)(num4 / this._AEY().x);
                         int num9 = Mathf.RoundToInt(charAt);
                         int num10 = (int)charAt;
-                        this.GHAALLBLGMBDHHPIMPOIIIDIJCJBGDDBKHIC = new GCE._AFA
+                        this._CIP = new GCE._AFA
                         {
                             _AEU = num9,
                             _ATG = num7,
@@ -11427,12 +11415,12 @@ namespace AHO
                         bool flag19 = num8 == num7;
                         if (flag19)
                         {
-                            this.DGFPNNENOAAGOMLLCKFKADELBMKMIEIFNJBJ = this.GHAALLBLGMBDHHPIMPOIIIDIJCJBGDDBKHIC;
+                            this._CIR = this._CIP;
                             num10 = num9;
                         }
                         else
                         {
-                            this.DGFPNNENOAAGOMLLCKFKADELBMKMIEIFNJBJ = new GCE._AFA
+                            this._CIR = new GCE._AFA
                             {
                                 _AEU = num10,
                                 _ATG = num8,
@@ -11440,7 +11428,7 @@ namespace AHO
                                 _ATF = num8
                             };
                         }
-                        bool flag20 = this._ABQ._ASC && current.type == 2 && eventModifiers == null && this.LLIDNFNLGHEFNODHJHAAIMNPHDDIHJEJMKCH.Contains(current.mousePosition) && num6 >= 0 && num6 < this._ABQ.FLOg.Count && num10 < this._ABQ.FLOg[num6].Length;
+                        bool flag20 = this._ABQ._ASC && (int)current.type == 2 && eventModifiers == null && this._CJE.Contains(current.mousePosition) && num6 >= 0 && num6 < this._ABQ.FLOg.Count && num10 < this._ABQ.FLOg[num6].Length;
                         if (flag20)
                         {
                             TextPosition textPosition = new TextPosition(num6, num10 + 1);
@@ -11448,48 +11436,48 @@ namespace AHO
                             int num12;
                             bool flag21;
                             SyntaxToken tokenAt = this._ABQ.GetTokenAt(textPosition, out num11, out num12, out flag21);
-                            bool flag22 = tokenAt != this.GPLPKMAECBMBIFJFHBAOKAKOILAEHLNFKIII;
+                            bool flag22 = tokenAt != this._CDU;
                             if (flag22)
                             {
-                                this.OEDBMEGKONIDNGNNNBOJKCNPNCEJPOGPBNHC = default(DateTime);
-                                this.GPLPKMAECBMBIFJFHBAOKAKOILAEHLNFKIII = null;
-                                bool flag23 = this.ADJPMDHKMMDMAGNDGAHMHFBBEEALGMEDJGFP != null;
+                                this._CDV = default(DateTime);
+                                this._CDU = null;
+                                bool flag23 = this._CDA != null;
                                 if (flag23)
                                 {
-                                    this.ADJPMDHKMMDMAGNDGAHMHFBBEEALGMEDJGFP.Hide();
+                                    this._CDA.Hide();
                                 }
                                 bool flag24 = tokenAt != null && tokenAt.OOME != null && (tokenAt.style == this._ABT._ACN || tokenAt.OOME._AJB != null || tokenAt.OOME._AJF != null || (tokenAt.tokenKind >= SyntaxToken.Kind.BuiltInLiteral && (tokenAt.tokenKind != SyntaxToken.Kind.Keyword || tokenAt.text == "this" || tokenAt.text == "base" || this._ABQ._AOU().IsBuiltInType(tokenAt.text) || this._ABQ._AOU().IsBuiltInLiteral(tokenAt.text)) && tokenAt.tokenKind != SyntaxToken.Kind.Punctuator));
                                 if (flag24)
                                 {
-                                    this.HMBHHLIKJCBCEFKDGKPNLHMOKOOLHJDKLBOL = this.GetTokenRect(tokenAt);
+                                    this._CDW = this.GetTokenRect(tokenAt);
                                     Vector2 vector = GUIUtility.GUIToScreenPoint(current.mousePosition);
-                                    bool flag25 = this.HMBHHLIKJCBCEFKDGKPNLHMOKOOLHJDKLBOL.Contains(vector);
+                                    bool flag25 = this._CDW.Contains(vector);
                                     if (flag25)
                                     {
-                                        this.GPLPKMAECBMBIFJFHBAOKAKOILAEHLNFKIII = tokenAt;
-                                        this.OEDBMEGKONIDNGNNNBOJKCNPNCEJPOGPBNHC = ((tokenAt != null) ? _bi2._ATN : default(DateTime));
+                                        this._CDU = tokenAt;
+                                        this._CDV = ((tokenAt != null) ? _bi2._ATN : default(DateTime));
                                     }
                                 }
                             }
                         }
                         else
                         {
-                            this.OEDBMEGKONIDNGNNNBOJKCNPNCEJPOGPBNHC = default(DateTime);
-                            this.GPLPKMAECBMBIFJFHBAOKAKOILAEHLNFKIII = null;
+                            this._CDV = default(DateTime);
+                            this._CDU = null;
                         }
-                        bool flag26 = type == 10 || type == 9;
+                        bool flag26 = (int)type == 10 || (int)type == 9;
                         if (flag26)
                         {
-                            int num13 = this.GHAALLBLGMBDHHPIMPOIIIDIJCJBGDDBKHIC.CompareTo(this._ABH);
-                            int num14 = ((this._ATW() != null) ? this.GHAALLBLGMBDHHPIMPOIIIDIJCJBGDDBKHIC.CompareTo(this._ATW()) : num13);
+                            int num13 = this._CIP.CompareTo(this._ABH);
+                            int num14 = ((this._ATW() != null) ? this._CIP.CompareTo(this._ATW()) : num13);
                             bool flag27 = (num13 >= 0 || num14 >= 0) && (num13 <= 0 || num14 <= 0);
                             bool flag28 = EditorGUI.actionKey && (num13 == 0 || num14 == 0);
                             if (flag28)
                             {
                                 flag27 = false;
                             }
-                            DragAndDrop.visualMode = (flag27 ? 32 : (EditorGUI.actionKey ? 1 : 16));
-                            bool flag29 = type == 10;
+                            DragAndDrop.visualMode = ((DragAndDropVisualMode)(flag27 ? 32 : (EditorGUI.actionKey ? 1 : 16)));
+                            bool flag29 = (int)type == 10;
                             if (flag29)
                             {
                                 object genericData = DragAndDrop.GetGenericData("SuperEditor.Text");
@@ -11502,55 +11490,55 @@ namespace AHO
                                     {
                                         GCE._AFA _ATD = this._ABQ.DeleteText(this._ATW(), this._ABH);
                                         this._ABQ.UpdateHighlighting(_ATD._ABI, _ATD._ABI, false);
-                                        bool flag32 = this.GDCGAOFJJOCBOKONDOHJMAFAGPHDOEKIKLND > this._ABH;
+                                        bool flag32 = this._CJF > this._ABH;
                                         if (flag32)
                                         {
                                             int num15 = Math.Abs(this._ABH._ABI - this._ATW()._ABI);
                                             bool flag33 = num15 == 0;
                                             if (flag33)
                                             {
-                                                bool flag34 = this._ABH._ABI == this.GDCGAOFJJOCBOKONDOHJMAFAGPHDOEKIKLND._ABI;
+                                                bool flag34 = this._ABH._ABI == this._CJF._ABI;
                                                 if (flag34)
                                                 {
-                                                    this.GDCGAOFJJOCBOKONDOHJMAFAGPHDOEKIKLND._AEU -= Math.Abs(this._ABH._AEU - this._ATW()._AEU);
+                                                    this._CJF._AEU -= Math.Abs(this._ABH._AEU - this._ATW()._AEU);
                                                 }
                                             }
                                             else
                                             {
-                                                bool flag35 = Math.Max(this._ABH._ABI, this._ATW()._ABI) == this.GDCGAOFJJOCBOKONDOHJMAFAGPHDOEKIKLND._ABI;
+                                                bool flag35 = Math.Max(this._ABH._ABI, this._ATW()._ABI) == this._CJF._ABI;
                                                 if (flag35)
                                                 {
-                                                    this.GDCGAOFJJOCBOKONDOHJMAFAGPHDOEKIKLND._ABI = _ATD._ABI;
-                                                    this.GDCGAOFJJOCBOKONDOHJMAFAGPHDOEKIKLND._AEU -= ((this._ABH > this._ATW()) ? this._ABH._AEU : this._ATW()._AEU) - _ATD._AEU;
+                                                    this._CJF._ABI = _ATD._ABI;
+                                                    this._CJF._AEU -= ((this._ABH > this._ATW()) ? this._ABH._AEU : this._ATW()._AEU) - _ATD._AEU;
                                                 }
                                                 else
                                                 {
-                                                    this.GDCGAOFJJOCBOKONDOHJMAFAGPHDOEKIKLND._ABI -= num15;
+                                                    this._CJF._ABI -= num15;
                                                 }
                                             }
-                                            this.GDCGAOFJJOCBOKONDOHJMAFAGPHDOEKIKLND._ATG = (this.GDCGAOFJJOCBOKONDOHJMAFAGPHDOEKIKLND._ATF = this.CharIndexToColumn(this.GDCGAOFJJOCBOKONDOHJMAFAGPHDOEKIKLND._AEU, this.GDCGAOFJJOCBOKONDOHJMAFAGPHDOEKIKLND._ABI));
+                                            this._CJF._ATG = (this._CJF._ATF = this.CharIndexToColumn(this._CJF._AEU, this._CJF._ABI));
                                         }
                                     }
-                                    this._ABH = this._ABQ.InsertText(this.GDCGAOFJJOCBOKONDOHJMAFAGPHDOEKIKLND, genericData as string);
-                                    bool bopcdiiiaacdailgpofhgpkbbolaifbdfado = this.BOPCDIIIAACDAILGPOFHGPKBBOLAIFBDFADO;
-                                    if (bopcdiiiaacdailgpofhgpkbbolaifbdfado)
+                                    this._ABH = this._ABQ.InsertText(this._CJF, genericData as string);
+                                    bool _CGE = this._CCH;
+                                    if (_CGE)
                                     {
                                         this._ABH._ATG = (this._ABH._ATF = this.CharIndexToColumn(this._ABH._AEU, this._ABH._ABI));
                                     }
-                                    this._ABQ.UpdateHighlighting(this.GDCGAOFJJOCBOKONDOHJMAFAGPHDOEKIKLND._ABI, this._ABH._ABI, false);
-                                    this._ATL(this.GDCGAOFJJOCBOKONDOHJMAFAGPHDOEKIKLND.Clone());
+                                    this._ABQ.UpdateHighlighting(this._CJF._ABI, this._ABH._ABI, false);
+                                    this._ATL(this._CJF.Clone());
                                     this._ABQ.EndEdit();
                                 }
                                 DragAndDrop.AcceptDrag();
                                 DragAndDrop.SetGenericData("SuperEditor.Text", null);
                                 GUIUtility.hotControl = 0;
-                                this.KOLAGFCMKEFOAKDPPHCEBJPFDNEGLGMBLODK = false;
-                                this.PNBFHJBPGLJPBOMMOHFIHHJONMJLBKBGFFLL = false;
-                                this.CIOLLBEJAOJGGEDHBAFDIIEPHPNCCNJPFNCI = false;
-                                this.MCGNCIKLJIGDHCHFMOIJFAHKLHHKFFJKAJEA = false;
-                                this.PEGFBNGNMIIMHJHBGGJMIPPGCENEDFKBJIPF = false;
-                                this.DJGNBJKIOLLPFOCBADELJOOKBOBDJDHIFHLC = false;
-                                this.ALLEDCEJLCOEBNDPEPFIJNFCIFIDIDNEHKFJ = false;
+                                this._CJC = false;
+                                this._CDL = false;
+                                this._CDM = false;
+                                this._CDD = false;
+                                this._CDE = false;
+                                this._CDF = false;
+                                this._CDG = false;
                                 current.Use();
                             }
                             else
@@ -11558,51 +11546,51 @@ namespace AHO
                                 bool flag36 = flag27;
                                 if (flag36)
                                 {
-                                    this.GHAALLBLGMBDHHPIMPOIIIDIJCJBGDDBKHIC._ABI = this._ABH._ABI;
-                                    this.GHAALLBLGMBDHHPIMPOIIIDIJCJBGDDBKHIC._AEU = this._ABH._AEU;
-                                    this.GHAALLBLGMBDHHPIMPOIIIDIJCJBGDDBKHIC._ATG = this._ABH._ATG;
-                                    this.GHAALLBLGMBDHHPIMPOIIIDIJCJBGDDBKHIC._ATF = this._ABH._ATF;
+                                    this._CIP._ABI = this._ABH._ABI;
+                                    this._CIP._AEU = this._ABH._AEU;
+                                    this._CIP._ATG = this._ABH._ATG;
+                                    this._CIP._ATF = this._ABH._ATF;
                                 }
-                                bool flag37 = this.GHAALLBLGMBDHHPIMPOIIIDIJCJBGDDBKHIC != this.GDCGAOFJJOCBOKONDOHJMAFAGPHDOEKIKLND;
+                                bool flag37 = this._CIP != this._CJF;
                                 if (flag37)
                                 {
-                                    this.GDCGAOFJJOCBOKONDOHJMAFAGPHDOEKIKLND._ABI = this.GHAALLBLGMBDHHPIMPOIIIDIJCJBGDDBKHIC._ABI;
-                                    this.GDCGAOFJJOCBOKONDOHJMAFAGPHDOEKIKLND._AEU = this.GHAALLBLGMBDHHPIMPOIIIDIJCJBGDDBKHIC._AEU;
-                                    this.GDCGAOFJJOCBOKONDOHJMAFAGPHDOEKIKLND._ATG = this.GHAALLBLGMBDHHPIMPOIIIDIJCJBGDDBKHIC._ATG;
-                                    this.GDCGAOFJJOCBOKONDOHJMAFAGPHDOEKIKLND._ATF = this.GHAALLBLGMBDHHPIMPOIIIDIJCJBGDDBKHIC._ATF;
+                                    this._CJF._ABI = this._CIP._ABI;
+                                    this._CJF._AEU = this._CIP._AEU;
+                                    this._CJF._ATG = this._CIP._ATG;
+                                    this._CJF._ATF = this._CIP._ATF;
                                     this._ATM = _bi2._ATN;
-                                    this.DJLIKNMAIPOALAMANDOGJHEODLHBGBBNBMIA = false;
-                                    this.FAABIAGAJJGAMJHJFFCKGGMDOFHDOLELPKPN = true;
+                                    this._CGW = false;
+                                    this._CIL = true;
                                 }
-                                this.POAAHKKEFHAFHHJDHLCDIOKHAKGHNKOKPPFG = true;
+                                this._CCI = true;
                                 current.Use();
                             }
                         }
                         else
                         {
-                            bool flag38 = !this.PNBFHJBPGLJPBOMMOHFIHHJONMJLBKBGFFLL && current.mousePosition.y >= 0f && type == null && ((flag17 && current.mousePosition.x >= this._ALM.x) || (type == null && current.mousePosition.x >= 0f));
+                            bool flag38 = !this._CDL && current.mousePosition.y >= 0f && type == null && ((flag17 && current.mousePosition.x >= this._ALM.x) || (type == null && current.mousePosition.x >= 0f));
                             if (flag38)
                             {
-                                bool bodjhgoiefmippgplnbaibniefngejodghfl = this.BODJHGOIEFMIPPGPLNBAIBNIEFNGEJODGHFL;
-                                if (bodjhgoiefmippgplnbaibniefngejodghfl)
+                                bool _CGB = this._CBA;
+                                if (_CGB)
                                 {
-                                    int num16 = this.DGFPNNENOAAGOMLLCKFKADELBMKMIEIFNJBJ.CompareTo(this._ABH);
-                                    int num17 = this.DGFPNNENOAAGOMLLCKFKADELBMKMIEIFNJBJ.CompareTo(this._ATW());
-                                    this.CIOLLBEJAOJGGEDHBAFDIIEPHPNCCNJPFNCI = (num16 >= 0 || num17 >= 0) && (num16 < 0 || num17 < 0);
+                                    int num16 = this._CIR.CompareTo(this._ABH);
+                                    int num17 = this._CIR.CompareTo(this._ATW());
+                                    this._CDM = (num16 >= 0 || num17 >= 0) && (num16 < 0 || num17 < 0);
                                 }
                                 else
                                 {
-                                    this.CIOLLBEJAOJGGEDHBAFDIIEPHPNCCNJPFNCI = false;
+                                    this._CDM = false;
                                 }
                             }
                             bool flag39 = flag17 && current.button == 0;
                             if (flag39)
                             {
-                                bool flag40 = !this.PNBFHJBPGLJPBOMMOHFIHHJONMJLBKBGFFLL;
+                                bool flag40 = !this._CDL;
                                 if (flag40)
                                 {
-                                    this.LAHBGBFFABHOMBCEKEOONHEFBNAHFPKDNLNM = _bi2._ATN;
-                                    bool flag41 = this.CIOLLBEJAOJGGEDHBAFDIIEPHPNCCNJPFNCI && !current.shift;
+                                    this._CDH = _bi2._ATN;
+                                    bool flag41 = this._CDM && !current.shift;
                                     if (flag41)
                                     {
                                         DragAndDrop.PrepareStartDrag();
@@ -11611,13 +11599,13 @@ namespace AHO
                                         DragAndDrop.SetGenericData("SuperEditor.Text", this._ABQ.GetTextRange(this._ATW(), this._ABH));
                                         GUIUtility.hotControl = 0;
                                         current.Use();
-                                        this.PNBFHJBPGLJPBOMMOHFIHHJONMJLBKBGFFLL = true;
-                                        this.GDCGAOFJJOCBOKONDOHJMAFAGPHDOEKIKLND = this._ABH.Clone();
+                                        this._CDL = true;
+                                        this._CJF = this._ABH.Clone();
                                         return;
                                     }
-                                    this.CIOLLBEJAOJGGEDHBAFDIIEPHPNCCNJPFNCI = false;
+                                    this._CDM = false;
                                 }
-                                this.PNBFHJBPGLJPBOMMOHFIHHJONMJLBKBGFFLL = true;
+                                this._CDL = true;
                             }
                             else
                             {
@@ -11630,24 +11618,24 @@ namespace AHO
                                         return;
                                     }
                                     current.Use();
-                                    bool flag44 = !this.CIOLLBEJAOJGGEDHBAFDIIEPHPNCCNJPFNCI;
+                                    bool flag44 = !this._CDM;
                                     if (!flag44)
                                     {
                                         return;
                                     }
-                                    num2 = this.GHAALLBLGMBDHHPIMPOIIIDIJCJBGDDBKHIC._AEU;
-                                    this.MGLMBDNKELHNGEPMGCMBLIGJGEOLPCLHKPBN._ABI = this.GHAALLBLGMBDHHPIMPOIIIDIJCJBGDDBKHIC._ABI;
-                                    this.MGLMBDNKELHNGEPMGCMBLIGJGEOLPCLHKPBN._AEU = this.GHAALLBLGMBDHHPIMPOIIIDIJCJBGDDBKHIC._AEU;
-                                    this.MGLMBDNKELHNGEPMGCMBLIGJGEOLPCLHKPBN._ATG = this.GHAALLBLGMBDHHPIMPOIIIDIJCJBGDDBKHIC._ATG;
-                                    this.MGLMBDNKELHNGEPMGCMBLIGJGEOLPCLHKPBN._ATF = this.GHAALLBLGMBDHHPIMPOIIIDIJCJBGDDBKHIC._ATF;
+                                    num2 = this._CIP._AEU;
+                                    this._CJD._ABI = this._CIP._ABI;
+                                    this._CJD._AEU = this._CIP._AEU;
+                                    this._CJD._ATG = this._CIP._ATG;
+                                    this._CJD._ATF = this._CIP._ATF;
                                     this._ATO = true;
                                 }
                             }
                             bool flag45 = flag17 || type == 0;
                             if (flag45)
                             {
-                                GUIUtility.hotControl = _bi2.BLPCHGOBMBLGEAPDFHEIFAEBPBCJAFEONIIC;
-                                this.POAAHKKEFHAFHHJDHLCDIOKHAKGHNKOKPPFG = true;
+                                GUIUtility.hotControl = _bi2._CIQ;
+                                this._CCI = true;
                                 bool flag46 = (current.mousePosition.x >= 0f && current.mousePosition.y >= 0f) || flag17;
                                 if (flag46)
                                 {
@@ -11657,77 +11645,77 @@ namespace AHO
                                         bool flag48 = current.mousePosition.x < margin + this._AFS.x;
                                         if (flag48)
                                         {
-                                            this.KOLAGFCMKEFOAKDPPHCEBJPFDNEGLGMBLODK = true;
-                                            this.IJHPBGAKHCDFMHNJBPIKHIBLJKELODMJBKIK = false;
-                                            this.FJPJHHHPDBGHFLKJKMKBLKJDJEMHAHPODLBA = (this.DKELKEIMAPNONDDGGMONPPBABKHIJADBIGIG = null);
+                                            this._CJC = true;
+                                            this._CJG = false;
+                                            this._CJH = (this._CJI = null);
                                         }
                                         else
                                         {
                                             bool flag49 = _bg8._BCI;
                                             if (flag49)
                                             {
-                                                bool flag50 = _bi2._ATN > _bi2.EPOKGOLNPBHMELMJEOKOLPHGMLINFJCCFMMP && (float)(_bi2._ATN - _bi2.EPOKGOLNPBHMELMJEOKOLPHGMLINFJCCFMMP).TotalSeconds <= 0.5f;
+                                                bool flag50 = _bi2._ATN > _bi2._CJJ && (float)(_bi2._ATN - _bi2._CJJ).TotalSeconds <= 0.5f;
                                                 if (flag50)
                                                 {
-                                                    this.KOLAGFCMKEFOAKDPPHCEBJPFDNEGLGMBLODK = true;
-                                                    this.IJHPBGAKHCDFMHNJBPIKHIBLJKELODMJBKIK = false;
-                                                    this.FJPJHHHPDBGHFLKJKMKBLKJDJEMHAHPODLBA = (this.DKELKEIMAPNONDDGGMONPPBABKHIJADBIGIG = null);
+                                                    this._CJC = true;
+                                                    this._CJG = false;
+                                                    this._CJH = (this._CJI = null);
                                                     current.clickCount = 3;
-                                                    this.CIOLLBEJAOJGGEDHBAFDIIEPHPNCCNJPFNCI = false;
+                                                    this._CDM = false;
                                                 }
                                             }
                                         }
                                     }
-                                    this._ATO = !flag17 && !this.CIOLLBEJAOJGGEDHBAFDIIEPHPNCCNJPFNCI;
+                                    this._ATO = !flag17 && !this._CDM;
                                     num2 = num9;
-                                    this.MGLMBDNKELHNGEPMGCMBLIGJGEOLPCLHKPBN._ABI = this.GHAALLBLGMBDHHPIMPOIIIDIJCJBGDDBKHIC._ABI;
-                                    this.MGLMBDNKELHNGEPMGCMBLIGJGEOLPCLHKPBN._AEU = this.GHAALLBLGMBDHHPIMPOIIIDIJCJBGDDBKHIC._AEU;
-                                    this.MGLMBDNKELHNGEPMGCMBLIGJGEOLPCLHKPBN._ATG = this.GHAALLBLGMBDHHPIMPOIIIDIJCJBGDDBKHIC._ATG;
-                                    this.MGLMBDNKELHNGEPMGCMBLIGJGEOLPCLHKPBN._ATF = this.GHAALLBLGMBDHHPIMPOIIIDIJCJBGDDBKHIC._ATF;
+                                    this._CJD._ABI = this._CIP._ABI;
+                                    this._CJD._AEU = this._CIP._AEU;
+                                    this._CJD._ATG = this._CIP._ATG;
+                                    this._CJD._ATF = this._CIP._ATF;
                                     bool flag51 = current.button == 0;
                                     if (flag51)
                                     {
-                                        bool flag52 = current.clickCount == 1 && this.CIOLLBEJAOJGGEDHBAFDIIEPHPNCCNJPFNCI;
+                                        bool flag52 = current.clickCount == 1 && this._CDM;
                                         if (flag52)
                                         {
-                                            this.FAABIAGAJJGAMJHJFFCKGGMDOFHDOLELPKPN = true;
+                                            this._CIL = true;
                                             return;
                                         }
-                                        bool flag53 = !this.KOLAGFCMKEFOAKDPPHCEBJPFDNEGLGMBLODK && (current.clickCount == 2 || (EditorGUI.actionKey && type == null) || this.IJHPBGAKHCDFMHNJBPIKHIBLJKELODMJBKIK);
+                                        bool flag53 = !this._CJC && (current.clickCount == 2 || (EditorGUI.actionKey && type == null) || this._CJG);
                                         if (flag53)
                                         {
                                             bool flag54 = current.clickCount == 2;
                                             if (flag54)
                                             {
-                                                _bi2.EPOKGOLNPBHMELMJEOKOLPHGMLINFJCCFMMP = _bi2._ATN;
+                                                _bi2._CJJ = _bi2._ATN;
                                             }
                                             int num18;
                                             int num19;
                                             bool wordExtents = this._ABQ.GetWordExtents(num2, num6, out num18, out num19);
                                             if (wordExtents)
                                             {
-                                                bool flag55 = this.FJPJHHHPDBGHFLKJKMKBLKJDJEMHAHPODLBA != null && ((eventModifiers & 1) != null || this.IJHPBGAKHCDFMHNJBPIKHIBLJKELODMJBKIK);
+                                                bool flag55 = this._CJH != null && (((int)eventModifiers & 1) != null || this._CJG);
                                                 if (flag55)
                                                 {
-                                                    bool flag56 = num6 > this.FJPJHHHPDBGHFLKJKMKBLKJDJEMHAHPODLBA._ABI || (num6 == this.FJPJHHHPDBGHFLKJKMKBLKJDJEMHAHPODLBA._ABI && num18 >= this.FJPJHHHPDBGHFLKJKMKBLKJDJEMHAHPODLBA._AEU);
+                                                    bool flag56 = num6 > this._CJH._ABI || (num6 == this._CJH._ABI && num18 >= this._CJH._AEU);
                                                     bool flag57 = flag56;
                                                     if (flag57)
                                                     {
-                                                        this._ATL(this.FJPJHHHPDBGHFLKJKMKBLKJDJEMHAHPODLBA.Clone());
+                                                        this._ATL(this._CJH.Clone());
                                                         num2 = num19;
                                                         num = this.CharIndexToColumn(num19, num6);
-                                                        this.MGLMBDNKELHNGEPMGCMBLIGJGEOLPCLHKPBN = this.GHAALLBLGMBDHHPIMPOIIIDIJCJBGDDBKHIC.Clone();
-                                                        this.MGLMBDNKELHNGEPMGCMBLIGJGEOLPCLHKPBN._ATG = num;
-                                                        this.MGLMBDNKELHNGEPMGCMBLIGJGEOLPCLHKPBN._AEU = num2;
+                                                        this._CJD = this._CIP.Clone();
+                                                        this._CJD._ATG = num;
+                                                        this._CJD._AEU = num2;
                                                     }
                                                     else
                                                     {
-                                                        this._ATL(this.DKELKEIMAPNONDDGGMONPPBABKHIJADBIGIG.Clone());
+                                                        this._ATL(this._CJI.Clone());
                                                         num2 = num18;
                                                         num = this.CharIndexToColumn(num18, num6);
-                                                        this.MGLMBDNKELHNGEPMGCMBLIGJGEOLPCLHKPBN = this.GHAALLBLGMBDHHPIMPOIIIDIJCJBGDDBKHIC.Clone();
-                                                        this.MGLMBDNKELHNGEPMGCMBLIGJGEOLPCLHKPBN._ATG = num;
-                                                        this.MGLMBDNKELHNGEPMGCMBLIGJGEOLPCLHKPBN._AEU = num2;
+                                                        this._CJD = this._CIP.Clone();
+                                                        this._CJD._ATG = num;
+                                                        this._CJD._AEU = num2;
                                                     }
                                                 }
                                                 else
@@ -11738,7 +11726,7 @@ namespace AHO
                                                         this._ABH = this._ATW();
                                                     }
                                                     this._ATL(null);
-                                                    bool flag59 = (eventModifiers & 1) == 0;
+                                                    bool flag59 = ((int)eventModifiers & 1) == 0;
                                                     if (flag59)
                                                     {
                                                         this._ABH._ABI = num6;
@@ -11746,12 +11734,12 @@ namespace AHO
                                                         this._ABH._ATF = (this._ABH._ATG = this.CharIndexToColumn(num18, num6));
                                                         num2 = num19;
                                                         num = this.CharIndexToColumn(num19, num6);
-                                                        this.MGLMBDNKELHNGEPMGCMBLIGJGEOLPCLHKPBN = this.GHAALLBLGMBDHHPIMPOIIIDIJCJBGDDBKHIC.Clone();
-                                                        this.MGLMBDNKELHNGEPMGCMBLIGJGEOLPCLHKPBN._ATG = num;
-                                                        this.MGLMBDNKELHNGEPMGCMBLIGJGEOLPCLHKPBN._AEU = num2;
-                                                        this.FJPJHHHPDBGHFLKJKMKBLKJDJEMHAHPODLBA = this._ABH.Clone();
-                                                        this.DKELKEIMAPNONDDGGMONPPBABKHIJADBIGIG = this.MGLMBDNKELHNGEPMGCMBLIGJGEOLPCLHKPBN.Clone();
-                                                        this.DKELKEIMAPNONDDGGMONPPBABKHIJADBIGIG._ATF = this.DKELKEIMAPNONDDGGMONPPBABKHIJADBIGIG._ATG;
+                                                        this._CJD = this._CIP.Clone();
+                                                        this._CJD._ATG = num;
+                                                        this._CJD._AEU = num2;
+                                                        this._CJH = this._ABH.Clone();
+                                                        this._CJI = this._CJD.Clone();
+                                                        this._CJI._ATF = this._CJI._ATG;
                                                     }
                                                     else
                                                     {
@@ -11763,62 +11751,62 @@ namespace AHO
                                                         {
                                                             this._ABH._AEU = (flag60 ? num20 : num21);
                                                             this._ABH._ATF = (this._ABH._ATG = this.CharIndexToColumn(this._ABH._AEU, this._ABH._ABI));
-                                                            this.FJPJHHHPDBGHFLKJKMKBLKJDJEMHAHPODLBA = this._ABH.Clone();
-                                                            this.FJPJHHHPDBGHFLKJKMKBLKJDJEMHAHPODLBA._AEU = num20;
-                                                            this.FJPJHHHPDBGHFLKJKMKBLKJDJEMHAHPODLBA._ATF = (this.FJPJHHHPDBGHFLKJKMKBLKJDJEMHAHPODLBA._ATG = this.CharIndexToColumn(num20, this.FJPJHHHPDBGHFLKJKMKBLKJDJEMHAHPODLBA._ABI));
-                                                            this.DKELKEIMAPNONDDGGMONPPBABKHIJADBIGIG = this._ABH.Clone();
-                                                            this.DKELKEIMAPNONDDGGMONPPBABKHIJADBIGIG._AEU = num21;
-                                                            this.DKELKEIMAPNONDDGGMONPPBABKHIJADBIGIG._ATF = (this.DKELKEIMAPNONDDGGMONPPBABKHIJADBIGIG._ATG = this.CharIndexToColumn(num21, this.DKELKEIMAPNONDDGGMONPPBABKHIJADBIGIG._ABI));
+                                                            this._CJH = this._ABH.Clone();
+                                                            this._CJH._AEU = num20;
+                                                            this._CJH._ATF = (this._CJH._ATG = this.CharIndexToColumn(num20, this._CJH._ABI));
+                                                            this._CJI = this._ABH.Clone();
+                                                            this._CJI._AEU = num21;
+                                                            this._CJI._ATF = (this._CJI._ATG = this.CharIndexToColumn(num21, this._CJI._ABI));
                                                         }
                                                         else
                                                         {
-                                                            this.FJPJHHHPDBGHFLKJKMKBLKJDJEMHAHPODLBA = this._ABH.Clone();
-                                                            this.DKELKEIMAPNONDDGGMONPPBABKHIJADBIGIG = this._ABH.Clone();
+                                                            this._CJH = this._ABH.Clone();
+                                                            this._CJI = this._ABH.Clone();
                                                         }
                                                         num2 = (flag60 ? num19 : num18);
                                                         num = this.CharIndexToColumn(num2, num6);
-                                                        this.MGLMBDNKELHNGEPMGCMBLIGJGEOLPCLHKPBN = this.GHAALLBLGMBDHHPIMPOIIIDIJCJBGDDBKHIC.Clone();
-                                                        this.MGLMBDNKELHNGEPMGCMBLIGJGEOLPCLHKPBN._ATG = num;
-                                                        this.MGLMBDNKELHNGEPMGCMBLIGJGEOLPCLHKPBN._AEU = num2;
+                                                        this._CJD = this._CIP.Clone();
+                                                        this._CJD._ATG = num;
+                                                        this._CJD._AEU = num2;
                                                     }
                                                 }
-                                                eventModifiers |= 1;
-                                                this.KOLAGFCMKEFOAKDPPHCEBJPFDNEGLGMBLODK = false;
-                                                this.IJHPBGAKHCDFMHNJBPIKHIBLJKELODMJBKIK = true;
+                                                eventModifiers |= (EventModifiers)1;
+                                                this._CJC = false;
+                                                this._CJG = true;
                                             }
                                         }
                                         else
                                         {
-                                            this.FJPJHHHPDBGHFLKJKMKBLKJDJEMHAHPODLBA = null;
-                                            this.DKELKEIMAPNONDDGGMONPPBABKHIJADBIGIG = null;
+                                            this._CJH = null;
+                                            this._CJI = null;
                                         }
                                     }
                                 }
                                 current.Use();
                             }
                             int num22 = 0;
-                            bool flag61 = this.KOLAGFCMKEFOAKDPPHCEBJPFDNEGLGMBLODK && this._ATW() != null && this._ATW() < this._ABH;
+                            bool flag61 = this._CJC && this._ATW() != null && this._ATW() < this._ABH;
                             if (flag61)
                             {
                                 num22 = -1;
                             }
-                            bool flag62 = current.rawType == 1 && current.button == 0 && GUIUtility.hotControl != 0;
+                            bool flag62 = (int)current.rawType == 1 && current.button == 0 && GUIUtility.hotControl != 0;
                             if (flag62)
                             {
-                                bool flhmmgogabacngebpcfefgpmfnakdpiglabb2 = this.FLHMMGOGABACNGEBPCFEFGPMFNAKDPIGLABB;
-                                if (flhmmgogabacngebpcfefgpmfnakdpiglabb2)
+                                bool _CIT2 = this._CIU;
+                                if (_CIT2)
                                 {
-                                    bool flag63 = this.AKNDCMEKCLNECEIINAOBBODFNCODAADFNILP >= 0;
+                                    bool flag63 = this._CIW >= 0;
                                     if (flag63)
                                     {
-                                        bool flag64 = current.mousePosition.x >= this.JPPFMECFJCDOMNMEIPPNOEIICFJPJCAFJLMK - this._AEY().x - 6f && current.mousePosition.x < this.JPPFMECFJCDOMNMEIPPNOEIICFJPJCAFJLMK - this._AEY().x - 6f + this._AEY().x;
+                                        bool flag64 = current.mousePosition.x >= this._CGA - this._AEY().x - 6f && current.mousePosition.x < this._CGA - this._AEY().x - 6f + this._AEY().x;
                                         if (flag64)
                                         {
                                             int lineAt3 = this.GetLineAt(current.mousePosition.y);
-                                            bool flag65 = lineAt3 == this.AKNDCMEKCLNECEIINAOBBODFNCODAADFNILP;
+                                            bool flag65 = lineAt3 == this._CIW;
                                             if (flag65)
                                             {
-                                                this.AKNDCMEKCLNECEIINAOBBODFNCODAADFNILP = -1;
+                                                this._CIW = -1;
                                                 bool flag66 = current.mousePosition.y - this.GetLineOffset(lineAt3) < this._AEY().y;
                                                 if (flag66)
                                                 {
@@ -11844,54 +11832,54 @@ namespace AHO
                                         }
                                     }
                                 }
-                                bool ciollbejaojggedhbafdiiephpnccnjpfnci = this.CIOLLBEJAOJGGEDHBAFDIIEPHPNCCNJPFNCI;
-                                if (ciollbejaojggedhbafdiiephpnccnjpfnci)
+                                bool _CJK = this._CDM;
+                                if (_CJK)
                                 {
-                                    bool flag70 = !this.PNBFHJBPGLJPBOMMOHFIHHJONMJLBKBGFFLL;
+                                    bool flag70 = !this._CDL;
                                     if (flag70)
                                     {
-                                        this.MGLMBDNKELHNGEPMGCMBLIGJGEOLPCLHKPBN = this.GHAALLBLGMBDHHPIMPOIIIDIJCJBGDDBKHIC.Clone();
+                                        this._CJD = this._CIP.Clone();
                                         this._ABH._ATF--;
                                     }
                                 }
                                 GUIUtility.hotControl = 0;
-                                this.KOLAGFCMKEFOAKDPPHCEBJPFDNEGLGMBLODK = false;
-                                this.IJHPBGAKHCDFMHNJBPIKHIBLJKELODMJBKIK = false;
-                                this.PNBFHJBPGLJPBOMMOHFIHHJONMJLBKBGFFLL = false;
-                                this.CIOLLBEJAOJGGEDHBAFDIIEPHPNCCNJPFNCI = false;
-                                this.MCGNCIKLJIGDHCHFMOIJFAHKLHHKFFJKAJEA = false;
-                                this.PEGFBNGNMIIMHJHBGGJMIPPGCENEDFKBJIPF = false;
-                                this.DJGNBJKIOLLPFOCBADELJOOKBOBDJDHIFHLC = false;
-                                this.ALLEDCEJLCOEBNDPEPFIJNFCIFIDIDNEHKFJ = false;
+                                this._CJC = false;
+                                this._CJG = false;
+                                this._CDL = false;
+                                this._CDM = false;
+                                this._CDD = false;
+                                this._CDE = false;
+                                this._CDF = false;
+                                this._CDG = false;
                                 current.Use();
-                                this.FAABIAGAJJGAMJHJFFCKGGMDOFHDOLELPKPN = true;
+                                this._CIL = true;
                                 num22 = 0;
                             }
-                            bool flag71 = !this.MGLMBDNKELHNGEPMGCMBLIGJGEOLPCLHKPBN.IsSameAs(this._ABH) || this.MGLMBDNKELHNGEPMGCMBLIGJGEOLPCLHKPBN._ABI != this._ABH._ABI + num22 || (type == null && current.button == 0);
+                            bool flag71 = !this._CJD.IsSameAs(this._ABH) || this._CJD._ABI != this._ABH._ABI + num22 || (type == null && current.button == 0);
                             if (flag71)
                             {
                                 this._ATM = _bi2._ATN;
-                                this.DJLIKNMAIPOALAMANDOGJHEODLHBGBBNBMIA = false;
-                                bool flag72 = this.MGLMBDNKELHNGEPMGCMBLIGJGEOLPCLHKPBN._ABI < 0;
+                                this._CGW = false;
+                                bool flag72 = this._CJD._ABI < 0;
                                 if (flag72)
                                 {
-                                    this.MGLMBDNKELHNGEPMGCMBLIGJGEOLPCLHKPBN.Set(0, 0, 0, 0);
+                                    this._CJD.Set(0, 0, 0, 0);
                                 }
-                                bool flag73 = this.MGLMBDNKELHNGEPMGCMBLIGJGEOLPCLHKPBN._ABI >= this._ABQ._ASK;
+                                bool flag73 = this._CJD._ABI >= this._ABQ._ASK;
                                 if (flag73)
                                 {
-                                    this.MGLMBDNKELHNGEPMGCMBLIGJGEOLPCLHKPBN.Set(this._ABQ._ASK - 1, 0, 0, 0);
+                                    this._CJD.Set(this._ABQ._ASK - 1, 0, 0, 0);
                                 }
-                                num3 = this.MGLMBDNKELHNGEPMGCMBLIGJGEOLPCLHKPBN._ABI;
-                                bool flag74 = this._ATW() == null && (flag17 || (eventModifiers & 1) > 0);
+                                num3 = this._CJD._ABI;
+                                bool flag74 = this._ATW() == null && (flag17 || ((int)eventModifiers & 1) > 0);
                                 if (flag74)
                                 {
                                     this._ATL(this._ABH.Clone());
                                 }
-                                bool kolagfcmkefoakdpphcebjpfdneglgmblodk = this.KOLAGFCMKEFOAKDPPHCEBJPFDNEGLGMBLODK;
+                                bool kolagfcmkefoakdpphcebjpfdneglgmblodk = this._CJC;
                                 if (kolagfcmkefoakdpphcebjpfdneglgmblodk)
                                 {
-                                    bool flag75 = this._ATW() == null || (!flag17 && (eventModifiers & 1) == 0);
+                                    bool flag75 = this._ATW() == null || (!flag17 && ((int)eventModifiers & 1) == 0);
                                     if (flag75)
                                     {
                                         this._ATL(new GCE._AFA
@@ -11906,14 +11894,14 @@ namespace AHO
                                     if (flag76)
                                     {
                                         num3++;
-                                        this.MGLMBDNKELHNGEPMGCMBLIGJGEOLPCLHKPBN.Set(this.MGLMBDNKELHNGEPMGCMBLIGJGEOLPCLHKPBN._ABI + 1, 0, 0, 0);
+                                        this._CJD.Set(this._CJD._ABI + 1, 0, 0, 0);
                                         bool flag77 = num3 >= this._ABQ._ASK;
                                         if (flag77)
                                         {
                                             num3 = this._ABQ._ASK - 1;
                                             num2 = this._ABQ.FLOg[num3].Length;
                                             num = this._ABQ.CharIndexToColumn(num2, num3);
-                                            this.MGLMBDNKELHNGEPMGCMBLIGJGEOLPCLHKPBN.Set(this._ABQ._ASK - 1, this._ABQ.FLOg[num3].Length, num);
+                                            this._CJD.Set(this._ABQ._ASK - 1, this._ABQ.FLOg[num3].Length, num);
                                         }
                                         this._ATL(new GCE._AFA
                                         {
@@ -11927,7 +11915,7 @@ namespace AHO
                                     {
                                         int length = this._ABQ.FLOg[this._ATW()._ABI].Length;
                                         int num23 = this._ABQ.CharIndexToColumn(length, this._ATW()._ABI);
-                                        this.MGLMBDNKELHNGEPMGCMBLIGJGEOLPCLHKPBN.Set(this.MGLMBDNKELHNGEPMGCMBLIGJGEOLPCLHKPBN._ABI, 0, 0, 0);
+                                        this._CJD.Set(this._CJD._ABI, 0, 0, 0);
                                         this._ATL(new GCE._AFA
                                         {
                                             _AEU = length,
@@ -11937,33 +11925,33 @@ namespace AHO
                                         });
                                     }
                                 }
-                                bool flag78 = !this.CIOLLBEJAOJGGEDHBAFDIIEPHPNCCNJPFNCI;
+                                bool flag78 = !this._CDM;
                                 if (flag78)
                                 {
-                                    this._ABH._ABI = this.MGLMBDNKELHNGEPMGCMBLIGJGEOLPCLHKPBN._ABI;
-                                    this._ABH._AEU = this.MGLMBDNKELHNGEPMGCMBLIGJGEOLPCLHKPBN._AEU;
-                                    this._ABH._ATG = this.MGLMBDNKELHNGEPMGCMBLIGJGEOLPCLHKPBN._ATG;
-                                    this._ABH._ATF = this.MGLMBDNKELHNGEPMGCMBLIGJGEOLPCLHKPBN._ATF;
+                                    this._ABH._ABI = this._CJD._ABI;
+                                    this._ABH._AEU = this._CJD._AEU;
+                                    this._ABH._ATG = this._CJD._ATG;
+                                    this._ABH._ATF = this._CJD._ATF;
                                     bool flag79 = num3 >= 0;
                                     if (flag79)
                                     {
                                         this._ABH._ATF = this._ABH._ATG;
                                     }
                                 }
-                                bool flag80 = !flag17 && !this.KOLAGFCMKEFOAKDPPHCEBJPFDNEGLGMBLODK && (eventModifiers & 1) == 0;
+                                bool flag80 = !flag17 && !this._CJC && ((int)eventModifiers & 1) == 0;
                                 if (flag80)
                                 {
                                     this._ATL(null);
                                 }
-                                bool flag81 = !this.PNBFHJBPGLJPBOMMOHFIHHJONMJLBKBGFFLL;
+                                bool flag81 = !this._CDL;
                                 if (flag81)
                                 {
                                     this.AddRecentLocation(11, true);
                                     this._ATO = true;
                                 }
-                                this.FAABIAGAJJGAMJHJFFCKGGMDOFHDOLELPKPN = true;
+                                this._CIL = true;
                             }
-                            bool flag82 = (eventModifiers & 8) != null || (eventModifiers & 2) > 0;
+                            bool flag82 = ((int)eventModifiers & 8) != null || ((int)eventModifiers & 2) > 0;
                             if (flag82)
                             {
                                 TextPosition textPosition2 = new TextPosition(num6, num10 + 1);
@@ -11993,13 +11981,13 @@ namespace AHO
         }
 
         // Token: 0x06000312 RID: 786 RVA: 0x00039A30 File Offset: 0x00037C30
-        public Theme NHJINOFPANCPFCKBNMLCEDJOGNKEIDJCBPBH()
+        public Theme _CJL()
         {
-            return (this._ABQ != null && this._ABQ._ARR) ? _bi2.NEJDBEMCGLKCAHENKLCFDOMOFGNHCBAIIDLF : _bi2.LMHCAPKMBCKPJCOFDJBKMEFJDCENENGPPKKN;
+            return (this._ABQ != null && this._ABQ._ARR) ? _bi2._CEI : _bi2._CEJ;
         }
 
         // Token: 0x06000313 RID: 787 RVA: 0x00039A6C File Offset: 0x00037C6C
-        internal static string[] MALGDKADEDLONPFACJAGNOJFCCJHGAELLKBK()
+        internal static string[] _CCK()
         {
             string[] array = AssetDatabase.FindAssets("t:Font", new string[] { _bi2.NPOF() + "/Fonts" });
             bool flag = array.Length == 0;
@@ -12012,68 +12000,68 @@ namespace AHO
             {
                 array = AssetDatabase.FindAssets("t:Font", new string[] { "Assets/Plugins/SuperEditor/EditorResources/Fonts" });
             }
-            _bi2.OFCDBBBDLNHBALAKIGKPEIMNCAECAFBMGPAP = new string[array.Length];
-            for (int i = 0; i < _bi2.OFCDBBBDLNHBALAKIGKPEIMNCAECAFBMGPAP.Length; i++)
+            _bi2._CJM = new string[array.Length];
+            for (int i = 0; i < _bi2._CJM.Length; i++)
             {
-                _bi2.OFCDBBBDLNHBALAKIGKPEIMNCAECAFBMGPAP[i] = "Fonts/" + Path.GetFileName(AssetDatabase.GUIDToAssetPath(array[i]));
+                _bi2._CJM[i] = "Fonts/" + Path.GetFileName(AssetDatabase.GUIDToAssetPath(array[i]));
             }
-            return _bi2.OFCDBBBDLNHBALAKIGKPEIMNCAECAFBMGPAP;
+            return _bi2._CJM;
         }
 
         // Token: 0x06000314 RID: 788 RVA: 0x00039B34 File Offset: 0x00037D34
         internal static _bi2._AVA _AEE()
         {
-            bool flag = _bi2.FKIPBDDJJKDBAABDMLPKIGEAKBOODIOIIJEE._ABV == null;
+            bool flag = _bi2._CCN._ABV == null;
             if (flag)
             {
                 _bi2.InitializeFont(false);
-                _bi2.LoadStyles(_bi2.FKIPBDDJJKDBAABDMLPKIGEAKBOODIOIIJEE, false);
+                _bi2.LoadStyles(_bi2._CCN, false);
             }
-            return _bi2.FKIPBDDJJKDBAABDMLPKIGEAKBOODIOIIJEE;
+            return _bi2._CCN;
         }
 
         // Token: 0x06000315 RID: 789 RVA: 0x00039B74 File Offset: 0x00037D74
         internal static _bi2._AVA _ASD()
         {
-            bool flag = _bi2.EMGEKEIEHPNEFMOMMCIFEEGIFJDEJFOKPAFM._ABV == null;
+            bool flag = _bi2._CCM._ABV == null;
             if (flag)
             {
                 _bi2.InitializeFont(true);
-                _bi2.LoadStyles(_bi2.EMGEKEIEHPNEFMOMMCIFEEGIFJDEJFOKPAFM, true);
+                _bi2.LoadStyles(_bi2._CCM, true);
             }
-            return _bi2.EMGEKEIEHPNEFMOMMCIFEEGIFJDEJFOKPAFM;
+            return _bi2._CCM;
         }
 
         // Token: 0x06000316 RID: 790 RVA: 0x00039BB1 File Offset: 0x00037DB1
         [CompilerGenerated]
-        public bool GJDLGEEKCBIHCFECOIOFLIFNOCPOAPGNHJMK()
+        public bool _CDN()
         {
-            return this.BBFLOGMOLBEMOMBADGIPFCDNLNOKPIEMCPAB;
+            return this._CJN;
         }
 
         // Token: 0x06000317 RID: 791 RVA: 0x00039BB9 File Offset: 0x00037DB9
         [CompilerGenerated]
-        private void IOPEBNDLLLDJELEBEIKHKAGNHKBDPKFIAEEL(bool value)
+        private void _CJO(bool value)
         {
-            this.BBFLOGMOLBEMOMBADGIPFCDNLNOKPIEMCPAB = value;
+            this._CJN = value;
         }
 
         // Token: 0x06000318 RID: 792 RVA: 0x00039BC2 File Offset: 0x00037DC2
         [CompilerGenerated]
         public Vector2 _AEY()
         {
-            return this.NCOGBBOAIHDPGKJIFPBILAHCAKNBMFGPJPML;
+            return this._CJP;
         }
 
         // Token: 0x06000319 RID: 793 RVA: 0x00039BCA File Offset: 0x00037DCA
         [CompilerGenerated]
-        private void HOPMPOOFCKGLAFDCFAAODFFEMMMOJHGAOJMI(Vector2 value)
+        private void _CEB(Vector2 value)
         {
-            this.NCOGBBOAIHDPGKJIFPBILAHCAKNBMFGPJPML = value;
+            this._CJP = value;
         }
 
         // Token: 0x0600031A RID: 794 RVA: 0x00039BD4 File Offset: 0x00037DD4
-        private bool LEODMLGKKNFBILELIDFFIOPLHDMDGAIFLKMM()
+        private bool _CJQ()
         {
             bool flag = this._ABQ == null;
             bool flag2;
@@ -12083,7 +12071,7 @@ namespace AHO
             }
             else
             {
-                bool flag3 = this.OGJMAADHJNFCLONPJGOCCAKPODNCOKEOJFMF != null;
+                bool flag3 = this._CHX != null;
                 if (flag3)
                 {
                     flag2 = (this._ABQ._ARR ? _bg8._BAA : _bg8._AZZ);
@@ -12097,7 +12085,7 @@ namespace AHO
         }
 
         // Token: 0x0600031B RID: 795 RVA: 0x00039C4C File Offset: 0x00037E4C
-        private bool HFBBKNBEOLAICCGCIFGLPKHFCNHPANGIIGDM()
+        private bool _CJR()
         {
             bool flag = this._ABQ == null;
             bool flag2;
@@ -12107,7 +12095,7 @@ namespace AHO
             }
             else
             {
-                bool flag3 = this.OGJMAADHJNFCLONPJGOCCAKPODNCOKEOJFMF != null;
+                bool flag3 = this._CHX != null;
                 if (flag3)
                 {
                     flag2 = (this._ABQ._ARR ? _bg8._BAE : _bg8._BAD);
@@ -12123,7 +12111,7 @@ namespace AHO
         // Token: 0x0600031C RID: 796 RVA: 0x00039CC4 File Offset: 0x00037EC4
         public GCE._AFA _ATW()
         {
-            return this.BODJHGOIEFMIPPGPLNBAIBNIEFNGEJODGHFL ? this.GLAAHLAEKKCKGBFLOGGJOIAHHBGOIFHFLJOL : null;
+            return this._CBA ? this._CGC : null;
         }
 
         // Token: 0x0600031D RID: 797 RVA: 0x00039CE8 File Offset: 0x00037EE8
@@ -12132,13 +12120,13 @@ namespace AHO
             bool flag = value == null;
             if (flag)
             {
-                this.GLAAHLAEKKCKGBFLOGGJOIAHHBGOIFHFLJOL = null;
-                this.BODJHGOIEFMIPPGPLNBAIBNIEFNGEJODGHFL = false;
+                this._CGC = null;
+                this._CBA = false;
             }
             else
             {
-                this.GLAAHLAEKKCKGBFLOGGJOIAHHBGOIFHFLJOL = value;
-                this.BODJHGOIEFMIPPGPLNBAIBNIEFNGEJODGHFL = true;
+                this._CGC = value;
+                this._CBA = true;
             }
         }
 
@@ -12178,7 +12166,7 @@ namespace AHO
         }
 
         // Token: 0x06000323 RID: 803 RVA: 0x00039E14 File Offset: 0x00038014
-        public string NOKEHFCAKDDOPKCFMLCLBACCAHNLKLHBCEDC()
+        public string _CCV()
         {
             return (this._ABQ != null) ? this._ABQ._ARQ() : string.Empty;
         }
@@ -12187,73 +12175,73 @@ namespace AHO
         internal static string NPOF()
         {
             MonoScript monoScript = MonoScript.FromScriptableObject(SuperEditorLocator.Instance());
-            _bi2.LCACECDIEPMANKEBMJDCAGDDDCNOFOFFKPBJ = AssetDatabase.GetAssetPath(monoScript);
-            _bi2.LCACECDIEPMANKEBMJDCAGDDDCNOFOFFKPBJ = Path.GetDirectoryName(Path.GetDirectoryName(_bi2.LCACECDIEPMANKEBMJDCAGDDDCNOFOFFKPBJ));
-            _bi2.LCACECDIEPMANKEBMJDCAGDDDCNOFOFFKPBJ = Path.Combine(_bi2.LCACECDIEPMANKEBMJDCAGDDDCNOFOFFKPBJ, "EditorResources");
-            return _bi2.LCACECDIEPMANKEBMJDCAGDDDCNOFOFFKPBJ;
+            _bi2._CJS = AssetDatabase.GetAssetPath(monoScript);
+            _bi2._CJS = Path.GetDirectoryName(Path.GetDirectoryName(_bi2._CJS));
+            _bi2._CJS = Path.Combine(_bi2._CJS, "EditorResources");
+            return _bi2._CJS;
         }
 
         // Token: 0x06000325 RID: 805 RVA: 0x00039EA0 File Offset: 0x000380A0
         public EditorWindow _ABJ()
         {
-            return this.OGJMAADHJNFCLONPJGOCCAKPODNCOKEOJFMF ?? this.OBGEMALIEGDPMEGFAOJCKCIMLAKLMFFNDLKH;
+            return this._CHX ?? this._CHK;
         }
 
         // Token: 0x06000326 RID: 806 RVA: 0x00039EC4 File Offset: 0x000380C4
-        private static _b2 FODMINEMHCODAKPMOCKCHANGHHFDPFCJONPH()
+        private static _b2 _CGJ()
         {
-            bool flag = _bi2.IGFEHLGDDCJOMNOLHGKLFBICAMPPMDGMAJJK == null;
+            bool flag = _bi2._CJT == null;
             if (flag)
             {
-                _bi2.IGFEHLGDDCJOMNOLHGKLFBICAMPPMDGMAJJK = _bl9.ForType(typeof(Attribute)).definition as _b2;
+                _bi2._CJT = _bl9.ForType(typeof(Attribute)).definition as _b2;
             }
-            return _bi2.IGFEHLGDDCJOMNOLHGKLFBICAMPPMDGMAJJK;
+            return _bi2._CJT;
         }
 
         // Token: 0x06000327 RID: 807 RVA: 0x00039F05 File Offset: 0x00038105
         [CompilerGenerated]
         internal static _bi2 _AOB()
         {
-            return _bi2.LIEJDFDLPDHHMPLFMPKOANNIPICOMKPBKFCN;
+            return _bi2._CJU;
         }
 
         // Token: 0x06000328 RID: 808 RVA: 0x00039F0C File Offset: 0x0003810C
         [CompilerGenerated]
-        private static void PBBPFHLOKNCCODDMCKNNJGFOGBHHKMDKKGHJ(_bi2 value)
+        private static void _CJV(_bi2 value)
         {
-            _bi2.LIEJDFDLPDHHMPLFMPKOANNIPICOMKPBKFCN = value;
+            _bi2._CJU = value;
         }
 
         // Token: 0x06000329 RID: 809 RVA: 0x00039F14 File Offset: 0x00038114
-        private static List<ThemeTemplate> NFKLDALAOOLJNIPCPGLGHLNHCNDAFBLLHCKN()
+        private static List<ThemeTemplate> _CBZ()
         {
-            bool flag = _bi2.JMFFKMDENDGHKKBOFMDHJLMPKAKCGLBLJIFP == null;
+            bool flag = _bi2._CHR == null;
             if (flag)
             {
                 _bi2.InitCustomThemes();
             }
-            return _bi2.JMFFKMDENDGHKKBOFMDHJLMPKAKCGLBLJIFP;
+            return _bi2._CHR;
         }
 
         // Token: 0x0600032A RID: 810 RVA: 0x00039F3D File Offset: 0x0003813D
-        private static void EELPNPKMEABFHHAJHIHGOGGKIGENPADEIOBM(List<ThemeTemplate> value)
+        private static void _CJW(List<ThemeTemplate> value)
         {
-            _bi2.JMFFKMDENDGHKKBOFMDHJLMPKAKCGLBLJIFP = value;
+            _bi2._CHR = value;
         }
 
         // Token: 0x0600032B RID: 811 RVA: 0x00039F48 File Offset: 0x00038148
         private void DoGUIWithAutocomplete(bool enableGUI)
         {
             GCE._ASA = _bg8._ASA;
-            this.BOPCDIIIAACDAILGPOFHGPKBBOLAIFBDFADO = this.LEODMLGKKNFBILELIDFFIOPLHDMDGAIFLKMM();
+            this._CCH = this._CJQ();
             bool flag = this._ATM == default(DateTime);
             if (flag)
             {
                 this._ATM = _bi2._ATN;
-                this.DJLIKNMAIPOALAMANDOGJHEODLHBGBBNBMIA = false;
+                this._CGW = false;
             }
-            this.KPOKBHDGCMLBFEPIHIPEKAIPDGAAGIMNLFCD = (_bi2.PEFGKHDNIOOJKNNHMIBNIFOKLBMEDOGOBDKD)0;
-            bool flag2 = this.EEJFFFONEBHEFJKECHMCKDFAFABLNECBNBDO == null;
+            this._CCA = (_bi2._CCB)0;
+            bool flag2 = this._CBB == null;
             if (flag2)
             {
                 try
@@ -12274,10 +12262,10 @@ namespace AHO
                 catch (ExitGUIException ex2)
                 {
                 }
-                bool flag3 = this.EEJFFFONEBHEFJKECHMCKDFAFABLNECBNBDO != null;
+                bool flag3 = this._CBB != null;
                 if (flag3)
                 {
-                    bool flag4 = !this.GJDLGEEKCBIHCFECOIOFLIFNOCPOAPGNHJMK() && EditorWindow.focusedWindow != this.EEJFFFONEBHEFJKECHMCKDFAFABLNECBNBDO;
+                    bool flag4 = !this._CDN() && EditorWindow.focusedWindow != this._CBB;
                     if (flag4)
                     {
                         this.CloseAutocomplete();
@@ -12287,12 +12275,12 @@ namespace AHO
                         bool flag5 = this._ABH._ABI == _ATD._ABI && this._ABH != _ATD;
                         if (flag5)
                         {
-                            this.EEJFFFONEBHEFJKECHMCKDFAFABLNECBNBDO.UpdateTypedInPart();
+                            this._CBB.UpdateTypedInPart();
                         }
                     }
                 }
             }
-            bool flag6 = Event.current.type == 4;
+            bool flag6 = (int)Event.current.type == 4;
             if (flag6)
             {
                 bool flag7 = _bi2.MightBePrintableKey(Event.current);
@@ -12301,17 +12289,17 @@ namespace AHO
                     Event.current.Use();
                 }
             }
-            bool jhonfkmhpkclklhkmoebehpgnbladgbbehil = this.JHONFKMHPKCLKLHKMOEBEHPGNBLADGBBEHIL;
-            if (jhonfkmhpkclklhkmoebehpgnbladgbbehil)
+            bool _CBV = this._CBE;
+            if (_CBV)
             {
-                this.Autocomplete(this.LLJFBDFABMBMPEBEDAKOJBDMGGFBOJEKCPKD);
-                this.LLJFBDFABMBMPEBEDAKOJBDMGGFBOJEKCPKD = false;
-                this.JHONFKMHPKCLKLHKMOEBEHPGNBLADGBBEHIL = false;
+                this.Autocomplete(this._CGM);
+                this._CGM = false;
+                this._CBE = false;
             }
-            bool flag8 = this.KBBCMMCMDLMOHHGNAPNIJGLHBLBGGPODLFEB != null;
+            bool flag8 = this._CBC != null;
             if (flag8)
             {
-                bool flag9 = !this.GJDLGEEKCBIHCFECOIOFLIFNOCPOAPGNHJMK() && EditorWindow.focusedWindow != this.KBBCMMCMDLMOHHGNAPNIJGLHBLBGGPODLFEB;
+                bool flag9 = !this._CDN() && EditorWindow.focusedWindow != this._CBC;
                 if (flag9)
                 {
                     this.CloseArgumentsHint();
@@ -12321,52 +12309,52 @@ namespace AHO
             bool flag10 = this._ABQ == null;
             if (!flag10)
             {
-                bool flag11 = Event.current.type == 7;
+                bool flag11 = (int)Event.current.type == 7;
                 if (flag11)
                 {
-                    this.KCNPCIEKAJFBIOBEGEOCHIAELCCBKBFBCADM = this._ALM;
+                    this._CJX = this._ALM;
                 }
-                bool flag12 = this._ABH != this.JDIEJIOALBJFEGNLOFNIEOFHIEPHADLOHKBG || this._ATO || this._ATM == _bi2._ATN;
+                bool flag12 = this._ABH != this._CJY || this._ATO || this._ATM == _bi2._ATN;
                 if (flag12)
                 {
-                    bool flag13 = this.OOKEDGDAPFGOMCMDMNKICHAECDBNCBGJNMKN != null;
+                    bool flag13 = this._CGF != null;
                     if (flag13)
                     {
                         this.UpdateArgumentsHint(false);
                     }
-                    bool flag14 = this.KGNJCNNMIFPKALPOGAHDGCDKCMMDLDBDLILH.Count > 0;
+                    bool flag14 = this._CGN.Count > 0;
                     if (flag14)
                     {
                         TextPosition textPosition = new TextPosition(this._ABH._ABI, this._ABH._AEU);
-                        int count = this.KGNJCNNMIFPKALPOGAHDGCDKCMMDLDBDLILH.Count;
+                        int count = this._CGN.Count;
                         while (count-- > 0)
                         {
-                            _bi2.EPAFFDDCAEGGCPDGEEBEBADBOBLMGPDEPLEA epaffddcaeggcpdgeebebadboblmgpdeplea = this.KGNJCNNMIFPKALPOGAHDGCDKCMMDLDBDLILH[count];
-                            bool flag15 = textPosition <= epaffddcaeggcpdgeebebadboblmgpdeplea.OJKLJINFJBEPHBPPEABIJNJCDOPNEJGPAGND || textPosition > epaffddcaeggcpdgeebebadboblmgpdeplea.AGJBFOPCGMOGGDJKCDLBNMJAILHEKLMGPALB;
+                            _bi2._CGO _CGP = this._CGN[count];
+                            bool flag15 = textPosition <= _CGP._CGQ || textPosition > _CGP._CGR;
                             if (flag15)
                             {
-                                this.KGNJCNNMIFPKALPOGAHDGCDKCMMDLDBDLILH.RemoveAt(count);
+                                this._CGN.RemoveAt(count);
                             }
                         }
-                        bool flag16 = this.KGNJCNNMIFPKALPOGAHDGCDKCMMDLDBDLILH.Count == 0;
+                        bool flag16 = this._CGN.Count == 0;
                         if (flag16)
                         {
-                            GCE cdghkglnkfhjenlebomgbogcmlafoejmngmj = this._ABQ;
-                            cdghkglnkfhjenlebomgbogcmlafoejmngmj._AUK = (GCE._AVI)Delegate.Remove(cdghkglnkfhjenlebomgbogcmlafoejmngmj._AUK, new GCE._AVI(this.OnInsertedText));
-                            GCE cdghkglnkfhjenlebomgbogcmlafoejmngmj2 = this._ABQ;
-                            cdghkglnkfhjenlebomgbogcmlafoejmngmj2._AUO = (GCE._AVM)Delegate.Remove(cdghkglnkfhjenlebomgbogcmlafoejmngmj2._AUO, new GCE._AVM(this.OnRemovedText));
+                            GCE _CCO = this._ABQ;
+                            _CCO._AUK = (GCE._AVI)Delegate.Remove(_CCO._AUK, new GCE._AVI(this.OnInsertedText));
+                            GCE _CCO2 = this._ABQ;
+                            _CCO2._AUO = (GCE._AVM)Delegate.Remove(_CCO2._AUO, new GCE._AVM(this.OnRemovedText));
                         }
                     }
                 }
-                bool flag17 = this._ABH != this.JDIEJIOALBJFEGNLOFNIEOFHIEPHADLOHKBG || this._ABQ._ASJ != this.DDEDCENDGNAJAOGKJCMAEGOHJHGEJMLIGKJA;
+                bool flag17 = this._ABH != this._CJY || this._ABQ._ASJ != this._CJZ;
                 if (flag17)
                 {
                     bool flag18 = this._ATW() == null && !this._ARV();
                     if (flag18)
                     {
                         this.UpdateMatchingBraces();
-                        this.DDEDCENDGNAJAOGKJCMAEGOHJHGEJMLIGKJA = this._ABQ._ASJ;
-                        this.JDIEJIOALBJFEGNLOFNIEOFHIEPHADLOHKBG = this._ABH.Clone();
+                        this._CJZ = this._ABQ._ASJ;
+                        this._CJY = this._ABH.Clone();
                     }
                 }
             }
@@ -12387,47 +12375,46 @@ namespace AHO
                         bool flag4 = this._ABQ._ARQ().EndsWith(".exe", StringComparison.OrdinalIgnoreCase);
                         if (!flag4)
                         {
-                            this._ABQ._ABT = (this._ABT = (this._ABQ._ARR ? _bi2.EMGEKEIEHPNEFMOMMCIFEEGIFJDEJFOKPAFM : _bi2.FKIPBDDJJKDBAABDMLPKIGEAKBOODIOIIJEE));
-                            bool flag5 = Event.current.type == 8;
+                            this._ABQ._ABT = (this._ABT = (this._ABQ._ARR ? _bi2._CCM : _bi2._CCN));
+                            bool flag5 = (int)Event.current.type == 8;
                             if (flag5)
                             {
                                 this.Initialize();
                             }
-                            bool flag6 = Event.current.rawType == 2 && this.CIOLLBEJAOJGGEDHBAFDIIEPHPNCCNJPFNCI && this.PNBFHJBPGLJPBOMMOHFIHHJONMJLBKBGFFLL;
+                            bool flag6 = (int)Event.current.rawType == 2 && this._CDM && this._CDL;
                             if (flag6)
                             {
-                                this.CIOLLBEJAOJGGEDHBAFDIIEPHPNCCNJPFNCI = false;
-                                this.PNBFHJBPGLJPBOMMOHFIHHJONMJLBKBGFFLL = false;
-                                this.KOLAGFCMKEFOAKDPPHCEBJPFDNEGLGMBLODK = false;
+                                this._CDM = false;
+                                this._CDL = false;
+                                this._CJC = false;
                             }
                             EditorWindow editorWindow = EditorWindow.focusedWindow;
                             bool flag7 = editorWindow == this._ABJ();
                             if (flag7)
                             {
-                                _bi2.PBBPFHLOKNCCODDMCKNNJGFOGBHHKMDKKGHJ(this);
+                                _bi2._CJV(this);
                             }
                             bool flag8 = editorWindow != null;
                             if (flag8)
                             {
-                                bool flag9 = editorWindow == this.ADJPMDHKMMDMAGNDGAHMHFBBEEALGMEDJGFP || editorWindow == this.KBBCMMCMDLMOHHGNAPNIJGLHBLBGGPODLFEB || editorWindow == this.EEJFFFONEBHEFJKECHMCKDFAFABLNECBNBDO;
+                                bool flag9 = editorWindow == this._CDA || editorWindow == this._CBC || editorWindow == this._CBB;
                                 if (flag9)
                                 {
-                                    editorWindow = _bi2.FCDGPNNHCEFBJKDFCKDNLICBBLOJGGIPBPIO;
+                                    editorWindow = _bi2._CKA;
                                 }
                             }
-                            bool flag10 = _bi2.FCDGPNNHCEFBJKDFCKDNLICBBLOJGGIPBPIO != EditorWindow.focusedWindow;
-                            _bi2.FCDGPNNHCEFBJKDFCKDNLICBBLOJGGIPBPIO = EditorWindow.focusedWindow;
+                            bool flag10 = _bi2._CKA != EditorWindow.focusedWindow;
+                            _bi2._CKA = EditorWindow.focusedWindow;
                             bool flag11 = flag10;
                             if (flag11)
                             {
-                                bool flag12 = this._ABJ() == _bi2.FCDGPNNHCEFBJKDFCKDNLICBBLOJGGIPBPIO;
+                                bool flag12 = this._ABJ() == _bi2._CKA;
                                 if (flag12)
                                 {
-                                    this.POAAHKKEFHAFHHJDHLCDIOKHAKGHNKOKPPFG = true;
+                                    this._CCI = true;
                                 }
                             }
-                            Color color;
-                            color..ctor(0f, 0f, 0f, 0.25f);
+                            Color color = new Color(0f, 0f, 0f, 0.25f);
                             bool flag13 = _bg8._BAR;
                             if (flag13)
                             {
@@ -12439,10 +12426,10 @@ namespace AHO
                                 }
                                 else
                                 {
-                                    bool flag15 = this.OBGEMALIEGDPMEGFAOJCKCIMLAKLMFFNDLKH != null;
+                                    bool flag15 = this._CHK != null;
                                     if (flag15)
                                     {
-                                        EditorGUI.DrawRect(new Rect(this._AFO.xMin, this._AFO.yMin - 1f, this.OBGEMALIEGDPMEGFAOJCKCIMLAKLMFFNDLKH.position.size.x, 1f), color);
+                                        EditorGUI.DrawRect(new Rect(this._AFO.xMin, this._AFO.yMin - 1f, this._CHK.position.size.x, 1f), color);
                                     }
                                 }
                             }
@@ -12457,10 +12444,10 @@ namespace AHO
                                 }
                                 else
                                 {
-                                    bool flag18 = this.OBGEMALIEGDPMEGFAOJCKCIMLAKLMFFNDLKH != null;
+                                    bool flag18 = this._CHK != null;
                                     if (flag18)
                                     {
-                                        EditorGUI.DrawRect(new Rect(this._AFO.xMin, this._AFO.yMin - 1f, this.OBGEMALIEGDPMEGFAOJCKCIMLAKLMFFNDLKH.position.size.x, 1f), color);
+                                        EditorGUI.DrawRect(new Rect(this._AFO.xMin, this._AFO.yMin - 1f, this._CHK.position.size.x, 1f), color);
                                     }
                                 }
                             }
@@ -12469,27 +12456,27 @@ namespace AHO
                             {
                                 this.DoSearchBox(default(Rect));
                             }
-                            bool flag20 = ((this.OGJMAADHJNFCLONPJGOCCAKPODNCOKEOJFMF != null) ? (this.EIMJAKFHOFKPPHINOOONMDAPCKAAPELJKAIL ? _bg8._BAC : _bg8._BAB) : (this.EIMJAKFHOFKPPHINOOONMDAPCKAAPELJKAIL ? _bg8._BBO : _bg8._BBN));
-                            bool flag21 = this.GJDLGEEKCBIHCFECOIOFLIFNOCPOAPGNHJMK();
+                            bool flag20 = ((this._CHX != null) ? (this._CCL ? _bg8._BAC : _bg8._BAB) : (this._CCL ? _bg8._BBO : _bg8._BBN));
+                            bool flag21 = this._CDN();
                             if (flag21)
                             {
-                                bool flag22 = this.ADJPMDHKMMDMAGNDGAHMHFBBEEALGMEDJGFP != null && this.ADJPMDHKMMDMAGNDGAHMHFBBEEALGMEDJGFP.FHKIKKJCPBCBKIHJEICNBIGGLCFEPPOPBHGB() != null;
+                                bool flag22 = this._CDA != null && this._CDA._CKB() != null;
                                 if (flag22)
                                 {
-                                    this.ADJPMDHKMMDMAGNDGAHMHFBBEEALGMEDJGFP.OnOwnerGUI();
+                                    this._CDA.OnOwnerGUI();
                                 }
-                                bool flag23 = this.EEJFFFONEBHEFJKECHMCKDFAFABLNECBNBDO != null;
+                                bool flag23 = this._CBB != null;
                                 if (flag23)
                                 {
-                                    int length = this.EEJFFFONEBHEFJKECHMCKDFAFABLNECBNBDO._ADN().Length;
-                                    _bh4 _AAH = this.EEJFFFONEBHEFJKECHMCKDFAFABLNECBNBDO.OnOwnerGUI();
+                                    int length = this._CBB._ADN().Length;
+                                    _bh4 _AAH = this._CBB.OnOwnerGUI();
                                     string text = ((_AAH != null) ? (_AAH._AW ?? "") : null);
                                     bool flag24 = _ba4._AFC && text != null && text.EndsWith("Attribute", StringComparison.Ordinal);
                                     if (flag24)
                                     {
                                         text = _ba4.NameOf(_AAH);
                                     }
-                                    bool flag25 = text == this.EEJFFFONEBHEFJKECHMCKDFAFABLNECBNBDO._ADN() && Event.current.character != '\n' && Event.current.keyCode != 271;
+                                    bool flag25 = text == this._CBB._ADN() && Event.current.character != '\n' && (int)Event.current.keyCode != 271;
                                     if (flag25)
                                     {
                                         text = "";
@@ -12498,7 +12485,7 @@ namespace AHO
                                     if (flag26)
                                     {
                                         this.CloseAutocomplete();
-                                        this.POAAHKKEFHAFHHJDHLCDIOKHAKGHNKOKPPFG = true;
+                                        this._CCI = true;
                                         EditorWindow editorWindow2 = this._ABJ();
                                         bool flag27 = editorWindow2 != null && EditorWindow.focusedWindow != editorWindow2;
                                         if (flag27)
@@ -12521,11 +12508,11 @@ namespace AHO
                                     {
                                         string text2 = this._ABQ.FLOg[this._ABH._ABI];
                                         GCE._AFA _ATD = this._ABH.Clone();
-                                        _be5 gnahabjnnpkneoolbdnkmbpaeplmlkmclkcl = _AAH as _be5;
-                                        bool flag31 = gnahabjnnpkneoolbdnkmbpaeplmlkmclkcl != null;
+                                        _be5 _CBX = _AAH as _be5;
+                                        bool flag31 = _CBX != null;
                                         if (flag31)
                                         {
-                                            bool flag32 = Event.current.character != '\n' && Event.current.character != '\t' && Event.current.keyCode != 271;
+                                            bool flag32 = Event.current.character != '\n' && Event.current.character != '\t' && (int)Event.current.keyCode != 271;
                                             if (flag32)
                                             {
                                                 goto IL_0A3D;
@@ -12536,13 +12523,13 @@ namespace AHO
                                                 text = text.Substring(0, text.Length - 3);
                                             }
                                         }
-                                        bool flag34 = Event.current.isKey && gnahabjnnpkneoolbdnkmbpaeplmlkmclkcl == null;
+                                        bool flag34 = Event.current.isKey && _CBX == null;
                                         if (flag34)
                                         {
                                             try
                                             {
                                                 this.ProcessEditorKeyboard(Event.current, true);
-                                                bool flag35 = Event.current == null || Event.current.type == 12;
+                                                bool flag35 = Event.current == null || (int)Event.current.type == 12;
                                                 if (flag35)
                                                 {
                                                     _bi2._AKS = false;
@@ -12555,7 +12542,7 @@ namespace AHO
                                         this._ABQ.EndEdit();
                                         this._ABQ.BeginEdit("Auto Completion '" + text + "'");
                                         string text3 = null;
-                                        bool flag36 = gnahabjnnpkneoolbdnkmbpaeplmlkmclkcl == null && this._ABH > _ATD && this._ABQ.FLOg[_ATD._ABI].Length >= _ATD._AEU;
+                                        bool flag36 = _CBX == null && this._ABH > _ATD && this._ABQ.FLOg[_ATD._ABI].Length >= _ATD._AEU;
                                         if (flag36)
                                         {
                                             text3 = this._ABQ.GetTextRange(_ATD, this._ABH);
@@ -12585,10 +12572,10 @@ namespace AHO
                                                 }
                                             }
                                         }
-                                        bool flag40 = gnahabjnnpkneoolbdnkmbpaeplmlkmclkcl != null;
+                                        bool flag40 = _CBX != null;
                                         if (flag40)
                                         {
-                                            gnahabjnnpkneoolbdnkmbpaeplmlkmclkcl.OverrideTypedInLength(ref length);
+                                            _CBX.OverrideTypedInLength(ref length);
                                         }
                                         bool flag41 = length > 0;
                                         if (flag41)
@@ -12611,58 +12598,58 @@ namespace AHO
                                             _bc5._AOM = true;
                                             num2 = this._ABQ.InsertText(this._ABH, text5)._ABI;
                                             _bc5._AOM = false;
-                                            _bi2.EPAFFDDCAEGGCPDGEEBEBADBOBLMGPDEPLEA epaffddcaeggcpdgeebebadboblmgpdeplea = new _bi2.EPAFFDDCAEGGCPDGEEBEBADBOBLMGPDEPLEA
+                                            _bi2._CGO _CGP = new _bi2._CGO
                                             {
-                                                OJKLJINFJBEPHBPPEABIJNJCDOPNEJGPAGND = new TextPosition(this._ABH._ABI, this._ABH._AEU - 1),
-                                                AGJBFOPCGMOGGDJKCDLBNMJAILHEKLMGPALB = new TextPosition(this._ABH._ABI, this._ABH._AEU)
+                                                _CGQ = new TextPosition(this._ABH._ABI, this._ABH._AEU - 1),
+                                                _CGR = new TextPosition(this._ABH._ABI, this._ABH._AEU)
                                             };
-                                            this.KGNJCNNMIFPKALPOGAHDGCDKCMMDLDBDLILH.Add(epaffddcaeggcpdgeebebadboblmgpdeplea);
-                                            bool flag44 = this.KGNJCNNMIFPKALPOGAHDGCDKCMMDLDBDLILH.Count == 1;
+                                            this._CGN.Add(_CGP);
+                                            bool flag44 = this._CGN.Count == 1;
                                             if (flag44)
                                             {
-                                                GCE cdghkglnkfhjenlebomgbogcmlafoejmngmj = this._ABQ;
-                                                cdghkglnkfhjenlebomgbogcmlafoejmngmj._AUO = (GCE._AVM)Delegate.Combine(cdghkglnkfhjenlebomgbogcmlafoejmngmj._AUO, new GCE._AVM(this.OnRemovedText));
-                                                GCE cdghkglnkfhjenlebomgbogcmlafoejmngmj2 = this._ABQ;
-                                                cdghkglnkfhjenlebomgbogcmlafoejmngmj2._AUK = (GCE._AVI)Delegate.Combine(cdghkglnkfhjenlebomgbogcmlafoejmngmj2._AUK, new GCE._AVI(this.OnInsertedText));
+                                                GCE _CCO = this._ABQ;
+                                                _CCO._AUO = (GCE._AVM)Delegate.Combine(_CCO._AUO, new GCE._AVM(this.OnRemovedText));
+                                                GCE _CCO2 = this._ABQ;
+                                                _CCO2._AUK = (GCE._AVI)Delegate.Combine(_CCO2._AUK, new GCE._AVI(this.OnInsertedText));
                                             }
                                         }
-                                        bool bopcdiiiaacdailgpofhgpkbbolaifbdfado = this.BOPCDIIIAACDAILGPOFHGPKBBOLAIFBDFADO;
-                                        if (bopcdiiiaacdailgpofhgpkbbolaifbdfado)
+                                        bool _CGE = this._CCH;
+                                        if (_CGE)
                                         {
                                             this._ABH._ATG = (this._ABH._ATF = this.CharIndexToColumn(this._ABH._AEU, this._ABH._ABI));
                                         }
                                         this._ABQ.UpdateHighlighting(_ATD._ABI, num2, false);
-                                        bool flag45 = gnahabjnnpkneoolbdnkmbpaeplmlkmclkcl != null;
+                                        bool flag45 = _CBX != null;
                                         if (flag45)
                                         {
-                                            this.ExpandSnippet(gnahabjnnpkneoolbdnkmbpaeplmlkmclkcl);
+                                            this.ExpandSnippet(_CBX);
                                         }
                                         else
                                         {
                                             this.ReindentLines(_ATD._ABI, num2);
                                         }
                                         this._ATM = _bi2._ATN;
-                                        this.DJLIKNMAIPOALAMANDOGJHEODLHBGBBNBMIA = false;
+                                        this._CGW = false;
                                         this._ATO = true;
-                                        bool flag46 = this.IFOOFJEHFDEEDMEJMCKOLIBPDFBJEFLOBCEM != null && gnahabjnnpkneoolbdnkmbpaeplmlkmclkcl == null;
+                                        bool flag46 = this._CIK != null && _CBX == null;
                                         if (flag46)
                                         {
-                                            this.AfterCharecterTyped(this.IFOOFJEHFDEEDMEJMCKOLIBPDFBJEFLOBCEM, this._ABH._ABI, this._ABH._AEU);
-                                            this.GFKALDCDCJKDLLFGKMBFPABMPCNBGCFEJEIN = true;
+                                            this.AfterCharecterTyped(this._CIK, this._ABH._ABI, this._ABH._AEU);
+                                            this._CII = true;
                                         }
                                         GUIUtility.ExitGUI();
                                     }
-                                    bool flag47 = Event.current.type == 12;
+                                    bool flag47 = (int)Event.current.type == 12;
                                     if (flag47)
                                     {
                                         return;
                                     }
                                 }
                             IL_0A3D:
-                                bool flag48 = this.KBBCMMCMDLMOHHGNAPNIJGLHBLBGGPODLFEB != null && this.KBBCMMCMDLMOHHGNAPNIJGLHBLBGGPODLFEB.FHKIKKJCPBCBKIHJEICNBIGGLCFEPPOPBHGB() != null;
+                                bool flag48 = this._CBC != null && this._CBC._CKB() != null;
                                 if (flag48)
                                 {
-                                    this.KBBCMMCMDLMOHHGNAPNIJGLHBLBGGPODLFEB.OnOwnerGUI();
+                                    this._CBC.OnOwnerGUI();
                                 }
                                 bool flag49 = this._ABQ != null && this.ProcessCodeViewCommands();
                                 if (flag49)
@@ -12670,15 +12657,15 @@ namespace AHO
                                     return;
                                 }
                                 bool flag50 = Application.platform == 0;
-                                bool flag51 = Event.current.type == 16 || (flag50 && Event.current.type == 1 && Event.current.button == 1);
-                                bool flag52 = (Event.current.type == 4 && (Event.current.keyCode == 319 || Event.current.Equals(Event.KeyboardEvent("#f12")))) || (flag51 && this._AFO.Contains(Event.current.mousePosition));
+                                bool flag51 = (int)Event.current.type == 16 || (flag50 && (int)Event.current.type == 1 && Event.current.button == 1);
+                                bool flag52 = ((int)Event.current.type == 4 && ((int)Event.current.keyCode == 319 || Event.current.Equals(Event.KeyboardEvent("#f12")))) || (flag51 && this._AFO.Contains(Event.current.mousePosition));
                                 if (flag52)
                                 {
                                     Event.current.Use();
                                     GenericMenu genericMenu = new GenericMenu();
                                     bool flag53 = this._ATW() != null && this._ATW()._ABI == this._ABH._ABI;
-                                    bool mljcflpnjpehbilbamiacglghfegimgdpmnb = this._ABQ._ASC;
-                                    if (mljcflpnjpehbilbamiacglghfegimgdpmnb)
+                                    bool _CIH = this._ABQ._ASC;
+                                    if (_CIH)
                                     {
                                         int num3;
                                         int num4;
@@ -12701,9 +12688,9 @@ namespace AHO
                                             if (flag58)
                                             {
                                                 List<_AQA> fixes = _bc9.GetFixes(this._ABQ, token);
-                                                foreach (_AQA kclolinkdgmfifeiidoolpiiejameegabmlg in fixes)
+                                                foreach (_AQA _CIJ in fixes)
                                                 {
-                                                    _AQA captured = kclolinkdgmfifeiidoolpiiejameegabmlg;
+                                                    _AQA captured = _CIJ;
                                                     genericMenu.AddItem(new GUIContent("Fix/" + captured.GetTitle(token)), false, delegate
                                                     {
                                                         this.BeginRefactoring(captured.GetTitle(token));
@@ -12803,8 +12790,8 @@ namespace AHO
                                                     }
                                                     else
                                                     {
-                                                        bool ppfhkdollcggpjafekhmnabknmlonajanclj = this._AN.PPFHKDOLLCGGPJAFEKHMNABKNMLONAJANCLJ;
-                                                        if (ppfhkdollcggpjafekhmnabknmlonajanclj)
+                                                        bool _CHI = this._AN._CHJ;
+                                                        if (_CHI)
                                                         {
                                                             List<FKI> declarations = this.GetSymbolDeclarations(null);
                                                             this._AMN = this._AMN.Rebind() ?? this._AMN;
@@ -12872,11 +12859,11 @@ namespace AHO
                                                             flag53 = false;
                                                             genericMenu.AddItem("Find All References", "%#r", "Find All References", "#f12", false, delegate
                                                             {
-                                                                _bh6.FindAllReferences(this._AMN, this.NOKEHFCAKDDOPKCFMLCLBACCAHNLKLHBCEDC());
+                                                                _bh6.FindAllReferences(this._AMN, this._CCV());
                                                             });
                                                         }
                                                     }
-                                                    bool flag76 = this._AN != null && this._AN.PPFHKDOLLCGGPJAFEKHMNABKNMLONAJANCLJ;
+                                                    bool flag76 = this._AN != null && this._AN._CHJ;
                                                     if (flag76)
                                                     {
                                                         bool flag77 = this.GetSymbolDeclarations(null) != null && this.GetSymbolDeclarations(null).Count > 0;
@@ -12884,7 +12871,7 @@ namespace AHO
                                                         {
                                                             genericMenu.AddItem("Rename " + this._AMN._AT.ToString() + "...", "", "Rename " + this._AMN._AT.ToString() + "...", "", false, delegate
                                                             {
-                                                                _bc2.CreateWindow(this._AMN, this.NOKEHFCAKDDOPKCFMLCLBACCAHNLKLHBCEDC());
+                                                                _bc2.CreateWindow(this._AMN, this._CCV());
                                                             });
                                                         }
                                                     }
@@ -12994,11 +12981,11 @@ namespace AHO
                                     {
                                         syntaxToken = null;
                                     }
-                                    bool ciollbejaojggedhbafdiiephpnccnjpfnci = this.CIOLLBEJAOJGGEDHBAFDIIEPHPNCCNJPFNCI;
+                                    bool _CJK = this._CDM;
                                     Rect rect;
-                                    if (ciollbejaojggedhbafdiiephpnccnjpfnci)
+                                    if (_CJK)
                                     {
-                                        rect..ctor(Event.current.mousePosition.x, Event.current.mousePosition.y, 1f, 1f);
+                                        rect = new Rect(Event.current.mousePosition.x, Event.current.mousePosition.y, 1f, 1f);
                                     }
                                     else
                                     {
@@ -13020,7 +13007,7 @@ namespace AHO
                                 if (isKey)
                                 {
                                     this.ProcessEditorKeyboard(Event.current, false);
-                                    bool flag89 = Event.current == null || Event.current.type == 12;
+                                    bool flag89 = Event.current == null || (int)Event.current.type == 12;
                                     if (flag89)
                                     {
                                         _bi2._AKS = false;
@@ -13029,17 +13016,17 @@ namespace AHO
                                     }
                                 }
                             }
-                            bool flag90 = Event.current.type == 6;
+                            bool flag90 = (int)Event.current.type == 6;
                             if (flag90)
                             {
-                                this.GPLPKMAECBMBIFJFHBAOKAKOILAEHLNFKIII = null;
-                                this.OEDBMEGKONIDNGNNNBOJKCNPNCEJPOGPBNHC = default(DateTime);
-                                bool flag91 = this.ADJPMDHKMMDMAGNDGAHMHFBBEEALGMEDJGFP != null;
+                                this._CDU = null;
+                                this._CDV = default(DateTime);
+                                bool flag91 = this._CDA != null;
                                 if (flag91)
                                 {
-                                    this.ADJPMDHKMMDMAGNDGAHMHFBBEEALGMEDJGFP.Hide();
+                                    this._CDA.Hide();
                                 }
-                                bool flag92 = this.KBBCMMCMDLMOHHGNAPNIJGLHBLBGGPODLFEB != null;
+                                bool flag92 = this._CBC != null;
                                 if (flag92)
                                 {
                                     this.CloseArgumentsHint();
@@ -13048,14 +13035,14 @@ namespace AHO
                             bool flag93 = _bg8._BAL;
                             if (flag93)
                             {
-                                bool flag94 = Event.current.type == 6;
+                                bool flag94 = (int)Event.current.type == 6;
                                 if (flag94)
                                 {
                                     bool actionKey = EditorGUI.actionKey;
                                     if (actionKey)
                                     {
-                                        bool lcmgiakmdblnmjehgkejjmkghgonffbgmcfo = this.LCMGIAKMDBLNMJEHGKEJJMKGHGONFFBGMCFO;
-                                        if (lcmgiakmdblnmjehgkejjmkghgonffbgmcfo)
+                                        bool _CKC = this._CKD;
+                                        if (_CKC)
                                         {
                                             Event.current.Use();
                                             this.ModifyFontSize(-(int)Event.current.delta.y);
@@ -13064,78 +13051,78 @@ namespace AHO
                                     }
                                     else
                                     {
-                                        this.LCMGIAKMDBLNMJEHGKEJJMKGHGONFFBGMCFO = false;
+                                        this._CKD = false;
                                     }
                                 }
                                 else
                                 {
-                                    bool flag95 = !this.LCMGIAKMDBLNMJEHGKEJJMKGHGONFFBGMCFO;
+                                    bool flag95 = !this._CKD;
                                     if (flag95)
                                     {
                                         bool flag96 = Event.current.type == null || Event.current.character > '\0';
                                         if (flag96)
                                         {
-                                            this.LCMGIAKMDBLNMJEHGKEJJMKGHGONFFBGMCFO = true;
+                                            this._CKD = true;
                                         }
                                     }
                                 }
                             }
-                            this.HNBKJDKPBPNIOBIGJKDEDOFLENDLKDCOCMAH = Mathf.Round(Mathf.Max(this.HNBKJDKPBPNIOBIGJKDEDOFLENDLKDCOCMAH, (float)this._ABQ._ABU * this._AEY().x));
-                            float num5 = Mathf.Max(this.JOOAGLFAONABMOABLNMAKLBBGDJOFNMGFBOB.width - 8f, this.HNBKJDKPBPNIOBIGJKDEDOFLENDLKDCOCMAH);
-                            float num6 = (this.BOPCDIIIAACDAILGPOFHGPKBBOLAIFBDFADO ? (this.GetLineOffset(this._ABQ.FLOg.Count) + 8f) : (8f + this._AEY().y * (float)this._ABQ._AQQ.Length));
-                            this.JOOAGLFAONABMOABLNMAKLBBGDJOFNMGFBOB.Set(-4f, -4f, num5 + 8f, num6);
-                            bool flag97 = Event.current.type != 8;
+                            this._CKE = Mathf.Round(Mathf.Max(this._CKE, (float)this._ABQ._ABU * this._AEY().x));
+                            float num5 = Mathf.Max(this._CKF.width - 8f, this._CKE);
+                            float num6 = (this._CCH ? (this.GetLineOffset(this._ABQ.FLOg.Count) + 8f) : (8f + this._AEY().y * (float)this._ABQ._AQQ.Length));
+                            this._CKF.Set(-4f, -4f, num5 + 8f, num6);
+                            bool flag97 = (int)Event.current.type != 8;
                             if (flag97)
                             {
-                                this.JPPFMECFJCDOMNMEIPPNOEIICFJPJCAFJLMK = 0f;
+                                this._CGA = 0f;
                                 bool flag98 = flag20;
                                 if (flag98)
                                 {
-                                    this.GBDPEFEOCLPNDEPKHJNLBKNGGHIDLKLJEOJK = Mathf.FloorToInt(Mathf.Log10((float)(this._ABQ._AQQ.Length + 1 + this.BEOOILOKJPMGIAIFECEOEGHJCFAFCGJFJICN)) + 1f);
-                                    this.BHANPCDIOAHCJKEGENEHNEHACADLNINEFAKG = this._AEY().x * (float)this.GBDPEFEOCLPNDEPKHJNLBKNGGHIDLKLJEOJK;
-                                    this.JPPFMECFJCDOMNMEIPPNOEIICFJPJCAFJLMK = this.BHANPCDIOAHCJKEGENEHNEHACADLNINEFAKG;
+                                    this._CKG = Mathf.FloorToInt(Mathf.Log10((float)(this._ABQ._AQQ.Length + 1 + this._CKH)) + 1f);
+                                    this._CIZ = this._AEY().x * (float)this._CKG;
+                                    this._CGA = this._CIZ;
                                 }
-                                bool flag99 = this.HFBBKNBEOLAICCGCIFGLPKHFCNHPANGIIGDM();
+                                bool flag99 = this._CJR();
                                 if (flag99)
                                 {
-                                    this.JPPFMECFJCDOMNMEIPPNOEIICFJPJCAFJLMK += (flag20 ? 7f : 3f);
+                                    this._CGA += (flag20 ? 7f : 3f);
                                 }
-                                bool flhmmgogabacngebpcfefgpmfnakdpiglabb = this.FLHMMGOGABACNGEBPCFEFGPMFNAKDPIGLABB;
-                                if (flhmmgogabacngebpcfefgpmfnakdpiglabb)
+                                bool _CIT = this._CIU;
+                                if (_CIT)
                                 {
-                                    this.JPPFMECFJCDOMNMEIPPNOEIICFJPJCAFJLMK += this._AEY().x;
+                                    this._CGA += this._AEY().x;
                                 }
-                                bool flag100 = this.JPPFMECFJCDOMNMEIPPNOEIICFJPJCAFJLMK > 0f;
+                                bool flag100 = this._CGA > 0f;
                                 if (flag100)
                                 {
-                                    this.JPPFMECFJCDOMNMEIPPNOEIICFJPJCAFJLMK += 9f;
+                                    this._CGA += 9f;
                                 }
                             }
                             int num7;
                             int num8;
                             for (; ; )
                             {
-                                this._AFS.y = this.GetLineOffset(this.AINBDLCEICDFCIMEOFNOEFAHLLPOHEECOPNE) + this.LPAPJBHKOMFLPDIFIIJEHJBMOEFHHAIBGJBF;
-                                num7 = (this.BOPCDIIIAACDAILGPOFHGPKBBOLAIFBDFADO ? this.GetLineAt(this._AFS.y) : Math.Max(0, (int)(this._AFS.y / this._AEY().y) - 1));
-                                num8 = (this.BOPCDIIIAACDAILGPOFHGPKBBOLAIFBDFADO ? (1 + this.GetLineAt(this._AFS.y + this._AFO.height)) : ((this._AFO.height > 0f) ? (num7 + 2 + (int)(this._AFO.height / this._AEY().y)) : ((int)((float)Screen.height / EditorGUIUtility.pixelsPerPoint / this._AEY().y))));
+                                this._AFS.y = this.GetLineOffset(this._CCT) + this._CCU;
+                                num7 = (this._CCH ? this.GetLineAt(this._AFS.y) : Math.Max(0, (int)(this._AFS.y / this._AEY().y) - 1));
+                                num8 = (this._CCH ? (1 + this.GetLineAt(this._AFS.y + this._AFO.height)) : ((this._AFO.height > 0f) ? (num7 + 2 + (int)(this._AFO.height / this._AEY().y)) : ((int)((float)Screen.height / EditorGUIUtility.pixelsPerPoint / this._AEY().y))));
                                 bool flag101 = num8 > this._ABQ._AQQ.Length;
                                 if (flag101)
                                 {
                                     num8 = this._ABQ._AQQ.Length;
                                     num7 = Mathf.Max(0, Mathf.Min(num7, num8 - (int)(this._AFO.height / this._AEY().y)));
                                 }
-                                bool flag102 = this._ATO && Event.current.type != 8;
+                                bool flag102 = this._ATO && (int)Event.current.type != 8;
                                 if (flag102)
                                 {
                                     this._ATO = false;
-                                    GCE._AFA _ATD3 = ((this.PNBFHJBPGLJPBOMMOHFIHHJONMJLBKBGFFLL && this.CIOLLBEJAOJGGEDHBAFDIIEPHPNCCNJPFNCI) ? this.GDCGAOFJJOCBOKONDOHJMAFAGPHDOEKIKLND : this._ABH);
-                                    this._ALM.x = this._AFS.x + this.JPPFMECFJCDOMNMEIPPNOEIICFJPJCAFJLMK;
+                                    GCE._AFA _ATD3 = ((this._CDL && this._CDM) ? this._CJF : this._ABH);
+                                    this._ALM.x = this._AFS.x + this._CGA;
                                     this._ALM.y = this._AFS.y;
-                                    this._ALM.width = this._AFO.width - this.JPPFMECFJCDOMNMEIPPNOEIICFJPJCAFJLMK - 4f;
+                                    this._ALM.width = this._AFO.width - this._CGA - 4f;
                                     this._ALM.height = this._AFO.height - 4f;
-                                    float num9 = (this.BOPCDIIIAACDAILGPOFHGPKBBOLAIFBDFADO ? (this.GetLineOffset(this._ABQ.FLOg.Count) + 8f) : this.JOOAGLFAONABMOABLNMAKLBBGDJOFNMGFBOB.height);
-                                    bool flag103 = !this.BOPCDIIIAACDAILGPOFHGPKBBOLAIFBDFADO && this.JOOAGLFAONABMOABLNMAKLBBGDJOFNMGFBOB.width - 4f - this.JPPFMECFJCDOMNMEIPPNOEIICFJPJCAFJLMK - this.MFHBMAGLJHOKEHCENMEKNBKPGBPBEECMDAKC > this._ALM.width;
-                                    bool flag104 = (this.BOPCDIIIAACDAILGPOFHGPKBBOLAIFBDFADO ? num9 : this.JOOAGLFAONABMOABLNMAKLBBGDJOFNMGFBOB.height) - 4f > this._ALM.height;
+                                    float num9 = (this._CCH ? (this.GetLineOffset(this._ABQ.FLOg.Count) + 8f) : this._CKF.height);
+                                    bool flag103 = !this._CCH && this._CKF.width - 4f - this._CGA - this._CKI > this._ALM.width;
+                                    bool flag104 = (this._CCH ? num9 : this._CKF.height) - 4f > this._ALM.height;
                                     bool flag105 = flag103 && flag104;
                                     if (flag105)
                                     {
@@ -13148,7 +13135,7 @@ namespace AHO
                                         if (flag106)
                                         {
                                             this._ALM.height = this._ALM.height - 15f;
-                                            flag104 = this.JOOAGLFAONABMOABLNMAKLBBGDJOFNMGFBOB.height - 4f > this._ALM.height;
+                                            flag104 = this._CKF.height - 4f > this._ALM.height;
                                             bool flag107 = flag104;
                                             if (flag107)
                                             {
@@ -13161,7 +13148,7 @@ namespace AHO
                                             if (flag108)
                                             {
                                                 this._ALM.width = this._ALM.width - 15f;
-                                                flag103 = this.JOOAGLFAONABMOABLNMAKLBBGDJOFNMGFBOB.width - 4f - this.JPPFMECFJCDOMNMEIPPNOEIICFJPJCAFJLMK - this.MFHBMAGLJHOKEHCENMEKNBKPGBPBEECMDAKC > this._ALM.width;
+                                                flag103 = this._CKF.width - 4f - this._CGA - this._CKI > this._ALM.width;
                                                 bool flag109 = flag103;
                                                 if (flag109)
                                                 {
@@ -13170,13 +13157,13 @@ namespace AHO
                                             }
                                         }
                                     }
-                                    this._ALM.xMin = Mathf.Ceil((this._ALM.x - 1f - this.JPPFMECFJCDOMNMEIPPNOEIICFJPJCAFJLMK) / this._AEY().x) * this._AEY().x + 0f + this.JPPFMECFJCDOMNMEIPPNOEIICFJPJCAFJLMK;
+                                    this._ALM.xMin = Mathf.Ceil((this._ALM.x - 1f - this._CGA) / this._AEY().x) * this._AEY().x + 0f + this._CGA;
                                     this._ALM.width = Mathf.Floor(this._ALM.width / this._AEY().x) * this._AEY().x;
                                     this._ALM.yMin = Mathf.Ceil(this._ALM.y / this._AEY().y) * this._AEY().y;
                                     this._ALM.height = Mathf.Floor(this._ALM.height / this._AEY().y) * this._AEY().y;
-                                    bool bopcdiiiaacdailgpofhgpkbbolaifbdfado2 = this.BOPCDIIIAACDAILGPOFHGPKBBOLAIFBDFADO;
+                                    bool _CGE2 = this._CCH;
                                     float num12;
-                                    if (bopcdiiiaacdailgpofhgpkbbolaifbdfado2)
+                                    if (_CGE2)
                                     {
                                         int num10;
                                         int num11;
@@ -13191,7 +13178,7 @@ namespace AHO
                                     if (flag110)
                                     {
                                         this._AFS.y = num12;
-                                        this.FAABIAGAJJGAMJHJFFCKGGMDOFHDOLELPKPN = true;
+                                        this._CIL = true;
                                         this._ATO = true;
                                     }
                                     float num13 = num12 + this._AEY().y - this._AFO.height + (flag103 ? 23f : 8f);
@@ -13199,14 +13186,14 @@ namespace AHO
                                     if (flag111)
                                     {
                                         this._AFS.y = num13;
-                                        this.FAABIAGAJJGAMJHJFFCKGGMDOFHDOLELPKPN = true;
+                                        this._CIL = true;
                                         this._ATO = true;
                                     }
-                                    bool flag112 = !this.BOPCDIIIAACDAILGPOFHGPKBBOLAIFBDFADO;
+                                    bool flag112 = !this._CCH;
                                     if (flag112)
                                     {
                                         Rect caretRect = this.GetCaretRect(_ATD3);
-                                        caretRect.x -= this.JPPFMECFJCDOMNMEIPPNOEIICFJPJCAFJLMK;
+                                        caretRect.x -= this._CGA;
                                         bool flag113 = caretRect.x < this._AFS.x;
                                         if (flag113)
                                         {
@@ -13215,44 +13202,44 @@ namespace AHO
                                             bool flag114 = x != this._AFS.x;
                                             if (flag114)
                                             {
-                                                this.FAABIAGAJJGAMJHJFFCKGGMDOFHDOLELPKPN = true;
+                                                this._CIL = true;
                                                 this._ATO = true;
-                                                bool flag115 = this.EEJFFFONEBHEFJKECHMCKDFAFABLNECBNBDO != null;
+                                                bool flag115 = this._CBB != null;
                                                 if (flag115)
                                                 {
-                                                    Rect position = this.EEJFFFONEBHEFJKECHMCKDFAFABLNECBNBDO.position;
+                                                    Rect position = this._CBB.position;
                                                     position.x += x - this._AFS.x;
-                                                    this.EEJFFFONEBHEFJKECHMCKDFAFABLNECBNBDO.position = position;
+                                                    this._CBB.position = position;
                                                 }
                                             }
                                         }
                                         else
                                         {
-                                            bool flag116 = caretRect.x + this._AEY().x > this._AFS.x + this._AFO.width - this.JPPFMECFJCDOMNMEIPPNOEIICFJPJCAFJLMK - 22f;
+                                            bool flag116 = caretRect.x + this._AEY().x > this._AFS.x + this._AFO.width - this._CGA - 22f;
                                             if (flag116)
                                             {
                                                 float x2 = this._AFS.x;
-                                                this._AFS.x = Mathf.Max(0f, caretRect.x + 21f * this._AEY().x - this._AFO.width + this.JPPFMECFJCDOMNMEIPPNOEIICFJPJCAFJLMK + 22f);
+                                                this._AFS.x = Mathf.Max(0f, caretRect.x + 21f * this._AEY().x - this._AFO.width + this._CGA + 22f);
                                                 bool flag117 = x2 != this._AFS.x;
                                                 if (flag117)
                                                 {
-                                                    this.FAABIAGAJJGAMJHJFFCKGGMDOFHDOLELPKPN = true;
+                                                    this._CIL = true;
                                                     this._ATO = true;
-                                                    bool flag118 = this.EEJFFFONEBHEFJKECHMCKDFAFABLNECBNBDO != null;
+                                                    bool flag118 = this._CBB != null;
                                                     if (flag118)
                                                     {
-                                                        Rect position2 = this.EEJFFFONEBHEFJKECHMCKDFAFABLNECBNBDO.position;
+                                                        Rect position2 = this._CBB.position;
                                                         position2.x += x2 - this._AFS.x;
-                                                        this.EEJFFFONEBHEFJKECHMCKDFAFABLNECBNBDO.position = position2;
+                                                        this._CBB.position = position2;
                                                     }
                                                 }
                                             }
                                         }
                                     }
-                                    bool faabiagajjgamjhjffckggmdofhdolelpkpn = this.FAABIAGAJJGAMJHJFFCKGGMDOFHDOLELPKPN;
-                                    if (faabiagajjgamjhjffckggmdofhdolelpkpn)
+                                    bool _CKJ = this._CIL;
+                                    if (_CKJ)
                                     {
-                                        bool flag119 = this._ATO && this.KBBCMMCMDLMOHHGNAPNIJGLHBLBGGPODLFEB != null;
+                                        bool flag119 = this._ATO && this._CBC != null;
                                         if (flag119)
                                         {
                                             this.CloseArgumentsHint();
@@ -13260,100 +13247,100 @@ namespace AHO
                                         bool flag120 = this.CanEdit();
                                         if (flag120)
                                         {
-                                            this.AINBDLCEICDFCIMEOFNOEFAHLLPOHEECOPNE = this.GetLineAt(this._AFS.y);
-                                            this.LPAPJBHKOMFLPDIFIIJEHJBMOEFHHAIBGJBF = this._AFS.y - this.GetLineOffset(this.AINBDLCEICDFCIMEOFNOEFAHLLPOHEECOPNE);
+                                            this._CCT = this.GetLineAt(this._AFS.y);
+                                            this._CCU = this._AFS.y - this.GetLineOffset(this._CCT);
                                         }
-                                        this.FAABIAGAJJGAMJHJFFCKGGMDOFHDOLELPKPN = false;
+                                        this._CIL = false;
                                         continue;
                                     }
                                 }
-                                bool flag121 = this.PLNPCENGAKFOMJMLMFIMLBMEBCMJAICLKBCC >= 1f && this._AFO.height > 1f && Event.current.type == 8;
+                                bool flag121 = this._CGY >= 1f && this._AFO.height > 1f && (int)Event.current.type == 8;
                                 if (flag121)
                                 {
-                                    bool flag122 = this.EKIIIOBHDBPDDBJFCMEGHBHLMOEGCCODHDFF.yMin < this._AFS.y + 30f || this.EKIIIOBHDBPDDBJFCMEGHBHLMOEGCCODHDFF.yMax > this._AFS.y + this._AFO.height - 50f;
+                                    bool flag122 = this._CHE.yMin < this._AFS.y + 30f || this._CHE.yMax > this._AFS.y + this._AFO.height - 50f;
                                     if (flag122)
                                     {
-                                        float num14 = Mathf.Floor(Mathf.Max(0f, this.EKIIIOBHDBPDDBJFCMEGHBHLMOEGCCODHDFF.center.y - this._AFO.height * 0.5f));
+                                        float num14 = Mathf.Floor(Mathf.Max(0f, this._CHE.center.y - this._AFO.height * 0.5f));
                                         bool flag123 = this._AFS.y != num14;
                                         if (flag123)
                                         {
                                             this._AFS.y = num14;
-                                            this.FAABIAGAJJGAMJHJFFCKGGMDOFHDOLELPKPN = true;
+                                            this._CIL = true;
                                         }
                                     }
-                                    bool flag124 = this.EKIIIOBHDBPDDBJFCMEGHBHLMOEGCCODHDFF.xMin < this._AFS.x + 30f || this.EKIIIOBHDBPDDBJFCMEGHBHLMOEGCCODHDFF.xMax > this._AFS.x + this._AFO.width - 30f - this.JPPFMECFJCDOMNMEIPPNOEIICFJPJCAFJLMK;
+                                    bool flag124 = this._CHE.xMin < this._AFS.x + 30f || this._CHE.xMax > this._AFS.x + this._AFO.width - 30f - this._CGA;
                                     if (flag124)
                                     {
-                                        float num15 = Mathf.Floor(Mathf.Max(0f, this.EKIIIOBHDBPDDBJFCMEGHBHLMOEGCCODHDFF.center.x - this._AFO.width * 0.5f));
+                                        float num15 = Mathf.Floor(Mathf.Max(0f, this._CHE.center.x - this._AFO.width * 0.5f));
                                         bool flag125 = this._AFS.x != num15;
                                         if (flag125)
                                         {
                                             this._AFS.x = num15;
-                                            this.FAABIAGAJJGAMJHJFFCKGGMDOFHDOLELPKPN = true;
+                                            this._CIL = true;
                                         }
                                     }
-                                    bool faabiagajjgamjhjffckggmdofhdolelpkpn2 = this.FAABIAGAJJGAMJHJFFCKGGMDOFHDOLELPKPN;
-                                    if (faabiagajjgamjhjffckggmdofhdolelpkpn2)
+                                    bool _CKJ2 = this._CIL;
+                                    if (_CKJ2)
                                     {
-                                        this.CEIOIDHACNPFGACJAEPBFOKGBDKAJDNJBOHO = _bi2._ATN;
+                                        this._CHD = _bi2._ATN;
                                         bool flag126 = this.CanEdit();
                                         if (flag126)
                                         {
-                                            this.AINBDLCEICDFCIMEOFNOEFAHLLPOHEECOPNE = this.GetLineAt(this._AFS.y);
-                                            this.LPAPJBHKOMFLPDIFIIJEHJBMOEFHHAIBGJBF = this._AFS.y - this.GetLineOffset(this.AINBDLCEICDFCIMEOFNOEFAHLLPOHEECOPNE);
+                                            this._CCT = this.GetLineAt(this._AFS.y);
+                                            this._CCU = this._AFS.y - this.GetLineOffset(this._CCT);
                                         }
-                                        this.FAABIAGAJJGAMJHJFFCKGGMDOFHDOLELPKPN = false;
+                                        this._CIL = false;
                                         continue;
                                     }
-                                    this.PLNPCENGAKFOMJMLMFIMLBMEBCMJAICLKBCC = 0.999f;
+                                    this._CGY = 0.999f;
                                 }
-                                bool flag127 = Event.current.type == 7;
+                                bool flag127 = (int)Event.current.type == 7;
                                 if (!flag127)
                                 {
                                     break;
                                 }
-                                bool faabiagajjgamjhjffckggmdofhdolelpkpn3 = this.FAABIAGAJJGAMJHJFFCKGGMDOFHDOLELPKPN;
-                                if (!faabiagajjgamjhjffckggmdofhdolelpkpn3)
+                                bool _CKJ3 = this._CIL;
+                                if (!_CKJ3)
                                 {
                                     break;
                                 }
-                                this.FAABIAGAJJGAMJHJFFCKGGMDOFHDOLELPKPN = false;
+                                this._CIL = false;
                                 bool flag128 = this.CanEdit();
                                 if (flag128)
                                 {
-                                    int ainbdlceicdfcimeofnoefahllpoheecopne = this.AINBDLCEICDFCIMEOFNOEFAHLLPOHEECOPNE;
-                                    float lpapjbhkomflpdifiijehjbmoefhhaibgjbf = this.LPAPJBHKOMFLPDIFIIJEHJBMOEFHHAIBGJBF;
-                                    this.AINBDLCEICDFCIMEOFNOEFAHLLPOHEECOPNE = this.GetLineAt(this._AFS.y);
-                                    this.LPAPJBHKOMFLPDIFIIJEHJBMOEFHHAIBGJBF = this._AFS.y - this.GetLineOffset(this.AINBDLCEICDFCIMEOFNOEFAHLLPOHEECOPNE);
-                                    bool flag129 = ainbdlceicdfcimeofnoefahllpoheecopne != this.AINBDLCEICDFCIMEOFNOEFAHLLPOHEECOPNE || lpapjbhkomflpdifiijehjbmoefhhaibgjbf != this.LPAPJBHKOMFLPDIFIIJEHJBMOEFHHAIBGJBF;
+                                    int _CKL = this._CCT;
+                                    float _CKM = this._CCU;
+                                    this._CCT = this.GetLineAt(this._AFS.y);
+                                    this._CCU = this._AFS.y - this.GetLineOffset(this._CCT);
+                                    bool flag129 = _CKL != this._CCT || _CKM != this._CCU;
                                     if (!flag129)
                                     {
                                         break;
                                     }
                                 }
                             }
-                            bool flag130 = Event.current.type == 8;
+                            bool flag130 = (int)Event.current.type == 8;
                             if (flag130)
                             {
                                 bool flag131 = this.CanEdit();
                                 if (flag131)
                                 {
-                                    this.AINBDLCEICDFCIMEOFNOEFAHLLPOHEECOPNE = this.GetLineAt(this._AFS.y);
-                                    this.LPAPJBHKOMFLPDIFIIJEHJBMOEFHHAIBGJBF = this._AFS.y - this.GetLineOffset(this.AINBDLCEICDFCIMEOFNOEFAHLLPOHEECOPNE);
+                                    this._CCT = this.GetLineAt(this._AFS.y);
+                                    this._CCU = this._AFS.y - this.GetLineOffset(this._CCT);
                                 }
                             }
                             else
                             {
-                                GUI.Box(this._AFO, GUIContent.none, this._ABT.MNAINPPJCJGPLHBFJICPBAPKHGGPKHFKGHKI);
-                                bool flag132 = this.ONLNKGAOOFOBMBIEIDHCODGLAIFOEPJMMHGA != null && this.DAOLEHELIBAIPNAPOFMDOLIAOEHCLFOGLHGI != Vector2.zero;
+                                GUI.Box(this._AFO, GUIContent.none, this._ABT._CEK);
+                                bool flag132 = this._CDJ != null && this._CDI != Vector2.zero;
                                 if (flag132)
                                 {
-                                    this.ONLNKGAOOFOBMBIEIDHCODGLAIFOEPJMMHGA.mousePosition -= this._AFS;
-                                    this._AFS += this.DAOLEHELIBAIPNAPOFMDOLIAOEHCLFOGLHGI;
-                                    this.AINBDLCEICDFCIMEOFNOEFAHLLPOHEECOPNE = this.GetLineAt(this._AFS.y);
-                                    this.LPAPJBHKOMFLPDIFIIJEHJBMOEFHHAIBGJBF = this._AFS.y - this.GetLineOffset(this.AINBDLCEICDFCIMEOFNOEFAHLLPOHEECOPNE);
-                                    num7 = (this.BOPCDIIIAACDAILGPOFHGPKBBOLAIFBDFADO ? this.AINBDLCEICDFCIMEOFNOEFAHLLPOHEECOPNE : Math.Max(0, (int)(this._AFS.y / this._AEY().y) - 1));
-                                    num8 = (this.BOPCDIIIAACDAILGPOFHGPKBBOLAIFBDFADO ? (1 + this.GetLineAt(this._AFS.y + this._AFO.height)) : ((this._AFO.height > 0f) ? (num7 + 2 + (int)(this._AFO.height / this._AEY().y)) : ((int)((float)Screen.height / EditorGUIUtility.pixelsPerPoint / this._AEY().y))));
+                                    this._CDJ.mousePosition -= this._AFS;
+                                    this._AFS += this._CDI;
+                                    this._CCT = this.GetLineAt(this._AFS.y);
+                                    this._CCU = this._AFS.y - this.GetLineOffset(this._CCT);
+                                    num7 = (this._CCH ? this._CCT : Math.Max(0, (int)(this._AFS.y / this._AEY().y) - 1));
+                                    num8 = (this._CCH ? (1 + this.GetLineAt(this._AFS.y + this._AFO.height)) : ((this._AFO.height > 0f) ? (num7 + 2 + (int)(this._AFO.height / this._AEY().y)) : ((int)((float)Screen.height / EditorGUIUtility.pixelsPerPoint / this._AEY().y))));
                                     bool flag133 = num8 > this._ABQ._AQQ.Length;
                                     if (flag133)
                                     {
@@ -13361,70 +13348,69 @@ namespace AHO
                                         num7 = Mathf.Max(0, Mathf.Min(num7, num8 - (int)(this._AFO.height / this._AEY().y)));
                                     }
                                 }
-                                bool flag134 = !this.FCDDEENLBDFBMKEFLKIKPCKPAAGBJLEPHCHC;
+                                bool flag134 = !this._CKN;
                                 if (flag134)
                                 {
-                                    this.FCDDEENLBDFBMKEFLKIKPCKPAAGBJLEPHCHC = true;
-                                    this.OKJELGDKOEAMANJFODNINLMCPLBNCFHKDNNE = this._AFS;
-                                    this.EMPLHHGIPJCGEICPFEHNLAIMLHOHKPNCGCCO = Vector2.zero;
-                                    this.NJLKIOECLMPLPCIEOLCBGKJBLDPMHBCHJBJN = default(DateTime);
+                                    this._CKN = true;
+                                    this._CIV = this._AFS;
+                                    this._CKO = Vector2.zero;
+                                    this._CKP = default(DateTime);
                                 }
-                                bool flag135 = float.IsNaN(this.OKJELGDKOEAMANJFODNINLMCPLBNCFHKDNNE.x) || float.IsNaN(this.OKJELGDKOEAMANJFODNINLMCPLBNCFHKDNNE.y);
+                                bool flag135 = float.IsNaN(this._CIV.x) || float.IsNaN(this._CIV.y);
                                 if (flag135)
                                 {
-                                    this.OKJELGDKOEAMANJFODNINLMCPLBNCFHKDNNE = this._AFS;
-                                    this.EMPLHHGIPJCGEICPFEHNLAIMLHOHKPNCGCCO = Vector2.zero;
-                                    this.NJLKIOECLMPLPCIEOLCBGKJBLDPMHBCHJBJN = default(DateTime);
-                                    bool flag136 = float.IsNaN(this.OKJELGDKOEAMANJFODNINLMCPLBNCFHKDNNE.x) || float.IsNaN(this.OKJELGDKOEAMANJFODNINLMCPLBNCFHKDNNE.y);
+                                    this._CIV = this._AFS;
+                                    this._CKO = Vector2.zero;
+                                    this._CKP = default(DateTime);
+                                    bool flag136 = float.IsNaN(this._CIV.x) || float.IsNaN(this._CIV.y);
                                     if (flag136)
                                     {
-                                        this.FCDDEENLBDFBMKEFLKIKPCKPAAGBJLEPHCHC = false;
+                                        this._CKN = false;
                                     }
                                 }
-                                bool flag137 = Event.current.type == 6 && this._AFO.Contains(Event.current.mousePosition);
-                                bool flag138 = !this.BOPCDIIIAACDAILGPOFHGPKBBOLAIFBDFADO && flag137 && Event.current.shift;
+                                bool flag137 = (int)Event.current.type == 6 && this._AFO.Contains(Event.current.mousePosition);
+                                bool flag138 = !this._CCH && flag137 && Event.current.shift;
                                 if (flag138)
                                 {
                                     Event current = Event.current;
                                     current.delta = new Vector2(current.delta.y, current.delta.x);
                                     Event.current = current;
                                 }
-                                bool flag139 = !this.BOPCDIIIAACDAILGPOFHGPKBBOLAIFBDFADO && flag137;
+                                bool flag139 = !this._CCH && flag137;
                                 if (flag139)
                                 {
-                                    this._AFS.x = Mathf.Clamp(this._AFS.x + Event.current.delta.x * this._AEY().y, 0f, this.JOOAGLFAONABMOABLNMAKLBBGDJOFNMGFBOB.width - this._ALM.width);
-                                    this._AFS.y = Mathf.Clamp(this._AFS.y + Event.current.delta.y * this._AEY().y, 0f, this.JOOAGLFAONABMOABLNMAKLBBGDJOFNMGFBOB.height - this._ALM.height);
+                                    this._AFS.x = Mathf.Clamp(this._AFS.x + Event.current.delta.x * this._AEY().y, 0f, this._CKF.width - this._ALM.width);
+                                    this._AFS.y = Mathf.Clamp(this._AFS.y + Event.current.delta.y * this._AEY().y, 0f, this._CKF.height - this._ALM.height);
                                     Event.current.Use();
-                                    this.AINBDLCEICDFCIMEOFNOEFAHLLPOHEECOPNE = this.GetLineAt(this._AFS.y);
-                                    this.LPAPJBHKOMFLPDIFIIJEHJBMOEFHHAIBGJBF = this._AFS.y - this.GetLineOffset(this.AINBDLCEICDFCIMEOFNOEFAHLLPOHEECOPNE);
+                                    this._CCT = this.GetLineAt(this._AFS.y);
+                                    this._CCU = this._AFS.y - this.GetLineOffset(this._CCT);
                                 }
-                                bool flag140 = _bg8._BBE && !_bi2.JKLAPMECMLAAJBICDAKNMBFEMBLIJGBBDGCM && !flag137;
+                                bool flag140 = _bg8._BBE && !_bi2._CIM && !flag137;
                                 if (flag140)
                                 {
-                                    bool flag141 = Event.current.type == 7;
+                                    bool flag141 = (int)Event.current.type == 7;
                                     if (flag141)
                                     {
-                                        float num16 = Mathf.Clamp01((float)(_bi2._ATN - this.NJLKIOECLMPLPCIEOLCBGKJBLDPMHBCHJBJN).TotalSeconds);
-                                        this.NJLKIOECLMPLPCIEOLCBGKJBLDPMHBCHJBJN = _bi2._ATN;
-                                        bool flag142 = this.OKJELGDKOEAMANJFODNINLMCPLBNCFHKDNNE != this._AFS;
+                                        float num16 = Mathf.Clamp01((float)(_bi2._ATN - this._CKP).TotalSeconds);
+                                        this._CKP = _bi2._ATN;
+                                        bool flag142 = this._CIV != this._AFS;
                                         if (flag142)
                                         {
-                                            this.OKJELGDKOEAMANJFODNINLMCPLBNCFHKDNNE.x = Mathf.SmoothDamp(this.OKJELGDKOEAMANJFODNINLMCPLBNCFHKDNNE.x, this._AFS.x, ref this.EMPLHHGIPJCGEICPFEHNLAIMLHOHKPNCGCCO.x, 0.05f, float.PositiveInfinity, num16);
-                                            this.OKJELGDKOEAMANJFODNINLMCPLBNCFHKDNNE.y = Mathf.SmoothDamp(this.OKJELGDKOEAMANJFODNINLMCPLBNCFHKDNNE.y, this._AFS.y, ref this.EMPLHHGIPJCGEICPFEHNLAIMLHOHKPNCGCCO.y, 0.05f, float.PositiveInfinity, num16);
+                                            this._CIV.x = Mathf.SmoothDamp(this._CIV.x, this._AFS.x, ref this._CKO.x, 0.05f, float.PositiveInfinity, num16);
+                                            this._CIV.y = Mathf.SmoothDamp(this._CIV.y, this._AFS.y, ref this._CKO.y, 0.05f, float.PositiveInfinity, num16);
                                         }
                                     }
                                 }
                                 else
                                 {
-                                    this.OKJELGDKOEAMANJFODNINLMCPLBNCFHKDNNE = this._AFS;
+                                    this._CIV = this._AFS;
                                 }
                                 Vector2 vector3;
                                 for (; ; )
                                 {
-                                    Vector2 vector2;
-                                    vector2..ctor((float)((int)this.OKJELGDKOEAMANJFODNINLMCPLBNCFHKDNNE.x), (float)((int)this.OKJELGDKOEAMANJFODNINLMCPLBNCFHKDNNE.y));
-                                    Rect rect2 = (this.BOPCDIIIAACDAILGPOFHGPKBBOLAIFBDFADO ? new Rect(this.JOOAGLFAONABMOABLNMAKLBBGDJOFNMGFBOB.x, this.JOOAGLFAONABMOABLNMAKLBBGDJOFNMGFBOB.y, 1f, num6) : this.JOOAGLFAONABMOABLNMAKLBBGDJOFNMGFBOB);
-                                    rect2..ctor(rect2.x, rect2.y, Mathf.Ceil(rect2.width), Mathf.Ceil(rect2.height));
+                                    Vector2 vector2 = new vector2((float)((int)this._CIV.x), (float)((int)this._CIV.y));
+                                    Rect rect2 = (this._CCH ? new Rect(this._CKF.x, this._CKF.y, 1f, num6) : this._CKF);
+                                    rect2 = new Rect(rect2.x, rect2.y, Mathf.Ceil(rect2.width), Mathf.Ceil(rect2.height));
                                     vector3 = _bi2.BeginScrollView(this._AFO, vector2, rect2);
                                     bool flag143 = this.CanEdit() && (this._AFS != vector3 || flag137);
                                     if (!flag143)
@@ -13437,26 +13423,26 @@ namespace AHO
                                         flag137 = false;
                                         Vector2 vector4 = vector3 - vector2;
                                         this._AFS += vector4;
-                                        this.AINBDLCEICDFCIMEOFNOEFAHLLPOHEECOPNE = this.GetLineAt(vector3.y);
-                                        this.LPAPJBHKOMFLPDIFIIJEHJBMOEFHHAIBGJBF = vector3.y - this.GetLineOffset(this.AINBDLCEICDFCIMEOFNOEFAHLLPOHEECOPNE);
+                                        this._CCT = this.GetLineAt(vector3.y);
+                                        this._CCU = vector3.y - this.GetLineOffset(this._CCT);
                                         _bi2.EndScrollView(true);
                                     }
                                     else
                                     {
-                                        bool flag145 = !_bi2.JKLAPMECMLAAJBICDAKNMBFEMBLIJGBBDGCM && vector2 != vector3;
+                                        bool flag145 = !_bi2._CIM && vector2 != vector3;
                                         if (!flag145)
                                         {
                                             break;
                                         }
                                         this._AFS = vector3;
-                                        this.AINBDLCEICDFCIMEOFNOEFAHLLPOHEECOPNE = this.GetLineAt(vector3.y);
-                                        this.LPAPJBHKOMFLPDIFIIJEHJBMOEFHHAIBGJBF = vector3.y - this.GetLineOffset(this.AINBDLCEICDFCIMEOFNOEFAHLLPOHEECOPNE);
+                                        this._CCT = this.GetLineAt(vector3.y);
+                                        this._CCU = vector3.y - this.GetLineOffset(this._CCT);
                                         _bi2.EndScrollView(true);
                                     }
                                 }
                                 int lineAt = this.GetLineAt(vector3.y);
-                                num7 = (this.BOPCDIIIAACDAILGPOFHGPKBBOLAIFBDFADO ? lineAt : Math.Max(0, (int)(vector3.y / this._AEY().y) - 1));
-                                num8 = (this.BOPCDIIIAACDAILGPOFHGPKBBOLAIFBDFADO ? (1 + this.GetLineAt(vector3.y + this._AFO.height)) : ((this._AFO.height > 0f) ? (num7 + 2 + (int)(this._AFO.height / this._AEY().y)) : ((int)((float)Screen.height / EditorGUIUtility.pixelsPerPoint / this._AEY().y))));
+                                num7 = (this._CCH ? lineAt : Math.Max(0, (int)(vector3.y / this._AEY().y) - 1));
+                                num8 = (this._CCH ? (1 + this.GetLineAt(vector3.y + this._AFO.height)) : ((this._AFO.height > 0f) ? (num7 + 2 + (int)(this._AFO.height / this._AEY().y)) : ((int)((float)Screen.height / EditorGUIUtility.pixelsPerPoint / this._AEY().y))));
                                 bool flag146 = num8 > this._ABQ._AQQ.Length;
                                 if (flag146)
                                 {
@@ -13465,70 +13451,70 @@ namespace AHO
                                 }
                                 goto IL_30FF;
                             IL_30F5:
-                                this.OKJELGDKOEAMANJFODNINLMCPLBNCFHKDNNE = vector3;
+                                this._CIV = vector3;
                             IL_30FF:
                                 bool flag147 = this._ABQ.FLOg.Count == 0;
                                 if (flag147)
                                 {
                                     _bi2.EndScrollView(true);
-                                    _bi2.JKLAPMECMLAAJBICDAKNMBFEMBLIJGBBDGCM = false;
+                                    _bi2._CIM = false;
                                 }
                                 else
                                 {
-                                    bool flag148 = Event.current.rawType == 1 && GUIUtility.hotControl == _bi2.BLPCHGOBMBLGEAPDFHEIFAEBPBCJAFEONIIC;
+                                    bool flag148 = (int)Event.current.rawType == 1 && GUIUtility.hotControl == _bi2._CIQ;
                                     if (flag148)
                                     {
-                                        this.ProcessEditorMouse(this.JPPFMECFJCDOMNMEIPPNOEIICFJPJCAFJLMK, Event.current);
+                                        this.ProcessEditorMouse(this._CGA, Event.current);
                                     }
                                     else
                                     {
-                                        bool flag149 = this.ONLNKGAOOFOBMBIEIDHCODGLAIFOEPJMMHGA != null && this.DAOLEHELIBAIPNAPOFMDOLIAOEHCLFOGLHGI != Vector2.zero;
+                                        bool flag149 = this._CDJ != null && this._CDI != Vector2.zero;
                                         if (flag149)
                                         {
-                                            this.ONLNKGAOOFOBMBIEIDHCODGLAIFOEPJMMHGA.mousePosition += this._AFS;
-                                            this.DAOLEHELIBAIPNAPOFMDOLIAOEHCLFOGLHGI = Vector2.zero;
+                                            this._CDJ.mousePosition += this._AFS;
+                                            this._CDI = Vector2.zero;
                                         }
-                                        bool poaahkkefhafhhjdhlcdiokhakghnkokppfg = this.POAAHKKEFHAFHHJDHLCDIOKHAKGHNKOKPPFG;
-                                        if (poaahkkefhafhhjdhlcdiokhakghnkokppfg)
+                                        bool _CKQ = this._CCI;
+                                        if (_CKQ)
                                         {
-                                            this.POAAHKKEFHAFHHJDHLCDIOKHAKGHNKOKPPFG = false;
+                                            this._CCI = false;
                                             this._ATM = _bi2._ATN;
-                                            GUIUtility.keyboardControl = _bi2.BLPCHGOBMBLGEAPDFHEIFAEBPBCJAFEONIIC;
+                                            GUIUtility.keyboardControl = _bi2._CIQ;
                                             this.Repaint();
                                         }
-                                        this.IOPEBNDLLLDJELEBEIKHKAGNHKBDPKFIAEEL(GUIUtility.keyboardControl == _bi2.BLPCHGOBMBLGEAPDFHEIFAEBPBCJAFEONIIC);
-                                        bool flag150 = this.GJDLGEEKCBIHCFECOIOFLIFNOCPOAPGNHJMK() && Event.current.rawType != 1;
+                                        this._CJO(GUIUtility.keyboardControl == _bi2._CIQ);
+                                        bool flag150 = this._CDN() && (int)Event.current.rawType != 1;
                                         if (flag150)
                                         {
                                             EditorWindow focusedWindow = EditorWindow.focusedWindow;
                                             bool flag151 = focusedWindow == null;
                                             if (flag151)
                                             {
-                                                this.IOPEBNDLLLDJELEBEIKHKAGNHKBDPKFIAEEL(false);
+                                                this._CJO(false);
                                             }
                                             else
                                             {
-                                                bool flag152 = focusedWindow != this.EEJFFFONEBHEFJKECHMCKDFAFABLNECBNBDO;
+                                                bool flag152 = focusedWindow != this._CBB;
                                                 if (flag152)
                                                 {
-                                                    this.IOPEBNDLLLDJELEBEIKHKAGNHKBDPKFIAEEL(focusedWindow == this._ABJ());
+                                                    this._CJO(focusedWindow == this._ABJ());
                                                 }
                                             }
                                         }
-                                        bool flag153 = this.GJDLGEEKCBIHCFECOIOFLIFNOCPOAPGNHJMK();
+                                        bool flag153 = this._CDN();
                                         if (flag153)
                                         {
                                             Input.imeCompositionMode = 1;
                                         }
-                                        bool flag154 = Event.current.type != 8;
+                                        bool flag154 = (int)Event.current.type != 8;
                                         if (flag154)
                                         {
-                                            this._ALM.x = this._AFS.x + this.JPPFMECFJCDOMNMEIPPNOEIICFJPJCAFJLMK;
+                                            this._ALM.x = this._AFS.x + this._CGA;
                                             this._ALM.y = this._AFS.y;
-                                            this._ALM.width = this._AFO.width - this.JPPFMECFJCDOMNMEIPPNOEIICFJPJCAFJLMK - 4f - this.MFHBMAGLJHOKEHCENMEKNBKPGBPBEECMDAKC;
+                                            this._ALM.width = this._AFO.width - this._CGA - 4f - this._CKI;
                                             this._ALM.height = this._AFO.height - 4f;
-                                            bool flag155 = !this.BOPCDIIIAACDAILGPOFHGPKBBOLAIFBDFADO && this.JOOAGLFAONABMOABLNMAKLBBGDJOFNMGFBOB.width - 4f - this.JPPFMECFJCDOMNMEIPPNOEIICFJPJCAFJLMK - this.MFHBMAGLJHOKEHCENMEKNBKPGBPBEECMDAKC > this._ALM.width;
-                                            bool flag156 = (this.BOPCDIIIAACDAILGPOFHGPKBBOLAIFBDFADO ? num6 : this.JOOAGLFAONABMOABLNMAKLBBGDJOFNMGFBOB.height) - 4f > this._ALM.height;
+                                            bool flag155 = !this._CCH && this._CKF.width - 4f - this._CGA - this._CKI > this._ALM.width;
+                                            bool flag156 = (this._CCH ? num6 : this._CKF.height) - 4f > this._ALM.height;
                                             bool flag157 = flag155 && flag156;
                                             if (flag157)
                                             {
@@ -13541,7 +13527,7 @@ namespace AHO
                                                 if (flag158)
                                                 {
                                                     this._ALM.height = this._ALM.height - 15f;
-                                                    flag156 = this.JOOAGLFAONABMOABLNMAKLBBGDJOFNMGFBOB.height - 4f > this._ALM.height;
+                                                    flag156 = this._CKF.height - 4f > this._ALM.height;
                                                     bool flag159 = flag156;
                                                     if (flag159)
                                                     {
@@ -13554,7 +13540,7 @@ namespace AHO
                                                     if (flag160)
                                                     {
                                                         this._ALM.width = this._ALM.width - 15f;
-                                                        flag155 = this.JOOAGLFAONABMOABLNMAKLBBGDJOFNMGFBOB.width - 4f - this.JPPFMECFJCDOMNMEIPPNOEIICFJPJCAFJLMK - this.MFHBMAGLJHOKEHCENMEKNBKPGBPBEECMDAKC > this._ALM.width;
+                                                        flag155 = this._CKF.width - 4f - this._CGA - this._CKI > this._ALM.width;
                                                         bool flag161 = flag155;
                                                         if (flag161)
                                                         {
@@ -13563,39 +13549,38 @@ namespace AHO
                                                     }
                                                 }
                                             }
-                                            this.LLIDNFNLGHEFNODHJHAAIMNPHDDIHJEJMKCH = this._ALM;
-                                            this.LLIDNFNLGHEFNODHJHAAIMNPHDDIHJEJMKCH.xMin = this.LLIDNFNLGHEFNODHJHAAIMNPHDDIHJEJMKCH.xMin + -4f;
-                                            this.LLIDNFNLGHEFNODHJHAAIMNPHDDIHJEJMKCH.yMin = this.LLIDNFNLGHEFNODHJHAAIMNPHDDIHJEJMKCH.yMin + -4f;
-                                            this.LLIDNFNLGHEFNODHJHAAIMNPHDDIHJEJMKCH.yMax = this.LLIDNFNLGHEFNODHJHAAIMNPHDDIHJEJMKCH.yMax + 4f;
-                                            this._ALM.xMin = Mathf.Ceil((this._ALM.x - 1f - this.JPPFMECFJCDOMNMEIPPNOEIICFJPJCAFJLMK) / this._AEY().x) * this._AEY().x + 0f + this.JPPFMECFJCDOMNMEIPPNOEIICFJPJCAFJLMK;
+                                            this._CJE = this._ALM;
+                                            this._CJE.xMin = this._CJE.xMin + -4f;
+                                            this._CJE.yMin = this._CJE.yMin + -4f;
+                                            this._CJE.yMax = this._CJE.yMax + 4f;
+                                            this._ALM.xMin = Mathf.Ceil((this._ALM.x - 1f - this._CGA) / this._AEY().x) * this._AEY().x + 0f + this._CGA;
                                             this._ALM.width = Mathf.Floor(this._ALM.width / this._AEY().x) * this._AEY().x;
                                             this._ALM.yMin = Mathf.Ceil(this._ALM.y / this._AEY().y) * this._AEY().y;
                                             this._ALM.height = Mathf.Floor(this._ALM.height / this._AEY().y) * this._AEY().y;
                                         }
-                                        this.BBNCFBJBOKMILIDIMJKJKEHCDAFMDFNDNGGI = this.BOPCDIIIAACDAILGPOFHGPKBBOLAIFBDFADO && Event.current.type == 7 && (this.KCNPCIEKAJFBIOBEGEOCHIAELCCBKBFBCADM.width != this._ALM.width || _bg8._ASA != this.ANAGDFICEFNAOCIGDFJALOOGGMBIDBLNPPON);
-                                        bool flag162 = Event.current.type == 7;
+                                        this._CFY = this._CCH && (int)Event.current.type == 7 && (this._CJX.width != this._ALM.width || _bg8._ASA != this._CKZ);
+                                        bool flag162 = (int)Event.current.type == 7;
                                         if (flag162)
                                         {
                                             Rect rect3 = default(Rect);
-                                            bool flag163 = (_bg8._AZY || _bg8._AZX) && !this.BODJHGOIEFMIPPGPLNBAIBNIEFNGEJODGHFL && Event.current.type == 7 && this._ABH._ABI >= num7 && this._ABH._ABI < num8 && !this._ARV();
+                                            bool flag163 = (_bg8._AZY || _bg8._AZX) && !this._CBA && (int)Event.current.type == 7 && this._ABH._ABI >= num7 && this._ABH._ABI < num8 && !this._ARV();
                                             if (flag163)
                                             {
                                                 int num17;
                                                 int num18;
                                                 this.BufferToViewPosition(this._ABH, out num17, out num18);
                                                 float num19 = this._AEY().y * (float)num17 + this.GetLineOffset(this._ABH._ABI);
-                                                Rect rect4;
-                                                rect4..ctor(this.JPPFMECFJCDOMNMEIPPNOEIICFJPJCAFJLMK - 4f + this.OKJELGDKOEAMANJFODNINLMCPLBNCFHKDNNE.x, num19, this._ALM.width + this._AEY().x + 4f, 1f);
+                                                Rect rect4 = new Rect(this._CGA - 4f + this._CIV.x, num19, this._ALM.width + this._AEY().x + 4f, 1f);
                                                 bool flag164 = _bg8._AZX;
                                                 if (flag164)
                                                 {
-                                                    GUI.Label(rect4, GUIContent.none, this.GJDLGEEKCBIHCFECOIOFLIFNOCPOAPGNHJMK() ? this._ABT.LMJFOHEICFJKKJDPABNJJMODGIAGGCDCGIDG : this._ABT.MENCECOHFEKPKPJCHBPHPLNADBLKDNLOFBMJ);
+                                                    GUI.Label(rect4, GUIContent.none, this._CDN() ? this._ABT._CFO : this._ABT._CFP);
                                                 }
                                                 rect4.y += this._AEY().y - 1f;
                                                 bool flag165 = _bg8._AZX;
                                                 if (flag165)
                                                 {
-                                                    GUI.Label(rect4, GUIContent.none, this.GJDLGEEKCBIHCFECOIOFLIFNOCPOAPGNHJMK() ? this._ABT.LMJFOHEICFJKKJDPABNJJMODGIAGGCDCGIDG : this._ABT.MENCECOHFEKPKPJCHBPHPLNADBLKDNLOFBMJ);
+                                                    GUI.Label(rect4, GUIContent.none, this._CDN() ? this._ABT._CFO : this._ABT._CFP);
                                                 }
                                                 rect4.y -= this._AEY().y - 2f;
                                                 rect4.height = this._AEY().y - 2f;
@@ -13604,18 +13589,18 @@ namespace AHO
                                                 bool flag166 = _bg8._AZY;
                                                 if (flag166)
                                                 {
-                                                    GUI.Label(rect4, GUIContent.none, this.GJDLGEEKCBIHCFECOIOFLIFNOCPOAPGNHJMK() ? this._ABT.LMJFOHEICFJKKJDPABNJJMODGIAGGCDCGIDG : this._ABT.MENCECOHFEKPKPJCHBPHPLNADBLKDNLOFBMJ);
+                                                    GUI.Label(rect4, GUIContent.none, this._CDN() ? this._ABT._CFO : this._ABT._CFP);
                                                 }
                                                 GUI.color = color2;
                                             }
-                                            bool flag167 = this._ABQ._ASJ == this.KEGJHDFHDLGNNJHGDCGACGKHOGLEMOAPJFAH && this.LPDHPJNAHLLADJCFMGCEECABJMPHIPPIFMPC;
+                                            bool flag167 = this._ABQ._ASJ == this._CHL && this._CIG;
                                             if (flag167)
                                             {
-                                                bool pnbfhjbpgljpbommohfihhjonmjlbkbgffll = this.PNBFHJBPGLJPBOMMOHFIHHJONMJLBKBGFFLL;
-                                                this.PNBFHJBPGLJPBOMMOHFIHHJONMJLBKBGFFLL = true;
-                                                int length2 = this.FEDKNBJPGLNNBLCBJGPAICAGEHEAFOEDMJOD.Length;
+                                                bool _CKR = this._CDL;
+                                                this._CDL = true;
+                                                int length2 = this._CCR.Length;
                                                 rect3.height = this._AEY().y;
-                                                int num20 = this.DFBJCNCLBOHCOOEENDPAPNJEPKICJHFHLHFH.BinarySearch(new GCE._AFA
+                                                int num20 = this._CHN.BinarySearch(new GCE._AFA
                                                 {
                                                     _ABI = num7,
                                                     _AEU = -1
@@ -13625,9 +13610,9 @@ namespace AHO
                                                 {
                                                     num20 = ~num20;
                                                 }
-                                                for (int j = num20; j < this.DFBJCNCLBOHCOOEENDPAPNJEPKICJHFHLHFH.Count; j++)
+                                                for (int j = num20; j < this._CHN.Count; j++)
                                                 {
-                                                    GCE._AFA _ATD4 = this.DFBJCNCLBOHCOOEENDPAPNJEPKICJHFHLHFH[j];
+                                                    GCE._AFA _ATD4 = this._CHN[j];
                                                     bool flag169 = _ATD4._ABI >= num7;
                                                     if (flag169)
                                                     {
@@ -13636,12 +13621,12 @@ namespace AHO
                                                         {
                                                             break;
                                                         }
-                                                        this.DrawSelectionRectCharIndex(_ATD4._ABI, _ATD4._AEU, length2, false, this._ABT.EEHEIDPKDPFECCNEMEAOEDHDMOCMLHIMGBIO);
+                                                        this.DrawSelectionRectCharIndex(_ATD4._ABI, _ATD4._AEU, length2, false, this._ABT._CEL);
                                                     }
                                                 }
-                                                this.PNBFHJBPGLJPBOMMOHFIHHJONMJLBKBGFFLL = pnbfhjbpgljpbommohfihhjonmjlbkbgffll;
+                                                this._CDL = _CKR;
                                             }
-                                            bool flag171 = !this._ARV() && this.BODJHGOIEFMIPPGPLNBAIBNIEFNGEJODGHFL;
+                                            bool flag171 = !this._ARV() && this._CBA;
                                             if (flag171)
                                             {
                                                 bool flag172 = this._ATW()._ABI == this._ABH._ABI;
@@ -13677,11 +13662,11 @@ namespace AHO
                                                 }
                                             }
                                             bool flag176;
-                                            if (this.PLNPCENGAKFOMJMLMFIMLBMEBCMJAICLKBCC > 0f)
+                                            if (this._CGY > 0f)
                                             {
-                                                DateTime ceioidhacnpfgacjaepbfokgbdkajdnjboho = this.CEIOIDHACNPFGACJAEPBFOKGBDKAJDNJBOHO;
+                                                DateTime _CKS = this._CHD;
                                                 DateTime dateTime = default(DateTime);
-                                                flag176 = ceioidhacnpfgacjaepbfokgbdkajdnjboho != dateTime;
+                                                flag176 = _CKS != dateTime;
                                             }
                                             else
                                             {
@@ -13690,19 +13675,19 @@ namespace AHO
                                             bool flag177 = flag176;
                                             if (flag177)
                                             {
-                                                this.PLNPCENGAKFOMJMLMFIMLBMEBCMJAICLKBCC = 1f - (float)(_bi2._ATN - this.CEIOIDHACNPFGACJAEPBFOKGBDKAJDNJBOHO).TotalSeconds * 0.5f;
-                                                bool flag178 = this.PLNPCENGAKFOMJMLMFIMLBMEBCMJAICLKBCC < 0f;
+                                                this._CGY = 1f - (float)(_bi2._ATN - this._CHD).TotalSeconds * 0.5f;
+                                                bool flag178 = this._CGY < 0f;
                                                 if (flag178)
                                                 {
-                                                    this.PLNPCENGAKFOMJMLMFIMLBMEBCMJAICLKBCC = 0f;
-                                                    this.CEIOIDHACNPFGACJAEPBFOKGBDKAJDNJBOHO = default(DateTime);
+                                                    this._CGY = 0f;
+                                                    this._CHD = default(DateTime);
                                                 }
                                                 int num23;
                                                 int num24;
                                                 this.BufferToViewPosition(this._ABH, out num23, out num24);
-                                                Rect ekiiiobhdbpddbjfcmeghbhlmoegccodhdff = this.EKIIIOBHDBPDDBJFCMEGHBHLMOEGCCODHDFF;
-                                                ekiiiobhdbpddbjfcmeghbhlmoegccodhdff.y = this._AEY().y * (float)num23 + this.GetLineOffset(this._ABH._ABI);
-                                                this.DrawPing(this.JPPFMECFJCDOMNMEIPPNOEIICFJPJCAFJLMK, ekiiiobhdbpddbjfcmeghbhlmoegccodhdff, true);
+                                                Rect _CKT = this._CHE;
+                                                _CKT.y = this._AEY().y * (float)num23 + this.GetLineOffset(this._ABH._ABI);
+                                                this.DrawPing(this._CGA, _CKT, true);
                                             }
                                         }
                                         SyntaxToken syntaxToken2 = null;
@@ -13722,7 +13707,7 @@ namespace AHO
                                             }
                                             else
                                             {
-                                                rect5.x = this.JPPFMECFJCDOMNMEIPPNOEIICFJPJCAFJLMK;
+                                                rect5.x = this._CGA;
                                                 rect5.y += this._AEY().y;
                                                 GCE.PHFG _AUB = this._ABQ._AQQ[l];
                                                 int num25 = 0;
@@ -13753,11 +13738,10 @@ namespace AHO
                                                         bool flag184 = syntaxToken3.tokenKind == SyntaxToken.Kind.Missing;
                                                         if (flag184)
                                                         {
-                                                            bool flag185 = Event.current.type == 7;
+                                                            bool flag185 = (int)Event.current.type == 7;
                                                             if (flag185)
                                                             {
-                                                                Rect rect6;
-                                                                rect6..ctor(rect5.xMax, rect5.yMin, this._AEY().x * 2f, this._AEY().y);
+                                                                Rect rect6 = new Rect(rect5.xMax, rect5.yMin, this._AEY().x * 2f, this._AEY().y);
                                                                 _bi2.DrawWavyUnderline(rect6, new Color(1f, 0f, 0f, 0.8f));
                                                             }
                                                         }
@@ -13775,15 +13759,15 @@ namespace AHO
                                                                 {
                                                                     string text10 = syntaxToken3.text.Substring(n, num30);
                                                                     num25 += num30;
-                                                                    rect5.width = this.JPPFMECFJCDOMNMEIPPNOEIICFJPJCAFJLMK + this.GetCharXOffset(num25, l, num28) - rect5.x;
+                                                                    rect5.width = this._CGA + this.GetCharXOffset(num25, l, num28) - rect5.x;
                                                                     syntaxToken3.style = this.GetTokenStyle(syntaxToken3);
-                                                                    bool flag187 = syntaxToken3.style == this._ABT.MLINBOOFJJFOOJDFIODGPBCGFAFGFGHIINAK || syntaxToken3.style == this._ABT.LPMHKIAKCIJCOALOPOKIGFPOBAHPLGHMDGJE;
+                                                                    bool flag187 = syntaxToken3.style == this._ABT._CEM || syntaxToken3.style == this._ABT._CEN;
                                                                     if (flag187)
                                                                     {
                                                                         bool flag188 = GUI.Button(rect5, text10, syntaxToken3.style);
                                                                         if (flag188)
                                                                         {
-                                                                            bool flag189 = syntaxToken3.style == this._ABT.MLINBOOFJJFOOJDFIODGPBCGFAFGFGHIINAK;
+                                                                            bool flag189 = syntaxToken3.style == this._ABT._CEM;
                                                                             if (flag189)
                                                                             {
                                                                                 Application.OpenURL(syntaxToken3.text);
@@ -13793,21 +13777,21 @@ namespace AHO
                                                                                 Application.OpenURL("mailto:" + syntaxToken3.text);
                                                                             }
                                                                         }
-                                                                        bool flag190 = Event.current.type == 7;
+                                                                        bool flag190 = (int)Event.current.type == 7;
                                                                         if (flag190)
                                                                         {
-                                                                            EditorGUIUtility.AddCursorRect(rect5, 4);
+                                                                            EditorGUIUtility.AddCursorRect(rect5, (MouseCursor)4);
                                                                         }
                                                                     }
                                                                     else
                                                                     {
-                                                                        bool flag191 = !this.BODJHGOIEFMIPPGPLNBAIBNIEFNGEJODGHFL && this.PLNPCENGAKFOMJMLMFIMLBMEBCMJAICLKBCC == 0f && _bg8._BAG;
+                                                                        bool flag191 = !this._CBA && this._CGY == 0f && _bg8._BAG;
                                                                         if (flag191)
                                                                         {
-                                                                            bool flag192 = this.EPLFFMMBLDBGHFONANEPOMGLDJEBDGHFEKCI != null;
+                                                                            bool flag192 = this._CDP != null;
                                                                             if (flag192)
                                                                             {
-                                                                                bool flag193 = syntaxToken3.OOME != null && syntaxToken3.OOME._AAB() != null && syntaxToken3.OOME._AAB().GetGenericSymbol() == this.EPLFFMMBLDBGHFONANEPOMGLDJEBDGHFEKCI;
+                                                                                bool flag193 = syntaxToken3.OOME != null && syntaxToken3.OOME._AAB() != null && syntaxToken3.OOME._AAB().GetGenericSymbol() == this._CDP;
                                                                                 if (flag193)
                                                                                 {
                                                                                     GUIStyle referenceHighlightStyle = this.GetReferenceHighlightStyle(syntaxToken3);
@@ -13816,10 +13800,10 @@ namespace AHO
                                                                             }
                                                                             else
                                                                             {
-                                                                                bool flag194 = this.ECFNGKOPKNOCJICAIJMDNLOMFCBIADJGGDGH != null;
+                                                                                bool flag194 = this._CDQ != null;
                                                                                 if (flag194)
                                                                                 {
-                                                                                    bool flag195 = syntaxToken3.tokenKind == SyntaxToken.Kind.PreprocessorSymbol && syntaxToken3.text == this.ECFNGKOPKNOCJICAIJMDNLOMFCBIADJGGDGH;
+                                                                                    bool flag195 = syntaxToken3.tokenKind == SyntaxToken.Kind.PreprocessorSymbol && syntaxToken3.text == this._CDQ;
                                                                                     if (flag195)
                                                                                     {
                                                                                         GUIStyle referenceHighlightStyle2 = this.GetReferenceHighlightStyle(syntaxToken3);
@@ -13828,7 +13812,7 @@ namespace AHO
                                                                                 }
                                                                             }
                                                                         }
-                                                                        bool flag196 = Event.current.type == 7;
+                                                                        bool flag196 = (int)Event.current.type == 7;
                                                                         if (flag196)
                                                                         {
                                                                             _bb4.DHBA _AMI = syntaxToken3.OOME;
@@ -13863,7 +13847,7 @@ namespace AHO
                                                                                     break;
                                                                                 }
                                                                                 text11 = text11.Substring(num31);
-                                                                                rect5.xMin = this.JPPFMECFJCDOMNMEIPPNOEIICFJPJCAFJLMK + this.GetCharXOffset(num25 - text11.Length, l, num28);
+                                                                                rect5.xMin = this._CGA + this.GetCharXOffset(num25 - text11.Length, l, num28);
                                                                             }
                                                                         }
                                                                     }
@@ -13873,7 +13857,7 @@ namespace AHO
                                                                 bool flag201 = n < length3;
                                                                 if (flag201)
                                                                 {
-                                                                    rect5.x = this.JPPFMECFJCDOMNMEIPPNOEIICFJPJCAFJLMK;
+                                                                    rect5.x = this._CGA;
                                                                     rect5.width = 0f;
                                                                     rect5.y += this._AEY().y;
                                                                     num26++;
@@ -13883,34 +13867,32 @@ namespace AHO
                                                         }
                                                     }
                                                 }
-                                                this.HNBKJDKPBPNIOBIGJKDEDOFLENDLKDCOCMAH = Mathf.Ceil(Mathf.Max(this.HNBKJDKPBPNIOBIGJKDEDOFLENDLKDCOCMAH, rect5.xMax));
+                                                this._CKE = Mathf.Ceil(Mathf.Max(this._CKE, rect5.xMax));
                                             }
                                         }
-                                        bool flag202 = Event.current.type == 7;
+                                        bool flag202 = (int)Event.current.type == 7;
                                         if (flag202)
                                         {
-                                            bool flag203 = !this._ARV() && !this.BODJHGOIEFMIPPGPLNBAIBNIEFNGEJODGHFL && this.PLNPCENGAKFOMJMLMFIMLBMEBCMJAICLKBCC == 0f && this.DBCDHOGMLKDLIIGDJKGEMBKDOKBFHBEPOACH < this.AINAPHEFHKPMIMHDICFLJBJPOPICCAJNCCAL && this.DBCDHOGMLKDLIIGDJKGEMBKDOKBFHBEPOACH.line >= 0 && this.DBCDHOGMLKDLIIGDJKGEMBKDOKBFHBEPOACH.line < this._ABQ._AQQ.Length && this.AINAPHEFHKPMIMHDICFLJBJPOPICCAJNCCAL.line >= 0 && this.AINAPHEFHKPMIMHDICFLJBJPOPICCAJNCCAL.line < this._ABQ._AQQ.Length && this.DBCDHOGMLKDLIIGDJKGEMBKDOKBFHBEPOACH.index < this._ABQ._AQQ[this.DBCDHOGMLKDLIIGDJKGEMBKDOKBFHBEPOACH.line].EOIA.Count && this.AINAPHEFHKPMIMHDICFLJBJPOPICCAJNCCAL.index < this._ABQ._AQQ[this.AINAPHEFHKPMIMHDICFLJBJPOPICCAJNCCAL.line].EOIA.Count && this.IsLineVisible(this.DBCDHOGMLKDLIIGDJKGEMBKDOKBFHBEPOACH.line);
+                                            bool flag203 = !this._ARV() && !this._CBA && this._CGY == 0f && this._CFV < this._CFW && this._CFV.line >= 0 && this._CFV.line < this._ABQ._AQQ.Length && this._CFW.line >= 0 && this._CFW.line < this._ABQ._AQQ.Length && this._CFV.index < this._ABQ._AQQ[this._CFV.line].EOIA.Count && this._CFW.index < this._ABQ._AQQ[this._CFW.line].EOIA.Count && this.IsLineVisible(this._CFV.line);
                                             if (flag203)
                                             {
-                                                TextSpan tokenSpan2 = this._ABQ.GetTokenSpan(this.DBCDHOGMLKDLIIGDJKGEMBKDOKBFHBEPOACH.line, this.DBCDHOGMLKDLIIGDJKGEMBKDOKBFHBEPOACH.index);
-                                                TextSpan tokenSpan3 = this._ABQ.GetTokenSpan(this.AINAPHEFHKPMIMHDICFLJBJPOPICCAJNCCAL.line, this.AINAPHEFHKPMIMHDICFLJBJPOPICCAJNCCAL.index);
+                                                TextSpan tokenSpan2 = this._ABQ.GetTokenSpan(this._CFV.line, this._CFV.index);
+                                                TextSpan tokenSpan3 = this._ABQ.GetTokenSpan(this._CFW.line, this._CFW.index);
                                                 Rect textRect = this.GetTextRect(tokenSpan2);
                                                 Rect textRect2 = this.GetTextRect(tokenSpan3);
                                                 char c3 = this._ABQ.FLOg[tokenSpan2.line][tokenSpan2.index];
                                                 char c2 = this._ABQ.FLOg[tokenSpan3.line][tokenSpan3.index];
                                                 int num32 = (int)(c2 - c3);
-                                                GUIStyle guistyle = ((num32 == 1 || num32 == 2) ? this._ABT.EDPELGLOHBEDHHGMAFPGLEMGKFNEHIMBHLBE : this._ABT.CDKDJIHGIELEEDGFLEBKFMAICBICIONFMOMH);
-                                                Rect rect7;
-                                                rect7..ctor(textRect.x - 1f, textRect.yMax, textRect.width + 2f, 1f);
-                                                Rect rect8;
-                                                rect8..ctor(textRect2.x - 1f, textRect2.yMax, textRect2.width + 2f, 1f);
+                                                GUIStyle guistyle = ((num32 == 1 || num32 == 2) ? this._ABT._CFQ : this._ABT._CFR);
+                                                Rect rect7 = new Rect(textRect.x - 1f, textRect.yMax, textRect.width + 2f, 1f);
+                                                Rect rect8 = new Rect(textRect2.x - 1f, textRect2.yMax, textRect2.width + 2f, 1f);
                                                 Color color3 = GUI.color;
                                                 GUI.color = this._ABT._ABV.normal.textColor;
                                                 GUI.DrawTexture(rect7, EditorGUIUtility.whiteTexture);
                                                 GUI.DrawTexture(rect8, EditorGUIUtility.whiteTexture);
                                                 GUI.color = color3;
-                                                SyntaxToken syntaxToken4 = this._ABQ._AQQ[this.DBCDHOGMLKDLIIGDJKGEMBKDOKBFHBEPOACH.line].EOIA[this.DBCDHOGMLKDLIIGDJKGEMBKDOKBFHBEPOACH.index];
-                                                SyntaxToken syntaxToken5 = this._ABQ._AQQ[this.AINAPHEFHKPMIMHDICFLJBJPOPICCAJNCCAL.line].EOIA[this.AINAPHEFHKPMIMHDICFLJBJPOPICCAJNCCAL.index];
+                                                SyntaxToken syntaxToken4 = this._ABQ._AQQ[this._CFV.line].EOIA[this._CFV.index];
+                                                SyntaxToken syntaxToken5 = this._ABQ._AQQ[this._CFW.line].EOIA[this._CFW.index];
                                                 GUI.Label(textRect, GUIContent.none, guistyle);
                                                 GUI.Label(textRect2, GUIContent.none, guistyle);
                                                 GUI.Label(textRect, new GUIContent(syntaxToken4.text), this._ABT._ABV);
@@ -13927,48 +13909,48 @@ namespace AHO
                                                 }
                                             }
                                         }
-                                        bool flag206 = Event.current.type == 10 || Event.current.type == 9;
-                                        bool flag207 = flag206 || Event.current.isMouse || (Event.current.type == 7 && this.FCOMEABJIHMPEJIHMAOBEGODANCJHOFGCDKI);
+                                        bool flag206 = (int)Event.current.type == 10 || (int)Event.current.type == 9;
+                                        bool flag207 = flag206 || Event.current.isMouse || ((int)Event.current.type == 7 && this._CDK);
                                         if (flag207)
                                         {
-                                            this.FCOMEABJIHMPEJIHMAOBEGODANCJHOFGCDKI = this.FCOMEABJIHMPEJIHMAOBEGODANCJHOFGCDKI && !Event.current.isMouse && !flag206;
-                                            Event @event = (this.FCOMEABJIHMPEJIHMAOBEGODANCJHOFGCDKI ? new Event(this.ONLNKGAOOFOBMBIEIDHCODGLAIFOEPJMMHGA) : Event.current);
-                                            bool flag208 = !this.FCOMEABJIHMPEJIHMAOBEGODANCJHOFGCDKI;
+                                            this._CDK = this._CDK && !Event.current.isMouse && !flag206;
+                                            Event @event = (this._CDK ? new Event(this._CDJ) : Event.current);
+                                            bool flag208 = !this._CDK;
                                             if (flag208)
                                             {
-                                                this.ONLNKGAOOFOBMBIEIDHCODGLAIFOEPJMMHGA = new Event(Event.current);
+                                                this._CDJ = new Event(Event.current);
                                             }
-                                            this.FCOMEABJIHMPEJIHMAOBEGODANCJHOFGCDKI = false;
-                                            this.ProcessEditorMouse(this.JPPFMECFJCDOMNMEIPPNOEIICFJPJCAFJLMK, @event);
-                                            bool pnbfhjbpgljpbommohfihhjonmjlbkbgffll2 = this.PNBFHJBPGLJPBOMMOHFIHHJONMJLBKBGFFLL;
-                                            if (pnbfhjbpgljpbommohfihhjonmjlbkbgffll2)
+                                            this._CDK = false;
+                                            this.ProcessEditorMouse(this._CGA, @event);
+                                            bool _CKR2 = this._CDL;
+                                            if (_CKR2)
                                             {
-                                                this.MCGNCIKLJIGDHCHFMOIJFAHKLHHKFFJKAJEA = !this.BOPCDIIIAACDAILGPOFHGPKBBOLAIFBDFADO && this.ONLNKGAOOFOBMBIEIDHCODGLAIFOEPJMMHGA.mousePosition.x < this._ALM.x;
-                                                this.PEGFBNGNMIIMHJHBGGJMIPPGCENEDFKBJIPF = !this.BOPCDIIIAACDAILGPOFHGPKBBOLAIFBDFADO && this.ONLNKGAOOFOBMBIEIDHCODGLAIFOEPJMMHGA.mousePosition.x >= this._ALM.xMax;
-                                                this.DJGNBJKIOLLPFOCBADELJOOKBOBDJDHIFHLC = this.ONLNKGAOOFOBMBIEIDHCODGLAIFOEPJMMHGA.mousePosition.y < this._ALM.y;
-                                                this.ALLEDCEJLCOEBNDPEPFIJNFCIFIDIDNEHKFJ = this.ONLNKGAOOFOBMBIEIDHCODGLAIFOEPJMMHGA.mousePosition.y >= this._ALM.yMax;
+                                                this._CDD = !this._CCH && this._CDJ.mousePosition.x < this._ALM.x;
+                                                this._CDE = !this._CCH && this._CDJ.mousePosition.x >= this._ALM.xMax;
+                                                this._CDF = this._CDJ.mousePosition.y < this._ALM.y;
+                                                this._CDG = this._CDJ.mousePosition.y >= this._ALM.yMax;
                                             }
-                                            bool flag209 = Event.current.type == 12;
+                                            bool flag209 = (int)Event.current.type == 12;
                                             if (flag209)
                                             {
                                                 goto IL_58A9;
                                             }
                                         }
-                                        bool flag210 = this.GJDLGEEKCBIHCFECOIOFLIFNOCPOAPGNHJMK() && Event.current.type == 7 && this.CanEdit();
+                                        bool flag210 = this._CDN() && (int)Event.current.type == 7 && this.CanEdit();
                                         if (flag210)
                                         {
-                                            GCE._AFA _ATD7 = ((this.PNBFHJBPGLJPBOMMOHFIHHJONMJLBKBGFFLL && this.CIOLLBEJAOJGGEDHBAFDIIEPHPNCCNJPFNCI) ? this.GDCGAOFJJOCBOKONDOHJMAFAGPHDOEKIKLND : this._ABH);
+                                            GCE._AFA _ATD7 = ((this._CDL && this._CDM) ? this._CJF : this._ABH);
                                             float num33 = (float)(_bi2._ATN - this._ATM).TotalSeconds % 1f;
-                                            this.PJJNCLILMNNHAGCFMAEOAHDAGGAKDOIMCAEI = num33 < 0.5f;
-                                            if (!this.PJJNCLILMNNHAGCFMAEOAHDAGGAKDOIMCAEI)
+                                            this._CDR = num33 < 0.5f;
+                                            if (!this._CDR)
                                             {
-                                                if (this.PLNPCENGAKFOMJMLMFIMLBMEBCMJAICLKBCC <= 0f)
+                                                if (this._CGY <= 0f)
                                                 {
                                                     goto IL_4DEC;
                                                 }
-                                                DateTime ceioidhacnpfgacjaepbfokgbdkajdnjboho2 = this.CEIOIDHACNPFGACJAEPBFOKGBDKAJDNJBOHO;
+                                                DateTime _CKS2 = this._CHD;
                                                 DateTime dateTime = default(DateTime);
-                                                if (!(ceioidhacnpfgacjaepbfokgbdkajdnjboho2 != dateTime))
+                                                if (!(_CKS2 != dateTime))
                                                 {
                                                     goto IL_4DEC;
                                                 }
@@ -13986,35 +13968,35 @@ namespace AHO
                                             if (flag212)
                                             {
                                                 Rect caretRect2 = this.GetCaretRect(_ATD7);
-                                                GUI.Label(caretRect2, GUIContent.none, this.PJJNCLILMNNHAGCFMAEOAHDAGGAKDOIMCAEI ? this._ABT.OAHNJENALMPCNGMEAFGPAOPDCFGGJFIMDLCK : this._ABT.MNAINPPJCJGPLHBFJICPBAPKHGGPKHFKGHKI);
+                                                GUI.Label(caretRect2, GUIContent.none, this._CDR ? this._ABT._CFI : this._ABT._CEK);
                                             }
                                         }
-                                        bool flag213 = Event.current.type == 7;
+                                        bool flag213 = (int)Event.current.type == 7;
                                         if (flag213)
                                         {
-                                            bool flag214 = flag20 || this.HFBBKNBEOLAICCGCIFGLPKHFCNHPANGIIGDM();
+                                            bool flag214 = flag20 || this._CJR();
                                             if (flag214)
                                             {
-                                                rect5.Set(-4f, -4f, this.JPPFMECFJCDOMNMEIPPNOEIICFJPJCAFJLMK - 2f + this.OKJELGDKOEAMANJFODNINLMCPLBNCFHKDNNE.x, num6);
+                                                rect5.Set(-4f, -4f, this._CGA - 2f + this._CIV.x, num6);
                                                 EditorGUIUtility.AddCursorRect(rect5, 0);
-                                                rect5.Set(-4f, -4f, this.JPPFMECFJCDOMNMEIPPNOEIICFJPJCAFJLMK - 1f + this.OKJELGDKOEAMANJFODNINLMCPLBNCFHKDNNE.x, num6);
+                                                rect5.Set(-4f, -4f, this._CGA - 1f + this._CIV.x, num6);
                                                 bool flag215 = rect5.height < this._AFO.height;
                                                 if (flag215)
                                                 {
                                                     rect5.height = this._AFO.height;
                                                 }
-                                                this._ABT.FKPDLHMDAGCDBKHOJAABIDBDBPCOGPOPIOJC.Draw(rect5, false, false, false, false);
-                                                rect5.xMin = this.JPPFMECFJCDOMNMEIPPNOEIICFJPJCAFJLMK - 5f + this.OKJELGDKOEAMANJFODNINLMCPLBNCFHKDNNE.x;
+                                                this._ABT._CFG.Draw(rect5, false, false, false, false);
+                                                rect5.xMin = this._CGA - 5f + this._CIV.x;
                                                 rect5.width = 1f;
-                                                this._ABT.IICGPMAMBHPFKAIGDAKKDFCDPAKDCNNGOAOF.Draw(rect5, false, false, false, false);
+                                                this._ABT._CFH.Draw(rect5, false, false, false, false);
                                             }
                                             bool flag216 = flag20;
                                             if (flag216)
                                             {
                                                 string[] array2;
-                                                if ((array2 = _bi2.HJEDHEAJDDEAIGLAAMLLNOFBJHJKKLLPCHJN) == null)
+                                                if ((array2 = _bi2._CKU) == null)
                                                 {
-                                                    array2 = (_bi2.HJEDHEAJDDEAIGLAAMLLNOFBJHJKKLLPCHJN = new string[this._ABQ.FLOg.Count]);
+                                                    array2 = (_bi2._CKU = new string[this._ABQ.FLOg.Count]);
                                                 }
                                                 string[] array3 = array2;
                                                 bool flag217 = array3.Length < this._ABQ.FLOg.Count;
@@ -14027,25 +14009,25 @@ namespace AHO
                                                     bool flag218 = !this.IsLineVisible(num34);
                                                     if (!flag218)
                                                     {
-                                                        GUIContent fadgcfaiajefhcblkdgghbgjjnbkjbmiooem = _bi2.FADGCFAIAJEFHCBLKDGGHBGJJNBKJBMIOOEM;
+                                                        GUIContent _CKV = _bi2._CAA;
                                                         string text13;
                                                         if ((text13 = array3[num34]) == null)
                                                         {
-                                                            text13 = (array3[num34] = (num34 + 1 + this.BEOOILOKJPMGIAIFECEOEGHJCFAFCGJFJICN).ToString());
+                                                            text13 = (array3[num34] = (num34 + 1 + this._CKH).ToString());
                                                         }
-                                                        fadgcfaiajefhcblkdgghbgjjnbkjbmiooem.text = text13;
-                                                        rect5.Set(this.OKJELGDKOEAMANJFODNINLMCPLBNCFHKDNNE.x, this.GetLineOffset(num34), this.BHANPCDIOAHCJKEGENEHNEHACADLNINEFAKG, this._AEY().y);
-                                                        this._ABT.FKNGDNMIFFNDKLBIMPEOABJDFILGGHFFEKNM.Draw(rect5, _bi2.FADGCFAIAJEFHCBLKDGGHBGJJNBKJBMIOOEM, this._ABH._ABI == num34, false, false, false);
+                                                        _CKV.text = text13;
+                                                        rect5.Set(this._CIV.x, this.GetLineOffset(num34), this._CIZ, this._AEY().y);
+                                                        this._ABT._CFD.Draw(rect5, _bi2._CAA, this._ABH._ABI == num34, false, false, false);
                                                     }
                                                 }
-                                                _bi2.HJEDHEAJDDEAIGLAAMLLNOFBJHJKKLLPCHJN = array3;
+                                                _bi2._CKU = array3;
                                             }
-                                            bool flag219 = this.HFBBKNBEOLAICCGCIFGLPKHFCNHPANGIIGDM();
+                                            bool flag219 = this._CJR();
                                             if (flag219)
                                             {
-                                                rect5.xMin = this.JPPFMECFJCDOMNMEIPPNOEIICFJPJCAFJLMK - 13f + this.OKJELGDKOEAMANJFODNINLMCPLBNCFHKDNNE.x;
-                                                bool flhmmgogabacngebpcfefgpmfnakdpiglabb2 = this.FLHMMGOGABACNGEBPCFEFGPMFNAKDPIGLABB;
-                                                if (flhmmgogabacngebpcfefgpmfnakdpiglabb2)
+                                                rect5.xMin = this._CGA - 13f + this._CIV.x;
+                                                bool _CIT2 = this._CIU;
+                                                if (_CIT2)
                                                 {
                                                     rect5.xMin -= this._AEY().x;
                                                 }
@@ -14053,9 +14035,9 @@ namespace AHO
                                                 int num35 = num7;
                                                 while (num35 < num8)
                                                 {
-                                                    int locagnfbkgfdobdclfnhlbmkibajaojgmnnm = this._ABQ._AQQ[num35]._ASP;
-                                                    int bilgabgdbajjilakifbfecdfkloakfiofnle = this._ABQ._AQQ[num35]._ASQ;
-                                                    bool flag220 = locagnfbkgfdobdclfnhlbmkibajaojgmnnm > 0 || bilgabgdbajjilakifbfecdfkloakfiofnle > 0;
+                                                    int _CKW = this._ABQ._AQQ[num35]._ASP;
+                                                    int _CKX = this._ABQ._AQQ[num35]._ASQ;
+                                                    bool flag220 = _CKW > 0 || _CKX > 0;
                                                     if (flag220)
                                                     {
                                                         rect5.yMin = this.GetLineOffset(num35);
@@ -14063,33 +14045,31 @@ namespace AHO
                                                         bool flag221 = rect5.height == 0f;
                                                         if (!flag221)
                                                         {
-                                                            bool flag222 = bilgabgdbajjilakifbfecdfkloakfiofnle == locagnfbkgfdobdclfnhlbmkibajaojgmnnm;
+                                                            bool flag222 = _CKX == _CKW;
                                                             if (flag222)
                                                             {
-                                                                GUI.Label(rect5, GUIContent.none, this._ABT.MNIDILAEJNANLBJOKMBBFAPKMBLJPHDOOKHC);
+                                                                GUI.Label(rect5, GUIContent.none, this._ABT._CFL);
                                                             }
                                                             else
                                                             {
-                                                                bool flag223 = bilgabgdbajjilakifbfecdfkloakfiofnle > locagnfbkgfdobdclfnhlbmkibajaojgmnnm;
+                                                                bool flag223 = _CKX > _CKW;
                                                                 if (flag223)
                                                                 {
-                                                                    GUI.Label(rect5, GUIContent.none, this._ABT.FIJCFMEBKKCPHHDEICAFJGNHALMFHHDFMJCF);
+                                                                    GUI.Label(rect5, GUIContent.none, this._ABT._CFM);
                                                                 }
                                                                 else
                                                                 {
-                                                                    GUI.Label(rect5, GUIContent.none, this._ABT.EFFPDLCPLHCEJBKAEOGCFKCJMEJJCGNOEAJC);
+                                                                    GUI.Label(rect5, GUIContent.none, this._ABT._CFN);
                                                                 }
                                                             }
                                                         }
                                                     }
-                                                IL_52B7:
                                                     num35++;
                                                     continue;
-                                                    goto IL_52B7;
                                                 }
                                             }
-                                            bool flhmmgogabacngebpcfefgpmfnakdpiglabb3 = this.FLHMMGOGABACNGEBPCFEFGPMFNAKDPIGLABB;
-                                            if (flhmmgogabacngebpcfefgpmfnakdpiglabb3)
+                                            bool _CIT3 = this._CIU;
+                                            if (_CIT3)
                                             {
                                                 for (int num36 = num7; num36 < num8; num36++)
                                                 {
@@ -14107,17 +14087,17 @@ namespace AHO
                                                                 bool flag227 = num36 != _AQZ;
                                                                 if (!flag227)
                                                                 {
-                                                                    _bi2.FADGCFAIAJEFHCBLKDGGHBGJJNBKJBMIOOEM.text = (this.FDJNLNLEAGGCEHMOOPKBCCCLCKEMHMBENEAF.Contains(this._ABQ._AQQ[num36].GetRegionName()) ? "►" : "▼");
-                                                                    rect5.Set(this.JPPFMECFJCDOMNMEIPPNOEIICFJPJCAFJLMK - this._AEY().x - 6f + this.OKJELGDKOEAMANJFODNINLMCPLBNCFHKDNNE.x, this.GetLineOffset(num36), this._AEY().x, this._AEY().y);
-                                                                    this._ABT.FKNGDNMIFFNDKLBIMPEOABJDFILGGHFFEKNM.Draw(rect5, _bi2.FADGCFAIAJEFHCBLKDGGHBGJJNBKJBMIOOEM, this._ABH._ABI == num36, false, false, false);
-                                                                    bool flag228 = _bi2.FADGCFAIAJEFHCBLKDGGHBGJJNBKJBMIOOEM.text.Equals("▼");
+                                                                    _bi2._CAA.text = (this._CGD.Contains(this._ABQ._AQQ[num36].GetRegionName()) ? "►" : "▼");
+                                                                    rect5.Set(this._CGA - this._AEY().x - 6f + this._CIV.x, this.GetLineOffset(num36), this._AEY().x, this._AEY().y);
+                                                                    this._ABT._CFD.Draw(rect5, _bi2._CAA, this._ABH._ABI == num36, false, false, false);
+                                                                    bool flag228 = _bi2._CAA.text.Equals("▼");
                                                                     if (flag228)
                                                                     {
-                                                                        EditorGUIUtility.AddCursorRect(rect5, 12);
+                                                                        EditorGUIUtility.AddCursorRect(rect5, (MouseCursor)12);
                                                                     }
                                                                     else
                                                                     {
-                                                                        EditorGUIUtility.AddCursorRect(rect5, 11);
+                                                                        EditorGUIUtility.AddCursorRect(rect5, (MouseCursor)11);
                                                                     }
                                                                 }
                                                             }
@@ -14125,60 +14105,60 @@ namespace AHO
                                                     }
                                                 }
                                             }
-                                            bool lfgcffnkdedpogflakndcphcnedjkmpjmdfg = this.LFGCFFNKDEDPOGFLAKNDCPHCNEDJKMPJMDFG;
-                                            if (lfgcffnkdedpogflakndcphcnedjkmpjmdfg)
+                                            bool _CIX = this._CIY;
+                                            if (_CIX)
                                             {
-                                                foreach (int num37 in this.CFGMIHPKGHMFFINDHELODHEJGENHNKBBHPGK)
+                                                foreach (int num37 in this._CJB)
                                                 {
-                                                    rect5.Set(this.JPPFMECFJCDOMNMEIPPNOEIICFJPJCAFJLMK - this._AEY().x - 8f + this.OKJELGDKOEAMANJFODNINLMCPLBNCFHKDNNE.x, this.GetLineOffset(num37), this._AEY().x, this._AEY().y);
-                                                    _bi2.FADGCFAIAJEFHCBLKDGGHBGJJNBKJBMIOOEM.text = "●";
-                                                    this._ABT.FKNGDNMIFFNDKLBIMPEOABJDFILGGHFFEKNM.Draw(rect5, _bi2.FADGCFAIAJEFHCBLKDGGHBGJJNBKJBMIOOEM, true, false, false, false);
-                                                    rect5.Set(this.OKJELGDKOEAMANJFODNINLMCPLBNCFHKDNNE.x, this.GetLineOffset(num37), this.BHANPCDIOAHCJKEGENEHNEHACADLNINEFAKG + this._AEY().x, this._AEY().y);
-                                                    EditorGUIUtility.AddCursorRect(rect5, 12);
+                                                    rect5.Set(this._CGA - this._AEY().x - 8f + this._CIV.x, this.GetLineOffset(num37), this._AEY().x, this._AEY().y);
+                                                    _bi2._CAA.text = "●";
+                                                    this._ABT._CFD.Draw(rect5, _bi2._CAA, true, false, false, false);
+                                                    rect5.Set(this._CIV.x, this.GetLineOffset(num37), this._CIZ + this._AEY().x, this._AEY().y);
+                                                    EditorGUIUtility.AddCursorRect(rect5, (MouseCursor)12);
                                                 }
                                                 for (int num38 = num7; num38 < num8; num38++)
                                                 {
-                                                    rect5.Set(this.OKJELGDKOEAMANJFODNINLMCPLBNCFHKDNNE.x, this.GetLineOffset(num38), this.BHANPCDIOAHCJKEGENEHNEHACADLNINEFAKG + this._AEY().x, this._AEY().y);
-                                                    EditorGUIUtility.AddCursorRect(rect5, 11);
-                                                    foreach (int num39 in this.CFGMIHPKGHMFFINDHELODHEJGENHNKBBHPGK)
+                                                    rect5.Set(this._CIV.x, this.GetLineOffset(num38), this._CIZ + this._AEY().x, this._AEY().y);
+                                                    EditorGUIUtility.AddCursorRect(rect5, (MouseCursor)11);
+                                                    foreach (int num39 in this._CJB)
                                                     {
                                                         bool flag229 = num38 == num39;
                                                         if (flag229)
                                                         {
-                                                            EditorGUIUtility.AddCursorRect(rect5, 12);
+                                                            EditorGUIUtility.AddCursorRect(rect5, (MouseCursor)12);
                                                         }
                                                     }
                                                 }
                                             }
                                         }
-                                        bool bbncfbjbokmilidimjkjkehcdafmdfndnggi = this.BBNCFBJBOKMILIDIMJKJKEHCDAFMDFNDNGGI;
-                                        if (bbncfbjbokmilidimjkjkehcdafmdfndnggi)
+                                        bool _CKY = this._CFY;
+                                        if (_CKY)
                                         {
-                                            this.BBNCFBJBOKMILIDIMJKJKEHCDAFMDFNDNGGI = false;
-                                            this.ANAGDFICEFNAOCIGDFJALOOGGMBIDBLNPPON = _bg8._ASA;
+                                            this._CFY = false;
+                                            this._CKZ = _bg8._ASA;
                                             this.InvalidateSoftLineBreaks();
-                                            bool fcddeenlbdfbmkeflkikpckpaagbjlephchc = this.FCDDEENLBDFBMKEFLKIKPCKPAAGBJLEPHCHC;
-                                            if (fcddeenlbdfbmkeflkikpckpaagbjlephchc)
+                                            bool _CLA = this._CKN;
+                                            if (_CLA)
                                             {
-                                                this.OKJELGDKOEAMANJFODNINLMCPLBNCFHKDNNE = this._AFS;
-                                                this.EMPLHHGIPJCGEICPFEHNLAIMLHOHKPNCGCCO = Vector2.zero;
-                                                this.NJLKIOECLMPLPCIEOLCBGKJBLDPMHBCHJBJN = default(DateTime);
+                                                this._CIV = this._AFS;
+                                                this._CKO = Vector2.zero;
+                                                this._CKP = default(DateTime);
                                             }
                                             _bi2.EndScrollView(true);
                                             this.Repaint();
                                             return;
                                         }
-                                        bool flag230 = Event.current.type == 7;
+                                        bool flag230 = (int)Event.current.type == 7;
                                         if (flag230)
                                         {
-                                            EditorGUIUtility.AddCursorRect(this.BOPCDIIIAACDAILGPOFHGPKBBOLAIFBDFADO ? new Rect(this.JOOAGLFAONABMOABLNMAKLBBGDJOFNMGFBOB.x, this.JOOAGLFAONABMOABLNMAKLBBGDJOFNMGFBOB.y, this.JOOAGLFAONABMOABLNMAKLBBGDJOFNMGFBOB.width, num6) : this.JOOAGLFAONABMOABLNMAKLBBGDJOFNMGFBOB, 1);
+                                            EditorGUIUtility.AddCursorRect(this._CCH ? new Rect(this._CKF.x, this._CKF.y, this._CKF.width, num6) : this._CKF, 1);
                                         }
                                         bool flag231;
-                                        if (Event.current.type == 7 && this.PLNPCENGAKFOMJMLMFIMLBMEBCMJAICLKBCC > 0f)
+                                        if ((int)Event.current.type == 7 && this._CGY > 0f)
                                         {
-                                            DateTime ceioidhacnpfgacjaepbfokgbdkajdnjboho3 = this.CEIOIDHACNPFGACJAEPBFOKGBDKAJDNJBOHO;
+                                            DateTime _CKS3 = this._CHD;
                                             DateTime dateTime = default(DateTime);
-                                            flag231 = ceioidhacnpfgacjaepbfokgbdkajdnjboho3 != dateTime;
+                                            flag231 = _CKS3 != dateTime;
                                         }
                                         else
                                         {
@@ -14190,42 +14170,42 @@ namespace AHO
                                             int num40;
                                             int num41;
                                             this.BufferToViewPosition(this._ABH, out num40, out num41);
-                                            Rect ekiiiobhdbpddbjfcmeghbhlmoegccodhdff2 = this.EKIIIOBHDBPDDBJFCMEGHBHLMOEGCCODHDFF;
-                                            ekiiiobhdbpddbjfcmeghbhlmoegccodhdff2.y = this._AEY().y * (float)num40 + this.GetLineOffset(this._ABH._ABI);
-                                            this.DrawPing(this.JPPFMECFJCDOMNMEIPPNOEIICFJPJCAFJLMK, ekiiiobhdbpddbjfcmeghbhlmoegccodhdff2, false);
+                                            Rect _CKT2 = this._CHE;
+                                            _CKT2.y = this._AEY().y * (float)num40 + this.GetLineOffset(this._ABH._ABI);
+                                            this.DrawPing(this._CGA, _CKT2, false);
                                             this.Repaint();
                                         }
                                     }
                                 IL_58A9:
-                                    bool flag233 = this.OKJELGDKOEAMANJFODNINLMCPLBNCFHKDNNE != this._AFS;
+                                    bool flag233 = this._CIV != this._AFS;
                                     if (flag233)
                                     {
                                         this.Repaint();
                                     }
                                     else
                                     {
-                                        bool flag234 = Event.current.type == 7;
+                                        bool flag234 = (int)Event.current.type == 7;
                                         if (flag234)
                                         {
-                                            _bi2.JKLAPMECMLAAJBICDAKNMBFEMBLIJGBBDGCM = false;
+                                            _bi2._CIM = false;
                                         }
                                     }
-                                    bool gfkaldcdcjkdllfgkmbfpabmpcnbgcfejein = this.GFKALDCDCJKDLLFGKMBFPABMPCNBGCFEJEIN;
+                                    bool gfkaldcdcjkdllfgkmbfpabmpcnbgcfejein = this._CII;
                                     if (gfkaldcdcjkdllfgkmbfpabmpcnbgcfejein)
                                     {
                                         this.UpdateArgumentsHint(true);
                                     }
                                     else
                                     {
-                                        bool flag235 = this.KBBCMMCMDLMOHHGNAPNIJGLHBLBGGPODLFEB != null && this._ATM == _bi2._ATN;
+                                        bool flag235 = this._CBC != null && this._ATM == _bi2._ATN;
                                         if (flag235)
                                         {
                                             this.UpdateArgumentsHint(true);
                                         }
                                     }
-                                    this.GFKALDCDCJKDLLFGKMBFPABMPCNBGCFEJEIN = false;
+                                    this._CII = false;
                                     _bi2.EndScrollView(true);
-                                    bool flag236 = this.GJDLGEEKCBIHCFECOIOFLIFNOCPOAPGNHJMK() && Event.current.type == 7 && this.CanEdit();
+                                    bool flag236 = this._CDN() && (int)Event.current.type == 7 && this.CanEdit();
                                     if (flag236)
                                     {
                                         Rect caretRect3 = this.GetCaretRect(this._ABH);
@@ -14243,23 +14223,23 @@ namespace AHO
         // Token: 0x0600032D RID: 813 RVA: 0x0003FDB0 File Offset: 0x0003DFB0
         public void OnWindowGUI(EditorWindow window, RectOffset margins)
         {
-            bool flag = window != this.OBGEMALIEGDPMEGFAOJCKCIMLAKLMFFNDLKH;
+            bool flag = window != this._CHK;
             if (flag)
             {
-                this.OGJMAADHJNFCLONPJGOCCAKPODNCOKEOJFMF = window;
+                this._CHX = window;
             }
             bool flag2 = EditorWindow.focusedWindow == window;
             if (flag2)
             {
                 GCE._ALU = this;
             }
-            bool flag3 = Event.current.type != 8;
+            bool flag3 = (int)Event.current.type != 8;
             if (flag3)
             {
-                bool flag4 = this.OGJMAADHJNFCLONPJGOCCAKPODNCOKEOJFMF;
+                bool flag4 = this._CHX;
                 if (flag4)
                 {
-                    this._AFO = new Rect(0f, 0f, this.OGJMAADHJNFCLONPJGOCCAKPODNCOKEOJFMF.position.width, this.OGJMAADHJNFCLONPJGOCCAKPODNCOKEOJFMF.position.height);
+                    this._AFO = new Rect(0f, 0f, this._CHX.position.width, this._CHX.position.height);
                 }
                 bool flag5 = !(window is _bb6);
                 if (flag5)
@@ -14270,7 +14250,7 @@ namespace AHO
             }
             else
             {
-                bool flag6 = !this.OGJMAADHJNFCLONPJGOCCAKPODNCOKEOJFMF;
+                bool flag6 = !this._CHX;
                 if (flag6)
                 {
                     GUILayoutUtility.GetRect(1f, (float)Screen.width, 112f, (float)Screen.height);
@@ -14281,11 +14261,10 @@ namespace AHO
             bool flag7 = this._ABQ != null;
             if (flag7)
             {
-                Rect rect;
-                rect..ctor(this._AFO.xMax - 21f, this._AFO.yMin - 17f, 21f, 16f);
+                Rect rect = new Rect(this._AFO.xMax - 21f, this._AFO.yMin - 17f, 21f, 16f);
             }
             Color color = GUI.color;
-            bool flag8 = !GUI.enabled && Event.current.type == 7;
+            bool flag8 = !GUI.enabled && (int)Event.current.type == 7;
             if (flag8)
             {
                 GUI.color = new Color(0.85f, 0.85f, 0.85f);
@@ -14297,7 +14276,7 @@ namespace AHO
             }
             try
             {
-                bool flag10 = this.GJDLGEEKCBIHCFECOIOFLIFNOCPOAPGNHJMK() && GUI.enabled;
+                bool flag10 = this._CDN() && GUI.enabled;
                 if (flag10)
                 {
                     GCE._ALU = this;
@@ -14326,13 +14305,13 @@ namespace AHO
         // Token: 0x0600032E RID: 814 RVA: 0x0003FFFC File Offset: 0x0003E1FC
         public void OnInspectorGUI(bool isFileWindow, RectOffset margins, EditorWindow currentInspector)
         {
-            this.OBGEMALIEGDPMEGFAOJCKCIMLAKLMFFNDLKH = currentInspector;
+            this._CHK = currentInspector;
             this._AFO = GUILayoutUtility.GetRect(0f, (float)Screen.width, 0f, currentInspector.position.height - 290f);
             this._AFO.xMin = 0f;
             this._AFO.xMax = this._AFO.xMax + 4f;
             bool enabled = GUI.enabled;
             Color color = GUI.color;
-            bool flag = !GUI.enabled && Event.current.type == 7;
+            bool flag = !GUI.enabled && (int)Event.current.type == 7;
             if (flag)
             {
                 GUI.color = new Color(0.85f, 0.85f, 0.85f);
@@ -14344,7 +14323,7 @@ namespace AHO
             }
             try
             {
-                bool flag3 = this.GJDLGEEKCBIHCFECOIOFLIFNOCPOAPGNHJMK();
+                bool flag3 = this._CDN();
                 if (flag3)
                 {
                     GCE._ALU = this;
@@ -14373,27 +14352,27 @@ namespace AHO
         // Token: 0x0600032F RID: 815 RVA: 0x00040148 File Offset: 0x0003E348
         public void OnInspectorGUI(float offset, EditorWindow curInspector, bool hasAssemblyDefinitionFilePath = true)
         {
-            this.OBGEMALIEGDPMEGFAOJCKCIMLAKLMFFNDLKH = curInspector;
-            bool flag = this.OBGEMALIEGDPMEGFAOJCKCIMLAKLMFFNDLKH == null;
+            this._CHK = curInspector;
+            bool flag = this._CHK == null;
             if (!flag)
             {
-                bool flag2 = this.CAKHIDEDHOGABNHPLIHFBBDGGEFFNPBAMFJA != this.GetHeightInInspector();
+                bool flag2 = this._CLB != this.GetHeightInInspector();
                 if (flag2)
                 {
-                    this.CAKHIDEDHOGABNHPLIHFBBDGGEFFNPBAMFJA = this.GetHeightInInspector();
+                    this._CLB = this.GetHeightInInspector();
                 }
                 else
                 {
-                    bool flag3 = !_bi2.NALGACOOFEHEHONBNAEIKOEKDJGIODABHAAB || (!this.DMNDDOLDBANIGJLBJIDFEAHIIPDHJAFAALJJ && Event.current.type == 8);
+                    bool flag3 = !_bi2._CLC || (!this._CLD && (int)Event.current.type == 8);
                     if (flag3)
                     {
-                        this.DMNDDOLDBANIGJLBJIDFEAHIIPDHJAFAALJJ = true;
-                        _bi2.NALGACOOFEHEHONBNAEIKOEKDJGIODABHAAB = true;
+                        this._CLD = true;
+                        _bi2._CLC = true;
                         this.Repaint();
                     }
                     else
                     {
-                        bool flag4 = Event.current.type == 8;
+                        bool flag4 = (int)Event.current.type == 8;
                         if (flag4)
                         {
                             bool flag5 = !_bi2.EditorVersionValid(20210);
@@ -14404,47 +14383,46 @@ namespace AHO
                                 {
                                     if (hasAssemblyDefinitionFilePath)
                                     {
-                                        this._AFO = (this.KEEPEDCLFCGNKDCIALMFGMGDNDHNMOFBIBJJ = GUILayoutUtility.GetRect(0f, (float)Screen.width, 0f, this.GetHeightInInspector() - (this.EIMJAKFHOFKPPHINOOONMDAPCKAAPELJKAIL ? 0f : 72f)));
+                                        this._AFO = (this._CLE = GUILayoutUtility.GetRect(0f, (float)Screen.width, 0f, this.GetHeightInInspector() - (this._CCL ? 0f : 72f)));
                                     }
                                     else
                                     {
-                                        this._AFO = (this.KEEPEDCLFCGNKDCIALMFGMGDNDHNMOFBIBJJ = GUILayoutUtility.GetRect(0f, (float)Screen.width, 0f, this.GetHeightInInspector() - (this.EIMJAKFHOFKPPHINOOONMDAPCKAAPELJKAIL ? 0f : 52f)));
+                                        this._AFO = (this._CLE = GUILayoutUtility.GetRect(0f, (float)Screen.width, 0f, this.GetHeightInInspector() - (this._CCL ? 0f : 52f)));
                                     }
                                 }
                                 else if (hasAssemblyDefinitionFilePath)
                                 {
-                                    this._AFO = (this.KEEPEDCLFCGNKDCIALMFGMGDNDHNMOFBIBJJ = GUILayoutUtility.GetRect(0f, (float)Screen.width, 0f, this.GetHeightInInspector() - (this.EIMJAKFHOFKPPHINOOONMDAPCKAAPELJKAIL ? 11f : 74f)));
+                                    this._AFO = (this._CLE = GUILayoutUtility.GetRect(0f, (float)Screen.width, 0f, this.GetHeightInInspector() - (this._CCL ? 11f : 74f)));
                                 }
                                 else
                                 {
-                                    this._AFO = (this.KEEPEDCLFCGNKDCIALMFGMGDNDHNMOFBIBJJ = GUILayoutUtility.GetRect(0f, (float)Screen.width, 0f, this.GetHeightInInspector() - (this.EIMJAKFHOFKPPHINOOONMDAPCKAAPELJKAIL ? 11f : 54f)));
+                                    this._AFO = (this._CLE = GUILayoutUtility.GetRect(0f, (float)Screen.width, 0f, this.GetHeightInInspector() - (this._CCL ? 11f : 54f)));
                                 }
                             }
                             else if (hasAssemblyDefinitionFilePath)
                             {
-                                this._AFO = (this.KEEPEDCLFCGNKDCIALMFGMGDNDHNMOFBIBJJ = GUILayoutUtility.GetRect(0f, (float)Screen.width, 0f, this.GetHeightInInspector() - (this.EIMJAKFHOFKPPHINOOONMDAPCKAAPELJKAIL ? 11f : 74f)));
+                                this._AFO = (this._CLE = GUILayoutUtility.GetRect(0f, (float)Screen.width, 0f, this.GetHeightInInspector() - (this._CCL ? 11f : 74f)));
                             }
                             else
                             {
-                                this._AFO = (this.KEEPEDCLFCGNKDCIALMFGMGDNDHNMOFBIBJJ = GUILayoutUtility.GetRect(0f, (float)Screen.width, 0f, this.GetHeightInInspector() - (this.EIMJAKFHOFKPPHINOOONMDAPCKAAPELJKAIL ? 11f : 54f)));
+                                this._AFO = (this._CLE = GUILayoutUtility.GetRect(0f, (float)Screen.width, 0f, this.GetHeightInInspector() - (this._CCL ? 11f : 54f)));
                             }
                         }
                         else
                         {
-                            this._AFO = this.KEEPEDCLFCGNKDCIALMFGMGDNDHNMOFBIBJJ;
+                            this._AFO = this._CLE;
                         }
                         this._AFO.xMin = 0f;
                         this._AFO.yMin = this._AFO.yMin + offset;
                         this._AFO.yMax = this.GetHeightInInspector();
-                        this._AFO.xMax = this.OBGEMALIEGDPMEGFAOJCKCIMLAKLMFFNDLKH.position.size.x;
-                        Color color;
-                        color..ctor(0f, 0f, 0f, 0.25f);
-                        EditorGUI.DrawRect(new Rect(0f, this._AFO.yMin - 1f, this.OBGEMALIEGDPMEGFAOJCKCIMLAKLMFFNDLKH.position.size.x, 1f), color);
+                        this._AFO.xMax = this._CHK.position.size.x;
+                        Color color = new Color(0f, 0f, 0f, 0.25f);
+                        EditorGUI.DrawRect(new Rect(0f, this._AFO.yMin - 1f, this._CHK.position.size.x, 1f), color);
                         bool enabled = GUI.enabled;
                         Color color2 = GUI.color;
                         try
                         {
-                            bool flag7 = this.GJDLGEEKCBIHCFECOIOFLIFNOCPOAPGNHJMK();
+                            bool flag7 = this._CDN();
                             if (flag7)
                             {
                                 GCE._ALU = this;
@@ -14476,9 +14454,9 @@ namespace AHO
         // Token: 0x06000330 RID: 816 RVA: 0x00040524 File Offset: 0x0003E724
         private static Vector2 BeginScrollView(Rect position, Vector2 scrollPosition, Rect viewRect)
         {
-            _bi2.JPIEFGLNHCBCDGGCBGJDOHCNCPPKPBKEKILD = GUI.skin.horizontalScrollbar;
-            _bi2.LKPFEIOPLGKOINOFJGHJGEGOPNIHGHHHDCML = GUI.skin.verticalScrollbar;
-            bool flag = Event.current.type == 9 && position.Contains(Event.current.mousePosition);
+            _bi2._CLF = GUI.skin.horizontalScrollbar;
+            _bi2._CLG = GUI.skin.verticalScrollbar;
+            bool flag = (int)Event.current.type == 9 && position.Contains(Event.current.mousePosition);
             if (flag)
             {
                 bool flag2 = Mathf.Abs(Event.current.mousePosition.y - position.y) < 8f;
@@ -14495,25 +14473,25 @@ namespace AHO
                     }
                 }
             }
-            int controlID = GUIUtility.GetControlID(_bi2.COAPOMHMLBIKCFLNDDEIJBBPBHFBFFEKOHLH, 2);
-            _bi2.HKFCADPHFPLAOPHGPJINLJGNOKIKJMFKMFCB = (_bi2.ICMBIOEGBPCFGEOEAPHLDMPDMCPNIACDAEBC)GUIUtility.GetStateObject(typeof(_bi2.ICMBIOEGBPCFGEOEAPHLDMPDMCPNIACDAEBC), controlID);
-            bool bndnmnlngecciikkaglniphbpmbggljknkje = _bi2.HKFCADPHFPLAOPHGPJINLJGNOKIKJMFKMFCB.BNDNMNLNGECCIIKKAGLNIPHBPMBGGLJKNKJE;
-            if (bndnmnlngecciikkaglniphbpmbggljknkje)
+            int controlID = GUIUtility.GetControlID(_bi2._CLH, (FocusType)2);
+            _bi2._CLI = (_bi2._CLJ)GUIUtility.GetStateObject(typeof(_bi2._CLJ), controlID);
+            bool _CLK = _bi2._CLI._CLL;
+            if (_CLK)
             {
-                scrollPosition = _bi2.HKFCADPHFPLAOPHGPJINLJGNOKIKJMFKMFCB._AFS;
-                _bi2.HKFCADPHFPLAOPHGPJINLJGNOKIKJMFKMFCB.BNDNMNLNGECCIIKKAGLNIPHBPMBGGLJKNKJE = false;
+                scrollPosition = _bi2._CLI._AFS;
+                _bi2._CLI._CLL = false;
             }
-            _bi2.HKFCADPHFPLAOPHGPJINLJGNOKIKJMFKMFCB.ELLBKFOCFILNGHCCPNIIOHJBJLLFNDLPJFEM = position;
-            _bi2.HKFCADPHFPLAOPHGPJINLJGNOKIKJMFKMFCB._AFS = scrollPosition;
-            _bi2.HKFCADPHFPLAOPHGPJINLJGNOKIKJMFKMFCB.OGBFJIGAAPPFDGOAKHCJILNILPDDHGFOGELP = (_bi2.HKFCADPHFPLAOPHGPJINLJGNOKIKJMFKMFCB.CJOOAMFFPFAHKPGODOFCHGHMJOOPHFMJIPEF = viewRect);
-            _bi2.HKFCADPHFPLAOPHGPJINLJGNOKIKJMFKMFCB.OGBFJIGAAPPFDGOAKHCJILNILPDDHGFOGELP.width = position.width;
-            _bi2.HKFCADPHFPLAOPHGPJINLJGNOKIKJMFKMFCB.OGBFJIGAAPPFDGOAKHCJILNILPDDHGFOGELP.height = position.height;
+            _bi2._CLI._CLM = position;
+            _bi2._CLI._AFS = scrollPosition;
+            _bi2._CLI._CLN = (_bi2._CLI._CLO = viewRect);
+            _bi2._CLI._CLN.width = position.width;
+            _bi2._CLI._CLN.height = position.height;
             Rect rect = position;
             EventType type = Event.current.type;
-            bool flag4 = type != 8;
+            bool flag4 = (int)type != 8;
             if (flag4)
             {
-                bool flag5 = type != 12;
+                bool flag5 = (int)type != 12;
                 if (flag5)
                 {
                     bool flag6 = false;
@@ -14521,39 +14499,38 @@ namespace AHO
                     bool flag8 = viewRect.width > rect.width;
                     if (flag8)
                     {
-                        _bi2.HKFCADPHFPLAOPHGPJINLJGNOKIKJMFKMFCB.OGBFJIGAAPPFDGOAKHCJILNILPDDHGFOGELP.height = position.height - _bi2.JPIEFGLNHCBCDGGCBGJDOHCNCPPKPBKEKILD.fixedHeight + (float)_bi2.JPIEFGLNHCBCDGGCBGJDOHCNCPPKPBKEKILD.margin.top;
-                        rect.height -= _bi2.JPIEFGLNHCBCDGGCBGJDOHCNCPPKPBKEKILD.fixedHeight + (float)_bi2.JPIEFGLNHCBCDGGCBGJDOHCNCPPKPBKEKILD.margin.top;
+                        _bi2._CLI._CLN.height = position.height - _bi2._CLF.fixedHeight + (float)_bi2._CLF.margin.top;
+                        rect.height -= _bi2._CLF.fixedHeight + (float)_bi2._CLF.margin.top;
                         flag7 = true;
                     }
                     bool flag9 = viewRect.height > rect.height;
                     if (flag9)
                     {
-                        _bi2.HKFCADPHFPLAOPHGPJINLJGNOKIKJMFKMFCB.OGBFJIGAAPPFDGOAKHCJILNILPDDHGFOGELP.width = position.width - _bi2.LKPFEIOPLGKOINOFJGHJGEGOPNIHGHHHDCML.fixedWidth + (float)_bi2.LKPFEIOPLGKOINOFJGHJGEGOPNIHGHHHDCML.margin.left;
-                        rect.width -= _bi2.LKPFEIOPLGKOINOFJGHJGEGOPNIHGHHHDCML.fixedWidth + (float)_bi2.LKPFEIOPLGKOINOFJGHJGEGOPNIHGHHHDCML.margin.left;
+                        _bi2._CLI._CLN.width = position.width - _bi2._CLG.fixedWidth + (float)_bi2._CLG.margin.left;
+                        rect.width -= _bi2._CLG.fixedWidth + (float)_bi2._CLG.margin.left;
                         flag6 = true;
                         bool flag10 = !flag7 && viewRect.width > rect.width;
                         if (flag10)
                         {
-                            _bi2.HKFCADPHFPLAOPHGPJINLJGNOKIKJMFKMFCB.OGBFJIGAAPPFDGOAKHCJILNILPDDHGFOGELP.height = position.height - _bi2.JPIEFGLNHCBCDGGCBGJDOHCNCPPKPBKEKILD.fixedHeight + (float)_bi2.JPIEFGLNHCBCDGGCBGJDOHCNCPPKPBKEKILD.margin.top;
-                            rect.height -= _bi2.JPIEFGLNHCBCDGGCBGJDOHCNCPPKPBKEKILD.fixedHeight + (float)_bi2.JPIEFGLNHCBCDGGCBGJDOHCNCPPKPBKEKILD.margin.top;
+                            _bi2._CLI._CLN.height = position.height - _bi2._CLF.fixedHeight + (float)_bi2._CLF.margin.top;
+                            rect.height -= _bi2._CLF.fixedHeight + (float)_bi2._CLF.margin.top;
                             flag7 = true;
                         }
                     }
-                    bool flag11 = flag7 && _bi2.JPIEFGLNHCBCDGGCBGJDOHCNCPPKPBKEKILD != GUIStyle.none;
+                    bool flag11 = flag7 && _bi2._CLF != GUIStyle.none;
                     if (flag11)
                     {
-                        Rect rect2;
-                        rect2..ctor(position.x, position.yMax - _bi2.JPIEFGLNHCBCDGGCBGJDOHCNCPPKPBKEKILD.fixedHeight, rect.width, _bi2.JPIEFGLNHCBCDGGCBGJDOHCNCPPKPBKEKILD.fixedHeight);
+                        Rect rect2 = new Rect(position.x, position.yMax - _bi2._CLF.fixedHeight, rect.width, _bi2._CLF.fixedHeight);
                         float num = Mathf.Min(rect.width, viewRect.width);
                         float num2 = Mathf.Clamp(scrollPosition.x, 0f, viewRect.width - num);
                         scrollPosition.x = GUI.HorizontalScrollbar(rect2, num2, num, 0f, viewRect.width);
                     }
                     else
                     {
-                        GUIUtility.GetControlID(_bi2.DJPMGBHJLNGIAAEIKDPJIEPEELOPHLFAOHIK, 2);
-                        GUIUtility.GetControlID(_bi2.CJKCFJLLJFNHBJPEAPKGPFPCNBGNDOJBCIID, 2);
-                        GUIUtility.GetControlID(_bi2.CJKCFJLLJFNHBJPEAPKGPFPCNBGNDOJBCIID, 2);
-                        bool flag12 = _bi2.JPIEFGLNHCBCDGGCBGJDOHCNCPPKPBKEKILD != GUIStyle.none;
+                        GUIUtility.GetControlID(_bi2._CLP, (FocusType)2);
+                        GUIUtility.GetControlID(_bi2._CLQ, (FocusType)2);
+                        GUIUtility.GetControlID(_bi2._CLQ, (FocusType)2);
+                        bool flag12 = _bi2._CLF != GUIStyle.none;
                         if (flag12)
                         {
                             scrollPosition.x = 0f;
@@ -14563,7 +14540,7 @@ namespace AHO
                             scrollPosition.x = Mathf.Clamp(scrollPosition.x, 0f, Mathf.Max(viewRect.width - position.width, 0f));
                         }
                     }
-                    bool flag13 = flag6 && _bi2.LKPFEIOPLGKOINOFJGHJGEGOPNIHGHHHDCML != GUIStyle.none;
+                    bool flag13 = flag6 && _bi2._CLG != GUIStyle.none;
                     if (flag13)
                     {
                         bool flag14 = scrollPosition.y < 0f;
@@ -14571,14 +14548,14 @@ namespace AHO
                         {
                             scrollPosition.y = 0f;
                         }
-                        scrollPosition.y = GUI.VerticalScrollbar(new Rect(rect.xMax + (float)_bi2.LKPFEIOPLGKOINOFJGHJGEGOPNIHGHHHDCML.margin.left, rect.y, _bi2.LKPFEIOPLGKOINOFJGHJGEGOPNIHGHHHDCML.fixedWidth, rect.height), scrollPosition.y, Mathf.Min(rect.height, viewRect.height), 0f, viewRect.height);
+                        scrollPosition.y = GUI.VerticalScrollbar(new Rect(rect.xMax + (float)_bi2._CLG.margin.left, rect.y, _bi2._CLG.fixedWidth, rect.height), scrollPosition.y, Mathf.Min(rect.height, viewRect.height), 0f, viewRect.height);
                     }
                     else
                     {
-                        GUIUtility.GetControlID(_bi2.DJPMGBHJLNGIAAEIKDPJIEPEELOPHLFAOHIK, 2);
-                        GUIUtility.GetControlID(_bi2.CJKCFJLLJFNHBJPEAPKGPFPCNBGNDOJBCIID, 2);
-                        GUIUtility.GetControlID(_bi2.CJKCFJLLJFNHBJPEAPKGPFPCNBGNDOJBCIID, 2);
-                        bool flag15 = _bi2.LKPFEIOPLGKOINOFJGHJGEGOPNIHGHHHDCML != GUIStyle.none;
+                        GUIUtility.GetControlID(_bi2._CLP, (FocusType)2);
+                        GUIUtility.GetControlID(_bi2._CLQ, (FocusType)2);
+                        GUIUtility.GetControlID(_bi2._CLQ, (FocusType)2);
+                        bool flag15 = _bi2._CLG != GUIStyle.none;
                         if (flag15)
                         {
                             scrollPosition.y = 0f;
@@ -14592,12 +14569,12 @@ namespace AHO
             }
             else
             {
-                GUIUtility.GetControlID(_bi2.DJPMGBHJLNGIAAEIKDPJIEPEELOPHLFAOHIK, 2);
-                GUIUtility.GetControlID(_bi2.CJKCFJLLJFNHBJPEAPKGPFPCNBGNDOJBCIID, 2);
-                GUIUtility.GetControlID(_bi2.CJKCFJLLJFNHBJPEAPKGPFPCNBGNDOJBCIID, 2);
-                GUIUtility.GetControlID(_bi2.DJPMGBHJLNGIAAEIKDPJIEPEELOPHLFAOHIK, 2);
-                GUIUtility.GetControlID(_bi2.CJKCFJLLJFNHBJPEAPKGPFPCNBGNDOJBCIID, 2);
-                GUIUtility.GetControlID(_bi2.CJKCFJLLJFNHBJPEAPKGPFPCNBGNDOJBCIID, 2);
+                GUIUtility.GetControlID(_bi2._CLP, (FocusType)2);
+                GUIUtility.GetControlID(_bi2._CLQ, (FocusType)2);
+                GUIUtility.GetControlID(_bi2._CLQ, (FocusType)2);
+                GUIUtility.GetControlID(_bi2._CLP, (FocusType)2);
+                GUIUtility.GetControlID(_bi2._CLQ, (FocusType)2);
+                GUIUtility.GetControlID(_bi2._CLQ, (FocusType)2);
             }
             GUI.BeginClip(rect, new Vector2(Mathf.Round(-scrollPosition.x - viewRect.x), Mathf.Round(-scrollPosition.y - viewRect.y)), Vector2.zero, false);
             return scrollPosition;
@@ -14607,12 +14584,12 @@ namespace AHO
         private static void EndScrollView(bool handleScrollWheel = true)
         {
             GUI.EndClip();
-            bool flag = handleScrollWheel && Event.current.type == 6 && _bi2.HKFCADPHFPLAOPHGPJINLJGNOKIKJMFKMFCB.ELLBKFOCFILNGHCCPNIIOHJBJLLFNDLPJFEM.Contains(Event.current.mousePosition);
+            bool flag = handleScrollWheel && (int)Event.current.type == 6 && _bi2._CLI._CLM.Contains(Event.current.mousePosition);
             if (flag)
             {
-                _bi2.HKFCADPHFPLAOPHGPJINLJGNOKIKJMFKMFCB._AFS.x = Mathf.Clamp(_bi2.HKFCADPHFPLAOPHGPJINLJGNOKIKJMFKMFCB._AFS.x + Event.current.delta.x * 20f, 0f, _bi2.HKFCADPHFPLAOPHGPJINLJGNOKIKJMFKMFCB.CJOOAMFFPFAHKPGODOFCHGHMJOOPHFMJIPEF.width - _bi2.HKFCADPHFPLAOPHGPJINLJGNOKIKJMFKMFCB.OGBFJIGAAPPFDGOAKHCJILNILPDDHGFOGELP.width);
-                _bi2.HKFCADPHFPLAOPHGPJINLJGNOKIKJMFKMFCB._AFS.y = Mathf.Clamp(_bi2.HKFCADPHFPLAOPHGPJINLJGNOKIKJMFKMFCB._AFS.y + Event.current.delta.y * 20f, 0f, _bi2.HKFCADPHFPLAOPHGPJINLJGNOKIKJMFKMFCB.CJOOAMFFPFAHKPGODOFCHGHMJOOPHFMJIPEF.height - _bi2.HKFCADPHFPLAOPHGPJINLJGNOKIKJMFKMFCB.OGBFJIGAAPPFDGOAKHCJILNILPDDHGFOGELP.height);
-                _bi2.HKFCADPHFPLAOPHGPJINLJGNOKIKJMFKMFCB.BNDNMNLNGECCIIKKAGLNIPHBPMBGGLJKNKJE = true;
+                _bi2._CLI._AFS.x = Mathf.Clamp(_bi2._CLI._AFS.x + Event.current.delta.x * 20f, 0f, _bi2._CLI._CLO.width - _bi2._CLI._CLN.width);
+                _bi2._CLI._AFS.y = Mathf.Clamp(_bi2._CLI._AFS.y + Event.current.delta.y * 20f, 0f, _bi2._CLI._CLO.height - _bi2._CLI._CLN.height);
+                _bi2._CLI._CLL = true;
                 Event.current.Use();
             }
         }
@@ -14620,8 +14597,8 @@ namespace AHO
         // Token: 0x06000332 RID: 818 RVA: 0x00040C38 File Offset: 0x0003EE38
         private float GetHeightInInspector()
         {
-            float num = this.OBGEMALIEGDPMEGFAOJCKCIMLAKLMFFNDLKH.position.height;
-            VisualElement visualElement = this.OBGEMALIEGDPMEGFAOJCKCIMLAKLMFFNDLKH.rootVisualElement[1];
+            float num = this._CHK.position.height;
+            VisualElement visualElement = this._CHK.rootVisualElement[1];
             bool flag = visualElement == null;
             float num2;
             if (flag)
@@ -14668,7 +14645,7 @@ namespace AHO
                                 bool flag6 = vector.y == 0f || num < 1f;
                                 if (flag6)
                                 {
-                                    num2 = this.OBGEMALIEGDPMEGFAOJCKCIMLAKLMFFNDLKH.position.height;
+                                    num2 = this._CHK.position.height;
                                 }
                                 else
                                 {
@@ -14685,7 +14662,7 @@ namespace AHO
         // Token: 0x06000333 RID: 819 RVA: 0x00040D9C File Offset: 0x0003EF9C
         private bool ProcessCodeViewCommands()
         {
-            bool flag = Event.current.type == 13;
+            bool flag = (int)Event.current.type == 13;
             if (flag)
             {
                 bool flag2 = Event.current.commandName == "SelectAll";
@@ -14752,10 +14729,10 @@ namespace AHO
                 {
                     return false;
                 }
-                bool flag12 = Event.current.type == 14;
+                bool flag12 = (int)Event.current.type == 14;
                 if (flag12)
                 {
-                    this.PLNPCENGAKFOMJMLMFIMLBMEBCMJAICLKBCC = 0f;
+                    this._CGY = 0f;
                     bool flag13 = Event.current.commandName == "SelectAll";
                     if (flag13)
                     {
@@ -14771,7 +14748,7 @@ namespace AHO
                         this._ABH._ATG = (this._ABH._ATF = this.CharIndexToColumn(this._ABH._AEU, this._ABQ._ASK - 1));
                         Event.current.Use();
                         this._ATM = _bi2._ATN;
-                        this.DJLIKNMAIPOALAMANDOGJHEODLHBGBBNBMIA = false;
+                        this._CGW = false;
                         this._ATO = true;
                         this.Repaint();
                         return true;
@@ -14808,8 +14785,8 @@ namespace AHO
                             else
                             {
                                 this._ABH = this._ABQ.InsertText(this._ABH, text);
-                                bool bopcdiiiaacdailgpofhgpkbbolaifbdfado = this.BOPCDIIIAACDAILGPOFHGPKBBOLAIFBDFADO;
-                                if (bopcdiiiaacdailgpofhgpkbbolaifbdfado)
+                                bool _CGE = this._CCH;
+                                if (_CGE)
                                 {
                                     this._ABH._ATG = (this._ABH._ATF = this.CharIndexToColumn(this._ABH._AEU, this._ABH._ABI));
                                 }
@@ -14822,10 +14799,10 @@ namespace AHO
                             }
                             this._ABQ.EndEdit();
                             this.AddRecentLocation(0, true);
-                            this.GFKALDCDCJKDLLFGKMBFPABMPCNBGCFEJEIN = true;
+                            this._CII = true;
                             Event.current.Use();
                             this._ATM = _bi2._ATN;
-                            this.DJLIKNMAIPOALAMANDOGJHEODLHBGBBNBMIA = false;
+                            this._CGW = false;
                             this._ATO = true;
                             this.Repaint();
                             return true;
@@ -14846,8 +14823,8 @@ namespace AHO
                                 {
                                     this._ABQ.BeginEdit("Cut Selection");
                                     this._ABH = this._ABQ.DeleteText(this._ATW(), this._ABH);
-                                    bool bopcdiiiaacdailgpofhgpkbbolaifbdfado2 = this.BOPCDIIIAACDAILGPOFHGPKBBOLAIFBDFADO;
-                                    if (bopcdiiiaacdailgpofhgpkbbolaifbdfado2)
+                                    bool _CGE2 = this._CCH;
+                                    if (_CGE2)
                                     {
                                         this._ABH._ATG = (this._ABH._ATF = this.CharIndexToColumn(this._ABH._AEU, this._ABH._ABI));
                                     }
@@ -14855,9 +14832,9 @@ namespace AHO
                                     this._ABQ.EndEdit();
                                     this._ATL(null);
                                     this.AddRecentLocation(0, true);
-                                    this.GFKALDCDCJKDLLFGKMBFPABMPCNBGCFEJEIN = true;
+                                    this._CII = true;
                                     this._ATM = _bi2._ATN;
-                                    this.DJLIKNMAIPOALAMANDOGJHEODLHBGBBNBMIA = false;
+                                    this._CGW = false;
                                     this._ATO = true;
                                     this.Repaint();
                                 }
@@ -14892,8 +14869,8 @@ namespace AHO
                                             {
                                                 _ABI = this._ABH._ABI
                                             }, _ATD);
-                                            bool bopcdiiiaacdailgpofhgpkbbolaifbdfado3 = this.BOPCDIIIAACDAILGPOFHGPKBBOLAIFBDFADO;
-                                            if (bopcdiiiaacdailgpofhgpkbbolaifbdfado3)
+                                            bool _CGE3 = this._CCH;
+                                            if (_CGE3)
                                             {
                                                 this._ABH._ATG = (this._ABH._ATF = this.CharIndexToColumn(this._ABH._AEU, this._ABH._ABI));
                                             }
@@ -14901,7 +14878,7 @@ namespace AHO
                                             this._ABQ.EndEdit();
                                             this.AddRecentLocation(0, true);
                                             this._ATM = _bi2._ATN;
-                                            this.DJLIKNMAIPOALAMANDOGJHEODLHBGBBNBMIA = false;
+                                            this._CGW = false;
                                             this._ATO = true;
                                             this.Repaint();
                                         }
@@ -14936,7 +14913,7 @@ namespace AHO
                         if (flag31)
                         {
                             this.CommandDuplicateLinesDown();
-                            this.GFKALDCDCJKDLLFGKMBFPABMPCNBGCFEJEIN = true;
+                            this._CII = true;
                             Event.current.Use();
                             return true;
                         }
@@ -14951,8 +14928,8 @@ namespace AHO
                         if (flag33)
                         {
                             Event.current.Use();
-                            this.JHONFKMHPKCLKLHKMOEBEHPGNBLADGBBEHIL = true;
-                            this.GFKALDCDCJKDLLFGKMBFPABMPCNBGCFEJEIN = true;
+                            this._CBE = true;
+                            this._CII = true;
                             this.Repaint();
                             return true;
                         }
@@ -14963,37 +14940,37 @@ namespace AHO
         }
 
         // Token: 0x040002A4 RID: 676
-        private GUIContent NCNKKLKOFJAKAPPFFHMDALGLDGPBKGLCNIIA = new GUIContent();
+        private GUIContent _CAR = new GUIContent();
 
         // Token: 0x040002A5 RID: 677
-        private static Texture2D NLKLFFEHGAOCPBJMKILBAJBPHJMHBJEKHOFA;
+        private static Texture2D _CEG;
 
         // Token: 0x040002A6 RID: 678
-        private static Texture2D PFGMEJLLJPMAPPHJDBPLAODICICMBLHNKKAB;
+        private static Texture2D _CEH;
 
         // Token: 0x040002A7 RID: 679
-        private static Texture2D FJHJMLPMPICJDJHGPHKCHLPDABECAPHNLBDL;
+        private static Texture2D _CED;
 
         // Token: 0x040002A8 RID: 680
-        private static Texture2D IKAJMFCHNHPALEOMJJLHJFIOOABGCPIIBMMF;
+        private static Texture2D _CEE;
 
         // Token: 0x040002A9 RID: 681
-        private static Texture2D PKNNMKEEKOEEDPPADOBGGMNPANFDLFEKELML;
+        private static Texture2D _CEF;
 
         // Token: 0x040002AA RID: 682
-        private static char[] JHCFMJHGFHIGMNHFMLDCNLHAMGHANGOPFJNN = new char[] { ' ', '\t' };
+        private static char[] _CHC = new char[] { ' ', '\t' };
 
         // Token: 0x040002AB RID: 683
         internal _bb6 _ALP;
 
         // Token: 0x040002AC RID: 684
-        private bool LFGCFFNKDEDPOGFLAKNDCPHCNEDJKMPJMDFG = true;
+        private bool _CIY = true;
 
         // Token: 0x040002AD RID: 685
-        private List<int> CFGMIHPKGHMFFINDHELODHEJGENHNKBBHPGK = new List<int>();
+        private List<int> _CJB = new List<int>();
 
         // Token: 0x040002AE RID: 686
-        private bool FLHMMGOGABACNGEBPCFEFGPMFNAKDPIGLABB = false;
+        private bool _CIU = false;
 
         // Token: 0x040002AF RID: 687
         internal static List<string> BGBI = new List<string> { "VS Dark with VA X", "Xcode" };
@@ -15001,15 +14978,15 @@ namespace AHO
         // Token: 0x040002B0 RID: 688
         internal static List<Theme> BPDG = new List<Theme>
         {
-            KPODIDCKKJDLNODNNDDKCACKFJBBAEEKMGKN.OCJCCBBKNNLIAJBPBMMFHLHIAJEAFBMOIOFM,
-            MOIA.OCJCCBBKNNLIAJBPBMMFHLHIAJEAFBMOIOFM
+            _CLR._CLS,
+            MOIA._CLS
         };
 
         // Token: 0x040002B1 RID: 689
-        private static Theme LMHCAPKMBCKPJCOFDJBKMEFJDCENENGPPKKN;
+        private static Theme _CEJ;
 
         // Token: 0x040002B2 RID: 690
-        private static Theme NEJDBEMCGLKCAHENKLCFDOMOFGNHCBAIIDLF;
+        private static Theme _CEI;
 
         // Token: 0x040002B3 RID: 691
         private _bh4 _AMN;
@@ -15018,45 +14995,45 @@ namespace AHO
         private _bj5 _AN;
 
         // Token: 0x040002B5 RID: 693
-        internal static int CILPDAECBAHABNCJKNDKGGINMCLJFJKGEBAO = _bi2.BGBI.Count;
+        internal static int _CBY = _bi2.BGBI.Count;
 
         // Token: 0x040002B6 RID: 694
-        internal static string[] OFCDBBBDLNHBALAKIGKPEIMNCAECAFBMGPAP;
+        internal static string[] _CJM;
 
         // Token: 0x040002B7 RID: 695
-        private static string LJKHDAPCHJBAPKJLHCFIANJIODFKNMHPAMOC = null;
+        private static string _CCJ = null;
 
         // Token: 0x040002B8 RID: 696
-        private static bool PJOMAIJGCAPMFLENCDNIAPJJKNGLFDICIFLL = true;
+        private static bool _CDZ = true;
 
         // Token: 0x040002B9 RID: 697
-        private static bool LAMCCIBPLNNJDOIKIKNLEKKMPAEIIAHGEGDH = true;
+        private static bool _CDY = true;
 
         // Token: 0x040002BA RID: 698
         [NonSerialized]
-        private float JPPFMECFJCDOMNMEIPPNOEIICFJPJCAFJLMK = 0f;
+        private float _CGA = 0f;
 
         // Token: 0x040002BB RID: 699
         [NonSerialized]
-        private float MFHBMAGLJHOKEHCENMEKNBKPGBPBEECMDAKC = 1f;
+        private float _CKI = 1f;
 
         // Token: 0x040002BC RID: 700
         [SerializeField]
-        private bool EIMJAKFHOFKPPHINOOONMDAPCKAAPELJKAIL = true;
+        private bool _CCL = true;
 
         // Token: 0x040002BD RID: 701
-        private static _bi2._AVA FKIPBDDJJKDBAABDMLPKIGEAKBOODIOIIJEE = new _bi2._AVA();
+        private static _bi2._AVA _CCN = new _bi2._AVA();
 
         // Token: 0x040002BE RID: 702
-        private static _bi2._AVA EMGEKEIEHPNEFMOMMCIFEEGIFJDEJFOKPAFM = new _bi2._AVA();
+        private static _bi2._AVA _CCM = new _bi2._AVA();
 
         // Token: 0x040002BF RID: 703
         [NonSerialized]
-        public _bi2._AVA _ABT = _bi2.FKIPBDDJJKDBAABDMLPKIGEAKBOODIOIIJEE;
+        public _bi2._AVA _ABT = _bi2._CCN;
 
         // Token: 0x040002C0 RID: 704
         [NonSerialized]
-        private GUIStyle NADMKBHKCNFNCNCBDFLCHFIPGKOGNONBFNIL;
+        private GUIStyle _CHV;
 
         // Token: 0x040002C1 RID: 705
         [SerializeField]
@@ -15066,34 +15043,34 @@ namespace AHO
         // Token: 0x040002C2 RID: 706
         [SerializeField]
         [HideInInspector]
-        private int AINBDLCEICDFCIMEOFNOEFAHLLPOHEECOPNE;
+        private int _CCT;
 
         // Token: 0x040002C3 RID: 707
         [HideInInspector]
         [SerializeField]
-        private float LPAPJBHKOMFLPDIFIIJEHJBMOEFHHAIBGJBF;
+        private float _CCU;
 
         // Token: 0x040002C4 RID: 708
         [NonSerialized]
-        private Vector2 OKJELGDKOEAMANJFODNINLMCPLBNCFHKDNNE;
+        private Vector2 _CIV;
 
         // Token: 0x040002C5 RID: 709
-        private float BHANPCDIOAHCJKEGENEHNEHACADLNINEFAKG = 0f;
+        private float _CIZ = 0f;
 
         // Token: 0x040002C6 RID: 710
-        private int GBDPEFEOCLPNDEPKHJNLBKNGGHIDLKLJEOJK = 0;
+        private int _CKG = 0;
 
         // Token: 0x040002C7 RID: 711
         [NonSerialized]
-        private Vector2 EMPLHHGIPJCGEICPFEHNLAIMLHOHKPNCGCCO;
+        private Vector2 _CKO;
 
         // Token: 0x040002C8 RID: 712
         [NonSerialized]
-        private DateTime NJLKIOECLMPLPCIEOLCBGKJBLDPMHBCHJBJN;
+        private DateTime _CKP;
 
         // Token: 0x040002C9 RID: 713
         [NonSerialized]
-        private bool FCDDEENLBDFBMKEFLKIKPCKPAAGBJLEPHCHC;
+        private bool _CKN;
 
         // Token: 0x040002CA RID: 714
         [NonSerialized]
@@ -15101,115 +15078,115 @@ namespace AHO
 
         // Token: 0x040002CB RID: 715
         [NonSerialized]
-        private Rect JOOAGLFAONABMOABLNMAKLBBGDJOFNMGFBOB;
+        private Rect _CKF;
 
         // Token: 0x040002CC RID: 716
         [NonSerialized]
-        private float HNBKJDKPBPNIOBIGJKDEDOFLENDLKDCOCMAH = 1f;
+        private float _CKE = 1f;
 
         // Token: 0x040002CD RID: 717
         [NonSerialized]
-        private bool FAABIAGAJJGAMJHJFFCKGGMDOFHDOLELPKPN;
+        private bool _CIL;
 
         // Token: 0x040002CE RID: 718
         [NonSerialized]
-        private bool BBNCFBJBOKMILIDIMJKJKEHCDAFMDFNDNGGI;
+        private bool _CFY;
 
         // Token: 0x040002CF RID: 719
         [NonSerialized]
-        private int ANAGDFICEFNAOCIGDFJALOOGGMBIDBLNPPON;
+        private int _CKZ;
 
         // Token: 0x040002D0 RID: 720
         [CompilerGenerated]
         [DebuggerBrowsable(DebuggerBrowsableState.Never)]
-        private bool BBFLOGMOLBEMOMBADGIPFCDNLNOKPIEMCPAB;
+        private bool _CJN;
 
         // Token: 0x040002D1 RID: 721
         [NonSerialized]
-        private EditorWindow OGJMAADHJNFCLONPJGOCCAKPODNCOKEOJFMF;
+        private EditorWindow _CHX;
 
         // Token: 0x040002D2 RID: 722
         [DebuggerBrowsable(DebuggerBrowsableState.Never)]
         [CompilerGenerated]
-        private Vector2 NCOGBBOAIHDPGKJIFPBILAHCAKNBMFGPJPML;
+        private Vector2 _CJP;
 
         // Token: 0x040002D3 RID: 723
-        private Dictionary<string, float> PKFNCAIDJDMDDHBBFMKAGPDLNGLMMHKHHFOD = new Dictionary<string, float>();
+        private Dictionary<string, float> _CEA = new Dictionary<string, float>();
 
         // Token: 0x040002D4 RID: 724
-        private bool BOPCDIIIAACDAILGPOFHGPKBBOLAIFBDFADO;
+        private bool _CCH;
 
         // Token: 0x040002D5 RID: 725
-        private static readonly int POLEBJDFFKNDNEPLJLCBHAFEMDIOHJCFICJF = "Button".GetHashCode();
+        private static readonly int _CLT = "Button".GetHashCode();
 
         // Token: 0x040002D6 RID: 726
         [NonSerialized]
-        public bool PKEDGKNPLDKJDFNDFLIOAEPLNNJAMOHKEHKM;
+        public bool _CDT;
 
         // Token: 0x040002D7 RID: 727
         [NonSerialized]
-        private bool HNFGMNOKDFHDBOOJNFKJEEHBPKBFIOPLMAGK = false;
+        private bool _CIA = false;
 
         // Token: 0x040002D8 RID: 728
         [NonSerialized]
-        private bool POAAHKKEFHAFHHJDHLCDIOKHAKGHNKOKPPFG = true;
+        private bool _CCI = true;
 
         // Token: 0x040002D9 RID: 729
         [SerializeField]
-        private static bool JCOIBCPNFDEEEKEJBMMLNNCHKHFFNFMKPGOP = false;
+        private static bool _CHZ = false;
 
         // Token: 0x040002DA RID: 730
-        private static string FNABLFJGDDBBCLNCLGLMABBFIFELKOGMEFFJ = string.Empty;
+        private static string _CCQ = string.Empty;
 
         // Token: 0x040002DB RID: 731
         [SerializeField]
-        private string FEDKNBJPGLNNBLCBJGPAICAGEHEAFOEDMJOD = "";
+        private string _CCR = "";
 
         // Token: 0x040002DC RID: 732
         [NonSerialized]
-        private List<GCE._AFA> DFBJCNCLBOHCOOEENDPAPNJEPKICJHFHLHFH = new List<GCE._AFA>();
+        private List<GCE._AFA> _CHN = new List<GCE._AFA>();
 
         // Token: 0x040002DD RID: 733
         [NonSerialized]
-        private int HNJLNADMDKDENNBDPEGJAIJBFAEKFABKLGJD = -1;
+        private int _CHM = -1;
 
         // Token: 0x040002DE RID: 734
         [NonSerialized]
-        private int KEGJHDFHDLGNNJHGDCGACGKHOGLEMOAPJFAH = 0;
+        private int _CHL = 0;
 
         // Token: 0x040002DF RID: 735
         [NonSerialized]
-        private bool IEBKNKNJPHMNKJBGPLICNBIKHCFFODECEOHG = false;
+        private bool _CHO = false;
 
         // Token: 0x040002E0 RID: 736
         [NonSerialized]
-        private bool LPDHPJNAHLLADJCFMGCEECABJMPHIPPIFMPC;
+        private bool _CIG;
 
         // Token: 0x040002E1 RID: 737
         [NonSerialized]
-        private float PLNPCENGAKFOMJMLMFIMLBMEBCMJAICLKBCC = 0f;
+        private float _CGY = 0f;
 
         // Token: 0x040002E2 RID: 738
         [NonSerialized]
-        private DateTime CEIOIDHACNPFGACJAEPBFOKGBDKAJDNJBOHO;
+        private DateTime _CHD;
 
         // Token: 0x040002E3 RID: 739
         [NonSerialized]
-        private GUIContent ALEFBKKGNIEBNDEELINNCPMNIEFPJDMODNML = new GUIContent();
+        private GUIContent _CHB = new GUIContent();
 
         // Token: 0x040002E4 RID: 740
         [NonSerialized]
-        private Color FDPCNBHGMAKONNHGIDPBGOCAAFAJOMNOANAH = _bi2._ALN;
+        private Color _CHA = _bi2._ALN;
 
         // Token: 0x040002E5 RID: 741
-        internal static readonly Color LPOHMAKKMINPLMFKLACCFKJDLPMPAPBBAECP = new Color32(243, 124, 119, byte.MaxValue);
+        internal static readonly Color _CHP = new Color32(243, 124, 119, byte.MaxValue);
 
         // Token: 0x040002E6 RID: 742
         internal static readonly Color _ALN = new Color32(6, 180, 238, byte.MaxValue);
 
         // Token: 0x040002E7 RID: 743
         [NonSerialized]
-        private Rect EKIIIOBHDBPDDBJFCMEGHBHLMOEGCCODHDFF;
+        private Rect _CHE;
 
         // Token: 0x040002E8 RID: 744
         [NonSerialized]
@@ -15217,41 +15194,41 @@ namespace AHO
 
         // Token: 0x040002E9 RID: 745
         [NonSerialized]
-        private _bh4 EPLFFMMBLDBGHFONANEPOMGLDJEBDGHFEKCI = null;
+        private _bh4 _CDP = null;
 
         // Token: 0x040002EA RID: 746
         [NonSerialized]
-        private string ECFNGKOPKNOCJICAIJMDNLOMFCBIADJGGDGH = null;
+        private string _CDQ = null;
 
         // Token: 0x040002EB RID: 747
         [NonSerialized]
-        private DateTime FHJLFMFHAGFPFMJLEGINHPPNDKNNANJLLHHH;
+        private DateTime _CDO;
 
         // Token: 0x040002EC RID: 748
         [NonSerialized]
-        private TextPosition DBCDHOGMLKDLIIGDJKGEMBKDOKBFHBEPOACH;
+        private TextPosition _CFV;
 
         // Token: 0x040002ED RID: 749
         [NonSerialized]
-        private TextPosition AINAPHEFHKPMIMHDICFLJBJPOPICCAJNCCAL;
+        private TextPosition _CFW;
 
         // Token: 0x040002EE RID: 750
         [NonSerialized]
-        private int DDEDCENDGNAJAOGKJCMAEGOHJHGEJMLIGKJA = -1;
+        private int _CJZ = -1;
 
         // Token: 0x040002EF RID: 751
         [NonSerialized]
-        private GCE._AFA JDIEJIOALBJFEGNLOFNIEOFHIEPHADLOHKBG;
+        private GCE._AFA _CJY;
 
         // Token: 0x040002F0 RID: 752
-        private static string[] HJEDHEAJDDEAIGLAAMLLNOFBJHJKKLLPCHJN = new string[0];
+        private static string[] _CKU = new string[0];
 
         // Token: 0x040002F1 RID: 753
         internal static bool _AKS;
 
         // Token: 0x040002F2 RID: 754
         [NonSerialized]
-        private bool PJJNCLILMNNHAGCFMAEOAHDAGGAKDOIMCAEI = true;
+        private bool _CDR = true;
 
         // Token: 0x040002F3 RID: 755
         [NonSerialized]
@@ -15265,52 +15242,52 @@ namespace AHO
         // Token: 0x040002F5 RID: 757
         [HideInInspector]
         [SerializeField]
-        private GCE._AFA GLAAHLAEKKCKGBFLOGGJOIAHHBGOIFHFLJOL = null;
+        private GCE._AFA _CGC = null;
 
         // Token: 0x040002F6 RID: 758
         [HideInInspector]
         [SerializeField]
-        private bool BODJHGOIEFMIPPGPLNBAIBNIEFNGEJODGHFL = false;
+        private bool _CBA = false;
 
         // Token: 0x040002F7 RID: 759
         [NonSerialized]
-        private bool PNBFHJBPGLJPBOMMOHFIHHJONMJLBKBGFFLL = false;
+        private bool _CDL = false;
 
         // Token: 0x040002F8 RID: 760
         [NonSerialized]
-        private bool CIOLLBEJAOJGGEDHBAFDIIEPHPNCCNJPFNCI = false;
+        private bool _CDM = false;
 
         // Token: 0x040002F9 RID: 761
         [NonSerialized]
-        private GCE._AFA GDCGAOFJJOCBOKONDOHJMAFAGPHDOEKIKLND = new GCE._AFA();
+        private GCE._AFA _CJF = new GCE._AFA();
 
         // Token: 0x040002FA RID: 762
         [NonSerialized]
-        private Vector2 FNLMKBLHLEDPNOLIJLANGCMHHAKNHDJGFCFN = Vector2.zero;
+        private Vector2 _CDC = Vector2.zero;
 
         // Token: 0x040002FB RID: 763
         [NonSerialized]
-        private Vector2 DAOLEHELIBAIPNAPOFMDOLIAOEHCLFOGLHGI = Vector2.zero;
+        private Vector2 _CDI = Vector2.zero;
 
         // Token: 0x040002FC RID: 764
         [NonSerialized]
-        private DateTime LAHBGBFFABHOMBCEKEOONHEFBNAHFPKDNLNM;
+        private DateTime _CDH;
 
         // Token: 0x040002FD RID: 765
         [NonSerialized]
-        private bool MCGNCIKLJIGDHCHFMOIJFAHKLHHKFFJKAJEA = false;
+        private bool _CDD = false;
 
         // Token: 0x040002FE RID: 766
         [NonSerialized]
-        private bool PEGFBNGNMIIMHJHBGGJMIPPGCENEDFKBJIPF = false;
+        private bool _CDE = false;
 
         // Token: 0x040002FF RID: 767
         [NonSerialized]
-        private bool DJGNBJKIOLLPFOCBADELJOOKBOBDJDHIFHLC = false;
+        private bool _CDF = false;
 
         // Token: 0x04000300 RID: 768
         [NonSerialized]
-        private bool ALLEDCEJLCOEBNDPEPFIJNFCIFIDIDNEHKFJ = false;
+        private bool _CDG = false;
 
         // Token: 0x04000301 RID: 769
         [NonSerialized]
@@ -15318,340 +15295,340 @@ namespace AHO
 
         // Token: 0x04000302 RID: 770
         [NonSerialized]
-        private _bi2.PEFGKHDNIOOJKNNHMIBNIFOKLBMEDOGOBDKD KPOKBHDGCMLBFEPIHIPEKAIPDGAAGIMNLFCD;
+        private _bi2._CCB _CCA;
 
         // Token: 0x04000303 RID: 771
         [SerializeField]
-        public List<int> KOIHKOPAJAHOJBIDDOPAPJCKBHPOGDGPOEJP = new List<int>();
+        public List<int> _CCC = new List<int>();
 
         // Token: 0x04000304 RID: 772
         [SerializeField]
-        public List<int> NCJPNOOAENPCCMAMKAFNBIIKKPBEJIMJNJKI = new List<int>();
+        public List<int> _CCD = new List<int>();
 
         // Token: 0x04000305 RID: 773
         [SerializeField]
-        public int BEOOILOKJPMGIAIFECEOEGHJCFAFCGJFJICN = 0;
+        public int _CKH = 0;
 
         // Token: 0x04000306 RID: 774
         [SerializeField]
-        private List<float> JKLCMHOFNIJEKGHFAFDFNEIMANIEOAIMBKPC;
+        private List<float> _CCG;
 
         // Token: 0x04000307 RID: 775
-        private static int MIEOJDKEHOCEGDGBNGALKEANHMLJDPKPBDEN;
+        private static int _CCW;
 
         // Token: 0x04000308 RID: 776
-        private static HashSet<Process> CNCBOMMHGCFHFIHPLKAAODEAJHLKCFAPMILL = new HashSet<Process>();
+        private static HashSet<Process> _CCX = new HashSet<Process>();
 
         // Token: 0x04000309 RID: 777
-        private static bool IBJPBLKKEKFIOKLKOAHFHFNKPAEBABFIBMEN;
+        private static bool _CCY;
 
         // Token: 0x0400030A RID: 778
-        private static EditorWindow DKJCMMDHBKEIIHAPOIPCGOGHBAKOMEGIGHPC;
+        private static EditorWindow _CCZ;
 
         // Token: 0x0400030B RID: 779
         public _bi2._AGE _AGD;
 
         // Token: 0x0400030C RID: 780
-        private static string LCACECDIEPMANKEBMJDCAGDDDCNOFOFFKPBJ;
+        private static string _CJS;
 
         // Token: 0x0400030D RID: 781
-        private static readonly GUIContent JKEGIJCLAEEMOEKPHALMICPOHFLNNBDPPAIK = new GUIContent("W");
+        private static readonly GUIContent _CDX = new GUIContent("W");
 
         // Token: 0x0400030E RID: 782
         [NonSerialized]
-        private bool IJHPBGAKHCDFMHNJBPIKHIBLJKELODMJBKIK = false;
+        private bool _CJG = false;
 
         // Token: 0x0400030F RID: 783
         [NonSerialized]
-        private GCE._AFA FJPJHHHPDBGHFLKJKMKBLKJDJEMHAHPODLBA;
+        private GCE._AFA _CJH;
 
         // Token: 0x04000310 RID: 784
         [NonSerialized]
-        private GCE._AFA DKELKEIMAPNONDDGGMONPPBABKHIJADBIGIG;
+        private GCE._AFA _CJI;
 
         // Token: 0x04000311 RID: 785
         [NonSerialized]
-        private bool KOLAGFCMKEFOAKDPPHCEBJPFDNEGLGMBLODK = false;
+        private bool _CJC = false;
 
         // Token: 0x04000312 RID: 786
         [NonSerialized]
-        private bool BLGGAMPHPAAEJEABCOGEBGGCAMIEELCDPMNE = false;
+        private bool _CIS = false;
 
         // Token: 0x04000313 RID: 787
         [NonSerialized]
-        private int AKNDCMEKCLNECEIINAOBBODFNCODAADFNILP = -1;
+        private int _CIW = -1;
 
         // Token: 0x04000314 RID: 788
         [NonSerialized]
-        private int MDKDMJHJKJKGBMLNFDHCKDIJDONPLLKDFGKC = -1;
+        private int _CJA = -1;
 
         // Token: 0x04000315 RID: 789
         [NonSerialized]
-        internal static DateTime EPOKGOLNPBHMELMJEOKOLPHGMLINFJCCFMMP;
+        internal static DateTime _CJJ;
 
         // Token: 0x04000316 RID: 790
         [NonSerialized]
-        public SyntaxToken GPLPKMAECBMBIFJFHBAOKAKOILAEHLNFKIII;
+        public SyntaxToken _CDU;
 
         // Token: 0x04000317 RID: 791
         [NonSerialized]
-        private Rect HMBHHLIKJCBCEFKDGKPNLHMOKOOLHJDKLBOL;
+        private Rect _CDW;
 
         // Token: 0x04000318 RID: 792
         [NonSerialized]
-        public DateTime OEDBMEGKONIDNGNNNBOJKCNPNCEJPOGPBNHC;
+        public DateTime _CDV;
 
         // Token: 0x04000319 RID: 793
-        public _bk9 ADJPMDHKMMDMAGNDGAHMHFBBEEALGMEDJGFP;
+        public _bk9 _CDA;
 
         // Token: 0x0400031A RID: 794
-        public _bk9 KBBCMMCMDLMOHHGNAPNIJGLHBLBGGPODLFEB;
+        public _bk9 _CBC;
 
         // Token: 0x0400031B RID: 795
         [NonSerialized]
-        private GCE._AFA MGLMBDNKELHNGEPMGCMBLIGJGEOLPCLHKPBN = new GCE._AFA();
+        private GCE._AFA _CJD = new GCE._AFA();
 
         // Token: 0x0400031C RID: 796
         [NonSerialized]
-        private GCE._AFA GHAALLBLGMBDHHPIMPOIIIDIJCJBGDDBKHIC = new GCE._AFA();
+        private GCE._AFA _CIP = new GCE._AFA();
 
         // Token: 0x0400031D RID: 797
         [NonSerialized]
-        private GCE._AFA DGFPNNENOAAGOMLLCKFKADELBMKMIEIFNJBJ = new GCE._AFA();
+        private GCE._AFA _CIR = new GCE._AFA();
 
         // Token: 0x0400031E RID: 798
         [SerializeField]
-        private List<string> FDJNLNLEAGGCEHMOOPKBCCCLCKEMHMBENEAF = new List<string>();
+        private List<string> _CGD = new List<string>();
 
         // Token: 0x0400031F RID: 799
-        private _ba4 EEJFFFONEBHEFJKECHMCKDFAFABLNECBNBDO;
+        private _ba4 _CBB;
 
         // Token: 0x04000320 RID: 800
         [NonSerialized]
-        private _bh4 OOKEDGDAPFGOMCMDMNKICHAECDBNCBGJNMKN;
+        private _bh4 _CGF;
 
         // Token: 0x04000321 RID: 801
         [NonSerialized]
-        private TextPosition EGKFACOBOCJNEILBKNNIKOJMKGJHNFAHPJDN;
+        private TextPosition _CGG;
 
         // Token: 0x04000322 RID: 802
         [NonSerialized]
-        private Rect MEBADINKGFMGNLFBPFEOMIEJLMDPMOLFCOAB;
+        private Rect _CGH;
 
         // Token: 0x04000323 RID: 803
-        private static int COAPOMHMLBIKCFLNDDEIJBBPBHFBFFEKOHLH = "ScrollView".GetHashCode();
+        private static int _CLH = "ScrollView".GetHashCode();
 
         // Token: 0x04000324 RID: 804
-        private static int DJPMGBHJLNGIAAEIKDPJIEPEELOPHLFAOHIK = "Slider".GetHashCode();
+        private static int _CLP = "Slider".GetHashCode();
 
         // Token: 0x04000325 RID: 805
-        private static int CJKCFJLLJFNHBJPEAPKGPFPCNBGNDOJBCIID = "RepeatButton".GetHashCode();
+        private static int _CLQ = "RepeatButton".GetHashCode();
 
         // Token: 0x04000326 RID: 806
-        private static GUIStyle JPIEFGLNHCBCDGGCBGJDOHCNCPPKPBKEKILD;
+        private static GUIStyle _CLF;
 
         // Token: 0x04000327 RID: 807
-        private static GUIStyle LKPFEIOPLGKOINOFJGHJGEGOPNIHGHHHDCML;
+        private static GUIStyle _CLG;
 
         // Token: 0x04000328 RID: 808
-        private static _bi2.ICMBIOEGBPCFGEOEAPHLDMPDMCPNIACDAEBC HKFCADPHFPLAOPHGPJINLJGNOKIKJMFKMFCB;
+        private static _bi2._CLJ _CLI;
 
         // Token: 0x04000329 RID: 809
         [NonSerialized]
-        private List<List<int>> LOMAMECAAIALIGHCOLCOOGEHJBAMPBLPEMKH;
+        private List<List<int>> _CCS;
 
         // Token: 0x0400032A RID: 810
-        private static readonly List<int> BJBOLEFDMGLIONMHPMDJCJEKHJKIKHJHFGDC = new List<int>();
+        private static readonly List<int> _CFX = new List<int>();
 
         // Token: 0x0400032B RID: 811
-        private EditorWindow OBGEMALIEGDPMEGFAOJCKCIMLAKLMFFNDLKH;
+        private EditorWindow _CHK;
 
         // Token: 0x0400032C RID: 812
-        private bool HGDJAMMOIBGEIGDHPGICDPHEDKLKLBGKJOFM = false;
+        private bool _CLU = false;
 
         // Token: 0x0400032D RID: 813
         public Rect _ALM;
 
         // Token: 0x0400032E RID: 814
-        private Rect LLIDNFNLGHEFNODHJHAAIMNPHDDIHJEJMKCH;
+        private Rect _CJE;
 
         // Token: 0x0400032F RID: 815
-        private static int BLPCHGOBMBLGEAPDFHEIFAEBPBCJAFEONIIC = Mathf.Abs("SiCodeView".GetHashCode());
+        private static int _CIQ = Mathf.Abs("SiCodeView".GetHashCode());
 
         // Token: 0x04000330 RID: 816
-        private Event ONLNKGAOOFOBMBIEIDHCODGLAIFOEPJMMHGA;
+        private Event _CDJ;
 
         // Token: 0x04000331 RID: 817
-        private bool FCOMEABJIHMPEJIHMAOBEGODANCJHOFGCDKI;
+        private bool _CDK;
 
         // Token: 0x04000332 RID: 818
-        private bool JHONFKMHPKCLKLHKMOEBEHPGNBLADGBBEHIL;
+        private bool _CBE;
 
         // Token: 0x04000333 RID: 819
-        private bool LLJFBDFABMBMPEBEDAKOJBDMGGFBOJEKCPKD;
+        private bool _CGM;
 
         // Token: 0x04000334 RID: 820
-        private bool GFKALDCDCJKDLLFGKMBFPABMPCNBGCFEJEIN;
+        private bool _CII;
 
         // Token: 0x04000335 RID: 821
-        private string IFOOFJEHFDEEDMEJMCKOLIBPDFBJEFLOBCEM;
+        private string _CIK;
 
         // Token: 0x04000336 RID: 822
         [NonSerialized]
-        private bool IKLLHBOIKJFIAHLFHOEAIKOEOIPKDFMKPMPH;
+        private bool _CIO;
 
         // Token: 0x04000337 RID: 823
-        private static Type GNKMGOCJJIKILOJAIHKDPGNGIHKFGFCPGOND = Type.GetType("P4Connect.Menus,P4Connect");
+        private static Type _CLV = Type.GetType("P4Connect.Menus,P4Connect");
 
         // Token: 0x04000338 RID: 824
-        private static MethodInfo[] OJDCDLPIEPHCKLBBPIMDFAPPBEEJJPPKJCGE;
+        private static MethodInfo[] _CLW;
 
         // Token: 0x04000339 RID: 825
-        private static PropertyInfo JANKLBGMKNJIIECLOOOELKFHIDBKGGKJPIAN;
+        private static PropertyInfo _CLX;
 
         // Token: 0x0400033A RID: 826
-        private GUIContent KDLLNFPMJDJLLNBHCKGJIGPICHOPAOFCMKAF = new GUIContent();
+        private GUIContent _CHS = new GUIContent();
 
         // Token: 0x0400033B RID: 827
-        private GUIContent HAIFADBGDJMADHMOCHGILGGMCJCPGEODJBPH = new GUIContent();
+        private GUIContent _CHT = new GUIContent();
 
         // Token: 0x0400033C RID: 828
-        private GUIContent JPLMCBDFMNFFHLLHIAECHLBFKNLEGBEOLBBC = new GUIContent();
+        private GUIContent _CHU = new GUIContent();
 
         // Token: 0x0400033D RID: 829
-        private GUIContent ANOBINGJIAOEAFAMODAAAGGONPMOKEGBCMLJ = new GUIContent();
+        private GUIContent _CHW = new GUIContent();
 
         // Token: 0x0400033E RID: 830
-        private static _b2 IGFEHLGDDCJOMNOLHGKLFBICAMPPMDGMAJJK;
+        private static _b2 _CJT;
 
         // Token: 0x0400033F RID: 831
-        private static bool IAGMGPLNBONFCCINLNNELHHBEJPIHBHHPGHA = true;
+        private static bool _CDB = true;
 
         // Token: 0x04000340 RID: 832
         [NonSerialized]
-        private bool LCMGIAKMDBLNMJEHGKEJJMKGHGONFFBGMCFO = true;
+        private bool _CKD = true;
 
         // Token: 0x04000341 RID: 833
-        internal static EditorWindow FCDGPNNHCEFBJKDFCKDNLICBBLOJGGIPBPIO;
+        internal static EditorWindow _CKA;
 
         // Token: 0x04000342 RID: 834
         [DebuggerBrowsable(DebuggerBrowsableState.Never)]
         [CompilerGenerated]
-        private static _bi2 LIEJDFDLPDHHMPLFMPKOANNIPICOMKPBKFCN;
+        private static _bi2 _CJU;
 
         // Token: 0x04000343 RID: 835
-        private static bool JKLAPMECMLAAJBICDAKNMBFEMBLIJGBBDGCM = false;
+        private static bool _CIM = false;
 
         // Token: 0x04000344 RID: 836
         [NonSerialized]
-        private Rect KCNPCIEKAJFBIOBEGEOCHIAELCCBKBFBCADM;
+        private Rect _CJX;
 
         // Token: 0x04000345 RID: 837
-        private List<GCE._ABW> HCOPKDNNJMCJODPEEAMFFJOHKLANGEEOCNOF;
+        private List<GCE._ABW> _CAZ;
 
         // Token: 0x04000346 RID: 838
         [NonSerialized]
-        private List<_bi2.EPAFFDDCAEGGCPDGEEBEBADBOBLMGPDEPLEA> KGNJCNNMIFPKALPOGAHDGCDKCMMDLDBDLILH = new List<_bi2.EPAFFDDCAEGGCPDGEEBEBADBOBLMGPDEPLEA>();
+        private List<_bi2._CGO> _CGN = new List<_bi2._CGO>();
 
         // Token: 0x04000347 RID: 839
-        private _bh4 EIHOAOKGDIECDKLLIHNPGPFALCCKMALIPMFP;
+        private _bh4 _CAG;
 
         // Token: 0x04000348 RID: 840
-        internal readonly List<_bi2.LCGOEHPFJAKIIHCHKLFJCHMKGJNEAJJIPKMP> EDFABJAMKHOONBEDBDMFIPINKHADJLABOKOA = new List<_bi2.LCGOEHPFJAKIIHCHKLFJCHMKGJNEAJJIPKMP>();
+        internal readonly List<_bi2._CAI> _CAH = new List<_bi2._CAI>();
 
         // Token: 0x04000349 RID: 841
-        private static GUIStyle CNPBICHBNGEHDEDGNGNKNHKJEFGMFKJKBPCM;
+        private static GUIStyle _CAC;
 
         // Token: 0x0400034A RID: 842
-        private static GUIStyle CKGHHCOKLFNM_AWHNHHDHJIGMAAHLCELHJIF;
+        private static GUIStyle _CAD;
 
         // Token: 0x0400034B RID: 843
-        private static GUIStyle HKMOIMKALMOPECMHELNEKJKCMDLMGOPMCELB;
+        private static GUIStyle _CAE;
 
         // Token: 0x0400034C RID: 844
-        private static GUIStyle FPHFIPDJDADEJBALAJFCMIPIJEOODGLEDEEP;
+        private static GUIStyle _CAF;
 
         // Token: 0x0400034D RID: 845
         [NonSerialized]
-        private readonly GUIContent DGKGFJBJNCKONKKACKJDNJPLGPCKNJDIBJBL = new GUIContent("#region ");
+        private readonly GUIContent _CAX = new GUIContent("#region ");
 
         // Token: 0x0400034E RID: 846
-        private static readonly GUIContent LLBPLBCAPNJMEDNAGOOJBIANDIBLAMGOBDLE = new GUIContent("Region");
+        private static readonly GUIContent _CAY = new GUIContent("Region");
 
         // Token: 0x0400034F RID: 847
-        private static readonly GUIContent FADGCFAIAJEFHCBLKDGGHBGJJNBKJBMIOOEM = new GUIContent();
+        private static readonly GUIContent _CAA = new GUIContent();
 
         // Token: 0x04000350 RID: 848
-        private SearchField EJIPALGACBAGINMGHOMAGBLDNJCOAKLJGPHP;
+        private SearchField _CIF;
 
         // Token: 0x04000351 RID: 849
         [NonSerialized]
-        private string FBMOFGALBJNAKOJCGHOMPOIAOMOHKNPFLACL;
+        private string _CIE;
 
         // Token: 0x04000352 RID: 850
         [NonSerialized]
-        private int JJIAPPLKBPOHJIJHNMNENIKEMLNDFKILKHKH;
+        private int _CIC;
 
         // Token: 0x04000353 RID: 851
         [NonSerialized]
-        private int KOGJPGADGOFLMJHNPBMLJCOIKHJCKGHKKNAF;
+        private int _CID;
 
         // Token: 0x04000354 RID: 852
         [NonSerialized]
-        private _bb4.DHBA DFEJMEJFBMCNDGKMAAEBPLKAAGIDNBHMMLFM;
+        private _bb4.DHBA _CDS;
 
         // Token: 0x04000355 RID: 853
         [NonSerialized]
-        private int DBPNPLAGPNIFADNFHOKFFCPKKIHHKOPIGFBG = -1;
+        private int _CBQ = -1;
 
         // Token: 0x04000356 RID: 854
-        private static List<ThemeTemplate> JMFFKMDENDGHKKBOFMDHJLMPKAKCGLBLJIFP;
+        private static List<ThemeTemplate> _CHR;
 
         // Token: 0x04000357 RID: 855
         internal static DateTime _ATN = DateTime.Now;
 
         // Token: 0x04000358 RID: 856
         [NonSerialized]
-        private bool FDILMOBIKGLOAFGDFHGBCLBHNPNHKLOKDCNN;
+        private bool _CGV;
 
         // Token: 0x04000359 RID: 857
         [NonSerialized]
-        private TextPosition CHHDGGEFPPLGNDHEEKADDPLNNJIAKMIPDKOD;
+        private TextPosition _CGS;
 
         // Token: 0x0400035A RID: 858
         [NonSerialized]
-        private TextPosition CHPBGFIBMHEHHEPCOFLHBLJABIHHBHJCPPHO;
+        private TextPosition _CGT;
 
         // Token: 0x0400035B RID: 859
         [NonSerialized]
-        private bool DJLIKNMAIPOALAMANDOGJHEODLHBGBBNBMIA;
+        private bool _CGW;
 
         // Token: 0x0400035C RID: 860
-        private static bool NALGACOOFEHEHONBNAEIKOEKDJGIODABHAAB;
+        private static bool _CLC;
 
         // Token: 0x0400035D RID: 861
-        private bool DMNDDOLDBANIGJLBJIDFEAHIIPDHJAFAALJJ;
+        private bool _CLD;
 
         // Token: 0x0400035E RID: 862
-        private float CAKHIDEDHOGABNHPLIHFBBDGGEFFNPBAMFJA;
+        private float _CLB;
 
         // Token: 0x0400035F RID: 863
-        private Rect KEEPEDCLFCGNKDCIALMFGMGDNDHNMOFBIBJJ;
+        private Rect _CLE;
 
         // Token: 0x02000058 RID: 88
         internal class _AVA
         {
             // Token: 0x04000360 RID: 864
-            public GUIStyle MNAINPPJCJGPLHBFJICPBAPKHGGPKHFKGHKI;
+            public GUIStyle _CEK;
 
             // Token: 0x04000361 RID: 865
             public GUIStyle _ABV;
 
             // Token: 0x04000362 RID: 866
-            public GUIStyle MLINBOOFJJFOOJDFIODGPBCGFAFGFGHIINAK;
+            public GUIStyle _CEM;
 
             // Token: 0x04000363 RID: 867
-            public GUIStyle LPMHKIAKCIJCOALOPOKIGFPOBAHPLGHMDGJE;
+            public GUIStyle _CEN;
 
             // Token: 0x04000364 RID: 868
             public GUIStyle _ACK;
@@ -15675,16 +15652,16 @@ namespace AHO
             public GUIStyle _ACN;
 
             // Token: 0x0400036B RID: 875
-            public GUIStyle ABFOGCOCKGPDGCECELHDDPLJPLOMFINBMDFB;
+            public GUIStyle _CEO;
 
             // Token: 0x0400036C RID: 876
-            public GUIStyle FEPCGBBLADFJIOAOEGONMDEELEFFPMAGDNLD;
+            public GUIStyle _CEP;
 
             // Token: 0x0400036D RID: 877
-            public GUIStyle AFJAELGAFCMBADAHILPMPIMHNBLJOHPBDMFL;
+            public GUIStyle _CEQ;
 
             // Token: 0x0400036E RID: 878
-            public GUIStyle NKFJNHICAHKHIKAHLOCGMGMOPDGCGCHDBEKC;
+            public GUIStyle _CER;
 
             // Token: 0x0400036F RID: 879
             public GUIStyle _ACI;
@@ -15693,31 +15670,31 @@ namespace AHO
             public GUIStyle _ACJ;
 
             // Token: 0x04000371 RID: 881
-            public GUIStyle MBNAKPHMLKEJFEHCAKCELDLDCKFHLGHAFPCM;
+            public GUIStyle _CES;
 
             // Token: 0x04000372 RID: 882
-            public GUIStyle IEHHNFHGANAAGPCGFGLGFPPIEACCGPNBCGHP;
+            public GUIStyle _CET;
 
             // Token: 0x04000373 RID: 883
-            public GUIStyle IBECDLBCDCMKNOFEGCLBDBHJLCOPJIIDOENE;
+            public GUIStyle _CEU;
 
             // Token: 0x04000374 RID: 884
-            public GUIStyle LKPEKDFLBIFFAFLONCNILICBNHJMBOHPDHOK;
+            public GUIStyle _CEV;
 
             // Token: 0x04000375 RID: 885
-            public GUIStyle CIAPHJPLJPJFPFHKIGOLEPILKEDJCEBKOGLI;
+            public GUIStyle _CEW;
 
             // Token: 0x04000376 RID: 886
-            public GUIStyle PBOJOMJKIBIKNDAOLEDPDHJIAOCOCDFBCPMG;
+            public GUIStyle _CEX;
 
             // Token: 0x04000377 RID: 887
-            public GUIStyle FFKKHGMKNOAEDPHBACLDPIHIAMCLDLKCHMDP;
+            public GUIStyle _CEY;
 
             // Token: 0x04000378 RID: 888
-            public GUIStyle JMJPFJGGIEEPNKMMFKFKBMEALOBACMLKKGDD;
+            public GUIStyle _CEZ;
 
             // Token: 0x04000379 RID: 889
-            public GUIStyle IDEBBOAIFDBCFICJJCOCOIBKDOPNMGADPJBI;
+            public GUIStyle _CFA;
 
             // Token: 0x0400037A RID: 890
             public GUIStyle _ACC;
@@ -15732,64 +15709,64 @@ namespace AHO
             public GUIStyle _ACB;
 
             // Token: 0x0400037E RID: 894
-            public GUIStyle BBOLFNEKGDIMCIMDGFBDONKOHIMAFOOONJLI;
+            public GUIStyle _CFB;
 
             // Token: 0x0400037F RID: 895
-            public GUIStyle AIIPFPOMAMLAHOHOBJPDNLMGIIIEFJAIEALI;
+            public GUIStyle _CFC;
 
             // Token: 0x04000380 RID: 896
-            public GUIStyle FKNGDNMIFFNDKLBIMPEOABJDFILGGHFFEKNM;
+            public GUIStyle _CFD;
 
             // Token: 0x04000381 RID: 897
-            public GUIStyle FKPDLHMDAGCDBKHOJAABIDBDBPCOGPOPIOJC;
+            public GUIStyle _CFG;
 
             // Token: 0x04000382 RID: 898
-            public GUIStyle IICGPMAMBHPFKAIGDAKKDFCDPAKDCNNGOAOF;
+            public GUIStyle _CFH;
 
             // Token: 0x04000383 RID: 899
-            public GUIStyle DHLIECBFHFIOLJODNKHAIFAMDEFLDKDPBLJH;
+            public GUIStyle _CFE;
 
             // Token: 0x04000384 RID: 900
-            public GUIStyle OAHNJENALMPCNGMEAFGPAOPDCFGGJFIMDLCK;
+            public GUIStyle _CFI;
 
             // Token: 0x04000385 RID: 901
-            public GUIStyle LCGFHIJHPLEJMFEAAMLOGEKDKLGPGLCKJHKN;
+            public GUIStyle _CFJ;
 
             // Token: 0x04000386 RID: 902
-            public GUIStyle MGHDGDOIBIKACABHDJMHENIACBOCIOEAJJJH;
+            public GUIStyle _CFK;
 
             // Token: 0x04000387 RID: 903
-            public GUIStyle EEHEIDPKDPFECCNEMEAOEDHDMOCMLHIMGBIO;
+            public GUIStyle _CEL;
 
             // Token: 0x04000388 RID: 904
-            public GUIStyle MNIDILAEJNANLBJOKMBBFAPKMBLJPHDOOKHC;
+            public GUIStyle _CFL;
 
             // Token: 0x04000389 RID: 905
-            public GUIStyle FIJCFMEBKKCPHHDEICAFJGNHALMFHHDFMJCF;
+            public GUIStyle _CFM;
 
             // Token: 0x0400038A RID: 906
-            public GUIStyle EFFPDLCPLHCEJBKAEOGCFKCJMEJJCGNOEAJC;
+            public GUIStyle _CFN;
 
             // Token: 0x0400038B RID: 907
-            public GUIStyle LMJFOHEICFJKKJDPABNJJMODGIAGGCDCGIDG;
+            public GUIStyle _CFO;
 
             // Token: 0x0400038C RID: 908
-            public GUIStyle MENCECOHFEKPKPJCHBPHPLNADBLKDNLOFBMJ;
+            public GUIStyle _CFP;
 
             // Token: 0x0400038D RID: 909
-            public GUIStyle EDPELGLOHBEDHHGMAFPGLEMGKFNEHIMBHLBE;
+            public GUIStyle _CFQ;
 
             // Token: 0x0400038E RID: 910
-            public GUIStyle CDKDJIHGIELEEDGFLEBKFMAICBICIONFMOMH;
+            public GUIStyle _CFR;
 
             // Token: 0x0400038F RID: 911
-            public GUIStyle GJOPALBNPHOPNFJCBICFHFIBJHAADOBENDJP;
+            public GUIStyle _CFS;
 
             // Token: 0x04000390 RID: 912
-            public GUIStyle EABGPJDDADACGMHPOGOFNJCDNONPNHNPJIMK;
+            public GUIStyle _CFT;
 
             // Token: 0x04000391 RID: 913
-            public GUIStyle OFHACCJKFEDEPPHBLPBAGNDAFFAJECCJDKBK;
+            public GUIStyle _CFF;
 
             // Token: 0x04000392 RID: 914
             public GUIStyle _AFT;
@@ -15798,14 +15775,14 @@ namespace AHO
             public GUIStyle _AFU;
 
             // Token: 0x04000394 RID: 916
-            public GUIStyle KCCBAEPPGOEMGHPDPNEBIICOFIIMDOFPPNPP;
+            public GUIStyle _CFU;
 
             // Token: 0x04000395 RID: 917
-            public GUIStyle GLLDPBLCJGHJEOCPKMGICIEJOIDFAEIKAEKE;
+            public GUIStyle _CIB;
         }
 
         // Token: 0x02000059 RID: 89
-        private enum PEFGKHDNIOOJKNNHMIBNIFOKLBMEDOGOBDKD
+        private enum _CCB
         {
 
         }
@@ -15815,10 +15792,10 @@ namespace AHO
         public delegate void _AGE();
 
         // Token: 0x0200005B RID: 91
-        private class OIPMPHOIKPLMAMMOLNHCFKPGJKPLDOKECMAK : _bh4
+        private class _CBL : _bh4
         {
             // Token: 0x06000346 RID: 838 RVA: 0x00041A9C File Offset: 0x0003FC9C
-            public OIPMPHOIKPLMAMMOLNHCFKPGJKPLDOKECMAK(string keyword)
+            public _CBL(string keyword)
             {
                 this._AW = keyword;
                 this._AT = SymbolKind.Keyword;
@@ -15826,7 +15803,7 @@ namespace AHO
         }
 
         // Token: 0x0200005C RID: 92
-        internal sealed class ICMBIOEGBPCFGEOEAPHLDMPDMCPNIACDAEBC
+        internal sealed class _CLJ
         {
             // Token: 0x06000347 RID: 839 RVA: 0x00041AB4 File Offset: 0x0003FCB4
             internal void ScrollTo(Rect position)
@@ -15859,7 +15836,7 @@ namespace AHO
                             vector = vector.normalized * maxDelta;
                         }
                         this._AFS += vector;
-                        this.BNDNMNLNGECCIIKKAGLNIPHBPMBGGLJKNKJE = true;
+                        this._CLL = true;
                         flag2 = true;
                     }
                 }
@@ -15869,17 +15846,17 @@ namespace AHO
             // Token: 0x06000349 RID: 841 RVA: 0x00041B3C File Offset: 0x0003FD3C
             internal Vector2 ScrollNeeded(Rect position)
             {
-                Rect ogbfjigaappfdgoakhcjilnilpddhgfogelp = this.OGBFJIGAAPPFDGOAKHCJILNILPDDHGFOGELP;
-                ogbfjigaappfdgoakhcjilnilpddhgfogelp.x += this._AFS.x;
-                ogbfjigaappfdgoakhcjilnilpddhgfogelp.y += this._AFS.y;
-                float num = position.width - this.OGBFJIGAAPPFDGOAKHCJILNILPDDHGFOGELP.width;
+                Rect _CLY = this._CLN;
+                _CLY.x += this._AFS.x;
+                _CLY.y += this._AFS.y;
+                float num = position.width - this._CLN.width;
                 bool flag = num > 0f;
                 if (flag)
                 {
                     position.width -= num;
                     position.x += num * 0.5f;
                 }
-                num = position.height - this.OGBFJIGAAPPFDGOAKHCJILNILPDDHGFOGELP.height;
+                num = position.height - this._CLN.height;
                 bool flag2 = num > 0f;
                 if (flag2)
                 {
@@ -15887,77 +15864,77 @@ namespace AHO
                     position.y += num * 0.5f;
                 }
                 Vector2 zero = Vector2.zero;
-                bool flag3 = position.xMax > ogbfjigaappfdgoakhcjilnilpddhgfogelp.xMax;
+                bool flag3 = position.xMax > _CLY.xMax;
                 if (flag3)
                 {
-                    zero.x += position.xMax - ogbfjigaappfdgoakhcjilnilpddhgfogelp.xMax;
+                    zero.x += position.xMax - _CLY.xMax;
                 }
                 else
                 {
-                    bool flag4 = position.xMin < ogbfjigaappfdgoakhcjilnilpddhgfogelp.xMin;
+                    bool flag4 = position.xMin < _CLY.xMin;
                     if (flag4)
                     {
-                        zero.x -= ogbfjigaappfdgoakhcjilnilpddhgfogelp.xMin - position.xMin;
+                        zero.x -= _CLY.xMin - position.xMin;
                     }
                 }
-                bool flag5 = position.yMax > ogbfjigaappfdgoakhcjilnilpddhgfogelp.yMax;
+                bool flag5 = position.yMax > _CLY.yMax;
                 if (flag5)
                 {
-                    zero.y += position.yMax - ogbfjigaappfdgoakhcjilnilpddhgfogelp.yMax;
+                    zero.y += position.yMax - _CLY.yMax;
                 }
                 else
                 {
-                    bool flag6 = position.yMin < ogbfjigaappfdgoakhcjilnilpddhgfogelp.yMin;
+                    bool flag6 = position.yMin < _CLY.yMin;
                     if (flag6)
                     {
-                        zero.y -= ogbfjigaappfdgoakhcjilnilpddhgfogelp.yMin - position.yMin;
+                        zero.y -= _CLY.yMin - position.yMin;
                     }
                 }
-                Rect cjooamffpfahkpgodofchghmjoophfmjipef = this.CJOOAMFFPFAHKPGODOFCHGHMJOOPHFMJIPEF;
-                cjooamffpfahkpgodofchghmjoophfmjipef.width = Mathf.Max(cjooamffpfahkpgodofchghmjoophfmjipef.width, this.OGBFJIGAAPPFDGOAKHCJILNILPDDHGFOGELP.width);
-                cjooamffpfahkpgodofchghmjoophfmjipef.height = Mathf.Max(cjooamffpfahkpgodofchghmjoophfmjipef.height, this.OGBFJIGAAPPFDGOAKHCJILNILPDDHGFOGELP.height);
-                zero.x = Mathf.Clamp(zero.x, cjooamffpfahkpgodofchghmjoophfmjipef.xMin - this._AFS.x, cjooamffpfahkpgodofchghmjoophfmjipef.xMax - this.OGBFJIGAAPPFDGOAKHCJILNILPDDHGFOGELP.width - this._AFS.x);
-                zero.y = Mathf.Clamp(zero.y, cjooamffpfahkpgodofchghmjoophfmjipef.yMin - this._AFS.y, cjooamffpfahkpgodofchghmjoophfmjipef.yMax - this.OGBFJIGAAPPFDGOAKHCJILNILPDDHGFOGELP.height - this._AFS.y);
+                Rect _CLZ = this._CLO;
+                _CLZ.width = Mathf.Max(_CLZ.width, this._CLN.width);
+                _CLZ.height = Mathf.Max(_CLZ.height, this._CLN.height);
+                zero.x = Mathf.Clamp(zero.x, _CLZ.xMin - this._AFS.x, _CLZ.xMax - this._CLN.width - this._AFS.x);
+                zero.y = Mathf.Clamp(zero.y, _CLZ.yMin - this._AFS.y, _CLZ.yMax - this._CLN.height - this._AFS.y);
                 return zero;
             }
 
             // Token: 0x04000397 RID: 919
-            public Rect ELLBKFOCFILNGHCCPNIIOHJBJLLFNDLPJFEM;
+            public Rect _CLM;
 
             // Token: 0x04000398 RID: 920
-            public Rect OGBFJIGAAPPFDGOAKHCJILNILPDDHGFOGELP;
+            public Rect _CLN;
 
             // Token: 0x04000399 RID: 921
-            public Rect CJOOAMFFPFAHKPGODOFCHGHMJOOPHFMJIPEF;
+            public Rect _CLO;
 
             // Token: 0x0400039A RID: 922
             public Vector2 _AFS;
 
             // Token: 0x0400039B RID: 923
-            public bool BNDNMNLNGECCIIKKAGLNIPHBPMBGGLJKNKJE;
+            public bool _CLL;
         }
 
         // Token: 0x0200005D RID: 93
-        private struct EPAFFDDCAEGGCPDGEEBEBADBOBLMGPDEPLEA
+        private struct _CGO
         {
             // Token: 0x0400039C RID: 924
-            public TextPosition OJKLJINFJBEPHBPPEABIJNJCDOPNEJGPAGND;
+            public TextPosition _CGQ;
 
             // Token: 0x0400039D RID: 925
-            public TextPosition AGJBFOPCGMOGGDJKCDLBNMJAILHEKLMGPALB;
+            public TextPosition _CGR;
         }
 
         // Token: 0x0200005E RID: 94
-        internal struct LCGOEHPFJAKIIHCHKLFJCHMKGJNEAJJIPKMP
+        internal struct _CAI
         {
             // Token: 0x0400039E RID: 926
             public _bh4 _AMN;
 
             // Token: 0x0400039F RID: 927
-            public GUIContent IJLADEDJGGFCNGLKJELKEMPGOAMJIAIBDENM;
+            public GUIContent _CAJ;
 
             // Token: 0x040003A0 RID: 928
-            public bool MACGPHIBANLBNBMKLNGPAGIFGHDICBLPINBC;
+            public bool _CAL;
         }
     }
 }

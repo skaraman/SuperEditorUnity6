@@ -13,15 +13,15 @@ namespace FEPKBIPDOHCNNFAKLHKGGCCCPGMCNPGGOCGM
         // Token: 0x060009D3 RID: 2515 RVA: 0x00105200 File Offset: 0x00103400
         static _d4()
         {
-            _bi2.AddTheme(_d4.OCJCCBBKNNLIAJBPBMMFHLHIAJEAFBMOIOFM, _d4.CMPOPFLJBNNNHDELDGDDKDJONFFGEBIGEPDL);
-            _bi2.CILPDAECBAHABNCJKNDKGGINMCLJFJKGEBAO++;
+            _bi2.AddTheme(_d4._CLS, _d4.CMPOPFLJBNNNHDELDGDDKDJONFFGEBIGEPDL);
+            _bi2._CBY++;
         }
 
         // Token: 0x04000867 RID: 2151
         private static string CMPOPFLJBNNNHDELDGDDKDJONFFGEBIGEPDL = "VS Code Monokai";
 
         // Token: 0x04000868 RID: 2152
-        internal static Theme OCJCCBBKNNLIAJBPBMMFHLHIAJEAFBMOIOFM = new Theme
+        internal static Theme _CLS = new Theme
         {
             background = new Color32(39, 40, 34, byte.MaxValue),
             text = new Color32(248, 248, 242, byte.MaxValue),

@@ -12,7 +12,7 @@ namespace AHO
     {
         // Token: 0x06000502 RID: 1282 RVA: 0x000D0A06 File Offset: 0x000CEC06
         [CompilerGenerated]
-        public _bh4 MAPALBBIIIJIGCOOHOOIFPIBFPLDBDGNCBOI()
+        public _bh4 _CBS()
         {
             return this.IFHBDILHNIBEGNMFFMBDEBMGAOBIFIOMBNOG;
         }
@@ -28,16 +28,16 @@ namespace AHO
         public _bm7(_bh4 referencedSymbolDefinition)
         {
             this.KAIFPIBBINFLPLILIMLFGAHKIJJLLGPCFMGJ(referencedSymbolDefinition);
-            this._AT = this.MAPALBBIIIJIGCOOHOOIFPIBFPLDBDGNCBOI()._AT;
-            this._AV = this.MAPALBBIIIJIGCOOHOOIFPIBFPLDBDGNCBOI()._AV;
-            this._AU = this.MAPALBBIIIJIGCOOHOOIFPIBFPLDBDGNCBOI()._AU;
-            this._AW = this.MAPALBBIIIJIGCOOHOOIFPIBFPLDBDGNCBOI()._AW;
+            this._AT = this._CBS()._AT;
+            this._AV = this._CBS()._AV;
+            this._AU = this._CBS()._AU;
+            this._AW = this._CBS()._AW;
         }
 
         // Token: 0x06000505 RID: 1285 RVA: 0x000D0A7C File Offset: 0x000CEC7C
         internal override _bh4 Rebind()
         {
-            this.KAIFPIBBINFLPLILIMLFGAHKIJJLLGPCFMGJ(this.MAPALBBIIIJIGCOOHOOIFPIBFPLDBDGNCBOI().Rebind());
+            this.KAIFPIBBINFLPLILIMLFGAHKIJJLLGPCFMGJ(this._CBS().Rebind());
             return base.Rebind();
         }
 
@@ -47,14 +47,14 @@ namespace AHO
         {
             get
             {
-                return this.MAPALBBIIIJIGCOOHOOIFPIBFPLDBDGNCBOI().IsExtensionMethod;
+                return this._CBS().IsExtensionMethod;
             }
         }
 
         // Token: 0x06000507 RID: 1287 RVA: 0x000D0AC8 File Offset: 0x000CECC8
         internal override _b2 TypeOfTypeParameter(_bd7 tp)
         {
-            _b2 _AAC = this.MAPALBBIIIJIGCOOHOOIFPIBFPLDBDGNCBOI().TypeOfTypeParameter(tp);
+            _b2 _AAC = this._CBS().TypeOfTypeParameter(tp);
             _bd7 _AHM = _AAC as _bd7;
             bool flag = _AHM != null;
             _b2 _AAC2;
@@ -78,7 +78,7 @@ namespace AHO
         // Token: 0x06000509 RID: 1289 RVA: 0x000D0B20 File Offset: 0x000CED20
         internal override _bh4 TypeOf()
         {
-            _b2 _AAC = this.MAPALBBIIIJIGCOOHOOIFPIBFPLDBDGNCBOI().TypeOf() as _b2;
+            _b2 _AAC = this._CBS().TypeOf() as _b2;
             _bi5 _AAE = this._AO as _bi5;
             bool flag = _AAE != null && _AAC != null;
             if (flag)
@@ -91,19 +91,19 @@ namespace AHO
         // Token: 0x0600050A RID: 1290 RVA: 0x000D0B68 File Offset: 0x000CED68
         internal override _bh4 GetGenericSymbol()
         {
-            return this.MAPALBBIIIJIGCOOHOOIFPIBFPLDBDGNCBOI().GetGenericSymbol();
+            return this._CBS().GetGenericSymbol();
         }
 
         // Token: 0x0600050B RID: 1291 RVA: 0x000D0B88 File Offset: 0x000CED88
         internal override List<_bm1> GetParameters()
         {
-            return this.MAPALBBIIIJIGCOOHOOIFPIBFPLDBDGNCBOI().GetParameters();
+            return this._CBS().GetParameters();
         }
 
         // Token: 0x0600050C RID: 1292 RVA: 0x000D0BA8 File Offset: 0x000CEDA8
         internal override List<_bd7> GetTypeParameters()
         {
-            return this.MAPALBBIIIJIGCOOHOOIFPIBFPLDBDGNCBOI().GetTypeParameters();
+            return this._CBS().GetTypeParameters();
         }
 
         // Token: 0x0600050D RID: 1293 RVA: 0x000D0BC8 File Offset: 0x000CEDC8
@@ -131,12 +131,12 @@ namespace AHO
             }
             else
             {
-                bool flag2 = this.MAPALBBIIIJIGCOOHOOIFPIBFPLDBDGNCBOI()._AO == null && this.MAPALBBIIIJIGCOOHOOIFPIBFPLDBDGNCBOI()._AGU != null;
+                bool flag2 = this._CBS()._AO == null && this._CBS()._AGU != null;
                 if (flag2)
                 {
-                    this.KAIFPIBBINFLPLILIMLFGAHKIJJLLGPCFMGJ(this.MAPALBBIIIJIGCOOHOOIFPIBFPLDBDGNCBOI().Rebind());
+                    this.KAIFPIBBINFLPLILIMLFGAHKIJJLLGPCFMGJ(this._CBS().Rebind());
                 }
-                _bh4 _AAH2 = this.MAPALBBIIIJIGCOOHOOIFPIBFPLDBDGNCBOI().ResolveMethodOverloads(argumentListNode, typeArgs, scope, invokedLeaf);
+                _bh4 _AAH2 = this._CBS().ResolveMethodOverloads(argumentListNode, typeArgs, scope, invokedLeaf);
                 bool flag3 = _AAH2 == null || _AAH2._AT != SymbolKind.Method;
                 if (flag3)
                 {

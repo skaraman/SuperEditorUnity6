@@ -5059,7 +5059,7 @@ namespace AHO
                                     bool flag171 = _BFS2 != null;
                                     if (flag171)
                                     {
-                                        _AAK2 = _BFS2.MAPALBBIIIJIGCOOHOOIFPIBFPLDBDGNCBOI() as _ba7;
+                                        _AAK2 = _BFS2._CBS() as _ba7;
                                     }
                                     bool flag172 = _AAK2 != null;
                                     int num6;
@@ -6506,7 +6506,7 @@ namespace AHO
         }
 
         // Token: 0x0600061A RID: 1562 RVA: 0x000E2A54 File Offset: 0x000E0C54
-        public void EFBEFFMKKMDKGGOJJGINKADLJOBNDGMEICFB(bool value)
+        public void _CAN(bool value)
         {
             if (value)
             {
@@ -6525,7 +6525,7 @@ namespace AHO
         }
 
         // Token: 0x0600061C RID: 1564 RVA: 0x000E2AD4 File Offset: 0x000E0CD4
-        public void MNHNMADHLFHFEMIBKHINNEDLNHDLBDGCDILB(bool value)
+        public void _CAP(bool value)
         {
             if (value)
             {
@@ -6544,7 +6544,7 @@ namespace AHO
         }
 
         // Token: 0x0600061E RID: 1566 RVA: 0x000E2B28 File Offset: 0x000E0D28
-        public void NNBOMNBKBEALNJMFFCLMGKELEOOBAGIOJFPM(bool value)
+        public void _CAO(bool value)
         {
             if (value)
             {
@@ -6784,7 +6784,7 @@ namespace AHO
         public List<FKI> _AEI;
 
         // Token: 0x0400054A RID: 1354
-        public _bh4.AANJKEKCHABAMPJEAMNFDPMGKHPFMLNPIMNB _AAG = default(_bh4.AANJKEKCHABAMPJEAMNFDPMGKHPFMLNPIMNB);
+        public _bh4._CAT _AAG = default(_bh4._CAT);
 
         // Token: 0x0400054B RID: 1355
         public static Dictionary<Type, _be8> _BEJ = new Dictionary<Type, _be8>();
@@ -6877,7 +6877,7 @@ namespace AHO
         public static _bc6 _BFJ;
 
         // Token: 0x04000569 RID: 1385
-        public static _bc6 PALGJHLFMADEDCFPKIHLMGPEBCNEJGINDGBD;
+        public static _bc6 _CBR;
 
         // Token: 0x0400056A RID: 1386
         public static _bc6 _ADE;
@@ -6896,7 +6896,7 @@ namespace AHO
 
         // Token: 0x020000D3 RID: 211
         [DefaultMember("Item")]
-        public struct AANJKEKCHABAMPJEAMNFDPMGKHPFMLNPIMNB
+        public struct _CAT
         {
             // Token: 0x1700002D RID: 45
             // (get) Token: 0x0600062C RID: 1580 RVA: 0x000E2F18 File Offset: 0x000E1118
@@ -7087,11 +7087,11 @@ namespace AHO
                             bool flag5 = _AAH._AEI != null;
                             if (flag5)
                             {
-                                List<FKI> jdlafinmknbedpejmjahhodcpgnkklelobcd = _AAH._AEI;
-                                int count = jdlafinmknbedpejmjahhodcpgnkklelobcd.Count;
+                                List<FKI> _CAV = _AAH._AEI;
+                                int count = _CAV.Count;
                                 while (count-- > 0)
                                 {
-                                    bool flag6 = !jdlafinmknbedpejmjahhodcpgnkklelobcd[count].IsValid();
+                                    bool flag6 = !_CAV[count].IsValid();
                                     if (flag6)
                                     {
                                         flag4 = false;

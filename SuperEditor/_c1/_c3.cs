@@ -115,19 +115,19 @@ namespace FEOCJICFPEHKGMMCGOCFIOPPOJIAOLJNEKNO
                 {
                     headerRect.xMax -= 20f;
                 }
-                _c3.FADGCFAIAJEFHCBLKDGGHBGJJNBKJBMIOOEM.text = "";
-                _c3.FADGCFAIAJEFHCBLKDGGHBGJJNBKJBMIOOEM.tooltip = "";
-                this.CJMJBAKOHPGCDGOAJNIAJHBCHCKMLHKJKHNL = EditorGUI.Foldout(headerRect, this.CJMJBAKOHPGCDGOAJNIAJHBCHCKMLHKJKHNL, _c3.FADGCFAIAJEFHCBLKDGGHBGJJNBKJBMIOOEM, true);
+                _c3._CAA.text = "";
+                _c3._CAA.tooltip = "";
+                this.CJMJBAKOHPGCDGOAJNIAJHBCHCKMLHKJKHNL = EditorGUI.Foldout(headerRect, this.CJMJBAKOHPGCDGOAJNIAJHBCHCKMLHKJKHNL, _c3._CAA, true);
                 int persistentEventCount = this.DGGABCKPMNOOMLMCBLMPCNGADOHFLHOMBNBG.GetPersistentEventCount();
-                _c3.FADGCFAIAJEFHCBLKDGGHBGJJNBKJBMIOOEM.text = persistentEventCount.ToString();
-                Vector2 vector = EditorStyles.label.CalcSize(_c3.FADGCFAIAJEFHCBLKDGGHBGJJNBKJBMIOOEM);
+                _c3._CAA.text = persistentEventCount.ToString();
+                Vector2 vector = EditorStyles.label.CalcSize(_c3._CAA);
                 Rect rect = headerRect;
                 headerRect.xMax -= vector.x + 4f;
                 bool flag3 = Event.current.type == 7;
                 if (flag3)
                 {
                     rect.xMin = rect.xMax - vector.x;
-                    EditorStyles.label.Draw(rect, _c3.FADGCFAIAJEFHCBLKDGGHBGJJNBKJBMIOOEM, false, false, false, false);
+                    EditorStyles.label.Draw(rect, _c3._CAA, false, false, false, false);
                 }
             }
             base.DrawEventHeader(headerRect);
@@ -324,9 +324,9 @@ namespace FEOCJICFPEHKGMMCGOCFIOPPOJIAOLJNEKNO
                         if (flag8)
                         {
                             position.height = 18f;
-                            _c3.FADGCFAIAJEFHCBLKDGGHBGJJNBKJBMIOOEM.text = "";
-                            _c3.FADGCFAIAJEFHCBLKDGGHBGJJNBKJBMIOOEM.tooltip = tooltipAttribute.tooltip;
-                            GUI.Label(position, _c3.FADGCFAIAJEFHCBLKDGGHBGJJNBKJBMIOOEM);
+                            _c3._CAA.text = "";
+                            _c3._CAA.tooltip = tooltipAttribute.tooltip;
+                            GUI.Label(position, _c3._CAA);
                         }
                     }
                 }
@@ -469,11 +469,11 @@ namespace FEOCJICFPEHKGMMCGOCFIOPPOJIAOLJNEKNO
                                     string cuPath = null;
                                     for (_bm6 _AQI = _AFF._AJW; _AQI != null; _AQI = _AQI._AMJ())
                                     {
-                                        _be7 hebiehngcbipegicgdnhcaaoamfabehlcmkf = _AQI as _be7;
-                                        bool flag21 = hebiehngcbipegicgdnhcaaoamfabehlcmkf != null;
+                                        _be7 _CHH = _AQI as _be7;
+                                        bool flag21 = _CHH != null;
                                         if (flag21)
                                         {
-                                            cuPath = hebiehngcbipegicgdnhcaaoamfabehlcmkf._AWJ;
+                                            cuPath = _CHH._AWJ;
                                             break;
                                         }
                                     }
@@ -566,7 +566,7 @@ namespace FEOCJICFPEHKGMMCGOCFIOPPOJIAOLJNEKNO
         private readonly char[] GFKIBCELJHDFBIJCGEDLLBHFJMBHAGOGCDDA = new char[] { '.', '[', ']' };
 
         // Token: 0x0400093E RID: 2366
-        private static readonly GUIContent FADGCFAIAJEFHCBLKDGGHBGJJNBKJBMIOOEM = new GUIContent();
+        private static readonly GUIContent _CAA = new GUIContent();
 
         // Token: 0x0400093F RID: 2367
         private readonly GUIStyle HNNPIDINLKJHIBEFFDJBLGACBGDHIPHJBHOF = "RL Header";

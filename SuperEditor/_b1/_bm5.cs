@@ -168,7 +168,7 @@ namespace AHO
         }
 
         // Token: 0x06000162 RID: 354 RVA: 0x00014148 File Offset: 0x00012348
-        public bool OLLEJPDNBBODLEICOBPMPIPPIJBOBOOHEKFP()
+        public bool _CBD()
         {
             return this.HMGBDHFGCCOCKEECFGJGPFALNBLAOEMPBBAI;
         }

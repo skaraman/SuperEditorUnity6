@@ -333,7 +333,7 @@ namespace AHO
             _bk5.PKGBCHECOFFCCDOJHGBBAHPEBJBPIKNKBPIP = _a2.GetInstance().GetTexture(Base64Texture.Stop);
             _bk5.JDOPNFHIMOEPCHNKNFIBGNHDOHMFHJBJPNPE = _a2.GetInstance().GetTexture(Base64Texture.ExpandAll);
             _bk5.GIIMBFLDGJKPDBOBDLJFLDMHCEINMPCJFNAJ = _a2.GetInstance().GetTexture(Base64Texture.CollapseAll);
-            _bk5.PFGMEJLLJPMAPPHJDBPLAODICICMBLHNKKAB = _a2.GetInstance().GetTexture(Base64Texture.WhitePing);
+            _bk5._CEH = _a2.GetInstance().GetTexture(Base64Texture.WhitePing);
         }
 
         // Token: 0x060000F1 RID: 241 RVA: 0x0000C3E4 File Offset: 0x0000A5E4
@@ -1132,7 +1132,7 @@ namespace AHO
                         if (flag12)
                         {
                             this.GHCCHOEHPHPEAFDECNFLPKBJPJBJGINJGFEO.Remove(this.INDMMEFLDEAJFFMAPKOLJLKJAHCADMBCOHIF[this._ADS]._AMO);
-                            this.FAABIAGAJJGAMJHJFFCKGGMDOFHDOLELPKPN = true;
+                            this._CIL = true;
                             this.HBKBKBFLOLLHNJEEENKFBBJIJCHBKDIKHPLJ = 0f;
                         }
                         else
@@ -1174,7 +1174,7 @@ namespace AHO
                                     {
                                         this.GHCCHOEHPHPEAFDECNFLPKBJPJBJGINJGFEO.Add(this.INDMMEFLDEAJFFMAPKOLJLKJAHCADMBCOHIF[this._ADS]._AMO);
                                     }
-                                    this.FAABIAGAJJGAMJHJFFCKGGMDOFHDOLELPKPN = true;
+                                    this._CIL = true;
                                     this.HBKBKBFLOLLHNJEEENKFBBJIJCHBKDIKHPLJ = 0f;
                                 }
                                 else
@@ -1221,8 +1221,8 @@ namespace AHO
                     }
                 }
                 num = Mathf.Max(0, Mathf.Min(num, this.INDMMEFLDEAJFFMAPKOLJLKJAHCADMBCOHIF.Count - 1));
-                this.KAPJGFDEIKMIJMLLNOLBIHAANHPKDKOMOOCJ = this.KAPJGFDEIKMIJMLLNOLBIHAANHPKDKOMOOCJ || this.FAABIAGAJJGAMJHJFFCKGGMDOFHDOLELPKPN || num != this._ADS;
-                this.FAABIAGAJJGAMJHJFFCKGGMDOFHDOLELPKPN = this.FAABIAGAJJGAMJHJFFCKGGMDOFHDOLELPKPN || num != this._ADS;
+                this.KAPJGFDEIKMIJMLLNOLBIHAANHPKDKOMOOCJ = this.KAPJGFDEIKMIJMLLNOLBIHAANHPKDKOMOOCJ || this._CIL || num != this._ADS;
+                this._CIL = this._CIL || num != this._ADS;
                 this._ADS = num;
                 bool flag23 = (int)Event.current.keyCode == 13 || (int)Event.current.keyCode == 271 || (int)Event.current.keyCode == 32;
                 if (flag23)
@@ -1242,7 +1242,7 @@ namespace AHO
                             else
                             {
                                 this.INDMMEFLDEAJFFMAPKOLJLKJAHCADMBCOHIF[this._ADS]._BCL = !this.INDMMEFLDEAJFFMAPKOLJLKJAHCADMBCOHIF[this._ADS]._BCL;
-                                this.FAABIAGAJJGAMJHJFFCKGGMDOFHDOLELPKPN = true;
+                                this._CIL = true;
                             }
                         }
                         else
@@ -1261,15 +1261,15 @@ namespace AHO
                                     this.GHCCHOEHPHPEAFDECNFLPKBJPJBJGINJGFEO.Add(gbcbidoiiiaefjkdnpijonchckjlgpnjklfd);
                                 }
                             }
-                            this.FAABIAGAJJGAMJHJFFCKGGMDOFHDOLELPKPN = true;
+                            this._CIL = true;
                             this.HBKBKBFLOLLHNJEEENKFBBJIJCHBKDIKHPLJ = 0f;
                         }
                     }
                 }
                 else
                 {
-                    bool faabiagajjgamjhjffckggmdofhdolelpkpn = this.FAABIAGAJJGAMJHJFFCKGGMDOFHDOLELPKPN;
-                    if (faabiagajjgamjhjffckggmdofhdolelpkpn)
+                    bool _CKJ = this._CIL;
+                    if (_CKJ)
                     {
                         Event.current.Use();
                     }
@@ -1301,7 +1301,7 @@ namespace AHO
                 _bk5.NLHGNOONBNJBGNDJKIHEBJPBNABHBONANLPE.focused.background = guistyle2.normal.background;
                 _bk5.KJGFPGANEBLIMMAEFLMJAJCMJCDGDCOADNCA = "PR Ping";
                 _bk5.CIFMDOEMJOFLMKNNCIBJHJKECJBBHIMIHODF = new GUIStyle(_bk5.KJGFPGANEBLIMMAEFLMJAJCMJCDGDCOADNCA);
-                _bk5.CIFMDOEMJOFLMKNNCIBJHJKECJBBHIMIHODF.normal.background = _bk5.PFGMEJLLJPMAPPHJDBPLAODICICMBLHNKKAB;
+                _bk5.CIFMDOEMJOFLMKNNCIBJHJKECJBBHIMIHODF.normal.background = _bk5._CEH;
                 _bk5.PCNMLIIMDPLNLDAJDPGCGLONAEBJGCJCIHHL = "ToggleMixed";
                 _bk5.CGEJNOLPKMAFIAIMIMFFOBCCBIEEOHKPKOMK = new GUIStyle(EditorStyles.toolbarButton);
                 _bk5.CGEJNOLPKMAFIAIMIMFFOBCCBIEEOHKPKOMK.fontStyle = (FontStyle)1;
@@ -1409,7 +1409,7 @@ namespace AHO
                 if (flag11)
                 {
                     this.GHCCHOEHPHPEAFDECNFLPKBJPJBJGINJGFEO.Clear();
-                    this.FAABIAGAJJGAMJHJFFCKGGMDOFHDOLELPKPN = true;
+                    this._CIL = true;
                     this.HBKBKBFLOLLHNJEEENKFBBJIJCHBKDIKHPLJ = 0f;
                 }
                 bool flag12 = this.AHPNBMHMGHAGBIACCPAIHHNFLHLOBOLBEKOO != SymbolKind.None || (this.CHGLLHDHGAAPGDJBPJOHHENNDPNCHLJCNLHK.Count > 0 && this.CHGLLHDHGAAPGDJBPJOHHENNDPNCHLJCNLHK[0].AHPNBMHMGHAGBIACCPAIHHNFLHLOBOLBEKOO > SymbolKind.None);
@@ -1436,7 +1436,7 @@ namespace AHO
                             }
                         }
                     }
-                    this.FAABIAGAJJGAMJHJFFCKGGMDOFHDOLELPKPN = true;
+                    this._CIL = true;
                     this.HBKBKBFLOLLHNJEEENKFBBJIJCHBKDIKHPLJ = 0f;
                 }
             }
@@ -1591,7 +1591,7 @@ namespace AHO
                 {
                     this._ADS = 0;
                 }
-                this.FAABIAGAJJGAMJHJFFCKGGMDOFHDOLELPKPN = true;
+                this._CIL = true;
                 this.HBKBKBFLOLLHNJEEENKFBBJIJCHBKDIKHPLJ = 0f;
                 this.KAPJGFDEIKMIJMLLNOLBIHAANHPKDKOMOOCJ = true;
             }
@@ -1675,7 +1675,7 @@ namespace AHO
                                         this.GHCCHOEHPHPEAFDECNFLPKBJPJBJGINJGFEO.Add(gbcbidoiiiaefjkdnpijonchckjlgpnjklfd);
                                     }
                                 }
-                                this.FAABIAGAJJGAMJHJFFCKGGMDOFHDOLELPKPN = true;
+                                this._CIL = true;
                                 this.HBKBKBFLOLLHNJEEENKFBBJIJCHBKDIKHPLJ = 0f;
                             }
                             bool flag10 = base.titleContent.text == "Replace";
@@ -1752,7 +1752,7 @@ namespace AHO
                             if (flag20)
                             {
                                 nldklbhokblieldlieapikhkmafeieikcnej.y = rect.yMin;
-                                this.FAABIAGAJJGAMJHJFFCKGGMDOFHDOLELPKPN = true;
+                                this._CIL = true;
                             }
                             else
                             {
@@ -1760,7 +1760,7 @@ namespace AHO
                                 if (flag21)
                                 {
                                     nldklbhokblieldlieapikhkmafeieikcnej.y = rect.yMax - this.OGCAAFGPNCHFLOBHGHIBIBNDBPDGPMNMBFAP + 20f;
-                                    this.FAABIAGAJJGAMJHJFFCKGGMDOFHDOLELPKPN = true;
+                                    this._CIL = true;
                                 }
                             }
                         }
@@ -1788,7 +1788,7 @@ namespace AHO
                                             {
                                                 this.GHCCHOEHPHPEAFDECNFLPKBJPJBJGINJGFEO.Add(iobcmjadenalgemehnfhliaillknadbhioan._AMO);
                                             }
-                                            this.FAABIAGAJJGAMJHJFFCKGGMDOFHDOLELPKPN = true;
+                                            this._CIL = true;
                                             this.HBKBKBFLOLLHNJEEENKFBBJIJCHBKDIKHPLJ = 0f;
                                         }
                                     }
@@ -1807,7 +1807,7 @@ namespace AHO
                                     }
                                 }
                                 this._ADS = i;
-                                this.FAABIAGAJJGAMJHJFFCKGGMDOFHDOLELPKPN = true;
+                                this._CIL = true;
                                 this.KAPJGFDEIKMIJMLLNOLBIHAANHPKDKOMOOCJ = true;
                                 Event.current.Use();
                             }
@@ -1963,11 +1963,11 @@ namespace AHO
             bool flag45 = (int)Event.current.type == 7;
             if (flag45)
             {
-                bool faabiagajjgamjhjffckggmdofhdolelpkpn = this.FAABIAGAJJGAMJHJFFCKGGMDOFHDOLELPKPN;
-                if (faabiagajjgamjhjffckggmdofhdolelpkpn)
+                bool _CKJ = this._CIL;
+                if (_CKJ)
                 {
                     this._AFS = nldklbhokblieldlieapikhkmafeieikcnej;
-                    this.FAABIAGAJJGAMJHJFFCKGGMDOFHDOLELPKPN = false;
+                    this._CIL = false;
                     base.Repaint();
                 }
                 this.KAPJGFDEIKMIJMLLNOLBIHAANHPKDKOMOOCJ = false;
@@ -2170,7 +2170,7 @@ namespace AHO
         private static Texture2D GIIMBFLDGJKPDBOBDLJFLDMHCEINMPCJFNAJ;
 
         // Token: 0x04000113 RID: 275
-        private static Texture2D PFGMEJLLJPMAPPHJDBPLAODICICMBLHNKKAB;
+        private static Texture2D _CEH;
 
         // Token: 0x04000114 RID: 276
         private static HashSet<_bk5> LIFGLGAGLDPMAMGNJMKMKELAEEALICEFJLGL = new HashSet<_bk5>();
@@ -2182,7 +2182,7 @@ namespace AHO
         private static int JLJAHPNMHNJFEDCLDBEEFLOEPOLOGKPAFKBI = 0;
 
         // Token: 0x04000117 RID: 279
-        private bool FAABIAGAJJGAMJHJFFCKGGMDOFHDOLELPKPN = false;
+        private bool _CIL = false;
 
         // Token: 0x0200001F RID: 31
         public enum BPKLLIEIAIMNBNMJCCECPKDEHEOODPGMPLBK

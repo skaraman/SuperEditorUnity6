@@ -13,15 +13,15 @@ namespace FEPKBIPDOHCNNFAKLHKGGCCCPGMCNPGGOCGM
         // Token: 0x060009DE RID: 2526 RVA: 0x00106F64 File Offset: 0x00105164
         static MOIA()
         {
-            _bi2.AddTheme(MOIA.OCJCCBBKNNLIAJBPBMMFHLHIAJEAFBMOIOFM, MOIA.CMPOPFLJBNNNHDELDGDDKDJONFFGEBIGEPDL);
-            _bi2.CILPDAECBAHABNCJKNDKGGINMCLJFJKGEBAO++;
+            _bi2.AddTheme(MOIA._CLS, MOIA.CMPOPFLJBNNNHDELDGDDKDJONFFGEBIGEPDL);
+            _bi2._CBY++;
         }
 
         // Token: 0x040008B4 RID: 2228
         private static string CMPOPFLJBNNNHDELDGDDKDJONFFGEBIGEPDL = "Xcode";
 
         // Token: 0x040008B5 RID: 2229
-        internal static Theme OCJCCBBKNNLIAJBPBMMFHLHIAJEAFBMOIOFM = new Theme
+        internal static Theme _CLS = new Theme
         {
             background = MOIA.NIDGGEEBJHAABBOHEPLEGOCGPPDNKPHLKNOO.AKDCOAFDMAOLBGOKECCNPNPOAHECPKMBCKPI,
             text = MOIA.NIDGGEEBJHAABBOHEPLEGOCGPPDNKPHLKNOO.FAKALHJLPDAKFIOIIDONHGAFJIKGGMFIFENI,
@@ -169,7 +169,7 @@ namespace FEPKBIPDOHCNNFAKLHKGGCCCPGMCNPGGOCGM
             internal static Color32 IDJLCGMPKNMNFDLPMPIMPHBEHJPHIKLECBDF = new Color32(231, 231, 231, byte.MaxValue);
 
             // Token: 0x040008D5 RID: 2261
-            internal static Color32 DFBJCNCLBOHCOOEENDPAPNJEPKICJHFHLHFH = new Color32(250, 241, 190, byte.MaxValue);
+            internal static Color32 _CHN = new Color32(250, 241, 190, byte.MaxValue);
         }
     }
 }

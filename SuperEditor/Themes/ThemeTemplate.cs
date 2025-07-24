@@ -71,7 +71,7 @@ namespace SuperEditor.Themes
         };
 
         // Token: 0x040008E6 RID: 2278
-        internal static Theme OCJCCBBKNNLIAJBPBMMFHLHIAJEAFBMOIOFM = new Theme
+        internal static Theme _CLS = new Theme
         {
             background = Color.white,
             text = Color.black,

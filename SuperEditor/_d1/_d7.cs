@@ -13,15 +13,15 @@ namespace FEPKBIPDOHCNNFAKLHKGGCCCPGMCNPGGOCGM
         // Token: 0x060009E5 RID: 2533 RVA: 0x00108308 File Offset: 0x00106508
         static _d7()
         {
-            _bi2.AddTheme(_d7.OCJCCBBKNNLIAJBPBMMFHLHIAJEAFBMOIOFM, _d7.CMPOPFLJBNNNHDELDGDDKDJONFFGEBIGEPDL);
-            _bi2.CILPDAECBAHABNCJKNDKGGINMCLJFJKGEBAO++;
+            _bi2.AddTheme(_d7._CLS, _d7.CMPOPFLJBNNNHDELDGDDKDJONFFGEBIGEPDL);
+            _bi2._CBY++;
         }
 
         // Token: 0x040008DA RID: 2266
         private static string CMPOPFLJBNNNHDELDGDDKDJONFFGEBIGEPDL = "Darcula";
 
         // Token: 0x040008DB RID: 2267
-        internal static Theme OCJCCBBKNNLIAJBPBMMFHLHIAJEAFBMOIOFM = new Theme
+        internal static Theme _CLS = new Theme
         {
             background = new Color32(56, 56, 56, byte.MaxValue),
             text = new Color32(183, 196, 208, byte.MaxValue),

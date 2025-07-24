@@ -13,15 +13,15 @@ namespace FEPKBIPDOHCNNFAKLHKGGCCCPGMCNPGGOCGM
         // Token: 0x060009E9 RID: 2537 RVA: 0x00108F0C File Offset: 0x0010710C
         static _da7()
         {
-            _bi2.AddTheme(_da7.OCJCCBBKNNLIAJBPBMMFHLHIAJEAFBMOIOFM, _da7.CMPOPFLJBNNNHDELDGDDKDJONFFGEBIGEPDL);
-            _bi2.CILPDAECBAHABNCJKNDKGGINMCLJFJKGEBAO++;
+            _bi2.AddTheme(_da7._CLS, _da7.CMPOPFLJBNNNHDELDGDDKDJONFFGEBIGEPDL);
+            _bi2._CBY++;
         }
 
         // Token: 0x040008DE RID: 2270
         private static string CMPOPFLJBNNNHDELDGDDKDJONFFGEBIGEPDL = "MD Brown - Dark";
 
         // Token: 0x040008DF RID: 2271
-        internal static Theme OCJCCBBKNNLIAJBPBMMFHLHIAJEAFBMOIOFM = new Theme
+        internal static Theme _CLS = new Theme
         {
             background = new Color(0.22f, 0.22f, 0.22f),
             text = new Color(0.85f, 0.85f, 0.85f),

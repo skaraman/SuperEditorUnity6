@@ -43,7 +43,7 @@ namespace AHO
         }
 
         // Token: 0x060004B9 RID: 1209 RVA: 0x000CE724 File Offset: 0x000CC924
-        public _bj5[] KLGDDLJGIKKDDHDOECDICLMOMBNLNLCDCJDH()
+        public _bj5[] _CGL()
         {
             bool flag = this.FBDPOLPFENEOLPJAIAOLLFPPDBDGGJAPEDCL == null;
             if (flag)
@@ -338,7 +338,7 @@ namespace AHO
         {
             this.BONGPABCEFDMENFDOAGEDKEJJHNFJEILMCJN = id;
             this.AHMPIKDFEFMCLFLJOEKHGBJIMNOBBAPNIJHE = id != (_bj5._AZG)0 && id != (_bj5._AZG)9 && id != (_bj5._AZG)1 && id != (_bj5._AZG)13 && id != (_bj5._AZG)5;
-            this.PPFHKDOLLCGGPJAFEKHMNABKNMLONAJANCLJ = id == (_bj5._AZG)10 || id == (_bj5._AZG)2 || id == (_bj5._AZG)14 || id == (_bj5._AZG)6;
+            this._CHJ = id == (_bj5._AZG)10 || id == (_bj5._AZG)2 || id == (_bj5._AZG)14 || id == (_bj5._AZG)6;
         }
 
         // Token: 0x060004C5 RID: 1221 RVA: 0x000CEE3C File Offset: 0x000CD03C
@@ -408,7 +408,7 @@ namespace AHO
                 if (!flag)
                 {
                     _bj5 _AOS = _bj5.FromAssembly(assembly);
-                    bool flag2 = !_AOS.PPFHKDOLLCGGPJAFEKHMNABKNMLONAJANCLJ;
+                    bool flag2 = !_AOS._CHJ;
                     if (!flag2)
                     {
                         list.Add(_AOS);
@@ -440,7 +440,7 @@ namespace AHO
                                 if (text2 == "assembly-boo-editor")
                                 {
                                     this.BONGPABCEFDMENFDOAGEDKEJJHNFJEILMCJN = (_bj5._AZG)16;
-                                    this.PPFHKDOLLCGGPJAFEKHMNABKNMLONAJANCLJ = false;
+                                    this._CHJ = false;
                                     goto IL_02DF;
                                 }
                             }
@@ -448,14 +448,14 @@ namespace AHO
                         else if (text2 == "assembly-boo-firstpass")
                         {
                             this.BONGPABCEFDMENFDOAGEDKEJJHNFJEILMCJN = (_bj5._AZG)4;
-                            this.PPFHKDOLLCGGPJAFEKHMNABKNMLONAJANCLJ = false;
+                            this._CHJ = false;
                             goto IL_02DF;
                         }
                     }
                     else if (text2 == "assembly-boo-editor-firstpass")
                     {
                         this.BONGPABCEFDMENFDOAGEDKEJJHNFJEILMCJN = (_bj5._AZG)8;
-                        this.PPFHKDOLLCGGPJAFEKHMNABKNMLONAJANCLJ = false;
+                        this._CHJ = false;
                         goto IL_02DF;
                     }
                 }
@@ -468,7 +468,7 @@ namespace AHO
                             if (text2 == "assembly-csharp-editor-firstpass")
                             {
                                 this.BONGPABCEFDMENFDOAGEDKEJJHNFJEILMCJN = (_bj5._AZG)6;
-                                this.PPFHKDOLLCGGPJAFEKHMNABKNMLONAJANCLJ = true;
+                                this._CHJ = true;
                                 goto IL_02DF;
                             }
                         }
@@ -476,14 +476,14 @@ namespace AHO
                     else if (text2 == "assembly-unityscript-editor-firstpass")
                     {
                         this.BONGPABCEFDMENFDOAGEDKEJJHNFJEILMCJN = (_bj5._AZG)7;
-                        this.PPFHKDOLLCGGPJAFEKHMNABKNMLONAJANCLJ = false;
+                        this._CHJ = false;
                         goto IL_02DF;
                     }
                 }
                 else if (text2 == "assembly-unityscript-editor")
                 {
                     this.BONGPABCEFDMENFDOAGEDKEJJHNFJEILMCJN = (_bj5._AZG)15;
-                    this.PPFHKDOLLCGGPJAFEKHMNABKNMLONAJANCLJ = false;
+                    this._CHJ = false;
                     goto IL_02DF;
                 }
             }
@@ -498,7 +498,7 @@ namespace AHO
                             if (text2 == "assembly-boo")
                             {
                                 this.BONGPABCEFDMENFDOAGEDKEJJHNFJEILMCJN = (_bj5._AZG)12;
-                                this.PPFHKDOLLCGGPJAFEKHMNABKNMLONAJANCLJ = false;
+                                this._CHJ = false;
                                 goto IL_02DF;
                             }
                         }
@@ -506,14 +506,14 @@ namespace AHO
                     else if (text2 == "assembly-csharp")
                     {
                         this.BONGPABCEFDMENFDOAGEDKEJJHNFJEILMCJN = (_bj5._AZG)10;
-                        this.PPFHKDOLLCGGPJAFEKHMNABKNMLONAJANCLJ = true;
+                        this._CHJ = true;
                         goto IL_02DF;
                     }
                 }
                 else if (text2 == "assembly-unityscript-firstpass")
                 {
                     this.BONGPABCEFDMENFDOAGEDKEJJHNFJEILMCJN = (_bj5._AZG)3;
-                    this.PPFHKDOLLCGGPJAFEKHMNABKNMLONAJANCLJ = false;
+                    this._CHJ = false;
                     goto IL_02DF;
                 }
             }
@@ -526,7 +526,7 @@ namespace AHO
                         if (text2 == "assembly-csharp-editor")
                         {
                             this.BONGPABCEFDMENFDOAGEDKEJJHNFJEILMCJN = (_bj5._AZG)14;
-                            this.PPFHKDOLLCGGPJAFEKHMNABKNMLONAJANCLJ = true;
+                            this._CHJ = true;
                             goto IL_02DF;
                         }
                     }
@@ -534,23 +534,23 @@ namespace AHO
                 else if (text2 == "assembly-csharp-firstpass")
                 {
                     this.BONGPABCEFDMENFDOAGEDKEJJHNFJEILMCJN = (_bj5._AZG)2;
-                    this.PPFHKDOLLCGGPJAFEKHMNABKNMLONAJANCLJ = true;
+                    this._CHJ = true;
                     goto IL_02DF;
                 }
             }
             else if (text2 == "assembly-unityscript")
             {
                 this.BONGPABCEFDMENFDOAGEDKEJJHNFJEILMCJN = (_bj5._AZG)11;
-                this.PPFHKDOLLCGGPJAFEKHMNABKNMLONAJANCLJ = false;
+                this._CHJ = false;
                 goto IL_02DF;
             }
             this.BONGPABCEFDMENFDOAGEDKEJJHNFJEILMCJN = (_bj5._AZG)0;
-            this.PPFHKDOLLCGGPJAFEKHMNABKNMLONAJANCLJ = false;
+            this._CHJ = false;
         IL_02DF:
             bool _AWT = this.AHMPIKDFEFMCLFLJOEKHGBJIMNOBBAPNIJHE;
             if (_AWT)
             {
-                this.PPFHKDOLLCGGPJAFEKHMNABKNMLONAJANCLJ = true;
+                this._CHJ = true;
             }
         }
 
@@ -584,10 +584,10 @@ namespace AHO
         public static _be7 GetCompilationUnitScope(string assetPath, bool forceCreateNew = false)
         {
             bool flag = assetPath == null;
-            _be7 hebiehngcbipegicgdnhcaaoamfabehlcmkf;
+            _be7 _CHH;
             if (flag)
             {
-                hebiehngcbipegicgdnhcaaoamfabehlcmkf = null;
+                _CHH = null;
             }
             else
             {
@@ -596,7 +596,7 @@ namespace AHO
                 bool flag2 = _AOS == null;
                 if (flag2)
                 {
-                    hebiehngcbipegicgdnhcaaoamfabehlcmkf = null;
+                    _CHH = null;
                 }
                 else
                 {
@@ -605,22 +605,22 @@ namespace AHO
                     {
                         _AOS.EKNILLOGEAIKLJHEMKKAGIBGBNKMFENLCAFB = new Dictionary<string, _be7>();
                     }
-                    _be7 hebiehngcbipegicgdnhcaaoamfabehlcmkf2;
-                    bool flag4 = !_AOS.EKNILLOGEAIKLJHEMKKAGIBGBNKMFENLCAFB.TryGetValue(assetPath, out hebiehngcbipegicgdnhcaaoamfabehlcmkf2) || forceCreateNew;
+                    _be7 _CHH2;
+                    bool flag4 = !_AOS.EKNILLOGEAIKLJHEMKKAGIBGBNKMFENLCAFB.TryGetValue(assetPath, out _CHH2) || forceCreateNew;
                     if (flag4)
                     {
                         if (forceCreateNew)
                         {
-                            bool flag5 = hebiehngcbipegicgdnhcaaoamfabehlcmkf2 != null && hebiehngcbipegicgdnhcaaoamfabehlcmkf2._APM != null;
+                            bool flag5 = _CHH2 != null && _CHH2._APM != null;
                             if (flag5)
                             {
                                 bool flag6 = false;
-                                List<FKI> cehjafhelfgggomkeiklndkdbnngpbkkiaed = hebiehngcbipegicgdnhcaaoamfabehlcmkf2._APM;
+                                List<FKI> cehjafhelfgggomkeiklndkdbnngpbkkiaed = _CHH2._APM;
                                 int count = cehjafhelfgggomkeiklndkdbnngpbkkiaed.Count;
                                 while (count-- > 0)
                                 {
                                     FKI _AFF = cehjafhelfgggomkeiklndkdbnngpbkkiaed[count];
-                                    hebiehngcbipegicgdnhcaaoamfabehlcmkf2.RemoveDeclaration(_AFF);
+                                    _CHH2.RemoveDeclaration(_AFF);
                                     flag6 = true;
                                 }
                                 bool flag7 = flag6;
@@ -636,23 +636,23 @@ namespace AHO
                             }
                             _AOS.EKNILLOGEAIKLJHEMKKAGIBGBNKMFENLCAFB.Remove(assetPath);
                         }
-                        hebiehngcbipegicgdnhcaaoamfabehlcmkf2 = new _be7
+                        _CHH2 = new _be7
                         {
                             _AN = _AOS,
                             _AWJ = assetPath
                         };
-                        _AOS.EKNILLOGEAIKLJHEMKKAGIBGBNKMFENLCAFB[assetPath] = hebiehngcbipegicgdnhcaaoamfabehlcmkf2;
-                        hebiehngcbipegicgdnhcaaoamfabehlcmkf2.EFI = new _bf8
+                        _AOS.EKNILLOGEAIKLJHEMKKAGIBGBNKMFENLCAFB[assetPath] = _CHH2;
+                        _CHH2.EFI = new _bf8
                         {
                             _AT = SymbolKind.Namespace,
                             _ACV = _AOS._AWL()
                         };
-                        hebiehngcbipegicgdnhcaaoamfabehlcmkf2._ACV = _AOS._AWL();
+                        _CHH2._ACV = _AOS._AWL();
                     }
-                    hebiehngcbipegicgdnhcaaoamfabehlcmkf = hebiehngcbipegicgdnhcaaoamfabehlcmkf2;
+                    _CHH = _CHH2;
                 }
             }
-            return hebiehngcbipegicgdnhcaaoamfabehlcmkf;
+            return _CHH;
         }
 
         // Token: 0x060004CC RID: 1228 RVA: 0x000CF494 File Offset: 0x000CD694
@@ -765,7 +765,7 @@ namespace AHO
                 _bh4._AY = _bj5.DefineBuiltInType(typeof(Nullable<>));
                 _bh4._BFL = _bj5.DefineBuiltInType(typeof(IEnumerable));
                 _bh4._BFJ = _bj5.DefineBuiltInType(typeof(IEnumerable<>));
-                _bh4.PALGJHLFMADEDCFPKIHLMGPEBCNEJGINDGBD = _bj5.DefineBuiltInType(typeof(Exception));
+                _bh4._CBR = _bj5.DefineBuiltInType(typeof(Exception));
                 _bh4._ADE = _bj5.DefineBuiltInType(typeof(Enum));
                 Type type2 = Type.GetType("System.Threading.Tasks.Task,mscorlib");
                 _bh4._BFT = _bj5.DefineBuiltInType(type2);
@@ -862,7 +862,7 @@ namespace AHO
         public void ResolveInReferencedAssemblies(_bb4.DHBA leaf, _bn1 namespaceDefinition, int numTypeArgs)
         {
             string text = _bh4.DecodeId(leaf._ACX.text);
-            foreach (_bj5 _AOS in this.KLGDDLJGIKKDDHDOECDICLMOMBNLNLCDCJDH())
+            foreach (_bj5 _AOS in this._CGL())
             {
                 _bn1 _APR = _AOS.FindSameNamespace(namespaceDefinition);
                 bool flag = _APR != null;
@@ -882,7 +882,7 @@ namespace AHO
         public void ResolveAttributeInReferencedAssemblies(_bb4.DHBA leaf, _bn1 namespaceDefinition)
         {
             string text = _bh4.DecodeId(leaf._ACX.text);
-            foreach (_bj5 _AOS in this.KLGDDLJGIKKDDHDOECDICLMOMBNLNLCDCJDH())
+            foreach (_bj5 _AOS in this._CGL())
             {
                 _bn1 _APR = _AOS.FindSameNamespace(namespaceDefinition);
                 bool flag = _APR != null;
@@ -910,7 +910,7 @@ namespace AHO
             bool dpffejopbcppmnlkdimelbaiddffeieonpic = _bj5.DPFFEJOPBCPPMNLKDIMELBAIDDFFEIEONPIC;
             if (!dpffejopbcppmnlkdimelbaiddffeieonpic)
             {
-                foreach (_bj5 _AOS in this.KLGDDLJGIKKDDHDOECDICLMOMBNLNLCDCJDH())
+                foreach (_bj5 _AOS in this._CGL())
                 {
                     _bn1 _APR = _AOS.FindSameNamespace(namespaceDefinition);
                     bool flag = _APR != null;
@@ -931,7 +931,7 @@ namespace AHO
             bool dpffejopbcppmnlkdimelbaiddffeieonpic = _bj5.DPFFEJOPBCPPMNLKDIMELBAIDDFFEIEONPIC;
             if (!dpffejopbcppmnlkdimelbaiddffeieonpic)
             {
-                foreach (_bj5 _AOS in this.KLGDDLJGIKKDDHDOECDICLMOMBNLNLCDCJDH())
+                foreach (_bj5 _AOS in this._CGL())
                 {
                     _bn1 _APR = _AOS.FindSameNamespace(namespaceDefinition);
                     bool flag = _APR != null;
@@ -950,7 +950,7 @@ namespace AHO
         public void CollectExtensionMethods(_bn1 namespaceDefinition, string id, KJK[] typeArgs, _b2 extendedType, HashSet<_bb3> extensionsMethods, _bm6 context)
         {
             namespaceDefinition.CollectExtensionMethods(id, typeArgs, extendedType, extensionsMethods, context);
-            foreach (_bj5 _AOS in this.KLGDDLJGIKKDDHDOECDICLMOMBNLNLCDCJDH())
+            foreach (_bj5 _AOS in this._CGL())
             {
                 _bn1 _APR = _AOS.FindSameNamespace(namespaceDefinition);
                 bool flag = _APR != null;
@@ -965,7 +965,7 @@ namespace AHO
         public void GetExtensionMethodsCompletionData(_b2 targetType, _bn1 namespaceDefinition, Dictionary<string, _bh4> data)
         {
             namespaceDefinition.GetExtensionMethodsCompletionData(targetType, data, AccessLevelMask.Internal | AccessLevelMask.Public);
-            foreach (_bj5 _AOS in this.KLGDDLJGIKKDDHDOECDICLMOMBNLNLCDCJDH())
+            foreach (_bj5 _AOS in this._CGL())
             {
                 _bn1 _APR = _AOS.FindSameNamespace(namespaceDefinition);
                 bool flag = _APR != null;
@@ -992,7 +992,7 @@ namespace AHO
                 type = null;
             }
             IEnumerator<_b2> enumerator = null;
-            int i = this.KLGDDLJGIKKDDHDOECDICLMOMBNLNLCDCJDH().Length;
+            int i = this._CGL().Length;
             for (; ; )
             {
                 int num = i;
@@ -1001,7 +1001,7 @@ namespace AHO
                 {
                     break;
                 }
-                foreach (_b2 type2 in this.KLGDDLJGIKKDDHDOECDICLMOMBNLNLCDCJDH()[i]._AWL().EnumTypes(name))
+                foreach (_b2 type2 in this._CGL()[i]._AWL().EnumTypes(name))
                 {
                     yield return type2;
                     type2 = null;
@@ -1022,7 +1022,7 @@ namespace AHO
         public readonly bool AHMPIKDFEFMCLFLJOEKHGBJIMNOBBAPNIJHE;
 
         // Token: 0x040004C7 RID: 1223
-        public readonly bool PPFHKDOLLCGGPJAFEKHMNABKNMLONAJANCLJ;
+        public readonly bool _CHJ;
 
         // Token: 0x040004C8 RID: 1224
         private readonly Assembly CNLPKBIEMCAJJODDNIDIOECPEGCPLFIFCECM;

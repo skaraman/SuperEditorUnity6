@@ -8,20 +8,20 @@ namespace FEPKBIPDOHCNNFAKLHKGGCCCPGMCNPGGOCGM
 {
     // Token: 0x02000155 RID: 341
     [InitializeOnLoad]
-    internal class KPODIDCKKJDLNODNNDDKCACKFJBBAEEKMGKN
+    internal class _CLR
     {
         // Token: 0x060009D1 RID: 2513 RVA: 0x00104BE4 File Offset: 0x00102DE4
-        static KPODIDCKKJDLNODNNDDKCACKFJBBAEEKMGKN()
+        static _CLR()
         {
-            _bi2.AddTheme(KPODIDCKKJDLNODNNDDKCACKFJBBAEEKMGKN.OCJCCBBKNNLIAJBPBMMFHLHIAJEAFBMOIOFM, KPODIDCKKJDLNODNNDDKCACKFJBBAEEKMGKN.CMPOPFLJBNNNHDELDGDDKDJONFFGEBIGEPDL);
-            _bi2.CILPDAECBAHABNCJKNDKGGINMCLJFJKGEBAO++;
+            _bi2.AddTheme(_CLR._CLS, _CLR.CMPOPFLJBNNNHDELDGDDKDJONFFGEBIGEPDL);
+            _bi2._CBY++;
         }
 
         // Token: 0x04000865 RID: 2149
         private static string CMPOPFLJBNNNHDELDGDDKDJONFFGEBIGEPDL = "VS Dark with VA X";
 
         // Token: 0x04000866 RID: 2150
-        internal static Theme OCJCCBBKNNLIAJBPBMMFHLHIAJEAFBMOIOFM = new Theme
+        internal static Theme _CLS = new Theme
         {
             background = new Color32(30, 30, 30, byte.MaxValue),
             text = new Color32(218, 218, 218, byte.MaxValue),

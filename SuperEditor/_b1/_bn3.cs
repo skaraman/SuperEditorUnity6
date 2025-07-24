@@ -270,7 +270,7 @@ namespace AHO
                                 bool flag22 = _BFS != null && _BFS._AT == SymbolKind.Method;
                                 if (flag22)
                                 {
-                                    _AAN = _BFS.MAPALBBIIIJIGCOOHOOIFPIBFPLDBDGNCBOI() as _bb3;
+                                    _AAN = _BFS._CBS() as _bb3;
                                 }
                                 bool flag23 = _AAN != null && _AAN.IsExtensionMethod;
                                 if (flag23)

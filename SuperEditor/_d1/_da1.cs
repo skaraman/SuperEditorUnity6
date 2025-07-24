@@ -13,15 +13,15 @@ namespace FEPKBIPDOHCNNFAKLHKGGCCCPGMCNPGGOCGM
         // Token: 0x060009F2 RID: 2546 RVA: 0x0010A4B4 File Offset: 0x001086B4
         static _da1()
         {
-            _bi2.AddTheme(_da1.OCJCCBBKNNLIAJBPBMMFHLHIAJEAFBMOIOFM, _da1.CMPOPFLJBNNNHDELDGDDKDJONFFGEBIGEPDL);
-            _bi2.CILPDAECBAHABNCJKNDKGGINMCLJFJKGEBAO++;
+            _bi2.AddTheme(_da1._CLS, _da1.CMPOPFLJBNNNHDELDGDDKDJONFFGEBIGEPDL);
+            _bi2._CBY++;
         }
 
         // Token: 0x040008E7 RID: 2279
         private static string CMPOPFLJBNNNHDELDGDDKDJONFFGEBIGEPDL = "Son of Obsidian";
 
         // Token: 0x040008E8 RID: 2280
-        internal static Theme OCJCCBBKNNLIAJBPBMMFHLHIAJEAFBMOIOFM = new Theme
+        internal static Theme _CLS = new Theme
         {
             background = new Color32(34, 40, 42, byte.MaxValue),
             text = new Color32(241, 242, 243, byte.MaxValue),

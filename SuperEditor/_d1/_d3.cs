@@ -13,8 +13,8 @@ namespace FEPKBIPDOHCNNFAKLHKGGCCCPGMCNPGGOCGM
         // Token: 0x060009D9 RID: 2521 RVA: 0x001062A4 File Offset: 0x001044A4
         static _d3()
         {
-            _bi2.AddTheme(_d3.OCJCCBBKNNLIAJBPBMMFHLHIAJEAFBMOIOFM, _d3.CMPOPFLJBNNNHDELDGDDKDJONFFGEBIGEPDL);
-            _bi2.CILPDAECBAHABNCJKNDKGGINMCLJFJKGEBAO++;
+            _bi2.AddTheme(_d3._CLS, _d3.CMPOPFLJBNNNHDELDGDDKDJONFFGEBIGEPDL);
+            _bi2._CBY++;
         }
 
         // Token: 0x060009DA RID: 2522 RVA: 0x0010672E File Offset: 0x0010492E
@@ -83,7 +83,7 @@ namespace FEPKBIPDOHCNNFAKLHKGGCCCPGMCNPGGOCGM
         };
 
         // Token: 0x04000870 RID: 2160
-        internal static Theme OCJCCBBKNNLIAJBPBMMFHLHIAJEAFBMOIOFM = new Theme
+        internal static Theme _CLS = new Theme
         {
             background = Color.white,
             text = Color.black,

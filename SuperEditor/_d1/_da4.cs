@@ -13,15 +13,15 @@ namespace FEPKBIPDOHCNNFAKLHKGGCCCPGMCNPGGOCGM
         // Token: 0x060009EB RID: 2539 RVA: 0x00109470 File Offset: 0x00107670
         static _da4()
         {
-            _bi2.AddTheme(_da4.OCJCCBBKNNLIAJBPBMMFHLHIAJEAFBMOIOFM, _da4.CMPOPFLJBNNNHDELDGDDKDJONFFGEBIGEPDL);
-            _bi2.CILPDAECBAHABNCJKNDKGGINMCLJFJKGEBAO++;
+            _bi2.AddTheme(_da4._CLS, _da4.CMPOPFLJBNNNHDELDGDDKDJONFFGEBIGEPDL);
+            _bi2._CBY++;
         }
 
         // Token: 0x040008E0 RID: 2272
         private static string CMPOPFLJBNNNHDELDGDDKDJONFFGEBIGEPDL = "Tango Light";
 
         // Token: 0x040008E1 RID: 2273
-        internal static Theme OCJCCBBKNNLIAJBPBMMFHLHIAJEAFBMOIOFM = new Theme
+        internal static Theme _CLS = new Theme
         {
             background = Color.white,
             text = _bg1._AYL,

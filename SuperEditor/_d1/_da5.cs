@@ -13,15 +13,15 @@ namespace FEPKBIPDOHCNNFAKLHKGGCCCPGMCNPGGOCGM
         // Token: 0x060009CF RID: 2511 RVA: 0x001046D8 File Offset: 0x001028D8
         static _da5()
         {
-            _bi2.AddTheme(_da5.OCJCCBBKNNLIAJBPBMMFHLHIAJEAFBMOIOFM, _da5.CMPOPFLJBNNNHDELDGDDKDJONFFGEBIGEPDL);
-            _bi2.CILPDAECBAHABNCJKNDKGGINMCLJFJKGEBAO++;
+            _bi2.AddTheme(_da5._CLS, _da5.CMPOPFLJBNNNHDELDGDDKDJONFFGEBIGEPDL);
+            _bi2._CBY++;
         }
 
         // Token: 0x04000863 RID: 2147
         private static string CMPOPFLJBNNNHDELDGDDKDJONFFGEBIGEPDL = "VS Light with VA X";
 
         // Token: 0x04000864 RID: 2148
-        internal static Theme OCJCCBBKNNLIAJBPBMMFHLHIAJEAFBMOIOFM = new Theme
+        internal static Theme _CLS = new Theme
         {
             background = Color.white,
             text = Color.black,

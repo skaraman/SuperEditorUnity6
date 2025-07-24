@@ -96,18 +96,18 @@ namespace AHO
             }
             _bm2._AJS _AQP = _bm2._AJS.New(_bm2._AGM(), _AQS, this._AMO);
             _AQP.MoveToLine(fromLine, base._AQT());
-            _bm2 oajkkabajliogpdkoahpmclnkpppodpdfgmj = _bm2._AGM();
+            _bm2 _CBF = _bm2._AGM();
             bool flag3 = true;
             int num = Math.Max(0, _AQP.CurrentLine() - 1);
             while (flag3 && num <= toLineInclusive)
             {
-                flag3 = oajkkabajliogpdkoahpmclnkpppodpdfgmj.ParseLine(_AQP, num);
+                flag3 = _CBF.ParseLine(_AQP, num);
                 num = _AQP.CurrentLine() - 1;
             }
             bool flag4 = flag3 && toLineInclusive == _AQS.Length - 1;
             if (flag4)
             {
-                flag3 = oajkkabajliogpdkoahpmclnkpppodpdfgmj.GetParser.ParseStep(_AQP);
+                flag3 = _CBF.GetParser.ParseStep(_AQP);
             }
             _AQP.Delete();
             for (int j = fromLine; j <= toLineInclusive; j++)
@@ -117,7 +117,7 @@ namespace AHO
                     bool flag5 = syntaxToken2.tokenKind == SyntaxToken.Kind.ContextualKeyword;
                     if (flag5)
                     {
-                        syntaxToken2.style = ((syntaxToken2.text == "value") ? this._ABQ._ABT.PBOJOMJKIBIKNDAOLEDPDHJIAOCOCDFBCPMG : this._ABQ._ABT._ACK);
+                        syntaxToken2.style = ((syntaxToken2.text == "value") ? this._ABQ._ABT._CEX : this._ABQ._ABT._ACK);
                     }
                 }
             }

@@ -71,7 +71,7 @@ namespace AHO
             {
                 int num = wParam.ToInt32();
                 EditorWindow focusedWindow = EditorWindow.focusedWindow;
-                bool flag2 = focusedWindow != null && ((GCE._ALU != null && GCE._ALU.GJDLGEEKCBIHCFECOIOFLIFNOCPOAPGNHJMK() && focusedWindow == GCE._ALU._ABJ()) || focusedWindow is _bk5);
+                bool flag2 = focusedWindow != null && ((GCE._ALU != null && GCE._ALU._CDN() && focusedWindow == GCE._ALU._ABJ()) || focusedWindow is _bk5);
                 if (flag2)
                 {
                     int num2 = num;
@@ -125,7 +125,7 @@ namespace AHO
                         return (IntPtr)1;
                     }
                     EditorWindow focusedWindow = EditorWindow.focusedWindow;
-                    bool flag4 = focusedWindow != null && ((GCE._ALU != null && (GCE._ALU.GJDLGEEKCBIHCFECOIOFLIFNOCPOAPGNHJMK() || GCE._ALU.PKEDGKNPLDKJDFNDFLIOAEPLNNJAMOHKEHKM) && focusedWindow == GCE._ALU._ABJ()) || (num == 9 && (focusedWindow is _bh1 || focusedWindow is _bk5)));
+                    bool flag4 = focusedWindow != null && ((GCE._ALU != null && (GCE._ALU._CDN() || GCE._ALU._CDT) && focusedWindow == GCE._ALU._ABJ()) || (num == 9 && (focusedWindow is _bh1 || focusedWindow is _bk5)));
                     if (flag4)
                     {
                         bool flag5 = ((int)_bn5.GetKeyState(17) & 32768) != 0;

@@ -143,8 +143,8 @@ namespace AHO
         internal override void GetMembersCompletionData(Dictionary<string, _bh4> data, BindingFlags flags, AccessLevelMask mask, _be4 context)
         {
             base.GetMembersCompletionData(data, flags, mask, context);
-            _bj5 ilbdcihgkpfpcljfbhlgkohdpnlncpijnlfg = context._AN;
-            ilbdcihgkpfpcljfbhlgkohdpnlncpijnlfg.GetMembersCompletionDataFromReferencedAssemblies(data, this, context);
+            _bj5 _CGK = context._AN;
+            _CGK.GetMembersCompletionDataFromReferencedAssemblies(data, this, context);
         }
 
         // Token: 0x0600059E RID: 1438 RVA: 0x000D639C File Offset: 0x000D459C
@@ -208,11 +208,11 @@ namespace AHO
                 bool flag = _AAH._AT == SymbolKind.Class && _AAH.IsStatic && _AAH._AHG() == 0 && (_AAH as _b2)._AF > 0 && _AAH.IsAccessible(accessLevelMask);
                 if (flag)
                 {
-                    _bh4.AANJKEKCHABAMPJEAMNFDPMGKHPFMLNPIMNB mdgiinhnoodfkloojkbbphjnnbonmlflmioa = _AAH._AAG;
+                    _bh4._CAT _CAU = _AAH._AAG;
                     int j = 0;
-                    while (j < mdgiinhnoodfkloojkbbphjnnbonmlflmioa.Count)
+                    while (j < _CAU.Count)
                     {
-                        _bh4 _AAH2 = mdgiinhnoodfkloojkbbphjnnbonmlflmioa._AAI(j);
+                        _bh4 _AAH2 = _CAU._AAI(j);
                         bool flag2 = _AAH2._AT == SymbolKind.MethodGroup;
                         if (flag2)
                         {

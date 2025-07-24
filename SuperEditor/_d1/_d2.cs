@@ -13,15 +13,15 @@ namespace FEPKBIPDOHCNNFAKLHKGGCCCPGMCNPGGOCGM
         // Token: 0x060009ED RID: 2541 RVA: 0x00109804 File Offset: 0x00107A04
         static _d2()
         {
-            _bi2.AddTheme(_d2.OCJCCBBKNNLIAJBPBMMFHLHIAJEAFBMOIOFM, _d2.CMPOPFLJBNNNHDELDGDDKDJONFFGEBIGEPDL);
-            _bi2.CILPDAECBAHABNCJKNDKGGINMCLJFJKGEBAO++;
+            _bi2.AddTheme(_d2._CLS, _d2.CMPOPFLJBNNNHDELDGDDKDJONFFGEBIGEPDL);
+            _bi2._CBY++;
         }
 
         // Token: 0x040008E2 RID: 2274
         private static string CMPOPFLJBNNNHDELDGDDKDJONFFGEBIGEPDL = "Tango Dark (Oblivion)";
 
         // Token: 0x040008E3 RID: 2275
-        internal static Theme OCJCCBBKNNLIAJBPBMMFHLHIAJEAFBMOIOFM = new Theme
+        internal static Theme _CLS = new Theme
         {
             background = _bg1._AYK,
             text = _bg1._AYG,

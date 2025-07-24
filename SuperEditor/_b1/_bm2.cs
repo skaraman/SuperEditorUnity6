@@ -29,7 +29,7 @@ namespace AHO
             bool flag = num < 0;
             if (flag)
             {
-                num = this.IJFPNIDKIFCHJMBGDKGMFEACOECKEOEOBHBM;
+                num = this._CBN;
             }
             return num;
         }
@@ -61,9 +61,9 @@ namespace AHO
         // Token: 0x0600070B RID: 1803 RVA: 0x000EADC0 File Offset: 0x000E8FC0
         private void InitializeTokenCategories()
         {
-            this.IJFPNIDKIFCHJMBGDKGMFEACOECKEOEOBHBM = this.TokenToId("IDENTIFIER");
-            this.KAHJDLLICNDGMPOOEJNMMBBFFBAMEFDPHNAD = this.TokenToId("NAME");
-            this.EFJDEBNLGANKFFGCHEOIJMBIMGFKDMLLBDAB = this.TokenToId("LITERAL");
+            this._CBN = this.TokenToId("IDENTIFIER");
+            this._CBG = this.TokenToId("NAME");
+            this._CBK = this.TokenToId("LITERAL");
             this.MEHGHAJAPILANIBMGENBFHNIAEELJDEHHCGB = this.TokenToId("INTERP_STR_WHOLE");
             this.IJMAALOAAPKFFKBPLJAEDLOOEMEKPLGGFIOJ = this.TokenToId("INTERP_STR_START");
             this.CKCBAOEDNFKIMKMDIPBBFBNCAFEBBHFNFKBI = this.TokenToId("INTERP_STR_MID");
@@ -76,10 +76,10 @@ namespace AHO
             this._AGR = this.TokenToId(".INTERFACEBODY");
             this._AGN = this.TokenToId(".NAMESPACEBODY");
             this.AHHEGIICLMMGAMIIBCOALJAANLNIDBOHPBGH = this.TokenToId(".BINARYOPERATOR");
-            this.HBPPBAGCFPCGCNFAKINAHHHIFAMJKFGMKIMC = this.TokenToId(".EXPECTEDTYPE");
-            this.IHMBKPMCAMJFLMLEAACBOHGCLGBCODFOCAFL = this.TokenToId(".MEMBERINITIALIZER");
+            this._CBI = this.TokenToId(".EXPECTEDTYPE");
+            this._CBP = this.TokenToId(".MEMBERINITIALIZER");
             this.BNNEMMKGMCLMLANHKADMEEJIOFEGNPDHGMOH = this.TokenToId(".NAMEDPARAMETER");
-            this.GHLHPHLFDEMBHDBMGMEBAMMKDPPKIHIMODCN = this.TokenToId("EOF");
+            this._CBJ = this.TokenToId("EOF");
         }
 
         // Token: 0x0600070C RID: 1804 RVA: 0x000EAF14 File Offset: 0x000E9114
@@ -1576,34 +1576,34 @@ namespace AHO
         // Token: 0x06000710 RID: 1808 RVA: 0x000F304C File Offset: 0x000F124C
         internal override _bf4 GetCompletionTypes(_bb4._AIN afterNode)
         {
-            _bf4 igbagdlmmpchfdhmhnbcifpkofpfgdokblkb = (_bf4)2054;
+            _bf4 _CBT = (_bf4)2054;
             _bb4.DHBA _AEM = afterNode as _bb4.DHBA;
             bool flag = _AEM == null;
-            _bf4 igbagdlmmpchfdhmhnbcifpkofpfgdokblkb2;
+            _bf4 _CBT2;
             if (flag)
             {
-                igbagdlmmpchfdhmhnbcifpkofpfgdokblkb2 = igbagdlmmpchfdhmhnbcifpkofpfgdokblkb;
+                _CBT2 = _CBT;
             }
             else
             {
                 bool flag2 = _AEM._ACX.text == ".";
                 if (flag2)
                 {
-                    igbagdlmmpchfdhmhnbcifpkofpfgdokblkb = (_bf4)2564;
+                    _CBT = (_bf4)2564;
                 }
                 else
                 {
                     bool flag3 = _AEM._ACX.text == "::";
                     if (flag3)
                     {
-                        igbagdlmmpchfdhmhnbcifpkofpfgdokblkb = (_bf4)518;
+                        _CBT = (_bf4)518;
                     }
                     else
                     {
                         bool flag4 = _AEM._ACX.text == "?.";
                         if (flag4)
                         {
-                            igbagdlmmpchfdhmhnbcifpkofpfgdokblkb = (_bf4)512;
+                            _CBT = (_bf4)512;
                         }
                     }
                 }
@@ -1647,7 +1647,7 @@ namespace AHO
                                 {
                                     goto IL_0318;
                                 }
-                                igbagdlmmpchfdhmhnbcifpkofpfgdokblkb &= (_bf4)(-2049);
+                                _CBT &= (_bf4)(-2049);
                                 goto IL_0318;
                             }
                             else if (!(text2 == "attributeArguments"))
@@ -1664,7 +1664,7 @@ namespace AHO
                                 {
                                     if (text2 == "namespaceOrTypeName")
                                     {
-                                        igbagdlmmpchfdhmhnbcifpkofpfgdokblkb &= (_bf4)(-2049);
+                                        _CBT &= (_bf4)(-2049);
                                     }
                                 }
                             }
@@ -1686,20 +1686,20 @@ namespace AHO
                                 {
                                     if (text2 == "argumentName")
                                     {
-                                        igbagdlmmpchfdhmhnbcifpkofpfgdokblkb = (_bf4)4096;
+                                        _CBT = (_bf4)4096;
                                         break;
                                     }
                                 }
                             }
                             else if (text2 == "typeOrGeneric")
                             {
-                                igbagdlmmpchfdhmhnbcifpkofpfgdokblkb = (_bf4)4;
+                                _CBT = (_bf4)4;
                                 break;
                             }
                         }
                         else if (text2 == "accessIdentifier")
                         {
-                            igbagdlmmpchfdhmhnbcifpkofpfgdokblkb &= (_bf4)(-3);
+                            _CBT &= (_bf4)(-3);
                             break;
                         }
                     }
@@ -1729,26 +1729,26 @@ namespace AHO
                                 bool flag5 = num == 0;
                                 if (flag5)
                                 {
-                                    igbagdlmmpchfdhmhnbcifpkofpfgdokblkb |= (_bf4)2054;
+                                    _CBT |= (_bf4)2054;
                                 }
                             }
                         }
                     }
                     else if (text2 == "namespaceName")
                     {
-                        igbagdlmmpchfdhmhnbcifpkofpfgdokblkb &= (_bf4)(-2053);
+                        _CBT &= (_bf4)(-2053);
                     }
                 IL_0318:
                     num = _AGZ._AIL;
                     _AGZ = _AGZ.OOME;
                     continue;
                 IL_02CF:
-                    igbagdlmmpchfdhmhnbcifpkofpfgdokblkb |= (_bf4)256;
+                    _CBT |= (_bf4)256;
                     break;
                 }
-                igbagdlmmpchfdhmhnbcifpkofpfgdokblkb2 = igbagdlmmpchfdhmhnbcifpkofpfgdokblkb;
+                _CBT2 = _CBT;
             }
-            return igbagdlmmpchfdhmhnbcifpkofpfgdokblkb2;
+            return _CBT2;
         }
 
         // Token: 0x06000711 RID: 1809 RVA: 0x000F339C File Offset: 0x000F159C
@@ -1772,8 +1772,8 @@ namespace AHO
         {
             while (node != null)
             {
-                _bc1 cojbeknpolcfmdflbkcmhcjkjpdhcmkmgdof = node._AJO() & flags;
-                bool flag = cojbeknpolcfmdflbkcmhcjkjpdhcmkmgdof > _bc1.None;
+                _bc1 _CHG = node._AJO() & flags;
+                bool flag = _CHG > _bc1.None;
                 if (flag)
                 {
                     return node;
@@ -1788,8 +1788,8 @@ namespace AHO
         {
             while (node != null)
             {
-                _bc1 cojbeknpolcfmdflbkcmhcjkjpdhcmkmgdof = node._AJO() & _bc1.ScopesMask;
-                bool flag = cojbeknpolcfmdflbkcmhcjkjpdhcmkmgdof > _bc1.None;
+                _bc1 _CHG = node._AJO() & _bc1.ScopesMask;
+                bool flag = _CHG > _bc1.None;
                 if (flag)
                 {
                     return node;
@@ -1804,11 +1804,11 @@ namespace AHO
         {
             while (node != null)
             {
-                _bc1 cojbeknpolcfmdflbkcmhcjkjpdhcmkmgdof = node._AJO() & _bc1.ScopesMask;
-                bool flag = cojbeknpolcfmdflbkcmhcjkjpdhcmkmgdof > _bc1.None;
+                _bc1 _CHG = node._AJO() & _bc1.ScopesMask;
+                bool flag = _CHG > _bc1.None;
                 if (flag)
                 {
-                    bool flag2 = scopeType == cojbeknpolcfmdflbkcmhcjkjpdhcmkmgdof;
+                    bool flag2 = scopeType == _CHG;
                     if (flag2)
                     {
                         return node;
@@ -1824,11 +1824,11 @@ namespace AHO
         {
             while (node != null)
             {
-                _bc1 cojbeknpolcfmdflbkcmhcjkjpdhcmkmgdof = node._AJO() & _bc1.ScopesMask;
-                bool flag = cojbeknpolcfmdflbkcmhcjkjpdhcmkmgdof > _bc1.None;
+                _bc1 _CHG = node._AJO() & _bc1.ScopesMask;
+                bool flag = _CHG > _bc1.None;
                 if (flag)
                 {
-                    bool flag2 = scopeType1 == cojbeknpolcfmdflbkcmhcjkjpdhcmkmgdof || scopeType2 == cojbeknpolcfmdflbkcmhcjkjpdhcmkmgdof;
+                    bool flag2 = scopeType1 == _CHG || scopeType2 == _CHG;
                     if (flag2)
                     {
                         return node;
@@ -1844,11 +1844,11 @@ namespace AHO
         {
             while (node != null)
             {
-                _bc1 cojbeknpolcfmdflbkcmhcjkjpdhcmkmgdof = node._AJO() & _bc1.ScopesMask;
-                bool flag = cojbeknpolcfmdflbkcmhcjkjpdhcmkmgdof > _bc1.None;
+                _bc1 _CHG = node._AJO() & _bc1.ScopesMask;
+                bool flag = _CHG > _bc1.None;
                 if (flag)
                 {
-                    bool flag2 = scopeType1 == cojbeknpolcfmdflbkcmhcjkjpdhcmkmgdof || scopeType2 == cojbeknpolcfmdflbkcmhcjkjpdhcmkmgdof || scopeType3 == cojbeknpolcfmdflbkcmhcjkjpdhcmkmgdof;
+                    bool flag2 = scopeType1 == _CHG || scopeType2 == _CHG || scopeType3 == _CHG;
                     if (flag2)
                     {
                         return node;
@@ -1876,21 +1876,21 @@ namespace AHO
                 {
                     _bb4._ACW _AGZ = _bm2.EnclosingSemanticNode(node.OOME, _bc1.ScopesMask);
                     _bm6 nodeScope = _bm2.GetNodeScope(_AGZ, fileName);
-                    _bc1 cojbeknpolcfmdflbkcmhcjkjpdhcmkmgdof = node._AJO() & _bc1.ScopesMask;
-                    _bc1 cojbeknpolcfmdflbkcmhcjkjpdhcmkmgdof2 = cojbeknpolcfmdflbkcmhcjkjpdhcmkmgdof;
-                    _bc1 cojbeknpolcfmdflbkcmhcjkjpdhcmkmgdof3 = cojbeknpolcfmdflbkcmhcjkjpdhcmkmgdof2;
-                    if (cojbeknpolcfmdflbkcmhcjkjpdhcmkmgdof3 <= _bc1.CodeBlockScope)
+                    _bc1 _CHG = node._AJO() & _bc1.ScopesMask;
+                    _bc1 _CHG2 = _CHG;
+                    _bc1 _CHG3 = _CHG2;
+                    if (_CHG3 <= _bc1.CodeBlockScope)
                     {
                         FKI _AFF;
-                        if (cojbeknpolcfmdflbkcmhcjkjpdhcmkmgdof3 <= _bc1.InterfaceBodyScope)
+                        if (_CHG3 <= _bc1.InterfaceBodyScope)
                         {
-                            if (cojbeknpolcfmdflbkcmhcjkjpdhcmkmgdof3 <= _bc1.TypeParameterConstraintsScope)
+                            if (_CHG3 <= _bc1.TypeParameterConstraintsScope)
                             {
-                                if (cojbeknpolcfmdflbkcmhcjkjpdhcmkmgdof3 <= _bc1.NamespaceBodyScope)
+                                if (_CHG3 <= _bc1.NamespaceBodyScope)
                                 {
-                                    if (cojbeknpolcfmdflbkcmhcjkjpdhcmkmgdof3 != _bc1.ScopesBegin)
+                                    if (_CHG3 != _bc1.ScopesBegin)
                                     {
-                                        if (cojbeknpolcfmdflbkcmhcjkjpdhcmkmgdof3 != _bc1.NamespaceBodyScope)
+                                        if (_CHG3 != _bc1.NamespaceBodyScope)
                                         {
                                             goto IL_0794;
                                         }
@@ -1915,9 +1915,9 @@ namespace AHO
                                         goto IL_07CB;
                                     }
                                 }
-                                else if (cojbeknpolcfmdflbkcmhcjkjpdhcmkmgdof3 != _bc1.ClassBaseScope)
+                                else if (_CHG3 != _bc1.ClassBaseScope)
                                 {
-                                    if (cojbeknpolcfmdflbkcmhcjkjpdhcmkmgdof3 != _bc1.TypeParameterConstraintsScope)
+                                    if (_CHG3 != _bc1.TypeParameterConstraintsScope)
                                     {
                                         goto IL_0794;
                                     }
@@ -1927,26 +1927,26 @@ namespace AHO
                                     goto IL_07CB;
                                 }
                             }
-                            else if (cojbeknpolcfmdflbkcmhcjkjpdhcmkmgdof3 <= _bc1.StructInterfacesScope)
+                            else if (_CHG3 <= _bc1.StructInterfacesScope)
                             {
-                                if (cojbeknpolcfmdflbkcmhcjkjpdhcmkmgdof3 == _bc1.ClassBodyScope)
+                                if (_CHG3 == _bc1.ClassBodyScope)
                                 {
                                     goto IL_040C;
                                 }
-                                if (cojbeknpolcfmdflbkcmhcjkjpdhcmkmgdof3 != _bc1.StructInterfacesScope)
+                                if (_CHG3 != _bc1.StructInterfacesScope)
                                 {
                                     goto IL_0794;
                                 }
                             }
                             else
                             {
-                                if (cojbeknpolcfmdflbkcmhcjkjpdhcmkmgdof3 == _bc1.StructBodyScope)
+                                if (_CHG3 == _bc1.StructBodyScope)
                                 {
                                     goto IL_040C;
                                 }
-                                if (cojbeknpolcfmdflbkcmhcjkjpdhcmkmgdof3 != _bc1.InterfaceBaseScope)
+                                if (_CHG3 != _bc1.InterfaceBaseScope)
                                 {
-                                    if (cojbeknpolcfmdflbkcmhcjkjpdhcmkmgdof3 != _bc1.InterfaceBodyScope)
+                                    if (_CHG3 != _bc1.InterfaceBodyScope)
                                     {
                                         goto IL_0794;
                                     }
@@ -1960,26 +1960,26 @@ namespace AHO
                             node._AJW = nlgeogikcpghifembhmjcbhpifhbpgojkcji;
                             goto IL_07CB;
                         }
-                        if (cojbeknpolcfmdflbkcmhcjkjpdhcmkmgdof3 > _bc1.ConstructorInitializerScope)
+                        if (_CHG3 > _bc1.ConstructorInitializerScope)
                         {
-                            if (cojbeknpolcfmdflbkcmhcjkjpdhcmkmgdof3 <= _bc1.LambdaExpressionBodyScope)
+                            if (_CHG3 <= _bc1.LambdaExpressionBodyScope)
                             {
-                                if (cojbeknpolcfmdflbkcmhcjkjpdhcmkmgdof3 != _bc1.LambdaExpressionScope)
+                                if (_CHG3 != _bc1.LambdaExpressionScope)
                                 {
-                                    if (cojbeknpolcfmdflbkcmhcjkjpdhcmkmgdof3 != _bc1.LambdaExpressionBodyScope)
+                                    if (_CHG3 != _bc1.LambdaExpressionBodyScope)
                                     {
                                         goto IL_0794;
                                     }
                                     goto IL_048E;
                                 }
                             }
-                            else if (cojbeknpolcfmdflbkcmhcjkjpdhcmkmgdof3 != _bc1.AnonymousMethodScope)
+                            else if (_CHG3 != _bc1.AnonymousMethodScope)
                             {
-                                if (cojbeknpolcfmdflbkcmhcjkjpdhcmkmgdof3 == _bc1.AnonymousMethodBodyScope)
+                                if (_CHG3 == _bc1.AnonymousMethodBodyScope)
                                 {
                                     goto IL_048E;
                                 }
-                                if (cojbeknpolcfmdflbkcmhcjkjpdhcmkmgdof3 != _bc1.CodeBlockScope)
+                                if (_CHG3 != _bc1.CodeBlockScope)
                                 {
                                     goto IL_0794;
                                 }
@@ -1999,9 +1999,9 @@ namespace AHO
                             node._AJW = _BEZ;
                             goto IL_07CB;
                         }
-                        if (cojbeknpolcfmdflbkcmhcjkjpdhcmkmgdof3 <= _bc1.EnumBodyScope)
+                        if (_CHG3 <= _bc1.EnumBodyScope)
                         {
-                            if (cojbeknpolcfmdflbkcmhcjkjpdhcmkmgdof3 == _bc1.FormalParameterListScope)
+                            if (_CHG3 == _bc1.FormalParameterListScope)
                             {
                                 _AFF = (((node.OOME._AJO() & _bc1.SymbolDeclarationsMask) != _bc1.None) ? _bm2.GetNodeDeclaration(node.OOME, null) : _bm2.GetNodeDeclaration(node.OOME.OOME, null));
                                 bool flag4 = _AFF != null;
@@ -2014,14 +2014,14 @@ namespace AHO
                                 }
                                 goto IL_07CB;
                             }
-                            if (cojbeknpolcfmdflbkcmhcjkjpdhcmkmgdof3 != _bc1.EnumBodyScope)
+                            if (_CHG3 != _bc1.EnumBodyScope)
                             {
                                 goto IL_0794;
                             }
                         }
                         else
                         {
-                            if (cojbeknpolcfmdflbkcmhcjkjpdhcmkmgdof3 == _bc1.MethodBodyScope)
+                            if (_CHG3 == _bc1.MethodBodyScope)
                             {
                                 bool flag5 = (node.OOME._AJO() & _bc1.SymbolDeclarationsMask) > _bc1.None;
                                 if (flag5)
@@ -2047,7 +2047,7 @@ namespace AHO
                                 node._AJW = _AQI2;
                                 goto IL_07CB;
                             }
-                            if (cojbeknpolcfmdflbkcmhcjkjpdhcmkmgdof3 != _bc1.ConstructorInitializerScope)
+                            if (_CHG3 != _bc1.ConstructorInitializerScope)
                             {
                                 goto IL_0794;
                             }
@@ -2074,15 +2074,15 @@ namespace AHO
                         }
                         goto IL_07CB;
                     }
-                    if (cojbeknpolcfmdflbkcmhcjkjpdhcmkmgdof3 <= _bc1.AttributeArgumentsScope)
+                    if (_CHG3 <= _bc1.AttributeArgumentsScope)
                     {
-                        if (cojbeknpolcfmdflbkcmhcjkjpdhcmkmgdof3 <= _bc1.EmbeddedStatementScope)
+                        if (_CHG3 <= _bc1.EmbeddedStatementScope)
                         {
-                            if (cojbeknpolcfmdflbkcmhcjkjpdhcmkmgdof3 <= _bc1.SwitchSectionScope)
+                            if (_CHG3 <= _bc1.SwitchSectionScope)
                             {
-                                if (cojbeknpolcfmdflbkcmhcjkjpdhcmkmgdof3 != _bc1.SwitchBlockScope)
+                                if (_CHG3 != _bc1.SwitchBlockScope)
                                 {
-                                    if (cojbeknpolcfmdflbkcmhcjkjpdhcmkmgdof3 != _bc1.SwitchSectionScope)
+                                    if (_CHG3 != _bc1.SwitchSectionScope)
                                     {
                                         goto IL_0794;
                                     }
@@ -2092,9 +2092,9 @@ namespace AHO
                                     goto IL_07CB;
                                 }
                             }
-                            else if (cojbeknpolcfmdflbkcmhcjkjpdhcmkmgdof3 != _bc1.ForStatementScope)
+                            else if (_CHG3 != _bc1.ForStatementScope)
                             {
-                                if (cojbeknpolcfmdflbkcmhcjkjpdhcmkmgdof3 != _bc1.EmbeddedStatementScope)
+                                if (_CHG3 != _bc1.EmbeddedStatementScope)
                                 {
                                     goto IL_0794;
                                 }
@@ -2104,11 +2104,11 @@ namespace AHO
                                 goto IL_07CB;
                             }
                         }
-                        else if (cojbeknpolcfmdflbkcmhcjkjpdhcmkmgdof3 <= _bc1.LocalVariableInitializerScope)
+                        else if (_CHG3 <= _bc1.LocalVariableInitializerScope)
                         {
-                            if (cojbeknpolcfmdflbkcmhcjkjpdhcmkmgdof3 != _bc1.UsingStatementScope)
+                            if (_CHG3 != _bc1.UsingStatementScope)
                             {
-                                if (cojbeknpolcfmdflbkcmhcjkjpdhcmkmgdof3 != _bc1.LocalVariableInitializerScope)
+                                if (_CHG3 != _bc1.LocalVariableInitializerScope)
                                 {
                                     goto IL_0794;
                                 }
@@ -2120,21 +2120,21 @@ namespace AHO
                         }
                         else
                         {
-                            if (cojbeknpolcfmdflbkcmhcjkjpdhcmkmgdof3 == _bc1.SpecificCatchScope)
+                            if (_CHG3 == _bc1.SpecificCatchScope)
                             {
                                 _bn2 pfmepljdkgnppejbglhfbhkgndaojcnfjjfl4 = new _bn2(node);
                                 pfmepljdkgnppejbglhfbhkgndaojcnfjjfl4.GJOKNNJPNCHGBGCLIMHKIOHPIFBKHGDNIJLO(nodeScope);
                                 node._AJW = pfmepljdkgnppejbglhfbhkgndaojcnfjjfl4;
                                 goto IL_07CB;
                             }
-                            if (cojbeknpolcfmdflbkcmhcjkjpdhcmkmgdof3 == _bc1.ArgumentListScope)
+                            if (_CHG3 == _bc1.ArgumentListScope)
                             {
                                 _bk1 mdaepkfbdjnhibpdacpfaaleochkoccedffc3 = new _bk1(node);
                                 mdaepkfbdjnhibpdacpfaaleochkoccedffc3.GJOKNNJPNCHGBGCLIMHKIOHPIFBKHGDNIJLO(nodeScope);
                                 node._AJW = mdaepkfbdjnhibpdacpfaaleochkoccedffc3;
                                 goto IL_07CB;
                             }
-                            if (cojbeknpolcfmdflbkcmhcjkjpdhcmkmgdof3 != _bc1.AttributeArgumentsScope)
+                            if (_CHG3 != _bc1.AttributeArgumentsScope)
                             {
                                 goto IL_0794;
                             }
@@ -2148,18 +2148,18 @@ namespace AHO
                         node._AJW = pfmepljdkgnppejbglhfbhkgndaojcnfjjfl5;
                         goto IL_07CB;
                     }
-                    if (cojbeknpolcfmdflbkcmhcjkjpdhcmkmgdof3 <= _bc1.AttributesScope)
+                    if (_CHG3 <= _bc1.AttributesScope)
                     {
-                        if (cojbeknpolcfmdflbkcmhcjkjpdhcmkmgdof3 <= _bc1.TypeDeclarationScope)
+                        if (_CHG3 <= _bc1.TypeDeclarationScope)
                         {
-                            if (cojbeknpolcfmdflbkcmhcjkjpdhcmkmgdof3 == _bc1.MemberInitializerScope)
+                            if (_CHG3 == _bc1.MemberInitializerScope)
                             {
                                 _bb9 coingoplbpbknfilcibhidegpgfgggnnjnfj = new _bb9(node);
                                 coingoplbpbknfilcibhidegpgfgggnnjnfj.GJOKNNJPNCHGBGCLIMHKIOHPIFBKHGDNIJLO(nodeScope);
                                 node._AJW = coingoplbpbknfilcibhidegpgfgggnnjnfj;
                                 goto IL_07CB;
                             }
-                            if (cojbeknpolcfmdflbkcmhcjkjpdhcmkmgdof3 != _bc1.TypeDeclarationScope)
+                            if (_CHG3 != _bc1.TypeDeclarationScope)
                             {
                                 goto IL_0794;
                             }
@@ -2172,7 +2172,7 @@ namespace AHO
                         }
                         else
                         {
-                            if (cojbeknpolcfmdflbkcmhcjkjpdhcmkmgdof3 == _bc1.MethodDeclarationScope)
+                            if (_CHG3 == _bc1.MethodDeclarationScope)
                             {
                                 FKI _AFF = _bm2.GetNodeDeclaration(node, null);
                                 _bn4 _AQH4 = new _bn4(node);
@@ -2181,7 +2181,7 @@ namespace AHO
                                 node._AJW = _AQH4;
                                 goto IL_07CB;
                             }
-                            if (cojbeknpolcfmdflbkcmhcjkjpdhcmkmgdof3 != _bc1.AttributesScope)
+                            if (_CHG3 != _bc1.AttributesScope)
                             {
                                 goto IL_0794;
                             }
@@ -2191,10 +2191,10 @@ namespace AHO
                             goto IL_07CB;
                         }
                     }
-                    else if (cojbeknpolcfmdflbkcmhcjkjpdhcmkmgdof3 <= _bc1.AccessorsListScope)
+                    else if (_CHG3 <= _bc1.AccessorsListScope)
                     {
                         FKI _AFF;
-                        if (cojbeknpolcfmdflbkcmhcjkjpdhcmkmgdof3 == _bc1.AccessorBodyScope)
+                        if (_CHG3 == _bc1.AccessorBodyScope)
                         {
                             _AFF = _bm2.GetNodeDeclaration(node.OOME, null);
                             _b9 akhihgmonaolkkadmcchmjnoebakffohidce = new _b9(node);
@@ -2203,7 +2203,7 @@ namespace AHO
                             node._AJW = akhihgmonaolkkadmcchmjnoebakffohidce;
                             goto IL_07CB;
                         }
-                        if (cojbeknpolcfmdflbkcmhcjkjpdhcmkmgdof3 != _bc1.AccessorsListScope)
+                        if (_CHG3 != _bc1.AccessorsListScope)
                         {
                             goto IL_0794;
                         }
@@ -2214,9 +2214,9 @@ namespace AHO
                         node._AJW = _AQH5;
                         goto IL_07CB;
                     }
-                    else if (cojbeknpolcfmdflbkcmhcjkjpdhcmkmgdof3 != _bc1.QueryExpressionScope && cojbeknpolcfmdflbkcmhcjkjpdhcmkmgdof3 != _bc1.QueryBodyScope)
+                    else if (_CHG3 != _bc1.QueryExpressionScope && _CHG3 != _bc1.QueryBodyScope)
                     {
-                        if (cojbeknpolcfmdflbkcmhcjkjpdhcmkmgdof3 != _bc1.MemberDeclarationScope)
+                        if (_CHG3 != _bc1.MemberDeclarationScope)
                         {
                             goto IL_0794;
                         }
@@ -2231,7 +2231,7 @@ namespace AHO
                     node._AJW = pfmepljdkgnppejbglhfbhkgndaojcnfjjfl7;
                     goto IL_07CB;
                 IL_0794:
-                    throw new ArgumentOutOfRangeException("Unhandled case " + cojbeknpolcfmdflbkcmhcjkjpdhcmkmgdof.ToString() + ": in switch statement!\nsemantics: " + node._AJO().ToString());
+                    throw new ArgumentOutOfRangeException("Unhandled case " + _CHG.ToString() + ": in switch statement!\nsemantics: " + node._AJO().ToString());
                 IL_07CB:
                     bool flag7 = node._AJW == null;
                     if (flag7)
@@ -2252,7 +2252,7 @@ namespace AHO
             bool flag = node.EFI == null;
             if (flag)
             {
-                _bc1 cojbeknpolcfmdflbkcmhcjkjpdhcmkmgdof = node._AJO() & _bc1.SymbolDeclarationsMask;
+                _bc1 _CHG = node._AJO() & _bc1.SymbolDeclarationsMask;
                 _bb4._ACW _AGZ = _bm2.EnclosingSemanticNode(node.OOME, _bc1.ScopesMask);
                 _bm6 _AQI = _bm2.GetNodeScope(_AGZ, fileName);
                 bool flag2 = _AQI == null;
@@ -2265,7 +2265,7 @@ namespace AHO
                 _bb4._ACW _AGZ2 = null;
                 _bb4._AIN _AIO3 = null;
                 _bb4._ACW _AGZ3 = null;
-                switch (cojbeknpolcfmdflbkcmhcjkjpdhcmkmgdof)
+                switch (_CHG)
                 {
                     case _bc1.None:
                         Debug.LogWarning("declarationSemantics is None on " + ((node != null) ? node.ToString() : null));
@@ -2630,7 +2630,7 @@ namespace AHO
                         };
                         goto IL_0996;
                 }
-                throw new ArgumentOutOfRangeException("Unhandled case " + cojbeknpolcfmdflbkcmhcjkjpdhcmkmgdof.ToString() + " for node " + ((node != null) ? node.ToString() : null));
+                throw new ArgumentOutOfRangeException("Unhandled case " + _CHG.ToString() + " for node " + ((node != null) ? node.ToString() : null));
             IL_0996:
                 bool flag10 = node.EFI != null;
                 if (flag10)
@@ -2666,7 +2666,7 @@ namespace AHO
                         Debug.LogWarning(string.Concat(new string[]
                         {
                             "Symbol declaration ",
-                            cojbeknpolcfmdflbkcmhcjkjpdhcmkmgdof.ToString(),
+                            _CHG.ToString(),
                             " outside of declaration space!\nenclosingScopeNode: ",
                             (_AGZ != null) ? _AGZ._AHB() : "null",
                             "\nnode: ",
@@ -2990,9 +2990,9 @@ namespace AHO
             bool flag = node._AIX == 0;
             if (!flag)
             {
-                _bc1 cojbeknpolcfmdflbkcmhcjkjpdhcmkmgdof = node._AJO();
-                _bc1 cojbeknpolcfmdflbkcmhcjkjpdhcmkmgdof2 = cojbeknpolcfmdflbkcmhcjkjpdhcmkmgdof & _bc1.SymbolDeclarationsMask;
-                bool flag2 = cojbeknpolcfmdflbkcmhcjkjpdhcmkmgdof2 == _bc1.None;
+                _bc1 _CHG = node._AJO();
+                _bc1 _CHG2 = _CHG & _bc1.SymbolDeclarationsMask;
+                bool flag2 = _CHG2 == _bc1.None;
                 if (flag2)
                 {
                     _bm2.GetNodeScope(node, fileName);
@@ -3093,13 +3093,13 @@ namespace AHO
         private readonly _bh2._AEN FPKACCPNCJADKMOLADGCFAPFGMMJPEOPKKGD;
 
         // Token: 0x0400062B RID: 1579
-        public int IJFPNIDKIFCHJMBGDKGMFEACOECKEOEOBHBM;
+        public int _CBN;
 
         // Token: 0x0400062C RID: 1580
-        public int KAHJDLLICNDGMPOOEJNMMBBFFBAMEFDPHNAD;
+        public int _CBG;
 
         // Token: 0x0400062D RID: 1581
-        public int EFJDEBNLGANKFFGCHEOIJMBIMGFKDMLLBDAB;
+        public int _CBK;
 
         // Token: 0x0400062E RID: 1582
         public int MEHGHAJAPILANIBMGENBFHNIAEELJDEHHCGB;
@@ -3138,16 +3138,16 @@ namespace AHO
         public int AHHEGIICLMMGAMIIBCOALJAANLNIDBOHPBGH;
 
         // Token: 0x0400063A RID: 1594
-        public int HBPPBAGCFPCGCNFAKINAHHHIFAMJKFGMKIMC;
+        public int _CBI;
 
         // Token: 0x0400063B RID: 1595
-        public int IHMBKPMCAMJFLMLEAACBOHGCLGBCODFOCAFL;
+        public int _CBP;
 
         // Token: 0x0400063C RID: 1596
         public int BNNEMMKGMCLMLANHKADMEEJIOFEGNPDHGMOH;
 
         // Token: 0x0400063D RID: 1597
-        public int GHLHPHLFDEMBHDBMGMEBAMMKDPPKIHIMODCN;
+        public int _CBJ;
 
         // Token: 0x020000FB RID: 251
         internal class _AJS : _bh2._AJH
@@ -3202,7 +3202,7 @@ namespace AHO
                 {
                     _bh2._AJH._BDD = new SyntaxToken(SyntaxToken.Kind.EOF, string.Empty)
                     {
-                        tokenId = grammar.GHLHPHLFDEMBHDBMGMEBAMMKDPPKIHIMODCN
+                        tokenId = grammar._CBJ
                     };
                 }
             }
@@ -3248,12 +3248,12 @@ namespace AHO
             // Token: 0x06000723 RID: 1827 RVA: 0x000F5120 File Offset: 0x000F3320
             public override void CollectCompletions(_bh2._AGI tokenSet)
             {
-                (this._BDL ?? _bm2._AA.IODAGDLMLMILBHGAJCCLNFIJIDLOIBMOEFPC()).CollectCompletions(tokenSet, this, this.KFDPMMGEANKNCJLNBOLDNJPMJGLOKNBAMOEC.IJFPNIDKIFCHJMBGDKGMFEACOECKEOEOBHBM);
-                bool flag = this._BDL != null && tokenSet.Matches(_bm2._AGM().IJFPNIDKIFCHJMBGDKGMFEACOECKEOEOBHBM);
+                (this._BDL ?? _bm2._AA.IODAGDLMLMILBHGAJCCLNFIJIDLOIBMOEFPC()).CollectCompletions(tokenSet, this, this.KFDPMMGEANKNCJLNBOLDNJPMJGLOKNBAMOEC._CBN);
+                bool flag = this._BDL != null && tokenSet.Matches(_bm2._AGM()._CBN);
                 if (flag)
                 {
                     this._BDB = new SyntaxToken(SyntaxToken.Kind.Identifier, "special");
-                    this._BDB.tokenId = this.KFDPMMGEANKNCJLNBOLDNJPMJGLOKNBAMOEC.IJFPNIDKIFCHJMBGDKGMFEACOECKEOEOBHBM;
+                    this._BDB.tokenId = this.KFDPMMGEANKNCJLNBOLDNJPMJGLOKNBAMOEC._CBN;
                     base.Lookahead(this._BDL, 1);
                     this._BDB = null;
                 }
@@ -3469,7 +3469,7 @@ namespace AHO
                             case SyntaxToken.Kind.StringLiteral:
                             case SyntaxToken.Kind.IntegerLiteral:
                             case SyntaxToken.Kind.RealLiteral:
-                                syntaxToken.tokenId = this.KFDPMMGEANKNCJLNBOLDNJPMJGLOKNBAMOEC.EFJDEBNLGANKFFGCHEOIJMBIMGFKDMLLBDAB;
+                                syntaxToken.tokenId = this.KFDPMMGEANKNCJLNBOLDNJPMJGLOKNBAMOEC._CBK;
                                 break;
                             case SyntaxToken.Kind.BuiltInLiteral:
                             case SyntaxToken.Kind.Punctuator:
@@ -3493,7 +3493,7 @@ namespace AHO
                                 break;
                             case SyntaxToken.Kind.Identifier:
                             case SyntaxToken.Kind.ContextualKeyword:
-                                syntaxToken.tokenId = this.KFDPMMGEANKNCJLNBOLDNJPMJGLOKNBAMOEC.IJFPNIDKIFCHJMBGDKGMFEACOECKEOEOBHBM;
+                                syntaxToken.tokenId = this.KFDPMMGEANKNCJLNBOLDNJPMJGLOKNBAMOEC._CBN;
                                 break;
                             default:
                                 goto IL_017D;
@@ -3526,10 +3526,10 @@ namespace AHO
                         return false;
                     }
                     this._BDC = -1;
-                    GCE.PHFG[] flogicchcfaljohninkpcdacoidcghkimhpo = this.FLOg;
+                    GCE.PHFG[] _CAB = this.FLOg;
                     int num = this._BDE + 1;
                     this._BDE = num;
-                    this.EOIA = flogicchcfaljohninkpcdacoidcghkimhpo[num].EOIA;
+                    this.EOIA = _CAB[num].EOIA;
                 }
                 while (this._BDC + 1 >= this.EOIA.Count)
                 {
@@ -3540,10 +3540,10 @@ namespace AHO
                         return false;
                     }
                     this._BDC = -1;
-                    GCE.PHFG[] flogicchcfaljohninkpcdacoidcghkimhpo2 = this.FLOg;
+                    GCE.PHFG[] _CAB2 = this.FLOg;
                     int num = this._BDE + 1;
                     this._BDE = num;
-                    this.EOIA = flogicchcfaljohninkpcdacoidcghkimhpo2[num].EOIA;
+                    this.EOIA = _CAB2[num].EOIA;
                     while (this.EOIA == null)
                     {
                         bool flag3 = this._BDE + 1 >= this.FLOg.Length;
@@ -3551,10 +3551,10 @@ namespace AHO
                         {
                             return false;
                         }
-                        GCE.PHFG[] flogicchcfaljohninkpcdacoidcghkimhpo3 = this.FLOg;
+                        GCE.PHFG[] _CAB3 = this.FLOg;
                         num = this._BDE + 1;
                         this._BDE = num;
-                        this.EOIA = flogicchcfaljohninkpcdacoidcghkimhpo3[num].EOIA;
+                        this.EOIA = _CAB3[num].EOIA;
                     }
                 }
                 this._BDC++;
