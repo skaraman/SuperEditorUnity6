@@ -1,0 +1,4 @@
+C:\Users\semka\Desktop\localDev\VSSLN\project2\SuperEditor\SuperEditor\obj\Debug\SuperEditor.csproj.AssemblyReference.cache
+C:\Users\semka\Desktop\localDev\VSSLN\project2\SuperEditor\SuperEditor\obj\Debug\SuperEditor.Properties.Resources.resources
+C:\Users\semka\Desktop\localDev\VSSLN\project2\SuperEditor\SuperEditor\obj\Debug\SuperEditor.csproj.GenerateResource.cache
+C:\Users\semka\Desktop\localDev\VSSLN\project2\SuperEditor\SuperEditor\obj\Debug\SuperEditor.csproj.CoreCompileInputs.cache
