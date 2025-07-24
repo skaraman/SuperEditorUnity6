@@ -1,7 +1,7 @@
 // Mock Unity classes for compilation without Unity installation
 // This file provides stub implementations of Unity types to enable compilation
 
-#if NO_UNITY || FORCE_COMPILE_ALL
+#if NO_UNITY
 
 using System;
 
@@ -15,7 +15,7 @@ namespace UnityEngine
 
     public class ScriptableObject : Object
     {
-        public static T CreateInstance<T>() where T : ScriptableObject => null;
+        public new static T CreateInstance<T>() where T : ScriptableObject => null;
     }
 
     public enum HideFlags
@@ -36,6 +36,26 @@ namespace UnityEngine
         public float x, y;
         public Vector2(float x, float y) { this.x = x; this.y = y; }
         public static Vector2 zero => new Vector2(0, 0);
+        public static Vector2 one => new Vector2(1, 1);
+        public static Vector2 up => new Vector2(0, 1);
+        public static Vector2 down => new Vector2(0, -1);
+        public static Vector2 left => new Vector2(-1, 0);
+        public static Vector2 right => new Vector2(1, 0);
+        
+        public float magnitude => Mathf.Sqrt(x * x + y * y);
+        public float sqrMagnitude => x * x + y * y;
+        public Vector2 normalized => magnitude > 0 ? this / magnitude : zero;
+        
+        public static Vector2 operator +(Vector2 a, Vector2 b) => new Vector2(a.x + b.x, a.y + b.y);
+        public static Vector2 operator -(Vector2 a, Vector2 b) => new Vector2(a.x - b.x, a.y - b.y);
+        public static Vector2 operator *(Vector2 a, float d) => new Vector2(a.x * d, a.y * d);
+        public static Vector2 operator /(Vector2 a, float d) => new Vector2(a.x / d, a.y / d);
+        public static bool operator ==(Vector2 lhs, Vector2 rhs) => (lhs - rhs).sqrMagnitude < 0.0001f;
+        public static bool operator !=(Vector2 lhs, Vector2 rhs) => !(lhs == rhs);
+        
+        public override bool Equals(object obj) => obj is Vector2 other && this == other;
+        public override int GetHashCode() => x.GetHashCode() ^ (y.GetHashCode() << 2);
+        public override string ToString() => $"({x:F1}, {y:F1})";
     }
 
     public struct Vector3
@@ -51,6 +71,49 @@ namespace UnityEngine
         {
             this.x = x; this.y = y; this.width = width; this.height = height;
         }
+        
+        public float xMin { get { return x; } set { width -= (value - x); x = value; } }
+        public float xMax { get { return x + width; } set { width = value - x; } }
+        public float yMin { get { return y; } set { height -= (value - y); y = value; } }
+        public float yMax { get { return y + height; } set { height = value - y; } }
+        public Vector2 center { get { return new Vector2(x + width / 2, y + height / 2); } }
+        public Vector2 size { get { return new Vector2(width, height); } }
+        public Vector2 position { get { return new Vector2(x, y); } }
+        
+        public bool Contains(Vector2 point) => point.x >= xMin && point.x < xMax && point.y >= yMin && point.y < yMax;
+        public bool Overlaps(Rect other) => other.xMax > xMin && other.xMin < xMax && other.yMax > yMin && other.yMin < yMax;
+    }
+
+    public static class Mathf
+    {
+        public const float PI = 3.14159274f;
+        public const float Deg2Rad = PI / 180f;
+        public const float Rad2Deg = 180f / PI;
+        public const float Epsilon = 1.401298E-45f;
+        
+        public static float Abs(float f) => f >= 0f ? f : -f;
+        public static int Abs(int value) => value >= 0 ? value : -value;
+        public static float Max(float a, float b) => a > b ? a : b;
+        public static int Max(int a, int b) => a > b ? a : b;
+        public static float Min(float a, float b) => a < b ? a : b;
+        public static int Min(int a, int b) => a < b ? a : b;
+        public static float Clamp(float value, float min, float max) => value < min ? min : (value > max ? max : value);
+        public static int Clamp(int value, int min, int max) => value < min ? min : (value > max ? max : value);
+        public static float Clamp01(float value) => Clamp(value, 0f, 1f);
+        public static float Lerp(float a, float b, float t) => a + (b - a) * Clamp01(t);
+        public static float Sin(float f) => (float)System.Math.Sin(f);
+        public static float Cos(float f) => (float)System.Math.Cos(f);
+        public static float Tan(float f) => (float)System.Math.Tan(f);
+        public static float Sqrt(float f) => (float)System.Math.Sqrt(f);
+        public static float Floor(float f) => (float)System.Math.Floor(f);
+        public static float Ceil(float f) => (float)System.Math.Ceiling(f);
+        public static int FloorToInt(float f) => (int)System.Math.Floor(f);
+        public static int CeilToInt(float f) => (int)System.Math.Ceiling(f);
+        public static int RoundToInt(float f) => (int)System.Math.Round(f);
+        public static float Round(float f) => (float)System.Math.Round(f);
+        public static float Pow(float f, float p) => (float)System.Math.Pow(f, p);
+        public static float Log(float f) => (float)System.Math.Log(f);
+        public static float Log10(float f) => (float)System.Math.Log10(f);
     }
 
     public struct Color32
@@ -88,6 +151,7 @@ namespace UnityEngine
         public GUIContent() { }
         public GUIContent(string text) { this.text = text; }
         public GUIContent(string text, Texture2D image) { this.text = text; this.image = image; }
+        public GUIContent(string text, Texture2D image, string tooltip) { this.text = text; this.image = image; this.tooltip = tooltip; }
     }
 
     public class GUIStyle
@@ -263,7 +327,39 @@ namespace UnityEngine
         public bool control { get; set; }
         public bool alt { get; set; }
         public bool command { get; set; }
+        public string commandName { get; set; }
         public void Use() { }
+    }
+
+    public static class Application
+    {
+        public static string dataPath => "";
+        public static string persistentDataPath => "";
+        public static string streamingAssetsPath => "";
+        public static bool isPlaying { get; set; }
+        public static bool isEditor => true;
+        public static string unityVersion => "6000.1.9f1";
+        public static string version => "6000.1.9f1";
+        public static string productName { get; set; }
+        public static string companyName { get; set; }
+        public static RuntimePlatform platform => RuntimePlatform.LinuxEditor;
+        public static void Quit() { }
+    }
+
+    public enum RuntimePlatform
+    {
+        OSXEditor = 0,
+        OSXPlayer = 1,
+        WindowsPlayer = 2,
+        WindowsEditor = 7,
+        LinuxPlayer = 13,
+        LinuxEditor = 16,
+        Android = 11,
+        IPhonePlayer = 8,
+        PS4 = 19,
+        XboxOne = 21,
+        Switch = 38,
+        WebGLPlayer = 17
     }
 
     public enum EventType
@@ -353,6 +449,7 @@ namespace UnityEditor
         public static void PingObject(UnityEngine.Object obj) { }
         public static float singleLineHeight => 18f;
         public static float standardVerticalSpacing => 2f;
+        public static string systemCopyBuffer { get; set; } = "";
     }
 
     public static class EditorUtility
@@ -639,11 +736,22 @@ namespace UnityEngine
         {
             public string name { get; set; }
             public void Add(VisualElement child) { }
+            public System.Collections.Generic.IEnumerable<VisualElement> Children => new VisualElement[0];
         }
 
         public class IMGUIContainer : VisualElement
         {
             public System.Action onGUIHandler { get; set; }
+        }
+
+        public static class UQueryExtensions
+        {
+            public static T Q<T>(this VisualElement e, string name = null) where T : VisualElement => null;
+        }
+
+        public static class VisualElementExtensions
+        {
+            public static void StretchToParentSize(this VisualElement element) { }
         }
     }
 }
