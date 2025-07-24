@@ -18,7 +18,7 @@ namespace AHO
         private static bool IsManagedAssembly(string assemblyFile)
         {
             DllType dllType = InternalEditorUtility.DetectDotNetDll(assemblyFile);
-            return dllType != null && dllType != 1;
+            return dllType != DllType.Unknown && dllType != DllType.Native;
         }
 
         // Token: 0x060004B8 RID: 1208 RVA: 0x000CE6A8 File Offset: 0x000CC8A8

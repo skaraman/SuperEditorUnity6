@@ -45,7 +45,7 @@ namespace ODGL
             }
             else
             {
-                bool flag2 =  (int)PrefabUtility.GetPrefabAssetType(gameObject) != 5;
+                bool flag2 = PrefabUtility.GetPrefabAssetType(gameObject) != PrefabAssetType.NotAPrefab;
                 if (flag2)
                 {
                     GUI.DrawTexture(rect, EditorGUIUtility.IconContent("Prefab icon").image, (ScaleMode)2, true);
