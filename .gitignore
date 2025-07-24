@@ -1,0 +1,10 @@
+# Ignore build artifacts
+obj/
+.vs/
+*.dll
+*.exe
+*.pdb
+*.cache
+*.config
+*.user
+bin/
