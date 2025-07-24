@@ -109,7 +109,7 @@ namespace AHO
         }
 
         // Token: 0x060004BA RID: 1210 RVA: 0x000CE8FC File Offset: 0x000CCAFC
-        public static _bj5 FromAssembly(Assembly assembly)
+        public static _bj5 FromAssembly(System.Reflection.Assembly assembly)
         {
             _bj5 _AOS;
             bool flag = !_bj5.DIBFNKBPDMFNEMNDIPLBONFLMFAKKCEPLILA.TryGetValue(assembly, out _AOS);
@@ -128,17 +128,17 @@ namespace AHO
         }
 
         // Token: 0x060004BC RID: 1212 RVA: 0x000CE964 File Offset: 0x000CCB64
-        private static List<Assembly> INDCDHPALHNEMDLDBPLEMKPEACJDGFKKACHA()
+        private static List<System.Reflection.Assembly> INDCDHPALHNEMDLDBPLEMKPEACJDGFKKACHA()
         {
             bool flag = _bj5.IDKNPDILLAILDKAJDMDDGHJLFOGFCIHKFDND != null;
-            List<Assembly> list;
+            List<System.Reflection.Assembly> list;
             if (flag)
             {
                 list = _bj5.IDKNPDILLAILDKAJDMDDGHJLFOGFCIHKFDND;
             }
             else
             {
-                _bj5.IDKNPDILLAILDKAJDMDDGHJLFOGFCIHKFDND = new List<Assembly>(AppDomain.CurrentDomain.GetAssemblies());
+                _bj5.IDKNPDILLAILDKAJDMDDGHJLFOGFCIHKFDND = new List<System.Reflection.Assembly>(AppDomain.CurrentDomain.GetAssemblies());
                 AppDomain.CurrentDomain.AssemblyLoad += _bj5.AssemblyLoadEventHandler;
                 list = _bj5.IDKNPDILLAILDKAJDMDDGHJLFOGFCIHKFDND;
             }
@@ -158,7 +158,7 @@ namespace AHO
             int count = _bj5.INDCDHPALHNEMDLDBPLEMKPEACJDGFKKACHA().Count;
             while (count-- > 0)
             {
-                Assembly assembly = _bj5.INDCDHPALHNEMDLDBPLEMKPEACJDGFKKACHA()[count];
+                System.Reflection.Assembly assembly = _bj5.INDCDHPALHNEMDLDBPLEMKPEACJDGFKKACHA()[count];
                 bool flag = assembly is AssemblyBuilder;
                 if (!flag)
                 {
@@ -202,7 +202,7 @@ namespace AHO
             int count = _bj5.INDCDHPALHNEMDLDBPLEMKPEACJDGFKKACHA().Count;
             while (count-- > 0)
             {
-                Assembly assembly = _bj5.INDCDHPALHNEMDLDBPLEMKPEACJDGFKKACHA()[count];
+                System.Reflection.Assembly assembly = _bj5.INDCDHPALHNEMDLDBPLEMKPEACJDGFKKACHA()[count];
                 bool flag = assembly is AssemblyBuilder;
                 if (!flag)
                 {
@@ -342,7 +342,7 @@ namespace AHO
         }
 
         // Token: 0x060004C5 RID: 1221 RVA: 0x000CEE3C File Offset: 0x000CD03C
-        public static bool IsScriptAssembly(Assembly assembly)
+        public static bool IsScriptAssembly(System.Reflection.Assembly assembly)
         {
             bool flag = _bj5.IsScriptAssemblyName(assembly.GetName().Name);
             bool flag2;
@@ -352,17 +352,17 @@ namespace AHO
             }
             else
             {
-                Assembly assembly2 = _bj5.FindScriptAssembly(assembly);
+                System.Reflection.Assembly assembly2 = _bj5.FindScriptAssembly(assembly);
                 flag2 = assembly2 != null;
             }
             return flag2;
         }
 
         // Token: 0x060004C6 RID: 1222 RVA: 0x000CEE74 File Offset: 0x000CD074
-        public static Assembly FindScriptAssembly(Assembly assembly)
+        public static System.Reflection.Assembly FindScriptAssembly(System.Reflection.Assembly assembly)
         {
             bool flag = string.IsNullOrEmpty(assembly.Location);
-            Assembly assembly2;
+            System.Reflection.Assembly assembly2;
             if (flag)
             {
                 assembly2 = null;
@@ -385,7 +385,7 @@ namespace AHO
                     int num = _bj5.GHGINOAGGIFEFJMGDMAMNONFFDIOJLJAMIPP.Length;
                     while (num-- > 0)
                     {
-                        Assembly assembly3 = _bj5.GHGINOAGGIFEFJMGDMAMNONFFDIOJLJAMIPP[num];
+                        UnityEditor.Compilation.Assembly assembly3 = _bj5.GHGINOAGGIFEFJMGDMAMNONFFDIOJLJAMIPP[num];
                         bool flag4 = string.Compare(Path.GetFullPath(assembly3.outputPath), assembly.Location, StringComparison.InvariantCultureIgnoreCase) == 0;
                         if (flag4)
                         {
@@ -402,7 +402,7 @@ namespace AHO
         public static _bj5[] GetAllCSharpAssemblyDefinitions()
         {
             List<_bj5> list = new List<_bj5>();
-            foreach (Assembly assembly in _bj5.INDCDHPALHNEMDLDBPLEMKPEACJDGFKKACHA())
+            foreach (System.Reflection.Assembly assembly in _bj5.INDCDHPALHNEMDLDBPLEMKPEACJDGFKKACHA())
             {
                 bool flag = !_bj5.IsScriptAssembly(assembly);
                 if (!flag)
@@ -419,7 +419,7 @@ namespace AHO
         }
 
         // Token: 0x060004C8 RID: 1224 RVA: 0x000CEFC0 File Offset: 0x000CD1C0
-        private _bj5(Assembly assembly)
+        private _bj5(System.Reflection.Assembly assembly)
         {
             this._AN = assembly;
             this.CNLPKBIEMCAJJODDNIDIOECPEGCPLFIFCECM = _bj5.FindScriptAssembly(assembly);
@@ -1013,7 +1013,7 @@ namespace AHO
         }
 
         // Token: 0x040004C4 RID: 1220
-        public readonly Assembly _AN;
+        public readonly System.Reflection.Assembly _AN;
 
         // Token: 0x040004C5 RID: 1221
         public readonly _bj5._AZG BONGPABCEFDMENFDOAGEDKEJJHNFJEILMCJN;
@@ -1025,7 +1025,7 @@ namespace AHO
         public readonly bool _CHJ;
 
         // Token: 0x040004C8 RID: 1224
-        private readonly Assembly CNLPKBIEMCAJJODDNIDIOECPEGCPLFIFCECM;
+        private readonly System.Reflection.Assembly CNLPKBIEMCAJJODDNIDIOECPEGCPLFIFCECM;
 
         // Token: 0x040004C9 RID: 1225
         private string[] IPIBJLDELAOIIOOAKPNMONGKKKKNFOEMLCMD;
@@ -1037,7 +1037,7 @@ namespace AHO
         public Dictionary<string, _be7> EKNILLOGEAIKLJHEMKKAGIBGBNKMFENLCAFB;
 
         // Token: 0x040004CC RID: 1228
-        private static readonly Dictionary<Assembly, _bj5> DIBFNKBPDMFNEMNDIPLBONFLMFAKKCEPLILA = new Dictionary<Assembly, _bj5>();
+        private static readonly Dictionary<System.Reflection.Assembly, _bj5> DIBFNKBPDMFNEMNDIPLBONFLMFAKKCEPLILA = new Dictionary<System.Reflection.Assembly, _bj5>();
 
         // Token: 0x040004CD RID: 1229
         private static readonly string[] AIHMBPHEBJJOIOJHJLAKHCLOPLCHGKELDCBB = new string[]
@@ -1047,7 +1047,7 @@ namespace AHO
         };
 
         // Token: 0x040004CE RID: 1230
-        private static List<Assembly> IDKNPDILLAILDKAJDMDDGHJLFOGFCIHKFDND;
+        private static List<System.Reflection.Assembly> IDKNPDILLAILDKAJDMDDGHJLFOGFCIHKFDND;
 
         // Token: 0x040004CF RID: 1231
         private static Dictionary<string, _bj5> PJKEBCBBMNJPCABBHPIKIMEJMACMLDFJBDNH = new Dictionary<string, _bj5>();
@@ -1056,7 +1056,7 @@ namespace AHO
         private static readonly _bj5[] HPEELBCJDACILOAICOJANFMEPEPPLAJLOOOO = new _bj5[17];
 
         // Token: 0x040004D1 RID: 1233
-        private static Assembly[] GHGINOAGGIFEFJMGDMAMNONFFDIOJLJAMIPP;
+        private static UnityEditor.Compilation.Assembly[] GHGINOAGGIFEFJMGDMAMNONFFDIOJLJAMIPP;
 
         // Token: 0x040004D2 RID: 1234
         private _bn1 IEHBPMHEDHEDEIDGKCOEMLAOBNPFFFKFGMBN;
