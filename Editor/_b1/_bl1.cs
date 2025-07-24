@@ -2,6 +2,7 @@
 using System.Text.RegularExpressions;
 using UnityEditor;
 using UnityEngine;
+using UnityEngine.Networking;
 
 namespace AHO
 {
@@ -34,7 +35,8 @@ namespace AHO
             bool flag = _bl1.NEOJKEJIPAGOFOPPFHADHOFKGMAGENJECGIL == null;
             if (flag)
             {
-                _bl1.NEOJKEJIPAGOFOPPFHADHOFKGMAGENJECGIL = new WWW("https://raw.githubusercontent.com/UnitySuperEditor/SuperEditor/master/Updates.txt");
+                _bl1.NEOJKEJIPAGOFOPPFHADHOFKGMAGENJECGIL = UnityWebRequest.Get("https://raw.githubusercontent.com/UnitySuperEditor/SuperEditor/master/Updates.txt");
+                _bl1.NEOJKEJIPAGOFOPPFHADHOFKGMAGENJECGIL.SendWebRequest();
                 EditorApplication.update = (EditorApplication.CallbackFunction)Delegate.Combine(EditorApplication.update, new EditorApplication.CallbackFunction(_bl1.Update));
             }
         }
@@ -52,12 +54,12 @@ namespace AHO
                 }
                 try
                 {
-                    bool flag3 = string.IsNullOrEmpty(_bl1.NEOJKEJIPAGOFOPPFHADHOFKGMAGENJECGIL.error) || !Regex.IsMatch(_bl1.NEOJKEJIPAGOFOPPFHADHOFKGMAGENJECGIL.text, "404 not found", RegexOptions.IgnoreCase);
+                    bool flag3 = _bl1.NEOJKEJIPAGOFOPPFHADHOFKGMAGENJECGIL.result == UnityWebRequest.Result.Success || !Regex.IsMatch(_bl1.NEOJKEJIPAGOFOPPFHADHOFKGMAGENJECGIL.downloadHandler.text, "404 not found", RegexOptions.IgnoreCase);
                     if (flag3)
                     {
                         _bj9 mcknonjhcbhjpkmknajcpjikiglijfkmmnop;
                         string text;
-                        bool flag4 = !_bi4.FormatChangelog(_bl1.NEOJKEJIPAGOFOPPFHADHOFKGMAGENJECGIL.text, out mcknonjhcbhjpkmknajcpjikiglijfkmmnop, out text);
+                        bool flag4 = !_bi4.FormatChangelog(_bl1.NEOJKEJIPAGOFOPPFHADHOFKGMAGENJECGIL.downloadHandler.text, out mcknonjhcbhjpkmknajcpjikiglijfkmmnop, out text);
                         if (flag4)
                         {
                             _bl1.FailedConnection(null);
@@ -118,7 +120,7 @@ namespace AHO
         }
 
         // Token: 0x0400040D RID: 1037
-        private static WWW NEOJKEJIPAGOFOPPFHADHOFKGMAGENJECGIL;
+        private static UnityWebRequest NEOJKEJIPAGOFOPPFHADHOFKGMAGENJECGIL;
 
         // Token: 0x0400040E RID: 1038
         private static bool AEPKAAEAFJNDLDLPKBHANEALGCFNOICLFKIE;
