@@ -499,9 +499,19 @@ namespace UnityEditor
         DisconnectedModelPrefabInstance
     }
 
+    public enum PrefabAssetType
+    {
+        NotAPrefab = 0,
+        Regular = 1,
+        Model = 2,
+        Variant = 3,
+        MissingAsset = 4
+    }
+
     public static class PrefabUtility
     {
         public static PrefabType GetPrefabType(UnityEngine.Object target) => PrefabType.None;
+        public static PrefabAssetType GetPrefabAssetType(UnityEngine.Object target) => PrefabAssetType.NotAPrefab;
     }
 
     public class Editor
@@ -675,9 +685,17 @@ namespace UnityEditor
 
 namespace UnityEditorInternal
 {
+    public enum DllType
+    {
+        Unknown = 0,
+        Native = 1,
+        Managed = 2
+    }
+    
     public class InternalEditorUtility
     {
         public static void RepaintAllViews() { }
+        public static DllType DetectDotNetDll(string assemblyFile) => DllType.Managed;
     }
 
     public class ComponentUtility
