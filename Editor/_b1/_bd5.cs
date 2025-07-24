@@ -128,7 +128,7 @@ namespace AHO
         public override void FullRefresh()
         {
             base.FullRefresh();
-            this._ABP = new Thread(delegate
+            this._ABP = new Thread((ThreadStart)delegate
             {
                 base.OnLoaded();
                 this._ABP = null;
