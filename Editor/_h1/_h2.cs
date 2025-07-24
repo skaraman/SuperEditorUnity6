@@ -220,7 +220,7 @@ namespace OKPF
         // Token: 0x0600091C RID: 2332 RVA: 0x000FD870 File Offset: 0x000FBA70
         private Texture2D DuplicateTexture(Texture2D source)
         {
-            RenderTexture temporary = RenderTexture.GetTemporary(source.width, source.height, 0, 7, 1);
+            RenderTexture temporary = RenderTexture.GetTemporary(source.width, source.height, 0, UnityEngine.Experimental.Rendering.GraphicsFormat.R8G8B8A8_UNorm, 1);
             Graphics.Blit(source, temporary);
             RenderTexture active = RenderTexture.active;
             RenderTexture.active = temporary;
