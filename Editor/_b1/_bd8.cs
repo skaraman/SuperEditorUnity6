@@ -1676,7 +1676,7 @@ namespace AHO
             }
             else
             {
-                bool flag3 = !File.Exists(this._ARQ()) || (File.GetAttributes(this._ARQ()) & FileAttributes.ReadOnly) == FileAttributes.None;
+                bool flag3 = !File.Exists(this._ARQ()) || (File.GetAttributes(this._ARQ()) & FileAttributes.ReadOnly) == (FileAttributes)0;
                 flag2 = flag3;
             }
             return flag2;
@@ -1712,7 +1712,7 @@ namespace AHO
         // Token: 0x06000422 RID: 1058 RVA: 0x000C934C File Offset: 0x000C754C
         public bool TryEdit()
         {
-            bool flag = this._ALW() || !File.Exists(this._ARQ()) || (File.GetAttributes(this._ARQ()) & FileAttributes.ReadOnly) == FileAttributes.None;
+            bool flag = this._ALW() || !File.Exists(this._ARQ()) || (File.GetAttributes(this._ARQ()) & FileAttributes.ReadOnly) == (FileAttributes)0;
             bool flag2;
             if (flag)
             {
@@ -1734,13 +1734,13 @@ namespace AHO
                         bool flag5 = (assetByGUID.state & 256) == 0;
                         if (flag5)
                         {
-                            bool flag6 = File.Exists(this._ARQ()) && (File.GetAttributes(this._ARQ()) & FileAttributes.ReadOnly) > FileAttributes.None;
+                            bool flag6 = File.Exists(this._ARQ()) && (File.GetAttributes(this._ARQ()) & FileAttributes.ReadOnly) != (FileAttributes)0;
                             if (flag6)
                             {
                                 this.TryP4Checkout();
                             }
                         }
-                        bool flag7 = File.Exists(this._ARQ()) && (File.GetAttributes(this._ARQ()) & FileAttributes.ReadOnly) > FileAttributes.None;
+                        bool flag7 = File.Exists(this._ARQ()) && (File.GetAttributes(this._ARQ()) & FileAttributes.ReadOnly) != (FileAttributes)0;
                         flag2 = !flag7 || this.EditReadOnly();
                     }
                     else
