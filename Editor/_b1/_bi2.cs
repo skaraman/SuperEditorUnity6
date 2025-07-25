@@ -11428,7 +11428,7 @@ namespace AHO
                                 _ATF = num8
                             };
                         }
-                        bool flag20 = this._ABQ._ASC && (int)current.type == 2 && eventModifiers == null && this._CJE.Contains(current.mousePosition) && num6 >= 0 && num6 < this._ABQ.FLOg.Count && num10 < this._ABQ.FLOg[num6].Length;
+                        bool flag20 = this._ABQ._ASC && (int)current.type == 2 && eventModifiers == EventModifiers.None && this._CJE.Contains(current.mousePosition) && num6 >= 0 && num6 < this._ABQ.FLOg.Count && num10 < this._ABQ.FLOg[num6].Length;
                         if (flag20)
                         {
                             TextPosition textPosition = new TextPosition(num6, num10 + 1);

@@ -201,7 +201,7 @@ namespace AHO
             window.wantsMouseMove = true;
             window._AEZ = tokenRect;
             window.EPALNJEIJOEJDLKLCLKPOGGLFMAECGHIPEBF = horizontal;
-            window.hideFlags = 61;
+            window.hideFlags = HideFlags.HideAndDontSave;
             window._AEK = editor;
             window.minSize = Vector2.one;
             window._AEX = focusedWindow;
