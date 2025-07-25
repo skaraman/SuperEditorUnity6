@@ -583,7 +583,7 @@ namespace AHO
                     bool flag2 = this._AJP() == null;
                     if (flag2)
                     {
-                        Debug.LogError("Parser rule \"" + this._AW + "\" not found!!!");
+                        UnityEngine.Debug.LogError("Parser rule \"" + this._AW + "\" not found!!!");
                     }
                     else
                     {
@@ -843,8 +843,8 @@ namespace AHO
                             bool flag3 = this._BCY.Accepts(_BEC);
                             if (flag3)
                             {
-                                Debug.LogError(((this != null) ? this.ToString() : null) + ": ambiguous alternatives");
-                                Debug.LogWarning(this._BCY.Intersecton(_BEC).ToString(parser));
+                                UnityEngine.Debug.LogError(((this != null) ? this.ToString() : null) + ": ambiguous alternatives");
+                                UnityEngine.Debug.LogWarning(this._BCY.Intersecton(_BEC).ToString(parser));
                             }
                             this._BCY.Add(_BEC);
                         }
@@ -2614,7 +2614,7 @@ namespace AHO
                     bool flag4 = token >= this._BDN.Count;
                     if (flag4)
                     {
-                        Debug.LogError("Unknown token " + token.ToString());
+                        UnityEngine.Debug.LogError("Unknown token " + token.ToString());
                     }
                     bool flag5 = this._BDN[token];
                     this._BDN[token] = false;
@@ -2749,7 +2749,7 @@ namespace AHO
                     bool flag3 = token >= this._BDN.Count;
                     if (flag3)
                     {
-                        Debug.LogError("Unknown token " + token.ToString());
+                        UnityEngine.Debug.LogError("Unknown token " + token.ToString());
                     }
                     flag2 = this._BDN[token];
                 }

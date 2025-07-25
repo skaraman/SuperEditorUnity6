@@ -2983,7 +2983,7 @@ namespace AHO
                 }
                 else
                 {
-                    Debug.LogWarning(string.Concat(new string[]
+                    UnityEngine.Debug.LogWarning(string.Concat(new string[]
                     {
                         "Token at line ",
                         (lineIndex + 1).ToString(),

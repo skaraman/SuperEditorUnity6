@@ -86,7 +86,7 @@ namespace AHO
                 }
                 catch (ReflectionTypeLoadException)
                 {
-                    Debug.LogWarning("Error reading types from assembly " + assembly.FullName);
+                    UnityEngine.Debug.LogWarning("Error reading types from assembly " + assembly.FullName);
                 }
             IL_0180:
                 i++;
@@ -292,7 +292,7 @@ namespace AHO
             }
             catch (Exception ex)
             {
-                Debug.LogException(ex);
+                UnityEngine.Debug.LogException(ex);
             }
             bool flag2 = this._AQT() != null && this._AQT()._AIT != null;
             if (flag2)
