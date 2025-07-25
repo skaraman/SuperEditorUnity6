@@ -188,7 +188,8 @@ namespace AHO
                         this._ASG = "\n";
                         try
                         {
-                            Stream stream = new BufferedStream(new FileStream(this._ARQ(), FileMode.Open, FileAccess.Read, FileShare.ReadWrite), 1024);
+                            string filePath = this._ARQ();
+                            Stream stream = new BufferedStream(new FileStream(filePath, FileMode.Open, FileAccess.Read, FileShare.ReadWrite), 1024);
                             bool flag4 = stream != null;
                             if (flag4)
                             {
