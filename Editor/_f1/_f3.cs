@@ -93,21 +93,21 @@ namespace ODGL
                 bool flag2 = num == 0;
                 if (flag2)
                 {
-                    this.OIGP.alignment = 0;
+                    this.OIGP.alignment = TextAnchor.UpperLeft;
                 }
                 else
                 {
                     bool flag3 = num == 1;
                     if (flag3)
                     {
-                        this.OIGP.alignment = 1;
+                        this.OIGP.alignment = TextAnchor.UpperCenter;
                     }
                     else
                     {
                         bool flag4 = num == 2;
                         if (flag4)
                         {
-                            this.OIGP.alignment = 2;
+                            this.OIGP.alignment = TextAnchor.UpperRight;
                         }
                     }
                 }
