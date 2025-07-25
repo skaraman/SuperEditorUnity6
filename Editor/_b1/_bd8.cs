@@ -2559,7 +2559,7 @@ namespace AHO
                                 for (; ; )
                                 {
                                     short num6 = num5;
-                                    num5 = num6 - 1;
+                                    num5 = (short)(num6 - 1);
                                     if (num6 <= 0)
                                     {
                                         break;
@@ -2699,7 +2699,7 @@ namespace AHO
                                         for (; ; )
                                         {
                                             short num9 = num8;
-                                            num8 = num9 - 1;
+                                            num8 = (short)(num9 - 1);
                                             if (num9 <= 0)
                                             {
                                                 break;
