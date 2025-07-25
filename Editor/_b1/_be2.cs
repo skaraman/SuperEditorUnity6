@@ -127,7 +127,7 @@ namespace AHO
                 Application.OpenURL("https://assetstore.unity.com/packages/tools/utilities/super-editor-pro-192174");
             }
             EditorGUILayout.EndVertical();
-            bool flag3 = Event.current.isKey && Event.current.keyCode == 27;
+            bool flag3 = Event.current.isKey && (int)Event.current.keyCode == 27;
             if (flag3)
             {
                 base.Close();

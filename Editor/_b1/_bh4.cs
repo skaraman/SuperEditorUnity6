@@ -13,6 +13,7 @@ using System.Xml;
 using SuperEditor;
 using UnityEditor;
 using UnityEngine;
+using Debug = UnityEngine.Debug;
 
 namespace AHO
 {
