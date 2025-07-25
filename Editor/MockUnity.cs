@@ -685,7 +685,54 @@ namespace UnityEditor
 
     namespace VersionControl
     {
-        public class Provider { }
+        public class Provider 
+        {
+            public static Asset GetAssetByGUID(string guid) => new Asset();
+            public static Task Checkout(Asset asset, int mode) => new Task();
+        }
+        
+        public class Asset
+        {
+            public States state { get; set; } = States.None;
+            
+            [System.Flags]
+            public enum States
+            {
+                None = 0,
+                AddedLocal = 1,
+                AddedRemote = 2,
+                CheckedOutLocal = 4,
+                CheckedOutRemote = 8,
+                Conflicted = 16,
+                DeletedLocal = 32,
+                DeletedRemote = 64,
+                Exclusive = 128,
+                Local = 256,
+                LockedLocal = 512,
+                LockedRemote = 1024,
+                MetaFile = 2048,
+                Missing = 4096,
+                MovedLocal = 8192,
+                MovedRemote = 16384,
+                OutOfSync = 32768,
+                ReadOnly = 65536,
+                Synced = 131072,
+                Unversioned = 262144,
+                Updating = 524288
+            }
+        }
+        
+        public class Task
+        {
+            public System.Collections.Generic.List<Message> messages { get; } = new System.Collections.Generic.List<Message>();
+            public void Wait() { }
+        }
+        
+        public class Message
+        {
+            public string text { get; set; }
+            public int severity { get; set; }
+        }
     }
 
     namespace IMGUI

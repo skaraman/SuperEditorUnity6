@@ -3233,7 +3233,7 @@ namespace AHO
                                 KeyCode keyCode2 = keyCode;
                                 if ((int)keyCode2 <= 12)
                                 {
-                                    if (keyCode2 == null)
+                                    if (keyCode2 == KeyCode.None)
                                     {
                                         return evt.character > '\0';
                                     }
@@ -10676,7 +10676,7 @@ namespace AHO
                                 return;
                             }
                             bool flag128 = (current.character >= ' ' || current.character == '\n' || (current.character == '\0' && Input.compositionString != "")) && 
-                                (!flag7 || (((int)eventModifiers & 8) == null && current.keyCode == null)) && this.TryEdit();
+                                (!flag7 || (((int)eventModifiers & 8) == 0 && current.keyCode == KeyCode.None)) && this.TryEdit();
                             if (flag128)
                             {
                                 char character = current.character;
@@ -11117,7 +11117,7 @@ namespace AHO
                             bool flag185 = current.character != '\0' || Input.compositionString == "";
                             if (flag185)
                             {
-                                bool flag186 = flag60 || (this._ATW() != null && (((int)eventModifiers & 1) == null || this._ATW() == this._ABH));
+                                bool flag186 = flag60 || (this._ATW() != null && (((int)eventModifiers & 1) == 0 || this._ATW() == this._ABH));
                                 if (flag186)
                                 {
                                     this._ATL(null);
@@ -11694,7 +11694,7 @@ namespace AHO
                                             bool wordExtents = this._ABQ.GetWordExtents(num2, num6, out num18, out num19);
                                             if (wordExtents)
                                             {
-                                                bool flag55 = this._CJH != null && (((int)eventModifiers & 1) != null || this._CJG);
+                                                bool flag55 = this._CJH != null && (((int)eventModifiers & 1) != 0 || this._CJG);
                                                 if (flag55)
                                                 {
                                                     bool flag56 = num6 > this._CJH._ABI || (num6 == this._CJH._ABI && num18 >= this._CJH._AEU);
@@ -11951,7 +11951,7 @@ namespace AHO
                                 }
                                 this._CIL = true;
                             }
-                            bool flag82 = ((int)eventModifiers & 8) != null || ((int)eventModifiers & 2) > 0;
+                            bool flag82 = ((int)eventModifiers & 8) != 0 || ((int)eventModifiers & 2) > 0;
                             if (flag82)
                             {
                                 TextPosition textPosition2 = new TextPosition(num6, num10 + 1);

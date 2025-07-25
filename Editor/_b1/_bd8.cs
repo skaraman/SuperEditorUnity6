@@ -1728,10 +1728,10 @@ namespace AHO
                 }
                 else
                 {
-                    bool flag4 = (assetByGUID.state & 16384) == null || (assetByGUID.state & 256) > 0;
+                    bool flag4 = (assetByGUID.state & (Asset.States)16384) == 0 || (assetByGUID.state & (Asset.States)256) > 0;
                     if (flag4)
                     {
-                        bool flag5 = (assetByGUID.state & 256) == 0;
+                        bool flag5 = (assetByGUID.state & (Asset.States)256) == 0;
                         if (flag5)
                         {
                             bool flag6 = File.Exists(this._ARQ()) && (File.GetAttributes(this._ARQ()) & FileAttributes.ReadOnly) != (FileAttributes)0;
