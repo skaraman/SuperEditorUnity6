@@ -496,12 +496,25 @@ namespace UnityEditor
         public static void ClearProgressBar() { }
     }
 
+    [System.Flags]
+    public enum SelectionMode
+    {
+        Unfiltered = 0,
+        TopLevel = 1,
+        Deep = 2,
+        ExcludePrefab = 4,
+        Editable = 8,
+        Assets = 16,
+        DeepAssets = 32
+    }
+
     public static class Selection
     {
         public static UnityEngine.Object[] objects { get; set; }
         public static UnityEngine.GameObject[] gameObjects { get; set; }
         public static UnityEngine.Object activeObject { get; set; }
         public static UnityEngine.GameObject activeGameObject { get; set; }
+        public static UnityEngine.Object[] GetFiltered(System.Type type, SelectionMode selectionMode) => new UnityEngine.Object[0];
     }
 
     public static class Handles
