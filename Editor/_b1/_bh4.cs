@@ -1677,7 +1677,7 @@ namespace AHO
                                         {
                                             return "";
                                         }
-                                        array = Selection.GetFiltered(runtimeType, 4);
+                                        array = Selection.GetFiltered(runtimeType, SelectionMode.ExcludePrefab);
                                         bool flag10 = array.Length != 0;
                                         if (flag10)
                                         {
