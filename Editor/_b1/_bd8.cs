@@ -102,7 +102,7 @@ namespace AHO
         // Token: 0x060003FA RID: 1018 RVA: 0x000C65B8 File Offset: 0x000C47B8
         public void OnEnable()
         {
-            base.hideFlags = 61;
+            base.hideFlags = HideFlags.HideAndDontSave;
             string text = AssetDatabase.GUIDToAssetPath(this._AMZ);
             bool flag = !string.IsNullOrEmpty(text);
             if (flag)
