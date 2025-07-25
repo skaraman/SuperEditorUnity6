@@ -71,7 +71,7 @@ namespace AHO
             HttpWebRequest httpWebRequest = WebRequest.Create(url) as HttpWebRequest;
             HttpWebResponse httpWebResponse = httpWebRequest.GetResponse() as HttpWebResponse;
             Stream responseStream = httpWebResponse.GetResponseStream();
-            Stream stream = new FileStream(tempPath, FileMode.Create);
+            Stream stream = File.Create(tempPath);
             long contentLength = httpWebResponse.ContentLength;
             long num = 0L;
             byte[] array = new byte[1024];

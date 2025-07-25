@@ -2001,7 +2001,7 @@ namespace AHO
                 try
                 {
                     Stream responseStream = webResponse.GetResponseStream();
-                    Stream stream = new FileStream(path, FileMode.Create, FileAccess.ReadWrite);
+                    Stream stream = File.Create(path);
                     long contentLength = webResponse.ContentLength;
                     long num = 0L;
                     byte[] array = new byte[1024];
