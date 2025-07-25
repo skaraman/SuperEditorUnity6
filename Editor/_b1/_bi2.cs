@@ -236,7 +236,7 @@ namespace AHO
                             _bi2._CAC = new GUIStyle(_bi2._CAC);
                             _bi2._CAC.padding.top--;
                             _bi2._CAC.padding.left = 0;
-                            _bi2._CAC.alignment = 0;
+                            _bi2._CAC.alignment = TextAnchor.UpperLeft;
                             _bi2._CAD = new GUIStyle(_bi2._CAC);
                             _bi2._CAD.normal = _bi2._CAD.onNormal;
                             _bi2._CAD.active = _bi2._CAD.onActive;
@@ -248,7 +248,7 @@ namespace AHO
                             _bi2._CAC.onFocused = _bi2._CAC.focused;
                             _bi2._CAE = new GUIStyle(_bi2._CAE);
                             _bi2._CAE.padding.top--;
-                            _bi2._CAE.alignment = 0;
+                            _bi2._CAE.alignment = TextAnchor.UpperLeft;
                             _bi2._CAF = new GUIStyle(_bi2._CAE);
                             _bi2._CAF.normal = _bi2._CAF.onNormal;
                             _bi2._CAF.active = _bi2._CAF.onActive;
@@ -3129,7 +3129,7 @@ namespace AHO
                 styles._CFD.normal.textColor = currentTheme.lineNumbers;
                 styles._CFD.hover.textColor = currentTheme.lineNumbersHighlight;
                 styles._CFD.hover.background = styles._CFG.normal.background;
-                styles._CFD.alignment = 2;
+                styles._CFD.alignment = TextAnchor.UpperRight;
                 bool flag2 = _bi2.GetDynamicFontSize(styles._ABV.font) != 0;
                 int num = ((_bi2._CCJ == "Fonts/DejaVu Sans Mono.ttf") ? 3 : 2);
                 styles._ACB.fontStyle = (flag2 ? (currentTheme.commentsStyle & num) : 0);

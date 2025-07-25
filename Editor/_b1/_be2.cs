@@ -87,13 +87,13 @@ namespace AHO
         {
             this._AVR = new GUIStyle(EditorStyles.boldLabel);
             this._AVR.fontSize = 24;
-            this._AVR.alignment = 1;
+            this._AVR.alignment = TextAnchor.UpperCenter;
             this._AVS = new GUIStyle(EditorStyles.miniLabel);
-            this._AVS.alignment = 0;
+            this._AVS.alignment = TextAnchor.UpperLeft;
             this._AVS.wordWrap = true;
             this._AVS.padding.left = 20;
             this._AVT = new GUIStyle(EditorStyles.label);
-            this._AVT.alignment = 0;
+            this._AVT.alignment = TextAnchor.UpperLeft;
             this._AVT.normal.textColor = this._AVS.normal.textColor;
             this._AVT.wordWrap = true;
             this._AVT.padding.left = 10;
