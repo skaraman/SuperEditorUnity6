@@ -4,6 +4,7 @@
 #if NO_UNITY
 
 using System;
+using System.Linq;
 
 namespace UnityEngine
 {
@@ -688,7 +689,8 @@ namespace UnityEditor
         public class Provider 
         {
             public static Asset GetAssetByGUID(string guid) => new Asset();
-            public static Task Checkout(Asset asset, int mode) => new Task();
+            public static Task Checkout(AssetList assets, int mode) => new Task();
+            public static bool CheckoutIsValid(AssetList assets) => true;
         }
         
         public class Asset
@@ -722,16 +724,30 @@ namespace UnityEditor
             }
         }
         
+        public class AssetList : System.Collections.Generic.List<Asset>
+        {
+            public AssetList() : base() { }
+            public AssetList(System.Collections.Generic.IEnumerable<Asset> collection) : base(collection) { }
+            
+            // Add Unity-specific methods based on documentation
+            public AssetList Filter(Asset.States states) => new AssetList(this.Where(a => (a.state & states) != 0));
+            public AssetList FilterChildren() => this; // Simplified stub
+            public int FilterCount(Asset.States states) => this.Count(a => (a.state & states) != 0);
+        }
+        
         public class Task
         {
             public System.Collections.Generic.List<Message> messages { get; } = new System.Collections.Generic.List<Message>();
+            public bool success { get; set; } = true;
             public void Wait() { }
+            public void Dispose() { }
         }
         
         public class Message
         {
             public string text { get; set; }
             public int severity { get; set; }
+            public void Show() { }
         }
     }
 
