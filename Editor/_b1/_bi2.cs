@@ -1643,7 +1643,7 @@ namespace AHO
                                 }
                                 catch (Exception ex)
                                 {
-                                    Debug.LogException(ex);
+                                    UnityEngine.Debug.LogException(ex);
                                 }
                             }
                         }
@@ -2051,7 +2051,7 @@ namespace AHO
                 {
                     string text = "Exception while trying to get buffer!!!\n";
                     Exception ex2 = ex;
-                    Debug.LogError(text + ((ex2 != null) ? ex2.ToString() : null));
+                    UnityEngine.Debug.LogError(text + ((ex2 != null) ? ex2.ToString() : null));
                     return;
                 }
             }
@@ -6929,7 +6929,7 @@ namespace AHO
             bool flag = !this._CGV;
             if (flag)
             {
-                Debug.LogError("EndRefactoring() called without calling BeginRefactoring()");
+                UnityEngine.Debug.LogError("EndRefactoring() called without calling BeginRefactoring()");
             }
             GCE _CCO = this._ABQ;
             _CCO._AUK = (GCE._AVI)Delegate.Remove(_CCO._AUK, new GCE._AVI(this.OnInsertedTextTrackSelection));
@@ -8366,7 +8366,7 @@ namespace AHO
                 bool flag4 = cuPath == null;
                 if (flag4)
                 {
-                    Debug.Log("Source code for '" + _AIO.Print() + "' is not available.");
+                    UnityEngine.Debug.Log("Source code for '" + _AIO.Print() + "' is not available.");
                     flag2 = false;
                 }
                 else
@@ -8381,7 +8381,7 @@ namespace AHO
                     bool flag6 = buffer == null;
                     if (flag6)
                     {
-                        Debug.Log("Error: Failed to load " + cuPath);
+                        UnityEngine.Debug.Log("Error: Failed to load " + cuPath);
                         flag2 = false;
                     }
                     else
