@@ -1748,13 +1748,13 @@ namespace AHO
                         bool flag8 = false;
                         AssetList assetList = new AssetList();
                         assetList.Add(assetByGUID);
-                        Task task = Provider.Checkout(assetList, 3);
+                        Task task = Provider.Checkout(assetList, CheckoutMode.Exact);
                         try
                         {
                             task.Wait();
                             foreach (Message message in task.messages)
                             {
-                                bool flag9 = (int)message.severity == 3 || (int)message.severity == 4;
+                                bool flag9 = message.severity == Message.Severity.Error;
                                 if (flag9)
                                 {
                                     message.Show();
