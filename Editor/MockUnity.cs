@@ -328,6 +328,9 @@ namespace UnityEngine
         public bool alt { get; set; }
         public bool command { get; set; }
         public string commandName { get; set; }
+        public EventModifiers modifiers { get; set; }
+        public bool isMouse => type == EventType.MouseDown || type == EventType.MouseUp || type == EventType.MouseMove || type == EventType.MouseDrag;
+        public int clickCount { get; set; }
         public void Use() { }
     }
 
@@ -396,6 +399,19 @@ namespace UnityEngine
         Pause = 19,
         Escape = 27,
         Space = 32,
+    }
+
+    [System.Flags]
+    public enum EventModifiers
+    {
+        None = 0,
+        Shift = 1,
+        Control = 2,
+        Alt = 4,
+        Command = 8,
+        Numeric = 16,
+        CapsLock = 32,
+        FunctionKey = 64
     }
 }
 

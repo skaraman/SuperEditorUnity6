@@ -143,7 +143,7 @@ namespace ODGL
         // Token: 0x0600099A RID: 2458 RVA: 0x00102848 File Offset: 0x00100A48
         internal override void EventHandler(GameObject gameObject, _fb5 objectList, Event currentEvent, Rect rect)
         {
-            bool flag = Event.current.isMouse && currentEvent.type == null && Event.current.button == 0 && rect.Contains(Event.current.mousePosition);
+            bool flag = Event.current.isMouse && currentEvent.type == EventType.MouseDown && Event.current.button == 0 && rect.Contains(Event.current.mousePosition);
             if (flag)
             {
                 int layer = gameObject.layer;

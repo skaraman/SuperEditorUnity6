@@ -366,7 +366,7 @@ namespace FEOCJICFPEHKGMMCGOCFIOPPOJIAOLJNEKNO
                     }
                 }
             }
-            bool flag5 = Event.current.type == null && Event.current.clickCount == 2 && rect.Contains(Event.current.mousePosition);
+            bool flag5 = Event.current.type == EventType.MouseDown && Event.current.clickCount == 2 && rect.Contains(Event.current.mousePosition);
             Rect rect2 = rect;
             rect2.y += 3f;
             rect2.height = 15f;
