@@ -86,14 +86,14 @@ namespace ODGL
                 {
                     bool flag3 = this.IsWireframeHidden(gameObject, objectList);
                     bool enabled = component.enabled;
-                    bool flag4 = currentEvent.type == 0;
+                    bool flag4 = currentEvent.type == EventType.MouseDown;
                     if (flag4)
                     {
                         this.HBAL = ((!enabled) ? 1 : 0);
                     }
                     else
                     {
-                        bool flag5 = currentEvent.type == 3 && this.HBAL != -1;
+                        bool flag5 = currentEvent.type == EventType.MouseDrag && this.HBAL != -1;
                         if (!flag5)
                         {
                             this.HBAL = -1;
