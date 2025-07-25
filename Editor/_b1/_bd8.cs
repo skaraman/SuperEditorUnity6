@@ -1746,7 +1746,9 @@ namespace AHO
                     else
                     {
                         bool flag8 = false;
-                        Task task = Provider.Checkout(assetByGUID, 3);
+                        AssetList assetList = new AssetList();
+                        assetList.Add(assetByGUID);
+                        Task task = Provider.Checkout(assetList, 3);
                         try
                         {
                             task.Wait();
