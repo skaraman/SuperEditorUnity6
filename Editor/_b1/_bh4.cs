@@ -1718,7 +1718,7 @@ namespace AHO
                                         {
                                             try
                                             {
-                                                bool flag15 = !this.IsDebuggerBrowsable(fieldInfo ?? propertyInfo);
+                                                bool flag15 = !this.IsDebuggerBrowsable((MemberInfo)fieldInfo ?? (MemberInfo)propertyInfo);
                                                 if (flag15)
                                                 {
                                                     return text2;
