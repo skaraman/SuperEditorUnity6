@@ -5114,7 +5114,7 @@ namespace AHO
                                         return _AAK2;
                                     }
                                     _BFS2 = _AAE5.GetConstructedMember(_AAK2) as _bm7;
-                                    return _BFS2 ?? _AAK2;
+                                    return (_bh4)_BFS2 ?? _AAK2;
                                 }
                             }
                             else if (num != 1888325963U)
