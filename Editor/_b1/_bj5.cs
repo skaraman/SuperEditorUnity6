@@ -159,7 +159,7 @@ namespace AHO
             while (count-- > 0)
             {
                 System.Reflection.Assembly assembly = _bj5.INDCDHPALHNEMDLDBPLEMKPEACJDGFKKACHA()[count];
-                bool flag = assembly is AssemblyBuilder;
+                bool flag = assembly is System.Reflection.Emit.AssemblyBuilder;
                 if (!flag)
                 {
                     bool flag2 = string.Compare(assembly.GetName().Name, fileNameWithoutExtension, StringComparison.InvariantCultureIgnoreCase) == 0;
@@ -180,7 +180,7 @@ namespace AHO
                     {
                         return null;
                     }
-                    Assembly assembly2 = global::System.Reflection.Assembly.ReflectionOnlyLoadFrom(assemblyPath);
+                    System.Reflection.Assembly assembly2 = global::System.Reflection.Assembly.ReflectionOnlyLoadFrom(assemblyPath);
                     _AOS = _bj5.FromAssembly(assembly2);
                     bool flag5 = _AOS != null;
                     if (flag5)
@@ -203,7 +203,7 @@ namespace AHO
             while (count-- > 0)
             {
                 System.Reflection.Assembly assembly = _bj5.INDCDHPALHNEMDLDBPLEMKPEACJDGFKKACHA()[count];
-                bool flag = assembly is AssemblyBuilder;
+                bool flag = assembly is System.Reflection.Emit.AssemblyBuilder;
                 if (!flag)
                 {
                     bool flag2 = string.Compare(assembly.GetName().Name, assemblyName, true) == 0;
