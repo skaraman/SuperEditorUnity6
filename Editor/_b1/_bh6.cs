@@ -979,7 +979,7 @@ namespace AHO
         // Token: 0x0600003B RID: 59 RVA: 0x00004C0C File Offset: 0x00002E0C
         internal static List<string> FindAllTextAssets()
         {
-            HierarchyProperty hierarchyProperty = new HierarchyProperty(1);
+            HierarchyProperty hierarchyProperty = new HierarchyProperty(HierarchyType.Assets);
             hierarchyProperty.SetSearchFilter("t:TextAsset", 0);
             hierarchyProperty.Reset();
             List<string> list = new List<string>();

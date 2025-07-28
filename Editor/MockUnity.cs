@@ -426,6 +426,12 @@ namespace UnityEditor
         Error = 3
     }
 
+    public enum HierarchyType
+    {
+        Assets = 0,
+        GameObjects = 1
+    }
+
     public class EditorWindow : UnityEngine.ScriptableObject
     {
         public static T GetWindow<T>() where T : EditorWindow => null;
@@ -774,6 +780,26 @@ namespace UnityEditor
                 public string OnToolbarGUI(string text) => text;
             }
         }
+    }
+
+    public static class AssetDatabase
+    {
+        public static UnityEngine.Object LoadAssetAtPath(string assetPath, System.Type type) => null;
+        public static T LoadAssetAtPath<T>(string assetPath) where T : UnityEngine.Object => null;
+        public static string AssetPathToGUID(string assetPath) => "";
+        public static string GUIDToAssetPath(string guid) => "";
+        public static string GetAssetPath(UnityEngine.Object assetObject) => "";
+        public static string[] FindAssets(string filter) => new string[0];
+        public static string[] FindAssets(string filter, string[] searchInFolders) => new string[0];
+    }
+
+    public class HierarchyProperty
+    {
+        public HierarchyProperty(HierarchyType hierarchyType) { }
+        public void SetSearchFilter(string filter, int options) { }
+        public void Reset() { }
+        public bool Next(int[] expanded) => false;
+        public string guid { get; set; } = "";
     }
 
     namespace UIElements
