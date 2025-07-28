@@ -81,7 +81,6 @@ namespace AHO
                             skipThis = true;
                             break;
                         }
-                        i = null;
                     }
                     List<_bb3>.Enumerator enumerator2 = default(List<_bb3>.Enumerator);
                     bool flag11 = skipThis;
@@ -95,7 +94,6 @@ namespace AHO
                 yield return overrideCompletion;
                 methodGroup = null;
                 overrideCompletion = null;
-                method = null;
             }
             List<_bb3>.Enumerator enumerator = default(List<_bb3>.Enumerator);
             yield break;

@@ -295,7 +295,6 @@ namespace AHO
                     foreach (_b2 type in nsDef.EnumTypes(name))
                     {
                         yield return type;
-                        type = null;
                     }
                     IEnumerator<_b2> enumerator = null;
                 }

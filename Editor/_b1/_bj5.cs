@@ -989,7 +989,6 @@ namespace AHO
             foreach (_b2 type in this._AWL().EnumTypes(name))
             {
                 yield return type;
-                type = null;
             }
             IEnumerator<_b2> enumerator = null;
             int i = this._CGL().Length;
@@ -1004,7 +1003,6 @@ namespace AHO
                 foreach (_b2 type2 in this._CGL()[i]._AWL().EnumTypes(name))
                 {
                     yield return type2;
-                    type2 = null;
                 }
                 IEnumerator<_b2> enumerator2 = null;
             }
