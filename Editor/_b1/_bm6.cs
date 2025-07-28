@@ -192,7 +192,6 @@ namespace AHO
                 foreach (_bn1 ns in this._AMJ().VisibleNamespacesInScope())
                 {
                     yield return ns;
-                    ns = null;
                 }
                 IEnumerator<_bn1> enumerator = null;
             }
