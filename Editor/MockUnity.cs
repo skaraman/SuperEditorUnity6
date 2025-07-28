@@ -126,7 +126,7 @@ namespace UnityEngine
         public static Vector3 Lerp(Vector3 a, Vector3 b, float t) => a + (b - a) * Mathf.Clamp01(t);
         public static Vector3 Slerp(Vector3 a, Vector3 b, float t) => Lerp(a, b, t); // Simplified
         public static Vector3 Scale(Vector3 a, Vector3 b) => new Vector3(a.x * b.x, a.y * b.y, a.z * b.z);
-        public static Vector3 Reflect(Vector3 inDirection, Vector3 inNormal) => inDirection - 2f * Dot(inNormal, inDirection) * inNormal;
+        public static Vector3 Reflect(Vector3 inDirection, Vector3 inNormal) => inDirection - (inNormal * (2f * Dot(inNormal, inDirection)));
         
         public override bool Equals(object obj) => obj is Vector3 other && this == other;
         public override int GetHashCode() => x.GetHashCode() ^ (y.GetHashCode() << 2) ^ (z.GetHashCode() >> 2);
@@ -243,9 +243,9 @@ namespace UnityEngine
                 double sqx = x * x;
                 double sqy = y * y;
                 double sqz = z * z;
-                result.y = Mathf.Atan2(2 * y * w - 2 * x * z, 1 - 2 * sqy - 2 * sqz);
-                result.z = Mathf.Asin(2 * test);
-                result.x = Mathf.Atan2(2 * x * w - 2 * y * z, 1 - 2 * sqx - 2 * sqz);
+                result.y = Mathf.Atan2((float)(2 * y * w - 2 * x * z), (float)(1 - 2 * sqy - 2 * sqz));
+                result.z = Mathf.Asin((float)(2 * test));
+                result.x = Mathf.Atan2((float)(2 * x * w - 2 * y * z), (float)(1 - 2 * sqx - 2 * sqz));
                 return result * Mathf.Rad2Deg;
             }
             set

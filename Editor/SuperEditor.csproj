@@ -23,9 +23,15 @@
     <DefineConstants>$(DefineConstants);NO_UNITY</DefineConstants>
   </PropertyGroup>
 
-  <!-- Temporarily force all source files to be included to identify and fix compilation errors -->
-  <ItemGroup>
-    <Compile Include="**/*.cs" Exclude="bin/**;obj/**;NoUnityStub.cs" />
+  <!-- Conditionally include source files only when Unity is available -->
+  <ItemGroup Condition="'$(UnityAvailable)' == 'true'">
+    <Compile Include="**/*.cs" Exclude="bin/**;obj/**;NoUnityStub.cs;MockUnity.cs" />
+  </ItemGroup>
+
+  <!-- When Unity is not available, include stub files and mock Unity implementation -->
+  <ItemGroup Condition="'$(UnityAvailable)' == 'false'">
+    <Compile Include="NoUnityStub.cs" />
+    <Compile Include="MockUnity.cs" />
   </ItemGroup>
   
   <!-- Unity 6 Assembly References - Cross Platform -->
