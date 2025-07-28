@@ -5,6 +5,7 @@
 
 using System;
 using System.Linq;
+using System.Linq;
 
 namespace UnityEngine
 {
@@ -12,6 +13,35 @@ namespace UnityEngine
     {
         public static Object CreateInstance<T>() where T : Object => null;
         public HideFlags hideFlags { get; set; }
+        public string name { get; set; } = "";
+        
+        // Missing Object methods
+        public static void Destroy(Object obj) { }
+        public static void DestroyImmediate(Object obj) { }
+        public static void DestroyImmediate(Object obj, bool allowDestroyingAssets) { }
+        public static T[] FindObjectsOfType<T>() where T : Object => new T[0];
+        public static Object[] FindObjectsOfType(System.Type type) => new Object[0];
+        public static T FindObjectOfType<T>() where T : Object => null;
+        public static Object FindObjectOfType(System.Type type) => null;
+        public static void DontDestroyOnLoad(Object target) { }
+        public static Object Instantiate(Object original) => original;
+        public static Object Instantiate(Object original, Transform parent) => original;
+        public static Object Instantiate(Object original, Transform parent, bool instantiateInWorldSpace) => original;
+        public static Object Instantiate(Object original, Vector3 position, Quaternion rotation) => original;
+        public static Object Instantiate(Object original, Vector3 position, Quaternion rotation, Transform parent) => original;
+        public static T Instantiate<T>(T original) where T : Object => original;
+        public static T Instantiate<T>(T original, Transform parent) where T : Object => original;
+        public static T Instantiate<T>(T original, Transform parent, bool worldPositionStays) where T : Object => original;
+        public static T Instantiate<T>(T original, Vector3 position, Quaternion rotation) where T : Object => original;
+        public static T Instantiate<T>(T original, Vector3 position, Quaternion rotation, Transform parent) where T : Object => original;
+        
+        public override bool Equals(object other) => ReferenceEquals(this, other);
+        public override int GetHashCode() => base.GetHashCode();
+        public override string ToString() => name;
+        
+        public static bool operator ==(Object x, Object y) => ReferenceEquals(x, y);
+        public static bool operator !=(Object x, Object y) => !ReferenceEquals(x, y);
+        public static implicit operator bool(Object exists) => exists != null;
     }
 
     public class ScriptableObject : Object
@@ -178,6 +208,197 @@ namespace UnityEngine
         }
     }
     
+    public struct Quaternion
+    {
+        public float x, y, z, w;
+        
+        public Quaternion(float x, float y, float z, float w)
+        {
+            this.x = x; this.y = y; this.z = z; this.w = w;
+        }
+        
+        public static Quaternion identity => new Quaternion(0, 0, 0, 1);
+        
+        public Vector3 eulerAngles
+        {
+            get
+            {
+                // Simplified Euler conversion
+                Vector3 result = new Vector3();
+                double test = x * y + z * w;
+                if (test > 0.499) // singularity at north pole
+                {
+                    result.y = 2 * Mathf.Atan2(x, w);
+                    result.z = Mathf.PI / 2;
+                    result.x = 0;
+                    return result * Mathf.Rad2Deg;
+                }
+                if (test < -0.499) // singularity at south pole
+                {
+                    result.y = -2 * Mathf.Atan2(x, w);
+                    result.z = -Mathf.PI / 2;
+                    result.x = 0;
+                    return result * Mathf.Rad2Deg;
+                }
+                double sqx = x * x;
+                double sqy = y * y;
+                double sqz = z * z;
+                result.y = Mathf.Atan2(2 * y * w - 2 * x * z, 1 - 2 * sqy - 2 * sqz);
+                result.z = Mathf.Asin(2 * test);
+                result.x = Mathf.Atan2(2 * x * w - 2 * y * z, 1 - 2 * sqx - 2 * sqz);
+                return result * Mathf.Rad2Deg;
+            }
+            set
+            {
+                this = Euler(value);
+            }
+        }
+        
+        public static Quaternion Euler(float x, float y, float z) => Euler(new Vector3(x, y, z));
+        public static Quaternion Euler(Vector3 euler)
+        {
+            Vector3 radEuler = euler * Mathf.Deg2Rad * 0.5f;
+            float cx = Mathf.Cos(radEuler.x);
+            float sx = Mathf.Sin(radEuler.x);
+            float cy = Mathf.Cos(radEuler.y);
+            float sy = Mathf.Sin(radEuler.y);
+            float cz = Mathf.Cos(radEuler.z);
+            float sz = Mathf.Sin(radEuler.z);
+            
+            return new Quaternion(
+                sx * cy * cz - cx * sy * sz,
+                cx * sy * cz + sx * cy * sz,
+                cx * cy * sz - sx * sy * cz,
+                cx * cy * cz + sx * sy * sz
+            );
+        }
+        
+        public static Quaternion AngleAxis(float angle, Vector3 axis)
+        {
+            axis = axis.normalized;
+            float halfAngle = angle * Mathf.Deg2Rad * 0.5f;
+            float sin = Mathf.Sin(halfAngle);
+            return new Quaternion(axis.x * sin, axis.y * sin, axis.z * sin, Mathf.Cos(halfAngle));
+        }
+        
+        public static Quaternion LookRotation(Vector3 forward) => LookRotation(forward, Vector3.up);
+        public static Quaternion LookRotation(Vector3 forward, Vector3 upwards)
+        {
+            // Simplified look rotation
+            forward = forward.normalized;
+            Vector3 right = Vector3.Cross(upwards, forward).normalized;
+            upwards = Vector3.Cross(forward, right);
+            
+            float m00 = right.x;
+            float m01 = right.y;
+            float m02 = right.z;
+            float m10 = upwards.x;
+            float m11 = upwards.y;
+            float m12 = upwards.z;
+            float m20 = forward.x;
+            float m21 = forward.y;
+            float m22 = forward.z;
+            
+            float trace = m00 + m11 + m22;
+            Quaternion q = new Quaternion();
+            if (trace > 0)
+            {
+                float s = Mathf.Sqrt(trace + 1) * 2;
+                q.w = 0.25f * s;
+                q.x = (m21 - m12) / s;
+                q.y = (m02 - m20) / s;
+                q.z = (m10 - m01) / s;
+            }
+            else if ((m00 > m11) && (m00 > m22))
+            {
+                float s = Mathf.Sqrt(1 + m00 - m11 - m22) * 2;
+                q.w = (m21 - m12) / s;
+                q.x = 0.25f * s;
+                q.y = (m01 + m10) / s;
+                q.z = (m02 + m20) / s;
+            }
+            else if (m11 > m22)
+            {
+                float s = Mathf.Sqrt(1 + m11 - m00 - m22) * 2;
+                q.w = (m02 - m20) / s;
+                q.x = (m01 + m10) / s;
+                q.y = 0.25f * s;
+                q.z = (m12 + m21) / s;
+            }
+            else
+            {
+                float s = Mathf.Sqrt(1 + m22 - m00 - m11) * 2;
+                q.w = (m10 - m01) / s;
+                q.x = (m02 + m20) / s;
+                q.y = (m12 + m21) / s;
+                q.z = 0.25f * s;
+            }
+            return q;
+        }
+        
+        public static float Dot(Quaternion a, Quaternion b) => a.x * b.x + a.y * b.y + a.z * b.z + a.w * b.w;
+        public static Quaternion Slerp(Quaternion a, Quaternion b, float t) => Lerp(a, b, t); // Simplified
+        public static Quaternion Lerp(Quaternion a, Quaternion b, float t)
+        {
+            t = Mathf.Clamp01(t);
+            return new Quaternion(
+                a.x + (b.x - a.x) * t,
+                a.y + (b.y - a.y) * t,
+                a.z + (b.z - a.z) * t,
+                a.w + (b.w - a.w) * t
+            ).normalized;
+        }
+        
+        public Quaternion normalized
+        {
+            get
+            {
+                float magnitude = Mathf.Sqrt(x * x + y * y + z * z + w * w);
+                if (magnitude == 0) return identity;
+                return new Quaternion(x / magnitude, y / magnitude, z / magnitude, w / magnitude);
+            }
+        }
+        
+        public static Quaternion operator *(Quaternion lhs, Quaternion rhs)
+        {
+            return new Quaternion(
+                lhs.w * rhs.x + lhs.x * rhs.w + lhs.y * rhs.z - lhs.z * rhs.y,
+                lhs.w * rhs.y + lhs.y * rhs.w + lhs.z * rhs.x - lhs.x * rhs.z,
+                lhs.w * rhs.z + lhs.z * rhs.w + lhs.x * rhs.y - lhs.y * rhs.x,
+                lhs.w * rhs.w - lhs.x * rhs.x - lhs.y * rhs.y - lhs.z * rhs.z
+            );
+        }
+        
+        public static Vector3 operator *(Quaternion rotation, Vector3 point)
+        {
+            float x = rotation.x * 2F;
+            float y = rotation.y * 2F;
+            float z = rotation.z * 2F;
+            float xx = rotation.x * x;
+            float yy = rotation.y * y;
+            float zz = rotation.z * z;
+            float xy = rotation.x * y;
+            float xz = rotation.x * z;
+            float yz = rotation.y * z;
+            float wx = rotation.w * x;
+            float wy = rotation.w * y;
+            float wz = rotation.w * z;
+            
+            return new Vector3(
+                (1F - (yy + zz)) * point.x + (xy - wz) * point.y + (xz + wy) * point.z,
+                (xy + wz) * point.x + (1F - (xx + zz)) * point.y + (yz - wx) * point.z,
+                (xz - wy) * point.x + (yz + wx) * point.y + (1F - (xx + yy)) * point.z
+            );
+        }
+        
+        public static bool operator ==(Quaternion lhs, Quaternion rhs) => Dot(lhs, rhs) > 0.999999f;
+        public static bool operator !=(Quaternion lhs, Quaternion rhs) => !(lhs == rhs);
+        
+        public override bool Equals(object other) => other is Quaternion q && this == q;
+        public override int GetHashCode() => x.GetHashCode() ^ (y.GetHashCode() << 2) ^ (z.GetHashCode() >> 2) ^ (w.GetHashCode() >> 1);
+        public override string ToString() => $"({x:F1}, {y:F1}, {z:F1}, {w:F1})";
+    }
+
     public struct Vector4
     {
         public float x, y, z, w;
@@ -232,8 +453,12 @@ namespace UnityEngine
         public static int Abs(int value) => value >= 0 ? value : -value;
         public static float Max(float a, float b) => a > b ? a : b;
         public static int Max(int a, int b) => a > b ? a : b;
+        public static float Max(params float[] values) => values.Length == 0 ? 0 : values.Max();
+        public static int Max(params int[] values) => values.Length == 0 ? 0 : values.Max();
         public static float Min(float a, float b) => a < b ? a : b;
         public static int Min(int a, int b) => a < b ? a : b;
+        public static float Min(params float[] values) => values.Length == 0 ? 0 : values.Min();
+        public static int Min(params int[] values) => values.Length == 0 ? 0 : values.Min();
         public static float Clamp(float value, float min, float max) => value < min ? min : (value > max ? max : value);
         public static int Clamp(int value, int min, int max) => value < min ? min : (value > max ? max : value);
         public static float Clamp01(float value) => Clamp(value, 0f, 1f);
@@ -241,6 +466,10 @@ namespace UnityEngine
         public static float Sin(float f) => (float)System.Math.Sin(f);
         public static float Cos(float f) => (float)System.Math.Cos(f);
         public static float Tan(float f) => (float)System.Math.Tan(f);
+        public static float Asin(float f) => (float)System.Math.Asin(f);
+        public static float Acos(float f) => (float)System.Math.Acos(f);
+        public static float Atan(float f) => (float)System.Math.Atan(f);
+        public static float Atan2(float y, float x) => (float)System.Math.Atan2(y, x);
         public static float Sqrt(float f) => (float)System.Math.Sqrt(f);
         public static float Floor(float f) => (float)System.Math.Floor(f);
         public static float Ceil(float f) => (float)System.Math.Ceiling(f);
@@ -251,6 +480,29 @@ namespace UnityEngine
         public static float Pow(float f, float p) => (float)System.Math.Pow(f, p);
         public static float Log(float f) => (float)System.Math.Log(f);
         public static float Log10(float f) => (float)System.Math.Log10(f);
+        public static float Exp(float power) => (float)System.Math.Exp(power);
+        public static float Sign(float f) => f >= 0f ? 1f : -1f;
+        public static float Repeat(float t, float length) => Clamp(t - Floor(t / length) * length, 0.0f, length);
+        public static float PingPong(float t, float length) => length - Abs(Repeat(t, length * 2f) - length);
+        public static float InverseLerp(float a, float b, float value) => a != b ? Clamp01((value - a) / (b - a)) : 0.0f;
+        public static float SmoothStep(float from, float to, float t) 
+        { 
+            t = Clamp01(t); 
+            t = -2.0f * t * t * t + 3.0f * t * t; 
+            return to * t + from * (1.0f - t); 
+        }
+        public static float Gamma(float value, float absmax, float gamma) => Sign(value) * Pow(Abs(value / absmax), gamma) * absmax;
+        public static bool Approximately(float a, float b) => Abs(b - a) < Max(0.000001f * Max(Abs(a), Abs(b)), Epsilon * 8);
+        public static float SmoothDamp(float current, float target, ref float currentVelocity, float smoothTime) => target; // Simplified
+        public static float SmoothDamp(float current, float target, ref float currentVelocity, float smoothTime, float maxSpeed) => target; // Simplified
+        public static float SmoothDamp(float current, float target, ref float currentVelocity, float smoothTime, float maxSpeed, float deltaTime) => target; // Simplified
+        public static float SmoothDampAngle(float current, float target, ref float currentVelocity, float smoothTime) => target; // Simplified
+        public static float SmoothDampAngle(float current, float target, ref float currentVelocity, float smoothTime, float maxSpeed) => target; // Simplified
+        public static float SmoothDampAngle(float current, float target, ref float currentVelocity, float smoothTime, float maxSpeed, float deltaTime) => target; // Simplified
+        public static float MoveTowards(float current, float target, float maxDelta) => Abs(target - current) <= maxDelta ? target : current + Sign(target - current) * maxDelta;
+        public static float MoveTowardsAngle(float current, float target, float maxDelta) => MoveTowards(current, target, maxDelta); // Simplified
+        public static float LerpAngle(float a, float b, float t) => a + DeltaAngle(a, b) * Clamp01(t);
+        public static float DeltaAngle(float current, float target) => Repeat((target - current), 360.0f);
     }
 
     public struct Color32
@@ -273,11 +525,164 @@ namespace UnityEngine
         }
         public static Color white => new Color(1, 1, 1, 1);
         public static Color black => new Color(0, 0, 0, 1);
+        public static Color red => new Color(1, 0, 0, 1);
+        public static Color green => new Color(0, 1, 0, 1);
+        public static Color blue => new Color(0, 0, 1, 1);
+        public static Color yellow => new Color(1, 1, 0, 1);
+        public static Color cyan => new Color(0, 1, 1, 1);
+        public static Color magenta => new Color(1, 0, 1, 1);
+        public static Color gray => new Color(0.5f, 0.5f, 0.5f, 1);
+        public static Color grey => new Color(0.5f, 0.5f, 0.5f, 1);
+        public static Color clear => new Color(0, 0, 0, 0);
+        
+        // Additional common color variations
+        public static Color lightGray => new Color(0.7f, 0.7f, 0.7f, 1);
+        public static Color darkGray => new Color(0.3f, 0.3f, 0.3f, 1);
+        
+        // Operators
+        public static Color operator +(Color a, Color b) => new Color(a.r + b.r, a.g + b.g, a.b + b.b, a.a + b.a);
+        public static Color operator -(Color a, Color b) => new Color(a.r - b.r, a.g - b.g, a.b - b.b, a.a - b.a);
+        public static Color operator *(Color a, float b) => new Color(a.r * b, a.g * b, a.b * b, a.a * b);
+        public static Color operator *(Color a, Color b) => new Color(a.r * b.r, a.g * b.g, a.b * b.b, a.a * b.a);
+        public static Color operator /(Color a, float b) => new Color(a.r / b, a.g / b, a.b / b, a.a / b);
+        public static bool operator ==(Color lhs, Color rhs) => lhs.r == rhs.r && lhs.g == rhs.g && lhs.b == rhs.b && lhs.a == rhs.a;
+        public static bool operator !=(Color lhs, Color rhs) => !(lhs == rhs);
+        
+        // Utility methods
+        public Color gamma => new Color(Mathf.Pow(r, 2.2f), Mathf.Pow(g, 2.2f), Mathf.Pow(b, 2.2f), a);
+        public Color linear => new Color(Mathf.Pow(r, 1f/2.2f), Mathf.Pow(g, 1f/2.2f), Mathf.Pow(b, 1f/2.2f), a);
+        public float maxColorComponent => Mathf.Max(Mathf.Max(r, g), b);
+        public float grayscale => 0.299f * r + 0.587f * g + 0.114f * b;
+        
+        public static Color Lerp(Color a, Color b, float t)
+        {
+            t = Mathf.Clamp01(t);
+            return new Color(a.r + (b.r - a.r) * t, a.g + (b.g - a.g) * t, a.b + (b.b - a.b) * t, a.a + (b.a - a.a) * t);
+        }
+        
+        public static Color HSVToRGB(float H, float S, float V) => new Color(V, V, V, 1); // Simplified
+        
+        public override bool Equals(object obj) => obj is Color other && this == other;
+        public override int GetHashCode() => r.GetHashCode() ^ g.GetHashCode() ^ b.GetHashCode() ^ a.GetHashCode();
+        public override string ToString() => $"RGBA({r:F3}, {g:F3}, {b:F3}, {a:F3})";
     }
 
     public class Texture2D : Object
     {
-        public Texture2D(int width, int height) { }
+        public Texture2D(int width, int height) { this.width = width; this.height = height; }
+        public Texture2D(int width, int height, TextureFormat format, bool mipChain) { this.width = width; this.height = height; }
+        
+        public int width { get; set; }
+        public int height { get; set; }
+        public TextureFormat format { get; set; } = TextureFormat.ARGB32;
+        public bool isReadable { get; set; } = true;
+        public FilterMode filterMode { get; set; } = FilterMode.Bilinear;
+        public TextureWrapMode wrapMode { get; set; } = TextureWrapMode.Repeat;
+        public int mipmapCount { get; set; } = 1;
+        
+        public Color GetPixel(int x, int y) => Color.white;
+        public void SetPixel(int x, int y, Color color) { }
+        public Color[] GetPixels() => new Color[width * height];
+        public Color[] GetPixels(int x, int y, int blockWidth, int blockHeight) => new Color[blockWidth * blockHeight];
+        public void SetPixels(Color[] colors) { }
+        public void SetPixels(int x, int y, int blockWidth, int blockHeight, Color[] colors) { }
+        public void Apply() { }
+        public void Apply(bool updateMipmaps) { }
+        public void Apply(bool updateMipmaps, bool makeNoLongerReadable) { }
+        public byte[] EncodeToPNG() => new byte[0];
+        public byte[] EncodeToJPG() => new byte[0];
+        public byte[] EncodeToJPG(int quality) => new byte[0];
+        public void LoadRawTextureData(byte[] data) { }
+        public void LoadRawTextureData(System.IntPtr data, int size) { }
+        public byte[] GetRawTextureData() => new byte[0];
+        public void Resize(int width, int height) { this.width = width; this.height = height; }
+        public void Resize(int width, int height, TextureFormat format, bool hasMipMap) { this.width = width; this.height = height; this.format = format; }
+        public bool LoadImage(byte[] data) => true;
+        public bool LoadImage(byte[] data, bool markNonReadable) => true;
+        public void SetPixels32(Color32[] colors) { }
+        public void SetPixels32(int x, int y, int blockWidth, int blockHeight, Color32[] colors) { }
+        public Color32[] GetPixels32() => new Color32[width * height];
+        public Color32[] GetPixels32(int miplevel) => new Color32[width * height];
+        public void PackTextures(Texture2D[] textures, int padding) { }
+        public Rect[] PackTextures(Texture2D[] textures, int padding, int maximumAtlasSize) => new Rect[0];
+        public Rect[] PackTextures(Texture2D[] textures, int padding, int maximumAtlasSize, bool makeNoLongerReadable) => new Rect[0];
+        public void ReadPixels(Rect source, int destX, int destY) { }
+        public void ReadPixels(Rect source, int destX, int destY, bool recalculateMipMaps) { }
+        public static Texture2D CreateExternalTexture(int width, int height, TextureFormat format, bool mipChain, bool linear, System.IntPtr nativeTex) => new Texture2D(width, height);
+        
+        // Static creation methods
+        public static Texture2D whiteTexture => new Texture2D(1, 1);
+        public static Texture2D blackTexture => new Texture2D(1, 1);
+        public static Texture2D normalTexture => new Texture2D(1, 1);
+        public static Texture2D redTexture => new Texture2D(1, 1);
+        public static Texture2D grayTexture => new Texture2D(1, 1);
+        public static Texture2D linearGrayTexture => new Texture2D(1, 1);
+    }
+    
+    public enum TextureFormat
+    {
+        Alpha8 = 1,
+        ARGB4444 = 2,
+        RGB24 = 3,
+        RGBA32 = 4,
+        ARGB32 = 5,
+        RGB565 = 7,
+        R16 = 9,
+        DXT1 = 10,
+        DXT5 = 12,
+        RGBA4444 = 13,
+        BGRA32 = 14,
+        RHalf = 15,
+        RGHalf = 16,
+        RGBAHalf = 17,
+        RFloat = 18,
+        RGFloat = 19,
+        RGBAFloat = 20,
+        YUY2 = 21,
+        RGB9e5Float = 22,
+        BC4 = 26,
+        BC5 = 27,
+        BC6H = 24,
+        BC7 = 25,
+        DXT1Crunched = 28,
+        DXT5Crunched = 29,
+        PVRTC_RGB2 = 30,
+        PVRTC_RGBA2 = 31,
+        PVRTC_RGB4 = 32,
+        PVRTC_RGBA4 = 33,
+        ETC_RGB4 = 34,
+        EAC_R = 41,
+        EAC_R_SIGNED = 42,
+        EAC_RG = 43,
+        EAC_RG_SIGNED = 44,
+        ETC2_RGB = 45,
+        ETC2_RGBA1 = 46,
+        ETC2_RGBA8 = 47,
+        ASTC_4x4 = 48,
+        ASTC_5x5 = 49,
+        ASTC_6x6 = 50,
+        ASTC_8x8 = 51,
+        ASTC_10x10 = 52,
+        ASTC_12x12 = 53,
+        RG16 = 62,
+        R8 = 63,
+        ETC_RGB4Crunched = 64,
+        ETC2_RGBA8Crunched = 65
+    }
+    
+    public enum FilterMode
+    {
+        Point = 0,
+        Bilinear = 1,
+        Trilinear = 2
+    }
+    
+    public enum TextureWrapMode
+    {
+        Repeat = 0,
+        Clamp = 1,
+        Mirror = 2,
+        MirrorOnce = 3
     }
 
     public class GUIContent
@@ -296,6 +701,90 @@ namespace UnityEngine
         public string name;
         public GUIStyle() { }
         public GUIStyle(string name) { this.name = name; }
+        public GUIStyle(GUIStyle other) { this.name = other.name; }
+        
+        // Font properties
+        public Font font { get; set; }
+        public int fontSize { get; set; } = 12;
+        public FontStyle fontStyle { get; set; } = FontStyle.Normal;
+        
+        // Text properties
+        public TextAnchor alignment { get; set; } = TextAnchor.UpperLeft;
+        public bool wordWrap { get; set; }
+        public TextClipping clipping { get; set; } = TextClipping.Clip;
+        public string text { get; set; } = "";
+        public Texture2D image { get; set; }
+        public string tooltip { get; set; } = "";
+        
+        // Color properties  
+        public GUIStyleState normal { get; set; } = new GUIStyleState();
+        public GUIStyleState hover { get; set; } = new GUIStyleState();
+        public GUIStyleState active { get; set; } = new GUIStyleState();
+        public GUIStyleState focused { get; set; } = new GUIStyleState();
+        public GUIStyleState onNormal { get; set; } = new GUIStyleState();
+        public GUIStyleState onHover { get; set; } = new GUIStyleState();
+        public GUIStyleState onActive { get; set; } = new GUIStyleState();
+        public GUIStyleState onFocused { get; set; } = new GUIStyleState();
+        
+        // Layout properties
+        public RectOffset border { get; set; } = new RectOffset(0, 0, 0, 0);
+        public RectOffset margin { get; set; } = new RectOffset(0, 0, 0, 0);
+        public RectOffset padding { get; set; } = new RectOffset(0, 0, 0, 0);
+        public RectOffset overflow { get; set; } = new RectOffset(0, 0, 0, 0);
+        
+        // Size properties
+        public float fixedWidth { get; set; }
+        public float fixedHeight { get; set; }
+        public bool stretchWidth { get; set; } = true;
+        public bool stretchHeight { get; set; }
+        public float width { get; set; }
+        public float height { get; set; }
+        
+        // Content offset
+        public Vector2 contentOffset { get; set; }
+        
+        // Methods
+        public Vector2 CalcSize(GUIContent content) => new Vector2(100, 20);
+        public float CalcHeight(GUIContent content, float width) => 20f;
+        public void Draw(Rect position, bool isHover, bool isActive, bool on, bool hasKeyboardFocus) { }
+        public void Draw(Rect position, string text, bool isHover, bool isActive, bool on, bool hasKeyboardFocus) { }
+        public void Draw(Rect position, Texture2D image, bool isHover, bool isActive, bool on, bool hasKeyboardFocus) { }
+        public void Draw(Rect position, GUIContent content, bool isHover, bool isActive, bool on, bool hasKeyboardFocus) { }
+        public void Draw(Rect position, GUIContent content, int controlID) { }
+        public void Draw(Rect position, GUIContent content, int controlID, bool on) { }
+        public void DrawCursor(Rect position, GUIContent content, int controlID, int Character) { }
+        public void DrawWithTextSelection(Rect position, GUIContent content, int controlID, int firstSelectedCharacter, int lastSelectedCharacter) { }
+        public Rect GetCursorPixelPosition(Rect position, GUIContent content, int cursorStringIndex) => position;
+        public int GetCursorStringIndex(Rect position, GUIContent content, Vector2 cursorPixelPosition) => 0;
+        
+        // Static properties for focus window
+        public static GUIStyle none { get; } = new GUIStyle();
+        
+        // Copy constructor helper
+        public GUIStyle(GUIStyle other, string newName) : this(other) { this.name = newName; }
+    }
+    
+    public class GUIStyleState
+    {
+        public Texture2D background { get; set; }
+        public Color textColor { get; set; } = Color.black;
+        
+        // Scaled textures for different resolutions
+        public Texture2D[] scaledBackgrounds { get; set; } = new Texture2D[0];
+    }
+    
+    public enum FontStyle
+    {
+        Normal = 0,
+        Bold = 1,
+        Italic = 2,
+        BoldAndItalic = 3
+    }
+    
+    public enum TextClipping
+    {
+        Overflow = 0,
+        Clip = 1
     }
 
     public class SerializeFieldAttribute : Attribute { }
@@ -323,9 +812,69 @@ namespace UnityEngine
 
     public class GameObject : Object
     {
-        public GameObject(string name) { }
+        public GameObject(string name) { this.name = name; }
+        public GameObject() { this.name = "GameObject"; }
+        
         public T GetComponent<T>() where T : Component => null;
         public T AddComponent<T>() where T : Component => null;
+        public Component GetComponent(System.Type type) => null;
+        public Component AddComponent(System.Type componentType) => null;
+        public T GetComponentInChildren<T>() where T : Component => null;
+        public T GetComponentInParent<T>() where T : Component => null;
+        public T[] GetComponents<T>() where T : Component => new T[0];
+        public Component[] GetComponents(System.Type type) => new Component[0];
+        public T[] GetComponentsInChildren<T>() where T : Component => new T[0];
+        public T[] GetComponentsInChildren<T>(bool includeInactive) where T : Component => new T[0];
+        public Component[] GetComponentsInChildren(System.Type type) => new Component[0];
+        public Component[] GetComponentsInChildren(System.Type type, bool includeInactive) => new Component[0];
+        public T[] GetComponentsInParent<T>() where T : Component => new T[0];
+        public T[] GetComponentsInParent<T>(bool includeInactive) where T : Component => new T[0];
+        public Component[] GetComponentsInParent(System.Type type) => new Component[0];
+        public Component[] GetComponentsInParent(System.Type type, bool includeInactive) => new Component[0];
+        
+        public void SendMessage(string methodName) { }
+        public void SendMessage(string methodName, object value) { }
+        public void SendMessage(string methodName, object value, SendMessageOptions options) { }
+        public void SendMessage(string methodName, SendMessageOptions options) { }
+        public void SendMessageUpwards(string methodName) { }
+        public void SendMessageUpwards(string methodName, object value) { }
+        public void SendMessageUpwards(string methodName, object value, SendMessageOptions options) { }
+        public void SendMessageUpwards(string methodName, SendMessageOptions options) { }
+        public void BroadcastMessage(string methodName) { }
+        public void BroadcastMessage(string methodName, object parameter) { }
+        public void BroadcastMessage(string methodName, object parameter, SendMessageOptions options) { }
+        public void BroadcastMessage(string methodName, SendMessageOptions options) { }
+        
+        public Transform transform { get; set; } = new Transform();
+        public int layer { get; set; } = 0;
+        public bool activeSelf { get; set; } = true;
+        public bool activeInHierarchy { get; set; } = true;
+        public bool isStatic { get; set; } = false;
+        public string tag { get; set; } = "Untagged";
+        public UnityEngine.SceneManagement.Scene scene { get; set; } = new UnityEngine.SceneManagement.Scene();
+        
+        public void SetActive(bool value) { activeSelf = value; }
+        public bool CompareTag(string tag) => this.tag == tag;
+        public static GameObject FindGameObjectWithTag(string tag) => null;
+        public static GameObject[] FindGameObjectsWithTag(string tag) => new GameObject[0];
+        public static GameObject Find(string name) => null;
+        public static GameObject CreatePrimitive(PrimitiveType type) => new GameObject("Primitive");
+    }
+    
+    public enum SendMessageOptions
+    {
+        RequireReceiver = 0,
+        DontRequireReceiver = 1
+    }
+    
+    public enum PrimitiveType
+    {
+        Sphere = 0,
+        Capsule = 1,
+        Cylinder = 2,
+        Cube = 3,
+        Plane = 4,
+        Quad = 5
     }
 
     public class Transform : Component
@@ -341,14 +890,6 @@ namespace UnityEngine
     {
         public Font(string name) { }
         public static Font CreateDynamicFontFromOSFont(string fontname, int size) => new Font(fontname);
-    }
-
-    public enum FontStyle
-    {
-        Normal = 0,
-        Bold = 1,
-        Italic = 2,
-        BoldAndItalic = 3
     }
 
     public enum TextAnchor
@@ -657,6 +1198,7 @@ namespace UnityEngine
         public static void BringWindowToBack(int windowID) { }
         public static void FocusWindow(int windowID) { }
         public static void UnfocusWindow() { }
+        public static void Focus(Rect position) { }
         
         // Layout properties
         public static Matrix4x4 matrix { get; set; } = Matrix4x4.identity;
@@ -664,6 +1206,16 @@ namespace UnityEngine
         public static int depth { get; set; }
         public static bool enabled { get; set; } = true;
         public static GUIStyle skin { get; set; }
+        
+        // Window and focus properties
+        public static string focusedWindow { get; set; } = "";
+        public static bool isProSkin { get; set; } = false;
+        
+        // GUI Utility methods
+        public static void SetNextControlName(string name) { }
+        public static string GetNameOfFocusedControl() => "";
+        public static void FocusControl(string name) { }
+        public static bool KeyboardEvent(Event evt) => false;
     }
 
     public class Event
@@ -682,6 +1234,7 @@ namespace UnityEngine
         public EventModifiers modifiers { get; set; }
         public bool isMouse => type == EventType.MouseDown || type == EventType.MouseUp || type == EventType.MouseMove || type == EventType.MouseDrag;
         public int clickCount { get; set; }
+        public char character { get; set; } // Missing property
         public void Use() { }
     }
 
@@ -698,6 +1251,117 @@ namespace UnityEngine
         public static string companyName { get; set; }
         public static RuntimePlatform platform => RuntimePlatform.LinuxEditor;
         public static void Quit() { }
+        
+        // Missing Application methods
+        public static void OpenURL(string url) { }
+        public static bool RequestUserAuthorization(UserAuthorization mode) => false;
+        public static bool HasUserAuthorization(UserAuthorization mode) => false;
+        public static void RequestAdvertisingIdentifierAsync(AdvertisingIdentifierCallback delegateMethod) { }
+        public static void LogCallback(string condition, string stackTrace, LogType type) { }
+        public static void LogCallbackThreaded(string condition, string stackTrace, LogType type) { }
+        public static void CancelQuit() { }
+        public static bool CanStreamedLevelBeLoaded(int levelIndex) => false;
+        public static bool CanStreamedLevelBeLoaded(string levelName) => false;
+        public static string[] GetBuildTags() => new string[0];
+        public static void SetBuildTags(string[] buildTags) { }
+        public static bool HasProLicense() => false;
+        public static void SetStackTraceLogType(LogType logType, StackTraceLogType stackTraceType) { }
+        public static StackTraceLogType GetStackTraceLogType(LogType logType) => StackTraceLogType.ScriptOnly;
+        public static void ExternalCall(string functionName, params object[] args) { }
+        public static void ExternalEval(string script) { }
+        public static bool focusedWindow { get; set; } = false;
+        public static SystemLanguage systemLanguage => SystemLanguage.English;
+        public static int targetFrameRate { get; set; } = -1;
+        public static bool runInBackground { get; set; } = true;
+        public static ThreadPriority backgroundLoadingPriority { get; set; } = ThreadPriority.Low;
+        public static int internetReachability => 0;
+        public static bool genuineCheckAvailable => false;
+        public static bool genuine => true;
+        public static NetworkReachability internetReachability2 => NetworkReachability.NotReachable;
+    }
+    
+    public delegate void AdvertisingIdentifierCallback(string advertisingId, bool trackingEnabled, string errorMessage);
+    
+    public enum UserAuthorization
+    {
+        Microphone = 0,
+        WebCam = 1
+    }
+    
+    public enum LogType
+    {
+        Error = 0,
+        Assert = 1,
+        Warning = 2,
+        Log = 3,
+        Exception = 4
+    }
+    
+    public enum StackTraceLogType
+    {
+        None = 0,
+        ScriptOnly = 1,
+        Full = 2
+    }
+    
+    public enum SystemLanguage
+    {
+        Afrikaans = 0,
+        Arabic = 1,
+        Basque = 2,
+        Belarusian = 3,
+        Bulgarian = 4,
+        Catalan = 5,
+        Chinese = 6,
+        Czech = 7,
+        Danish = 8,
+        Dutch = 9,
+        English = 10,
+        Estonian = 11,
+        Faroese = 12,
+        Finnish = 13,
+        French = 14,
+        German = 15,
+        Greek = 16,
+        Hebrew = 17,
+        Hungarian = 18,
+        Icelandic = 19,
+        Indonesian = 20,
+        Italian = 21,
+        Japanese = 22,
+        Korean = 23,
+        Latvian = 24,
+        Lithuanian = 25,
+        Norwegian = 26,
+        Polish = 27,
+        Portuguese = 28,
+        Romanian = 29,
+        Russian = 30,
+        SerboCroatian = 31,
+        Slovak = 32,
+        Slovenian = 33,
+        Spanish = 34,
+        Swedish = 35,
+        Thai = 36,
+        Turkish = 37,
+        Ukrainian = 38,
+        Vietnamese = 39,
+        Unknown = 40
+    }
+    
+    public enum ThreadPriority
+    {
+        Low = 0,
+        BelowNormal = 1,
+        Normal = 2,
+        High = 4
+    }
+    
+    public enum NetworkReachability
+    {
+        NotReachable = 0,
+        ReachableViaCarrierDataNetwork = 1,
+        ReachableViaLocalAreaNetwork = 2
     }
 
     public enum RuntimePlatform
