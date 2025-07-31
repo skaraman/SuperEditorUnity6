@@ -2407,7 +2407,7 @@ namespace AHO
                     }
                     else
                     {
-                        Input.imeCompositionMode = 0;
+                        UnityEngine.Input.imeCompositionMode = IMECompositionMode.Auto;
                         this.CloseAllPopups();
                         this.OnReallyLostFocus();
                     }
@@ -2442,7 +2442,7 @@ namespace AHO
             }
             else
             {
-                Input.imeCompositionMode = 0;
+                UnityEngine.Input.imeCompositionMode = IMECompositionMode.Auto;
                 bool flag3 = this.CanEdit();
                 if (flag3)
                 {
@@ -2760,8 +2760,8 @@ namespace AHO
             }
             else
             {
-                TrueTypeFontImporter trueTypeFontImporter = AssetImporter.GetAtPath(AssetDatabase.GetAssetPath(font)) as TrueTypeFontImporter;
-                num = ((trueTypeFontImporter != null && trueTypeFontImporter.fontTextureCase == -2) ? trueTypeFontImporter.fontSize : 0);
+                FontImporter fontImporter = AssetImporter.GetAtPath(AssetDatabase.GetAssetPath(font)) as FontImporter;
+                num = ((fontImporter != null && fontImporter.fontRenderingMode == FontRenderingMode.Smooth) ? fontImporter.fontSize : 0);
             }
             return num;
         }
@@ -6385,7 +6385,7 @@ namespace AHO
                         {
                             byte b = (byte)(array[i] >> 4);
                             array2[i * 2] = (char)((b > 9) ? (b + 87) : (b + 48));
-                            b = array[i] & 15;
+                            b = (byte)(array[i] & 15);
                             array2[i * 2 + 1] = (char)((b > 9) ? (b + 87) : (b + 48));
                         }
                         Help.BrowseURL("http://referencesource.microsoft.com/mscorlib/a.html#" + new string(array2));
@@ -8482,7 +8482,7 @@ namespace AHO
                                 {
                                     byte b = (byte)(array[j] >> 4);
                                     c[j * 2] = (char)((b > 9) ? (b + 87) : (b + 48));
-                                    b = array[j] & 15;
+                                    b = (byte)(array[j] & 15);
                                     c[j * 2 + 1] = (char)((b > 9) ? (b + 87) : (b + 48));
                                 }
                                 string text3 = "Go To Type Definition (.Net)";
@@ -10675,7 +10675,7 @@ namespace AHO
                                 current.Use();
                                 return;
                             }
-                            bool flag128 = (current.character >= ' ' || current.character == '\n' || (current.character == '\0' && Input.compositionString != "")) && 
+                            bool flag128 = (current.character >= ' ' || current.character == '\n' || (current.character == '\0' && UnityEngine.Input.compositionString != "")) && 
                                 (!flag7 || (((int)eventModifiers & 8) == 0 && current.keyCode == KeyCode.None)) && this.TryEdit();
                             if (flag128)
                             {
@@ -10685,7 +10685,7 @@ namespace AHO
                                 {
                                     this._ABH._AEU = this._ABQ.FLOg[this._ABH._ABI].Length;
                                 }
-                                string text4 = ((character != '\0') ? character.ToString() : Input.compositionString);
+                                string text4 = ((character != '\0') ? character.ToString() : UnityEngine.Input.compositionString);
                                 string text5 = null;
                                 TextPosition textPosition = TextPosition.invalid;
                                 bool flag130 = this._CGN.Count > 0 && "}])\">".IndexOf(character) != -1;
@@ -11114,7 +11114,7 @@ namespace AHO
                                 this._ABH._ATF = num5;
                                 this._ABH._ATG = this._ABQ.CharIndexToColumn(this._ABH._AEU, num6);
                             }
-                            bool flag185 = current.character != '\0' || Input.compositionString == "";
+                            bool flag185 = current.character != '\0' || UnityEngine.Input.compositionString == "";
                             if (flag185)
                             {
                                 bool flag186 = flag60 || (this._ATW() != null && (((int)eventModifiers & 1) == 0 || this._ATW() == this._ABH));
@@ -12778,7 +12778,7 @@ namespace AHO
                                                                 {
                                                                     byte b = (byte)(array[i] >> 4);
                                                                     c[i * 2] = (char)((b > 9) ? (b + 87) : (b + 48));
-                                                                    b = array[i] & 15;
+                                                                    b = (byte)(array[i] & 15);
                                                                     c[i * 2 + 1] = (char)((b > 9) ? (b + 87) : (b + 48));
                                                                 }
                                                                 genericMenu.AddItem("Go To Definition (.Net)", "F12", "Go To Definition (.Net)", "F12", false, delegate
@@ -13071,7 +13071,7 @@ namespace AHO
                             float num5 = Mathf.Max(this._CKF.width - 8f, this._CKE);
                             float num6 = (this._CCH ? (this.GetLineOffset(this._ABQ.FLOg.Count) + 8f) : (8f + this._AEY().y * (float)this._ABQ._AQQ.Length));
                             this._CKF.Set(-4f, -4f, num5 + 8f, num6);
-                            bool flag97 = (int)Event.current.type != EventType.Layout;
+                            bool flag97 = Event.current.type != EventType.Layout;
                             if (flag97)
                             {
                                 this._CGA = 0f;
@@ -13111,7 +13111,7 @@ namespace AHO
                                     num8 = this._ABQ._AQQ.Length;
                                     num7 = Mathf.Max(0, Mathf.Min(num7, num8 - (int)(this._AFO.height / this._AEY().y)));
                                 }
-                                bool flag102 = this._ATO && (int)Event.current.type != EventType.Layout;
+                                bool flag102 = this._ATO && Event.current.type != EventType.Layout;
                                 if (flag102)
                                 {
                                     this._ATO = false;
@@ -13408,7 +13408,7 @@ namespace AHO
                                 Vector2 vector3;
                                 for (; ; )
                                 {
-                                    Vector2 vector2 = new vector2((float)((int)this._CIV.x), (float)((int)this._CIV.y));
+                                    Vector2 vector2 = new Vector2((float)((int)this._CIV.x), (float)((int)this._CIV.y));
                                     Rect rect2 = (this._CCH ? new Rect(this._CKF.x, this._CKF.y, 1f, num6) : this._CKF);
                                     rect2 = new Rect(rect2.x, rect2.y, Mathf.Ceil(rect2.width), Mathf.Ceil(rect2.height));
                                     vector3 = _bi2.BeginScrollView(this._AFO, vector2, rect2);
@@ -13504,9 +13504,9 @@ namespace AHO
                                         bool flag153 = this._CDN();
                                         if (flag153)
                                         {
-                                            Input.imeCompositionMode = 1;
+                                            UnityEngine.Input.imeCompositionMode = IMECompositionMode.On;
                                         }
-                                        bool flag154 = (int)Event.current.type != EventType.Layout;
+                                        bool flag154 = Event.current.type != EventType.Layout;
                                         if (flag154)
                                         {
                                             this._ALM.x = this._AFS.x + this._CGA;
@@ -14151,7 +14151,7 @@ namespace AHO
                                         bool flag230 = Event.current.type == EventType.Repaint;
                                         if (flag230)
                                         {
-                                            EditorGUIUtility.AddCursorRect(this._CCH ? new Rect(this._CKF.x, this._CKF.y, this._CKF.width, num6) : this._CKF, 1);
+                                            EditorGUIUtility.AddCursorRect(this._CCH ? new Rect(this._CKF.x, this._CKF.y, this._CKF.width, num6) : this._CKF, MouseCursor.Text);
                                         }
                                         bool flag231;
                                         if (Event.current.type == EventType.Repaint && this._CGY > 0f)
@@ -14210,7 +14210,7 @@ namespace AHO
                                     {
                                         Rect caretRect3 = this.GetCaretRect(this._ABH);
                                         Vector2 vector5 = new Vector2(caretRect3.x, caretRect3.y + this._AEY().y + 7f) - this._AFS + this._AFO.min;
-                                        Input.compositionCursorPos = EditorGUIUtility.pixelsPerPoint * vector5;
+                                        UnityEngine.Input.compositionCursorPos = EditorGUIUtility.pixelsPerPoint * vector5;
                                     }
                                 }
                             }
@@ -14233,7 +14233,7 @@ namespace AHO
             {
                 GCE._ALU = this;
             }
-            bool flag3 = (int)Event.current.type != EventType.Layout;
+            bool flag3 = Event.current.type != EventType.Layout;
             if (flag3)
             {
                 bool flag4 = this._CHX;
