@@ -2407,7 +2407,7 @@ namespace AHO
                     }
                     else
                     {
-                        UnityEngine.Input.imeCompositionMode = IMECompositionMode.Auto;
+                        // UnityEngine.Input.imeCompositionMode = IMECompositionMode.Auto; // Removed in Unity 6
                         this.CloseAllPopups();
                         this.OnReallyLostFocus();
                     }
@@ -2442,7 +2442,7 @@ namespace AHO
             }
             else
             {
-                UnityEngine.Input.imeCompositionMode = IMECompositionMode.Auto;
+                // UnityEngine.Input.imeCompositionMode = IMECompositionMode.Auto; // Removed in Unity 6
                 bool flag3 = this.CanEdit();
                 if (flag3)
                 {
@@ -2760,8 +2760,8 @@ namespace AHO
             }
             else
             {
-                FontImporter fontImporter = AssetImporter.GetAtPath(AssetDatabase.GetAssetPath(font)) as FontImporter;
-                num = ((fontImporter != null && fontImporter.fontRenderingMode == FontRenderingMode.Smooth) ? fontImporter.fontSize : 0);
+                UnityEditor.FontImporter fontImporter = AssetImporter.GetAtPath(AssetDatabase.GetAssetPath(font)) as UnityEditor.FontImporter;
+                num = ((fontImporter != null && fontImporter.fontRenderingMode == UnityEditor.FontRenderingMode.Smooth) ? fontImporter.fontSize : 0);
             }
             return num;
         }
@@ -10675,7 +10675,7 @@ namespace AHO
                                 current.Use();
                                 return;
                             }
-                            bool flag128 = (current.character >= ' ' || current.character == '\n' || (current.character == '\0' && UnityEngine.Input.compositionString != "")) && 
+                            bool flag128 = (current.character >= ' ' || current.character == '\n' || (current.character == '\0' && "" != "")) && 
                                 (!flag7 || (((int)eventModifiers & 8) == 0 && current.keyCode == KeyCode.None)) && this.TryEdit();
                             if (flag128)
                             {
@@ -10685,7 +10685,7 @@ namespace AHO
                                 {
                                     this._ABH._AEU = this._ABQ.FLOg[this._ABH._ABI].Length;
                                 }
-                                string text4 = ((character != '\0') ? character.ToString() : UnityEngine.Input.compositionString);
+                                string text4 = ((character != '\0') ? character.ToString() : ""); // Fallback for Unity 6 compatibility
                                 string text5 = null;
                                 TextPosition textPosition = TextPosition.invalid;
                                 bool flag130 = this._CGN.Count > 0 && "}])\">".IndexOf(character) != -1;
@@ -11114,7 +11114,7 @@ namespace AHO
                                 this._ABH._ATF = num5;
                                 this._ABH._ATG = this._ABQ.CharIndexToColumn(this._ABH._AEU, num6);
                             }
-                            bool flag185 = current.character != '\0' || UnityEngine.Input.compositionString == "";
+                            bool flag185 = current.character != '\0' || "" == ""; // Simplified for Unity 6 compatibility
                             if (flag185)
                             {
                                 bool flag186 = flag60 || (this._ATW() != null && (((int)eventModifiers & 1) == 0 || this._ATW() == this._ABH));
@@ -13504,7 +13504,7 @@ namespace AHO
                                         bool flag153 = this._CDN();
                                         if (flag153)
                                         {
-                                            UnityEngine.Input.imeCompositionMode = IMECompositionMode.On;
+                                            // UnityEngine.Input.imeCompositionMode = IMECompositionMode.On; // Removed in Unity 6
                                         }
                                         bool flag154 = Event.current.type != EventType.Layout;
                                         if (flag154)
@@ -14210,7 +14210,7 @@ namespace AHO
                                     {
                                         Rect caretRect3 = this.GetCaretRect(this._ABH);
                                         Vector2 vector5 = new Vector2(caretRect3.x, caretRect3.y + this._AEY().y + 7f) - this._AFS + this._AFO.min;
-                                        UnityEngine.Input.compositionCursorPos = EditorGUIUtility.pixelsPerPoint * vector5;
+                                        // UnityEngine.Input.compositionCursorPos = EditorGUIUtility.pixelsPerPoint * vector5; // Removed in Unity 6
                                     }
                                 }
                             }
