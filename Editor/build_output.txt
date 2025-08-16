@@ -1,0 +1,66 @@
+MSBuild version 17.8.31+af11d4f25 for .NET
+Build started 08/16/2025 04:46:47.
+     1>Project "/home/runner/work/SuperEditorUnity6/SuperEditorUnity6/Editor/SuperEditor.csproj" on node 1 (Restore target(s)).
+     1>_GetAllRestoreProjectPathItems:
+         Determining projects to restore...
+       Restore:
+         X.509 certificate chain validation will use the fallback certificate bundle at '/usr/lib/dotnet/sdk/8.0.118/trustedroots/codesignctl.pem'.
+         X.509 certificate chain validation will use the fallback certificate bundle at '/usr/lib/dotnet/sdk/8.0.118/trustedroots/timestampctl.pem'.
+         Assets file has not changed. Skipping assets file writing. Path: /home/runner/work/SuperEditorUnity6/SuperEditorUnity6/Editor/obj/project.assets.json
+         Restored /home/runner/work/SuperEditorUnity6/SuperEditorUnity6/Editor/SuperEditor.csproj (in 28 ms).
+         
+         NuGet Config files used:
+             /home/runner/.nuget/NuGet/NuGet.Config
+         
+         Feeds used:
+             https://api.nuget.org/v3/index.json
+         All projects are up-to-date for restore.
+     1>Done Building Project "/home/runner/work/SuperEditorUnity6/SuperEditorUnity6/Editor/SuperEditor.csproj" (Restore target(s)).
+   1:7>Project "/home/runner/work/SuperEditorUnity6/SuperEditorUnity6/Editor/SuperEditor.csproj" on node 1 (default targets).
+     1>CoreResGen:
+         No resources are out of date with respect to their source files. Skipping resource generation.
+       GenerateTargetFrameworkMonikerAttribute:
+       Skipping target "GenerateTargetFrameworkMonikerAttribute" because all output files are up-to-date with respect to the input files.
+       _GenerateSourceLinkFile:
+         Source Link file 'obj/Debug/SuperEditor.sourcelink.json' is up-to-date.
+       CoreCompile:
+       Skipping target "CoreCompile" because all output files are up-to-date with respect to the input files.
+       GenerateBuildDependencyFile:
+       Skipping target "GenerateBuildDependencyFile" because all output files are up-to-date with respect to the input files.
+       CopyFilesToOutputDirectory:
+         SuperEditor -> /home/runner/work/SuperEditorUnity6/SuperEditorUnity6/Editor/bin/Debug/SuperEditor.dll
+       CheckUnityInstallation:
+         Unity Availability: false
+     1>/home/runner/work/SuperEditorUnity6/SuperEditorUnity6/Editor/SuperEditor.csproj(166,5): warning : Unity 6000.1.9f1 installation not found. Building with stub implementation only.
+     1>/home/runner/work/SuperEditorUnity6/SuperEditorUnity6/Editor/SuperEditor.csproj(167,5): warning : Expected Unity installation paths:
+     1>/home/runner/work/SuperEditorUnity6/SuperEditorUnity6/Editor/SuperEditor.csproj(168,5): warning :   Windows: C:\Program Files\Unity\Hub\Editor\6000.1.9f1\
+     1>/home/runner/work/SuperEditorUnity6/SuperEditorUnity6/Editor/SuperEditor.csproj(169,5): warning :   Linux: /opt/unity/Editor/6000.1.9f1\
+     1>/home/runner/work/SuperEditorUnity6/SuperEditorUnity6/Editor/SuperEditor.csproj(170,5): warning : For Unity Package usage, use the .asmdef file instead of building this .csproj directly.
+     1>Done Building Project "/home/runner/work/SuperEditorUnity6/SuperEditorUnity6/Editor/SuperEditor.csproj" (default targets).
+
+Build succeeded.
+
+       "/home/runner/work/SuperEditorUnity6/SuperEditorUnity6/Editor/SuperEditor.csproj" (default target) (1:7) ->
+       (CheckUnityInstallation target) -> 
+         /home/runner/work/SuperEditorUnity6/SuperEditorUnity6/Editor/SuperEditor.csproj(166,5): warning : Unity 6000.1.9f1 installation not found. Building with stub implementation only.
+
+
+       "/home/runner/work/SuperEditorUnity6/SuperEditorUnity6/Editor/SuperEditor.csproj" (default target) (1:7) ->
+         /home/runner/work/SuperEditorUnity6/SuperEditorUnity6/Editor/SuperEditor.csproj(167,5): warning : Expected Unity installation paths:
+
+
+       "/home/runner/work/SuperEditorUnity6/SuperEditorUnity6/Editor/SuperEditor.csproj" (default target) (1:7) ->
+         /home/runner/work/SuperEditorUnity6/SuperEditorUnity6/Editor/SuperEditor.csproj(168,5): warning :   Windows: C:\Program Files\Unity\Hub\Editor\6000.1.9f1\
+
+
+       "/home/runner/work/SuperEditorUnity6/SuperEditorUnity6/Editor/SuperEditor.csproj" (default target) (1:7) ->
+         /home/runner/work/SuperEditorUnity6/SuperEditorUnity6/Editor/SuperEditor.csproj(169,5): warning :   Linux: /opt/unity/Editor/6000.1.9f1\
+
+
+       "/home/runner/work/SuperEditorUnity6/SuperEditorUnity6/Editor/SuperEditor.csproj" (default target) (1:7) ->
+         /home/runner/work/SuperEditorUnity6/SuperEditorUnity6/Editor/SuperEditor.csproj(170,5): warning : For Unity Package usage, use the .asmdef file instead of building this .csproj directly.
+
+    5 Warning(s)
+    0 Error(s)
+
+Time Elapsed 00:00:01.00
