@@ -3726,7 +3726,7 @@ namespace AHO
             // Token: 0x06000453 RID: 1107 RVA: 0x000CBD60 File Offset: 0x000C9F60
             public static bool operator ==(GCE._AFA A, GCE._AFA B)
             {
-                bool flag = A == B;
+                bool flag = ReferenceEquals(A, B);
                 bool flag2;
                 if (flag)
                 {
@@ -3734,14 +3734,14 @@ namespace AHO
                 }
                 else
                 {
-                    bool flag3 = A == null;
+                    bool flag3 = ReferenceEquals(A, null);
                     if (flag3)
                     {
                         flag2 = false;
                     }
                     else
                     {
-                        bool flag4 = B == null;
+                        bool flag4 = ReferenceEquals(B, null);
                         flag2 = !flag4 && A.Equals(B);
                     }
                 }
