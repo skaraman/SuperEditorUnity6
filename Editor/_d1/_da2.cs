@@ -71,9 +71,9 @@ namespace FEPKBIPDOHCNNFAKLHKGGCCCPGMCNPGGOCGM
             tooltipText = new Color32(208, 208, 208, byte.MaxValue),
             listPopupFrame = new Color32(188, 188, 188, byte.MaxValue),
             listPopupBackground = new Color32(62, 61, 49, byte.MaxValue),
-            typesStyle = 2,
-            typeParametersStyle = 2,
-            parametersStyle = 2
+            typesStyle = (FontStyle)2,
+            typeParametersStyle = (FontStyle)2,
+            parametersStyle = (FontStyle)2
         };
     }
 }

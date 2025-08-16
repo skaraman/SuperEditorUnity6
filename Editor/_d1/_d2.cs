@@ -70,7 +70,7 @@ namespace FEPKBIPDOHCNNFAKLHKGGCCCPGMCNPGGOCGM
             tooltipFrame = _bg1._AYI,
             tooltipText = _bg1._AYG,
             listPopupBackground = _bg1._AYL * 0.5f + _bg1._AYK * 0.5f,
-            preprocessorStyle = 2
+            preprocessorStyle = (FontStyle)2
         };
     }
 }

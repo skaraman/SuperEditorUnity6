@@ -68,7 +68,7 @@ namespace FEPKBIPDOHCNNFAKLHKGGCCCPGMCNPGGOCGM
             trackReverted = new Color32(246, 201, 60, byte.MaxValue),
             currentLine = _bg1._AYF,
             currentLineInactive = _bg1._AYF,
-            preprocessorStyle = 2
+            preprocessorStyle = (FontStyle)2
         };
     }
 }

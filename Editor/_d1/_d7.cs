@@ -70,8 +70,8 @@ namespace FEPKBIPDOHCNNFAKLHKGGCCCPGMCNPGGOCGM
             tooltipFrame = new Color32(128, 128, 128, byte.MaxValue),
             tooltipText = new Color32(183, 196, 208, byte.MaxValue),
             listPopupBackground = new Color32(48, 48, 48, byte.MaxValue),
-            preprocessorStyle = 2,
-            commentsStyle = 2
+            preprocessorStyle = (FontStyle)2,
+            commentsStyle = (FontStyle)2
         };
     }
 }
