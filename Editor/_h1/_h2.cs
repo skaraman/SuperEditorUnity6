@@ -336,7 +336,7 @@ namespace OKPF
             Rect rect4 = new Rect(rect);
             rect4.x = 0f;
             rect4.width = base.position.width;
-            GUI.DrawTexture(rect2, AssetPreview.GetMiniThumbnail(currentObject), 2, true);
+            GUI.DrawTexture(rect2, AssetPreview.GetMiniThumbnail(currentObject), ScaleMode.ScaleToFit, true);
             EditorGUI.LabelField(rect3, currentObject.name, this.JEKH);
             bool isMouse = Event.current.isMouse;
             if (isMouse)
