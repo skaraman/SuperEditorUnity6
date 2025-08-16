@@ -114,7 +114,7 @@ namespace AHO
             bool flag = nCode >= 0;
             if (flag)
             {
-                bool flag2 = ((long)lParam.ToInt32() & (long)((ulong)(-1610612736))) == 0L;
+                bool flag2 = ((long)lParam.ToInt32() & unchecked((long)((ulong)(-1610612736)))) == 0L;
                 if (flag2)
                 {
                     int num = wParam.ToInt32();
