@@ -88,14 +88,14 @@ namespace AHO
                         goto IL_0146;
                     }
                     int num4 = ahpjaokladifkechlpfhikndldgjpdfbegel.HDOCMINGLJFHBPIPFKABFLNANEGKACHCHKFB >> 16;
-                    bool flag3 = num4 == 1;
+                    bool flag3 = num4 == 2;
                     if (flag3)
                     {
                         _bn5.KDBGPCPPKNFHBMPKMMNPEPOEKAJLAAOJALFP = focusedWindow;
                         _bn5.BLNKEMOKCMKLLNNOBMBNIPHNJHLHGHACMMPA = Event.KeyboardEvent(_bg8._BCF ? "&^left" : "&left");
                         return (IntPtr)1;
                     }
-                    bool flag4 = num4 == 2;
+                    bool flag4 = num4 == 1;
                     if (flag4)
                     {
                         _bn5.KDBGPCPPKNFHBMPKMMNPEPOEKAJLAAOJALFP = focusedWindow;
