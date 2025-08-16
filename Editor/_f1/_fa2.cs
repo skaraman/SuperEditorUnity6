@@ -31,7 +31,7 @@ namespace ODGL
             bool flag = !this._AB.ContainsKey(textureName);
             if (flag)
             {
-                Texture2D texture2D = new Texture2D(0, 0, (TextureFormat)5, false, true);
+                Texture2D texture2D = new Texture2D(1, 1, (TextureFormat)5, false, true);
                 texture2D.hideFlags = (HideFlags)61;
                 ImageConversion.LoadImage(texture2D, Convert.FromBase64String(EditorGUIUtility.isProSkin ? this._AC[textureName] : this._AD[textureName]));
                 this._AB.Add(textureName, texture2D);
