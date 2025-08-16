@@ -1129,9 +1129,12 @@ namespace AHO
             GCE._ABW _AVO2 = null;
             if (regionKind - (GCE._ABW._ABX)3 <= 1 || regionKind - (GCE._ABW._ABX)8 <= 1)
             {
-                _AVO = _AVO.OOME;
+                if (_AVO != null && _AVO.OOME != null)
+                {
+                    _AVO = _AVO.OOME;
+                }
             }
-            bool flag = _AVO._ARB != null;
+            bool flag = _AVO != null && _AVO._ARB != null;
             if (flag)
             {
                 int count = _AVO._ARB.Count;
@@ -1155,7 +1158,10 @@ namespace AHO
                     return;
                 }
                 _AVO2.OOME = null;
-                _AVO._ARB.Remove(_AVO2);
+                if (_AVO != null)
+                {
+                    _AVO._ARB.Remove(_AVO2);
+                }
             }
             formatedLine._ABZ = new GCE._ABW
             {
@@ -1163,12 +1169,15 @@ namespace AHO
                 _AT = regionKind,
                 _ABI = formatedLine
             };
-            bool flag5 = _AVO._ARB == null;
+            bool flag5 = _AVO != null && _AVO._ARB == null;
             if (flag5)
             {
                 _AVO._ARB = new List<GCE._ABW>();
             }
-            _AVO._ARB.Add(formatedLine._ABZ);
+            if (_AVO != null)
+            {
+                _AVO._ARB.Add(formatedLine._ABZ);
+            }
         }
 
         // Token: 0x06000259 RID: 601 RVA: 0x0001FBDF File Offset: 0x0001DDDF
