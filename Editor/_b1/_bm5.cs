@@ -198,7 +198,7 @@ namespace AHO
             float num = (this.EPALNJEIJOEJDLKLCLKPOGGLFMAECGHIPEBF ? (this.HMGBDHFGCCOCKEECFGJGPFALNBLAOEMPBBAI ? (this._AEZ.x - width) : this._AEZ.xMax) : this._AEZ.x);
             float num2 = (this.EPALNJEIJOEJDLKLCLKPOGGLFMAECGHIPEBF ? this._AEZ.y : (this.HMGBDHFGCCOCKEECFGJGPFALNBLAOEMPBBAI ? (this._AEZ.y - height) : this._AEZ.yMax));
             Rect rect;
-            rect..ctor(num, num2, width, height);
+            rect = new Rect(num, num2, width, height);
             Rect rect2 = _bm5.FitRectToScreen(rect, this);
             bool flag = this.MNAOBEMFIPHCEEOLMMHCODEOOBBIIKEPPJHF == this.HMGBDHFGCCOCKEECFGJGPFALNBLAOEMPBBAI;
             if (flag)
