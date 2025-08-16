@@ -45,7 +45,7 @@ namespace AHO
                             }
                             else
                             {
-                                bool flag8 = num <= (ulong)int.MinValue;
+                                bool flag8 = num <= unchecked((ulong)int.MinValue);
                                 if (flag8)
                                 {
                                     _AAH = _bi3.ALIEMEKPEKEENIKEFDHFIFIIANDGGMNMPHBD.GetThisInstance();
@@ -102,7 +102,7 @@ namespace AHO
                                         }
                                         else
                                         {
-                                            bool flag15 = num <= (ulong)(-1);
+                                            bool flag15 = num <= unchecked((ulong)(-1));
                                             if (flag15)
                                             {
                                                 _AAH = _bi3.CGHIMPNKCPEEKMMDJGCELACCMJHPGFOAADKP.GetThisInstance();
