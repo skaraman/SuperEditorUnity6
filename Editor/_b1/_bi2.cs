@@ -2761,9 +2761,60 @@ namespace AHO
             else
             {
 #if UNITY_EDITOR && !NO_UNITY
-                // Unity 6 font importing - try to cast to TrueTypeFontImporter
-                var fontImporter = AssetImporter.GetAtPath(AssetDatabase.GetAssetPath(font)) as UnityEditor.TrueTypeFontImporter;
-                num = ((fontImporter != null && fontImporter.fontRenderingMode == UnityEditor.FontRenderingMode.Smooth) ? fontImporter.fontSize : 0);
+                // Unity 6 font importing - safely try to cast to TrueTypeFontImporter using reflection
+                try
+                {
+                    var assetImporter = AssetImporter.GetAtPath(AssetDatabase.GetAssetPath(font));
+                    if (assetImporter != null)
+                    {
+                        // Use reflection to safely check for TrueTypeFontImporter type
+                        var fontImporterType = System.Type.GetType("UnityEditor.TrueTypeFontImporter, UnityEditor.AssetImportersModule");
+                        if (fontImporterType != null && fontImporterType.IsInstanceOfType(assetImporter))
+                        {
+                            var fontRenderingModeProperty = fontImporterType.GetProperty("fontRenderingMode");
+                            var fontSizeProperty = fontImporterType.GetProperty("fontSize");
+                            
+                            if (fontRenderingModeProperty != null && fontSizeProperty != null)
+                            {
+                                var fontRenderingMode = fontRenderingModeProperty.GetValue(assetImporter);
+                                // Check if rendering mode is Smooth (typically enum value 1)
+                                if (fontRenderingMode != null && fontRenderingMode.ToString() == "Smooth")
+                                {
+                                    var fontSize = fontSizeProperty.GetValue(assetImporter);
+                                    if (fontSize is int fontSizeInt)
+                                    {
+                                        num = fontSizeInt;
+                                    }
+                                    else
+                                    {
+                                        num = 0;
+                                    }
+                                }
+                                else
+                                {
+                                    num = 0;
+                                }
+                            }
+                            else
+                            {
+                                num = 0;
+                            }
+                        }
+                        else
+                        {
+                            num = 0;
+                        }
+                    }
+                    else
+                    {
+                        num = 0;
+                    }
+                }
+                catch (System.Exception)
+                {
+                    // Fallback if any reflection or type access fails
+                    num = 0;
+                }
 #else
                 // Fallback when Unity Editor types are not available
                 num = 0;
