@@ -41,7 +41,7 @@ namespace ODGL
             bool flag = texture2D != null;
             if (flag)
             {
-                GUI.DrawTexture(rect, texture2D, 2, true);
+                GUI.DrawTexture(rect, texture2D, ScaleMode.ScaleToFit, true);
             }
             else
             {

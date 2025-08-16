@@ -683,6 +683,13 @@ namespace UnityEngine
         Mirror = 2,
         MirrorOnce = 3
     }
+    
+    public enum ScaleMode
+    {
+        StretchToFill = 0,
+        ScaleAndCrop = 1,
+        ScaleToFit = 2
+    }
 
     public class GUIContent
     {
@@ -1180,6 +1187,7 @@ namespace UnityEngine
         public static void BeginClip(Rect position) { }
         public static void EndClip() { }
         public static void DrawTexture(Rect position, Texture2D image) { }
+        public static void DrawTexture(Rect position, Texture2D image, ScaleMode scaleMode, bool alphaBlend) { }
         public static void DrawTextureWithTexCoords(Rect position, Texture2D image, Rect texCoords) { }
         public static void Box(Rect position, string text) { }
         public static void Box(Rect position, GUIContent content) { }
