@@ -37,18 +37,18 @@ namespace ODGL
         internal override void Draw(GameObject gameObject, _fb5 objectList, Rect selectionRect, Rect curRect)
         {
             bool flag = this.IsGameObjectLock(gameObject, objectList);
-            bool flag2 = flag && (gameObject.hideFlags & 8) != 8;
+            bool flag2 = flag && (gameObject.hideFlags & HideFlags.NotEditable) != HideFlags.NotEditable;
             if (flag2)
             {
-                gameObject.hideFlags |= 8;
+                gameObject.hideFlags |= HideFlags.NotEditable;
                 EditorUtility.SetDirty(gameObject);
             }
             else
             {
-                bool flag3 = !flag && (gameObject.hideFlags & 8) == 8;
+                bool flag3 = !flag && (gameObject.hideFlags & HideFlags.NotEditable) == HideFlags.NotEditable;
                 if (flag3)
                 {
-                    gameObject.hideFlags ^= 8;
+                    gameObject.hideFlags ^= HideFlags.NotEditable;
                     EditorUtility.SetDirty(gameObject);
                 }
             }
@@ -62,14 +62,14 @@ namespace ODGL
             if (flag)
             {
                 bool flag2 = this.IsGameObjectLock(gameObject, objectList);
-                bool flag3 = currentEvent.type == 0;
+                bool flag3 = currentEvent.type == EventType.MouseDown;
                 if (flag3)
                 {
                     this.HCNMBINKNOFJIPMAAALPDPBLADDBLNHDDLAD = ((!flag2) ? 1 : 0);
                 }
                 else
                 {
-                    bool flag4 = currentEvent.type == 3 && this.HCNMBINKNOFJIPMAAALPDPBLADDBLNHDDLAD != -1;
+                    bool flag4 = currentEvent.type == EventType.MouseDrag && this.HCNMBINKNOFJIPMAAALPDPBLADDBLNHDDLAD != -1;
                     if (!flag4)
                     {
                         this.HCNMBINKNOFJIPMAAALPDPBLADDBLNHDDLAD = -1;
@@ -134,7 +134,7 @@ namespace ODGL
             if (flag)
             {
                 objectList.AENN.Remove(gameObject);
-                gameObject.hideFlags &= -9;
+                gameObject.hideFlags &= ~HideFlags.NotEditable;
                 EditorUtility.SetDirty(gameObject);
             }
         }
@@ -163,7 +163,7 @@ namespace ODGL
                     Undo.RecordObject(gameObject, targetLock ? "Lock" : "Unlock");
                     if (targetLock)
                     {
-                        gameObject.hideFlags |= 8;
+                        gameObject.hideFlags |= HideFlags.NotEditable;
                         bool flag3 = !objectList.AENN.Contains(gameObject);
                         if (flag3)
                         {
@@ -172,7 +172,7 @@ namespace ODGL
                     }
                     else
                     {
-                        gameObject.hideFlags &= -9;
+                        gameObject.hideFlags &= ~HideFlags.NotEditable;
                         objectList.AENN.Remove(gameObject);
                     }
                     EditorUtility.SetDirty(gameObject);
