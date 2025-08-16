@@ -212,14 +212,14 @@ namespace AHO
                     {
                         num = (this.EPALNJEIJOEJDLKLCLKPOGGLFMAECGHIPEBF ? (this._AEZ.x - width) : rect2.x);
                         num2 = (this.EPALNJEIJOEJDLKLCLKPOGGLFMAECGHIPEBF ? rect2.y : (this._AEZ.y - height));
-                        rect..ctor(num, num2, width, height);
+                        rect = new Rect(num, num2, width, height);
                         rect2 = _bm5.FitRectToScreen(rect, this);
                     }
                     else
                     {
                         num = (this.EPALNJEIJOEJDLKLCLKPOGGLFMAECGHIPEBF ? (this._AEZ.x - width) : rect2.x);
                         num2 = (this.EPALNJEIJOEJDLKLCLKPOGGLFMAECGHIPEBF ? rect2.y : this._AEZ.yMax);
-                        rect..ctor(num, num2, width, height);
+                        rect = new Rect(num, num2, width, height);
                         rect2 = _bm5.FitRectToScreen(rect, this);
                     }
                 }
@@ -229,7 +229,7 @@ namespace AHO
             base.maxSize = new Vector2(4000f, 4000f);
             base.position = rect2;
             Vector2 vector;
-            vector..ctor(width, height);
+            vector = new Vector2(width, height);
             base.minSize = vector;
             base.maxSize = vector;
             this.FFKGLBDLKIFNBNOHLILPEHDFCNCPHAFPGIED = false;
