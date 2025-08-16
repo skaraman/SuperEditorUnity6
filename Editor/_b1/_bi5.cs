@@ -495,7 +495,7 @@ namespace AHO
             bool flag = _AAH == null;
             if (!flag)
             {
-                _bh4 _AAH2;
+                _bh4 _AAH2 = null;
                 bool flag2 = this.JPALPBLAHLKHFDNGKGAKOINKKCEINBOGMBAA != null && this.JPALPBLAHLKHFDNGKGAKOINKKCEINBOGMBAA.TryGetValue(_AAH, out _AAH2);
                 if (flag2)
                 {
