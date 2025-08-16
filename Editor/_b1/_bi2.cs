@@ -2760,8 +2760,14 @@ namespace AHO
             }
             else
             {
-                UnityEditor.TrueTypeFontImporter fontImporter = AssetImporter.GetAtPath(AssetDatabase.GetAssetPath(font)) as UnityEditor.TrueTypeFontImporter;
+#if UNITY_EDITOR && !NO_UNITY
+                // Unity 6 font importing - try to cast to TrueTypeFontImporter
+                var fontImporter = AssetImporter.GetAtPath(AssetDatabase.GetAssetPath(font)) as UnityEditor.TrueTypeFontImporter;
                 num = ((fontImporter != null && fontImporter.fontRenderingMode == UnityEditor.FontRenderingMode.Smooth) ? fontImporter.fontSize : 0);
+#else
+                // Fallback when Unity Editor types are not available
+                num = 0;
+#endif
             }
             return num;
         }
