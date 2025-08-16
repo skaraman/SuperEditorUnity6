@@ -163,7 +163,7 @@ namespace AHO
                                 }
                                 else
                                 {
-                                    baseMethod = null;
+                                    // Note: Cannot assign to baseMethod as it's a foreach iteration variable
                                 }
                             }
                             List<_bb3>.Enumerator enumerator2 = default(List<_bb3>.Enumerator);
@@ -175,7 +175,7 @@ namespace AHO
                             baseSymbol = null;
                             asMethodGroup = null;
                             magicSignature = null;
-                            magic = null;
+                            // Note: Cannot assign to magic as it's a foreach iteration variable
                         }
                     }
                 }
