@@ -138,7 +138,7 @@ namespace AHO
             _bj7.DHDFOGEKKINJPMEDLKCIOKDLCPBMEKEAGAEM = new GUIStyle
             {
                 margin = new RectOffset(0, 0, 0, 0),
-                alignment = 4,
+                alignment = (TextAnchor)4,
                 fixedHeight = 85f,
                 fontSize = 24,
                 wordWrap = true,
@@ -209,7 +209,7 @@ namespace AHO
             GUILayout.Label(this.ONJLOECDFEKNEIDDDOMBFCNKLLOKNBEEIGBA, _bj7.DHDFOGEKKINJPMEDLKCIOKDLCPBMEKEAGAEM, Array.Empty<GUILayoutOption>());
             GUILayout.EndVertical();
             Color32 color;
-            color..ctor(108, 226, 108, 100);
+            color = new Color32(108, 226, 108, 100);
             this.OHEKADAFHMIDHMCDKBIJOLAPLFHHGEEECPGP = GUILayoutUtility.GetLastRect();
             this.OHEKADAFHMIDHMCDKBIJOLAPLFHHGEEECPGP.width = this.OHEKADAFHMIDHMCDKBIJOLAPLFHHGEEECPGP.width * this.HMGEOOBPKDDIMIOLCKFHBGFBFCOACIIDKJCL;
             Color color2 = GUI.color;
