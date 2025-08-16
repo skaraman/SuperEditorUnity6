@@ -1899,6 +1899,31 @@ namespace UnityEditor
         public static bool OpenAsset(UnityEngine.Object target) => false;
         public static UnityEngine.Hash128 GetAssetDependencyHash(string path) => new UnityEngine.Hash128();
     }
+
+    // Font import related classes for Unity 6 compatibility
+    public class AssetImporter : UnityEngine.Object
+    {
+        public static AssetImporter GetAtPath(string assetPath) => null;
+    }
+
+    public enum FontRenderingMode
+    {
+        OSDefault = 0,
+        Smooth = 1,
+        HintedSmooth = 2,
+        HintedRaster = 3
+    }
+
+    public class TrueTypeFontImporter : AssetImporter
+    {
+        public FontRenderingMode fontRenderingMode { get; set; } = FontRenderingMode.Smooth;
+        public int fontSize { get; set; } = 16;
+    }
+
+    // Legacy alias for backward compatibility
+    public class FontImporter : TrueTypeFontImporter
+    {
+    }
     
     [System.Flags]
     public enum ImportAssetOptions
