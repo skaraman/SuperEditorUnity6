@@ -32,7 +32,7 @@ namespace ACGG
             bool flag = !this._AB.ContainsKey(textureName);
             if (flag)
             {
-                Texture2D texture2D = new Texture2D(0, 0, (TextureFormat)5, false, true);
+                Texture2D texture2D = new Texture2D(1, 1, (TextureFormat)5, false, true);
                 texture2D.hideFlags = (HideFlags)61;
                 bool flag2 = !EditorGUIUtility.isProSkin;
                 if (flag2)
