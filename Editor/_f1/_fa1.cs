@@ -74,7 +74,7 @@ namespace ODGL
                 if (!flag3)
                 {
                     Rect rect;
-                    rect..ctor(selectionRect);
+                    rect = selectionRect;
                     rect.width = 16f;
                     rect.x += selectionRect.width - (float)this.NJHFKMIPEIJKGFLDDKFEEPDBAKHJOJFPAFJC;
                     float num = (this.FGJEFJGDONJJLLCILFFGACDGHLFDEBGJAKED ? GUI.skin.label.CalcSize(new GUIContent(gameObject.name)).x : 0f);
@@ -99,7 +99,7 @@ namespace ODGL
         private void DrawComponents(List<_fa7> components, Rect selectionRect, ref Rect curRect, GameObject gameObject, _fb5 objectList, bool trim = false, float minX = 50f)
         {
             Rect rect;
-            rect..ctor(curRect);
+            rect = curRect;
             bool flag = Event.current.type == EventType.Repaint;
             if (flag)
             {
