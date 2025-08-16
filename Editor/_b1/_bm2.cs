@@ -1521,8 +1521,8 @@ namespace AHO
                 array[num] = ((ex2 != null) ? ex2.ToString() : null);
                 array[6] = " at ";
                 array[7] = ex.StackTrace;
-                Debug.LogError(string.Concat(array));
-                Debug.Log(string.Concat(new string[]
+                UnityEngine.Debug.LogError(string.Concat(array));
+                UnityEngine.Debug.Log(string.Concat(new string[]
                 {
                     "Current token: ",
                     _AQP.Current.tokenKind.ToString(),
@@ -2268,7 +2268,7 @@ namespace AHO
                 switch (_CHG)
                 {
                     case _bc1.None:
-                        Debug.LogWarning("declarationSemantics is None on " + ((node != null) ? node.ToString() : null));
+                        UnityEngine.Debug.LogWarning("declarationSemantics is None on " + ((node != null) ? node.ToString() : null));
                         goto IL_0996;
                     case _bc1.NamespaceDeclaration:
                         node.EFI = new _bf8
@@ -2663,7 +2663,7 @@ namespace AHO
                     bool flag16 = _AQI == null;
                     if (flag16)
                     {
-                        Debug.LogWarning(string.Concat(new string[]
+                        UnityEngine.Debug.LogWarning(string.Concat(new string[]
                         {
                             "Symbol declaration ",
                             _CHG.ToString(),
@@ -2704,7 +2704,7 @@ namespace AHO
                         }
                         catch (Exception ex)
                         {
-                            Debug.LogException(ex);
+                            UnityEngine.Debug.LogException(ex);
                         }
                         finally
                         {
@@ -3397,7 +3397,7 @@ namespace AHO
                     {
                         string text = "Can't move after error node! ";
                         _bh2._AJE galfeenijiemihmlgeghkmafeckpklcdmcmf = leaf._AJB;
-                        Debug.LogError(text + ((galfeenijiemihmlgeghkmafeckpklcdmcmf != null) ? galfeenijiemihmlgeghkmafeckpklcdmcmf.ToString() : null));
+                        UnityEngine.Debug.LogError(text + ((galfeenijiemihmlgeghkmafeckpklcdmcmf != null) ? galfeenijiemihmlgeghkmafeckpklcdmcmf.ToString() : null));
                         flag2 = false;
                     }
                     else
