@@ -336,7 +336,7 @@ namespace ODGL
                             {
                                 unityEventBase = Activator.CreateInstance(type2) as UnityEventBase;
                             }
-                            bool flag7 = !UnityEventDrawer.IsPersistantListenerValid(unityEventBase, serializedProperty4.stringValue, serializedProperty3.objectReferenceValue, arrayElementAtIndex.FindPropertyRelative("m_Mode").enumValueIndex, type);
+                            bool flag7 = !UnityEventDrawer.IsPersistantListenerValid(unityEventBase, serializedProperty4.stringValue, serializedProperty3.objectReferenceValue, (UnityEngine.Events.PersistentListenerMode)arrayElementAtIndex.FindPropertyRelative("m_Mode").enumValueIndex, type);
                             if (flag7)
                             {
                                 if (!printError)
