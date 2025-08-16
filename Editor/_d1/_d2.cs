@@ -66,10 +66,10 @@ namespace FEPKBIPDOHCNNFAKLHKGGCCCPGMCNPGGOCGM
             currentLineInactive = new Color32(17, 17, 17, 128),
             referenceHighlight = new Color32(48, 65, 87, byte.MaxValue),
             referenceModifyHighlight = new Color32(105, 48, 49, 192),
-            tooltipBackground = _bg1._AYL * 0.5f + _bg1._AYK * 0.5f,
+            tooltipBackground = (Color)_bg1._AYL * 0.5f + (Color)_bg1._AYK * 0.5f,
             tooltipFrame = _bg1._AYI,
             tooltipText = _bg1._AYG,
-            listPopupBackground = _bg1._AYL * 0.5f + _bg1._AYK * 0.5f,
+            listPopupBackground = (Color)_bg1._AYL * 0.5f + (Color)_bg1._AYK * 0.5f,
             preprocessorStyle = (FontStyle)2
         };
     }
