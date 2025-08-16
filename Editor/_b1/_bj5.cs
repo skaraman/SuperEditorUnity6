@@ -389,7 +389,7 @@ namespace AHO
                         bool flag4 = string.Compare(Path.GetFullPath(assembly3.outputPath), assembly.Location, StringComparison.InvariantCultureIgnoreCase) == 0;
                         if (flag4)
                         {
-                            return assembly3;
+                            return System.Reflection.Assembly.LoadFrom(assembly3.outputPath);
                         }
                     }
                     assembly2 = null;

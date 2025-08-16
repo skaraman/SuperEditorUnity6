@@ -1769,6 +1769,7 @@ namespace UnityEditor
         {
             public string name { get; set; }
             public string[] defines { get; set; }
+            public string outputPath { get; set; } = "";
         }
     }
 
