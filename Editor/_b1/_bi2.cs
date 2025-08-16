@@ -2760,7 +2760,7 @@ namespace AHO
             }
             else
             {
-                UnityEditor.FontImporter fontImporter = AssetImporter.GetAtPath(AssetDatabase.GetAssetPath(font)) as UnityEditor.FontImporter;
+                UnityEditor.TrueTypeFontImporter fontImporter = AssetImporter.GetAtPath(AssetDatabase.GetAssetPath(font)) as UnityEditor.TrueTypeFontImporter;
                 num = ((fontImporter != null && fontImporter.fontRenderingMode == UnityEditor.FontRenderingMode.Smooth) ? fontImporter.fontSize : 0);
             }
             return num;
