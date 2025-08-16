@@ -103,10 +103,10 @@ namespace ODGL
                     {
                         _fb5 value = keyValuePair.Value;
                         this.setupObjectList(value);
-                        bool flag4 = (this.JJCBFBDNALIDAOGOEEOANMGBEGFINLIHPHOF && (value.gameObject.hideFlags & 1) > 0) || (!this.JJCBFBDNALIDAOGOEEOANMGBEGFINLIHPHOF && (value.gameObject.hideFlags & 1) == 0);
+                        bool flag4 = (this.JJCBFBDNALIDAOGOEEOANMGBEGFINLIHPHOF && (value.gameObject.hideFlags & HideFlags.HideInHierarchy) > 0) || (!this.JJCBFBDNALIDAOGOEEOANMGBEGFINLIHPHOF && (value.gameObject.hideFlags & HideFlags.HideInHierarchy) == 0);
                         if (flag4)
                         {
-                            value.gameObject.hideFlags ^= 1;
+                            value.gameObject.hideFlags ^= HideFlags.HideInHierarchy;
                             EditorApplication.DirtyHierarchyWindowSorting();
                         }
                     }
