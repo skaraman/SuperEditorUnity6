@@ -138,7 +138,7 @@ namespace AHO
             _bj7.DHDFOGEKKINJPMEDLKCIOKDLCPBMEKEAGAEM = new GUIStyle
             {
                 margin = new RectOffset(0, 0, 0, 0),
-                alignment = 4,
+                alignment = (TextAnchor)4,
                 fixedHeight = 85f,
                 fontSize = 24,
                 wordWrap = true,
