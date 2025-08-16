@@ -382,7 +382,7 @@ namespace AHO
         // Token: 0x060000CF RID: 207 RVA: 0x0000AB54 File Offset: 0x00008D54
         public void OnGUI()
         {
-            bool flag = (!this.EBINNJIEDKILBKEDCAKOOHHEHNIOGIKHPKHN && this.AMAAEOCIBNDOADEFICMEICEDIPJCEEOODICK && Event.current.type == EventType.MouseMove) || Event.current.type == EventType.ScrollWheel || (Event.current.type == EventType.KeyDown && Event.current.keyCode == 27) || this._AEK._ABT._CFT == null;
+            bool flag = (!this.EBINNJIEDKILBKEDCAKOOHHEHNIOGIKHPKHN && this.AMAAEOCIBNDOADEFICMEICEDIPJCEEOODICK && Event.current.type == EventType.MouseMove) || Event.current.type == EventType.ScrollWheel || (Event.current.type == EventType.KeyDown && (int)Event.current.keyCode == 27) || this._AEK._ABT._CFT == null;
             if (flag)
             {
                 EditorApplication.delayCall = (EditorApplication.CallbackFunction)Delegate.Remove(EditorApplication.delayCall, new EditorApplication.CallbackFunction(this.Hide));
@@ -439,9 +439,9 @@ namespace AHO
                     }
                     text = text3.Replace("\n", "\n  ") + text2;
                     Rect rect;
-                    rect..ctor(2.5f + (float)((_bg8._AEP + 3) / 5), 2.5f + (float)((_bg8._AEP + 3) / 5), (float)(16 + _bg8._AEP + 3), (float)(16 + _bg8._AEP + 3));
+                    rect = new Rect(2.5f + (float)((_bg8._AEP + 3) / 5), 2.5f + (float)((_bg8._AEP + 3) / 5), (float)(16 + _bg8._AEP + 3), (float)(16 + _bg8._AEP + 3));
                     Rect rect2;
-                    rect2..ctor(5f, 5f, base.position.width - 5f, base.position.height - 5f);
+                    rect2 = new Rect(5f, 5f, base.position.width - 5f, base.position.height - 5f);
                     bool flag6 = this.HJDNGHINOLHEPMFIEMMOHDJIGGDACMDELLHB == null;
                     if (flag6)
                     {
@@ -548,8 +548,8 @@ namespace AHO
                         bool flag6 = this.EFFBNPPIAJOPILBOBPPDIICLHBPEOCKILAPN != null && this.EFFBNPPIAJOPILBOBPPDIICLHBPEOCKILAPN.Length > 1;
                         if (flag6)
                         {
-                            bool flag7 = (this.EPALNJEIJOEJDLKLCLKPOGGLFMAECGHIPEBF ? (Event.current.keyCode == 275) : (Event.current.keyCode == 274));
-                            bool flag8 = (this.EPALNJEIJOEJDLKLCLKPOGGLFMAECGHIPEBF ? (Event.current.keyCode == 276) : (Event.current.keyCode == 273));
+                            bool flag7 = (this.EPALNJEIJOEJDLKLCLKPOGGLFMAECGHIPEBF ? ((int)Event.current.keyCode == 275) : ((int)Event.current.keyCode == 274));
+                            bool flag8 = (this.EPALNJEIJOEJDLKLCLKPOGGLFMAECGHIPEBF ? ((int)Event.current.keyCode == 276) : ((int)Event.current.keyCode == 273));
                             bool flag9 = flag8 || flag7;
                             if (flag9)
                             {
@@ -560,7 +560,7 @@ namespace AHO
                                 return;
                             }
                         }
-                        bool flag10 = Event.current.keyCode == 27;
+                        bool flag10 = (int)Event.current.keyCode == 27;
                         if (flag10)
                         {
                             Event.current.Use();
@@ -570,10 +570,10 @@ namespace AHO
                     }
                     else
                     {
-                        bool flag11 = !this.AMAAEOCIBNDOADEFICMEICEDIPJCEEOODICK && (Event.current.keyCode == 273 || Event.current.keyCode == 274);
+                        bool flag11 = !this.AMAAEOCIBNDOADEFICMEICEDIPJCEEOODICK && ((int)Event.current.keyCode == 273 || (int)Event.current.keyCode == 274);
                         if (flag11)
                         {
-                            Event.current.modifiers = Event.current.modifiers & -11;
+                            Event.current.modifiers = (EventModifiers)((int)Event.current.modifiers & -11);
                             this.Hide();
                         }
                     }
