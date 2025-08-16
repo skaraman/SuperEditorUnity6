@@ -40,20 +40,50 @@ namespace ACGG
                     bool flag3 = this._AD.ContainsKey(textureName);
                     if (flag3)
                     {
-                        ImageConversion.LoadImage(texture2D, Convert.FromBase64String(this._AD[textureName]));
+                        ImageConversion.LoadImage(texture2D, ConvertFromBase64StringSafe(this._AD[textureName]));
                     }
                     else
                     {
-                        ImageConversion.LoadImage(texture2D, Convert.FromBase64String(this._AC[textureName]));
+                        ImageConversion.LoadImage(texture2D, ConvertFromBase64StringSafe(this._AC[textureName]));
                     }
                 }
                 else
                 {
-                    ImageConversion.LoadImage(texture2D, Convert.FromBase64String(this._AC[textureName]));
+                    ImageConversion.LoadImage(texture2D, ConvertFromBase64StringSafe(this._AC[textureName]));
                 }
                 this._AB.Add(textureName, texture2D);
             }
             return this._AB[textureName];
+        }
+
+        // Token: 0x060009F7 RID: 2551
+        private byte[] ConvertFromBase64StringSafe(string base64String)
+        {
+            try
+            {
+                if (string.IsNullOrEmpty(base64String))
+                {
+                    return new byte[0];
+                }
+
+                // Sanitize the Base64 string
+                string sanitized = base64String.Trim().Replace("\n", "").Replace("\r", "").Replace(" ", "").Replace("\t", "");
+                
+                // Ensure proper padding
+                int padding = sanitized.Length % 4;
+                if (padding != 0)
+                {
+                    sanitized += new string('=', 4 - padding);
+                }
+
+                return Convert.FromBase64String(sanitized);
+            }
+            catch (FormatException)
+            {
+                // Return empty byte array for invalid Base64 strings
+                // This will create a minimal 1x1 texture instead of crashing
+                return new byte[0];
+            }
         }
 
         // Token: 0x04000928 RID: 2344
