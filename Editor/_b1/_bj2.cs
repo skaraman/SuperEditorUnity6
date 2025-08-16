@@ -80,7 +80,7 @@ namespace AHO
             _bj2.GPMNMNGJJJBKHIHLOJKNCLAKDCHHMKAHOADK = new GUIStyle
             {
                 margin = new RectOffset(10, 10, 10, 10),
-                alignment = 4,
+                alignment = (TextAnchor)4,
                 fontSize = 24,
                 font = _bi2.LoadEditorResource<Font>(string.Format("Fonts/{0}", "PTMono.ttc")),
                 normal = new GUIStyleState
@@ -101,7 +101,7 @@ namespace AHO
             _bj2.LLCPMMHEEDAPDPBKDLIDMLFCMIJCMJOKHGMF = new GUIStyle
             {
                 margin = new RectOffset(10, 10, 10, 10),
-                alignment = 4,
+                alignment = (TextAnchor)4,
                 fontSize = 16,
                 font = _bi2.LoadEditorResource<Font>(string.Format("Fonts/{0}", "")),
                 normal = new GUIStyleState
@@ -116,7 +116,7 @@ namespace AHO
             _bj2.DGBAOFBBLJPIOPPJHMLAKHPJJGFHOKOIKOOH = new GUIStyle
             {
                 margin = new RectOffset(10, 10, 10, 10),
-                alignment = 4,
+                alignment = (TextAnchor)4,
                 fontSize = 16,
                 font = _bi2.LoadEditorResource<Font>(string.Format("Fonts/{0}", "")),
                 normal = new GUIStyleState
