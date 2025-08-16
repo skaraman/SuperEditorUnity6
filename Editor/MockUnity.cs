@@ -1736,6 +1736,12 @@ namespace UnityEditor
     public class UnityEventDrawer : PropertyDrawer
     {
         protected virtual void DrawEventHeader(UnityEngine.Rect headerRect) { }
+        
+        public static bool IsPersistantListenerValid(UnityEngine.Events.UnityEventBase unityEvent, string methodName, UnityEngine.Object target, UnityEngine.Events.PersistentListenerMode mode, System.Type argumentType)
+        {
+            // Mock implementation - always return true for compilation
+            return true;
+        }
     }
 
     public class CustomEditorAttribute : Attribute
@@ -2043,6 +2049,17 @@ namespace UnityEngine
         public class UnityEvent { }
         public class UnityEvent<T> { }
         public class UnityEventBase { }
+        
+        public enum PersistentListenerMode
+        {
+            EventDefined = 0,
+            Void = 1,
+            Object = 2,
+            Int = 3,
+            Float = 4,
+            String = 5,
+            Bool = 6
+        }
     }
 
     namespace SceneManagement
