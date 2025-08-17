@@ -1,7 +1,7 @@
 # SuperEditorUnity6
 
 Unity 6 compatible version of Super Editor - Enhanced Unity Editor functionality.
-
+https://www.youtube.com/watch?v=Jhq0ttJlKGc
 ## Installation
 
 ### Via Unity Package Manager
