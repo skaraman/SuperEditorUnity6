@@ -12714,7 +12714,7 @@ namespace AHO
                                     return;
                                 }
                                 bool flag50 = Application.platform == RuntimePlatform.OSXEditor;
-                                bool flag51 = (Event.current.type == EventType.MouseUp && Event.current.button == 0) || (flag50 && Event.current.type == EventType.MouseUp && Event.current.button == 1);
+                                bool flag51 = (Event.current.type == EventType.MouseUp && Event.current.button == 1); // Only right-click
                                 bool flag52 = (Event.current.type == EventType.KeyDown && ((int)Event.current.keyCode == 319 || Event.current.Equals(Event.KeyboardEvent("#f12")))) || (flag51 && this._AFO.Contains(Event.current.mousePosition));
                                 if (flag52)
                                 {
