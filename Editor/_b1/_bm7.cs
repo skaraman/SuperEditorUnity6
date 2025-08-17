@@ -14,20 +14,20 @@ namespace AHO
         [CompilerGenerated]
         public _bh4 _CBS()
         {
-            return this.IFHBDILHNIBEGNMFFMBDEBMGAOBIFIOMBNOG;
+            return this._zd3;
         }
 
         // Token: 0x06000503 RID: 1283 RVA: 0x000D0A0E File Offset: 0x000CEC0E
         [CompilerGenerated]
-        private void KAIFPIBBINFLPLILIMLFGAHKIJJLLGPCFMGJ(_bh4 value)
+        private void _zd4(_bh4 value)
         {
-            this.IFHBDILHNIBEGNMFFMBDEBMGAOBIFIOMBNOG = value;
+            this._zd3 = value;
         }
 
         // Token: 0x06000504 RID: 1284 RVA: 0x000D0A18 File Offset: 0x000CEC18
         public _bm7(_bh4 referencedSymbolDefinition)
         {
-            this.KAIFPIBBINFLPLILIMLFGAHKIJJLLGPCFMGJ(referencedSymbolDefinition);
+            this._zd4(referencedSymbolDefinition);
             this._AT = this._CBS()._AT;
             this._AV = this._CBS()._AV;
             this._AU = this._CBS()._AU;
@@ -37,7 +37,7 @@ namespace AHO
         // Token: 0x06000505 RID: 1285 RVA: 0x000D0A7C File Offset: 0x000CEC7C
         internal override _bh4 Rebind()
         {
-            this.KAIFPIBBINFLPLILIMLFGAHKIJJLLGPCFMGJ(this._CBS().Rebind());
+            this._zd4(this._CBS().Rebind());
             return base.Rebind();
         }
 
@@ -134,7 +134,7 @@ namespace AHO
                 bool flag2 = this._CBS()._AO == null && this._CBS()._AGU != null;
                 if (flag2)
                 {
-                    this.KAIFPIBBINFLPLILIMLFGAHKIJJLLGPCFMGJ(this._CBS().Rebind());
+                    this._zd4(this._CBS().Rebind());
                 }
                 _bh4 _AAH2 = this._CBS().ResolveMethodOverloads(argumentListNode, typeArgs, scope, invokedLeaf);
                 bool flag3 = _AAH2 == null || _AAH2._AT != SymbolKind.Method;
@@ -164,6 +164,6 @@ namespace AHO
         // Token: 0x040004F0 RID: 1264
         [CompilerGenerated]
         [DebuggerBrowsable(DebuggerBrowsableState.Never)]
-        private _bh4 IFHBDILHNIBEGNMFFMBDEBMGAOBIFIOMBNOG;
+        private _bh4 _zd3;
     }
 }

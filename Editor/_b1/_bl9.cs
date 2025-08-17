@@ -18,7 +18,7 @@ namespace AHO
         public static _bl9 ForType(Type type)
         {
             _bl9 _BEK;
-            bool flag = _bl9.FMLPCEJNNGMNPEGNIPCKFFFCPPIBEHFCGMAG.TryGetValue(type, out _BEK);
+            bool flag = _bl9._zk1.TryGetValue(type, out _BEK);
             _bl9 _BEK2;
             if (flag)
             {
@@ -27,7 +27,7 @@ namespace AHO
             else
             {
                 _BEK = new _bl9(type);
-                _bl9.FMLPCEJNNGMNPEGNIPCKFFFCPPIBEHFCGMAG[type] = _BEK;
+                _bl9._zk1[type] = _BEK;
                 _BEK2 = _BEK;
             }
             return _BEK2;
@@ -39,17 +39,17 @@ namespace AHO
         {
             get
             {
-                bool flag = this.FPNIPCAGFHAMPMOPKHBJLDNLIAOFDPNPODOH != null && !this.FPNIPCAGFHAMPMOPKHBJLDNLIAOFDPNPODOH.IsValid();
+                bool flag = this._zk2 != null && !this._zk2.IsValid();
                 if (flag)
                 {
-                    this.FPNIPCAGFHAMPMOPKHBJLDNLIAOFDPNPODOH = this.FPNIPCAGFHAMPMOPKHBJLDNLIAOFDPNPODOH.Rebind();
-                    bool flag2 = this.FPNIPCAGFHAMPMOPKHBJLDNLIAOFDPNPODOH != null && !this.FPNIPCAGFHAMPMOPKHBJLDNLIAOFDPNPODOH.IsValid();
+                    this._zk2 = this._zk2.Rebind();
+                    bool flag2 = this._zk2 != null && !this._zk2.IsValid();
                     if (flag2)
                     {
-                        this.FPNIPCAGFHAMPMOPKHBJLDNLIAOFDPNPODOH = null;
+                        this._zk2 = null;
                     }
                 }
-                bool flag3 = this.FPNIPCAGFHAMPMOPKHBJLDNLIAOFDPNPODOH == null;
+                bool flag3 = this._zk2 == null;
                 if (flag3)
                 {
                     bool isArray = this._AWK.IsArray;
@@ -58,8 +58,8 @@ namespace AHO
                         Type elementType = this._AWK.GetElementType();
                         _b2 _AAC = _bl9.ForType(elementType).definition as _b2;
                         int arrayRank = this._AWK.GetArrayRank();
-                        this.FPNIPCAGFHAMPMOPKHBJLDNLIAOFDPNPODOH = _AAC.MakeArrayType(arrayRank);
-                        return this.FPNIPCAGFHAMPMOPKHBJLDNLIAOFDPNPODOH;
+                        this._zk2 = _AAC.MakeArrayType(arrayRank);
+                        return this._zk2;
                     }
                     bool isGenericParameter = this._AWK.IsGenericParameter;
                     if (isGenericParameter)
@@ -74,7 +74,7 @@ namespace AHO
                             bool flag5 = _AFK == null;
                             if (flag5)
                             {
-                                return this.FPNIPCAGFHAMPMOPKHBJLDNLIAOFDPNPODOH = _bh4._AHA;
+                                return this._zk2 = _bh4._AHA;
                             }
                             string name = methodInfo.Name;
                             Type[] genericArguments = methodInfo.GetGenericArguments();
@@ -103,7 +103,7 @@ namespace AHO
                                 }
                             }
                             _bb3 _AAN = _AAH as _bb3;
-                            this.FPNIPCAGFHAMPMOPKHBJLDNLIAOFDPNPODOH = _AAN._AHL.ElementAtOrDefault(num);
+                            this._zk2 = _AAN._AHL.ElementAtOrDefault(num);
                         }
                         else
                         {
@@ -134,11 +134,11 @@ namespace AHO
                             bool flag11 = _AHD == null;
                             if (flag11)
                             {
-                                return this.FPNIPCAGFHAMPMOPKHBJLDNLIAOFDPNPODOH = _bh4._AHA;
+                                return this._zk2 = _bh4._AHA;
                             }
-                            this.FPNIPCAGFHAMPMOPKHBJLDNLIAOFDPNPODOH = _AHD._AHL[num];
+                            this._zk2 = _AHD._AHL[num];
                         }
-                        return this.FPNIPCAGFHAMPMOPKHBJLDNLIAOFDPNPODOH;
+                        return this._zk2;
                     }
                     bool flag12 = this._AWK.IsGenericType && !this._AWK.IsGenericTypeDefinition;
                     if (flag12)
@@ -149,7 +149,7 @@ namespace AHO
                         bool flag13 = _AHD2 == null;
                         if (flag13)
                         {
-                            return this.FPNIPCAGFHAMPMOPKHBJLDNLIAOFDPNPODOH = _bh4._AHA;
+                            return this._zk2 = _bh4._AHA;
                         }
                         Type[] genericArguments2 = this._AWK.GetGenericArguments();
                         int num4 = genericArguments2.Length;
@@ -170,8 +170,8 @@ namespace AHO
                         }
                         _bc6 _AHD3 = _AHD2;
                         KJK[] array2 = array;
-                        this.FPNIPCAGFHAMPMOPKHBJLDNLIAOFDPNPODOH = _AHD3.ConstructType(array2);
-                        return this.FPNIPCAGFHAMPMOPKHBJLDNLIAOFDPNPODOH;
+                        this._zk2 = _AHD3.ConstructType(array2);
+                        return this._zk2;
                     }
                     else
                     {
@@ -208,8 +208,8 @@ namespace AHO
                                 num7 = int.Parse(text.Substring(num8 + 1));
                                 text = text.Substring(0, num8);
                             }
-                            this.FPNIPCAGFHAMPMOPKHBJLDNLIAOFDPNPODOH = _AAH2.FindName(text, num7, true);
-                            bool flag19 = this.FPNIPCAGFHAMPMOPKHBJLDNLIAOFDPNPODOH == null;
+                            this._zk2 = _AAH2.FindName(text, num7, true);
+                            bool flag19 = this._zk2 == null;
                             if (flag19)
                             {
                                 return null;
@@ -217,26 +217,26 @@ namespace AHO
                             bool flag20 = num6 > 0;
                             if (flag20)
                             {
-                                _bc6 _AHD4 = this.FPNIPCAGFHAMPMOPKHBJLDNLIAOFDPNPODOH as _bc6;
+                                _bc6 _AHD4 = this._zk2 as _bc6;
                                 bool flag21 = _AHD4 != null;
                                 if (flag21)
                                 {
-                                    this.FPNIPCAGFHAMPMOPKHBJLDNLIAOFDPNPODOH = _AHD4.MakeArrayType(text.Length - num6 - 1);
+                                    this._zk2 = _AHD4.MakeArrayType(text.Length - num6 - 1);
                                 }
                                 else
                                 {
-                                    this.FPNIPCAGFHAMPMOPKHBJLDNLIAOFDPNPODOH = null;
+                                    this._zk2 = null;
                                 }
                             }
                         }
-                        bool flag22 = this.FPNIPCAGFHAMPMOPKHBJLDNLIAOFDPNPODOH == null;
+                        bool flag22 = this._zk2 == null;
                         if (flag22)
                         {
-                            this.FPNIPCAGFHAMPMOPKHBJLDNLIAOFDPNPODOH = _bh4._AHA;
+                            this._zk2 = _bh4._AHA;
                         }
                     }
                 }
-                return this.FPNIPCAGFHAMPMOPKHBJLDNLIAOFDPNPODOH;
+                return this._zk2;
             }
         }
 
@@ -250,6 +250,6 @@ namespace AHO
         protected Type _AWK;
 
         // Token: 0x040004A7 RID: 1191
-        private static readonly Dictionary<Type, _bl9> FMLPCEJNNGMNPEGNIPCKFFFCPPIBEHFCGMAG = new Dictionary<Type, _bl9>();
+        private static readonly Dictionary<Type, _bl9> _zk1 = new Dictionary<Type, _bl9>();
     }
 }

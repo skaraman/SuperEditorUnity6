@@ -4,7 +4,7 @@ using SuperEditor.Themes;
 using UnityEditor;
 using UnityEngine;
 
-namespace FEPKBIPDOHCNNFAKLHKGGCCCPGMCNPGGOCGM
+namespace _yj2
 {
     // Token: 0x02000159 RID: 345
     [InitializeOnLoad]
@@ -13,25 +13,25 @@ namespace FEPKBIPDOHCNNFAKLHKGGCCCPGMCNPGGOCGM
         // Token: 0x060009D9 RID: 2521 RVA: 0x001062A4 File Offset: 0x001044A4
         static _d3()
         {
-            _bi2.AddTheme(_d3._CLS, _d3.CMPOPFLJBNNNHDELDGDDKDJONFFGEBIGEPDL);
+            _bi2.AddTheme(_d3._CLS, _d3._yl6);
             _bi2._CBY++;
         }
 
         // Token: 0x060009DA RID: 2522 RVA: 0x0010672E File Offset: 0x0010492E
         public void OnValidate()
         {
-            this.HPFACLAPLOLODJBLPMCBNNHEBLAGCPOJCKLI = true;
+            this._yl7 = true;
         }
 
         // Token: 0x0400086D RID: 2157
-        private static string CMPOPFLJBNNNHDELDGDDKDJONFFGEBIGEPDL = "Visual Studio";
+        private static string _yl6 = "Visual Studio";
 
         // Token: 0x0400086E RID: 2158
         [HideInInspector]
-        public bool HPFACLAPLOLODJBLPMCBNNHEBLAGCPOJCKLI;
+        public bool _yl7;
 
         // Token: 0x0400086F RID: 2159
-        public Theme OIIDHFMBLKNKEBNDBPGGIBAMKMMOOAEODJGI = new Theme
+        public Theme _yl8 = new Theme
         {
             background = Color.white,
             text = Color.black,

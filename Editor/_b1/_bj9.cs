@@ -158,27 +158,27 @@ namespace AHO
         // Token: 0x060003B7 RID: 951 RVA: 0x000A8B40 File Offset: 0x000A6D40
         public static _bj9 FromString(string str)
         {
-            _bj9 mcknonjhcbhjpkmknajcpjikiglijfkmmnop = default(_bj9);
-            mcknonjhcbhjpkmknajcpjikiglijfkmmnop._ABG = str;
-            _bj9 mcknonjhcbhjpkmknajcpjikiglijfkmmnop2;
+            _bj9 _zl1 = default(_bj9);
+            _zl1._ABG = str;
+            _bj9 _zl2;
             try
             {
                 string[] array = Regex.Split(str, "[\\.A-Za-z]");
                 Match match = Regex.Match(str, "A-Za-z");
-                int.TryParse(array[0], out mcknonjhcbhjpkmknajcpjikiglijfkmmnop.OIBKGBGJIEGDFNECHAAPHPHCNLCEPEDDGDNC);
-                int.TryParse(array[1], out mcknonjhcbhjpkmknajcpjikiglijfkmmnop.PMBLIHFHDHLONFPFDKBPAAKKGEHKOIBPBIMK);
-                int.TryParse(array[2], out mcknonjhcbhjpkmknajcpjikiglijfkmmnop.BHJHJCPIEPLKAFNMFIHJOBHHMOPOIKGFGDPH);
-                int.TryParse(array[3], out mcknonjhcbhjpkmknajcpjikiglijfkmmnop.HMMKGDMFLPLHJPOJMPAEEGPDIGKIELPJOCEK);
-                mcknonjhcbhjpkmknajcpjikiglijfkmmnop.BLH = _bj9.GetVersionType((match != null && match.Success) ? match.Value : "");
-                mcknonjhcbhjpkmknajcpjikiglijfkmmnop.MMBKELDDNFGMMJJCACOJBBIOKINCDDJNNMLO = true;
-                mcknonjhcbhjpkmknajcpjikiglijfkmmnop2 = mcknonjhcbhjpkmknajcpjikiglijfkmmnop;
+                int.TryParse(array[0], out _zl1.OIBKGBGJIEGDFNECHAAPHPHCNLCEPEDDGDNC);
+                int.TryParse(array[1], out _zl1.PMBLIHFHDHLONFPFDKBPAAKKGEHKOIBPBIMK);
+                int.TryParse(array[2], out _zl1.BHJHJCPIEPLKAFNMFIHJOBHHMOPOIKGFGDPH);
+                int.TryParse(array[3], out _zl1.HMMKGDMFLPLHJPOJMPAEEGPDIGKIELPJOCEK);
+                _zl1.BLH = _bj9.GetVersionType((match != null && match.Success) ? match.Value : "");
+                _zl1.MMBKELDDNFGMMJJCACOJBBIOKINCDDJNNMLO = true;
+                _zl2 = _zl1;
             }
             catch
             {
-                mcknonjhcbhjpkmknajcpjikiglijfkmmnop.MMBKELDDNFGMMJJCACOJBBIOKINCDDJNNMLO = false;
-                mcknonjhcbhjpkmknajcpjikiglijfkmmnop2 = mcknonjhcbhjpkmknajcpjikiglijfkmmnop;
+                _zl1.MMBKELDDNFGMMJJCACOJBBIOKINCDDJNNMLO = false;
+                _zl2 = _zl1;
             }
-            return mcknonjhcbhjpkmknajcpjikiglijfkmmnop2;
+            return _zl2;
         }
 
         // Token: 0x060003B8 RID: 952 RVA: 0x000A8C08 File Offset: 0x000A6E08

@@ -375,7 +375,7 @@ namespace AHO
         {
             Func<Task> func = async delegate
             {
-                await Task.Delay(TimeSpan.FromSeconds(0.15000000596046448));
+                await Task.Delay(TimeSpan.FromSeconds(0.15));
                 this._AEG = new Rect(base.position.x + base.position.width, base.position.y - base.position.height, base.position.width, base.position.height);
                 if (this._ADS >= 0)
                 {

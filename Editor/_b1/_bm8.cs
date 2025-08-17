@@ -19,7 +19,7 @@ namespace AHO
         // Token: 0x060004AE RID: 1198 RVA: 0x000CE0C4 File Offset: 0x000CC2C4
         internal override _b2 BaseType()
         {
-            bool flag = this.NJNAKAPBHOJBJPAFANKIGOABKFEGDNGEJCFC == null && this._BEY == 1;
+            bool flag = this._zd1 == null && this._BEY == 1;
             if (flag)
             {
                 this.Interfaces();
@@ -30,24 +30,24 @@ namespace AHO
         // Token: 0x060004AF RID: 1199 RVA: 0x000CE0FC File Offset: 0x000CC2FC
         internal override List<KJK> Interfaces()
         {
-            bool flag = this.NJNAKAPBHOJBJPAFANKIGOABKFEGDNGEJCFC == null && this._BEY == 1;
+            bool flag = this._zd1 == null && this._BEY == 1;
             if (flag)
             {
-                this.NJNAKAPBHOJBJPAFANKIGOABKFEGDNGEJCFC = new List<KJK>
+                this._zd1 = new List<KJK>
                 {
                     _bl9.ForType(typeof(IEnumerable<>)),
                     _bl9.ForType(typeof(IList<>)),
                     _bl9.ForType(typeof(ICollection<>))
                 };
                 KJK[] array = new KJK[] { this._AHP };
-                for (int i = 0; i < this.NJNAKAPBHOJBJPAFANKIGOABKFEGDNGEJCFC.Count; i++)
+                for (int i = 0; i < this._zd1.Count; i++)
                 {
-                    _bc6 _AHD = this.NJNAKAPBHOJBJPAFANKIGOABKFEGDNGEJCFC[i].definition as _bc6;
+                    _bc6 _AHD = this._zd1[i].definition as _bc6;
                     _AHD = _AHD.ConstructType(array);
-                    this.NJNAKAPBHOJBJPAFANKIGOABKFEGDNGEJCFC[i] = new KJK(_AHD);
+                    this._zd1[i] = new KJK(_AHD);
                 }
             }
-            this._APD = this.NJNAKAPBHOJBJPAFANKIGOABKFEGDNGEJCFC ?? base.Interfaces();
+            this._APD = this._zd1 ?? base.Interfaces();
             return this._APD;
         }
 
@@ -75,7 +75,7 @@ namespace AHO
             string text;
             if (flag)
             {
-                text = this.FJCFJENFPCEOGGDMHHMHKOLMCEPPABBKJILM[this._BEY - 1];
+                text = this._zd2[this._BEY - 1];
             }
             else
             {
@@ -251,9 +251,9 @@ namespace AHO
         public readonly int _BEY;
 
         // Token: 0x040004C2 RID: 1218
-        private List<KJK> NJNAKAPBHOJBJPAFANKIGOABKFEGDNGEJCFC;
+        private List<KJK> _zd1;
 
         // Token: 0x040004C3 RID: 1219
-        private readonly string[] FJCFJENFPCEOGGDMHHMHKOLMCEPPABBKJILM = new string[] { "[]", "[,]", "[,,]", "[,,,]", "[,,,,]", "[,,,,,]", "[,,,,,,]" };
+        private readonly string[] _zd2 = new string[] { "[]", "[,]", "[,,]", "[,,,]", "[,,,,]", "[,,,,,]", "[,,,,,,]" };
     }
 }

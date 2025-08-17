@@ -9,7 +9,7 @@ using UnityEditorInternal;
 using UnityEngine;
 using UnityEngine.Events;
 
-namespace FEOCJICFPEHKGMMCGOCFIOPPOJIAOLJNEKNO
+namespace _yj4
 {
     // Token: 0x02000169 RID: 361
     [InitializeOnLoad]
@@ -107,18 +107,18 @@ namespace FEOCJICFPEHKGMMCGOCFIOPPOJIAOLJNEKNO
             int indentLevel = EditorGUI.indentLevel;
             EditorGUI.indentLevel = 0;
             headerRect.xMin += 10f;
-            bool flag = this.DGGABCKPMNOOMLMCBLMPCNGADOHFLHOMBNBG != null;
+            bool flag = this._yj5 != null;
             if (flag)
             {
-                bool flag2 = this.DGGABCKPMNOOMLMCBLMPCNGADOHFLHOMBNBG.GetType().ToString() == "UnityEngine.EventSystems.EventTrigger+TriggerEvent";
+                bool flag2 = this._yj5.GetType().ToString() == "UnityEngine.EventSystems.EventTrigger+TriggerEvent";
                 if (flag2)
                 {
                     headerRect.xMax -= 20f;
                 }
                 _c3._CAA.text = "";
                 _c3._CAA.tooltip = "";
-                this.CJMJBAKOHPGCDGOAJNIAJHBCHCKMLHKJKHNL = EditorGUI.Foldout(headerRect, this.CJMJBAKOHPGCDGOAJNIAJHBCHCKMLHKJKHNL, _c3._CAA, true);
-                int persistentEventCount = this.DGGABCKPMNOOMLMCBLMPCNGADOHFLHOMBNBG.GetPersistentEventCount();
+                this._yj6 = EditorGUI.Foldout(headerRect, this._yj6, _c3._CAA, true);
+                int persistentEventCount = this._yj5.GetPersistentEventCount();
                 _c3._CAA.text = persistentEventCount.ToString();
                 Vector2 vector = EditorStyles.label.CalcSize(_c3._CAA);
                 Rect rect = headerRect;
@@ -137,30 +137,30 @@ namespace FEOCJICFPEHKGMMCGOCFIOPPOJIAOLJNEKNO
         // Token: 0x060009FC RID: 2556 RVA: 0x0010B400 File Offset: 0x00109600
         protected bool InitializeForProperty(SerializedProperty property)
         {
-            bool flag = this.HCOLMCFNGFHPBHCNLDDOBKAKNCFAHBMJLEFP == null;
+            bool flag = this._yj7 == null;
             if (flag)
             {
-                this.HCOLMCFNGFHPBHCNLDDOBKAKNCFAHBMJLEFP = typeof(UnityEventDrawer).GetMethod("RestoreState", BindingFlags.Instance | BindingFlags.Public | BindingFlags.NonPublic);
-                this.JCDCMEMFNHOAHJHIGEOAINCAEPKIMBFEBGLL = typeof(UnityEventDrawer).GetField("m_ReorderableList", BindingFlags.Instance | BindingFlags.Public | BindingFlags.NonPublic);
-                this.MHFODCCKJOIIFCPECNHEPFPENCFBMJAJMJMK = typeof(UnityEventDrawer).GetField("m_DummyEvent", BindingFlags.Instance | BindingFlags.Public | BindingFlags.NonPublic);
-                this.HGHCOKJCDDJMOJGJIOOIFHDGLIEIDJMLPCKB = typeof(UnityEventDrawer).GetField("m_Text", BindingFlags.Instance | BindingFlags.Public | BindingFlags.NonPublic);
-                this.LEJDNGKEKFIJOGNPCPGJCIKNLPDGMPHJFAOP = Type.GetType("UnityEngine.Events.PersistentCall,UnityEngine");
-                bool flag2 = this.LEJDNGKEKFIJOGNPCPGJCIKNLPDGMPHJFAOP != null;
+                this._yj7 = typeof(UnityEventDrawer).GetMethod("RestoreState", BindingFlags.Instance | BindingFlags.Public | BindingFlags.NonPublic);
+                this._yj8 = typeof(UnityEventDrawer).GetField("m_ReorderableList", BindingFlags.Instance | BindingFlags.Public | BindingFlags.NonPublic);
+                this._yj9 = typeof(UnityEventDrawer).GetField("m_DummyEvent", BindingFlags.Instance | BindingFlags.Public | BindingFlags.NonPublic);
+                this._yk1 = typeof(UnityEventDrawer).GetField("m_Text", BindingFlags.Instance | BindingFlags.Public | BindingFlags.NonPublic);
+                this._yk2 = Type.GetType("UnityEngine.Events.PersistentCall,UnityEngine");
+                bool flag2 = this._yk2 != null;
                 if (flag2)
                 {
-                    this.ECHKCMCGCNBGJJBHLEPCIHICPIIGDKFPBENC = typeof(UnityEventBase).GetMethod("FindMethod", BindingFlags.Instance | BindingFlags.Public | BindingFlags.NonPublic, null, new Type[] { this.LEJDNGKEKFIJOGNPCPGJCIKNLPDGMPHJFAOP }, null);
-                    this.GNODCIGDEILAGFDDMMNLOOGBJAG_AWMFGGDE = Type.GetType("UnityEngine.Events.PersistentCallGroup,UnityEngine");
-                    bool flag3 = this.GNODCIGDEILAGFDDMMNLOOGBJAG_AWMFGGDE != null;
+                    this._yk3 = typeof(UnityEventBase).GetMethod("FindMethod", BindingFlags.Instance | BindingFlags.Public | BindingFlags.NonPublic, null, new Type[] { this._yk2 }, null);
+                    this._yk4 = Type.GetType("UnityEngine.Events.PersistentCallGroup,UnityEngine");
+                    bool flag3 = this._yk4 != null;
                     if (flag3)
                     {
-                        this.MOIPDOAAAABPAACGCBMONLEHGJJCOBHOOINH = this.GNODCIGDEILAGFDDMMNLOOGBJAG_AWMFGGDE.GetMethod("GetListener", BindingFlags.Instance | BindingFlags.Public | BindingFlags.NonPublic);
+                        this._yk5 = this._yk4.GetMethod("GetListener", BindingFlags.Instance | BindingFlags.Public | BindingFlags.NonPublic);
                     }
-                    this.NKKKGIKOALPNCFHOLKJAFHGIDNFELFBPLICG = typeof(UnityEventBase).GetField("m_PersistentCalls", BindingFlags.Instance | BindingFlags.Public | BindingFlags.NonPublic);
-                    this.NPBBCKMKLKPJAIPBPLKAJFPDFEKLEJFOCEHF = typeof(UnityEventDrawer).GetField("m_ListenersArray", BindingFlags.Instance | BindingFlags.Public | BindingFlags.NonPublic);
-                    this.KFCOCJOLIHLABAPHNFDBLKFLMIEBCAEGAJFI = typeof(UnityEventBase).GetMethod("RebuildPersistentCallsIfNeeded", BindingFlags.Instance | BindingFlags.Public | BindingFlags.NonPublic | BindingFlags.FlattenHierarchy);
+                    this._yk6 = typeof(UnityEventBase).GetField("m_PersistentCalls", BindingFlags.Instance | BindingFlags.Public | BindingFlags.NonPublic);
+                    this._yk7 = typeof(UnityEventDrawer).GetField("m_ListenersArray", BindingFlags.Instance | BindingFlags.Public | BindingFlags.NonPublic);
+                    this._yk8 = typeof(UnityEventBase).GetMethod("RebuildPersistentCallsIfNeeded", BindingFlags.Instance | BindingFlags.Public | BindingFlags.NonPublic | BindingFlags.FlattenHierarchy);
                 }
             }
-            bool flag4 = this.HCOLMCFNGFHPBHCNLDDOBKAKNCFAHBMJLEFP == null || this.JCDCMEMFNHOAHJHIGEOAINCAEPKIMBFEBGLL == null || this.ECHKCMCGCNBGJJBHLEPCIHICPIIGDKFPBENC == null || this.MOIPDOAAAABPAACGCBMONLEHGJJCOBHOOINH == null || this.NKKKGIKOALPNCFHOLKJAFHGIDNFELFBPLICG == null || this.NPBBCKMKLKPJAIPBPLKAJFPDFEKLEJFOCEHF == null || this.KFCOCJOLIHLABAPHNFDBLKFLMIEBCAEGAJFI == null;
+            bool flag4 = this._yj7 == null || this._yj8 == null || this._yk3 == null || this._yk5 == null || this._yk6 == null || this._yk7 == null || this._yk8 == null;
             bool flag5;
             if (flag4)
             {
@@ -168,9 +168,9 @@ namespace FEOCJICFPEHKGMMCGOCFIOPPOJIAOLJNEKNO
             }
             else
             {
-                this.CJMJBAKOHPGCDGOAJNIAJHBCHCKMLHKJKHNL = property.isExpanded;
-                this.HCOLMCFNGFHPBHCNLDDOBKAKNCFAHBMJLEFP.Invoke(this, new object[] { property });
-                ReorderableList reorderableList = this.JCDCMEMFNHOAHJHIGEOAINCAEPKIMBFEBGLL.GetValue(this) as ReorderableList;
+                this._yj6 = property.isExpanded;
+                this._yj7.Invoke(this, new object[] { property });
+                ReorderableList reorderableList = this._yj8.GetValue(this) as ReorderableList;
                 bool flag6 = reorderableList == null;
                 if (flag6)
                 {
@@ -178,28 +178,28 @@ namespace FEOCJICFPEHKGMMCGOCFIOPPOJIAOLJNEKNO
                 }
                 else
                 {
-                    bool flag7 = this.MEHPOJFCHBNKIOIOMPCIKMICIBMCEEDDEAMH == null || this.MEHPOJFCHBNKIOIOMPCIKMICIBMCEEDDEAMH.Target == null;
+                    bool flag7 = this._yk9 == null || this._yk9.Target == null;
                     if (flag7)
                     {
-                        this.MEHPOJFCHBNKIOIOMPCIKMICIBMCEEDDEAMH = reorderableList.drawElementCallback;
+                        this._yk9 = reorderableList.drawElementCallback;
                     }
                     reorderableList.drawElementCallback = new ReorderableList.ElementCallbackDelegate(this.DrawEventListener);
-                    this.IEMMAMAHFFGLDFIOMMALNHDMLMPALJCOGOHO = this.NPBBCKMKLKPJAIPBPLKAJFPDFEKLEJFOCEHF.GetValue(this) as SerializedProperty;
-                    bool flag8 = this.IEMMAMAHFFGLDFIOMMALNHDMLMPALJCOGOHO != null && !this.IEMMAMAHFFGLDFIOMMALNHDMLMPALJCOGOHO.isArray;
+                    this._yl1 = this._yk7.GetValue(this) as SerializedProperty;
+                    bool flag8 = this._yl1 != null && !this._yl1.isArray;
                     if (flag8)
                     {
-                        this.IEMMAMAHFFGLDFIOMMALNHDMLMPALJCOGOHO = null;
+                        this._yl1 = null;
                     }
                     object obj = property.serializedObject.targetObject;
-                    this.FPANIMICIKBOPALLGOABHNIMKCMBJKJDLAGL = null;
-                    string[] array = property.propertyPath.Split(this.GFKIBCELJHDFBIJCGEDLLBHFJMBHAGOGCDDA, StringSplitOptions.RemoveEmptyEntries);
+                    this._yl2 = null;
+                    string[] array = property.propertyPath.Split(this._yl3, StringSplitOptions.RemoveEmptyEntries);
                     int num = 0;
                     while (obj != null && num < array.Length)
                     {
                         bool flag9 = array[num] == "Array";
                         if (flag9)
                         {
-                            this.FPANIMICIKBOPALLGOABHNIMKCMBJKJDLAGL = null;
+                            this._yl2 = null;
                             IList list = obj as IList;
                             bool flag10 = list == null;
                             if (flag10)
@@ -219,15 +219,15 @@ namespace FEOCJICFPEHKGMMCGOCFIOPPOJIAOLJNEKNO
                             Type type = obj.GetType();
                             while (type != typeof(object))
                             {
-                                this.FPANIMICIKBOPALLGOABHNIMKCMBJKJDLAGL = type.GetField(array[num], BindingFlags.DeclaredOnly | BindingFlags.Instance | BindingFlags.Public | BindingFlags.NonPublic);
-                                bool flag12 = this.FPANIMICIKBOPALLGOABHNIMKCMBJKJDLAGL != null;
+                                this._yl2 = type.GetField(array[num], BindingFlags.DeclaredOnly | BindingFlags.Instance | BindingFlags.Public | BindingFlags.NonPublic);
+                                bool flag12 = this._yl2 != null;
                                 if (flag12)
                                 {
                                     break;
                                 }
                                 type = type.BaseType;
                             }
-                            bool flag13 = this.FPANIMICIKBOPALLGOABHNIMKCMBJKJDLAGL == null;
+                            bool flag13 = this._yl2 == null;
                             if (flag13)
                             {
                                 Debug.LogWarning(string.Concat(new string[]
@@ -242,11 +242,11 @@ namespace FEOCJICFPEHKGMMCGOCFIOPPOJIAOLJNEKNO
                                 obj = null;
                                 break;
                             }
-                            obj = this.FPANIMICIKBOPALLGOABHNIMKCMBJKJDLAGL.GetValue(obj);
+                            obj = this._yl2.GetValue(obj);
                         }
                         num++;
                     }
-                    this.DGGABCKPMNOOMLMCBLMPCNGADOHFLHOMBNBG = obj as UnityEventBase;
+                    this._yj5 = obj as UnityEventBase;
                     flag5 = true;
                 }
             }
@@ -280,29 +280,29 @@ namespace FEOCJICFPEHKGMMCGOCFIOPPOJIAOLJNEKNO
             }
             else
             {
-                this.CJMJBAKOHPGCDGOAJNIAJHBCHCKMLHKJKHNL = property.isExpanded;
-                bool flag2 = !this.CJMJBAKOHPGCDGOAJNIAJHBCHCKMLHKJKHNL;
+                this._yj6 = property.isExpanded;
+                bool flag2 = !this._yj6;
                 if (flag2)
                 {
                     position.height = 16f;
                 }
-                bool flag3 = this.CJMJBAKOHPGCDGOAJNIAJHBCHCKMLHKJKHNL || this.MHFODCCKJOIIFCPECNHEPFPENCFBMJAJMJMK == null || this.HGHCOKJCDDJMOJGJIOOIFHDGLIEIDJMLPCKB == null;
+                bool flag3 = this._yj6 || this._yj9 == null || this._yk1 == null;
                 if (flag3)
                 {
                     base.OnGUI(position, property, label);
                 }
                 else
                 {
-                    bool flag4 = this.DGGABCKPMNOOMLMCBLMPCNGADOHFLHOMBNBG != null;
+                    bool flag4 = this._yj5 != null;
                     if (flag4)
                     {
                         bool flag5 = Event.current.type == EventType.Repaint;
                         if (flag5)
                         {
-                            this.HNNPIDINLKJHIBEFFDJBLGACBGDHIPHJBHOF.Draw(position, false, false, false, false);
+                            this._yl4.Draw(position, false, false, false, false);
                         }
-                        this.MHFODCCKJOIIFCPECNHEPFPENCFBMJAJMJMK.SetValue(this, this.DGGABCKPMNOOMLMCBLMPCNGADOHFLHOMBNBG);
-                        this.HGHCOKJCDDJMOJGJIOOIFHDGLIEIDJMLPCKB.SetValue(this, label.text);
+                        this._yj9.SetValue(this, this._yj5);
+                        this._yk1.SetValue(this, label.text);
                         Rect rect = position;
                         rect.xMin += 6f;
                         rect.xMax -= 6f;
@@ -312,11 +312,11 @@ namespace FEOCJICFPEHKGMMCGOCFIOPPOJIAOLJNEKNO
                         this.DrawEventHeader(rect);
                     }
                 }
-                property.isExpanded = this.CJMJBAKOHPGCDGOAJNIAJHBCHCKMLHKJKHNL;
-                bool flag6 = this.FPANIMICIKBOPALLGOABHNIMKCMBJKJDLAGL != null;
+                property.isExpanded = this._yj6;
+                bool flag6 = this._yl2 != null;
                 if (flag6)
                 {
-                    bool flag7 = Attribute.IsDefined(this.FPANIMICIKBOPALLGOABHNIMKCMBJKJDLAGL, typeof(TooltipAttribute));
+                    bool flag7 = Attribute.IsDefined(this._yl2, typeof(TooltipAttribute));
                     if (flag7)
                     {
                         TooltipAttribute tooltipAttribute = (TooltipAttribute)Attribute.GetCustomAttribute(base.fieldInfo, typeof(TooltipAttribute));
@@ -336,23 +336,23 @@ namespace FEOCJICFPEHKGMMCGOCFIOPPOJIAOLJNEKNO
         // Token: 0x060009FF RID: 2559 RVA: 0x0010BA80 File Offset: 0x00109C80
         private void DrawEventListener(Rect rect, int index, bool isactive, bool isfocused)
         {
-            SerializedProperty arrayElementAtIndex = this.IEMMAMAHFFGLDFIOMMALNHDMLMPALJCOGOHO.GetArrayElementAtIndex(index);
+            SerializedProperty arrayElementAtIndex = this._yl1.GetArrayElementAtIndex(index);
             SerializedProperty serializedProperty = arrayElementAtIndex.FindPropertyRelative("m_MethodName");
             bool flag = !string.IsNullOrEmpty(serializedProperty.stringValue);
             MethodInfo methodInfo = null;
-            bool flag2 = flag && this.DGGABCKPMNOOMLMCBLMPCNGADOHFLHOMBNBG != null;
+            bool flag2 = flag && this._yj5 != null;
             if (flag2)
             {
                 try
                 {
-                    this.KFCOCJOLIHLABAPHNFDBLKFLMIEBCAEGAJFI.Invoke(this.DGGABCKPMNOOMLMCBLMPCNGADOHFLHOMBNBG, null);
+                    this._yk8.Invoke(this._yj5, null);
                 }
                 catch
                 {
                 }
-                this.KKPJPAPEIMLEICOAGHCMACCFLKFHNBDJPGGF = this.NKKKGIKOALPNCFHOLKJAFHGIDNFELFBPLICG.GetValue(this.DGGABCKPMNOOMLMCBLMPCNGADOHFLHOMBNBG);
-                object obj = this.MOIPDOAAAABPAACGCBMONLEHGJJCOBHOOINH.Invoke(this.KKPJPAPEIMLEICOAGHCMACCFLKFHNBDJPGGF, new object[] { index });
-                methodInfo = this.ECHKCMCGCNBGJJBHLEPCIHICPIIGDKFPBENC.Invoke(this.DGGABCKPMNOOMLMCBLMPCNGADOHFLHOMBNBG, new object[] { obj }) as MethodInfo;
+                this._yl5 = this._yk6.GetValue(this._yj5);
+                object obj = this._yk5.Invoke(this._yl5, new object[] { index });
+                methodInfo = this._yk3.Invoke(this._yj5, new object[] { obj }) as MethodInfo;
                 flag = false;
                 bool flag3 = methodInfo != null;
                 if (flag3)
@@ -373,10 +373,10 @@ namespace FEOCJICFPEHKGMMCGOCFIOPPOJIAOLJNEKNO
             rect2.xMin = rect2.xMax - 21f;
             rect2.width = 21f;
             rect.width -= 20f;
-            bool flag6 = this.MEHPOJFCHBNKIOIOMPCIKMICIBMCEEDDEAMH != null;
+            bool flag6 = this._yk9 != null;
             if (flag6)
             {
-                this.MEHPOJFCHBNKIOIOMPCIKMICIBMCEEDDEAMH.Invoke(rect, index, isactive, isfocused);
+                this._yk9.Invoke(rect, index, isactive, isfocused);
             }
             bool flag7 = isactive && isfocused && Event.current.type == EventType.KeyDown && Event.current.character == '\n';
             if (flag7)
@@ -512,67 +512,67 @@ namespace FEOCJICFPEHKGMMCGOCFIOPPOJIAOLJNEKNO
 
         // Token: 0x0400092D RID: 2349
         [NonSerialized]
-        private ReorderableList.ElementCallbackDelegate MEHPOJFCHBNKIOIOMPCIKMICIBMCEEDDEAMH;
+        private ReorderableList.ElementCallbackDelegate _yk9;
 
         // Token: 0x0400092E RID: 2350
         [NonSerialized]
-        private SerializedProperty IEMMAMAHFFGLDFIOMMALNHDMLMPALJCOGOHO;
+        private SerializedProperty _yl1;
 
         // Token: 0x0400092F RID: 2351
         [NonSerialized]
-        private UnityEventBase DGGABCKPMNOOMLMCBLMPCNGADOHFLHOMBNBG;
+        private UnityEventBase _yj5;
 
         // Token: 0x04000930 RID: 2352
-        private FieldInfo FPANIMICIKBOPALLGOABHNIMKCMBJKJDLAGL;
+        private FieldInfo _yl2;
 
         // Token: 0x04000931 RID: 2353
         [NonSerialized]
-        private object KKPJPAPEIMLEICOAGHCMACCFLKFHNBDJPGGF;
+        private object _yl5;
 
         // Token: 0x04000932 RID: 2354
-        private Type LEJDNGKEKFIJOGNPCPGJCIKNLPDGMPHJFAOP;
+        private Type _yk2;
 
         // Token: 0x04000933 RID: 2355
-        private Type GNODCIGDEILAGFDDMMNLOOGBJAG_AWMFGGDE;
+        private Type _yk4;
 
         // Token: 0x04000934 RID: 2356
-        private FieldInfo NKKKGIKOALPNCFHOLKJAFHGIDNFELFBPLICG;
+        private FieldInfo _yk6;
 
         // Token: 0x04000935 RID: 2357
-        private FieldInfo NPBBCKMKLKPJAIPBPLKAJFPDFEKLEJFOCEHF;
+        private FieldInfo _yk7;
 
         // Token: 0x04000936 RID: 2358
-        private MethodInfo ECHKCMCGCNBGJJBHLEPCIHICPIIGDKFPBENC;
+        private MethodInfo _yk3;
 
         // Token: 0x04000937 RID: 2359
-        private MethodInfo MOIPDOAAAABPAACGCBMONLEHGJJCOBHOOINH;
+        private MethodInfo _yk5;
 
         // Token: 0x04000938 RID: 2360
-        private MethodInfo HCOLMCFNGFHPBHCNLDDOBKAKNCFAHBMJLEFP;
+        private MethodInfo _yj7;
 
         // Token: 0x04000939 RID: 2361
-        private FieldInfo JCDCMEMFNHOAHJHIGEOAINCAEPKIMBFEBGLL;
+        private FieldInfo _yj8;
 
         // Token: 0x0400093A RID: 2362
-        private MethodInfo KFCOCJOLIHLABAPHNFDBLKFLMIEBCAEGAJFI;
+        private MethodInfo _yk8;
 
         // Token: 0x0400093B RID: 2363
-        private FieldInfo MHFODCCKJOIIFCPECNHEPFPENCFBMJAJMJMK;
+        private FieldInfo _yj9;
 
         // Token: 0x0400093C RID: 2364
-        private FieldInfo HGHCOKJCDDJMOJGJIOOIFHDGLIEIDJMLPCKB;
+        private FieldInfo _yk1;
 
         // Token: 0x0400093D RID: 2365
-        private readonly char[] GFKIBCELJHDFBIJCGEDLLBHFJMBHAGOGCDDA = new char[] { '.', '[', ']' };
+        private readonly char[] _yl3 = new char[] { '.', '[', ']' };
 
         // Token: 0x0400093E RID: 2366
         private static readonly GUIContent _CAA = new GUIContent();
 
         // Token: 0x0400093F RID: 2367
-        private readonly GUIStyle HNNPIDINLKJHIBEFFDJBLGACBGDHIPHJBHOF = "RL Header";
+        private readonly GUIStyle _yl4 = "RL Header";
 
         // Token: 0x04000940 RID: 2368
         [NonSerialized]
-        private bool CJMJBAKOHPGCDGOAJNIAJHBCHCKMLHKJKHNL;
+        private bool _yj6;
     }
 }

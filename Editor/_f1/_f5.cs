@@ -24,8 +24,8 @@ namespace ODGL
         // Token: 0x06000958 RID: 2392 RVA: 0x000FFBF8 File Offset: 0x000FDDF8
         private _f5()
         {
-            this.OHILONMHJPJPKDELBDDOJBLOHKBEFAPEDBJH = new Dictionary<int, SettingChangedHandler>();
-            this.OONGLEBGBAMJPLEDLNLDJOCDGOIIBKJLOKPO = new Dictionary<int, object>();
+            this._yq9 = new Dictionary<int, SettingChangedHandler>();
+            this._yr1 = new Dictionary<int, object>();
             List<_fb3> list = new List<_fb3>();
             string text = (string)this.GetEditorSetting(HierarchySetting.CustomTagIcon, "");
             string[] array = text.Split(new char[] { ';' });
@@ -90,26 +90,26 @@ namespace ODGL
         // Token: 0x06000959 RID: 2393 RVA: 0x000FFF10 File Offset: 0x000FE110
         public void OnDestroy()
         {
-            this.OONGLEBGBAMJPLEDLNLDJOCDGOIIBKJLOKPO = null;
-            this.OHILONMHJPJPKDELBDDOJBLOHKBEFAPEDBJH = null;
+            this._yr1 = null;
+            this._yq9 = null;
             _f5._AA = null;
         }
 
         // Token: 0x0600095A RID: 2394 RVA: 0x000FFF28 File Offset: 0x000FE128
         public T Get<T>(HierarchySetting setting)
         {
-            return (T)((object)this.OONGLEBGBAMJPLEDLNLDJOCDGOIIBKJLOKPO[(int)setting]);
+            return (T)((object)this._yr1[(int)setting]);
         }
 
         // Token: 0x0600095B RID: 2395 RVA: 0x000FFF4C File Offset: 0x000FE14C
         public void Set<T>(HierarchySetting setting, T value)
         {
-            this.OONGLEBGBAMJPLEDLNLDJOCDGOIIBKJLOKPO[(int)setting] = value;
+            this._yr1[(int)setting] = value;
             this.SetEditorSetting(setting, value);
-            bool flag = this.OHILONMHJPJPKDELBDDOJBLOHKBEFAPEDBJH.ContainsKey((int)setting) && this.OHILONMHJPJPKDELBDDOJBLOHKBEFAPEDBJH[(int)setting] != null;
+            bool flag = this._yq9.ContainsKey((int)setting) && this._yq9[(int)setting] != null;
             if (flag)
             {
-                this.OHILONMHJPJPKDELBDDOJBLOHKBEFAPEDBJH[(int)setting]();
+                this._yq9[(int)setting]();
             }
             EditorApplication.RepaintHierarchyWindow();
         }
@@ -130,37 +130,37 @@ namespace ODGL
                 });
             }
             this.SetEditorSetting(setting, text);
-            this.OONGLEBGBAMJPLEDLNLDJOCDGOIIBKJLOKPO[(int)setting] = tagTextureList;
+            this._yr1[(int)setting] = tagTextureList;
         }
 
         // Token: 0x0600095D RID: 2397 RVA: 0x00100044 File Offset: 0x000FE244
         public void AddEventListener(HierarchySetting setting, SettingChangedHandler handler)
         {
-            bool flag = !this.OHILONMHJPJPKDELBDDOJBLOHKBEFAPEDBJH.ContainsKey((int)setting);
+            bool flag = !this._yq9.ContainsKey((int)setting);
             if (flag)
             {
-                this.OHILONMHJPJPKDELBDDOJBLOHKBEFAPEDBJH.Add((int)setting, null);
+                this._yq9.Add((int)setting, null);
             }
-            bool flag2 = this.OHILONMHJPJPKDELBDDOJBLOHKBEFAPEDBJH[(int)setting] == null;
+            bool flag2 = this._yq9[(int)setting] == null;
             if (flag2)
             {
-                this.OHILONMHJPJPKDELBDDOJBLOHKBEFAPEDBJH[(int)setting] = handler;
+                this._yq9[(int)setting] = handler;
             }
             else
             {
-                Dictionary<int, SettingChangedHandler> ohilonmhjpjpkdelbddojblohkbefapedbjh = this.OHILONMHJPJPKDELBDDOJBLOHKBEFAPEDBJH;
-                ohilonmhjpjpkdelbddojblohkbefapedbjh[(int)setting] = (SettingChangedHandler)Delegate.Combine(ohilonmhjpjpkdelbddojblohkbefapedbjh[(int)setting], handler);
+                Dictionary<int, SettingChangedHandler> _yr2 = this._yq9;
+                _yr2[(int)setting] = (SettingChangedHandler)Delegate.Combine(_yr2[(int)setting], handler);
             }
         }
 
         // Token: 0x0600095E RID: 2398 RVA: 0x001000C0 File Offset: 0x000FE2C0
         public void removeEventListener(HierarchySetting setting, SettingChangedHandler handler)
         {
-            bool flag = this.OHILONMHJPJPKDELBDDOJBLOHKBEFAPEDBJH.ContainsKey((int)setting) && this.OHILONMHJPJPKDELBDDOJBLOHKBEFAPEDBJH[(int)setting] != null;
+            bool flag = this._yq9.ContainsKey((int)setting) && this._yq9[(int)setting] != null;
             if (flag)
             {
-                Dictionary<int, SettingChangedHandler> ohilonmhjpjpkdelbddojblohkbefapedbjh = this.OHILONMHJPJPKDELBDDOJBLOHKBEFAPEDBJH;
-                ohilonmhjpjpkdelbddojblohkbefapedbjh[(int)setting] = (SettingChangedHandler)Delegate.Remove(ohilonmhjpjpkdelbddojblohkbefapedbjh[(int)setting], handler);
+                Dictionary<int, SettingChangedHandler> _yr2 = this._yq9;
+                _yr2[(int)setting] = (SettingChangedHandler)Delegate.Remove(_yr2[(int)setting], handler);
             }
         }
 
@@ -171,7 +171,7 @@ namespace ODGL
             bool flag = editorSetting != defaultValue && editorSetting.GetType() == defaultValue.GetType();
             if (flag)
             {
-                this.OONGLEBGBAMJPLEDLNLDJOCDGOIIBKJLOKPO[(int)setting] = editorSetting;
+                this._yr1[(int)setting] = editorSetting;
             }
             else
             {
@@ -254,10 +254,10 @@ namespace ODGL
         }
 
         // Token: 0x04000800 RID: 2048
-        private Dictionary<int, object> OONGLEBGBAMJPLEDLNLDJOCDGOIIBKJLOKPO;
+        private Dictionary<int, object> _yr1;
 
         // Token: 0x04000801 RID: 2049
-        private Dictionary<int, SettingChangedHandler> OHILONMHJPJPKDELBDDOJBLOHKBEFAPEDBJH;
+        private Dictionary<int, SettingChangedHandler> _yq9;
 
         // Token: 0x04000802 RID: 2050
         private static _f5 _AA;

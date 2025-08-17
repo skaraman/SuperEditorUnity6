@@ -22,37 +22,37 @@ namespace AHO
         }
 
         // Token: 0x060004B8 RID: 1208 RVA: 0x000CE6A8 File Offset: 0x000CC8A8
-        internal string[] KBDHCOIANEGBFJDPKJDCGEFIEIADIMFJLMPE()
+        internal string[] _ya3()
         {
-            bool flag = this.IPIBJLDELAOIIOOAKPNMONGKKKKNFOEMLCMD == null;
+            bool flag = this._ya4 == null;
             if (flag)
             {
                 bool flag2 = this._AN != null;
                 if (flag2)
                 {
                     AssemblyName[] referencedAssemblies = this._AN.GetReferencedAssemblies();
-                    this.IPIBJLDELAOIIOOAKPNMONGKKKKNFOEMLCMD = new string[referencedAssemblies.Length];
+                    this._ya4 = new string[referencedAssemblies.Length];
                     int num = referencedAssemblies.Length;
                     while (num-- > 0)
                     {
-                        this.IPIBJLDELAOIIOOAKPNMONGKKKKNFOEMLCMD[num] = referencedAssemblies[num].Name;
+                        this._ya4[num] = referencedAssemblies[num].Name;
                     }
                 }
             }
-            return this.IPIBJLDELAOIIOOAKPNMONGKKKKNFOEMLCMD;
+            return this._ya4;
         }
 
         // Token: 0x060004B9 RID: 1209 RVA: 0x000CE724 File Offset: 0x000CC924
         public _bj5[] _CGL()
         {
-            bool flag = this.FBDPOLPFENEOLPJAIAOLLFPPDBDGGJAPEDCL == null;
+            bool flag = this._ya5 == null;
             if (flag)
             {
                 HashSet<_bj5> hashSet = new HashSet<_bj5>();
                 bool flag2 = this._AN != null;
                 if (flag2)
                 {
-                    foreach (string text in this.KBDHCOIANEGBFJDPKJDCGEFIEIADIMFJLMPE())
+                    foreach (string text in this._ya3())
                     {
                         _bj5 _AOS = _bj5.FromName(text);
                         bool flag3 = _AOS != null;
@@ -62,7 +62,7 @@ namespace AHO
                         }
                     }
                 }
-                string text2 = _bj5.AIHMBPHEBJJOIOJHJLAKHCLOPLCHGKELDCBB[(int)this.BONGPABCEFDMENFDOAGEDKEJJHNFJEILMCJN];
+                string text2 = _bj5._ya6[(int)this._ya7];
                 bool flag4 = text2 == null && this._AN != null;
                 if (flag4)
                 {
@@ -71,7 +71,7 @@ namespace AHO
                 bool flag5 = text2 != null;
                 if (flag5)
                 {
-                    string[] referencedAssembliesFor = _bj5.DFJANIPKIHDLIPCJMJBAILHMKBNDMPBAACAH.GetReferencedAssembliesFor(text2);
+                    string[] referencedAssembliesFor = _bj5._ya8.GetReferencedAssembliesFor(text2);
                     bool flag6 = referencedAssembliesFor != null;
                     if (flag6)
                     {
@@ -102,21 +102,21 @@ namespace AHO
                 hashSet.Add(_bj5.FromName("System.XML"));
                 hashSet.Add(_bj5.FromName("System.Xml.Linq"));
                 hashSet.Remove(null);
-                this.FBDPOLPFENEOLPJAIAOLLFPPDBDGGJAPEDCL = new _bj5[hashSet.Count];
-                hashSet.CopyTo(this.FBDPOLPFENEOLPJAIAOLLFPPDBDGGJAPEDCL);
+                this._ya5 = new _bj5[hashSet.Count];
+                hashSet.CopyTo(this._ya5);
             }
-            return this.FBDPOLPFENEOLPJAIAOLLFPPDBDGGJAPEDCL;
+            return this._ya5;
         }
 
         // Token: 0x060004BA RID: 1210 RVA: 0x000CE8FC File Offset: 0x000CCAFC
         public static _bj5 FromAssembly(System.Reflection.Assembly assembly)
         {
             _bj5 _AOS = null;
-            bool flag = !_bj5.DIBFNKBPDMFNEMNDIPLBONFLMFAKKCEPLILA.TryGetValue(assembly, out _AOS);
+            bool flag = !_bj5._ya9.TryGetValue(assembly, out _AOS);
             if (flag)
             {
                 _AOS = new _bj5(assembly);
-                _bj5.DIBFNKBPDMFNEMNDIPLBONFLMFAKKCEPLILA[assembly] = _AOS;
+                _bj5._ya9[assembly] = _AOS;
             }
             return _AOS;
         }
@@ -124,23 +124,23 @@ namespace AHO
         // Token: 0x060004BB RID: 1211 RVA: 0x000CE93C File Offset: 0x000CCB3C
         public static bool IsScriptAssemblyName(string name)
         {
-            return Array.IndexOf<string>(_bj5.AIHMBPHEBJJOIOJHJLAKHCLOPLCHGKELDCBB, name.ToLowerInvariant()) >= 0;
+            return Array.IndexOf<string>(_bj5._ya6, name.ToLowerInvariant()) >= 0;
         }
 
         // Token: 0x060004BC RID: 1212 RVA: 0x000CE964 File Offset: 0x000CCB64
-        private static List<System.Reflection.Assembly> INDCDHPALHNEMDLDBPLEMKPEACJDGFKKACHA()
+        private static List<System.Reflection.Assembly> _yb1()
         {
-            bool flag = _bj5.IDKNPDILLAILDKAJDMDDGHJLFOGFCIHKFDND != null;
+            bool flag = _bj5._yb2 != null;
             List<System.Reflection.Assembly> list;
             if (flag)
             {
-                list = _bj5.IDKNPDILLAILDKAJDMDDGHJLFOGFCIHKFDND;
+                list = _bj5._yb2;
             }
             else
             {
-                _bj5.IDKNPDILLAILDKAJDMDDGHJLFOGFCIHKFDND = new List<System.Reflection.Assembly>(AppDomain.CurrentDomain.GetAssemblies());
+                _bj5._yb2 = new List<System.Reflection.Assembly>(AppDomain.CurrentDomain.GetAssemblies());
                 AppDomain.CurrentDomain.AssemblyLoad += _bj5.AssemblyLoadEventHandler;
-                list = _bj5.IDKNPDILLAILDKAJDMDDGHJLFOGFCIHKFDND;
+                list = _bj5._yb2;
             }
             return list;
         }
@@ -148,17 +148,17 @@ namespace AHO
         // Token: 0x060004BD RID: 1213 RVA: 0x000CE9BA File Offset: 0x000CCBBA
         private static void AssemblyLoadEventHandler(object sender, AssemblyLoadEventArgs args)
         {
-            _bj5.IDKNPDILLAILDKAJDMDDGHJLFOGFCIHKFDND.Add(args.LoadedAssembly);
+            _bj5._yb2.Add(args.LoadedAssembly);
         }
 
         // Token: 0x060004BE RID: 1214 RVA: 0x000CE9D0 File Offset: 0x000CCBD0
         private static _bj5 FromPath(string assemblyPath)
         {
             string fileNameWithoutExtension = Path.GetFileNameWithoutExtension(assemblyPath);
-            int count = _bj5.INDCDHPALHNEMDLDBPLEMKPEACJDGFKKACHA().Count;
+            int count = _bj5._yb1().Count;
             while (count-- > 0)
             {
-                System.Reflection.Assembly assembly = _bj5.INDCDHPALHNEMDLDBPLEMKPEACJDGFKKACHA()[count];
+                System.Reflection.Assembly assembly = _bj5._yb1()[count];
                 bool flag = assembly is System.Reflection.Emit.AssemblyBuilder;
                 if (!flag)
                 {
@@ -170,7 +170,7 @@ namespace AHO
                 }
             }
             _bj5 _AOS = null;
-            bool flag3 = !_bj5.PJKEBCBBMNJPCABBHPIKIMEJMACMLDFJBDNH.TryGetValue(assemblyPath, out _AOS);
+            bool flag3 = !_bj5._yb3.TryGetValue(assemblyPath, out _AOS);
             if (flag3)
             {
                 try
@@ -185,7 +185,7 @@ namespace AHO
                     bool flag5 = _AOS != null;
                     if (flag5)
                     {
-                        _bj5.PJKEBCBBMNJPCABBHPIKIMEJMACMLDFJBDNH[assemblyPath] = _AOS;
+                        _bj5._yb3[assemblyPath] = _AOS;
                     }
                 }
                 catch (Exception ex)
@@ -199,10 +199,10 @@ namespace AHO
         // Token: 0x060004BF RID: 1215 RVA: 0x000CEAC0 File Offset: 0x000CCCC0
         private static _bj5 FromName(string assemblyName)
         {
-            int count = _bj5.INDCDHPALHNEMDLDBPLEMKPEACJDGFKKACHA().Count;
+            int count = _bj5._yb1().Count;
             while (count-- > 0)
             {
-                System.Reflection.Assembly assembly = _bj5.INDCDHPALHNEMDLDBPLEMKPEACJDGFKKACHA()[count];
+                System.Reflection.Assembly assembly = _bj5._yb1()[count];
                 bool flag = assembly is System.Reflection.Emit.AssemblyBuilder;
                 if (!flag)
                 {
@@ -227,13 +227,13 @@ namespace AHO
             }
             else
             {
-                bool flag2 = _bj5.HPEELBCJDACILOAICOJANFMEPEPPLAJLOOOO[(int)assemblyId] == null;
+                bool flag2 = _bj5._yb4[(int)assemblyId] == null;
                 if (flag2)
                 {
-                    string text = _bj5.AIHMBPHEBJJOIOJHJLAKHCLOPLCHGKELDCBB[(int)assemblyId];
-                    _bj5.HPEELBCJDACILOAICOJANFMEPEPPLAJLOOOO[(int)assemblyId] = _bj5.FromName(text) ?? new _bj5(assemblyId);
+                    string text = _bj5._ya6[(int)assemblyId];
+                    _bj5._yb4[(int)assemblyId] = _bj5.FromName(text) ?? new _bj5(assemblyId);
                 }
-                _AOS = _bj5.HPEELBCJDACILOAICOJANFMEPEPPLAJLOOOO[(int)assemblyId];
+                _AOS = _bj5._yb4[(int)assemblyId];
             }
             return _AOS;
         }
@@ -253,10 +253,10 @@ namespace AHO
             bool flag3 = text == ".boo";
             bool flag4 = text == ".dll";
             bool flag5 = !flag && !flag2 && !flag3 && !flag4;
-            _bj5._AZG mlejggcpjlinlonjmjngdnmfonagfffjpolb;
+            _bj5._AZG _yb5;
             if (flag5)
             {
-                mlejggcpjlinlonjmjngdnmfonagfffjpolb = (_bj5._AZG)0;
+                _yb5 = (_bj5._AZG)0;
             }
             else
             {
@@ -264,7 +264,7 @@ namespace AHO
                 bool flag6 = _bj5.IsIgnoredScript(text2);
                 if (flag6)
                 {
-                    mlejggcpjlinlonjmjngdnmfonagfffjpolb = (_bj5._AZG)0;
+                    _yb5 = (_bj5._AZG)0;
                 }
                 else
                 {
@@ -283,35 +283,35 @@ namespace AHO
                         flag12 = text2.Contains("/editor/");
                     }
                     bool flag13 = flag10 && flag12;
-                    _bj5._AZG mlejggcpjlinlonjmjngdnmfonagfffjpolb2;
+                    _bj5._AZG _yb6;
                     if (flag13)
                     {
-                        mlejggcpjlinlonjmjngdnmfonagfffjpolb2 = (flag ? ((_bj5._AZG)6) : (flag3 ? ((_bj5._AZG)8) : (flag2 ? ((_bj5._AZG)7) : ((_bj5._AZG)5))));
+                        _yb6 = (flag ? ((_bj5._AZG)6) : (flag3 ? ((_bj5._AZG)8) : (flag2 ? ((_bj5._AZG)7) : ((_bj5._AZG)5))));
                     }
                     else
                     {
                         bool flag14 = flag12;
                         if (flag14)
                         {
-                            mlejggcpjlinlonjmjngdnmfonagfffjpolb2 = (flag ? ((_bj5._AZG)14) : (flag3 ? ((_bj5._AZG)16) : (flag2 ? ((_bj5._AZG)15) : ((_bj5._AZG)13))));
+                            _yb6 = (flag ? ((_bj5._AZG)14) : (flag3 ? ((_bj5._AZG)16) : (flag2 ? ((_bj5._AZG)15) : ((_bj5._AZG)13))));
                         }
                         else
                         {
                             bool flag15 = flag10;
                             if (flag15)
                             {
-                                mlejggcpjlinlonjmjngdnmfonagfffjpolb2 = (flag ? ((_bj5._AZG)2) : (flag3 ? ((_bj5._AZG)4) : (flag2 ? ((_bj5._AZG)3) : ((_bj5._AZG)1))));
+                                _yb6 = (flag ? ((_bj5._AZG)2) : (flag3 ? ((_bj5._AZG)4) : (flag2 ? ((_bj5._AZG)3) : ((_bj5._AZG)1))));
                             }
                             else
                             {
-                                mlejggcpjlinlonjmjngdnmfonagfffjpolb2 = (flag ? ((_bj5._AZG)10) : (flag3 ? ((_bj5._AZG)12) : (flag2 ? ((_bj5._AZG)11) : ((_bj5._AZG)9))));
+                                _yb6 = (flag ? ((_bj5._AZG)10) : (flag3 ? ((_bj5._AZG)12) : (flag2 ? ((_bj5._AZG)11) : ((_bj5._AZG)9))));
                             }
                         }
                     }
-                    mlejggcpjlinlonjmjngdnmfonagfffjpolb = mlejggcpjlinlonjmjngdnmfonagfffjpolb2;
+                    _yb5 = _yb6;
                 }
             }
-            return mlejggcpjlinlonjmjngdnmfonagfffjpolb;
+            return _yb5;
         }
 
         // Token: 0x060004C3 RID: 1219 RVA: 0x000CED94 File Offset: 0x000CCF94
@@ -336,8 +336,8 @@ namespace AHO
         // Token: 0x060004C4 RID: 1220 RVA: 0x000CEDE4 File Offset: 0x000CCFE4
         private _bj5(_bj5._AZG id)
         {
-            this.BONGPABCEFDMENFDOAGEDKEJJHNFJEILMCJN = id;
-            this.AHMPIKDFEFMCLFLJOEKHGBJIMNOBBAPNIJHE = id != (_bj5._AZG)0 && id != (_bj5._AZG)9 && id != (_bj5._AZG)1 && id != (_bj5._AZG)13 && id != (_bj5._AZG)5;
+            this._ya7 = id;
+            this._yb7 = id != (_bj5._AZG)0 && id != (_bj5._AZG)9 && id != (_bj5._AZG)1 && id != (_bj5._AZG)13 && id != (_bj5._AZG)5;
             this._CHJ = id == (_bj5._AZG)10 || id == (_bj5._AZG)2 || id == (_bj5._AZG)14 || id == (_bj5._AZG)6;
         }
 
@@ -377,15 +377,15 @@ namespace AHO
                 }
                 else
                 {
-                    bool flag3 = _bj5.GHGINOAGGIFEFJMGDMAMNONFFDIOJLJAMIPP == null;
+                    bool flag3 = _bj5._yb8 == null;
                     if (flag3)
                     {
-                        _bj5.GHGINOAGGIFEFJMGDMAMNONFFDIOJLJAMIPP = CompilationPipeline.GetAssemblies();
+                        _bj5._yb8 = CompilationPipeline.GetAssemblies();
                     }
-                    int num = _bj5.GHGINOAGGIFEFJMGDMAMNONFFDIOJLJAMIPP.Length;
+                    int num = _bj5._yb8.Length;
                     while (num-- > 0)
                     {
-                        UnityEditor.Compilation.Assembly assembly3 = _bj5.GHGINOAGGIFEFJMGDMAMNONFFDIOJLJAMIPP[num];
+                        UnityEditor.Compilation.Assembly assembly3 = _bj5._yb8[num];
                         bool flag4 = string.Compare(Path.GetFullPath(assembly3.outputPath), assembly.Location, StringComparison.InvariantCultureIgnoreCase) == 0;
                         if (flag4)
                         {
@@ -402,7 +402,7 @@ namespace AHO
         public static _bj5[] GetAllCSharpAssemblyDefinitions()
         {
             List<_bj5> list = new List<_bj5>();
-            foreach (System.Reflection.Assembly assembly in _bj5.INDCDHPALHNEMDLDBPLEMKPEACJDGFKKACHA())
+            foreach (System.Reflection.Assembly assembly in _bj5._yb1())
             {
                 bool flag = !_bj5.IsScriptAssembly(assembly);
                 if (!flag)
@@ -422,8 +422,8 @@ namespace AHO
         private _bj5(System.Reflection.Assembly assembly)
         {
             this._AN = assembly;
-            this.CNLPKBIEMCAJJODDNIDIOECPEGCPLFIFCECM = _bj5.FindScriptAssembly(assembly);
-            this.AHMPIKDFEFMCLFLJOEKHGBJIMNOBBAPNIJHE = this.CNLPKBIEMCAJJODDNIDIOECPEGCPLFIFCECM != null;
+            this._yb9 = _bj5.FindScriptAssembly(assembly);
+            this._yb7 = this._yb9 != null;
             string text = assembly.GetName().Name.ToLower();
             string text2 = text;
             uint num = Helper.ComputeStringHash(text2);
@@ -439,7 +439,7 @@ namespace AHO
                             {
                                 if (text2 == "assembly-boo-editor")
                                 {
-                                    this.BONGPABCEFDMENFDOAGEDKEJJHNFJEILMCJN = (_bj5._AZG)16;
+                                    this._ya7 = (_bj5._AZG)16;
                                     this._CHJ = false;
                                     goto IL_02DF;
                                 }
@@ -447,14 +447,14 @@ namespace AHO
                         }
                         else if (text2 == "assembly-boo-firstpass")
                         {
-                            this.BONGPABCEFDMENFDOAGEDKEJJHNFJEILMCJN = (_bj5._AZG)4;
+                            this._ya7 = (_bj5._AZG)4;
                             this._CHJ = false;
                             goto IL_02DF;
                         }
                     }
                     else if (text2 == "assembly-boo-editor-firstpass")
                     {
-                        this.BONGPABCEFDMENFDOAGEDKEJJHNFJEILMCJN = (_bj5._AZG)8;
+                        this._ya7 = (_bj5._AZG)8;
                         this._CHJ = false;
                         goto IL_02DF;
                     }
@@ -467,7 +467,7 @@ namespace AHO
                         {
                             if (text2 == "assembly-csharp-editor-firstpass")
                             {
-                                this.BONGPABCEFDMENFDOAGEDKEJJHNFJEILMCJN = (_bj5._AZG)6;
+                                this._ya7 = (_bj5._AZG)6;
                                 this._CHJ = true;
                                 goto IL_02DF;
                             }
@@ -475,14 +475,14 @@ namespace AHO
                     }
                     else if (text2 == "assembly-unityscript-editor-firstpass")
                     {
-                        this.BONGPABCEFDMENFDOAGEDKEJJHNFJEILMCJN = (_bj5._AZG)7;
+                        this._ya7 = (_bj5._AZG)7;
                         this._CHJ = false;
                         goto IL_02DF;
                     }
                 }
                 else if (text2 == "assembly-unityscript-editor")
                 {
-                    this.BONGPABCEFDMENFDOAGEDKEJJHNFJEILMCJN = (_bj5._AZG)15;
+                    this._ya7 = (_bj5._AZG)15;
                     this._CHJ = false;
                     goto IL_02DF;
                 }
@@ -497,7 +497,7 @@ namespace AHO
                         {
                             if (text2 == "assembly-boo")
                             {
-                                this.BONGPABCEFDMENFDOAGEDKEJJHNFJEILMCJN = (_bj5._AZG)12;
+                                this._ya7 = (_bj5._AZG)12;
                                 this._CHJ = false;
                                 goto IL_02DF;
                             }
@@ -505,14 +505,14 @@ namespace AHO
                     }
                     else if (text2 == "assembly-csharp")
                     {
-                        this.BONGPABCEFDMENFDOAGEDKEJJHNFJEILMCJN = (_bj5._AZG)10;
+                        this._ya7 = (_bj5._AZG)10;
                         this._CHJ = true;
                         goto IL_02DF;
                     }
                 }
                 else if (text2 == "assembly-unityscript-firstpass")
                 {
-                    this.BONGPABCEFDMENFDOAGEDKEJJHNFJEILMCJN = (_bj5._AZG)3;
+                    this._ya7 = (_bj5._AZG)3;
                     this._CHJ = false;
                     goto IL_02DF;
                 }
@@ -525,7 +525,7 @@ namespace AHO
                     {
                         if (text2 == "assembly-csharp-editor")
                         {
-                            this.BONGPABCEFDMENFDOAGEDKEJJHNFJEILMCJN = (_bj5._AZG)14;
+                            this._ya7 = (_bj5._AZG)14;
                             this._CHJ = true;
                             goto IL_02DF;
                         }
@@ -533,21 +533,21 @@ namespace AHO
                 }
                 else if (text2 == "assembly-csharp-firstpass")
                 {
-                    this.BONGPABCEFDMENFDOAGEDKEJJHNFJEILMCJN = (_bj5._AZG)2;
+                    this._ya7 = (_bj5._AZG)2;
                     this._CHJ = true;
                     goto IL_02DF;
                 }
             }
             else if (text2 == "assembly-unityscript")
             {
-                this.BONGPABCEFDMENFDOAGEDKEJJHNFJEILMCJN = (_bj5._AZG)11;
+                this._ya7 = (_bj5._AZG)11;
                 this._CHJ = false;
                 goto IL_02DF;
             }
-            this.BONGPABCEFDMENFDOAGEDKEJJHNFJEILMCJN = (_bj5._AZG)0;
+            this._ya7 = (_bj5._AZG)0;
             this._CHJ = false;
         IL_02DF:
-            bool _AWT = this.AHMPIKDFEFMCLFLJOEKHGBJIMNOBBAPNIJHE;
+            bool _AWT = this._yb7;
             if (_AWT)
             {
                 this._CHJ = true;
@@ -568,7 +568,7 @@ namespace AHO
                 }
                 else
                 {
-                    text = _bj5.AIHMBPHEBJJOIOJHJLAKHCLOPLCHGKELDCBB[(int)this.BONGPABCEFDMENFDOAGEDKEJJHNFJEILMCJN] ?? "<Unknown-Assembly>";
+                    text = _bj5._ya6[(int)this._ya7] ?? "<Unknown-Assembly>";
                 }
                 return text;
             }
@@ -600,13 +600,13 @@ namespace AHO
                 }
                 else
                 {
-                    bool flag3 = _AOS.EKNILLOGEAIKLJHEMKKAGIBGBNKMFENLCAFB == null;
+                    bool flag3 = _AOS._yc1 == null;
                     if (flag3)
                     {
-                        _AOS.EKNILLOGEAIKLJHEMKKAGIBGBNKMFENLCAFB = new Dictionary<string, _be7>();
+                        _AOS._yc1 = new Dictionary<string, _be7>();
                     }
                     _be7 _CHH2 = null;
-                    bool flag4 = !_AOS.EKNILLOGEAIKLJHEMKKAGIBGBNKMFENLCAFB.TryGetValue(assetPath, out _CHH2) || forceCreateNew;
+                    bool flag4 = !_AOS._yc1.TryGetValue(assetPath, out _CHH2) || forceCreateNew;
                     if (flag4)
                     {
                         if (forceCreateNew)
@@ -615,11 +615,11 @@ namespace AHO
                             if (flag5)
                             {
                                 bool flag6 = false;
-                                List<FKI> cehjafhelfgggomkeiklndkdbnngpbkkiaed = _CHH2._APM;
-                                int count = cehjafhelfgggomkeiklndkdbnngpbkkiaed.Count;
+                                List<FKI> _yc3 = _CHH2._APM;
+                                int count = _yc3.Count;
                                 while (count-- > 0)
                                 {
-                                    FKI _AFF = cehjafhelfgggomkeiklndkdbnngpbkkiaed[count];
+                                    FKI _AFF = _yc3[count];
                                     _CHH2.RemoveDeclaration(_AFF);
                                     flag6 = true;
                                 }
@@ -634,14 +634,14 @@ namespace AHO
                                     }
                                 }
                             }
-                            _AOS.EKNILLOGEAIKLJHEMKKAGIBGBNKMFENLCAFB.Remove(assetPath);
+                            _AOS._yc1.Remove(assetPath);
                         }
                         _CHH2 = new _be7
                         {
                             _AN = _AOS,
                             _AWJ = assetPath
                         };
-                        _AOS.EKNILLOGEAIKLJHEMKKAGIBGBNKMFENLCAFB[assetPath] = _CHH2;
+                        _AOS._yc1[assetPath] = _CHH2;
                         _CHH2.EFI = new _bf8
                         {
                             _AT = SymbolKind.Namespace,
@@ -658,19 +658,19 @@ namespace AHO
         // Token: 0x060004CC RID: 1228 RVA: 0x000CF494 File Offset: 0x000CD694
         public _bn1 _AWL()
         {
-            return this.IEHBPMHEDHEDEIDGKCOEMLAOBNPFFFKFGMBN ?? this.InitializeGlobalNamespace();
+            return this._yc4 ?? this.InitializeGlobalNamespace();
         }
 
         // Token: 0x060004CD RID: 1229 RVA: 0x000CF4B6 File Offset: 0x000CD6B6
-        public void EGLEKCJLEMJFKIGKJHCKOHHKGFEEHCJFHJDI(_bn1 value)
+        public void _yc5(_bn1 value)
         {
-            this.IEHBPMHEDHEDEIDGKCOEMLAOBNPFFFKFGMBN = value;
+            this._yc4 = value;
         }
 
         // Token: 0x060004CE RID: 1230 RVA: 0x000CF4C0 File Offset: 0x000CD6C0
         private _bn1 InitializeGlobalNamespace()
         {
-            this.IEHBPMHEDHEDEIDGKCOEMLAOBNPFFFKFGMBN = new _bn1
+            this._yc4 = new _bn1
             {
                 _AW = "",
                 _AT = SymbolKind.Namespace,
@@ -682,11 +682,11 @@ namespace AHO
                 Type[] array = null;
                 try
                 {
-                    array = (this.AHMPIKDFEFMCLFLJOEKHGBJIMNOBBAPNIJHE ? this._AN.GetTypes() : this._AN.GetExportedTypes());
+                    array = (this._yb7 ? this._AN.GetTypes() : this._AN.GetExportedTypes());
                 }
                 catch
                 {
-                    return this.IEHBPMHEDHEDEIDGKCOEMLAOBNPFFFKFGMBN;
+                    return this._yc4;
                 }
                 Dictionary<string, _bn1> dictionary = new Dictionary<string, _bn1>();
                 foreach (Type type in array)
@@ -698,7 +698,7 @@ namespace AHO
                         bool flag2 = _bh4._BEJ.TryGetValue(type, out _AFK);
                         if (!flag2)
                         {
-                            _bh4 _AAH = this.IEHBPMHEDHEDEIDGKCOEMLAOBNPFFFKFGMBN;
+                            _bh4 _AAH = this._yc4;
                             string @namespace = type.Namespace;
                             bool flag3 = !string.IsNullOrEmpty(@namespace);
                             if (flag3)
@@ -774,7 +774,7 @@ namespace AHO
                 Type type4 = Type.GetType("System.Runtime.CompilerServices.INotifyCompletion,mscorlib");
                 _bh4._BFW = _bj5.DefineBuiltInType(type4);
             }
-            return this.IEHBPMHEDHEDEIDGKCOEMLAOBNPFFFKFGMBN;
+            return this._yc4;
         }
 
         // Token: 0x060004CF RID: 1231 RVA: 0x000CF9CC File Offset: 0x000CDBCC
@@ -907,8 +907,8 @@ namespace AHO
         // Token: 0x060004D4 RID: 1236 RVA: 0x000CFC6C File Offset: 0x000CDE6C
         public void GetMembersCompletionDataFromReferencedAssemblies(Dictionary<string, _bh4> data, _bn1 namespaceDefinition, _be4 context)
         {
-            bool dpffejopbcppmnlkdimelbaiddffeieonpic = _bj5.DPFFEJOPBCPPMNLKDIMELBAIDDFFEIEONPIC;
-            if (!dpffejopbcppmnlkdimelbaiddffeieonpic)
+            bool _yc6 = _bj5._yc7;
+            if (!_yc6)
             {
                 foreach (_bj5 _AOS in this._CGL())
                 {
@@ -916,10 +916,10 @@ namespace AHO
                     bool flag = _APR != null;
                     if (flag)
                     {
-                        _bj5.DPFFEJOPBCPPMNLKDIMELBAIDDFFEIEONPIC = true;
+                        _bj5._yc7 = true;
                         AccessLevelMask accessLevelMask = (_AOS.InternalsVisibleIn(this) ? (AccessLevelMask.Internal | AccessLevelMask.Public) : AccessLevelMask.Public);
                         _APR.GetMembersCompletionData(data, BindingFlags.Default, accessLevelMask, context);
-                        _bj5.DPFFEJOPBCPPMNLKDIMELBAIDDFFEIEONPIC = false;
+                        _bj5._yc7 = false;
                     }
                 }
             }
@@ -928,8 +928,8 @@ namespace AHO
         // Token: 0x060004D5 RID: 1237 RVA: 0x000CFCE0 File Offset: 0x000CDEE0
         public void GetTypesOnlyCompletionDataFromReferencedAssemblies(Dictionary<string, _bh4> data, _bn1 namespaceDefinition)
         {
-            bool dpffejopbcppmnlkdimelbaiddffeieonpic = _bj5.DPFFEJOPBCPPMNLKDIMELBAIDDFFEIEONPIC;
-            if (!dpffejopbcppmnlkdimelbaiddffeieonpic)
+            bool _yc6 = _bj5._yc7;
+            if (!_yc6)
             {
                 foreach (_bj5 _AOS in this._CGL())
                 {
@@ -937,10 +937,10 @@ namespace AHO
                     bool flag = _APR != null;
                     if (flag)
                     {
-                        _bj5.DPFFEJOPBCPPMNLKDIMELBAIDDFFEIEONPIC = true;
+                        _bj5._yc7 = true;
                         AccessLevelMask accessLevelMask = (_AOS.InternalsVisibleIn(this) ? (AccessLevelMask.Internal | AccessLevelMask.Public) : AccessLevelMask.Public);
                         _APR.GetTypesOnlyCompletionData(data, accessLevelMask, this);
-                        _bj5.DPFFEJOPBCPPMNLKDIMELBAIDDFFEIEONPIC = false;
+                        _bj5._yc7 = false;
                     }
                 }
             }
@@ -990,7 +990,6 @@ namespace AHO
             {
                 yield return type;
             }
-            IEnumerator<_b2> enumerator = null;
             int i = this._CGL().Length;
             for (; ; )
             {
@@ -1004,9 +1003,7 @@ namespace AHO
                 {
                     yield return type2;
                 }
-                IEnumerator<_b2> enumerator2 = null;
             }
-            yield break;
             yield break;
         }
 
@@ -1014,53 +1011,53 @@ namespace AHO
         public readonly System.Reflection.Assembly _AN;
 
         // Token: 0x040004C5 RID: 1221
-        public readonly _bj5._AZG BONGPABCEFDMENFDOAGEDKEJJHNFJEILMCJN;
+        public readonly _bj5._AZG _ya7;
 
         // Token: 0x040004C6 RID: 1222
-        public readonly bool AHMPIKDFEFMCLFLJOEKHGBJIMNOBBAPNIJHE;
+        public readonly bool _yb7;
 
         // Token: 0x040004C7 RID: 1223
         public readonly bool _CHJ;
 
         // Token: 0x040004C8 RID: 1224
-        private readonly System.Reflection.Assembly CNLPKBIEMCAJJODDNIDIOECPEGCPLFIFCECM;
+        private readonly System.Reflection.Assembly _yb9;
 
         // Token: 0x040004C9 RID: 1225
-        private string[] IPIBJLDELAOIIOOAKPNMONGKKKKNFOEMLCMD;
+        private string[] _ya4;
 
         // Token: 0x040004CA RID: 1226
-        private _bj5[] FBDPOLPFENEOLPJAIAOLLFPPDBDGGJAPEDCL;
+        private _bj5[] _ya5;
 
         // Token: 0x040004CB RID: 1227
-        public Dictionary<string, _be7> EKNILLOGEAIKLJHEMKKAGIBGBNKMFENLCAFB;
+        public Dictionary<string, _be7> _yc1;
 
         // Token: 0x040004CC RID: 1228
-        private static readonly Dictionary<System.Reflection.Assembly, _bj5> DIBFNKBPDMFNEMNDIPLBONFLMFAKKCEPLILA = new Dictionary<System.Reflection.Assembly, _bj5>();
+        private static readonly Dictionary<System.Reflection.Assembly, _bj5> _ya9 = new Dictionary<System.Reflection.Assembly, _bj5>();
 
         // Token: 0x040004CD RID: 1229
-        private static readonly string[] AIHMBPHEBJJOIOJHJLAKHCLOPLCHGKELDCBB = new string[]
+        private static readonly string[] _ya6 = new string[]
         {
             null, null, "assembly-csharp-firstpass", "assembly-unityscript-firstpass", "assembly-boo-firstpass", null, "assembly-csharp-editor-firstpass", "assembly-unityscript-editor-firstpass", "assembly-boo-editor-firstpass", null,
             "assembly-csharp", "assembly-unityscript", "assembly-boo", null, "assembly-csharp-editor", "assembly-unityscript-editor", "assembly-boo-editor"
         };
 
         // Token: 0x040004CE RID: 1230
-        private static List<System.Reflection.Assembly> IDKNPDILLAILDKAJDMDDGHJLFOGFCIHKFDND;
+        private static List<System.Reflection.Assembly> _yb2;
 
         // Token: 0x040004CF RID: 1231
-        private static Dictionary<string, _bj5> PJKEBCBBMNJPCABBHPIKIMEJMACMLDFJBDNH = new Dictionary<string, _bj5>();
+        private static Dictionary<string, _bj5> _yb3 = new Dictionary<string, _bj5>();
 
         // Token: 0x040004D0 RID: 1232
-        private static readonly _bj5[] HPEELBCJDACILOAICOJANFMEPEPPLAJLOOOO = new _bj5[17];
+        private static readonly _bj5[] _yb4 = new _bj5[17];
 
         // Token: 0x040004D1 RID: 1233
-        private static UnityEditor.Compilation.Assembly[] GHGINOAGGIFEFJMGDMAMNONFFDIOJLJAMIPP;
+        private static UnityEditor.Compilation.Assembly[] _yb8;
 
         // Token: 0x040004D2 RID: 1234
-        private _bn1 IEHBPMHEDHEDEIDGKCOEMLAOBNPFFFKFGMBN;
+        private _bn1 _yc4;
 
         // Token: 0x040004D3 RID: 1235
-        private static bool DPFFEJOPBCPPMNLKDIMELBAIDDFFEIEONPIC = false;
+        private static bool _yc7 = false;
 
         // Token: 0x020000A9 RID: 169
         public enum _AZG
@@ -1069,27 +1066,27 @@ namespace AHO
         }
 
         // Token: 0x020000AA RID: 170
-        private static class DFJANIPKIHDLIPCJMJBAILHMKBNDMPBAACAH
+        private static class _ya8
         {
             // Token: 0x060004DB RID: 1243 RVA: 0x000CFEE8 File Offset: 0x000CE0E8
-            static DFJANIPKIHDLIPCJMJBAILHMKBNDMPBAACAH()
+            static _ya8()
             {
-                bool flag = _bj5.DFJANIPKIHDLIPCJMJBAILHMKBNDMPBAACAH.MMJJHOFKBADDJHDANIDEDLHCGBHBAFLECEFP == null;
+                bool flag = _bj5._ya8._yc8 == null;
                 if (!flag)
                 {
-                    bool flag2 = _bj5.DFJANIPKIHDLIPCJMJBAILHMKBNDMPBAACAH.CFCELDACEKAFNCDBGPKBICBKKFHBMHBLDPFD == null;
+                    bool flag2 = _bj5._ya8._yc9 == null;
                     if (!flag2)
                     {
-                        bool flag3 = _bj5.DFJANIPKIHDLIPCJMJBAILHMKBNDMPBAACAH.HONGPCHCHGPABLPNNMDHENOLKEDAPBCICEAO == null;
+                        bool flag3 = _bj5._ya8._yd1 == null;
                         if (flag3)
                         {
-                            _bj5.DFJANIPKIHDLIPCJMJBAILHMKBNDMPBAACAH.HONGPCHCHGPABLPNNMDHENOLKEDAPBCICEAO = _bj5.DFJANIPKIHDLIPCJMJBAILHMKBNDMPBAACAH.CFCELDACEKAFNCDBGPKBICBKKFHBMHBLDPFD.GetField("_output", BindingFlags.Instance | BindingFlags.Public | BindingFlags.NonPublic);
-                            _bj5.DFJANIPKIHDLIPCJMJBAILHMKBNDMPBAACAH.BLELCPBEGBFFCDFHJGNHFMIEEAIBJOMJKKOI = _bj5.DFJANIPKIHDLIPCJMJBAILHMKBNDMPBAACAH.CFCELDACEKAFNCDBGPKBICBKKFHBMHBLDPFD.GetField("_references", BindingFlags.Instance | BindingFlags.Public | BindingFlags.NonPublic);
+                            _bj5._ya8._yd1 = _bj5._ya8._yc9.GetField("_output", BindingFlags.Instance | BindingFlags.Public | BindingFlags.NonPublic);
+                            _bj5._ya8._yd2 = _bj5._ya8._yc9.GetField("_references", BindingFlags.Instance | BindingFlags.Public | BindingFlags.NonPublic);
                         }
-                        bool flag4 = _bj5.DFJANIPKIHDLIPCJMJBAILHMKBNDMPBAACAH.HONGPCHCHGPABLPNNMDHENOLKEDAPBCICEAO == null || _bj5.DFJANIPKIHDLIPCJMJBAILHMKBNDMPBAACAH.BLELCPBEGBFFCDFHJGNHFMIEEAIBJOMJKKOI == null;
+                        bool flag4 = _bj5._ya8._yd1 == null || _bj5._ya8._yd2 == null;
                         if (!flag4)
                         {
-                            _bj5.DFJANIPKIHDLIPCJMJBAILHMKBNDMPBAACAH.EIECBAGFDILHCEKGMLHOCBHEELKMAJADPFOL = _bj5.DFJANIPKIHDLIPCJMJBAILHMKBNDMPBAACAH.MMJJHOFKBADDJHDANIDEDLHCGBHBAFLECEFP.Invoke(null, null) as IEnumerable;
+                            _bj5._ya8._yd3 = _bj5._ya8._yc8.Invoke(null, null) as IEnumerable;
                         }
                     }
                 }
@@ -1098,7 +1095,7 @@ namespace AHO
             // Token: 0x060004DC RID: 1244 RVA: 0x000CFFBC File Offset: 0x000CE1BC
             public static string[] GetReferencedAssembliesFor(string assemblyName)
             {
-                bool flag = _bj5.DFJANIPKIHDLIPCJMJBAILHMKBNDMPBAACAH.EIECBAGFDILHCEKGMLHOCBHEELKMAJADPFOL == null;
+                bool flag = _bj5._ya8._yd3 == null;
                 string[] array;
                 if (flag)
                 {
@@ -1107,13 +1104,13 @@ namespace AHO
                 else
                 {
                     assemblyName += ".dll";
-                    foreach (object obj in _bj5.DFJANIPKIHDLIPCJMJBAILHMKBNDMPBAACAH.EIECBAGFDILHCEKGMLHOCBHEELKMAJADPFOL)
+                    foreach (object obj in _bj5._ya8._yd3)
                     {
-                        string text = _bj5.DFJANIPKIHDLIPCJMJBAILHMKBNDMPBAACAH.HONGPCHCHGPABLPNNMDHENOLKEDAPBCICEAO.GetValue(obj) as string;
+                        string text = _bj5._ya8._yd1.GetValue(obj) as string;
                         bool flag2 = !text.EndsWith(assemblyName, StringComparison.OrdinalIgnoreCase);
                         if (!flag2)
                         {
-                            string[] array2 = _bj5.DFJANIPKIHDLIPCJMJBAILHMKBNDMPBAACAH.BLELCPBEGBFFCDFHJGNHFMIEEAIBJOMJKKOI.GetValue(obj) as string[];
+                            string[] array2 = _bj5._ya8._yd2.GetValue(obj) as string[];
                             bool flag3 = array2 == null;
                             if (flag3)
                             {
@@ -1134,19 +1131,19 @@ namespace AHO
             }
 
             // Token: 0x040004D5 RID: 1237
-            private static IEnumerable EIECBAGFDILHCEKGMLHOCBHEELKMAJADPFOL;
+            private static IEnumerable _yd3;
 
             // Token: 0x040004D6 RID: 1238
-            private static FieldInfo HONGPCHCHGPABLPNNMDHENOLKEDAPBCICEAO;
+            private static FieldInfo _yd1;
 
             // Token: 0x040004D7 RID: 1239
-            private static FieldInfo BLELCPBEGBFFCDFHJGNHFMIEEAIBJOMJKKOI;
+            private static FieldInfo _yd2;
 
             // Token: 0x040004D8 RID: 1240
-            private static Type CFCELDACEKAFNCDBGPKBICBKKFHBMHBLDPFD = Type.GetType("UnityEditor.Scripting.MonoIsland,UnityEditor.dll");
+            private static Type _yc9 = Type.GetType("UnityEditor.Scripting.MonoIsland,UnityEditor.dll");
 
             // Token: 0x040004D9 RID: 1241
-            private static MethodInfo MMJJHOFKBADDJHDANIDEDLHCGBHBAFLECEFP = typeof(InternalEditorUtility).GetMethod("GetMonoIslands", BindingFlags.Static | BindingFlags.Public | BindingFlags.NonPublic);
+            private static MethodInfo _yc8 = typeof(InternalEditorUtility).GetMethod("GetMonoIslands", BindingFlags.Static | BindingFlags.Public | BindingFlags.NonPublic);
         }
     }
 }

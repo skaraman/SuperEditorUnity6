@@ -13,15 +13,15 @@ namespace AHO
         // Token: 0x06000541 RID: 1345 RVA: 0x000D2294 File Offset: 0x000D0494
         internal override _bh4 TypeOf()
         {
-            bool ofdaedbmnafldiagfdnddbgcbobdlfnmcijk = this.OFDAEDBMNAFLDIAGFDNDDBGCBOBDLFNMCIJK;
+            bool _zc5 = this._zc6;
             _bh4 _AAH;
-            if (ofdaedbmnafldiagfdnddbgcbobdlfnmcijk)
+            if (_zc5)
             {
                 _AAH = _bh4._AHA;
             }
             else
             {
-                this.OFDAEDBMNAFLDIAGFDNDDBGCBOBDLFNMCIJK = true;
+                this._zc6 = true;
                 bool flag = this.BLH != null && (this.BLH.definition == null || !this.BLH.definition.IsValid());
                 if (flag)
                 {
@@ -125,7 +125,7 @@ namespace AHO
                     }
                 }
                 _bh4 _AAH2 = ((this.BLH != null) ? this.BLH.definition : _bh4._AHA);
-                this.OFDAEDBMNAFLDIAGFDNDDBGCBOBDLFNMCIJK = false;
+                this._zc6 = false;
                 _AAH = _AAH2;
             }
             return _AAH;
@@ -397,6 +397,6 @@ namespace AHO
         public KJK BLH;
 
         // Token: 0x040004FD RID: 1277
-        private bool OFDAEDBMNAFLDIAGFDNDDBGCBOBDLFNMCIJK = false;
+        private bool _zc6 = false;
     }
 }

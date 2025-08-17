@@ -4,7 +4,7 @@ using SuperEditor.Themes;
 using UnityEditor;
 using UnityEngine;
 
-namespace FEPKBIPDOHCNNFAKLHKGGCCCPGMCNPGGOCGM
+namespace _yj2
 {
     // Token: 0x0200015D RID: 349
     [InitializeOnLoad]
@@ -13,12 +13,12 @@ namespace FEPKBIPDOHCNNFAKLHKGGCCCPGMCNPGGOCGM
         // Token: 0x060009E1 RID: 2529 RVA: 0x00107698 File Offset: 0x00105898
         static _d5()
         {
-            _bi2.AddTheme(_d5._CLS, _d5.CMPOPFLJBNNNHDELDGDDKDJONFFGEBIGEPDL);
+            _bi2.AddTheme(_d5._CLS, _d5._yl6);
             _bi2._CBY++;
         }
 
         // Token: 0x040008D6 RID: 2262
-        private static string CMPOPFLJBNNNHDELDGDDKDJONFFGEBIGEPDL = "VS Dark with Resharper";
+        private static string _yl6 = "VS Dark with Resharper";
 
         // Token: 0x040008D7 RID: 2263
         internal static Theme _CLS = new Theme

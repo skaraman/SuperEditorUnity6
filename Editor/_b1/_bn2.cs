@@ -16,26 +16,26 @@ namespace AHO
         internal override _bh4 AddDeclaration(FKI symbol)
         {
             symbol._AJW = this;
-            bool flag = this.CLLBCBNBBJMLLCAEFKAJACIFKKFPIHKHEIIG == null;
+            bool flag = this._zc7 == null;
             if (flag)
             {
-                this.CLLBCBNBBJMLLCAEFKAJACIFKKFPIHKHEIIG = new List<_bh4>();
+                this._zc7 = new List<_bh4>();
             }
             _bh4 _AAH = _bh4.Create(symbol);
-            this.CLLBCBNBBJMLLCAEFKAJACIFKKFPIHKHEIIG.Add(_AAH);
+            this._zc7.Add(_AAH);
             return _AAH;
         }
 
         // Token: 0x0600068D RID: 1677 RVA: 0x000E5FBC File Offset: 0x000E41BC
         internal override void RemoveDeclaration(FKI symbol)
         {
-            bool flag = this.CLLBCBNBBJMLLCAEFKAJACIFKKFPIHKHEIIG != null;
+            bool flag = this._zc7 != null;
             if (flag)
             {
-                int count = this.CLLBCBNBBJMLLCAEFKAJACIFKKFPIHKHEIIG.Count;
+                int count = this._zc7.Count;
                 while (count-- > 0)
                 {
-                    _bh4 _AAH = this.CLLBCBNBBJMLLCAEFKAJACIFKKFPIHKHEIIG[count];
+                    _bh4 _AAH = this._zc7[count];
                     bool flag2 = _AAH._AEI == null;
                     if (!flag2)
                     {
@@ -45,7 +45,7 @@ namespace AHO
                             bool flag4 = _AAH._AEI.Count == 0;
                             if (flag4)
                             {
-                                this.CLLBCBNBBJMLLCAEFKAJACIFKKFPIHKHEIIG.RemoveAt(count);
+                                this._zc7.RemoveAt(count);
                             }
                         }
                     }
@@ -58,17 +58,17 @@ namespace AHO
         internal override void Resolve(_bb4.DHBA leaf, int numTypeArgs, bool asTypeOnly)
         {
             leaf._ACY(null);
-            bool flag = !asTypeOnly && this.CLLBCBNBBJMLLCAEFKAJACIFKKFPIHKHEIIG != null;
+            bool flag = !asTypeOnly && this._zc7 != null;
             if (flag)
             {
                 string text = _bh4.DecodeId(leaf._ACX.text);
-                int count = this.CLLBCBNBBJMLLCAEFKAJACIFKKFPIHKHEIIG.Count;
+                int count = this._zc7.Count;
                 while (count-- > 0)
                 {
-                    bool flag2 = this.CLLBCBNBBJMLLCAEFKAJACIFKKFPIHKHEIIG[count]._AW == text;
+                    bool flag2 = this._zc7[count]._AW == text;
                     if (flag2)
                     {
-                        leaf._ACY(this.CLLBCBNBBJMLLCAEFKAJACIFKKFPIHKHEIIG[count]);
+                        leaf._ACY(this._zc7[count]);
                         return;
                     }
                 }
@@ -80,16 +80,16 @@ namespace AHO
         internal override _bh4 FindName(string symbolName, int numTypeParameters)
         {
             symbolName = _bh4.DecodeId(symbolName);
-            bool flag = numTypeParameters == 0 && this.CLLBCBNBBJMLLCAEFKAJACIFKKFPIHKHEIIG != null;
+            bool flag = numTypeParameters == 0 && this._zc7 != null;
             if (flag)
             {
-                int count = this.CLLBCBNBBJMLLCAEFKAJACIFKKFPIHKHEIIG.Count;
+                int count = this._zc7.Count;
                 while (count-- > 0)
                 {
-                    bool flag2 = this.CLLBCBNBBJMLLCAEFKAJACIFKKFPIHKHEIIG[count]._AW == symbolName;
+                    bool flag2 = this._zc7[count]._AW == symbolName;
                     if (flag2)
                     {
-                        return this.CLLBCBNBBJMLLCAEFKAJACIFKKFPIHKHEIIG[count];
+                        return this._zc7[count];
                     }
                 }
             }
@@ -99,10 +99,10 @@ namespace AHO
         // Token: 0x06000690 RID: 1680 RVA: 0x000E6164 File Offset: 0x000E4364
         internal override void GetCompletionData(Dictionary<string, _bh4> data, _be4 context)
         {
-            bool flag = this.CLLBCBNBBJMLLCAEFKAJACIFKKFPIHKHEIIG != null;
+            bool flag = this._zc7 != null;
             if (flag)
             {
-                foreach (_bh4 _AAH in this.CLLBCBNBBJMLLCAEFKAJACIFKKFPIHKHEIIG)
+                foreach (_bh4 _AAH in this._zc7)
                 {
                     FKI _AFF = _AAH._AEI.FirstOrDefault<FKI>();
                     _bb4._ACW _AGZ = ((_AFF != null) ? _AFF._AEJ : null);
@@ -126,6 +126,6 @@ namespace AHO
         }
 
         // Token: 0x04000597 RID: 1431
-        protected List<_bh4> CLLBCBNBBJMLLCAEFKAJACIFKKFPIHKHEIIG;
+        protected List<_bh4> _zc7;
     }
 }

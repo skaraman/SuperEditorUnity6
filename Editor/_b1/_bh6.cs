@@ -163,7 +163,7 @@ namespace AHO
                 bool flag4 = flag3;
                 if (flag4)
                 {
-                    _AZM.ADFICBDCAFGKMIJLIPIODEIIEIDNJMDGIJFJ = "var";
+                    _AZM._zx5 = "var";
                     Dictionary<string, _b2>.Enumerator enumerator = _bh4._ABO.GetEnumerator();
                     for (int j = 0; j < 16; j++)
                     {
@@ -175,14 +175,14 @@ namespace AHO
                         {
                             _bk5._AZL _AZM2 = _AZM;
                             keyValuePair = enumerator.Current;
-                            _AZM2.EIFANAJKPEMGMDMGCIMKIEMEBINHJOFDNKAM = keyValuePair.Key;
+                            _AZM2._zx6 = keyValuePair.Key;
                             break;
                         }
                     }
                 }
                 _bk5 _AZF = _bk5.Create("References to " + symbol._AYM(), new Action<Action<string, string, TextPosition, int>, string, _bk5._AZL>(_bh6.FindAllInSingleFile), array, _AZM, "References");
-                _AZF.SetFilesValidator(new _bk5.EIJNJHPLNPFJGGJHJPGEMFCMHALBIIFBBOEI(_bh6.ValidateFileForReferences));
-                _AZF.SetResultsValidator(new _bk5.ONEILDCAMHIOCHJBHGPGBFLIDNIFNKFCIGAD(_bh6.ValidateResultAsReference), symbol);
+                _AZF.SetFilesValidator(new _bk5._zq8(_bh6.ValidateFileForReferences));
+                _AZF.SetResultsValidator(new _bk5._zq9(_bh6.ValidateResultAsReference), symbol);
             }
         }
 
@@ -217,7 +217,7 @@ namespace AHO
                     bool flag5 = flag4;
                     if (flag5)
                     {
-                        _AZM.ADFICBDCAFGKMIJLIPIODEIIEIDNJMDGIJFJ = "var";
+                        _AZM._zx5 = "var";
                         Dictionary<string, _b2>.Enumerator enumerator = _bh4._ABO.GetEnumerator();
                         for (int j = 0; j < 16; j++)
                         {
@@ -229,21 +229,21 @@ namespace AHO
                             {
                                 _bk5._AZL _AZM2 = _AZM;
                                 keyValuePair = enumerator.Current;
-                                _AZM2.EIFANAJKPEMGMDMGCIMKIEMEBINHJOFDNKAM = keyValuePair.Key;
+                                _AZM2._zx6 = keyValuePair.Key;
                                 break;
                             }
                         }
                     }
                     _bk5 _AZF = _bk5.Create("Rename " + symbol._AYM(), new Action<Action<string, string, TextPosition, int>, string, _bk5._AZL>(_bh6.FindAllInSingleFile), array, _AZM, "Rename");
-                    _AZF.SetFilesValidator(new _bk5.EIJNJHPLNPFJGGJHJPGEMFCMHALBIIFBBOEI(_bh6.ValidateFileForReferences));
-                    _AZF.SetResultsValidator(new _bk5.ONEILDCAMHIOCHJBHGPGBFLIDNIFNKFCIGAD(_bh6.ValidateResultAsReference), symbol);
+                    _AZF.SetFilesValidator(new _bk5._zq8(_bh6.ValidateFileForReferences));
+                    _AZF.SetResultsValidator(new _bk5._zq9(_bh6.ValidateResultAsReference), symbol);
                     _AZF.SetReplaceText(renameText);
                 }
             }
         }
 
         // Token: 0x06000031 RID: 49 RVA: 0x00003B6C File Offset: 0x00001D6C
-        private static bool ValidateFileForReferences(string assetGuid, _bk5.OLICOJKMCLBLLGDNHPLEFMBEBCBOMOGCCFMG options)
+        private static bool ValidateFileForReferences(string assetGuid, _bk5._zo5 options)
         {
             string text = AssetDatabase.GUIDToAssetPath(assetGuid);
             bool flag = text.EndsWith(".cs", StringComparison.OrdinalIgnoreCase);
@@ -258,7 +258,7 @@ namespace AHO
                 bool flag4 = _bg3._AZJ.Contains(Path.GetExtension(text).ToLowerInvariant());
                 if (flag4)
                 {
-                    flag3 = options.NBPNKNDFNIPKOLLALEOOIMBKKCNKKCICIPLE;
+                    flag3 = options._zp7;
                 }
                 else
                 {
@@ -269,14 +269,14 @@ namespace AHO
         }
 
         // Token: 0x06000032 RID: 50 RVA: 0x00003BC8 File Offset: 0x00001DC8
-        private static _bk5.BPKLLIEIAIMNBNMJCCECPKDEHEOODPGMPLBK ValidateResultAsReference(string assetGuid, TextPosition location, int length, ref _bh4 referencedSymbol)
+        private static _bk5._zu6 ValidateResultAsReference(string assetGuid, TextPosition location, int length, ref _bh4 referencedSymbol)
         {
             string text = AssetDatabase.GUIDToAssetPath(assetGuid);
             bool flag = string.IsNullOrEmpty(text);
-            _bk5.BPKLLIEIAIMNBNMJCCECPKDEHEOODPGMPLBK bpkllieiaimnbnmjccecpkdeheoodpgmplbk;
+            _bk5._zu6 _zv3;
             if (flag)
             {
-                bpkllieiaimnbnmjccecpkdeheoodpgmplbk = (_bk5.BPKLLIEIAIMNBNMJCCECPKDEHEOODPGMPLBK)1;
+                _zv3 = (_bk5._zu6)1;
             }
             else
             {
@@ -285,7 +285,7 @@ namespace AHO
                 bool flag3 = buffer == null;
                 if (flag3)
                 {
-                    bpkllieiaimnbnmjccecpkdeheoodpgmplbk = (_bk5.BPKLLIEIAIMNBNMJCCECPKDEHEOODPGMPLBK)1;
+                    _zv3 = (_bk5._zu6)1;
                 }
                 else
                 {
@@ -307,9 +307,9 @@ namespace AHO
                             bool flag8 = flag5;
                             if (flag8)
                             {
-                                return (_bk5.BPKLLIEIAIMNBNMJCCECPKDEHEOODPGMPLBK)1;
+                                return (_bk5._zu6)1;
                             }
-                            return (_bk5.BPKLLIEIAIMNBNMJCCECPKDEHEOODPGMPLBK)12;
+                            return (_bk5._zu6)12;
                         }
                     }
                     else
@@ -317,7 +317,7 @@ namespace AHO
                         bool flag9 = flag5;
                         if (flag9)
                         {
-                            return (_bk5.BPKLLIEIAIMNBNMJCCECPKDEHEOODPGMPLBK)1;
+                            return (_bk5._zu6)1;
                         }
                     }
                     int num;
@@ -332,12 +332,12 @@ namespace AHO
                                 bool flag11 = flag5;
                                 if (flag11)
                                 {
-                                    return (_bk5.BPKLLIEIAIMNBNMJCCECPKDEHEOODPGMPLBK)1;
+                                    return (_bk5._zu6)1;
                                 }
-                                return (_bk5.BPKLLIEIAIMNBNMJCCECPKDEHEOODPGMPLBK)13;
+                                return (_bk5._zu6)13;
                             }
                         case SyntaxToken.Kind.Preprocessor:
-                            return (_bk5.BPKLLIEIAIMNBNMJCCECPKDEHEOODPGMPLBK)1;
+                            return (_bk5._zu6)1;
                         case SyntaxToken.Kind.VerbatimStringLiteral:
                         case SyntaxToken.Kind.VerbatimStringBegin:
                         case SyntaxToken.Kind.StringLiteral:
@@ -350,15 +350,15 @@ namespace AHO
                                 bool flag12 = flag5;
                                 if (flag12)
                                 {
-                                    return (_bk5.BPKLLIEIAIMNBNMJCCECPKDEHEOODPGMPLBK)1;
+                                    return (_bk5._zu6)1;
                                 }
-                                return (_bk5.BPKLLIEIAIMNBNMJCCECPKDEHEOODPGMPLBK)14;
+                                return (_bk5._zu6)14;
                             }
                     }
                     bool flag13 = !flag2 || tokenAt.OOME == null;
                     if (flag13)
                     {
-                        bpkllieiaimnbnmjccecpkdeheoodpgmplbk = (flag5 ? ((_bk5.BPKLLIEIAIMNBNMJCCECPKDEHEOODPGMPLBK)11) : ((_bk5.BPKLLIEIAIMNBNMJCCECPKDEHEOODPGMPLBK)10));
+                        _zv3 = (flag5 ? ((_bk5._zu6)11) : ((_bk5._zu6)10));
                     }
                     else
                     {
@@ -396,7 +396,7 @@ namespace AHO
                         bool flag20 = _AAH == null || _AAH._AT == SymbolKind.Error;
                         if (flag20)
                         {
-                            bpkllieiaimnbnmjccecpkdeheoodpgmplbk = (flag5 ? ((_bk5.BPKLLIEIAIMNBNMJCCECPKDEHEOODPGMPLBK)11) : ((_bk5.BPKLLIEIAIMNBNMJCCECPKDEHEOODPGMPLBK)10));
+                            _zv3 = (flag5 ? ((_bk5._zu6)11) : ((_bk5._zu6)10));
                         }
                         else
                         {
@@ -408,7 +408,7 @@ namespace AHO
                             bool flag22 = _AAH == null || _AAH._AT == SymbolKind.Error;
                             if (flag22)
                             {
-                                bpkllieiaimnbnmjccecpkdeheoodpgmplbk = (flag5 ? ((_bk5.BPKLLIEIAIMNBNMJCCECPKDEHEOODPGMPLBK)11) : ((_bk5.BPKLLIEIAIMNBNMJCCECPKDEHEOODPGMPLBK)10));
+                                _zv3 = (flag5 ? ((_bk5._zu6)11) : ((_bk5._zu6)10));
                             }
                             else
                             {
@@ -430,7 +430,7 @@ namespace AHO
                                         bool flag26 = _bh6.IsUsedAsTypeArgument(_AAC.GetGenericSymbol() as _b2, _AAE);
                                         if (flag26)
                                         {
-                                            return (_bk5.BPKLLIEIAIMNBNMJCCECPKDEHEOODPGMPLBK)9;
+                                            return (_bk5._zu6)9;
                                         }
                                     }
                                     bool flag27 = (_AAH._AT == SymbolKind.Property && referencedSymbol._AT == SymbolKind.Property) || (_AAH._AT == SymbolKind.Event && referencedSymbol._AT == SymbolKind.Event) || (_AAH._AT == SymbolKind.Indexer && referencedSymbol._AT == SymbolKind.Indexer);
@@ -466,12 +466,12 @@ namespace AHO
                                                     bool flag35 = _AAC2 != null && _AAC2.DerivesFrom(_AAC3);
                                                     if (flag35)
                                                     {
-                                                        return (_bk5.BPKLLIEIAIMNBNMJCCECPKDEHEOODPGMPLBK)6;
+                                                        return (_bk5._zu6)6;
                                                     }
                                                     bool flag36 = _AAC3 != null && _AAC3.DerivesFrom(_AAC2);
                                                     if (flag36)
                                                     {
-                                                        return (_bk5.BPKLLIEIAIMNBNMJCCECPKDEHEOODPGMPLBK)7;
+                                                        return (_bk5._zu6)7;
                                                     }
                                                 }
                                             }
@@ -483,7 +483,7 @@ namespace AHO
                                         bool flag38 = _AAH._AO == referencedSymbol._AO;
                                         if (flag38)
                                         {
-                                            return (_bk5.BPKLLIEIAIMNBNMJCCECPKDEHEOODPGMPLBK)5;
+                                            return (_bk5._zu6)5;
                                         }
                                         _bb3 _AAN = _AAH as _bb3;
                                         _bb3 _AAN2 = referencedSymbol as _bb3;
@@ -506,12 +506,12 @@ namespace AHO
                                                     bool flag45 = _AAC4 != null && _AAC4.DerivesFrom(_AAC5);
                                                     if (flag45)
                                                     {
-                                                        return (_bk5.BPKLLIEIAIMNBNMJCCECPKDEHEOODPGMPLBK)6;
+                                                        return (_bk5._zu6)6;
                                                     }
                                                     bool flag46 = _AAC5 != null && _AAC5.DerivesFrom(_AAC4);
                                                     if (flag46)
                                                     {
-                                                        return (_bk5.BPKLLIEIAIMNBNMJCCECPKDEHEOODPGMPLBK)7;
+                                                        return (_bk5._zu6)7;
                                                     }
                                                 }
                                             }
@@ -520,24 +520,24 @@ namespace AHO
                                     bool flag47 = _AAH._AT != SymbolKind.MethodGroup || referencedSymbol._AO != _AAH;
                                     if (flag47)
                                     {
-                                        return (_bk5.BPKLLIEIAIMNBNMJCCECPKDEHEOODPGMPLBK)1;
+                                        return (_bk5._zu6)1;
                                     }
                                 }
                                 bool flag48 = flag5;
                                 if (flag48)
                                 {
-                                    bpkllieiaimnbnmjccecpkdeheoodpgmplbk = (_bk5.BPKLLIEIAIMNBNMJCCECPKDEHEOODPGMPLBK)8;
+                                    _zv3 = (_bk5._zu6)8;
                                 }
                                 else
                                 {
                                     bool flag49 = _bc9.IsWriteReference(tokenAt);
                                     if (flag49)
                                     {
-                                        bpkllieiaimnbnmjccecpkdeheoodpgmplbk = (_bk5.BPKLLIEIAIMNBNMJCCECPKDEHEOODPGMPLBK)2;
+                                        _zv3 = (_bk5._zu6)2;
                                     }
                                     else
                                     {
-                                        bpkllieiaimnbnmjccecpkdeheoodpgmplbk = (_bk5.BPKLLIEIAIMNBNMJCCECPKDEHEOODPGMPLBK)3;
+                                        _zv3 = (_bk5._zu6)3;
                                     }
                                 }
                             }
@@ -545,7 +545,7 @@ namespace AHO
                     }
                 }
             }
-            return bpkllieiaimnbnmjccecpkdeheoodpgmplbk;
+            return _zv3;
         }
 
         // Token: 0x06000033 RID: 51 RVA: 0x00004408 File Offset: 0x00002608
@@ -668,7 +668,7 @@ namespace AHO
             string text = AssetDatabase.GUIDToAssetPath(assetGuid);
             bool flag = Path.GetExtension(text).Equals(".cs", StringComparison.OrdinalIgnoreCase);
             IList<string> orReadAllLines = _bh6.GetOrReadAllLines(assetGuid);
-            bool flag2 = !flag || search.ADFICBDCAFGKMIJLIPIODEIIEIDNJMDGIJFJ == null;
+            bool flag2 = !flag || search._zx5 == null;
             if (flag2)
             {
                 foreach (TextPosition textPosition in _bh6.FindAll(orReadAllLines, search))
@@ -682,18 +682,18 @@ namespace AHO
                 IEnumerator<TextPosition> enumerator2 = _bh6.FindAll(orReadAllLines, search).GetEnumerator();
                 _bk5._AZL _AZM = new _bk5._AZL
                 {
-                    _ABG = search.ADFICBDCAFGKMIJLIPIODEIIEIDNJMDGIJFJ,
+                    _ABG = search._zx5,
                     _AYS = search._AYS,
                     _AZN = search._AZN
                 };
                 IEnumerator<TextPosition> enumerator3 = _bh6.FindAll(orReadAllLines, _AZM).GetEnumerator();
                 IEnumerator<TextPosition> enumerator4 = null;
-                bool flag3 = search.EIFANAJKPEMGMDMGCIMKIEMEBINHJOFDNKAM != null;
+                bool flag3 = search._zx6 != null;
                 if (flag3)
                 {
                     _bk5._AZL _AZM2 = new _bk5._AZL
                     {
-                        _ABG = search.EIFANAJKPEMGMDMGCIMKIEMEBINHJOFDNKAM,
+                        _ABG = search._zx6,
                         _AYS = search._AYS,
                         _AZN = search._AZN
                     };
@@ -717,13 +717,13 @@ namespace AHO
                         if (flag8)
                         {
                             string text4 = orReadAllLines[enumerator3.Current.line];
-                            addResultAction(text4, assetGuid, enumerator3.Current, search.ADFICBDCAFGKMIJLIPIODEIIEIDNJMDGIJFJ.Length);
+                            addResultAction(text4, assetGuid, enumerator3.Current, search._zx5.Length);
                             flag5 = enumerator3.MoveNext();
                         }
                         else
                         {
                             string text5 = orReadAllLines[enumerator4.Current.line];
-                            addResultAction(text5, assetGuid, enumerator4.Current, search.EIFANAJKPEMGMDMGCIMKIEMEBINHJOFDNKAM.Length);
+                            addResultAction(text5, assetGuid, enumerator4.Current, search._zx6.Length);
                             flag6 = enumerator4.MoveNext();
                         }
                     }

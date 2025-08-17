@@ -14,13 +14,13 @@ namespace AHO
     internal class _bj7 : EditorWindow
     {
         // Token: 0x060003A3 RID: 931 RVA: 0x000A7E6C File Offset: 0x000A606C
-        private bool OLDMDNBALBFCLMNDDOCBBGCDAFJLOLCKCOBG()
+        private bool _zx7()
         {
             return EditorPrefs.GetBool("SuperEditorUpdateAutoImport", false);
         }
 
         // Token: 0x060003A4 RID: 932 RVA: 0x000A7E89 File Offset: 0x000A6089
-        private void IOANEMHEDEHCIJNNEGACJFIKCMMNLPMLHMON(bool value)
+        private void _zx8(bool value)
         {
             EditorPrefs.SetBool("SuperEditorUpdateAutoImport", value);
         }
@@ -28,27 +28,27 @@ namespace AHO
         // Token: 0x060003A5 RID: 933 RVA: 0x000A7E98 File Offset: 0x000A6098
         internal static void LoadIcons(bool forDll = false)
         {
-            _bj7.FADBGFHELNOBMJEKEMFOKHGEEKINDLDMIJML.normal.background = _a2.GetInstance().GetTexture(EditorGUIUtility.isProSkin ? Base64Texture.ScrollBackgroundPro : Base64Texture.ScrollBackgroundLight);
-            _bj7.MGPAIJHPAPPELDLPELONIFICCKMIPFKHKKHG.normal.background = _a2.GetInstance().GetTexture(Base64Texture.DownloadNormal);
-            _bj7.MGPAIJHPAPPELDLPELONIFICCKMIPFKHKKHG.hover.background = _a2.GetInstance().GetTexture(Base64Texture.DownloadHover);
+            _bj7._zx9.normal.background = _a2.GetInstance().GetTexture(EditorGUIUtility.isProSkin ? Base64Texture.ScrollBackgroundPro : Base64Texture.ScrollBackgroundLight);
+            _bj7._zy1.normal.background = _a2.GetInstance().GetTexture(Base64Texture.DownloadNormal);
+            _bj7._zy1.hover.background = _a2.GetInstance().GetTexture(Base64Texture.DownloadHover);
         }
 
         // Token: 0x060003A6 RID: 934 RVA: 0x000A7F04 File Offset: 0x000A6104
         internal static void Init(_bj9 newVersion, string changelog)
         {
             _bj7 window = EditorWindow.GetWindow<_bj7>(true, "SuperEditor Update Available", true);
-            window.MFJNEKEICMLFADGKJBGHBGAPDNPEHGFKBPLI = newVersion;
-            window.NMOCIHFKLIGDMOEGAMEEFGPEIJKCMCBJBOIF = changelog;
+            window._zy2 = newVersion;
+            window._zy3 = changelog;
         }
 
         // Token: 0x060003A7 RID: 935 RVA: 0x000A7F30 File Offset: 0x000A6130
         public async void GetUnityPackage()
         {
-            this.HMGEOOBPKDDIMIOLCKFHBGFBFCOACIIDKJCL = 0f;
-            this.ONJLOECDFEKNEIDDDOMBFCNKLLOKNBEEIGBA = "Downloading...";
+            this._zy4 = 0f;
+            this._zy5 = "Downloading...";
             await Task.Run(delegate
             {
-                this.HttpDownloadFile(this.KNGIADFDFDKPIOKMAJJLOHFOFJLKJCJBNHOJ, this.NMINMLAOPGNLLIFFFOKOCIDCNHFPENGNOJJB);
+                this.HttpDownloadFile(this._zy6, this._zy7);
             });
             EditorApplication.update = (EditorApplication.CallbackFunction)Delegate.Combine(EditorApplication.update, new EditorApplication.CallbackFunction(this.AutoImportPackage));
         }
@@ -56,10 +56,10 @@ namespace AHO
         // Token: 0x060003A8 RID: 936 RVA: 0x000A7F6C File Offset: 0x000A616C
         public void AutoImportPackage()
         {
-            bool flag = this.HMGEOOBPKDDIMIOLCKFHBGFBFCOACIIDKJCL == 1f;
+            bool flag = this._zy4 == 1f;
             if (flag)
             {
-                AssetDatabase.ImportPackage(this._AWJ, !this.OLDMDNBALBFCLMNDDOCBBGCDAFJLOLCKCOBG());
+                AssetDatabase.ImportPackage(this._AWJ, !this._zx7());
                 EditorApplication.update = (EditorApplication.CallbackFunction)Delegate.Remove(EditorApplication.update, new EditorApplication.CallbackFunction(this.AutoImportPackage));
             }
         }
@@ -67,7 +67,7 @@ namespace AHO
         // Token: 0x060003A9 RID: 937 RVA: 0x000A7FC4 File Offset: 0x000A61C4
         public void HttpDownloadFile(string url, string tempPath)
         {
-            this.MLEJNDABNJALNNFMJIOEAACHMAFMNPHLAPIH = true;
+            this._zy8 = true;
             HttpWebRequest httpWebRequest = WebRequest.Create(url) as HttpWebRequest;
             HttpWebResponse httpWebResponse = httpWebRequest.GetResponse() as HttpWebResponse;
             Stream responseStream = httpWebResponse.GetResponseStream();
@@ -81,13 +81,13 @@ namespace AHO
                 num += (long)i;
                 stream.Write(array, 0, i);
                 i = responseStream.Read(array, 0, array.Length);
-                this.HMGEOOBPKDDIMIOLCKFHBGFBFCOACIIDKJCL = (float)((int)((float)num / (float)contentLength * 100f));
-                this.HMGEOOBPKDDIMIOLCKFHBGFBFCOACIIDKJCL /= 100f;
+                this._zy4 = (float)((int)((float)num / (float)contentLength * 100f));
+                this._zy4 /= 100f;
             }
             stream.Close();
             responseStream.Close();
-            this.MLEJNDABNJALNNFMJIOEAACHMAFMNPHLAPIH = false;
-            bool flag = this.HMGEOOBPKDDIMIOLCKFHBGFBFCOACIIDKJCL == 1f;
+            this._zy8 = false;
+            bool flag = this._zy4 == 1f;
             if (flag)
             {
                 FileInfo fileInfo = new FileInfo(tempPath);
@@ -98,36 +98,36 @@ namespace AHO
         // Token: 0x060003AA RID: 938 RVA: 0x000A80C8 File Offset: 0x000A62C8
         internal static void InitGuiStyles()
         {
-            _bj7.LHNNNCHIOKENOLCFIOLBAOAGMKEJLIGKACNJ = new GUIStyle
+            _bj7._zy9 = new GUIStyle
             {
                 margin = new RectOffset(10, 10, 10, 10),
                 fontSize = 14,
                 font = _bi2.LoadEditorResource<Font>(string.Format("Fonts/{0}", "")),
                 normal = new GUIStyleState
                 {
-                    textColor = (EditorGUIUtility.isProSkin ? _bj2.MNNLCEKFLEFMBCHACDKEKPNKJFLNGODIEIHL : _bj2.FGKLKJAOLFOKANIIGGCLFGBHKNGKGLNOAEEG)
+                    textColor = (EditorGUIUtility.isProSkin ? _bj2._zz1 : _bj2._zz2)
                 }
             };
-            _bj7.FADBGFHELNOBMJEKEMFOKHGEEKINDLDMIJML = new GUIStyle
+            _bj7._zx9 = new GUIStyle
             {
                 margin = new RectOffset(10, 10, 10, 10),
                 font = _bi2.LoadEditorResource<Font>(string.Format("Fonts/{0}", "PTMono.ttc")),
                 richText = true,
                 normal = new GUIStyleState()
             };
-            _bj7.OPJONFIMONDDOHCIPOLBIHOLJHIKHNOBKNPP = new GUIStyle
+            _bj7._zz3 = new GUIStyle
             {
                 margin = new RectOffset(10, 10, 10, 10),
                 font = _bi2.LoadEditorResource<Font>(string.Format("Fonts/{0}", "")),
                 fontSize = 14,
                 normal = new GUIStyleState
                 {
-                    textColor = (EditorGUIUtility.isProSkin ? _bj2.MNNLCEKFLEFMBCHACDKEKPNKJFLNGODIEIHL : _bj2.FGKLKJAOLFOKANIIGGCLFGBHKNGKGLNOAEEG)
+                    textColor = (EditorGUIUtility.isProSkin ? _bj2._zz1 : _bj2._zz2)
                 },
                 richText = true,
                 wordWrap = true
             };
-            _bj7.MGPAIJHPAPPELDLPELONIFICCKMIPFKHKKHG = new GUIStyle
+            _bj7._zy1 = new GUIStyle
             {
                 margin = new RectOffset(10, 10, 10, 10),
                 fixedWidth = 80f,
@@ -135,7 +135,7 @@ namespace AHO
                 normal = new GUIStyleState(),
                 hover = new GUIStyleState()
             };
-            _bj7.DHDFOGEKKINJPMEDLKCIOKDLCPBMEKEAGAEM = new GUIStyle
+            _bj7._zz4 = new GUIStyle
             {
                 margin = new RectOffset(0, 0, 0, 0),
                 alignment = (TextAnchor)4,
@@ -145,7 +145,7 @@ namespace AHO
                 font = _bi2.LoadEditorResource<Font>(string.Format("Fonts/{0}", "")),
                 normal = new GUIStyleState
                 {
-                    textColor = (EditorGUIUtility.isProSkin ? _bj2.MNNLCEKFLEFMBCHACDKEKPNKJFLNGODIEIHL : _bj2.FGKLKJAOLFOKANIIGGCLFGBHKNGKGLNOAEEG)
+                    textColor = (EditorGUIUtility.isProSkin ? _bj2._zz1 : _bj2._zz2)
                 }
             };
         }
@@ -157,7 +157,7 @@ namespace AHO
             _bj7.LoadIcons(false);
             base.wantsMouseMove = true;
             base.minSize = new Vector2(400f, 350f);
-            this.MGMEGOOBOECKFEEEEFDADMMJNJJFHGOHKBOL = typeof(EditorGUILayout).GetMethod("LinkButton", new Type[]
+            this._zz5 = typeof(EditorGUILayout).GetMethod("LinkButton", new Type[]
             {
                 typeof(string),
                 typeof(GUILayoutOption[])
@@ -167,24 +167,24 @@ namespace AHO
         // Token: 0x060003AC RID: 940 RVA: 0x000A8348 File Offset: 0x000A6548
         private void OnGUI()
         {
-            bool flag = this._AWJ == "" || this.KNGIADFDFDKPIOKMAJJLOHFOFJLKJCJBNHOJ == "";
+            bool flag = this._AWJ == "" || this._zy6 == "";
             if (flag)
             {
-                this.KNGIADFDFDKPIOKMAJJLOHFOFJLKJCJBNHOJ = string.Format("https://github.com/UnitySuperEditor/SuperEditor/releases/download/v{0}/SuperEditor{1}.unitypackage", this.MFJNEKEICMLFADGKJBGHBGAPDNPEHGFKBPLI.ToString(), this.MFJNEKEICMLFADGKJBGHBGAPDNPEHGFKBPLI.ToString());
-                this._AWJ = Directory.GetParent(Application.dataPath).ToString() + string.Format("/Temp/SuperEditor{0}.unitypackage", this.MFJNEKEICMLFADGKJBGHBGAPDNPEHGFKBPLI.ToString());
-                this.NMINMLAOPGNLLIFFFOKOCIDCNHFPENGNOJJB = Directory.GetParent(Application.dataPath).ToString() + string.Format("/Temp/SuperEditor{0}.temp", this.MFJNEKEICMLFADGKJBGHBGAPDNPEHGFKBPLI.ToString());
+                this._zy6 = string.Format("https://github.com/UnitySuperEditor/SuperEditor/releases/download/v{0}/SuperEditor{1}.unitypackage", this._zy2.ToString(), this._zy2.ToString());
+                this._AWJ = Directory.GetParent(Application.dataPath).ToString() + string.Format("/Temp/SuperEditor{0}.unitypackage", this._zy2.ToString());
+                this._zy7 = Directory.GetParent(Application.dataPath).ToString() + string.Format("/Temp/SuperEditor{0}.temp", this._zy2.ToString());
             }
             GUILayout.BeginHorizontal(Array.Empty<GUILayoutOption>());
-            bool flag2 = GUILayout.Button(this.BJHDMBMCEEKGFPMNHELDJLHPNCAHCHAFAAHF, _bj7.MGPAIJHPAPPELDLPELONIFICCKMIPFKHKKHG, Array.Empty<GUILayoutOption>());
+            bool flag2 = GUILayout.Button(this._zz6, _bj7._zy1, Array.Empty<GUILayoutOption>());
             if (flag2)
             {
-                bool flag3 = File.Exists(this._AWJ) && !this.MLEJNDABNJALNNFMJIOEAACHMAFMNPHLAPIH;
+                bool flag3 = File.Exists(this._AWJ) && !this._zy8;
                 if (flag3)
                 {
                     try
                     {
                         AssetDatabase.ImportPackage(this._AWJ, true);
-                        this.HMGEOOBPKDDIMIOLCKFHBGFBFCOACIIDKJCL = 1f;
+                        this._zy4 = 1f;
                     }
                     catch
                     {
@@ -193,7 +193,7 @@ namespace AHO
                 }
                 else
                 {
-                    bool flag4 = !this.MLEJNDABNJALNNFMJIOEAACHMAFMNPHLAPIH;
+                    bool flag4 = !this._zy8;
                     if (flag4)
                     {
                         this.GetUnityPackage();
@@ -205,48 +205,48 @@ namespace AHO
             {
                 base.Repaint();
             }
-            GUILayout.BeginVertical(_bj7.FADBGFHELNOBMJEKEMFOKHGEEKINDLDMIJML, Array.Empty<GUILayoutOption>());
-            GUILayout.Label(this.ONJLOECDFEKNEIDDDOMBFCNKLLOKNBEEIGBA, _bj7.DHDFOGEKKINJPMEDLKCIOKDLCPBMEKEAGAEM, Array.Empty<GUILayoutOption>());
+            GUILayout.BeginVertical(_bj7._zx9, Array.Empty<GUILayoutOption>());
+            GUILayout.Label(this._zy5, _bj7._zz4, Array.Empty<GUILayoutOption>());
             GUILayout.EndVertical();
             Color32 color;
             color = new Color32(108, 226, 108, 100);
-            this.OHEKADAFHMIDHMCDKBIJOLAPLFHHGEEECPGP = GUILayoutUtility.GetLastRect();
-            this.OHEKADAFHMIDHMCDKBIJOLAPLFHHGEEECPGP.width = this.OHEKADAFHMIDHMCDKBIJOLAPLFHHGEEECPGP.width * this.HMGEOOBPKDDIMIOLCKFHBGFBFCOACIIDKJCL;
+            this._zz7 = GUILayoutUtility.GetLastRect();
+            this._zz7.width = this._zz7.width * this._zy4;
             Color color2 = GUI.color;
             GUI.color *= color;
-            GUI.DrawTexture(this.OHEKADAFHMIDHMCDKBIJOLAPLFHHGEEECPGP, EditorGUIUtility.whiteTexture);
-            bool flag6 = this.HMGEOOBPKDDIMIOLCKFHBGFBFCOACIIDKJCL < 1f;
+            GUI.DrawTexture(this._zz7, EditorGUIUtility.whiteTexture);
+            bool flag6 = this._zy4 < 1f;
             if (flag6)
             {
                 base.Repaint();
             }
-            bool flag7 = this.HMGEOOBPKDDIMIOLCKFHBGFBFCOACIIDKJCL == 1f;
+            bool flag7 = this._zy4 == 1f;
             if (flag7)
             {
-                this.ONJLOECDFEKNEIDDDOMBFCNKLLOKNBEEIGBA = "Download Completed";
+                this._zy5 = "Download Completed";
             }
             GUI.color = color2;
             GUILayout.EndHorizontal();
-            this.EHOPFFNHBPPOLENAJMNEBEFIBLPLLGNIBIAC = EditorGUILayout.BeginScrollView(this.EHOPFFNHBPPOLENAJMNEBEFIBLPLLGNIBIAC, _bj7.FADBGFHELNOBMJEKEMFOKHGEEKINDLDMIJML, Array.Empty<GUILayoutOption>());
-            GUILayout.Label(string.Format("Version: {0}", this.MFJNEKEICMLFADGKJBGHBGAPDNPEHGFKBPLI._ABG), _bj7.LHNNNCHIOKENOLCFIOLBAOAGMKEJLIGKACNJ, Array.Empty<GUILayoutOption>());
-            GUILayout.Label("\n" + this.NMOCIHFKLIGDMOEGAMEEFGPEIJKCMCBJBOIF, _bj7.OPJONFIMONDDOHCIPOLBIHOLJHIKHNOBKNPP, Array.Empty<GUILayoutOption>());
+            this._zz8 = EditorGUILayout.BeginScrollView(this._zz8, _bj7._zx9, Array.Empty<GUILayoutOption>());
+            GUILayout.Label(string.Format("Version: {0}", this._zy2._ABG), _bj7._zy9, Array.Empty<GUILayoutOption>());
+            GUILayout.Label("\n" + this._zy3, _bj7._zz3, Array.Empty<GUILayoutOption>());
             EditorGUILayout.EndScrollView();
             GUILayout.BeginHorizontal(Array.Empty<GUILayoutOption>());
             GUILayout.Space(10f);
-            this.IOANEMHEDEHCIJNNEGACJFIKCMMNLPMLHMON(GUILayout.Toggle(this.OLDMDNBALBFCLMNDDOCBBGCDAFJLOLCKCOBG(), "Auto Import", new GUILayoutOption[]
+            this._zx8(GUILayout.Toggle(this._zx7(), "Auto Import", new GUILayoutOption[]
             {
                 GUILayout.Height(16f),
                 GUILayout.ExpandWidth(false)
             }));
             GUILayout.FlexibleSpace();
-            bool flag8 = this.MGMEGOOBOECKFEEEEFDADMMJNJJFHGOHKBOL != null;
+            bool flag8 = this._zz5 != null;
             if (flag8)
             {
-                MethodBase mgmegooboeckfeeeefdadmmjnjjfhgohkbol = this.MGMEGOOBOECKFEEEEFDADMMJNJJFHGOHKBOL;
+                MethodBase _zz9 = this._zz5;
                 object obj = null;
                 object[] array = new object[2];
                 array[0] = "View full release notes on Github";
-                bool flag9 = (bool)mgmegooboeckfeeeefdadmmjnjjfhgohkbol.Invoke(obj, array);
+                bool flag9 = (bool)_zz9.Invoke(obj, array);
                 if (flag9)
                 {
                     Application.OpenURL("https://github.com/UnitySuperEditor/SuperEditor/releases");
@@ -267,58 +267,58 @@ namespace AHO
 
         // Token: 0x04000410 RID: 1040
         [SerializeField]
-        private _bj9 MFJNEKEICMLFADGKJBGHBGAPDNPEHGFKBPLI;
+        private _bj9 _zy2;
 
         // Token: 0x04000411 RID: 1041
         [SerializeField]
-        private string NMOCIHFKLIGDMOEGAMEEFGPEIJKCMCBJBOIF;
+        private string _zy3;
 
         // Token: 0x04000412 RID: 1042
-        private Vector2 EHOPFFNHBPPOLENAJMNEBEFIBLPLLGNIBIAC = Vector2.zero;
+        private Vector2 _zz8 = Vector2.zero;
 
         // Token: 0x04000413 RID: 1043
-        private GUIContent BJHDMBMCEEKGFPMNHELDJLHPNCAHCHAFAAHF = new GUIContent("", "Download Directly");
+        private GUIContent _zz6 = new GUIContent("", "Download Directly");
 
         // Token: 0x04000414 RID: 1044
-        private static GUIStyle MGPAIJHPAPPELDLPELONIFICCKMIPFKHKKHG;
+        private static GUIStyle _zy1;
 
         // Token: 0x04000415 RID: 1045
-        private static GUIStyle DHDFOGEKKINJPMEDLKCIOKDLCPBMEKEAGAEM;
+        private static GUIStyle _zz4;
 
         // Token: 0x04000416 RID: 1046
-        private static GUIStyle JGMAIKNNJFPCNPLCPCODDNMKGHKHIPICNHLH;
+        private static GUIStyle _ya1;
 
         // Token: 0x04000417 RID: 1047
-        private static GUIStyle LHNNNCHIOKENOLCFIOLBAOAGMKEJLIGKACNJ;
+        private static GUIStyle _zy9;
 
         // Token: 0x04000418 RID: 1048
-        private static GUIStyle FADBGFHELNOBMJEKEMFOKHGEEKINDLDMIJML;
+        private static GUIStyle _zx9;
 
         // Token: 0x04000419 RID: 1049
-        private static GUIStyle OPJONFIMONDDOHCIPOLBIHOLJHIKHNOBKNPP;
+        private static GUIStyle _zz3;
 
         // Token: 0x0400041A RID: 1050
-        private string KNGIADFDFDKPIOKMAJJLOHFOFJLKJCJBNHOJ = "";
+        private string _zy6 = "";
 
         // Token: 0x0400041B RID: 1051
         private string _AWJ = "";
 
         // Token: 0x0400041C RID: 1052
-        private string NMINMLAOPGNLLIFFFOKOCIDCNHFPENGNOJJB = "";
+        private string _zy7 = "";
 
         // Token: 0x0400041D RID: 1053
-        private float HMGEOOBPKDDIMIOLCKFHBGFBFCOACIIDKJCL;
+        private float _zy4;
 
         // Token: 0x0400041E RID: 1054
-        private Rect OHEKADAFHMIDHMCDKBIJOLAPLFHHGEEECPGP;
+        private Rect _zz7;
 
         // Token: 0x0400041F RID: 1055
-        private string ONJLOECDFEKNEIDDDOMBFCNKLLOKNBEEIGBA = "Update Available";
+        private string _zy5 = "Update Available";
 
         // Token: 0x04000420 RID: 1056
-        private bool MLEJNDABNJALNNFMJIOEAACHMAFMNPHLAPIH;
+        private bool _zy8;
 
         // Token: 0x04000421 RID: 1057
-        private MethodInfo MGMEGOOBOECKFEEEEFDADMMJNJJFHGOHKBOL;
+        private MethodInfo _zz5;
     }
 }

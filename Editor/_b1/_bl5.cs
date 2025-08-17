@@ -3,10 +3,10 @@
 namespace AHO
 {
     // Token: 0x020000E9 RID: 233
-    internal class NLGEOGIKCPGHIFEMBHMJCBHPIFHBPGOJKCJI : _bm6
+    internal class _zh6 : _bm6
     {
         // Token: 0x060006D5 RID: 1749 RVA: 0x000E5AC8 File Offset: 0x000E3CC8
-        public NLGEOGIKCPGHIFEMBHMJCBHPIFHBPGOJKCJI(_bb4._ACW node)
+        public _zh6(_bb4._ACW node)
             : base(node)
         {
         }

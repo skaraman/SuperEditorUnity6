@@ -15,10 +15,10 @@ namespace ODGL
         internal _f3()
         {
             this.NKCO = _fa2.GetInstance().GetColor((_f8)1);
-            this.BEALMDCDBHLDMKIHCFOMJGCHHLLCJIAPOLJO = _fa2.GetInstance().GetColor((_f8)4);
-            this.PIAJEEJBAGMBEECEMOJNAHHJNLHOMFOCJNJN = _fa2.GetInstance().GetColor((_f8)3);
+            this._yp6 = _fa2.GetInstance().GetColor((_f8)4);
+            this._yp7 = _fa2.GetInstance().GetColor((_f8)3);
             this.OIGP = new GUIStyle();
-            this.OIGP.normal.textColor = this.BEALMDCDBHLDMKIHCFOMJGCHHLLCJIAPOLJO;
+            this.OIGP.normal.textColor = this._yp6;
             this.OIGP.fontSize = 8;
             this.OIGP.clipping = (TextClipping)1;
             _f5.GetInstance().AddEventListener(HierarchySetting.TagAndLayerType, new SettingChangedHandler(this.SettingsChanged));
@@ -33,11 +33,11 @@ namespace ODGL
         // Token: 0x06000997 RID: 2455 RVA: 0x00102418 File Offset: 0x00100618
         private void SettingsChanged()
         {
-            this.CGEAEHAOPNLHEMHNPHAPAAPNOLHDIMIPIFBH = _f5.GetInstance().Get<int>(HierarchySetting.TagAndLayerType) == 0;
-            this.CFGGEHHIPPPLPLCFKAPAFBLHEPCBCFFIFMDM = _f5.GetInstance().Get<int>(HierarchySetting.TagAndLayerSizeValueType) == 0;
-            this.PFBFIEHFFADJHHCDOIKOOJIAOMKDHEOJKHIK = _f5.GetInstance().Get<int>(HierarchySetting.TagAndLayerSizeValuePixel);
-            this.MJBEOAFJOPNAPFPNMHPAIDBGJDNPPMDKKABA = _f5.GetInstance().Get<float>(HierarchySetting.TagAndLayerSizeValuePercent);
-            this.IAMFJGJFGOOIPJMKNFKHCHPIECOPCBONELLD = (TagAndLayerLabelSize)_f5.GetInstance().Get<int>(HierarchySetting.TagAndLayerLabelSize);
+            this._yp8 = _f5.GetInstance().Get<int>(HierarchySetting.TagAndLayerType) == 0;
+            this._yp9 = _f5.GetInstance().Get<int>(HierarchySetting.TagAndLayerSizeValueType) == 0;
+            this._yq1 = _f5.GetInstance().Get<int>(HierarchySetting.TagAndLayerSizeValuePixel);
+            this._yq2 = _f5.GetInstance().Get<float>(HierarchySetting.TagAndLayerSizeValuePercent);
+            this._yq3 = (TagAndLayerLabelSize)_f5.GetInstance().Get<int>(HierarchySetting.TagAndLayerLabelSize);
             this.HHIK = _f5.GetInstance().Get<bool>(HierarchySetting.ShowTagLayerComponent);
         }
 
@@ -46,34 +46,34 @@ namespace ODGL
         {
             string tagName = this.GetTagName(gameObject);
             string layerName = this.GetLayerName(gameObject.layer);
-            bool flag = tagName == "Untagged" && layerName == "Default" && _f3.BCEOAOBFEGJFCDJPKPKFJPOIIGGDIBOCDPBO == null;
+            bool flag = tagName == "Untagged" && layerName == "Default" && _f3._yq4 == null;
             if (!flag)
             {
-                bool flag2 = tagName.Length > _f3.HEJGIHBKIOGPEICKCJHMFFGCOGKDDBOEFPPA.Length;
+                bool flag2 = tagName.Length > _f3._yq5.Length;
                 if (flag2)
                 {
-                    _f3.HEJGIHBKIOGPEICKCJHMFFGCOGKDDBOEFPPA = tagName;
-                    _f3.BCEOAOBFEGJFCDJPKPKFJPOIIGGDIBOCDPBO = gameObject;
+                    _f3._yq5 = tagName;
+                    _f3._yq4 = gameObject;
                 }
-                bool flag3 = layerName.Length > _f3.HEJGIHBKIOGPEICKCJHMFFGCOGKDDBOEFPPA.Length;
+                bool flag3 = layerName.Length > _f3._yq5.Length;
                 if (flag3)
                 {
-                    _f3.HEJGIHBKIOGPEICKCJHMFFGCOGKDDBOEFPPA = layerName;
-                    _f3.BCEOAOBFEGJFCDJPKPKFJPOIIGGDIBOCDPBO = gameObject;
+                    _f3._yq5 = layerName;
+                    _f3._yq4 = gameObject;
                 }
-                bool flag4 = _f3.BCEOAOBFEGJFCDJPKPKFJPOIIGGDIBOCDPBO == null;
+                bool flag4 = _f3._yq4 == null;
                 if (flag4)
                 {
-                    _f3.BCEOAOBFEGJFCDJPKPKFJPOIIGGDIBOCDPBO = gameObject;
+                    _f3._yq4 = gameObject;
                 }
-                string tagName2 = this.GetTagName(_f3.BCEOAOBFEGJFCDJPKPKFJPOIIGGDIBOCDPBO);
-                string layerName2 = this.GetLayerName(_f3.BCEOAOBFEGJFCDJPKPKFJPOIIGGDIBOCDPBO.layer);
-                bool flag5 = tagName2 != _f3.HEJGIHBKIOGPEICKCJHMFFGCOGKDDBOEFPPA && layerName2 != _f3.HEJGIHBKIOGPEICKCJHMFFGCOGKDDBOEFPPA;
+                string tagName2 = this.GetTagName(_f3._yq4);
+                string layerName2 = this.GetLayerName(_f3._yq4.layer);
+                bool flag5 = tagName2 != _f3._yq5 && layerName2 != _f3._yq5;
                 if (flag5)
                 {
-                    _f3.HEJGIHBKIOGPEICKCJHMFFGCOGKDDBOEFPPA = ((tagName2.Length > layerName2.Length) ? tagName2 : layerName2);
+                    _f3._yq5 = ((tagName2.Length > layerName2.Length) ? tagName2 : layerName2);
                 }
-                rect.width = this.OIGP.CalcSize(new GUIContent("T: " + _f3.HEJGIHBKIOGPEICKCJHMFFGCOGKDDBOEFPPA)).x;
+                rect.width = this.OIGP.CalcSize(new GUIContent("T: " + _f3._yq5)).x;
                 rect.x -= rect.width;
             }
         }
@@ -83,7 +83,7 @@ namespace ODGL
         {
             int layer = gameObject.layer;
             string tagName = this.GetTagName(gameObject);
-            bool flag = this.CGEAEHAOPNLHEMHNPHAPAAPNOLHDIMIPIFBH || tagName != "Untagged" || layer != 0;
+            bool flag = this._yp8 || tagName != "Untagged" || layer != 0;
             if (flag)
             {
                 curRect.height = 17f;
@@ -112,28 +112,28 @@ namespace ODGL
                     }
                 }
                 this.OIGP.fontSize = 8;
-                bool flag5 = layer == 0 && tagName != "Untagged" && !this.CGEAEHAOPNLHEMHNPHAPAAPNOLHDIMIPIFBH;
+                bool flag5 = layer == 0 && tagName != "Untagged" && !this._yp8;
                 if (flag5)
                 {
                     curRect.y += 5f;
-                    this.OIGP.normal.textColor = this.PIAJEEJBAGMBEECEMOJNAHHJNLHOMFOCJNJN;
+                    this.OIGP.normal.textColor = this._yp7;
                     EditorGUI.LabelField(curRect, "T: " + tagName, this.OIGP);
                 }
                 else
                 {
-                    bool flag6 = layer != 0 && tagName == "Untagged" && !this.CGEAEHAOPNLHEMHNPHAPAAPNOLHDIMIPIFBH;
+                    bool flag6 = layer != 0 && tagName == "Untagged" && !this._yp8;
                     if (flag6)
                     {
                         curRect.y += 5f;
-                        this.OIGP.normal.textColor = this.PIAJEEJBAGMBEECEMOJNAHHJNLHOMFOCJNJN;
+                        this.OIGP.normal.textColor = this._yp7;
                         EditorGUI.LabelField(curRect, "L: " + this.GetLayerName(layer), this.OIGP);
                     }
                     else
                     {
-                        this.OIGP.normal.textColor = ((tagName == "Untagged") ? this.BEALMDCDBHLDMKIHCFOMJGCHHLLCJIAPOLJO : this.PIAJEEJBAGMBEECEMOJNAHHJNLHOMFOCJNJN);
+                        this.OIGP.normal.textColor = ((tagName == "Untagged") ? this._yp6 : this._yp7);
                         EditorGUI.LabelField(curRect, "T: " + tagName, this.OIGP);
                         curRect.y += 8f;
-                        this.OIGP.normal.textColor = ((layer == 0) ? this.BEALMDCDBHLDMKIHCFOMJGCHHLLCJIAPOLJO : this.PIAJEEJBAGMBEECEMOJNAHHJNLHOMFOCJNJN);
+                        this.OIGP.normal.textColor = ((layer == 0) ? this._yp6 : this._yp7);
                         EditorGUI.LabelField(curRect, "L: " + this.GetLayerName(layer), this.OIGP);
                     }
                 }
@@ -148,7 +148,7 @@ namespace ODGL
             {
                 int layer = gameObject.layer;
                 string tagName = this.GetTagName(gameObject);
-                bool flag2 = this.CGEAEHAOPNLHEMHNPHAPAAPNOLHDIMIPIFBH || tagName != "Untagged" || layer != 0;
+                bool flag2 = this._yp8 || tagName != "Untagged" || layer != 0;
                 if (flag2)
                 {
                     Event.current.Use();
@@ -162,14 +162,14 @@ namespace ODGL
                         array = Selection.gameObjects;
                     }
                     this.HOMD = array;
-                    bool flag3 = layer == 0 && tagName != "Untagged" && !this.CGEAEHAOPNLHEMHNPHAPAAPNOLHDIMIPIFBH;
+                    bool flag3 = layer == 0 && tagName != "Untagged" && !this._yp8;
                     if (flag3)
                     {
                         this.ShowTagsContextMenu(tagName);
                     }
                     else
                     {
-                        bool flag4 = layer != 0 && tagName == "Untagged" && !this.CGEAEHAOPNLHEMHNPHAPAAPNOLHDIMIPIFBH;
+                        bool flag4 = layer != 0 && tagName == "Untagged" && !this._yp8;
                         if (flag4)
                         {
                             this.ShowLayersContextMenu(LayerMask.LayerToName(layer));
@@ -293,36 +293,36 @@ namespace ODGL
         private GUIStyle OIGP;
 
         // Token: 0x04000838 RID: 2104
-        private Color PIAJEEJBAGMBEECEMOJNAHHJNLHOMFOCJNJN;
+        private Color _yp7;
 
         // Token: 0x04000839 RID: 2105
-        private Color BEALMDCDBHLDMKIHCFOMJGCHHLLCJIAPOLJO;
+        private Color _yp6;
 
         // Token: 0x0400083A RID: 2106
         private Color NKCO;
 
         // Token: 0x0400083B RID: 2107
-        private bool CGEAEHAOPNLHEMHNPHAPAAPNOLHDIMIPIFBH;
+        private bool _yp8;
 
         // Token: 0x0400083C RID: 2108
-        private bool CFGGEHHIPPPLPLCFKAPAFBLHEPCBCFFIFMDM;
+        private bool _yp9;
 
         // Token: 0x0400083D RID: 2109
-        private int PFBFIEHFFADJHHCDOIKOOJIAOMKDHEOJKHIK;
+        private int _yq1;
 
         // Token: 0x0400083E RID: 2110
-        private float MJBEOAFJOPNAPFPNMHPAIDBGJDNPPMDKKABA;
+        private float _yq2;
 
         // Token: 0x0400083F RID: 2111
         private GameObject[] HOMD;
 
         // Token: 0x04000840 RID: 2112
-        private TagAndLayerLabelSize IAMFJGJFGOOIPJMKNFKHCHPIECOPCBONELLD;
+        private TagAndLayerLabelSize _yq3;
 
         // Token: 0x04000841 RID: 2113
-        private static string HEJGIHBKIOGPEICKCJHMFFGCOGKDDBOEFPPA = "";
+        private static string _yq5 = "";
 
         // Token: 0x04000842 RID: 2114
-        private static GameObject BCEOAOBFEGJFCDJPKPKFJPOIIGGDIBOCDPBO;
+        private static GameObject _yq4;
     }
 }

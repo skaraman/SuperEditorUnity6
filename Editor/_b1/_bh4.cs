@@ -6473,7 +6473,7 @@ namespace AHO
         }
 
         // Token: 0x06000616 RID: 1558 RVA: 0x000E2950 File Offset: 0x000E0B50
-        public bool CCHFDEPNIEOKILOEBJANDNGJDJMHMHJHAEEC()
+        public bool _yh3()
         {
             return (this._AV & Modifiers.Sealed) > Modifiers.None;
         }
@@ -6558,7 +6558,7 @@ namespace AHO
         }
 
         // Token: 0x0600061F RID: 1567 RVA: 0x000E2B5C File Offset: 0x000E0D5C
-        public bool PGIPEAHFGPPKEMGFLHBIMNOONGJMJEFBMIJG()
+        public bool _yg6()
         {
             return (this._AV & (Modifiers.Public | Modifiers.Internal | Modifiers.Protected)) == Modifiers.None;
         }

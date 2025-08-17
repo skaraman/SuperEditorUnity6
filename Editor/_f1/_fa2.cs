@@ -42,7 +42,7 @@ namespace ODGL
         // Token: 0x06000965 RID: 2405 RVA: 0x0010077C File Offset: 0x000FE97C
         internal Color GetColor(_f8 color)
         {
-            return EditorGUIUtility.isProSkin ? this.DCNMFMNHMFLHMHEKHOAIEMOIAOOJNMHBPGMN[color] : this.PKDHOKPOCIPIJGOLMCPJBELHOJLPBPPOIELN[color];
+            return EditorGUIUtility.isProSkin ? this._yu2[color] : this._yu3[color];
         }
 
         // Token: 0x04000805 RID: 2053
@@ -214,7 +214,7 @@ namespace ODGL
         };
 
         // Token: 0x04000809 RID: 2057
-        private Dictionary<_f8, Color> DCNMFMNHMFLHMHEKHOAIEMOIAOOJNMHBPGMN = new Dictionary<_f8, Color>
+        private Dictionary<_f8, Color> _yu2 = new Dictionary<_f8, Color>
         {
             {
                 (_f8)0,
@@ -239,7 +239,7 @@ namespace ODGL
         };
 
         // Token: 0x0400080A RID: 2058
-        private Dictionary<_f8, Color> PKDHOKPOCIPIJGOLMCPJBELHOJLPBPPOIELN = new Dictionary<_f8, Color>
+        private Dictionary<_f8, Color> _yu3 = new Dictionary<_f8, Color>
         {
             {
                 (_f8)0,

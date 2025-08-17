@@ -12,13 +12,13 @@ namespace AHO
         // Token: 0x06000510 RID: 1296 RVA: 0x000D0CC8 File Offset: 0x000CEEC8
         public _bc6 _AAF()
         {
-            return this.NNFJJEODBHKNJMAOHMEHGOGEHJEFJHJDOMIH;
+            return this._yh4;
         }
 
         // Token: 0x06000511 RID: 1297 RVA: 0x000D0CE0 File Offset: 0x000CEEE0
-        private void BCFCNNLDOMFPKAMFEFJCBOAIOMPJCDBPIHHC(_bc6 value)
+        private void _yh5(_bc6 value)
         {
-            this.NNFJJEODBHKNJMAOHMEHGOGEHJEFJHJDOMIH = value.GetGenericSymbol() as _bc6;
+            this._yh4 = value.GetGenericSymbol() as _bc6;
         }
 
         // Token: 0x06000512 RID: 1298 RVA: 0x000D0CF4 File Offset: 0x000CEEF4
@@ -27,7 +27,7 @@ namespace AHO
             this._AW = definition._AW;
             this._AT = definition._AT;
             this._AO = definition._AO.GetGenericSymbol();
-            this.BCFCNNLDOMFPKAMFEFJCBOAIOMPJCDBPIHHC(definition);
+            this._yh5(definition);
             bool flag = definition._AHL != null && arguments != null;
             if (flag)
             {
@@ -59,13 +59,13 @@ namespace AHO
                 else
                 {
                     _AAE = _AAE.ConstructType(this._AHH);
-                    _AAE.BCFCNNLDOMFPKAMFEFJCBOAIOMPJCDBPIHHC(_AAE._AAF().Rebind() as _bc6);
+                    _AAE._yh5(_AAE._AAF().Rebind() as _bc6);
                     _AAH = _AAE;
                 }
             }
             else
             {
-                this.BCFCNNLDOMFPKAMFEFJCBOAIOMPJCDBPIHHC(this._AAF().Rebind() as _bc6);
+                this._yh5(this._AAF().Rebind() as _bc6);
                 int count = this._AHL.Count;
                 while (count-- > 0)
                 {
@@ -496,7 +496,7 @@ namespace AHO
             if (!flag)
             {
                 _bh4 _AAH2 = null;
-                bool flag2 = this.JPALPBLAHLKHFDNGKGAKOINKKCEINBOGMBAA != null && this.JPALPBLAHLKHFDNGKGAKOINKKCEINBOGMBAA.TryGetValue(_AAH, out _AAH2);
+                bool flag2 = this._yh6 != null && this._yh6.TryGetValue(_AAH, out _AAH2);
                 if (flag2)
                 {
                     leaf._ACY(_AAH2);
@@ -542,22 +542,22 @@ namespace AHO
             }
             else
             {
-                bool flag3 = this.JPALPBLAHLKHFDNGKGAKOINKKCEINBOGMBAA == null;
+                bool flag3 = this._yh6 == null;
                 _bh4 _AAH3;
                 if (flag3)
                 {
-                    this.JPALPBLAHLKHFDNGKGAKOINKKCEINBOGMBAA = new Dictionary<_bh4, _bh4>();
+                    this._yh6 = new Dictionary<_bh4, _bh4>();
                 }
                 else
                 {
-                    bool flag4 = this.JPALPBLAHLKHFDNGKGAKOINKKCEINBOGMBAA.TryGetValue(member, out _AAH3);
+                    bool flag4 = this._yh6.TryGetValue(member, out _AAH3);
                     if (flag4)
                     {
                         return _AAH3;
                     }
                 }
                 _AAH3 = this.ConstructMember(member);
-                this.JPALPBLAHLKHFDNGKGAKOINKKCEINBOGMBAA[member] = _AAH3;
+                this._yh6[member] = _AAH3;
                 _AAH2 = _AAH3;
             }
             return _AAH2;
@@ -575,7 +575,7 @@ namespace AHO
             bool flag2 = member is _bc6;
             if (flag2)
             {
-                _AAH = (member as _bc6).ConstructType(this.HCMKMHGGAIIDKEEHEHMBACAFIEFAPFDHJLFC);
+                _AAH = (member as _bc6).ConstructType(this._yh7);
             }
             else
             {
@@ -667,15 +667,15 @@ namespace AHO
         }
 
         // Token: 0x040004F1 RID: 1265
-        private _bc6 NNFJJEODBHKNJMAOHMEHGOGEHJEFJHJDOMIH;
+        private _bc6 _yh4;
 
         // Token: 0x040004F2 RID: 1266
         public readonly KJK[] _AHH;
 
         // Token: 0x040004F3 RID: 1267
-        public Dictionary<_bh4, _bh4> JPALPBLAHLKHFDNGKGAKOINKKCEINBOGMBAA;
+        public Dictionary<_bh4, _bh4> _yh6;
 
         // Token: 0x040004F4 RID: 1268
-        private readonly KJK[] HCMKMHGGAIIDKEEHEHMBACAFIEFAPFDHJLFC = new KJK[0];
+        private readonly KJK[] _yh7 = new KJK[0];
     }
 }

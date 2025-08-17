@@ -33,19 +33,19 @@ namespace ODGL
         // Token: 0x060009C2 RID: 2498 RVA: 0x00103B5A File Offset: 0x00101D5A
         private void SettingsChanged()
         {
-            this.JJCBFBDNALIDAOGOEEOANMGBEGFINLIHPHOF = _f5.GetInstance().Get<bool>(HierarchySetting.ShowHiddenObjectList);
-            this.GACIFCJIJAKPDCECMBCDJODEPJJEKPOFJIEO = _f5.GetInstance().Get<bool>(HierarchySetting.ShowLock) && _f5.GetInstance().Get<bool>(HierarchySetting.PreventSelectionOfLockedObjects);
+            this._yr7 = _f5.GetInstance().Get<bool>(HierarchySetting.ShowHiddenObjectList);
+            this._yr8 = _f5.GetInstance().Get<bool>(HierarchySetting.ShowLock) && _f5.GetInstance().Get<bool>(HierarchySetting.PreventSelectionOfLockedObjects);
         }
 
         // Token: 0x060009C3 RID: 2499 RVA: 0x00103B94 File Offset: 0x00101D94
         private bool isSelectionChanged()
         {
-            bool flag = this.KMLAJJMIPKAJCPECIBCEFBOIOKMDCIOPBGNL != Selection.activeGameObject || this.FDECGOFLKOFLOIBBKMCAKMPOAPDDHKLPBDNA != Selection.gameObjects.Length;
+            bool flag = this._yr9 != Selection.activeGameObject || this._ys1 != Selection.gameObjects.Length;
             bool flag2;
             if (flag)
             {
-                this.KMLAJJMIPKAJCPECIBCEFBOIOKMDCIOPBGNL = Selection.activeGameObject;
-                this.FDECGOFLKOFLOIBBKMCAKMPOAPDDHKLPBDNA = Selection.gameObjects.Length;
+                this._yr9 = Selection.activeGameObject;
+                this._ys1 = Selection.gameObjects.Length;
                 flag2 = true;
             }
             else
@@ -59,14 +59,14 @@ namespace ODGL
         public void validate()
         {
             _fb5.FGNP.RemoveAll((_fb5 item) => item == null);
-            foreach (_fb5 njahlagmgabdcnloedcemmeoblfchpnlhaac in _fb5.FGNP)
+            foreach (_fb5 _ys2 in _fb5.FGNP)
             {
-                njahlagmgabdcnloedcemmeoblfchpnlhaac.CheckIntegrity();
+                _ys2.CheckIntegrity();
             }
-            this.GJFBPNOOLONPKHEINBDDOJAMFFOINGGPFDIE.Clear();
-            foreach (_fb5 njahlagmgabdcnloedcemmeoblfchpnlhaac2 in _fb5.FGNP)
+            this._ys3.Clear();
+            foreach (_fb5 _ys4 in _fb5.FGNP)
             {
-                this.GJFBPNOOLONPKHEINBDDOJAMFFOINGGPFDIE.Add(njahlagmgabdcnloedcemmeoblfchpnlhaac2.gameObject.scene, njahlagmgabdcnloedcemmeoblfchpnlhaac2);
+                this._ys3.Add(_ys4.gameObject.scene, _ys4);
             }
         }
 
@@ -75,43 +75,43 @@ namespace ODGL
         {
             try
             {
-                List<_fb5> fgnpddkhhhmagpmjampcijfahjmckcpkgjdl = _fb5.FGNP;
-                int count = fgnpddkhhhmagpmjampcijfahjmckcpkgjdl.Count;
+                List<_fb5> _ys5 = _fb5.FGNP;
+                int count = _ys5.Count;
                 bool flag = count > 0;
                 if (flag)
                 {
                     for (int i = count - 1; i >= 0; i--)
                     {
-                        _fb5 njahlagmgabdcnloedcemmeoblfchpnlhaac = fgnpddkhhhmagpmjampcijfahjmckcpkgjdl[i];
-                        Scene scene = njahlagmgabdcnloedcemmeoblfchpnlhaac.gameObject.scene;
-                        bool flag2 = this.GJFBPNOOLONPKHEINBDDOJAMFFOINGGPFDIE.ContainsKey(scene);
+                        _fb5 _ys2 = _ys5[i];
+                        Scene scene = _ys2.gameObject.scene;
+                        bool flag2 = this._ys3.ContainsKey(scene);
                         if (flag2)
                         {
-                            bool flag3 = this.GJFBPNOOLONPKHEINBDDOJAMFFOINGGPFDIE[scene] != njahlagmgabdcnloedcemmeoblfchpnlhaac;
+                            bool flag3 = this._ys3[scene] != _ys2;
                             if (flag3)
                             {
-                                this.GJFBPNOOLONPKHEINBDDOJAMFFOINGGPFDIE[scene].Merge(njahlagmgabdcnloedcemmeoblfchpnlhaac);
-                                UnityEngine.Object.DestroyImmediate(njahlagmgabdcnloedcemmeoblfchpnlhaac.gameObject);
+                                this._ys3[scene].Merge(_ys2);
+                                UnityEngine.Object.DestroyImmediate(_ys2.gameObject);
                             }
                         }
                         else
                         {
-                            this.GJFBPNOOLONPKHEINBDDOJAMFFOINGGPFDIE.Add(scene, njahlagmgabdcnloedcemmeoblfchpnlhaac);
+                            this._ys3.Add(scene, _ys2);
                         }
                     }
-                    foreach (KeyValuePair<Scene, _fb5> keyValuePair in this.GJFBPNOOLONPKHEINBDDOJAMFFOINGGPFDIE)
+                    foreach (KeyValuePair<Scene, _fb5> keyValuePair in this._ys3)
                     {
                         _fb5 value = keyValuePair.Value;
                         this.setupObjectList(value);
-                        bool flag4 = (this.JJCBFBDNALIDAOGOEEOANMGBEGFINLIHPHOF && (value.gameObject.hideFlags & HideFlags.HideInHierarchy) > 0) || (!this.JJCBFBDNALIDAOGOEEOANMGBEGFINLIHPHOF && (value.gameObject.hideFlags & HideFlags.HideInHierarchy) == 0);
+                        bool flag4 = (this._yr7 && (value.gameObject.hideFlags & HideFlags.HideInHierarchy) > 0) || (!this._yr7 && (value.gameObject.hideFlags & HideFlags.HideInHierarchy) == 0);
                         if (flag4)
                         {
                             value.gameObject.hideFlags ^= HideFlags.HideInHierarchy;
                             EditorApplication.DirtyHierarchyWindowSorting();
                         }
                     }
-                    bool gacifcjijakpdcecmbcdjodepjjekpofjieo = this.GACIFCJIJAKPDCECMBCDJODEPJJEKPOFJIEO;
-                    if (gacifcjijakpdcecmbcdjodepjjekpofjieo)
+                    bool _ys6 = this._yr8;
+                    if (_ys6)
                     {
                         GameObject[] gameObjects = Selection.gameObjects;
                         List<GameObject> list = new List<GameObject>(gameObjects.Length);
@@ -119,10 +119,10 @@ namespace ODGL
                         for (int j = gameObjects.Length - 1; j >= 0; j--)
                         {
                             GameObject gameObject = gameObjects[j];
-                            bool flag6 = this.GJFBPNOOLONPKHEINBDDOJAMFFOINGGPFDIE.ContainsKey(gameObject.scene);
+                            bool flag6 = this._ys3.ContainsKey(gameObject.scene);
                             if (flag6)
                             {
-                                bool flag7 = this.GJFBPNOOLONPKHEINBDDOJAMFFOINGGPFDIE[gameObject.scene].AENN.Contains(gameObjects[j]);
+                                bool flag7 = this._ys3[gameObject.scene].AENN.Contains(gameObjects[j]);
                                 bool flag8 = !flag7;
                                 if (flag8)
                                 {
@@ -141,8 +141,8 @@ namespace ODGL
                             Selection.objects = array;
                         }
                     }
-                    this.KODPIDPPBCBCJKOJM_AWGEBJBJLMDBJNPCKI = SceneManager.GetActiveScene();
-                    this.MOHJMKPPPLBLNAPKJONNPCCGELMCLOGLJLIP = SceneManager.loadedSceneCount;
+                    this._ys7 = SceneManager.GetActiveScene();
+                    this._ys8 = SceneManager.loadedSceneCount;
                 }
             }
             catch
@@ -153,37 +153,37 @@ namespace ODGL
         // Token: 0x060009C6 RID: 2502 RVA: 0x00103F50 File Offset: 0x00102150
         public _fb5 getObjectList(GameObject gameObject, bool createIfNotExist = true)
         {
-            _fb5 njahlagmgabdcnloedcemmeoblfchpnlhaac = null;
-            this.GJFBPNOOLONPKHEINBDDOJAMFFOINGGPFDIE.TryGetValue(gameObject.scene, out njahlagmgabdcnloedcemmeoblfchpnlhaac);
-            bool flag = njahlagmgabdcnloedcemmeoblfchpnlhaac == null && createIfNotExist;
+            _fb5 _ys2 = null;
+            this._ys3.TryGetValue(gameObject.scene, out _ys2);
+            bool flag = _ys2 == null && createIfNotExist;
             if (flag)
             {
-                njahlagmgabdcnloedcemmeoblfchpnlhaac = this.createObjectList(gameObject);
-                bool flag2 = gameObject.scene != njahlagmgabdcnloedcemmeoblfchpnlhaac.gameObject.scene;
+                _ys2 = this.createObjectList(gameObject);
+                bool flag2 = gameObject.scene != _ys2.gameObject.scene;
                 if (flag2)
                 {
-                    SceneManager.MoveGameObjectToScene(njahlagmgabdcnloedcemmeoblfchpnlhaac.gameObject, gameObject.scene);
+                    SceneManager.MoveGameObjectToScene(_ys2.gameObject, gameObject.scene);
                 }
-                this.GJFBPNOOLONPKHEINBDDOJAMFFOINGGPFDIE.Add(gameObject.scene, njahlagmgabdcnloedcemmeoblfchpnlhaac);
+                this._ys3.Add(gameObject.scene, _ys2);
             }
-            return njahlagmgabdcnloedcemmeoblfchpnlhaac;
+            return _ys2;
         }
 
         // Token: 0x060009C7 RID: 2503 RVA: 0x00103FD0 File Offset: 0x001021D0
         public bool isSceneChanged()
         {
-            return this.KODPIDPPBCBCJKOJM_AWGEBJBJLMDBJNPCKI != SceneManager.GetActiveScene() || this.MOHJMKPPPLBLNAPKJONNPCCGELMCLOGLJLIP != SceneManager.loadedSceneCount;
+            return this._ys7 != SceneManager.GetActiveScene() || this._ys8 != SceneManager.loadedSceneCount;
         }
 
         // Token: 0x060009C8 RID: 2504 RVA: 0x00104010 File Offset: 0x00102210
         private _fb5 createObjectList(GameObject gameObject)
         {
-            _fb5 njahlagmgabdcnloedcemmeoblfchpnlhaac = new GameObject
+            _fb5 _ys2 = new GameObject
             {
                 name = "ObjectList"
             }.AddComponent<_fb5>();
-            this.setupObjectList(njahlagmgabdcnloedcemmeoblfchpnlhaac);
-            return njahlagmgabdcnloedcemmeoblfchpnlhaac;
+            this.setupObjectList(_ys2);
+            return _ys2;
         }
 
         // Token: 0x060009C9 RID: 2505 RVA: 0x00104044 File Offset: 0x00102244
@@ -206,24 +206,24 @@ namespace ODGL
         private static _f7 _AA;
 
         // Token: 0x04000858 RID: 2136
-        private bool JJCBFBDNALIDAOGOEEOANMGBEGFINLIHPHOF;
+        private bool _yr7;
 
         // Token: 0x04000859 RID: 2137
-        private bool GACIFCJIJAKPDCECMBCDJODEPJJEKPOFJIEO;
+        private bool _yr8;
 
         // Token: 0x0400085A RID: 2138
-        private GameObject KMLAJJMIPKAJCPECIBCEFBOIOKMDCIOPBGNL = null;
+        private GameObject _yr9 = null;
 
         // Token: 0x0400085B RID: 2139
-        private int FDECGOFLKOFLOIBBKMCAKMPOAPDDHKLPBDNA = 0;
+        private int _ys1 = 0;
 
         // Token: 0x0400085C RID: 2140
-        private Dictionary<Scene, _fb5> GJFBPNOOLONPKHEINBDDOJAMFFOINGGPFDIE = new Dictionary<Scene, _fb5>();
+        private Dictionary<Scene, _fb5> _ys3 = new Dictionary<Scene, _fb5>();
 
         // Token: 0x0400085D RID: 2141
-        private Scene KODPIDPPBCBCJKOJM_AWGEBJBJLMDBJNPCKI;
+        private Scene _ys7;
 
         // Token: 0x0400085E RID: 2142
-        private int MOHJMKPPPLBLNAPKJONNPCCGELMCLOGLJLIP = 0;
+        private int _ys8 = 0;
     }
 }

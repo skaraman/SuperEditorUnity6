@@ -10,15 +10,15 @@ namespace AHO
         internal string _AW;
 
         // Token: 0x04000409 RID: 1033
-        internal string GKPGANAPJCEOGBLJFEIMEOFPLPLCEBLLHACJ;
+        internal string _zk4;
 
         // Token: 0x0400040A RID: 1034
-        internal string HPEOKHPMOKLHPINDDBEMIEJGDJJHI_AWFKKE;
+        internal string _zk5;
 
         // Token: 0x0400040B RID: 1035
-        internal string JEJNNOAHPJLDNBCHDEMEPEGFJOGMHDHCAINF;
+        internal string _zk6;
 
         // Token: 0x0400040C RID: 1036
-        internal string GJPNJPHDOMEKIEGFFFMDAJALPPFFOPIGOAIH;
+        internal string _zk7;
     }
 }

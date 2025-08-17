@@ -11,7 +11,7 @@ namespace AHO
         // Token: 0x060005AD RID: 1453 RVA: 0x000D6960 File Offset: 0x000D4B60
         internal override _bh4 TypeOf()
         {
-            return this.FLBCGBEABCDKMPJGEKEHNHMGHIHEPGGMHJAF;
+            return this._zk3;
         }
 
         // Token: 0x060005AE RID: 1454 RVA: 0x00014488 File Offset: 0x00012688
@@ -20,6 +20,6 @@ namespace AHO
         }
 
         // Token: 0x0400052B RID: 1323
-        public readonly _bl7 FLBCGBEABCDKMPJGEKEHNHMGHIHEPGGMHJAF = new _bl7();
+        public readonly _bl7 _zk3 = new _bl7();
     }
 }

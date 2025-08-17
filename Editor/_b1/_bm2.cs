@@ -36,16 +36,16 @@ namespace AHO
 
         // Token: 0x06000708 RID: 1800 RVA: 0x000EAD97 File Offset: 0x000E8F97
         [CompilerGenerated]
-        internal _bh2._AJQ IODAGDLMLMILBHGAJCCLNFIJIDLOIBMOEFPC()
+        internal _bh2._AJQ _zf3()
         {
-            return this.FKDBLAPJOHEFCNDHHCEKGOABJGBCPIFCAHII;
+            return this._zf4;
         }
 
         // Token: 0x06000709 RID: 1801 RVA: 0x000EAD9F File Offset: 0x000E8F9F
         [CompilerGenerated]
-        private void MANFIKJIKENHGMELHHFPNFCJGLHNBPKJNGHF(_bh2._AJQ value)
+        private void _zf5(_bh2._AJQ value)
         {
-            this.FKDBLAPJOHEFCNDHHCEKGOABJGBCPIFCAHII = value;
+            this._zf4 = value;
         }
 
         // Token: 0x17000034 RID: 52
@@ -64,21 +64,21 @@ namespace AHO
             this._CBN = this.TokenToId("IDENTIFIER");
             this._CBG = this.TokenToId("NAME");
             this._CBK = this.TokenToId("LITERAL");
-            this.MEHGHAJAPILANIBMGENBFHNIAEELJDEHHCGB = this.TokenToId("INTERP_STR_WHOLE");
-            this.IJMAALOAAPKFFKBPLJAEDLOOEMEKPLGGFIOJ = this.TokenToId("INTERP_STR_START");
-            this.CKCBAOEDNFKIMKMDIPBBFBNCAFEBBHFNFKBI = this.TokenToId("INTERP_STR_MID");
-            this.PNAHIEKBKBGIJCGNLCGDEAEHMHEKCEFMDFEE = this.TokenToId("INTERP_STR_END");
-            this.MEGFEAMOJEOFOGJCMBEJBJJBIBOODCBNANGO = this.TokenToId("INTERP_STR_FORMAT");
-            this.NCHAGCLBBEFNHPICIAMMOMHPCBOOPBMOEGDB = this.TokenToId(".ATTRIBUTE");
+            this._zf6 = this.TokenToId("INTERP_STR_WHOLE");
+            this._zf7 = this.TokenToId("INTERP_STR_START");
+            this._zf8 = this.TokenToId("INTERP_STR_MID");
+            this._zf9 = this.TokenToId("INTERP_STR_END");
+            this._zg1 = this.TokenToId("INTERP_STR_FORMAT");
+            this._zg2 = this.TokenToId(".ATTRIBUTE");
             this._AGP = this.TokenToId(".STATEMENT");
             this._AGO = this.TokenToId(".CLASSBODY");
             this._AGQ = this.TokenToId(".STRUCTBODY");
             this._AGR = this.TokenToId(".INTERFACEBODY");
             this._AGN = this.TokenToId(".NAMESPACEBODY");
-            this.AHHEGIICLMMGAMIIBCOALJAANLNIDBOHPBGH = this.TokenToId(".BINARYOPERATOR");
+            this._zg3 = this.TokenToId(".BINARYOPERATOR");
             this._CBI = this.TokenToId(".EXPECTEDTYPE");
             this._CBP = this.TokenToId(".MEMBERINITIALIZER");
-            this.BNNEMMKGMCLMLANHKADMEEJIOFEGNPDHGMOH = this.TokenToId(".NAMEDPARAMETER");
+            this._zg4 = this.TokenToId(".NAMEDPARAMETER");
             this._CBJ = this.TokenToId("EOF");
         }
 
@@ -87,14 +87,14 @@ namespace AHO
         {
             _bm2._AA = this;
             this._BDD = new _bh2._AEN("EOF");
-            this.JCLFNNCMKINNNHLOFIHGGPGPLHKGBHNELHPJ = new _bh2._AEN("IDENTIFIER");
-            this.PJLPDGACCJPCAGGNGOIMGGJLDDNFDCPMAMAP = new _bh2._AEN("LITERAL");
-            this.EMENFMGGHFEHGJGCBCDNGKDPPLEDPMBDGMND = new _bh2._BDW();
-            this.PADBMJLLGAAIPKILFLHMJIFHNCEBBGFKHLJJ = new _bh2._AEN("INTERP_STR_WHOLE");
-            this.NEOEKODKBFIFEHEMCOBJCNDDGIGIBIALFBBB = new _bh2._AEN("INTERP_STR_START");
-            this.GPPFFDKKGDPEJFMLIIPIIFCOPNNLMFPHKMEK = new _bh2._AEN("INTERP_STR_MID");
-            this.MBOCPMDAGPNEBBALHCJIKENPKHCHOMMEMDBG = new _bh2._AEN("INTERP_STR_END");
-            this.FPKACCPNCJADKMOLADGCFAPFGMMJPEOPKKGD = new _bh2._AEN("INTERP_STR_FORMAT");
+            this._zg5 = new _bh2._AEN("IDENTIFIER");
+            this._zg6 = new _bh2._AEN("LITERAL");
+            this._zg7 = new _bh2._BDW();
+            this._zg8 = new _bh2._AEN("INTERP_STR_WHOLE");
+            this._zg9 = new _bh2._AEN("INTERP_STR_START");
+            this._zh1 = new _bh2._AEN("INTERP_STR_MID");
+            this._zh2 = new _bh2._AEN("INTERP_STR_END");
+            this._zh3 = new _bh2._AEN("INTERP_STR_FORMAT");
             _bh2._AEN _AJU = new _bh2._AEN("externAliasDirective");
             _bh2._AEN _AJU2 = new _bh2._AEN("usingDirective");
             _bh2._AEN _AJU3 = new _bh2._AEN("namespaceMemberDeclaration");
@@ -146,12 +146,12 @@ namespace AHO
             _bh2._AEN _AJU49 = new _bh2._AEN("numericType");
             _bh2._AEN _AJU50 = new _bh2._AEN("integralType");
             _bh2._AEN _AJU51 = new _bh2._AEN("floatingPointType");
-            this.MANFIKJIKENHGMELHHFPNFCJGLHNBPKJNGHF(new _bh2._AJQ("compilationUnit", new _bh2._BEG(_AJU) - new _bh2._BEG(_AJU2) - new _bh2._BEG(_AJU3) - this._BDD)
+            this._zf5(new _bh2._AJQ("compilationUnit", new _bh2._BEG(_AJU) - new _bh2._BEG(_AJU2) - new _bh2._BEG(_AJU3) - this._BDD)
             {
                 _AJR = _bc1.ScopesBegin
             });
-            this._ASF = new _bh2._BCX(this.IODAGDLMLMILBHGAJCCLNFIJIDLOIBMOEFPC(), this);
-            this._ASF.Add(new _bh2._AJQ("externAliasDirective", new _bh2._BDS(new _bh2._ACW[] { "extern", "alias", this.JCLFNNCMKINNNHLOFIHGGPGPLHKGBHNELHPJ, ";" }))
+            this._ASF = new _bh2._BCX(this._zf3(), this);
+            this._ASF.Add(new _bh2._AJQ("externAliasDirective", new _bh2._BDS(new _bh2._ACW[] { "extern", "alias", this._zg5, ";" }))
             {
                 _AJR = _bc1.ExternAlias
             });
@@ -166,20 +166,20 @@ namespace AHO
             bool _AHQ = _bd5._AHR;
             if (_AHQ)
             {
-                this._ASF.Add(new _bh2._AJQ("usingDirective", "using" - (new _bh2._BEF(this.JCLFNNCMKINNNHLOFIHGGPGPLHKGBHNELHPJ - "=", _AJU53, false) | _AJU52) - ";"));
+                this._ASF.Add(new _bh2._AJQ("usingDirective", "using" - (new _bh2._BEF(this._zg5 - "=", _AJU53, false) | _AJU52) - ";"));
             }
             else
             {
-                this._ASF.Add(new _bh2._AJQ("usingDirective", "using" - (new _bh2._BEF(this.JCLFNNCMKINNNHLOFIHGGPGPLHKGBHNELHPJ - "=", _AJU53, false) | _AJU52 | _AJU54) - ";"));
+                this._ASF.Add(new _bh2._AJQ("usingDirective", "using" - (new _bh2._BEF(this._zg5 - "=", _AJU53, false) | _AJU52 | _AJU54) - ";"));
             }
-            this._ASF.Add(new _bh2._AJQ("PARTIAL", new _bh2._BEF((_bh2._AJH s) => s.Current.text == "partial", this.JCLFNNCMKINNNHLOFIHGGPGPLHKGBHNELHPJ, false) | "partial")
+            this._ASF.Add(new _bh2._AJQ("PARTIAL", new _bh2._BEF((_bh2._AJH s) => s.Current.text == "partial", this._zg5, false) | "partial")
             {
                 _BDH = true
             });
             bool flag = !_bd5._AHR;
             if (flag)
             {
-                this._ASF.Add(new _bh2._AJQ("ASYNC", this.JCLFNNCMKINNNHLOFIHGGPGPLHKGBHNELHPJ | "async")
+                this._ASF.Add(new _bh2._AJQ("ASYNC", this._zg5 | "async")
                 {
                     _BDH = true
                 });
@@ -216,7 +216,7 @@ namespace AHO
             {
                 _AJR = _bc1.NamespaceDeclaration
             });
-            this._ASF.Add(new _bh2._AJQ("qualifiedIdentifier", this.EMENFMGGHFEHGJGCBCDNGKDPPLEDPMBDGMND - new _bh2._BEG(new _bh2._AJI(".") - this.EMENFMGGHFEHGJGCBCDNGKDPPLEDPMBDGMND)));
+            this._ASF.Add(new _bh2._AJQ("qualifiedIdentifier", this._zg7 - new _bh2._BEG(new _bh2._AJI(".") - this._zg7)));
             this._ASF.Add(new _bh2._AJQ("namespaceBody", "{" - new _bh2._BEG(_AJU) - new _bh2._BEG(_AJU2) - new _bh2._BEG(_AJU3) - "}")
             {
                 _AJR = _bc1.NamespaceBodyScope
@@ -226,7 +226,7 @@ namespace AHO
                 _AJR = _bc1.UsingNamespace
             });
             this._ASF.Add(new _bh2._AJQ("namespaceName", _AJU57));
-            this._ASF.Add(new _bh2._AJQ("usingAliasDirective", this.JCLFNNCMKINNNHLOFIHGGPGPLHKGBHNELHPJ - "=" - _AJU57)
+            this._ASF.Add(new _bh2._AJQ("usingAliasDirective", this._zg5 - "=" - _AJU57)
             {
                 _AJR = _bc1.UsingAlias
             });
@@ -241,7 +241,7 @@ namespace AHO
             this._ASF.Add(new _bh2._AJQ("classDeclaration", new _bh2._BDS(new _bh2._ACW[]
             {
                 "class",
-                this.EMENFMGGHFEHGJGCBCDNGKDPPLEDPMBDGMND,
+                this._zg7,
                 new _bh2._BDU(_AJU9),
                 new _bh2._BDU(_AJU11),
                 new _bh2._BDU(_AJU12),
@@ -252,7 +252,7 @@ namespace AHO
                 _AJR = (_bc1)7431
             });
             this._ASF.Add(new _bh2._AJQ("typeParameterList", "<" - _AJU7 - _AJU10 - new _bh2._BEG("," - _AJU7 - _AJU10) - ">"));
-            this._ASF.Add(new _bh2._AJQ("typeParameter", this.EMENFMGGHFEHGJGCBCDNGKDPPLEDPMBDGMND)
+            this._ASF.Add(new _bh2._AJQ("typeParameter", this._zg7)
             {
                 _AJR = _bc1.TypeParameterDeclaration
             });
@@ -285,7 +285,7 @@ namespace AHO
                 {
                     _AJU7,
                     _AJU8,
-                    _AJU26 | ("void" - _AJU28) | new _bh2._BEF("async", _AJU59 - _AJU8 - _AJU58 - "void", _AJU59 - _AJU8 - _AJU58 - "void" - _AJU28, false) | new _bh2._BEF("async", _AJU59 - _AJU8 - "void", _AJU59 - _AJU8 - "void" - _AJU28, false) | new _bh2._BEF("async", _AJU59 - _AJU8 - _AJU58 - _AJU37 - _AJU64 - "(", _AJU59 - _AJU8 - _AJU58 - _AJU37 - _AJU28, false) | new _bh2._BEF("async", _AJU59 - _AJU8 - _AJU37 - _AJU64 - "(", _AJU59 - _AJU8 - _AJU37 - _AJU28, false) | new _bh2._BEF(_AJU58, _AJU58 - (("void" - _AJU28) | _AJU62 | _AJU63 | _AJU61), false) | new _bh2._BEF(this.JCLFNNCMKINNNHLOFIHGGPGPLHKGBHNELHPJ - "(", _AJU33, false) | ("ref" - (new _bh2._BEF(_AJU58, _AJU58 - _AJU63, false) | _AJU63 | (new _bh2._BDU("readonly") - _AJU37 - (new _bh2._BEF(_AJU64 - "(", _AJU28, false) | new _bh2._BEF(_AJU64 - (new _bh2._AJI("{") | "=>"), _AJU29, false) | new _bh2._BEF(_AJU64 - "this", _AJU64 - _AJU31, false) | _AJU31)))) | new _bh2._BDS(new _bh2._ACW[]
+                    _AJU26 | ("void" - _AJU28) | new _bh2._BEF("async", _AJU59 - _AJU8 - _AJU58 - "void", _AJU59 - _AJU8 - _AJU58 - "void" - _AJU28, false) | new _bh2._BEF("async", _AJU59 - _AJU8 - "void", _AJU59 - _AJU8 - "void" - _AJU28, false) | new _bh2._BEF("async", _AJU59 - _AJU8 - _AJU58 - _AJU37 - _AJU64 - "(", _AJU59 - _AJU8 - _AJU58 - _AJU37 - _AJU28, false) | new _bh2._BEF("async", _AJU59 - _AJU8 - _AJU37 - _AJU64 - "(", _AJU59 - _AJU8 - _AJU37 - _AJU28, false) | new _bh2._BEF(_AJU58, _AJU58 - (("void" - _AJU28) | _AJU62 | _AJU63 | _AJU61), false) | new _bh2._BEF(this._zg5 - "(", _AJU33, false) | ("ref" - (new _bh2._BEF(_AJU58, _AJU58 - _AJU63, false) | _AJU63 | (new _bh2._BDU("readonly") - _AJU37 - (new _bh2._BEF(_AJU64 - "(", _AJU28, false) | new _bh2._BEF(_AJU64 - (new _bh2._AJI("{") | "=>"), _AJU29, false) | new _bh2._BEF(_AJU64 - "this", _AJU64 - _AJU31, false) | _AJU31)))) | new _bh2._BDS(new _bh2._ACW[]
                     {
                         _AJU37,
                         new _bh2._BEF(_AJU64 - "(", _AJU28, false) | new _bh2._BEF(_AJU64 - (new _bh2._AJI("{") | "=>"), _AJU29, false) | new _bh2._BEF(_AJU64 - "this", _AJU64 - _AJU31, false) | _AJU31 | _AJU27 | _AJU32
@@ -298,7 +298,7 @@ namespace AHO
                 {
                     _AJU7,
                     _AJU8,
-                    _AJU26 | ("void" - _AJU28) | new _bh2._BEF(_AJU58, _AJU58 - (("void" - _AJU28) | _AJU62 | _AJU63 | _AJU61), false) | new _bh2._BEF(this.JCLFNNCMKINNNHLOFIHGGPGPLHKGBHNELHPJ - "(", _AJU33, false) | new _bh2._BDS(new _bh2._ACW[]
+                    _AJU26 | ("void" - _AJU28) | new _bh2._BEF(_AJU58, _AJU58 - (("void" - _AJU28) | _AJU62 | _AJU63 | _AJU61), false) | new _bh2._BEF(this._zg5 - "(", _AJU33, false) | new _bh2._BDS(new _bh2._ACW[]
                     {
                         _AJU37,
                         new _bh2._BEF(_AJU64 - "(", _AJU28, false) | new _bh2._BEF(_AJU64 - "{", _AJU29, false) | new _bh2._BEF(_AJU64 - "this", _AJU64 - _AJU31, false) | _AJU31 | _AJU27 | _AJU32
@@ -319,7 +319,7 @@ namespace AHO
             {
                 _AJR = (_bc1)7690
             });
-            this._ASF.Add(new _bh2._AJQ("constructorDeclarator", this.JCLFNNCMKINNNHLOFIHGGPGPLHKGBHNELHPJ - "(" - new _bh2._BDU(_AJU76) - ")" - new _bh2._BDU(_AJU71)));
+            this._ASF.Add(new _bh2._AJQ("constructorDeclarator", this._zg5 - "(" - new _bh2._BDU(_AJU76) - ")" - new _bh2._BDU(_AJU71)));
             this._ASF.Add(new _bh2._AJQ("constructorInitializer", ":" - (new _bh2._AJI("base") | "this") - _AJU74)
             {
                 _AJR = _bc1.ConstructorInitializerScope
@@ -343,7 +343,7 @@ namespace AHO
             {
                 _AJR = (_bc1)7691
             });
-            this._ASF.Add(new _bh2._AJQ("destructorDeclarator", "~" - new _bh2._BDU("extern") - this.JCLFNNCMKINNNHLOFIHGGPGPLHKGBHNELHPJ - "(" - ")"));
+            this._ASF.Add(new _bh2._AJQ("destructorDeclarator", "~" - new _bh2._BDU("extern") - this._zg5 - "(" - ")"));
             bool _AHQ4 = _bd5._AHR;
             if (_AHQ4)
             {
@@ -361,7 +361,7 @@ namespace AHO
             }
             this._ASF.Add(new _bh2._AJQ("constantDeclaration", "const" - _AJU37 - _AJU35 - ";"));
             this._ASF.Add(new _bh2._AJQ("constantDeclarators", _AJU36 - new _bh2._BEG("," - _AJU36)));
-            this._ASF.Add(new _bh2._AJQ("constantDeclarator", this.EMENFMGGHFEHGJGCBCDNGKDPPLEDPMBDGMND - "=" - _AJU22)
+            this._ASF.Add(new _bh2._AJQ("constantDeclarator", this._zg7 - "=" - _AJU22)
             {
                 _AJR = _bc1.ConstantDeclarator
             });
@@ -386,7 +386,7 @@ namespace AHO
             });
             this._ASF.Add(new _bh2._AJQ("methodHeader", _AJU64 - "(" - new _bh2._BDU(_AJU76) - ")" - new _bh2._BDU(_AJU12)));
             this._ASF.Add(new _bh2._AJQ("typeParameterConstraintsClauses", _AJU13 - new _bh2._BEG(_AJU13)));
-            this._ASF.Add(new _bh2._AJQ("WHERE", new _bh2._BEF((_bh2._AJH s) => s.Current.text == "where", this.JCLFNNCMKINNNHLOFIHGGPGPLHKGBHNELHPJ, false) | "where")
+            this._ASF.Add(new _bh2._AJQ("WHERE", new _bh2._BEF((_bh2._AJH s) => s.Current.text == "where", this._zg5, false) | "where")
             {
                 _BDH = true
             });
@@ -394,7 +394,7 @@ namespace AHO
             this._ASF.Add(new _bh2._AJQ("typeParameterConstraintList", ((new _bh2._AJI("class") | "struct") - new _bh2._BDU("," - _AJU89)) | _AJU89));
             this._ASF.Add(new _bh2._AJQ("secondaryConstraintList", (_AJU90 - new _bh2._BDU("," - new _bh2._AEN("secondaryConstraintList"))) | _AJU91));
             this._ASF.Add(new _bh2._AJQ("secondaryConstraint", _AJU17));
-            this._ASF.Add(new _bh2._AJQ("typeVariableName", this.JCLFNNCMKINNNHLOFIHGGPGPLHKGBHNELHPJ));
+            this._ASF.Add(new _bh2._AJQ("typeVariableName", this._zg5));
             this._ASF.Add(new _bh2._AJQ("constructorConstraint", new _bh2._AJI("new") - "(" - ")"));
             bool _AHQ5 = _bd5._AHR;
             if (_AHQ5)
@@ -446,18 +446,18 @@ namespace AHO
             _bh2._AEN _AJU120 = new _bh2._AEN("outVariableDeclarator");
             _bh2._AEN _AJU121 = new _bh2._AEN("VAR");
             _bh2._AEN _AJU122 = new _bh2._AEN("awaitExpression");
-            this._ASF.Add(new _bh2._AJQ("VAR", this.JCLFNNCMKINNNHLOFIHGGPGPLHKGBHNELHPJ | "var")
+            this._ASF.Add(new _bh2._AJQ("VAR", this._zg5 | "var")
             {
                 _BDH = true
             });
             bool _AHQ6 = _bd5._AHR;
             if (_AHQ6)
             {
-                this._ASF.Add(new _bh2._AJQ("statement", new _bh2._BEF(new Predicate<_bh2._AJH>(this.IsAwaitInsideAsyncMethod), _AJU122, false) | new _bh2._BEF((_AJU37 | "var") - this.JCLFNNCMKINNNHLOFIHGGPGPLHKGBHNELHPJ - (new _bh2._AJI(";") | "=" | "[" | ","), _AJU110 - ";", false) | new _bh2._BEF(this.JCLFNNCMKINNNHLOFIHGGPGPLHKGBHNELHPJ - ":", _AJU93, false) | _AJU117 | _AJU94));
+                this._ASF.Add(new _bh2._AJQ("statement", new _bh2._BEF(new Predicate<_bh2._AJH>(this.IsAwaitInsideAsyncMethod), _AJU122, false) | new _bh2._BEF((_AJU37 | "var") - this._zg5 - (new _bh2._AJI(";") | "=" | "[" | ","), _AJU110 - ";", false) | new _bh2._BEF(this._zg5 - ":", _AJU93, false) | _AJU117 | _AJU94));
             }
             else
             {
-                this._ASF.Add(new _bh2._AJQ("statement", new _bh2._BEF(new Predicate<_bh2._AJH>(this.IsAwaitInsideAsyncMethod), _AJU122, false) | new _bh2._BEF((_AJU37 | "var") - this.JCLFNNCMKINNNHLOFIHGGPGPLHKGBHNELHPJ - (new _bh2._AJI(";") | "=" | "[" | ","), _AJU110 - ";", false) | new _bh2._BEF(this.JCLFNNCMKINNNHLOFIHGGPGPLHKGBHNELHPJ - ":", _AJU93, false) | ("ref" - new _bh2._BDU("readonly") - _AJU110 - ";") | _AJU117 | _AJU94));
+                this._ASF.Add(new _bh2._AJQ("statement", new _bh2._BEF(new Predicate<_bh2._AJH>(this.IsAwaitInsideAsyncMethod), _AJU122, false) | new _bh2._BEF((_AJU37 | "var") - this._zg5 - (new _bh2._AJI(";") | "=" | "[" | ","), _AJU110 - ";", false) | new _bh2._BEF(this._zg5 - ":", _AJU93, false) | ("ref" - new _bh2._BDU("readonly") - _AJU110 - ";") | _AJU117 | _AJU94));
             }
             this._ASF.Add(new _bh2._AJQ("localVariableDeclaration", _AJU111 - _AJU112));
             this._ASF.Add(new _bh2._AJQ("localVariableType", new _bh2._BEF((_bh2._AJH s) => s.Current.text == "var", _AJU121, false) | _AJU37));
@@ -465,14 +465,14 @@ namespace AHO
             bool _AHQ7 = _bd5._AHR;
             if (_AHQ7)
             {
-                this._ASF.Add(new _bh2._AJQ("localVariableDeclarator", this.EMENFMGGHFEHGJGCBCDNGKDPPLEDPMBDGMND - new _bh2._BDU("=" - _AJU114))
+                this._ASF.Add(new _bh2._AJQ("localVariableDeclarator", this._zg7 - new _bh2._BDU("=" - _AJU114))
                 {
                     _AJR = _bc1.LocalVariableDeclarator
                 });
             }
             else
             {
-                this._ASF.Add(new _bh2._AJQ("localVariableDeclarator", this.EMENFMGGHFEHGJGCBCDNGKDPPLEDPMBDGMND - new _bh2._BDU("=" - new _bh2._BDU("ref") - _AJU114))
+                this._ASF.Add(new _bh2._AJQ("localVariableDeclarator", this._zg7 - new _bh2._BDU("=" - new _bh2._BDU("ref") - _AJU114))
                 {
                     _AJR = _bc1.LocalVariableDeclarator
                 });
@@ -481,7 +481,7 @@ namespace AHO
             if (flag4)
             {
                 this._ASF.Add(new _bh2._AJQ("caseVariableDeclaration", _AJU111 - _AJU116));
-                this._ASF.Add(new _bh2._AJQ("caseVariableDeclarator", this.EMENFMGGHFEHGJGCBCDNGKDPPLEDPMBDGMND)
+                this._ASF.Add(new _bh2._AJQ("caseVariableDeclarator", this._zg7)
                 {
                     _AJR = _bc1.CaseVariableDeclaration
                 });
@@ -491,12 +491,12 @@ namespace AHO
                 _AJR = _bc1.LocalVariableInitializerScope
             });
             this._ASF.Add(new _bh2._AJQ("localConstantDeclaration", "const" - _AJU37 - _AJU35 - ";"));
-            this._ASF.Add(new _bh2._AJQ("labeledStatement", this.JCLFNNCMKINNNHLOFIHGGPGPLHKGBHNELHPJ - ":" - _AJU86)
+            this._ASF.Add(new _bh2._AJQ("labeledStatement", this._zg5 - ":" - _AJU86)
             {
                 _AJR = _bc1.LabeledStatement
             });
             _bh2._AEN _AJU123 = new _bh2._AEN("YIELD");
-            this._ASF.Add(new _bh2._AJQ("YIELD", this.JCLFNNCMKINNNHLOFIHGGPGPLHKGBHNELHPJ | "yield")
+            this._ASF.Add(new _bh2._AJQ("YIELD", this._zg5 | "yield")
             {
                 _BDH = true
             });
@@ -525,10 +525,10 @@ namespace AHO
             {
                 _AJR = _bc1.UsingStatementScope
             });
-            this._ASF.Add(new _bh2._AJQ("resourceAcquisition", new _bh2._BEF(_AJU111 - this.JCLFNNCMKINNNHLOFIHGGPGPLHKGBHNELHPJ, _AJU110, false) | _AJU20));
+            this._ASF.Add(new _bh2._AJQ("resourceAcquisition", new _bh2._BEF(_AJU111 - this._zg5, _AJU110, false) | _AJU20));
             this._ASF.Add(new _bh2._AJQ("yieldStatement", _AJU123 - (("return" - _AJU20 - ";") | (new _bh2._AJI("break") - ";"))));
             _bh2._AEN _AJU124 = new _bh2._AEN("WHEN");
-            this._ASF.Add(new _bh2._AJQ("WHEN", new _bh2._BEF((_bh2._AJH s) => s.Current.text == "when", this.JCLFNNCMKINNNHLOFIHGGPGPLHKGBHNELHPJ, false) | "when")
+            this._ASF.Add(new _bh2._AJQ("WHEN", new _bh2._BEF((_bh2._AJH s) => s.Current.text == "when", this._zg5, false) | "when")
             {
                 _BDH = true
             });
@@ -566,7 +566,7 @@ namespace AHO
             this._ASF.Add(new _bh2._AJQ("jumpStatement", _AJU103 | _AJU104 | _AJU105 | _AJU106 | _AJU107));
             this._ASF.Add(new _bh2._AJQ("breakStatement", new _bh2._BDS(new _bh2._ACW[] { "break", ";" })));
             this._ASF.Add(new _bh2._AJQ("continueStatement", new _bh2._BDS(new _bh2._ACW[] { "continue", ";" })));
-            this._ASF.Add(new _bh2._AJQ("gotoStatement", "goto" - (this.JCLFNNCMKINNNHLOFIHGGPGPLHKGBHNELHPJ | ("case" - _AJU22) | "default") - ";"));
+            this._ASF.Add(new _bh2._AJQ("gotoStatement", "goto" - (this._zg5 | ("case" - _AJU22) | "default") - ";"));
             bool _AHQ9 = _bd5._AHR;
             if (_AHQ9)
             {
@@ -605,7 +605,7 @@ namespace AHO
                 });
                 this._ASF.Add(new _bh2._AJQ("generalCatchClause", "catch" - new _bh2._BDU("when") - _AJU77));
             }
-            this._ASF.Add(new _bh2._AJQ("catchExceptionIdentifier", this.EMENFMGGHFEHGJGCBCDNGKDPPLEDPMBDGMND)
+            this._ASF.Add(new _bh2._AJQ("catchExceptionIdentifier", this._zg7)
             {
                 _AJR = _bc1.CatchExceptionParameterDeclaration
             });
@@ -615,7 +615,7 @@ namespace AHO
                 _AJR = _bc1.FormalParameterListScope
             });
             this._ASF.Add(new _bh2._AJQ("formalParameter", _AJU7 - (_AJU82 | _AJU85)));
-            this._ASF.Add(new _bh2._AJQ("fixedParameter", new _bh2._BDU(_AJU83) - _AJU37 - this.EMENFMGGHFEHGJGCBCDNGKDPPLEDPMBDGMND - new _bh2._BDU(_AJU84))
+            this._ASF.Add(new _bh2._AJQ("fixedParameter", new _bh2._BDU(_AJU83) - _AJU37 - this._zg7 - new _bh2._BDU(_AJU84))
             {
                 _AJR = _bc1.FixedParameterDeclaration
             });
@@ -629,7 +629,7 @@ namespace AHO
                 this._ASF.Add(new _bh2._AJQ("parameterModifier", ("ref" - new _bh2._BDU("this")) | "out" | ("this" - new _bh2._BDU(new _bh2._AJI("ref") | "in")) | ("in" - new _bh2._BDU("this"))));
             }
             this._ASF.Add(new _bh2._AJQ("defaultArgument", "=" - (_AJU20 | ".EXPECTEDTYPE")));
-            this._ASF.Add(new _bh2._AJQ("parameterArray", "params" - _AJU37 - this.EMENFMGGHFEHGJGCBCDNGKDPPLEDPMBDGMND)
+            this._ASF.Add(new _bh2._AJQ("parameterArray", "params" - _AJU37 - this._zg7)
             {
                 _AJR = _bc1.ParameterArrayDeclaration
             });
@@ -661,14 +661,14 @@ namespace AHO
             bool _AHQ12 = _bd5._AHR;
             if (_AHQ12)
             {
-                this._ASF.Add(new _bh2._AJQ("forInitializer", new _bh2._BEF(_AJU111 - this.JCLFNNCMKINNNHLOFIHGGPGPLHKGBHNELHPJ, _AJU110, false) | _AJU145));
+                this._ASF.Add(new _bh2._AJQ("forInitializer", new _bh2._BEF(_AJU111 - this._zg5, _AJU110, false) | _AJU145));
             }
             else
             {
-                this._ASF.Add(new _bh2._AJQ("forInitializer", new _bh2._BEF(_AJU111 - this.JCLFNNCMKINNNHLOFIHGGPGPLHKGBHNELHPJ, _AJU110, false) | ("ref" - new _bh2._BDU("readonly") - _AJU110) | _AJU145));
+                this._ASF.Add(new _bh2._AJQ("forInitializer", new _bh2._BEF(_AJU111 - this._zg5, _AJU110, false) | ("ref" - new _bh2._BDU("readonly") - _AJU110) | _AJU145));
             }
             this._ASF.Add(new _bh2._AJQ("forIterator", _AJU145));
-            this._ASF.Add(new _bh2._AJQ("foreachStatement", new _bh2._AJI("foreach") - "(" - _AJU111 - this.EMENFMGGHFEHGJGCBCDNGKDPPLEDPMBDGMND - "in" - _AJU20 - ")" - _AJU94)
+            this._ASF.Add(new _bh2._AJQ("foreachStatement", new _bh2._AJI("foreach") - "(" - _AJU111 - this._zg7 - "in" - _AJU20 - ")" - _AJU94)
             {
                 _AJR = (_bc1)5392
             });
@@ -718,11 +718,11 @@ namespace AHO
             this._ASF.Add(new _bh2._AJQ("accessorModifiers", ("internal" - new _bh2._BDU("protected")) | ("protected" - new _bh2._BDU("internal")) | "public" | "private"));
             _bh2._AEN _AJU153 = new _bh2._AEN("GET");
             _bh2._AEN _AJU154 = new _bh2._AEN("SET");
-            this._ASF.Add(new _bh2._AJQ("GET", this.JCLFNNCMKINNNHLOFIHGGPGPLHKGBHNELHPJ | "get")
+            this._ASF.Add(new _bh2._AJQ("GET", this._zg5 | "get")
             {
                 _BDH = true
             });
-            this._ASF.Add(new _bh2._AJQ("SET", this.JCLFNNCMKINNNHLOFIHGGPGPLHKGBHNELHPJ | "set")
+            this._ASF.Add(new _bh2._AJQ("SET", this._zg5 | "set")
             {
                 _BDH = true
             });
@@ -770,18 +770,18 @@ namespace AHO
                 _AJR = (_bc1)8478
             });
             this._ASF.Add(new _bh2._AJQ("eventDeclarators", _AJU156 - new _bh2._BEG("," - _AJU156)));
-            this._ASF.Add(new _bh2._AJQ("eventDeclarator", this.EMENFMGGHFEHGJGCBCDNGKDPPLEDPMBDGMND - new _bh2._BDU("=" - _AJU43))
+            this._ASF.Add(new _bh2._AJQ("eventDeclarator", this._zg7 - new _bh2._BDU("=" - _AJU43))
             {
                 _AJR = _bc1.EventDeclarator
             });
             this._ASF.Add(new _bh2._AJQ("eventAccessorDeclarations", _AJU7 - (new _bh2._BEF((_bh2._AJH s) => s.Current.text == "add", _AJU159 - _AJU7 - _AJU160, false) | (_AJU160 - _AJU7 - _AJU159))));
             _bh2._AEN _AJU161 = new _bh2._AEN("ADD");
             _bh2._AEN _AJU162 = new _bh2._AEN("REMOVE");
-            this._ASF.Add(new _bh2._AJQ("ADD", this.JCLFNNCMKINNNHLOFIHGGPGPLHKGBHNELHPJ | "add")
+            this._ASF.Add(new _bh2._AJQ("ADD", this._zg5 | "add")
             {
                 _BDH = true
             });
-            this._ASF.Add(new _bh2._AJQ("REMOVE", this.JCLFNNCMKINNNHLOFIHGGPGPLHKGBHNELHPJ | "remove")
+            this._ASF.Add(new _bh2._AJQ("REMOVE", this._zg5 | "remove")
             {
                 _BDH = true
             });
@@ -799,7 +799,7 @@ namespace AHO
                 _AJU41,
                 new _bh2._BEG(new _bh2._BDS(new _bh2._ACW[] { ",", _AJU41 }))
             })));
-            this._ASF.Add(new _bh2._AJQ("variableDeclarator", this.EMENFMGGHFEHGJGCBCDNGKDPPLEDPMBDGMND - new _bh2._BDU("=" - _AJU43))
+            this._ASF.Add(new _bh2._AJQ("variableDeclarator", this._zg7 - new _bh2._BDU("=" - _AJU43))
             {
                 _AJR = _bc1.VariableDeclarator
             });
@@ -828,7 +828,7 @@ namespace AHO
             {
                 _AJR = (_bc1)7714
             });
-            this._ASF.Add(new _bh2._AJQ("operatorParameter", _AJU37 - this.EMENFMGGHFEHGJGCBCDNGKDPPLEDPMBDGMND)
+            this._ASF.Add(new _bh2._AJQ("operatorParameter", _AJU37 - this._zg7)
             {
                 _AJR = _bc1.FixedParameterDeclaration
             });
@@ -862,7 +862,7 @@ namespace AHO
             _bh2._AEN _AJU174 = new _bh2._AEN("structInterfaces");
             _bh2._AEN _AJU175 = new _bh2._AEN("structBody");
             _bh2._AEN _AJU176 = new _bh2._AEN("structMemberDeclaration");
-            this._ASF.Add(new _bh2._AJQ("structDeclaration", "struct" - this.EMENFMGGHFEHGJGCBCDNGKDPPLEDPMBDGMND - new _bh2._BDU(_AJU9) - new _bh2._BDU(_AJU174) - new _bh2._BDU(_AJU12) - _AJU175 - new _bh2._BDU(";"))
+            this._ASF.Add(new _bh2._AJQ("structDeclaration", "struct" - this._zg7 - new _bh2._BDU(_AJU9) - new _bh2._BDU(_AJU174) - new _bh2._BDU(_AJU12) - _AJU175 - new _bh2._BDU(";"))
             {
                 _AJR = (_bc1)7460
             });
@@ -881,7 +881,7 @@ namespace AHO
                 {
                     _AJU7,
                     _AJU8,
-                    _AJU26 | ("void" - _AJU28) | new _bh2._BEF("async", _AJU59 - _AJU8 - _AJU58 - "void", _AJU59 - _AJU8 - _AJU58 - "void" - _AJU28, false) | new _bh2._BEF("async", _AJU59 - _AJU8 - "void", _AJU59 - _AJU8 - "void" - _AJU28, false) | new _bh2._BEF("async", _AJU59 - _AJU8 - _AJU58 - _AJU37 - _AJU64 - "(", _AJU59 - _AJU8 - _AJU58 - _AJU37 - _AJU28, false) | new _bh2._BEF("async", _AJU59 - _AJU8 - _AJU37 - _AJU64 - "(", _AJU59 - _AJU8 - _AJU37 - _AJU28, false) | new _bh2._BEF(_AJU58, _AJU58 - (("void" - _AJU28) | _AJU62 | _AJU63 | _AJU61), false) | new _bh2._BEF(this.JCLFNNCMKINNNHLOFIHGGPGPLHKGBHNELHPJ - "(", _AJU33, false) | ("ref" - (new _bh2._BEF(_AJU58, _AJU58 - _AJU63, false) | _AJU63 | (new _bh2._BDU("readonly") - _AJU37 - (new _bh2._BEF(_AJU64 - "(", _AJU28, false) | new _bh2._BEF(_AJU64 - (new _bh2._AJI("{") | "=>"), _AJU29, false) | new _bh2._BEF(_AJU64 - "this", _AJU64 - _AJU31, false) | _AJU31)))) | new _bh2._BDS(new _bh2._ACW[]
+                    _AJU26 | ("void" - _AJU28) | new _bh2._BEF("async", _AJU59 - _AJU8 - _AJU58 - "void", _AJU59 - _AJU8 - _AJU58 - "void" - _AJU28, false) | new _bh2._BEF("async", _AJU59 - _AJU8 - "void", _AJU59 - _AJU8 - "void" - _AJU28, false) | new _bh2._BEF("async", _AJU59 - _AJU8 - _AJU58 - _AJU37 - _AJU64 - "(", _AJU59 - _AJU8 - _AJU58 - _AJU37 - _AJU28, false) | new _bh2._BEF("async", _AJU59 - _AJU8 - _AJU37 - _AJU64 - "(", _AJU59 - _AJU8 - _AJU37 - _AJU28, false) | new _bh2._BEF(_AJU58, _AJU58 - (("void" - _AJU28) | _AJU62 | _AJU63 | _AJU61), false) | new _bh2._BEF(this._zg5 - "(", _AJU33, false) | ("ref" - (new _bh2._BEF(_AJU58, _AJU58 - _AJU63, false) | _AJU63 | (new _bh2._BDU("readonly") - _AJU37 - (new _bh2._BEF(_AJU64 - "(", _AJU28, false) | new _bh2._BEF(_AJU64 - (new _bh2._AJI("{") | "=>"), _AJU29, false) | new _bh2._BEF(_AJU64 - "this", _AJU64 - _AJU31, false) | _AJU31)))) | new _bh2._BDS(new _bh2._ACW[]
                     {
                         _AJU37,
                         new _bh2._BEF(_AJU64 - "(", _AJU28, false) | new _bh2._BEF(_AJU64 - (new _bh2._AJI("{") | "=>"), _AJU29, false) | new _bh2._BEF(_AJU64 - "this", _AJU64 - _AJU31, false) | _AJU31 | _AJU27 | _AJU32
@@ -894,7 +894,7 @@ namespace AHO
                 {
                     _AJU7,
                     _AJU8,
-                    _AJU26 | ("void" - _AJU28) | new _bh2._BEF(_AJU58, _AJU58 - (("void" - _AJU28) | _AJU62 | _AJU63 | _AJU61), false) | new _bh2._BEF(this.JCLFNNCMKINNNHLOFIHGGPGPLHKGBHNELHPJ - "(", _AJU33, false) | new _bh2._BDS(new _bh2._ACW[]
+                    _AJU26 | ("void" - _AJU28) | new _bh2._BEF(_AJU58, _AJU58 - (("void" - _AJU28) | _AJU62 | _AJU63 | _AJU61), false) | new _bh2._BEF(this._zg5 - "(", _AJU33, false) | new _bh2._BDS(new _bh2._ACW[]
                     {
                         _AJU37,
                         new _bh2._BEF(_AJU64 - "(", _AJU28, false) | new _bh2._BEF(_AJU64 - "{", _AJU29, false) | new _bh2._BEF(_AJU64 - "this", _AJU64 - _AJU31, false) | _AJU31 | _AJU27 | _AJU32
@@ -911,7 +911,7 @@ namespace AHO
             _bh2._AEN _AJU184 = new _bh2._AEN("interfaceAccessorDeclarations");
             _bh2._AEN _AJU185 = new _bh2._AEN("interfaceGetAccessorDeclaration");
             _bh2._AEN _AJU186 = new _bh2._AEN("interfaceSetAccessorDeclaration");
-            this._ASF.Add(new _bh2._AJQ("interfaceDeclaration", "interface" - this.EMENFMGGHFEHGJGCBCDNGKDPPLEDPMBDGMND - new _bh2._BDU(_AJU9) - new _bh2._BDU(_AJU177) - new _bh2._BDU(_AJU12) - _AJU178 - new _bh2._BDU(";"))
+            this._ASF.Add(new _bh2._AJQ("interfaceDeclaration", "interface" - this._zg7 - new _bh2._BDU(_AJU9) - new _bh2._BDU(_AJU177) - new _bh2._BDU(_AJU12) - _AJU178 - new _bh2._BDU(";"))
             {
                 _AJR = (_bc1)7461
             });
@@ -946,15 +946,15 @@ namespace AHO
                     }) | ".INTERFACEBODY"
                 })));
             }
-            this._ASF.Add(new _bh2._AJQ("interfacePropertyDeclaration", this.EMENFMGGHFEHGJGCBCDNGKDPPLEDPMBDGMND - "{" - _AJU184 - "}")
+            this._ASF.Add(new _bh2._AJQ("interfacePropertyDeclaration", this._zg7 - "{" - _AJU184 - "}")
             {
                 _AJR = _bc1.InterfacePropertyDeclaration
             });
-            this._ASF.Add(new _bh2._AJQ("interfaceMethodDeclaration", this.EMENFMGGHFEHGJGCBCDNGKDPPLEDPMBDGMND - new _bh2._BDU(_AJU9) - "(" - new _bh2._BDU(_AJU76) - ")" - new _bh2._BDU(_AJU12) - ";")
+            this._ASF.Add(new _bh2._AJQ("interfaceMethodDeclaration", this._zg7 - new _bh2._BDU(_AJU9) - "(" - new _bh2._BDU(_AJU76) - ")" - new _bh2._BDU(_AJU12) - ";")
             {
                 _AJR = (_bc1)7719
             });
-            this._ASF.Add(new _bh2._AJQ("interfaceEventDeclaration", new _bh2._BDS(new _bh2._ACW[] { "event", _AJU17, this.EMENFMGGHFEHGJGCBCDNGKDPPLEDPMBDGMND, ";" }))
+            this._ASF.Add(new _bh2._AJQ("interfaceEventDeclaration", new _bh2._BDS(new _bh2._ACW[] { "event", _AJU17, this._zg7, ";" }))
             {
                 _AJR = _bc1.InterfaceEventDeclaration
             });
@@ -962,12 +962,12 @@ namespace AHO
             {
                 _AJR = _bc1.InterfaceIndexerDeclaration
             });
-            _bh2._BCX oeimgfdjoicohiegmaoafpfpfpndgmcfgbbl = this._ASF;
+            _bh2._BCX _zh4 = this._ASF;
             string text = "interfaceAccessorDeclarations";
             _bh2._ACW[] array = new _bh2._ACW[2];
             array[0] = _AJU7;
             array[1] = new _bh2._BEF((_bh2._AJH s) => s.Current.text == "get", _AJU185 - new _bh2._BDU(_AJU7 - _AJU186), false) | (_AJU186 - new _bh2._BDU(_AJU7 - _AJU185));
-            oeimgfdjoicohiegmaoafpfpfpndgmcfgbbl.Add(new _bh2._AJQ(text, new _bh2._BDS(array)));
+            _zh4.Add(new _bh2._AJQ(text, new _bh2._BDS(array)));
             this._ASF.Add(new _bh2._AJQ("interfaceGetAccessorDeclaration", _AJU153 - ";")
             {
                 _AJR = _bc1.InterfaceGetAccessorDeclaration
@@ -980,7 +980,7 @@ namespace AHO
             _bh2._AEN _AJU188 = new _bh2._AEN("enumBody");
             _bh2._AEN _AJU189 = new _bh2._AEN("enumMemberDeclarations");
             _bh2._AEN _AJU190 = new _bh2._AEN("enumMemberDeclaration");
-            this._ASF.Add(new _bh2._AJQ("enumDeclaration", "enum" - this.EMENFMGGHFEHGJGCBCDNGKDPPLEDPMBDGMND - new _bh2._BDU(_AJU187) - _AJU188 - new _bh2._BDU(";"))
+            this._ASF.Add(new _bh2._AJQ("enumDeclaration", "enum" - this._zg7 - new _bh2._BDU(_AJU187) - _AJU188 - new _bh2._BDU(";"))
             {
                 _AJR = (_bc1)7468
             });
@@ -995,28 +995,28 @@ namespace AHO
                 new _bh2._BEG(new _bh2._BEJ(new _bh2._BDS(new _bh2._ACW[] { ",", "}" }) | "}", "," - _AJU190)),
                 new _bh2._BDU(",")
             })));
-            this._ASF.Add(new _bh2._AJQ("enumMemberDeclaration", _AJU7 - this.EMENFMGGHFEHGJGCBCDNGKDPPLEDPMBDGMND - new _bh2._BDU("=" - _AJU22))
+            this._ASF.Add(new _bh2._AJQ("enumMemberDeclaration", _AJU7 - this._zg7 - new _bh2._BDU("=" - _AJU22))
             {
                 _AJR = _bc1.EnumMemberDeclaration
             });
             bool _AHQ17 = _bd5._AHR;
             if (_AHQ17)
             {
-                this._ASF.Add(new _bh2._AJQ("delegateDeclaration", "delegate" - ("void" | _AJU37) - this.EMENFMGGHFEHGJGCBCDNGKDPPLEDPMBDGMND - new _bh2._BDU(_AJU9) - "(" - new _bh2._BDU(_AJU76) - ")" - new _bh2._BDU(_AJU12) - ";")
+                this._ASF.Add(new _bh2._AJQ("delegateDeclaration", "delegate" - ("void" | _AJU37) - this._zg7 - new _bh2._BDU(_AJU9) - "(" - new _bh2._BDU(_AJU76) - ")" - new _bh2._BDU(_AJU12) - ";")
                 {
                     _AJR = (_bc1)7470
                 });
             }
             else
             {
-                this._ASF.Add(new _bh2._AJQ("delegateDeclaration", "delegate" - ("void" | (new _bh2._BDU("ref" - new _bh2._BDU("readonly")) - _AJU37)) - this.EMENFMGGHFEHGJGCBCDNGKDPPLEDPMBDGMND - new _bh2._BDU(_AJU9) - "(" - new _bh2._BDU(_AJU76) - ")" - new _bh2._BDU(_AJU12) - ";")
+                this._ASF.Add(new _bh2._AJQ("delegateDeclaration", "delegate" - ("void" | (new _bh2._BDU("ref" - new _bh2._BDU("readonly")) - _AJU37)) - this._zg7 - new _bh2._BDU(_AJU9) - "(" - new _bh2._BDU(_AJU76) - ")" - new _bh2._BDU(_AJU12) - ";")
                 {
                     _AJR = (_bc1)7470
                 });
             }
             _bh2._AEN _AJU191 = new _bh2._AEN("attributeTargetSpecifier");
             _bh2._AEN _AJU192 = new _bh2._AEN("ATTRIBUTETARGET");
-            this._ASF.Add(new _bh2._AJQ("ATTRIBUTETARGET", this.JCLFNNCMKINNNHLOFIHGGPGPLHKGBHNELHPJ | "event:" | "return:" | "field:" | "method:" | "param:" | "property:" | "type:" | "assembly:" | "module:")
+            this._ASF.Add(new _bh2._AJQ("ATTRIBUTETARGET", this._zg5 | "event:" | "return:" | "field:" | "method:" | "param:" | "property:" | "type:" | "assembly:" | "module:")
             {
                 _BDH = true
             });
@@ -1036,9 +1036,9 @@ namespace AHO
             this._ASF.Add(new _bh2._AJQ("integralType", new _bh2._AJI("sbyte") | "byte" | "short" | "ushort" | "int" | "uint" | "long" | "ulong" | "char"));
             this._ASF.Add(new _bh2._AJQ("floatingPointType", new _bh2._AJI("float") | "double"));
             this._ASF.Add(new _bh2._AJQ("typeName", _AJU57));
-            this._ASF.Add(new _bh2._AJQ("globalNamespace", this.JCLFNNCMKINNNHLOFIHGGPGPLHKGBHNELHPJ | "global"));
-            this._ASF.Add(new _bh2._AJQ("namespaceOrTypeName", new _bh2._BEF(this.JCLFNNCMKINNNHLOFIHGGPGPLHKGBHNELHPJ - "::", _AJU55 - "::", false) - _AJU171 - new _bh2._BEG("." - _AJU171)));
-            this._ASF.Add(new _bh2._AJQ("typeOrGeneric", this.JCLFNNCMKINNNHLOFIHGGPGPLHKGBHNELHPJ - new _bh2._BEF("<" - _AJU37, _AJU172, false) - new _bh2._BEF("<" - (new _bh2._AJI(",") | ">"), _AJU173, false)));
+            this._ASF.Add(new _bh2._AJQ("globalNamespace", this._zg5 | "global"));
+            this._ASF.Add(new _bh2._AJQ("namespaceOrTypeName", new _bh2._BEF(this._zg5 - "::", _AJU55 - "::", false) - _AJU171 - new _bh2._BEG("." - _AJU171)));
+            this._ASF.Add(new _bh2._AJQ("typeOrGeneric", this._zg5 - new _bh2._BEF("<" - _AJU37, _AJU172, false) - new _bh2._BEF("<" - (new _bh2._AJI(",") | ">"), _AJU173, false)));
             this._ASF.Add(new _bh2._AJQ("typeArgumentList", "<" - _AJU37 - new _bh2._BEG("," - _AJU37) - ">"));
             this._ASF.Add(new _bh2._AJQ("unboundTypeRank", "<" - new _bh2._BEG(",") - ">"));
             this._ASF.Add(new _bh2._AJQ("rankSpecifier", "[" - new _bh2._BEG(",") - "]"));
@@ -1059,7 +1059,7 @@ namespace AHO
             }
             _bh2._AEN _AJU199 = new _bh2._AEN("preIncrementExpression");
             _bh2._AEN _AJU200 = new _bh2._AEN("preDecrementExpression");
-            this._ASF.Add(new _bh2._AJQ("unaryExpression", new _bh2._BEF("(" - _AJU37 - ")" - this.JCLFNNCMKINNNHLOFIHGGPGPLHKGBHNELHPJ, _AJU198, false) | new _bh2._BEF(_AJU198, _AJU198, false) | new _bh2._BEF(new Predicate<_bh2._AJH>(this.IsAwaitInsideAsyncMethod), _AJU122, false) | (_AJU23 - new _bh2._BEG(new _bh2._AJI("++") | "--")) | new _bh2._BDS(new _bh2._ACW[]
+            this._ASF.Add(new _bh2._AJQ("unaryExpression", new _bh2._BEF("(" - _AJU37 - ")" - this._zg5, _AJU198, false) | new _bh2._BEF(_AJU198, _AJU198, false) | new _bh2._BEF(new Predicate<_bh2._AJH>(this.IsAwaitInsideAsyncMethod), _AJU122, false) | (_AJU23 - new _bh2._BEG(new _bh2._AJI("++") | "--")) | new _bh2._BDS(new _bh2._ACW[]
             {
                 new _bh2._AJI("+") | "-" | "!",
                 _AJU194
@@ -1072,7 +1072,7 @@ namespace AHO
             if (flag8)
             {
                 _bh2._AEN _AJU201 = new _bh2._AEN("AWAIT");
-                this._ASF.Add(new _bh2._AJQ("AWAIT", "await" | this.JCLFNNCMKINNNHLOFIHGGPGPLHKGBHNELHPJ)
+                this._ASF.Add(new _bh2._AJQ("AWAIT", "await" | this._zg5)
                 {
                     _BDH = true
                 });
@@ -1097,7 +1097,7 @@ namespace AHO
             bool flag9 = !_bd5._AHR;
             if (flag9)
             {
-                this._ASF.Add(new _bh2._AJQ("NAMEOF", new _bh2._BEF((_bh2._AJH s) => s.Current.text == "nameof", this.JCLFNNCMKINNNHLOFIHGGPGPLHKGBHNELHPJ | "nameof", false))
+                this._ASF.Add(new _bh2._AJQ("NAMEOF", new _bh2._BEF((_bh2._AJH s) => s.Current.text == "nameof", this._zg5 | "nameof", false))
                 {
                     _BDH = true
                 });
@@ -1117,20 +1117,20 @@ namespace AHO
             this._ASF.Add(new _bh2._AJQ("typeofExpression", new _bh2._AJI("typeof") - "(" - (_AJU37 | "void") - ")"));
             this._ASF.Add(new _bh2._AJQ("predefinedType", new _bh2._AJI("bool") | "byte" | "char" | "decimal" | "double" | "float" | "int" | "long" | "object" | "sbyte" | "short" | "string" | "uint" | "ulong" | "ushort"));
             this._ASF.Add(new _bh2._AJQ("qid", _AJU216 - new _bh2._BEG(_AJU217)));
-            this._ASF.Add(new _bh2._AJQ("qidStart", new _bh2._BEF(this.JCLFNNCMKINNNHLOFIHGGPGPLHKGBHNELHPJ - _AJU172 - ".", this.EMENFMGGHFEHGJGCBCDNGKDPPLEDPMBDGMND - _AJU172, false) | new _bh2._BEF(this.JCLFNNCMKINNNHLOFIHGGPGPLHKGBHNELHPJ - "<", this.EMENFMGGHFEHGJGCBCDNGKDPPLEDPMBDGMND - _AJU9, false) | (this.JCLFNNCMKINNNHLOFIHGGPGPLHKGBHNELHPJ - new _bh2._BDU("::" - this.JCLFNNCMKINNNHLOFIHGGPGPLHKGBHNELHPJ))));
-            this._ASF.Add(new _bh2._AJQ("qidPart", new _bh2._BEF("." - this.JCLFNNCMKINNNHLOFIHGGPGPLHKGBHNELHPJ, _AJU218, false) | "."));
+            this._ASF.Add(new _bh2._AJQ("qidStart", new _bh2._BEF(this._zg5 - _AJU172 - ".", this._zg7 - _AJU172, false) | new _bh2._BEF(this._zg5 - "<", this._zg7 - _AJU9, false) | (this._zg5 - new _bh2._BDU("::" - this._zg5))));
+            this._ASF.Add(new _bh2._AJQ("qidPart", new _bh2._BEF("." - this._zg5, _AJU218, false) | "."));
             _bh2._AEN _AJU219 = new _bh2._AEN("interpolatedStringLiteral");
             _bh2._AEN _AJU220 = new _bh2._AEN("stringInterpolation");
             bool _AHQ18 = _bd5._AHR;
             if (_AHQ18)
             {
-                this._ASF.Add(new _bh2._AJQ("primaryExpressionStart", _AJU39 | this.PJLPDGACCJPCAGGNGOIMGGJLDDNFDCPMAMAP | "true" | "false" | new _bh2._BEF(this.JCLFNNCMKINNNHLOFIHGGPGPLHKGBHNELHPJ - _AJU172, this.JCLFNNCMKINNNHLOFIHGGPGPLHKGBHNELHPJ - _AJU172, false) | (new _bh2._BEF(this.JCLFNNCMKINNNHLOFIHGGPGPLHKGBHNELHPJ - "::", _AJU55 - "::", false) - this.JCLFNNCMKINNNHLOFIHGGPGPLHKGBHNELHPJ) | _AJU214 | "this" | "base" | _AJU215 | _AJU207 | _AJU208 | _AJU209 | _AJU210));
+                this._ASF.Add(new _bh2._AJQ("primaryExpressionStart", _AJU39 | this._zg6 | "true" | "false" | new _bh2._BEF(this._zg5 - _AJU172, this._zg5 - _AJU172, false) | (new _bh2._BEF(this._zg5 - "::", _AJU55 - "::", false) - this._zg5) | _AJU214 | "this" | "base" | _AJU215 | _AJU207 | _AJU208 | _AJU209 | _AJU210));
             }
             else
             {
-                this._ASF.Add(new _bh2._AJQ("interpolatedStringLiteral", this.PADBMJLLGAAIPKILFLHMJIFHNCEBBGFKHLJJ | (this.NEOEKODKBFIFEHEMCOBJCNDDGIGIBIALFBBB - _AJU220 - new _bh2._BEG(new _bh2._BDU(this.GPPFFDKKGDPEJFMLIIPIIFCOPNNLMFPHKMEK) - _AJU220) - this.MBOCPMDAGPNEBBALHCJIKENPKHCHOMMEMDBG)));
-                this._ASF.Add(new _bh2._AJQ("stringInterpolation", "{" - _AJU20 - new _bh2._BDU("," - _AJU22) - new _bh2._BDU(":" - this.FPKACCPNCJADKMOLADGCFAPFGMMJPEOPKKGD) - "}"));
-                this._ASF.Add(new _bh2._AJQ("primaryExpressionStart", _AJU39 | this.PJLPDGACCJPCAGGNGOIMGGJLDDNFDCPMAMAP | "true" | "false" | _AJU219 | new _bh2._BEF("nameof", this.JCLFNNCMKINNNHLOFIHGGPGPLHKGBHNELHPJ - "(", _AJU213, false) | new _bh2._BEF(this.JCLFNNCMKINNNHLOFIHGGPGPLHKGBHNELHPJ - _AJU172, this.JCLFNNCMKINNNHLOFIHGGPGPLHKGBHNELHPJ - _AJU172, false) | (new _bh2._BEF(this.JCLFNNCMKINNNHLOFIHGGPGPLHKGBHNELHPJ - "::", _AJU55 - "::", false) - this.JCLFNNCMKINNNHLOFIHGGPGPLHKGBHNELHPJ) | _AJU214 | "this" | "base" | _AJU215 | _AJU207 | _AJU208 | _AJU209 | _AJU210));
+                this._ASF.Add(new _bh2._AJQ("interpolatedStringLiteral", this._zg8 | (this._zg9 - _AJU220 - new _bh2._BEG(new _bh2._BDU(this._zh1) - _AJU220) - this._zh2)));
+                this._ASF.Add(new _bh2._AJQ("stringInterpolation", "{" - _AJU20 - new _bh2._BDU("," - _AJU22) - new _bh2._BDU(":" - this._zh3) - "}"));
+                this._ASF.Add(new _bh2._AJQ("primaryExpressionStart", _AJU39 | this._zg6 | "true" | "false" | _AJU219 | new _bh2._BEF("nameof", this._zg5 - "(", _AJU213, false) | new _bh2._BEF(this._zg5 - _AJU172, this._zg5 - _AJU172, false) | (new _bh2._BEF(this._zg5 - "::", _AJU55 - "::", false) - this._zg5) | _AJU214 | "this" | "base" | _AJU215 | _AJU207 | _AJU208 | _AJU209 | _AJU210));
             }
             _bh2._AEN _AJU221 = new _bh2._AEN("argument");
             _bh2._AEN _AJU222 = new _bh2._AEN("attributeArgument");
@@ -1140,7 +1140,7 @@ namespace AHO
             _bh2._AEN _AJU226 = new _bh2._AEN("attributeMemberName");
             _bh2._AEN _AJU227 = new _bh2._AEN("variableReference");
             this._ASF.Add(new _bh2._AJQ("primaryExpressionPart", _AJU218 | _AJU202 | _AJU74));
-            this._ASF.Add(new _bh2._AJQ("accessIdentifier", (new _bh2._AJI(".") | "?.") - this.JCLFNNCMKINNNHLOFIHGGPGPLHKGBHNELHPJ - new _bh2._BEF(_AJU172, _AJU172, false)));
+            this._ASF.Add(new _bh2._AJQ("accessIdentifier", (new _bh2._AJI(".") | "?.") - this._zg5 - new _bh2._BEF(_AJU172, _AJU172, false)));
             this._ASF.Add(new _bh2._AJQ("brackets", "[" - new _bh2._BDU(_AJU223) - "]"));
             this._ASF.Add(new _bh2._AJQ("expressionList", _AJU20 - new _bh2._BEG("," - _AJU20)));
             this._ASF.Add(new _bh2._AJQ("parenExpression", "(" - _AJU20 - ")"));
@@ -1154,10 +1154,10 @@ namespace AHO
             {
                 _AJR = _bc1.AttributeArgumentsScope
             });
-            this._ASF.Add(new _bh2._AJQ("argument", new _bh2._BEF(this.JCLFNNCMKINNNHLOFIHGGPGPLHKGBHNELHPJ - ":", _AJU225 - _AJU224, false) | _AJU224));
-            this._ASF.Add(new _bh2._AJQ("attributeArgument", new _bh2._BEF(this.JCLFNNCMKINNNHLOFIHGGPGPLHKGBHNELHPJ - "=", _AJU226 - _AJU224, false) | new _bh2._BEF(this.JCLFNNCMKINNNHLOFIHGGPGPLHKGBHNELHPJ - ":", _AJU225 - _AJU224, false) | _AJU224));
-            this._ASF.Add(new _bh2._AJQ("argumentName", this.JCLFNNCMKINNNHLOFIHGGPGPLHKGBHNELHPJ - ":"));
-            this._ASF.Add(new _bh2._AJQ("attributeMemberName", this.JCLFNNCMKINNNHLOFIHGGPGPLHKGBHNELHPJ - "="));
+            this._ASF.Add(new _bh2._AJQ("argument", new _bh2._BEF(this._zg5 - ":", _AJU225 - _AJU224, false) | _AJU224));
+            this._ASF.Add(new _bh2._AJQ("attributeArgument", new _bh2._BEF(this._zg5 - "=", _AJU226 - _AJU224, false) | new _bh2._BEF(this._zg5 - ":", _AJU225 - _AJU224, false) | _AJU224));
+            this._ASF.Add(new _bh2._AJQ("argumentName", this._zg5 - ":"));
+            this._ASF.Add(new _bh2._AJQ("attributeMemberName", this._zg5 - "="));
             bool _AHQ19 = _bd5._AHR;
             if (_AHQ19)
             {
@@ -1170,11 +1170,11 @@ namespace AHO
             else
             {
                 this._ASF.Add(new _bh2._AJQ("outVariableDeclaration", _AJU111 - _AJU120));
-                this._ASF.Add(new _bh2._AJQ("outVariableDeclarator", this.EMENFMGGHFEHGJGCBCDNGKDPPLEDPMBDGMND)
+                this._ASF.Add(new _bh2._AJQ("outVariableDeclarator", this._zg7)
                 {
                     _AJR = _bc1.OutVariableDeclarator
                 });
-                this._ASF.Add(new _bh2._AJQ("argumentValue", _AJU20 | new _bh2._BEF("out" - _AJU111 - this.JCLFNNCMKINNNHLOFIHGGPGPLHKGBHNELHPJ, "out" - _AJU119, false) | new _bh2._BDS(new _bh2._ACW[]
+                this._ASF.Add(new _bh2._AJQ("argumentValue", _AJU20 | new _bh2._BEF("out" - _AJU111 - this._zg5, "out" - _AJU119, false) | new _bh2._BDS(new _bh2._ACW[]
                 {
                     new _bh2._AJI("out") | "ref" | "in",
                     _AJU227
@@ -1191,8 +1191,8 @@ namespace AHO
                 _AJR = _bc1.AnonymousObjectCreation
             });
             this._ASF.Add(new _bh2._AJQ("anonymousObjectInitializer", "{" - new _bh2._BDU(_AJU229) - new _bh2._BDU(",") - "}"));
-            this._ASF.Add(new _bh2._AJQ("memberDeclaratorList", _AJU230 - new _bh2._BEG(new _bh2._BEF("," - this.JCLFNNCMKINNNHLOFIHGGPGPLHKGBHNELHPJ, "," - _AJU230, false))));
-            this._ASF.Add(new _bh2._AJQ("memberDeclarator", new _bh2._BEF(this.JCLFNNCMKINNNHLOFIHGGPGPLHKGBHNELHPJ - "=", this.JCLFNNCMKINNNHLOFIHGGPGPLHKGBHNELHPJ - "=" - _AJU20, false) | _AJU231)
+            this._ASF.Add(new _bh2._AJQ("memberDeclaratorList", _AJU230 - new _bh2._BEG(new _bh2._BEF("," - this._zg5, "," - _AJU230, false))));
+            this._ASF.Add(new _bh2._AJQ("memberDeclarator", new _bh2._BEF(this._zg5 - "=", this._zg5 - "=" - _AJU20, false) | _AJU231)
             {
                 _AJR = _bc1.MemberDeclarator
             });
@@ -1205,7 +1205,7 @@ namespace AHO
             _bh2._AEN _AJU237 = new _bh2._AEN("memberInitializerList");
             _bh2._AEN _AJU238 = new _bh2._AEN("memberInitializer");
             this._ASF.Add(new _bh2._AJQ("objectCreationExpression", (_AJU74 - new _bh2._BDU(_AJU232)) | _AJU232));
-            this._ASF.Add(new _bh2._AJQ("objectOrCollectionInitializer", "{" - (new _bh2._BEF(this.JCLFNNCMKINNNHLOFIHGGPGPLHKGBHNELHPJ - "=", _AJU233, false) | "}" | _AJU234)));
+            this._ASF.Add(new _bh2._AJQ("objectOrCollectionInitializer", "{" - (new _bh2._BEF(this._zg5 - "=", _AJU233, false) | "}" | _AJU234)));
             this._ASF.Add(new _bh2._AJQ("collectionInitializer", _AJU235 - new _bh2._BDU(",") - "}"));
             this._ASF.Add(new _bh2._AJQ("elementInitializerList", _AJU236 - new _bh2._BEG(new _bh2._BEJ(new _bh2._BDU(",") - "}", "," - _AJU236))));
             this._ASF.Add(new _bh2._AJQ("elementInitializer", _AJU197 | ("{" - _AJU223 - "}") | ".EXPECTEDTYPE"));
@@ -1214,7 +1214,7 @@ namespace AHO
             {
                 _AJR = _bc1.MemberInitializerScope
             });
-            this._ASF.Add(new _bh2._AJQ("memberInitializer", (this.JCLFNNCMKINNNHLOFIHGGPGPLHKGBHNELHPJ | ".MEMBERINITIALIZER") - "=" - (_AJU20 | _AJU232 | ".EXPECTEDTYPE")));
+            this._ASF.Add(new _bh2._AJQ("memberInitializer", (this._zg5 | ".MEMBERINITIALIZER") - "=" - (_AJU20 | _AJU232 | ".EXPECTEDTYPE")));
             _bh2._AEN _AJU239 = new _bh2._AEN("explicitAnonymousFunctionParameterList");
             _bh2._AEN _AJU240 = new _bh2._AEN("explicitAnonymousFunctionParameter");
             _bh2._AEN _AJU241 = new _bh2._AEN("anonymousFunctionParameterModifier");
@@ -1239,62 +1239,62 @@ namespace AHO
             _bh2._AEN _AJU248 = new _bh2._AEN("implicitAnonymousFunctionParameterList");
             _bh2._AEN _AJU249 = new _bh2._AEN("implicitAnonymousFunctionParameter");
             _bh2._AEN _AJU250 = new _bh2._AEN("FROM");
-            this._ASF.Add(new _bh2._AJQ("FROM", this.JCLFNNCMKINNNHLOFIHGGPGPLHKGBHNELHPJ | "from")
+            this._ASF.Add(new _bh2._AJQ("FROM", this._zg5 | "from")
             {
                 _BDH = true
             });
             _bh2._AEN _AJU251 = new _bh2._AEN("SELECT");
-            this._ASF.Add(new _bh2._AJQ("SELECT", this.JCLFNNCMKINNNHLOFIHGGPGPLHKGBHNELHPJ)
+            this._ASF.Add(new _bh2._AJQ("SELECT", this._zg5)
             {
                 _BDH = true
             });
             _bh2._AEN _AJU252 = new _bh2._AEN("GROUP");
-            this._ASF.Add(new _bh2._AJQ("GROUP", this.JCLFNNCMKINNNHLOFIHGGPGPLHKGBHNELHPJ | "group")
+            this._ASF.Add(new _bh2._AJQ("GROUP", this._zg5 | "group")
             {
                 _BDH = true
             });
             _bh2._AEN _AJU253 = new _bh2._AEN("INTO");
-            this._ASF.Add(new _bh2._AJQ("INTO", new _bh2._BEF((_bh2._AJH s) => s.Current.text == "into", this.JCLFNNCMKINNNHLOFIHGGPGPLHKGBHNELHPJ | "into", false))
+            this._ASF.Add(new _bh2._AJQ("INTO", new _bh2._BEF((_bh2._AJH s) => s.Current.text == "into", this._zg5 | "into", false))
             {
                 _BDH = true
             });
             _bh2._AEN _AJU254 = new _bh2._AEN("ORDERBY");
-            this._ASF.Add(new _bh2._AJQ("ORDERBY", new _bh2._BEF((_bh2._AJH s) => s.Current.text == "orderby", this.JCLFNNCMKINNNHLOFIHGGPGPLHKGBHNELHPJ | "orderby", false))
+            this._ASF.Add(new _bh2._AJQ("ORDERBY", new _bh2._BEF((_bh2._AJH s) => s.Current.text == "orderby", this._zg5 | "orderby", false))
             {
                 _BDH = true
             });
             _bh2._AEN _AJU255 = new _bh2._AEN("JOIN");
-            this._ASF.Add(new _bh2._AJQ("JOIN", new _bh2._BEF((_bh2._AJH s) => s.Current.text == "join", this.JCLFNNCMKINNNHLOFIHGGPGPLHKGBHNELHPJ | "join", false))
+            this._ASF.Add(new _bh2._AJQ("JOIN", new _bh2._BEF((_bh2._AJH s) => s.Current.text == "join", this._zg5 | "join", false))
             {
                 _BDH = true
             });
             _bh2._AEN _AJU256 = new _bh2._AEN("LET");
-            this._ASF.Add(new _bh2._AJQ("LET", new _bh2._BEF((_bh2._AJH s) => s.Current.text == "let", this.JCLFNNCMKINNNHLOFIHGGPGPLHKGBHNELHPJ | "let", false))
+            this._ASF.Add(new _bh2._AJQ("LET", new _bh2._BEF((_bh2._AJH s) => s.Current.text == "let", this._zg5 | "let", false))
             {
                 _BDH = true
             });
             _bh2._AEN _AJU257 = new _bh2._AEN("ON");
-            this._ASF.Add(new _bh2._AJQ("ON", new _bh2._BEF((_bh2._AJH s) => s.Current.text == "on", this.JCLFNNCMKINNNHLOFIHGGPGPLHKGBHNELHPJ | "on", false))
+            this._ASF.Add(new _bh2._AJQ("ON", new _bh2._BEF((_bh2._AJH s) => s.Current.text == "on", this._zg5 | "on", false))
             {
                 _BDH = true
             });
             _bh2._AEN _AJU258 = new _bh2._AEN("EQUALS");
-            this._ASF.Add(new _bh2._AJQ("EQUALS", new _bh2._BEF((_bh2._AJH s) => s.Current.text == "equals", this.JCLFNNCMKINNNHLOFIHGGPGPLHKGBHNELHPJ | "equals", false))
+            this._ASF.Add(new _bh2._AJQ("EQUALS", new _bh2._BEF((_bh2._AJH s) => s.Current.text == "equals", this._zg5 | "equals", false))
             {
                 _BDH = true
             });
             _bh2._AEN _AJU259 = new _bh2._AEN("BY");
-            this._ASF.Add(new _bh2._AJQ("BY", new _bh2._BEF((_bh2._AJH s) => s.Current.text == "by", this.JCLFNNCMKINNNHLOFIHGGPGPLHKGBHNELHPJ | "by", false))
+            this._ASF.Add(new _bh2._AJQ("BY", new _bh2._BEF((_bh2._AJH s) => s.Current.text == "by", this._zg5 | "by", false))
             {
                 _BDH = true
             });
             _bh2._AEN _AJU260 = new _bh2._AEN("ASCENDING_OR_DESCENDING");
-            this._ASF.Add(new _bh2._AJQ("ASCENDING_OR_DESCENDING", this.JCLFNNCMKINNNHLOFIHGGPGPLHKGBHNELHPJ | "ascending" | "descending")
+            this._ASF.Add(new _bh2._AJQ("ASCENDING_OR_DESCENDING", this._zg5 | "ascending" | "descending")
             {
                 _BDH = true
             });
             _bh2._AEN _AJU261 = new _bh2._AEN("fromClause");
-            this._ASF.Add(new _bh2._AJQ("nonAssignmentExpression", new _bh2._BEF(_AJU243 - "=>", _AJU244, false) | new _bh2._BEF(this.JCLFNNCMKINNNHLOFIHGGPGPLHKGBHNELHPJ - this.JCLFNNCMKINNNHLOFIHGGPGPLHKGBHNELHPJ - "in", _AJU245, false) | new _bh2._BEF(this.JCLFNNCMKINNNHLOFIHGGPGPLHKGBHNELHPJ - _AJU37 - this.JCLFNNCMKINNNHLOFIHGGPGPLHKGBHNELHPJ - "in", _AJU245, false) | _AJU21));
+            this._ASF.Add(new _bh2._AJQ("nonAssignmentExpression", new _bh2._BEF(_AJU243 - "=>", _AJU244, false) | new _bh2._BEF(this._zg5 - this._zg5 - "in", _AJU245, false) | new _bh2._BEF(this._zg5 - _AJU37 - this._zg5 - "in", _AJU245, false) | _AJU21));
             this._ASF.Add(new _bh2._AJQ("lambdaExpression", _AJU243 - "=>" - _AJU246)
             {
                 _AJR = (_bc1)3633
@@ -1304,13 +1304,13 @@ namespace AHO
                 "(",
                 new _bh2._BDU(new _bh2._BEF(new _bh2._BDS(new _bh2._ACW[]
                 {
-                    this.JCLFNNCMKINNNHLOFIHGGPGPLHKGBHNELHPJ,
+                    this._zg5,
                     new _bh2._AJI(",") | ")"
                 }), _AJU248, false) | _AJU239),
                 ")"
             }) | _AJU249));
             this._ASF.Add(new _bh2._AJQ("implicitAnonymousFunctionParameterList", _AJU249 - new _bh2._BEG("," - _AJU249)));
-            this._ASF.Add(new _bh2._AJQ("implicitAnonymousFunctionParameter", this.JCLFNNCMKINNNHLOFIHGGPGPLHKGBHNELHPJ)
+            this._ASF.Add(new _bh2._AJQ("implicitAnonymousFunctionParameter", this._zg5)
             {
                 _AJR = _bc1.ImplicitParameterDeclaration
             });
@@ -1342,7 +1342,7 @@ namespace AHO
                 _AJR = _bc1.FormalParameterListScope
             });
             this._ASF.Add(new _bh2._AJQ("explicitAnonymousFunctionParameterList", _AJU240 - new _bh2._BEG("," - _AJU240)));
-            this._ASF.Add(new _bh2._AJQ("explicitAnonymousFunctionParameter", new _bh2._BDU(_AJU241) - _AJU37 - this.EMENFMGGHFEHGJGCBCDNGKDPPLEDPMBDGMND)
+            this._ASF.Add(new _bh2._AJQ("explicitAnonymousFunctionParameter", new _bh2._BDU(_AJU241) - _AJU37 - this._zg7)
             {
                 _AJR = _bc1.ExplicitParameterDeclaration
             });
@@ -1370,7 +1370,7 @@ namespace AHO
             {
                 _AJR = _bc1.QueryExpressionScope
             });
-            this._ASF.Add(new _bh2._AJQ("fromClause", _AJU250 - (new _bh2._BEF(this.EMENFMGGHFEHGJGCBCDNGKDPPLEDPMBDGMND - "in", this.EMENFMGGHFEHGJGCBCDNGKDPPLEDPMBDGMND, false) | (_AJU37 - this.EMENFMGGHFEHGJGCBCDNGKDPPLEDPMBDGMND)) - "in" - _AJU20)
+            this._ASF.Add(new _bh2._AJQ("fromClause", _AJU250 - (new _bh2._BEF(this._zg7 - "in", this._zg7, false) | (_AJU37 - this._zg7)) - "in" - _AJU20)
             {
                 _AJR = _bc1.FromClauseVariableDeclaration
             });
@@ -1378,10 +1378,10 @@ namespace AHO
             {
                 _AJR = _bc1.QueryBodyScope
             });
-            this._ASF.Add(new _bh2._AJQ("queryContinuation", _AJU253 - this.JCLFNNCMKINNNHLOFIHGGPGPLHKGBHNELHPJ - _AJU262));
+            this._ASF.Add(new _bh2._AJQ("queryContinuation", _AJU253 - this._zg5 - _AJU262));
             this._ASF.Add(new _bh2._AJQ("queryBodyClause", new _bh2._BEF((_bh2._AJH s) => s.Current.text == "from", _AJU261, false) | new _bh2._BEF((_bh2._AJH s) => s.Current.text == "let", _AJU265, false) | new _bh2._BEF((_bh2._AJH s) => s.Current.text == "join", _AJU267, false) | new _bh2._BEF((_bh2._AJH s) => s.Current.text == "orderby", _AJU268, false) | _AJU266));
-            this._ASF.Add(new _bh2._AJQ("joinClause", _AJU255 - new _bh2._BDU(_AJU37) - this.JCLFNNCMKINNNHLOFIHGGPGPLHKGBHNELHPJ - "in" - _AJU20 - _AJU257 - _AJU20 - _AJU258 - _AJU20 - new _bh2._BDU(_AJU253 - this.JCLFNNCMKINNNHLOFIHGGPGPLHKGBHNELHPJ)));
-            this._ASF.Add(new _bh2._AJQ("letClause", _AJU256 - this.JCLFNNCMKINNNHLOFIHGGPGPLHKGBHNELHPJ - "=" - _AJU20));
+            this._ASF.Add(new _bh2._AJQ("joinClause", _AJU255 - new _bh2._BDU(_AJU37) - this._zg5 - "in" - _AJU20 - _AJU257 - _AJU20 - _AJU258 - _AJU20 - new _bh2._BDU(_AJU253 - this._zg5)));
+            this._ASF.Add(new _bh2._AJQ("letClause", _AJU256 - this._zg5 - "=" - _AJU20));
             this._ASF.Add(new _bh2._AJQ("orderbyClause", _AJU254 - _AJU269));
             this._ASF.Add(new _bh2._AJQ("orderingList", _AJU270 - new _bh2._BEG("," - _AJU270)));
             this._ASF.Add(new _bh2._AJQ("ordering", _AJU20 - new _bh2._BDU(new _bh2._BEF((_bh2._AJH s) => s.Current.text == "ascending" || s.Current.text == "descending", _AJU260, false))));
@@ -1898,7 +1898,7 @@ namespace AHO
                                         _bc8 _APS = new _bc8(node);
                                         _APS.EFI = (_bf8)_AFF;
                                         _APS._ACV = ((_AFF != null) ? ((_bn1)_AFF._ACV) : null);
-                                        _APS.GJOKNNJPNCHGBGCLIMHKIOHPIFBKHGDNIJLO(nodeScope);
+                                        _APS._zd6(nodeScope);
                                         node._AJW = _APS;
                                         goto IL_07CB;
                                     }
@@ -1921,9 +1921,9 @@ namespace AHO
                                     {
                                         goto IL_0794;
                                     }
-                                    _bn2 pfmepljdkgnppejbglhfbhkgndaojcnfjjfl = new _bn2(node);
-                                    pfmepljdkgnppejbglhfbhkgndaojcnfjjfl.GJOKNNJPNCHGBGCLIMHKIOHPIFBKHGDNIJLO(nodeScope);
-                                    node._AJW = pfmepljdkgnppejbglhfbhkgndaojcnfjjfl;
+                                    _bn2 _zh5 = new _bn2(node);
+                                    _zh5._zd6(nodeScope);
+                                    node._AJW = _zh5;
                                     goto IL_07CB;
                                 }
                             }
@@ -1954,10 +1954,10 @@ namespace AHO
                                 }
                             }
                             _AFF = (nodeScope as _bn4).EFI;
-                            NLGEOGIKCPGHIFEMBHMJCBHPIFHBPGOJKCJI nlgeogikcpghifembhmjcbhpifhbpgojkcji = new NLGEOGIKCPGHIFEMBHMJCBHPIFHBPGOJKCJI(node);
-                            nlgeogikcpghifembhmjcbhpifhbpgojkcji.GJOKNNJPNCHGBGCLIMHKIOHPIFBKHGDNIJLO(nodeScope);
-                            nlgeogikcpghifembhmjcbhpifhbpgojkcji._ACV = ((_AFF != null) ? (_AFF._ACV as _b2) : null);
-                            node._AJW = nlgeogikcpghifembhmjcbhpifhbpgojkcji;
+                            _zh6 _zh7 = new _zh6(node);
+                            _zh7._zd6(nodeScope);
+                            _zh7._ACV = ((_AFF != null) ? (_AFF._ACV as _b2) : null);
+                            node._AJW = _zh7;
                             goto IL_07CB;
                         }
                         if (_CHG3 > _bc1.ConstructorInitializerScope)
@@ -1987,14 +1987,14 @@ namespace AHO
                             }
                             _AFF = _bm2.GetNodeDeclaration(node, null);
                             _bn4 _AQH2 = new _bn4(node);
-                            _AQH2.GJOKNNJPNCHGBGCLIMHKIOHPIFBKHGDNIJLO(nodeScope);
+                            _AQH2._zd6(nodeScope);
                             _AQH2.EFI = _AFF;
                             node._AJW = _AQH2;
                             goto IL_07CB;
                         IL_048E:
                             _AFF = _bm2.GetNodeDeclaration(node.OOME, null);
                             _bj8 _BEZ = new _bj8(node);
-                            _BEZ.GJOKNNJPNCHGBGCLIMHKIOHPIFBKHGDNIJLO(nodeScope);
+                            _BEZ._zd6(nodeScope);
                             _BEZ._ACV = _AFF._ACV;
                             node._AJW = _BEZ;
                             goto IL_07CB;
@@ -2008,7 +2008,7 @@ namespace AHO
                                 if (flag4)
                                 {
                                     _bj8 _BEZ2 = new _bj8(node);
-                                    _BEZ2.GJOKNNJPNCHGBGCLIMHKIOHPIFBKHGDNIJLO(nodeScope);
+                                    _BEZ2._zd6(nodeScope);
                                     _BEZ2._ACV = _AFF._ACV;
                                     node._AJW = _BEZ2;
                                 }
@@ -2036,7 +2036,7 @@ namespace AHO
                                 if (_AFF != null)
                                 {
                                     _bj8 _BEZ3 = new _bj8(node);
-                                    _BEZ3.GJOKNNJPNCHGBGCLIMHKIOHPIFBKHGDNIJLO(nodeScope);
+                                    _BEZ3._zd6(nodeScope);
                                     _AQI2 = _BEZ3;
                                     _BEZ3._ACV = _AFF._ACV;
                                 }
@@ -2051,9 +2051,9 @@ namespace AHO
                             {
                                 goto IL_0794;
                             }
-                            _bk1 mdaepkfbdjnhibpdacpfaaleochkoccedffc = new _bk1(node);
-                            mdaepkfbdjnhibpdacpfaaleochkoccedffc.GJOKNNJPNCHGBGCLIMHKIOHPIFBKHGDNIJLO(nodeScope);
-                            node._AJW = mdaepkfbdjnhibpdacpfaaleochkoccedffc;
+                            _bk1 _zh8 = new _bk1(node);
+                            _zh8._zd6(nodeScope);
+                            node._AJW = _zh8;
                             goto IL_07CB;
                         }
                     IL_040C:
@@ -2061,14 +2061,14 @@ namespace AHO
                         bool flag6 = _AFF == null;
                         if (flag6)
                         {
-                            _bn2 pfmepljdkgnppejbglhfbhkgndaojcnfjjfl2 = new _bn2(node);
-                            pfmepljdkgnppejbglhfbhkgndaojcnfjjfl2.GJOKNNJPNCHGBGCLIMHKIOHPIFBKHGDNIJLO(nodeScope);
-                            node._AJW = pfmepljdkgnppejbglhfbhkgndaojcnfjjfl2;
+                            _bn2 _zh9 = new _bn2(node);
+                            _zh9._zd6(nodeScope);
+                            node._AJW = _zh9;
                         }
                         else
                         {
                             _bj8 _BEZ4 = new _bj8(node);
-                            _BEZ4.GJOKNNJPNCHGBGCLIMHKIOHPIFBKHGDNIJLO(nodeScope);
+                            _BEZ4._zd6(nodeScope);
                             _BEZ4._ACV = _AFF._ACV;
                             node._AJW = _BEZ4;
                         }
@@ -2086,9 +2086,9 @@ namespace AHO
                                     {
                                         goto IL_0794;
                                     }
-                                    _bh5 khacndfpokhiekfdajlkpgmdeobhnmnjaeoh = new _bh5(node);
-                                    khacndfpokhiekfdajlkpgmdeobhnmnjaeoh.GJOKNNJPNCHGBGCLIMHKIOHPIFBKHGDNIJLO(nodeScope);
-                                    node._AJW = khacndfpokhiekfdajlkpgmdeobhnmnjaeoh;
+                                    _bh5 _zi1 = new _bh5(node);
+                                    _zi1._zd6(nodeScope);
+                                    node._AJW = _zi1;
                                     goto IL_07CB;
                                 }
                             }
@@ -2098,9 +2098,9 @@ namespace AHO
                                 {
                                     goto IL_0794;
                                 }
-                                _bn2 pfmepljdkgnppejbglhfbhkgndaojcnfjjfl3 = new _bn2(node);
-                                pfmepljdkgnppejbglhfbhkgndaojcnfjjfl3.GJOKNNJPNCHGBGCLIMHKIOHPIFBKHGDNIJLO(nodeScope);
-                                node._AJW = pfmepljdkgnppejbglhfbhkgndaojcnfjjfl3;
+                                _bn2 _zi2 = new _bn2(node);
+                                _zi2._zd6(nodeScope);
+                                node._AJW = _zi2;
                                 goto IL_07CB;
                             }
                         }
@@ -2112,9 +2112,9 @@ namespace AHO
                                 {
                                     goto IL_0794;
                                 }
-                                _bk1 mdaepkfbdjnhibpdacpfaaleochkoccedffc2 = new _bk1(node);
-                                mdaepkfbdjnhibpdacpfaaleochkoccedffc2.GJOKNNJPNCHGBGCLIMHKIOHPIFBKHGDNIJLO(nodeScope);
-                                node._AJW = mdaepkfbdjnhibpdacpfaaleochkoccedffc2;
+                                _bk1 _zi3 = new _bk1(node);
+                                _zi3._zd6(nodeScope);
+                                node._AJW = _zi3;
                                 goto IL_07CB;
                             }
                         }
@@ -2122,30 +2122,30 @@ namespace AHO
                         {
                             if (_CHG3 == _bc1.SpecificCatchScope)
                             {
-                                _bn2 pfmepljdkgnppejbglhfbhkgndaojcnfjjfl4 = new _bn2(node);
-                                pfmepljdkgnppejbglhfbhkgndaojcnfjjfl4.GJOKNNJPNCHGBGCLIMHKIOHPIFBKHGDNIJLO(nodeScope);
-                                node._AJW = pfmepljdkgnppejbglhfbhkgndaojcnfjjfl4;
+                                _bn2 _zi4 = new _bn2(node);
+                                _zi4._zd6(nodeScope);
+                                node._AJW = _zi4;
                                 goto IL_07CB;
                             }
                             if (_CHG3 == _bc1.ArgumentListScope)
                             {
-                                _bk1 mdaepkfbdjnhibpdacpfaaleochkoccedffc3 = new _bk1(node);
-                                mdaepkfbdjnhibpdacpfaaleochkoccedffc3.GJOKNNJPNCHGBGCLIMHKIOHPIFBKHGDNIJLO(nodeScope);
-                                node._AJW = mdaepkfbdjnhibpdacpfaaleochkoccedffc3;
+                                _bk1 _zi5 = new _bk1(node);
+                                _zi5._zd6(nodeScope);
+                                node._AJW = _zi5;
                                 goto IL_07CB;
                             }
                             if (_CHG3 != _bc1.AttributeArgumentsScope)
                             {
                                 goto IL_0794;
                             }
-                            _be9 hjlbhcahfcdppomkbkckncgacloaejjofdic = new _be9(node);
-                            hjlbhcahfcdppomkbkckncgacloaejjofdic.GJOKNNJPNCHGBGCLIMHKIOHPIFBKHGDNIJLO(nodeScope);
-                            node._AJW = hjlbhcahfcdppomkbkckncgacloaejjofdic;
+                            _be9 _zi6 = new _be9(node);
+                            _zi6._zd6(nodeScope);
+                            node._AJW = _zi6;
                             goto IL_07CB;
                         }
-                        _bn2 pfmepljdkgnppejbglhfbhkgndaojcnfjjfl5 = new _bn2(node);
-                        pfmepljdkgnppejbglhfbhkgndaojcnfjjfl5.GJOKNNJPNCHGBGCLIMHKIOHPIFBKHGDNIJLO(nodeScope);
-                        node._AJW = pfmepljdkgnppejbglhfbhkgndaojcnfjjfl5;
+                        _bn2 _zi7 = new _bn2(node);
+                        _zi7._zd6(nodeScope);
+                        node._AJW = _zi7;
                         goto IL_07CB;
                     }
                     if (_CHG3 <= _bc1.AttributesScope)
@@ -2154,9 +2154,9 @@ namespace AHO
                         {
                             if (_CHG3 == _bc1.MemberInitializerScope)
                             {
-                                _bb9 coingoplbpbknfilcibhidegpgfgggnnjnfj = new _bb9(node);
-                                coingoplbpbknfilcibhidegpgfgggnnjnfj.GJOKNNJPNCHGBGCLIMHKIOHPIFBKHGDNIJLO(nodeScope);
-                                node._AJW = coingoplbpbknfilcibhidegpgfgggnnjnfj;
+                                _bb9 _zi8 = new _bb9(node);
+                                _zi8._zd6(nodeScope);
+                                node._AJW = _zi8;
                                 goto IL_07CB;
                             }
                             if (_CHG3 != _bc1.TypeDeclarationScope)
@@ -2165,7 +2165,7 @@ namespace AHO
                             }
                             FKI _AFF = _bm2.GetNodeDeclaration(node, null);
                             _bn4 _AQH3 = new _bn4(node);
-                            _AQH3.GJOKNNJPNCHGBGCLIMHKIOHPIFBKHGDNIJLO(nodeScope);
+                            _AQH3._zd6(nodeScope);
                             _AQH3.EFI = _AFF;
                             node._AJW = _AQH3;
                             goto IL_07CB;
@@ -2176,7 +2176,7 @@ namespace AHO
                             {
                                 FKI _AFF = _bm2.GetNodeDeclaration(node, null);
                                 _bn4 _AQH4 = new _bn4(node);
-                                _AQH4.GJOKNNJPNCHGBGCLIMHKIOHPIFBKHGDNIJLO(nodeScope);
+                                _AQH4._zd6(nodeScope);
                                 _AQH4.EFI = _AFF;
                                 node._AJW = _AQH4;
                                 goto IL_07CB;
@@ -2185,9 +2185,9 @@ namespace AHO
                             {
                                 goto IL_0794;
                             }
-                            _bk7 mmmbkhlgiodfapfchcagjonjnjemfmlobaef = new _bk7(node);
-                            mmmbkhlgiodfapfchcagjonjnjemfmlobaef.GJOKNNJPNCHGBGCLIMHKIOHPIFBKHGDNIJLO(nodeScope);
-                            node._AJW = mmmbkhlgiodfapfchcagjonjnjemfmlobaef;
+                            _bk7 _zi9 = new _bk7(node);
+                            _zi9._zd6(nodeScope);
+                            node._AJW = _zi9;
                             goto IL_07CB;
                         }
                     }
@@ -2197,10 +2197,10 @@ namespace AHO
                         if (_CHG3 == _bc1.AccessorBodyScope)
                         {
                             _AFF = _bm2.GetNodeDeclaration(node.OOME, null);
-                            _b9 akhihgmonaolkkadmcchmjnoebakffohidce = new _b9(node);
-                            akhihgmonaolkkadmcchmjnoebakffohidce.GJOKNNJPNCHGBGCLIMHKIOHPIFBKHGDNIJLO(nodeScope);
-                            akhihgmonaolkkadmcchmjnoebakffohidce._ACV = ((_AFF != null) ? _AFF._ACV : null);
-                            node._AJW = akhihgmonaolkkadmcchmjnoebakffohidce;
+                            _b9 _zj1 = new _b9(node);
+                            _zj1._zd6(nodeScope);
+                            _zj1._ACV = ((_AFF != null) ? _AFF._ACV : null);
+                            node._AJW = _zj1;
                             goto IL_07CB;
                         }
                         if (_CHG3 != _bc1.AccessorsListScope)
@@ -2209,7 +2209,7 @@ namespace AHO
                         }
                         _AFF = _bm2.GetNodeDeclaration(node, null);
                         _bn4 _AQH5 = new _bn4(node);
-                        _AQH5.GJOKNNJPNCHGBGCLIMHKIOHPIFBKHGDNIJLO(nodeScope);
+                        _AQH5._zd6(nodeScope);
                         _AQH5.EFI = _AFF;
                         node._AJW = _AQH5;
                         goto IL_07CB;
@@ -2220,15 +2220,15 @@ namespace AHO
                         {
                             goto IL_0794;
                         }
-                        _bn2 pfmepljdkgnppejbglhfbhkgndaojcnfjjfl6 = new _bn2(node);
-                        pfmepljdkgnppejbglhfbhkgndaojcnfjjfl6.GJOKNNJPNCHGBGCLIMHKIOHPIFBKHGDNIJLO(nodeScope);
-                        node._AJW = pfmepljdkgnppejbglhfbhkgndaojcnfjjfl6;
+                        _bn2 _zj2 = new _bn2(node);
+                        _zj2._zd6(nodeScope);
+                        node._AJW = _zj2;
                         goto IL_07CB;
                     }
                 IL_057C:
-                    _bn2 pfmepljdkgnppejbglhfbhkgndaojcnfjjfl7 = new _bn2(node);
-                    pfmepljdkgnppejbglhfbhkgndaojcnfjjfl7.GJOKNNJPNCHGBGCLIMHKIOHPIFBKHGDNIJLO(nodeScope);
-                    node._AJW = pfmepljdkgnppejbglhfbhkgndaojcnfjjfl7;
+                    _bn2 _zj3 = new _bn2(node);
+                    _zj3._zd6(nodeScope);
+                    node._AJW = _zj3;
                     goto IL_07CB;
                 IL_0794:
                     throw new ArgumentOutOfRangeException("Unhandled case " + _CHG.ToString() + ": in switch statement!\nsemantics: " + node._AJO().ToString());
@@ -2236,9 +2236,9 @@ namespace AHO
                     bool flag7 = node._AJW == null;
                     if (flag7)
                     {
-                        _bn2 pfmepljdkgnppejbglhfbhkgndaojcnfjjfl8 = new _bn2(node);
-                        pfmepljdkgnppejbglhfbhkgndaojcnfjjfl8.GJOKNNJPNCHGBGCLIMHKIOHPIFBKHGDNIJLO(nodeScope);
-                        node._AJW = pfmepljdkgnppejbglhfbhkgndaojcnfjjfl8;
+                        _bn2 _zj4 = new _bn2(node);
+                        _zj4._zd6(nodeScope);
+                        node._AJW = _zj4;
                     }
                 }
                 _AQI = node._AJW;
@@ -2675,8 +2675,8 @@ namespace AHO
                     }
                     else
                     {
-                        bool eemmpgfnocikdepiendbnnmfcfaenpfcpdng = KJK.EEMMPGFNOCIKDEPIENDBNNMFCFAENPFCPDNG;
-                        KJK.EEMMPGFNOCIKDEPIENDBNNMFCFAENPFCPDNG = true;
+                        bool _zj5 = KJK._zj6;
+                        KJK._zj6 = true;
                         try
                         {
                             _bh4 _AAH = _AQI.AddDeclaration(node.EFI);
@@ -2708,7 +2708,7 @@ namespace AHO
                         }
                         finally
                         {
-                            KJK.EEMMPGFNOCIKDEPIENDBNNMFCFAENPFCPDNG = eemmpgfnocikdepiendbnnmfcfaenpfcpdng;
+                            KJK._zj6 = _zj5;
                         }
                         _bb4._AIU += 1U;
                         bool flag20 = _bb4._AIU == 0U;
@@ -3060,7 +3060,7 @@ namespace AHO
         // Token: 0x04000620 RID: 1568
         [DebuggerBrowsable(DebuggerBrowsableState.Never)]
         [CompilerGenerated]
-        private _bh2._AJQ FKDBLAPJOHEFCNDHHCEKGOABJGBCPIFCAHII;
+        private _bh2._AJQ _zf4;
 
         // Token: 0x04000621 RID: 1569
         private _bh2._BCX _ASF;
@@ -3069,28 +3069,28 @@ namespace AHO
         private readonly _bh2._AEN _BDD;
 
         // Token: 0x04000623 RID: 1571
-        private readonly _bh2._AEN JCLFNNCMKINNNHLOFIHGGPGPLHKGBHNELHPJ;
+        private readonly _bh2._AEN _zg5;
 
         // Token: 0x04000624 RID: 1572
-        private readonly _bh2._AEN EMENFMGGHFEHGJGCBCDNGKDPPLEDPMBDGMND;
+        private readonly _bh2._AEN _zg7;
 
         // Token: 0x04000625 RID: 1573
-        private readonly _bh2._AEN PJLPDGACCJPCAGGNGOIMGGJLDDNFDCPMAMAP;
+        private readonly _bh2._AEN _zg6;
 
         // Token: 0x04000626 RID: 1574
-        private readonly _bh2._AEN PADBMJLLGAAIPKILFLHMJIFHNCEBBGFKHLJJ;
+        private readonly _bh2._AEN _zg8;
 
         // Token: 0x04000627 RID: 1575
-        private readonly _bh2._AEN NEOEKODKBFIFEHEMCOBJCNDDGIGIBIALFBBB;
+        private readonly _bh2._AEN _zg9;
 
         // Token: 0x04000628 RID: 1576
-        private readonly _bh2._AEN GPPFFDKKGDPEJFMLIIPIIFCOPNNLMFPHKMEK;
+        private readonly _bh2._AEN _zh1;
 
         // Token: 0x04000629 RID: 1577
-        private readonly _bh2._AEN MBOCPMDAGPNEBBALHCJIKENPKHCHOMMEMDBG;
+        private readonly _bh2._AEN _zh2;
 
         // Token: 0x0400062A RID: 1578
-        private readonly _bh2._AEN FPKACCPNCJADKMOLADGCFAPFGMMJPEOPKKGD;
+        private readonly _bh2._AEN _zh3;
 
         // Token: 0x0400062B RID: 1579
         public int _CBN;
@@ -3102,22 +3102,22 @@ namespace AHO
         public int _CBK;
 
         // Token: 0x0400062E RID: 1582
-        public int MEHGHAJAPILANIBMGENBFHNIAEELJDEHHCGB;
+        public int _zf6;
 
         // Token: 0x0400062F RID: 1583
-        public int IJMAALOAAPKFFKBPLJAEDLOOEMEKPLGGFIOJ;
+        public int _zf7;
 
         // Token: 0x04000630 RID: 1584
-        public int CKCBAOEDNFKIMKMDIPBBFBNCAFEBBHFNFKBI;
+        public int _zf8;
 
         // Token: 0x04000631 RID: 1585
-        public int PNAHIEKBKBGIJCGNLCGDEAEHMHEKCEFMDFEE;
+        public int _zf9;
 
         // Token: 0x04000632 RID: 1586
-        public int MEGFEAMOJEOFOGJCMBEJBJJBIBOODCBNANGO;
+        public int _zg1;
 
         // Token: 0x04000633 RID: 1587
-        public int NCHAGCLBBEFNHPICIAMMOMHPCBOOPBMOEGDB;
+        public int _zg2;
 
         // Token: 0x04000634 RID: 1588
         public int _AGP;
@@ -3135,7 +3135,7 @@ namespace AHO
         public int _AGN;
 
         // Token: 0x04000639 RID: 1593
-        public int AHHEGIICLMMGAMIIBCOALJAANLNIDBOHPBGH;
+        public int _zg3;
 
         // Token: 0x0400063A RID: 1594
         public int _CBI;
@@ -3144,7 +3144,7 @@ namespace AHO
         public int _CBP;
 
         // Token: 0x0400063C RID: 1596
-        public int BNNEMMKGMCLMLANHKADMEEJIOFEGNPDHGMOH;
+        public int _zg4;
 
         // Token: 0x0400063D RID: 1597
         public int _CBJ;
@@ -3155,7 +3155,7 @@ namespace AHO
             // Token: 0x0600071D RID: 1821 RVA: 0x000F4EE4 File Offset: 0x000F30E4
             internal static _bm2._AJS New(_bm2 grammar, GCE.PHFG[] formatedLines, string fileName)
             {
-                bool flag = _bm2._AJS.OLMFPGNAECCIJJEJCJKBDLFFEANAPGJHFCNI.Count == 0;
+                bool flag = _bm2._AJS._zj7.Count == 0;
                 _bm2._AJS _AQP;
                 if (flag)
                 {
@@ -3163,8 +3163,8 @@ namespace AHO
                 }
                 else
                 {
-                    _bm2._AJS _AQP2 = _bm2._AJS.OLMFPGNAECCIJJEJCJKBDLFFEANAPGJHFCNI.Pop();
-                    _AQP2.KFDPMMGEANKNCJLNBOLDNJPMJGLOKNBAMOEC = grammar;
+                    _bm2._AJS _AQP2 = _bm2._AJS._zj7.Pop();
+                    _AQP2._zj8 = grammar;
                     _AQP2.FLOg = formatedLines;
                     _AQP2._BDK = fileName;
                     _AQP = _AQP2;
@@ -3175,7 +3175,7 @@ namespace AHO
             // Token: 0x0600071E RID: 1822 RVA: 0x000F4F34 File Offset: 0x000F3134
             public override void Delete()
             {
-                this.KFDPMMGEANKNCJLNBOLDNJPMJGLOKNBAMOEC = null;
+                this._zj8 = null;
                 this.FLOg = null;
                 this.EOIA = null;
                 this._BDE = -1;
@@ -3188,13 +3188,13 @@ namespace AHO
                 this._BDP = null;
                 this._BDQ = false;
                 this._BDB = null;
-                _bm2._AJS.OLMFPGNAECCIJJEJCJKBDLFFEANAPGJHFCNI.Push(this);
+                _bm2._AJS._zj7.Push(this);
             }
 
             // Token: 0x0600071F RID: 1823 RVA: 0x000F4FAC File Offset: 0x000F31AC
             protected _AJS(_bm2 grammar, GCE.PHFG[] formatedLines, string fileName)
             {
-                this.KFDPMMGEANKNCJLNBOLDNJPMJGLOKNBAMOEC = grammar;
+                this._zj8 = grammar;
                 this._BDK = fileName;
                 this.FLOg = formatedLines;
                 bool flag = _bh2._AJH._BDD == null;
@@ -3210,7 +3210,7 @@ namespace AHO
             // Token: 0x06000720 RID: 1824 RVA: 0x000F5000 File Offset: 0x000F3200
             public override _bh2._AJH Clone()
             {
-                _bm2._AJS _AQP = _bm2._AJS.New(this.KFDPMMGEANKNCJLNBOLDNJPMJGLOKNBAMOEC, this.FLOg, this._BDK);
+                _bm2._AJS _AQP = _bm2._AJS.New(this._zj8, this.FLOg, this._BDK);
                 _AQP.EOIA = this.EOIA;
                 _AQP._BDE = this._BDE;
                 _AQP._BDC = this._BDC;
@@ -3227,7 +3227,7 @@ namespace AHO
             // Token: 0x06000721 RID: 1825 RVA: 0x000F50A3 File Offset: 0x000F32A3
             public override void OnReduceSemanticNode(_bb4._ACW node)
             {
-                this.KFDPMMGEANKNCJLNBOLDNJPMJGLOKNBAMOEC.OnReduceSemanticNode(node, this._BDK);
+                this._zj8.OnReduceSemanticNode(node, this._BDK);
             }
 
             // Token: 0x06000722 RID: 1826 RVA: 0x000F50BC File Offset: 0x000F32BC
@@ -3236,7 +3236,7 @@ namespace AHO
                 bool flag = this._BDN != null;
                 if (!flag)
                 {
-                    this._BDN = new _bh2._BCZ(this.KFDPMMGEANKNCJLNBOLDNJPMJGLOKNBAMOEC.GetParser, lookahead);
+                    this._BDN = new _bh2._BCZ(this._zj8.GetParser, lookahead);
                     bool flag2 = this._AJT != null && this._AJT._AJB == null;
                     if (flag2)
                     {
@@ -3248,12 +3248,12 @@ namespace AHO
             // Token: 0x06000723 RID: 1827 RVA: 0x000F5120 File Offset: 0x000F3320
             public override void CollectCompletions(_bh2._AGI tokenSet)
             {
-                (this._BDL ?? _bm2._AA.IODAGDLMLMILBHGAJCCLNFIJIDLOIBMOEFPC()).CollectCompletions(tokenSet, this, this.KFDPMMGEANKNCJLNBOLDNJPMJGLOKNBAMOEC._CBN);
+                (this._BDL ?? _bm2._AA._zf3()).CollectCompletions(tokenSet, this, this._zj8._CBN);
                 bool flag = this._BDL != null && tokenSet.Matches(_bm2._AGM()._CBN);
                 if (flag)
                 {
                     this._BDB = new SyntaxToken(SyntaxToken.Kind.Identifier, "special");
-                    this._BDB.tokenId = this.KFDPMMGEANKNCJLNBOLDNJPMJGLOKNBAMOEC._CBN;
+                    this._BDB.tokenId = this._zj8._CBN;
                     base.Lookahead(this._BDL, 1);
                     this._BDB = null;
                 }
@@ -3374,7 +3374,7 @@ namespace AHO
                 this._BDP = null;
                 this._BDO = null;
                 this.MoveNext();
-                _bh2._AJQ _BEB = _bm2._AGM().IODAGDLMLMILBHGAJCCLNFIJIDLOIBMOEFPC();
+                _bh2._AJQ _BEB = _bm2._AGM()._zf3();
                 this._AJT = parseTree._AIT;
                 this._BDL = _BEB;
                 this._BDP = this._AJT;
@@ -3396,8 +3396,8 @@ namespace AHO
                     if (flag3)
                     {
                         string text = "Can't move after error node! ";
-                        _bh2._AJE galfeenijiemihmlgeghkmafeckpklcdmcmf = leaf._AJB;
-                        UnityEngine.Debug.LogError(text + ((galfeenijiemihmlgeghkmafeckpklcdmcmf != null) ? galfeenijiemihmlgeghkmafeckpklcdmcmf.ToString() : null));
+                        _bh2._AJE _zj9 = leaf._AJB;
+                        UnityEngine.Debug.LogError(text + ((_zj9 != null) ? _zj9.ToString() : null));
                         flag2 = false;
                     }
                     else
@@ -3469,31 +3469,31 @@ namespace AHO
                             case SyntaxToken.Kind.StringLiteral:
                             case SyntaxToken.Kind.IntegerLiteral:
                             case SyntaxToken.Kind.RealLiteral:
-                                syntaxToken.tokenId = this.KFDPMMGEANKNCJLNBOLDNJPMJGLOKNBAMOEC._CBK;
+                                syntaxToken.tokenId = this._zj8._CBK;
                                 break;
                             case SyntaxToken.Kind.BuiltInLiteral:
                             case SyntaxToken.Kind.Punctuator:
                             case SyntaxToken.Kind.Keyword:
-                                syntaxToken.tokenId = this.KFDPMMGEANKNCJLNBOLDNJPMJGLOKNBAMOEC.TokenToId(syntaxToken.text);
+                                syntaxToken.tokenId = this._zj8.TokenToId(syntaxToken.text);
                                 break;
                             case SyntaxToken.Kind.InterpolatedStringWholeLiteral:
-                                syntaxToken.tokenId = this.KFDPMMGEANKNCJLNBOLDNJPMJGLOKNBAMOEC.MEHGHAJAPILANIBMGENBFHNIAEELJDEHHCGB;
+                                syntaxToken.tokenId = this._zj8._zf6;
                                 break;
                             case SyntaxToken.Kind.InterpolatedStringStartLiteral:
-                                syntaxToken.tokenId = this.KFDPMMGEANKNCJLNBOLDNJPMJGLOKNBAMOEC.IJMAALOAAPKFFKBPLJAEDLOOEMEKPLGGFIOJ;
+                                syntaxToken.tokenId = this._zj8._zf7;
                                 break;
                             case SyntaxToken.Kind.InterpolatedStringMidLiteral:
-                                syntaxToken.tokenId = this.KFDPMMGEANKNCJLNBOLDNJPMJGLOKNBAMOEC.CKCBAOEDNFKIMKMDIPBBFBNCAFEBBHFNFKBI;
+                                syntaxToken.tokenId = this._zj8._zf8;
                                 break;
                             case SyntaxToken.Kind.InterpolatedStringEndLiteral:
-                                syntaxToken.tokenId = this.KFDPMMGEANKNCJLNBOLDNJPMJGLOKNBAMOEC.PNAHIEKBKBGIJCGNLCGDEAEHMHEKCEFMDFEE;
+                                syntaxToken.tokenId = this._zj8._zf9;
                                 break;
                             case SyntaxToken.Kind.InterpolatedStringFormatLiteral:
-                                syntaxToken.tokenId = this.KFDPMMGEANKNCJLNBOLDNJPMJGLOKNBAMOEC.MEGFEAMOJEOFOGJCMBEJBJJBIBOODCBNANGO;
+                                syntaxToken.tokenId = this._zj8._zg1;
                                 break;
                             case SyntaxToken.Kind.Identifier:
                             case SyntaxToken.Kind.ContextualKeyword:
-                                syntaxToken.tokenId = this.KFDPMMGEANKNCJLNBOLDNJPMJGLOKNBAMOEC._CBN;
+                                syntaxToken.tokenId = this._zj8._CBN;
                                 break;
                             default:
                                 goto IL_017D;
@@ -3562,10 +3562,10 @@ namespace AHO
             }
 
             // Token: 0x0400063E RID: 1598
-            private static Stack<_bm2._AJS> OLMFPGNAECCIJJEJCJKBDLFFEANAPGJHFCNI = new Stack<_bm2._AJS>();
+            private static Stack<_bm2._AJS> _zj7 = new Stack<_bm2._AJS>();
 
             // Token: 0x0400063F RID: 1599
-            private _bm2 KFDPMMGEANKNCJLNBOLDNJPMJGLOKNBAMOEC;
+            private _bm2 _zj8;
         }
     }
 }

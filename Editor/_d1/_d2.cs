@@ -4,7 +4,7 @@ using SuperEditor.Themes;
 using UnityEditor;
 using UnityEngine;
 
-namespace FEPKBIPDOHCNNFAKLHKGGCCCPGMCNPGGOCGM
+namespace _yj2
 {
     // Token: 0x02000163 RID: 355
     [InitializeOnLoad]
@@ -13,12 +13,12 @@ namespace FEPKBIPDOHCNNFAKLHKGGCCCPGMCNPGGOCGM
         // Token: 0x060009ED RID: 2541 RVA: 0x00109804 File Offset: 0x00107A04
         static _d2()
         {
-            _bi2.AddTheme(_d2._CLS, _d2.CMPOPFLJBNNNHDELDGDDKDJONFFGEBIGEPDL);
+            _bi2.AddTheme(_d2._CLS, _d2._yl6);
             _bi2._CBY++;
         }
 
         // Token: 0x040008E2 RID: 2274
-        private static string CMPOPFLJBNNNHDELDGDDKDJONFFGEBIGEPDL = "Tango Dark (Oblivion)";
+        private static string _yl6 = "Tango Dark (Oblivion)";
 
         // Token: 0x040008E3 RID: 2275
         internal static Theme _CLS = new Theme

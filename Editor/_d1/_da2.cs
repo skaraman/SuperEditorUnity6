@@ -4,7 +4,7 @@ using SuperEditor.Themes;
 using UnityEditor;
 using UnityEngine;
 
-namespace FEPKBIPDOHCNNFAKLHKGGCCCPGMCNPGGOCGM
+namespace _yj2
 {
     // Token: 0x02000153 RID: 339
     [InitializeOnLoad]
@@ -13,12 +13,12 @@ namespace FEPKBIPDOHCNNFAKLHKGGCCCPGMCNPGGOCGM
         // Token: 0x060009CD RID: 2509 RVA: 0x001040A8 File Offset: 0x001022A8
         static _da2()
         {
-            _bi2.AddTheme(_da2._CLS, _da2.CMPOPFLJBNNNHDELDGDDKDJONFFGEBIGEPDL);
+            _bi2.AddTheme(_da2._CLS, _da2._yl6);
             _bi2._CBY++;
         }
 
         // Token: 0x04000861 RID: 2145
-        private static string CMPOPFLJBNNNHDELDGDDKDJONFFGEBIGEPDL = "Monokai";
+        private static string _yl6 = "Monokai";
 
         // Token: 0x04000862 RID: 2146
         internal static Theme _CLS = new Theme

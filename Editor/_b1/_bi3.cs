@@ -24,7 +24,7 @@ namespace AHO
                 bool flag4 = num == 0UL;
                 if (flag4)
                 {
-                    _AAH = _bi3.DPKKPGEEHPPDEPNDCHLGILAHPEPFENEEDGMD.GetThisInstance();
+                    _AAH = _bi3._yh9.GetThisInstance();
                 }
                 else
                 {
@@ -34,21 +34,21 @@ namespace AHO
                         bool flag6 = num <= 128UL;
                         if (flag6)
                         {
-                            _AAH = _bi3.HIEAMAOMPNEPFMJFMAHJMOMCFGPBKIPFCJLO.GetThisInstance();
+                            _AAH = _bi3._yi1.GetThisInstance();
                         }
                         else
                         {
                             bool flag7 = num <= 32768UL;
                             if (flag7)
                             {
-                                _AAH = _bi3.IABONIJJKMMANOKIACLGBAADAKCDALKLIDNE.GetThisInstance();
+                                _AAH = _bi3._yi2.GetThisInstance();
                             }
                             else
                             {
                                 bool flag8 = num <= unchecked((ulong)int.MinValue);
                                 if (flag8)
                                 {
-                                    _AAH = _bi3.ALIEMEKPEKEENIKEFDHFIFIIANDGGMNMPHBD.GetThisInstance();
+                                    _AAH = _bi3._yi3.GetThisInstance();
                                 }
                                 else
                                 {
@@ -70,49 +70,49 @@ namespace AHO
                         bool flag10 = num <= 127UL;
                         if (flag10)
                         {
-                            _AAH = _bi3.EKIHJPKECJBBEMMNIBGBLEINHPJPJDBNIGJK.GetThisInstance();
+                            _AAH = _bi3._yi4.GetThisInstance();
                         }
                         else
                         {
                             bool flag11 = num <= 255UL;
                             if (flag11)
                             {
-                                _AAH = _bi3.JIJMNIDOJEBCMGCFLPEOBKBKGOJPGMIIGNDJ.GetThisInstance();
+                                _AAH = _bi3._yi5.GetThisInstance();
                             }
                             else
                             {
                                 bool flag12 = num <= 32767UL;
                                 if (flag12)
                                 {
-                                    _AAH = _bi3.PBLCLOAPGEEGOOCHFFFDDFIKFDEACMDJMKDC.GetThisInstance();
+                                    _AAH = _bi3._yi6.GetThisInstance();
                                 }
                                 else
                                 {
                                     bool flag13 = num <= 65535UL;
                                     if (flag13)
                                     {
-                                        _AAH = _bi3.PKBJOGOOHLDDPAJCLFAJBOAIJHPBPPKLPCFF.GetThisInstance();
+                                        _AAH = _bi3._yi7.GetThisInstance();
                                     }
                                     else
                                     {
                                         bool flag14 = num <= 2147483647UL;
                                         if (flag14)
                                         {
-                                            _AAH = _bi3.IBFHEDCBMIOKNFOBCLJLGIDGBBCMJFNDNPHI.GetThisInstance();
+                                            _AAH = _bi3._yi8.GetThisInstance();
                                         }
                                         else
                                         {
                                             bool flag15 = num <= unchecked((ulong)(-1));
                                             if (flag15)
                                             {
-                                                _AAH = _bi3.CGHIMPNKCPEEKMMDJGCELACCMJHPGFOAADKP.GetThisInstance();
+                                                _AAH = _bi3._yi9.GetThisInstance();
                                             }
                                             else
                                             {
                                                 bool flag16 = num <= 9223372036854775807UL;
                                                 if (flag16)
                                                 {
-                                                    _AAH = _bi3.LHJDAJMDIFNPLIOBKCGDDCKNJBELFAIODCLC.GetThisInstance();
+                                                    _AAH = _bi3._yj1.GetThisInstance();
                                                 }
                                                 else
                                                 {
@@ -131,36 +131,36 @@ namespace AHO
         }
 
         // Token: 0x040004FE RID: 1278
-        private static readonly _bn8 DPKKPGEEHPPDEPNDCHLGILAHPEPFENEEDGMD = new _bn8();
+        private static readonly _bn8 _yh9 = new _bn8();
 
         // Token: 0x040004FF RID: 1279
-        private static readonly _bc4 EKIHJPKECJBBEMMNIBGBLEINHPJPJDBNIGJK = new _bc4();
+        private static readonly _bc4 _yi4 = new _bc4();
 
         // Token: 0x04000500 RID: 1280
-        private static readonly _bk8 JIJMNIDOJEBCMGCFLPEOBKBKGOJPGMIIGNDJ = new _bk8();
+        private static readonly _bk8 _yi5 = new _bk8();
 
         // Token: 0x04000501 RID: 1281
-        private static readonly _ABL HIEAMAOMPNEPFMJFMAHJMOMCFGPBKIPFCJLO = new _ABL();
+        private static readonly _ABL _yi1 = new _ABL();
 
         // Token: 0x04000502 RID: 1282
-        private static readonly _bc3 PBLCLOAPGEEGOOCHFFFDDFIKFDEACMDJMKDC = new _bc3();
+        private static readonly _bc3 _yi6 = new _bc3();
 
         // Token: 0x04000503 RID: 1283
-        private static readonly _bm9 PKBJOGOOHLDDPAJCLFAJBOAIJHPBPPKLPCFF = new _bm9();
+        private static readonly _bm9 _yi7 = new _bm9();
 
         // Token: 0x04000504 RID: 1284
-        private static readonly _bn6 IABONIJJKMMANOKIACLGBAADAKCDALKLIDNE = new _bn6();
+        private static readonly _bn6 _yi2 = new _bn6();
 
         // Token: 0x04000505 RID: 1285
-        private static readonly _be1 IBFHEDCBMIOKNFOBCLJLGIDGBBCMJFNDNPHI = new _be1();
+        private static readonly _be1 _yi8 = new _be1();
 
         // Token: 0x04000506 RID: 1286
-        private static readonly _be6 CGHIMPNKCPEEKMMDJGCELACCMJHPGFOAADKP = new _be6();
+        private static readonly _be6 _yi9 = new _be6();
 
         // Token: 0x04000507 RID: 1287
-        private static readonly _bj3 ALIEMEKPEKEENIKEFDHFIFIIANDGGMNMPHBD = new _bj3();
+        private static readonly _bj3 _yi3 = new _bj3();
 
         // Token: 0x04000508 RID: 1288
-        private static readonly _b8 LHJDAJMDIFNPLIOBKCGDDCKNJBELFAIODCLC = new _b8();
+        private static readonly _b8 _yj1 = new _b8();
     }
 }

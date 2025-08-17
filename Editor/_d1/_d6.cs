@@ -4,21 +4,21 @@ using SuperEditor.Themes;
 using UnityEditor;
 using UnityEngine;
 
-namespace FEPKBIPDOHCNNFAKLHKGGCCCPGMCNPGGOCGM
+namespace _yj2
 {
     // Token: 0x02000158 RID: 344
     [InitializeOnLoad]
-    internal class FILAHPFFCCPGDOEKEBPPCFJDBLCAKCPOBEHM
+    internal class _yl9
     {
         // Token: 0x060009D7 RID: 2519 RVA: 0x00105C78 File Offset: 0x00103E78
-        static FILAHPFFCCPGDOEKEBPPCFJDBLCAKCPOBEHM()
+        static _yl9()
         {
-            _bi2.AddTheme(FILAHPFFCCPGDOEKEBPPCFJDBLCAKCPOBEHM._CLS, FILAHPFFCCPGDOEKEBPPCFJDBLCAKCPOBEHM.CMPOPFLJBNNNHDELDGDDKDJONFFGEBIGEPDL);
+            _bi2.AddTheme(_yl9._CLS, _yl9._yl6);
             _bi2._CBY++;
         }
 
         // Token: 0x0400086B RID: 2155
-        private static string CMPOPFLJBNNNHDELDGDDKDJONFFGEBIGEPDL = "Visual Studio Dark";
+        private static string _yl6 = "Visual Studio Dark";
 
         // Token: 0x0400086C RID: 2156
         internal static Theme _CLS = new Theme

@@ -93,13 +93,13 @@ namespace AHO
         // Token: 0x0600059A RID: 1434 RVA: 0x000D6288 File Offset: 0x000D4488
         internal override void ResolveMember(_bb4.DHBA leaf, _bm6 context, int numTypeArgs, bool asTypeOnly)
         {
-            bool nmkfdlghbdlhkbpciaaimaeinjblgidgleln = this.NMKFDLGHBDLHKBPCIAAIMAEINJBLGIDGLELN;
-            if (!nmkfdlghbdlhkbpciaaimaeinjblgidgleln)
+            bool _zc8 = this._zc9;
+            if (!_zc8)
             {
-                this.NMKFDLGHBDLHKBPCIAAIMAEINJBLGIDGLELN = true;
+                this._zc9 = true;
                 leaf._ACY(null);
                 base.ResolveMember(leaf, context, numTypeArgs, asTypeOnly);
-                this.NMKFDLGHBDLHKBPCIAAIMAEINJBLGIDGLELN = false;
+                this._zc9 = false;
                 bool flag = leaf._AAB() == null;
                 if (flag)
                 {
@@ -116,14 +116,14 @@ namespace AHO
         // Token: 0x0600059B RID: 1435 RVA: 0x000D62F0 File Offset: 0x000D44F0
         internal override void ResolveAttributeMember(_bb4.DHBA leaf, _bm6 context)
         {
-            bool nmkfdlghbdlhkbpciaaimaeinjblgidgleln = this.NMKFDLGHBDLHKBPCIAAIMAEINJBLGIDGLELN;
-            if (!nmkfdlghbdlhkbpciaaimaeinjblgidgleln)
+            bool _zc8 = this._zc9;
+            if (!_zc8)
             {
-                this.NMKFDLGHBDLHKBPCIAAIMAEINJBLGIDGLELN = true;
+                this._zc9 = true;
                 leaf._ACY(null);
                 leaf._AJF = null;
                 base.ResolveAttributeMember(leaf, context);
-                this.NMKFDLGHBDLHKBPCIAAIMAEINJBLGIDGLELN = false;
+                this._zc9 = false;
                 bool flag = leaf._AAB() == null;
                 if (flag)
                 {
@@ -252,10 +252,10 @@ namespace AHO
                                 }
                             }
                         }
-                    IL_017F:
+                    
                         j++;
                         continue;
-                        goto IL_017F;
+                     
                     }
                 }
             }
@@ -296,16 +296,12 @@ namespace AHO
                     {
                         yield return type;
                     }
-                    IEnumerator<_b2> enumerator = null;
                 }
-                nsDef = null;
-                member = null;
             }
-            yield break;
             yield break;
         }
 
         // Token: 0x0400051E RID: 1310
-        private bool NMKFDLGHBDLHKBPCIAAIMAEINJBLGIDGLELN = false;
+        private bool _zc9 = false;
     }
 }

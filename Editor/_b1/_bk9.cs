@@ -13,23 +13,23 @@ namespace AHO
         // Token: 0x060000C7 RID: 199 RVA: 0x00009FB4 File Offset: 0x000081B4
         public string _CKB()
         {
-            return this.AHIMHNGEHPGDOJKDGBKPKBMNAOOLNPKFFHPB;
+            return this._zl4;
         }
 
         // Token: 0x060000C8 RID: 200 RVA: 0x00009FCC File Offset: 0x000081CC
-        private void FAIDBFHPLIAGICLHFOMFMNHDAIEJHLDEMPMC(string value)
+        private void _zl5(string value)
         {
-            this.AHIMHNGEHPGDOJKDGBKPKBMNAOOLNPKFFHPB = value;
-            this.GBKBJAAHKMMBHBKFMNPBPFHGPDPMKHJGACJP = null;
+            this._zl4 = value;
+            this._zl6 = null;
         }
 
         // Token: 0x060000C9 RID: 201 RVA: 0x00009FE0 File Offset: 0x000081E0
         public void _CGI(int value)
         {
-            bool flag = this.PIHEEHJKNFBBBKIBIFAALNDIHLOBJLBCIODA != value;
+            bool flag = this._zl7 != value;
             if (flag)
             {
-                this.PIHEEHJKNFBBBKIBIFAALNDIHLOBJLBCIODA = value;
+                this._zl7 = value;
                 base.Repaint();
             }
         }
@@ -37,9 +37,9 @@ namespace AHO
         // Token: 0x060000CA RID: 202 RVA: 0x0000A010 File Offset: 0x00008210
         internal static _bk9 CreateTokenWidget(_bi2 editor, Rect tokenRect, _bb4.DHBA leaf, bool horizontal = false)
         {
-            _bk9 mojdbdaophnjeicpnaopeifioeflcmcfomhj = _bk9.Create(editor, tokenRect, leaf, horizontal, false, false);
-            mojdbdaophnjeicpnaopeifioeflcmcfomhj.AMAAEOCIBNDOADEFICMEICEDIPJCEEOODICK = false;
-            return mojdbdaophnjeicpnaopeifioeflcmcfomhj;
+            _bk9 _zl8 = _bk9.Create(editor, tokenRect, leaf, horizontal, false, false);
+            _zl8._zl9 = false;
+            return _zl8;
         }
 
         // Token: 0x060000CB RID: 203 RVA: 0x0000A038 File Offset: 0x00008238
@@ -197,24 +197,24 @@ namespace AHO
                 }
             }
             Rect rect = (horizontal ? new Rect(tokenRect.xMax, tokenRect.y, 1f, 1f) : new Rect(tokenRect.x, tokenRect.yMax, 1f, 1f));
-            window.EBINNJIEDKILBKEDCAKOOHHEHNIOGIKHPKHN = forListPopup;
+            window._zm1 = forListPopup;
             window.wantsMouseMove = true;
             window._AEZ = tokenRect;
-            window.EPALNJEIJOEJDLKLCLKPOGGLFMAECGHIPEBF = horizontal;
+            window._ze9 = horizontal;
             window.hideFlags = HideFlags.HideAndDontSave;
             window._AEK = editor;
             window.minSize = Vector2.one;
             window._AEX = focusedWindow;
-            window.APEIGILDGNBKKGCAAEECFHGOODFOLNFFBLJA = leaf;
-            window.FAIDBFHPLIAGICLHFOMFMNHDAIEJHLDEMPMC(text);
-            window.EFFBNPPIAJOPILBOBPPDIICLHBPEOCKILAPN = array;
-            window.PHDIDHMPIDGPFIFGMFOCFEJJABPGKGBNLMMB = num;
-            window.BMIJJAMJFPPMBPOLCFFAONNEBBEGNOHLFHNP = editor._ABT._CFF;
-            window.BMIJJAMJFPPMBPOLCFFAONNEBBEGNOHLFHNP.normal.textColor = (_bg8._BAF ? editor._CJL().text : editor._CJL().tooltipText);
-            window.BMIJJAMJFPPMBPOLCFFAONNEBBEGNOHLFHNP.font = EditorStyles.standardFont;
-            window.BMIJJAMJFPPMBPOLCFFAONNEBBEGNOHLFHNP.fontSize = _bg8._AEP + 12;
-            window.GJGILFNBGFGECCHDCGILPCMMCFELLIKHGHBB = new GUIStyle(window.BMIJJAMJFPPMBPOLCFFAONNEBBEGNOHLFHNP);
-            window.GJGILFNBGFGECCHDCGILPCMMCFELLIKHGHBB.font = EditorStyles.boldFont;
+            window._zm2 = leaf;
+            window._zl5(text);
+            window._zm3 = array;
+            window._zm4 = num;
+            window._zm5 = editor._ABT._CFF;
+            window._zm5.normal.textColor = (_bg8._BAF ? editor._CJL().text : editor._CJL().tooltipText);
+            window._zm5.font = EditorStyles.standardFont;
+            window._zm5.fontSize = _bg8._AEP + 12;
+            window._zm6 = new GUIStyle(window._zm5);
+            window._zm6.font = EditorStyles.boldFont;
             window.position = rect;
             window.ShowTooltip();
             bool flag22 = symbolDefinition != null;
@@ -223,7 +223,7 @@ namespace AHO
                 _bh4 symbolDefinition2 = symbolDefinition;
                 symbolDefinition2._BEQ = (Action)Delegate.Combine(symbolDefinition2._BEQ, new Action(delegate
                 {
-                    window.FAIDBFHPLIAGICLHFOMFMNHDAIEJHLDEMPMC(symbolDefinition.GetTooltipText());
+                    window._zl5(symbolDefinition.GetTooltipText());
                     window.Repaint();
                 }));
             }
@@ -265,7 +265,7 @@ namespace AHO
             {
                 try
                 {
-                    window.HJDNGHINOLHEPMFIEMMOHDJIGGDACMDELLHB = _ba4.GetSymbolIcon(theSymbol);
+                    window._zm7 = _ba4.GetSymbolIcon(theSymbol);
                     bool flag7 = theSymbol.Assembly != null && theSymbol.Assembly._CHJ && theSymbol._AT != SymbolKind.Parameter;
                     if (flag7)
                     {
@@ -345,9 +345,9 @@ namespace AHO
         // Token: 0x060000CD RID: 205 RVA: 0x0000AA50 File Offset: 0x00008C50
         public void Hide()
         {
-            this.EFFBNPPIAJOPILBOBPPDIICLHBPEOCKILAPN = null;
-            this.PHDIDHMPIDGPFIFGMFOCFEJJABPGKGBNLMMB = 0;
-            this.FAIDBFHPLIAGICLHFOMFMNHDAIEJHLDEMPMC(null);
+            this._zm3 = null;
+            this._zm4 = 0;
+            this._zl5(null);
             bool flag = this == this._AEK._CDA;
             if (flag)
             {
@@ -371,7 +371,7 @@ namespace AHO
         // Token: 0x060000CE RID: 206 RVA: 0x0000AAF4 File Offset: 0x00008CF4
         public void HideCheck()
         {
-            bool flag = (this.EBINNJIEDKILBKEDCAKOOHHEHNIOGIKHPKHN && this._AEL == null) || this._AEK == null;
+            bool flag = (this._zm1 && this._AEL == null) || this._AEK == null;
             if (flag)
             {
                 this.Hide();
@@ -382,7 +382,7 @@ namespace AHO
         // Token: 0x060000CF RID: 207 RVA: 0x0000AB54 File Offset: 0x00008D54
         public void OnGUI()
         {
-            bool flag = (!this.EBINNJIEDKILBKEDCAKOOHHEHNIOGIKHPKHN && this.AMAAEOCIBNDOADEFICMEICEDIPJCEEOODICK && Event.current.type == EventType.MouseMove) || Event.current.type == EventType.ScrollWheel || (Event.current.type == EventType.KeyDown && (int)Event.current.keyCode == 27) || this._AEK._ABT._CFT == null;
+            bool flag = (!this._zm1 && this._zl9 && Event.current.type == EventType.MouseMove) || Event.current.type == EventType.ScrollWheel || (Event.current.type == EventType.KeyDown && (int)Event.current.keyCode == 27) || this._AEK._ABT._CFT == null;
             if (flag)
             {
                 EditorApplication.delayCall = (EditorApplication.CallbackFunction)Delegate.Remove(EditorApplication.delayCall, new EditorApplication.CallbackFunction(this.Hide));
@@ -394,18 +394,18 @@ namespace AHO
                 if (!flag2)
                 {
                     string text = this._CKB();
-                    bool flag3 = this.EFFBNPPIAJOPILBOBPPDIICLHBPEOCKILAPN != null && this.EFFBNPPIAJOPILBOBPPDIICLHBPEOCKILAPN.Length > 1;
+                    bool flag3 = this._zm3 != null && this._zm3.Length > 1;
                     if (flag3)
                     {
-                        bool epalnjeijoejdlklclkpogglfmaecghipebf = this.EPALNJEIJOEJDLKLCLKPOGGLFMAECGHIPEBF;
-                        if (epalnjeijoejdlklclkpogglfmaecghipebf)
+                        bool _zm8 = this._ze9;
+                        if (_zm8)
                         {
                             text = string.Concat(new string[]
                             {
                                 "◄",
-                                (this.PHDIDHMPIDGPFIFGMFOCFEJJABPGKGBNLMMB + 1).ToString(),
+                                (this._zm4 + 1).ToString(),
                                 " of ",
-                                this.EFFBNPPIAJOPILBOBPPDIICLHBPEOCKILAPN.Length.ToString(),
+                                this._zm3.Length.ToString(),
                                 "► ",
                                 text
                             });
@@ -415,9 +415,9 @@ namespace AHO
                             text = string.Concat(new string[]
                             {
                                 "▲",
-                                (this.PHDIDHMPIDGPFIFGMFOCFEJJABPGKGBNLMMB + 1).ToString(),
+                                (this._zm4 + 1).ToString(),
                                 " of ",
-                                this.EFFBNPPIAJOPILBOBPPDIICLHBPEOCKILAPN.Length.ToString(),
+                                this._zm3.Length.ToString(),
                                 "▼ ",
                                 text
                             });
@@ -442,23 +442,23 @@ namespace AHO
                     rect = new Rect(2.5f + (float)((_bg8._AEP + 3) / 5), 2.5f + (float)((_bg8._AEP + 3) / 5), (float)(16 + _bg8._AEP + 3), (float)(16 + _bg8._AEP + 3));
                     Rect rect2;
                     rect2 = new Rect(5f, 5f, base.position.width - 5f, base.position.height - 5f);
-                    bool flag6 = this.HJDNGHINOLHEPMFIEMMOHDJIGGDACMDELLHB == null;
+                    bool flag6 = this._zm7 == null;
                     if (flag6)
                     {
-                        this.HJDNGHINOLHEPMFIEMMOHDJIGGDACMDELLHB = _ba4.GetSymbolIcon(this.APEIGILDGNBKKGCAAEECFHGOODFOLNFFBLJA._AAB());
+                        this._zm7 = _ba4.GetSymbolIcon(this._zm2._AAB());
                     }
                     bool flag7 = Event.current.type == EventType.Layout;
                     if (flag7)
                     {
-                        this.BMIJJAMJFPPMBPOLCFFAONNEBBEGNOHLFHNP.fixedWidth = 0f;
+                        this._zm5.fixedWidth = 0f;
                         GUIContent guicontent = new GUIContent(text);
-                        Vector2 vector = ((this.BMIJJAMJFPPMBPOLCFFAONNEBBEGNOHLFHNP.font != null) ? this.BMIJJAMJFPPMBPOLCFFAONNEBBEGNOHLFHNP.CalcSize(guicontent) : Vector2.zero);
+                        Vector2 vector = ((this._zm5.font != null) ? this._zm5.CalcSize(guicontent) : Vector2.zero);
                         bool flag8 = vector.x > 400f;
                         if (flag8)
                         {
                             vector.x = 400f;
-                            vector.y = this.BMIJJAMJFPPMBPOLCFFAONNEBBEGNOHLFHNP.CalcHeight(guicontent, 400f);
-                            this.BMIJJAMJFPPMBPOLCFFAONNEBBEGNOHLFHNP.fixedWidth = vector.x;
+                            vector.y = this._zm5.CalcHeight(guicontent, 400f);
+                            this._zm5.fixedWidth = vector.x;
                         }
                         base.SetSize(vector.x + 10f, vector.y + 10f);
                     }
@@ -474,42 +474,42 @@ namespace AHO
                             GUI.Label(new Rect(0f, 0f, base.position.width, base.position.height), GUIContent.none, this._AEK._ABT._CFT);
                             GUI.Label(new Rect(2f, 2f, base.position.width - 4f, base.position.height - 4f), GUIContent.none, this._AEK._ABT._CFS);
                         }
-                        bool flag10 = this.HJDNGHINOLHEPMFIEMMOHDJIGGDACMDELLHB != null;
+                        bool flag10 = this._zm7 != null;
                         if (flag10)
                         {
-                            GUI.DrawTexture(rect, this.HJDNGHINOLHEPMFIEMMOHDJIGGDACMDELLHB);
+                            GUI.DrawTexture(rect, this._zm7);
                         }
-                        bool flag11 = !this.AMAAEOCIBNDOADEFICMEICEDIPJCEEOODICK && this.GBKBJAAHKMMBHBKFMNPBPFHGPDPMKHJGACJP == null;
+                        bool flag11 = !this._zl9 && this._zl6 == null;
                         if (flag11)
                         {
-                            this.GBKBJAAHKMMBHBKFMNPBPFHGPDPMKHJGACJP = text.Split(new char[] { '\n' });
+                            this._zl6 = text.Split(new char[] { '\n' });
                         }
-                        bool flag12 = this.AMAAEOCIBNDOADEFICMEICEDIPJCEEOODICK || this.PIHEEHJKNFBBBKIBIFAALNDIHLOBJLBCIODA < 0 || this.EFFBNPPIAJOPILBOBPPDIICLHBPEOCKILAPN == null || this.PHDIDHMPIDGPFIFGMFOCFEJJABPGKGBNLMMB < 0 || this.PHDIDHMPIDGPFIFGMFOCFEJJABPGKGBNLMMB >= this.EFFBNPPIAJOPILBOBPPDIICLHBPEOCKILAPN.Length || this.EFFBNPPIAJOPILBOBPPDIICLHBPEOCKILAPN[this.PHDIDHMPIDGPFIFGMFOCFEJJABPGKGBNLMMB].GetParameters().Count <= this.PIHEEHJKNFBBBKIBIFAALNDIHLOBJLBCIODA;
+                        bool flag12 = this._zl9 || this._zl7 < 0 || this._zm3 == null || this._zm4 < 0 || this._zm4 >= this._zm3.Length || this._zm3[this._zm4].GetParameters().Count <= this._zl7;
                         if (flag12)
                         {
-                            GUI.Label(rect2, text, this.BMIJJAMJFPPMBPOLCFFAONNEBBEGNOHLFHNP);
+                            GUI.Label(rect2, text, this._zm5);
                         }
                         else
                         {
                             Rect rect3 = rect2;
-                            for (int i = 0; i < this.GBKBJAAHKMMBHBKFMNPBPFHGPDPMKHJGACJP.Length; i++)
+                            for (int i = 0; i < this._zl6.Length; i++)
                             {
-                                GUIContent guicontent2 = new GUIContent(this.GBKBJAAHKMMBHBKFMNPBPFHGPDPMKHJGACJP[i]);
+                                GUIContent guicontent2 = new GUIContent(this._zl6[i]);
                                 bool flag13 = i > 0;
                                 if (flag13)
                                 {
                                     rect2.x = rect3.x;
                                 }
-                                bool flag14 = i != this.PIHEEHJKNFBBBKIBIFAALNDIHLOBJLBCIODA + 1;
+                                bool flag14 = i != this._zl7 + 1;
                                 if (flag14)
                                 {
-                                    GUI.Label(rect2, guicontent2, this.BMIJJAMJFPPMBPOLCFFAONNEBBEGNOHLFHNP);
-                                    rect2.yMin += this.BMIJJAMJFPPMBPOLCFFAONNEBBEGNOHLFHNP.CalcHeight(guicontent2, rect2.width);
+                                    GUI.Label(rect2, guicontent2, this._zm5);
+                                    rect2.yMin += this._zm5.CalcHeight(guicontent2, rect2.width);
                                 }
                                 else
                                 {
-                                    GUI.Label(rect2, guicontent2, this.GJGILFNBGFGECCHDCGILPCMMCFELLIKHGHBB);
-                                    rect2.yMin += this.GJGILFNBGFGECCHDCGILPCMMCFELLIKHGHBB.CalcHeight(guicontent2, rect2.width);
+                                    GUI.Label(rect2, guicontent2, this._zm6);
+                                    rect2.yMin += this._zm6.CalcHeight(guicontent2, rect2.width);
                                 }
                             }
                         }
@@ -521,7 +521,7 @@ namespace AHO
         // Token: 0x060000D0 RID: 208 RVA: 0x0000B18C File Offset: 0x0000938C
         public void OnOwnerGUI()
         {
-            bool flag = this.AMAAEOCIBNDOADEFICMEICEDIPJCEEOODICK && Event.current.type == EventType.Layout;
+            bool flag = this._zl9 && Event.current.type == EventType.Layout;
             if (flag)
             {
                 Vector2 vector = GUIUtility.GUIToScreenPoint(Event.current.mousePosition);
@@ -545,17 +545,17 @@ namespace AHO
                     bool flag5 = !Event.current.alt && !Event.current.command && !Event.current.control && !Event.current.shift;
                     if (flag5)
                     {
-                        bool flag6 = this.EFFBNPPIAJOPILBOBPPDIICLHBPEOCKILAPN != null && this.EFFBNPPIAJOPILBOBPPDIICLHBPEOCKILAPN.Length > 1;
+                        bool flag6 = this._zm3 != null && this._zm3.Length > 1;
                         if (flag6)
                         {
-                            bool flag7 = (this.EPALNJEIJOEJDLKLCLKPOGGLFMAECGHIPEBF ? ((int)Event.current.keyCode == 275) : ((int)Event.current.keyCode == 274));
-                            bool flag8 = (this.EPALNJEIJOEJDLKLCLKPOGGLFMAECGHIPEBF ? ((int)Event.current.keyCode == 276) : ((int)Event.current.keyCode == 273));
+                            bool flag7 = (this._ze9 ? ((int)Event.current.keyCode == 275) : ((int)Event.current.keyCode == 274));
+                            bool flag8 = (this._ze9 ? ((int)Event.current.keyCode == 276) : ((int)Event.current.keyCode == 273));
                             bool flag9 = flag8 || flag7;
                             if (flag9)
                             {
                                 Event.current.Use();
-                                this.PHDIDHMPIDGPFIFGMFOCFEJJABPGKGBNLMMB = (this.PHDIDHMPIDGPFIFGMFOCFEJJABPGKGBNLMMB + this.EFFBNPPIAJOPILBOBPPDIICLHBPEOCKILAPN.Length + (flag7 ? 1 : (-1))) % this.EFFBNPPIAJOPILBOBPPDIICLHBPEOCKILAPN.Length;
-                                this.FAIDBFHPLIAGICLHFOMFMNHDAIEJHLDEMPMC(_bk9.GetTooltipText(this.EFFBNPPIAJOPILBOBPPDIICLHBPEOCKILAPN[this.PHDIDHMPIDGPFIFGMFOCFEJJABPGKGBNLMMB], this.APEIGILDGNBKKGCAAEECFHGOODFOLNFFBLJA, this._AEK, this));
+                                this._zm4 = (this._zm4 + this._zm3.Length + (flag7 ? 1 : (-1))) % this._zm3.Length;
+                                this._zl5(_bk9.GetTooltipText(this._zm3[this._zm4], this._zm2, this._AEK, this));
                                 this.RepaintOnUpdate();
                                 return;
                             }
@@ -570,15 +570,15 @@ namespace AHO
                     }
                     else
                     {
-                        bool flag11 = !this.AMAAEOCIBNDOADEFICMEICEDIPJCEEOODICK && ((int)Event.current.keyCode == 273 || (int)Event.current.keyCode == 274);
+                        bool flag11 = !this._zl9 && ((int)Event.current.keyCode == 273 || (int)Event.current.keyCode == 274);
                         if (flag11)
                         {
                             Event.current.modifiers = (EventModifiers)((int)Event.current.modifiers & -11);
                             this.Hide();
                         }
                     }
-                    bool amaaeocibndoadeficmeicedipjceeoodick = this.AMAAEOCIBNDOADEFICMEICEDIPJCEEOODICK;
-                    if (amaaeocibndoadeficmeicedipjceeoodick)
+                    bool _zm9 = this._zl9;
+                    if (_zm9)
                     {
                         this.Hide();
                     }
@@ -600,42 +600,42 @@ namespace AHO
         }
 
         // Token: 0x040000BA RID: 186
-        private string AHIMHNGEHPGDOJKDGBKPKBMNAOOLNPKFFHPB;
+        private string _zl4;
 
         // Token: 0x040000BB RID: 187
-        private string[] GBKBJAAHKMMBHBKFMNPBPFHGPDPMKHJGACJP;
+        private string[] _zl6;
 
         // Token: 0x040000BC RID: 188
         private _bi2 _AEK;
 
         // Token: 0x040000BD RID: 189
-        private _bh4[] EFFBNPPIAJOPILBOBPPDIICLHBPEOCKILAPN;
+        private _bh4[] _zm3;
 
         // Token: 0x040000BE RID: 190
-        private int PHDIDHMPIDGPFIFGMFOCFEJJABPGKGBNLMMB;
+        private int _zm4;
 
         // Token: 0x040000BF RID: 191
-        private GUIStyle BMIJJAMJFPPMBPOLCFFAONNEBBEGNOHLFHNP;
+        private GUIStyle _zm5;
 
         // Token: 0x040000C0 RID: 192
-        private GUIStyle GJGILFNBGFGECCHDCGILPCMMCFELLIKHGHBB;
+        private GUIStyle _zm6;
 
         // Token: 0x040000C1 RID: 193
-        private _bb4.DHBA APEIGILDGNBKKGCAAEECFHGOODFOLNFFBLJA;
+        private _bb4.DHBA _zm2;
 
         // Token: 0x040000C2 RID: 194
-        internal Texture2D HJDNGHINOLHEPMFIEMMOHDJIGGDACMDELLHB;
+        internal Texture2D _zm7;
 
         // Token: 0x040000C3 RID: 195
-        private bool AMAAEOCIBNDOADEFICMEICEDIPJCEEOODICK = true;
+        private bool _zl9 = true;
 
         // Token: 0x040000C4 RID: 196
-        internal bool EBINNJIEDKILBKEDCAKOOHHEHNIOGIKHPKHN = false;
+        internal bool _zm1 = false;
 
         // Token: 0x040000C5 RID: 197
         internal _ba4 _AEL;
 
         // Token: 0x040000C6 RID: 198
-        private int PIHEEHJKNFBBBKIBIFAALNDIHLOBJLBCIODA = -1;
+        private int _zl7 = -1;
     }
 }

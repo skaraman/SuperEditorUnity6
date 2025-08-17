@@ -38,8 +38,8 @@ namespace AHO
         // Token: 0x0600039C RID: 924 RVA: 0x000A7B60 File Offset: 0x000A5D60
         internal static bool GetCurrent(out _bj9 version)
         {
-            _bl3 nhgoepijpoagcdcboafnccoibfhneihaeglb;
-            bool flag = !_bi4.GetAboutEntry(out nhgoepijpoagcdcboafnccoibfhneihaeglb);
+            _bl3 _yd6;
+            bool flag = !_bi4.GetAboutEntry(out _yd6);
             bool flag2;
             if (flag)
             {
@@ -48,7 +48,7 @@ namespace AHO
             }
             else
             {
-                version = _bj9.FromString(nhgoepijpoagcdcboafnccoibfhneihaeglb.HPEOKHPMOKLHPINDDBEMIEJGDJJHI_AWFKKE);
+                version = _bj9.FromString(_yd6._zk5);
                 flag2 = true;
             }
             return flag2;
@@ -96,58 +96,58 @@ namespace AHO
         private static _bl3 ParseAboutEntry(string path)
         {
             bool flag = !File.Exists(path);
-            _bl3 nhgoepijpoagcdcboafnccoibfhneihaeglb;
+            _bl3 _yd6;
             if (flag)
             {
-                nhgoepijpoagcdcboafnccoibfhneihaeglb = null;
+                _yd6 = null;
             }
             else
             {
-                _bl3 nhgoepijpoagcdcboafnccoibfhneihaeglb2 = new _bl3();
+                _bl3 _yh8 = new _bl3();
                 string[] array = File.ReadAllLines(path);
                 foreach (string text in array)
                 {
                     bool flag2 = text.StartsWith("name: ");
                     if (flag2)
                     {
-                        nhgoepijpoagcdcboafnccoibfhneihaeglb2._AW = text.Replace("name: ", "").Trim();
+                        _yh8._AW = text.Replace("name: ", "").Trim();
                     }
                     else
                     {
                         bool flag3 = text.StartsWith("identifier: ");
                         if (flag3)
                         {
-                            nhgoepijpoagcdcboafnccoibfhneihaeglb2.GKPGANAPJCEOGBLJFEIMEOFPLPLCEBLLHACJ = text.Replace("identifier: ", "").Trim();
+                            _yh8._zk4 = text.Replace("identifier: ", "").Trim();
                         }
                         else
                         {
                             bool flag4 = text.StartsWith("version: ");
                             if (flag4)
                             {
-                                nhgoepijpoagcdcboafnccoibfhneihaeglb2.HPEOKHPMOKLHPINDDBEMIEJGDJJHI_AWFKKE = text.Replace("version: ", "").Trim();
+                                _yh8._zk5 = text.Replace("version: ", "").Trim();
                             }
                             else
                             {
                                 bool flag5 = text.StartsWith("date: ");
                                 if (flag5)
                                 {
-                                    nhgoepijpoagcdcboafnccoibfhneihaeglb2.JEJNNOAHPJLDNBCHDEMEPEGFJOGMHDHCAINF = text.Replace("date: ", "").Trim();
+                                    _yh8._zk6 = text.Replace("date: ", "").Trim();
                                 }
                                 else
                                 {
                                     bool flag6 = text.StartsWith("changelog: ");
                                     if (flag6)
                                     {
-                                        nhgoepijpoagcdcboafnccoibfhneihaeglb2.GJPNJPHDOMEKIEGFFFMDAJALPPFFOPIGOAIH = text.Replace("changelog: ", "").Trim();
+                                        _yh8._zk7 = text.Replace("changelog: ", "").Trim();
                                     }
                                 }
                             }
                         }
                     }
                 }
-                nhgoepijpoagcdcboafnccoibfhneihaeglb = nhgoepijpoagcdcboafnccoibfhneihaeglb2;
+                _yd6 = _yh8;
             }
-            return nhgoepijpoagcdcboafnccoibfhneihaeglb;
+            return _yd6;
         }
     }
 }

@@ -403,7 +403,7 @@ namespace AHO
                 {
                     flags &= ~BindingFlags.NonPublic;
                 }
-                bool _AWT = base.Assembly.AHMPIKDFEFMCLFLJOEKHGBJIMNOBBAPNIJHE;
+                bool _AWT = base.Assembly._yb7;
                 foreach (Type type in this._AWK.GetNestedTypes(flags))
                 {
                     this.ImportReflectedMember(type, _AWT);

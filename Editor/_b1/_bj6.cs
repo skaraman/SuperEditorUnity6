@@ -60,7 +60,7 @@ namespace AHO
         IL_0100:
         IL_0102:
             this._AU = _bh4.AccessLevelFromModifiers(this._AV);
-            this.DIOELNEKMDADNLLFANLAMGKBJDEHEBCHOJNH = info;
+            this._ya2 = info;
             string name = info.Name;
             int num = name.IndexOf("`", StringComparison.Ordinal);
             this._AW = ((num < 0) ? name : name.Substring(0, num));
@@ -175,7 +175,7 @@ namespace AHO
         // Token: 0x060005BE RID: 1470 RVA: 0x000D71B0 File Offset: 0x000D53B0
         internal override _bh4 TypeOf()
         {
-            bool flag = this.DIOELNEKMDADNLLFANLAMGKBJDEHEBCHOJNH.MemberType == MemberTypes.Constructor;
+            bool flag = this._ya2.MemberType == MemberTypes.Constructor;
             _bh4 _AAH;
             if (flag)
             {
@@ -192,7 +192,7 @@ namespace AHO
                 if (flag3)
                 {
                     Type type = null;
-                    MemberTypes memberType = this.DIOELNEKMDADNLLFANLAMGKBJDEHEBCHOJNH.MemberType;
+                    MemberTypes memberType = this._ya2.MemberType;
                     MemberTypes memberTypes = memberType;
                     if (memberTypes <= MemberTypes.Field)
                     {
@@ -200,24 +200,24 @@ namespace AHO
                         {
                             if (memberTypes == MemberTypes.Field)
                             {
-                                type = ((FieldInfo)this.DIOELNEKMDADNLLFANLAMGKBJDEHEBCHOJNH).FieldType;
+                                type = ((FieldInfo)this._ya2).FieldType;
                             }
                         }
                         else
                         {
-                            type = ((EventInfo)this.DIOELNEKMDADNLLFANLAMGKBJDEHEBCHOJNH).EventHandlerType;
+                            type = ((EventInfo)this._ya2).EventHandlerType;
                         }
                     }
                     else if (memberTypes != MemberTypes.Method)
                     {
                         if (memberTypes == MemberTypes.Property)
                         {
-                            type = ((PropertyInfo)this.DIOELNEKMDADNLLFANLAMGKBJDEHEBCHOJNH).PropertyType;
+                            type = ((PropertyInfo)this._ya2).PropertyType;
                         }
                     }
                     else
                     {
-                        type = ((MethodInfo)this.DIOELNEKMDADNLLFANLAMGKBJDEHEBCHOJNH).ReturnType;
+                        type = ((MethodInfo)this._ya2).ReturnType;
                     }
                     this.BLH = _bl9.ForType(type);
                 }
@@ -227,6 +227,6 @@ namespace AHO
         }
 
         // Token: 0x0400052D RID: 1325
-        private readonly MemberInfo DIOELNEKMDADNLLFANLAMGKBJDEHEBCHOJNH;
+        private readonly MemberInfo _ya2;
     }
 }

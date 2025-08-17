@@ -14,33 +14,33 @@ namespace AHO
             bool flag = _bm5._AMB != null;
             if (flag)
             {
-                _bm5.BDLFPOGMCKEAJDPNGAPNKEKDPHCDALNEIHLO = _bm5._AMB.GetMethod("FitWindowRectToScreen", BindingFlags.Instance | BindingFlags.Public | BindingFlags.NonPublic);
-                _bm5.BMOHGNEIHHLBGGDBBFOALCOBNPHECALDMEEL = _bm5._AMB.GetField("m_DontSaveToLayout", BindingFlags.Instance | BindingFlags.Public | BindingFlags.NonPublic);
-                _bm5.JGEKFNHHHJPAHMKOPILBBKFEFEKNAIAKLOKL = _bm5._AMB.GetMethod("MoveInFrontOf", new Type[] { _bm5._AMB });
+                _bm5._zd7 = _bm5._AMB.GetMethod("FitWindowRectToScreen", BindingFlags.Instance | BindingFlags.Public | BindingFlags.NonPublic);
+                _bm5._zd8 = _bm5._AMB.GetField("m_DontSaveToLayout", BindingFlags.Instance | BindingFlags.Public | BindingFlags.NonPublic);
+                _bm5._zd9 = _bm5._AMB.GetMethod("MoveInFrontOf", new Type[] { _bm5._AMB });
             }
             _bm5._ALH = typeof(EditorWindow).GetField("m_Parent", BindingFlags.Instance | BindingFlags.Public | BindingFlags.NonPublic);
             bool flag2 = _bm5._ALH != null;
             if (flag2)
             {
                 Type type = typeof(EditorWindow).Assembly.GetType("UnityEditor.View");
-                _bm5.MDAEJPECLMIINJGKIAEPJBOGCAKOBEHFFICG = type.GetProperty("window", BindingFlags.Instance | BindingFlags.Public | BindingFlags.NonPublic);
+                _bm5._ze1 = type.GetProperty("window", BindingFlags.Instance | BindingFlags.Public | BindingFlags.NonPublic);
             }
         }
 
         // Token: 0x0600015C RID: 348 RVA: 0x00013EE8 File Offset: 0x000120E8
         protected void ShowTooltip()
         {
-            bool flag = _bm5.OMKGMAEGOFGNOEPAGIHIKFEOOGMHNNNKJOEJ != null;
+            bool flag = _bm5._ze2 != null;
             if (flag)
             {
-                _bm5.OMKGMAEGOFGNOEPAGIHIKFEOOGMHNNNKJOEJ.Invoke(this, new object[] { 1, false });
+                _bm5._ze2.Invoke(this, new object[] { 1, false });
             }
             else
             {
-                bool flag2 = _bm5.AAKGGGKCCLHPGBIOJGEAIGDAHMFBDBNNMKKD != null;
+                bool flag2 = _bm5._ze3 != null;
                 if (flag2)
                 {
-                    _bm5.AAKGGGKCCLHPGBIOJGEAIGDAHMFBDBNNMKKD.Invoke(this, null);
+                    _bm5._ze3.Invoke(this, null);
                 }
                 else
                 {
@@ -52,7 +52,7 @@ namespace AHO
         // Token: 0x0600015D RID: 349 RVA: 0x00013F50 File Offset: 0x00012150
         protected void MoveInFrontOf(EditorWindow window)
         {
-            bool flag = _bm5.JGEKFNHHHJPAHMKOPILBBKFEFEKNAIAKLOKL == null;
+            bool flag = _bm5._zd9 == null;
             if (!flag)
             {
                 object containerWindow = _bm5.GetContainerWindow(this);
@@ -63,7 +63,7 @@ namespace AHO
                     bool flag3 = !(UnityEngine.Object)containerWindow2;
                     if (!flag3)
                     {
-                        _bm5.JGEKFNHHHJPAHMKOPILBBKFEFEKNAIAKLOKL.Invoke(containerWindow, new object[] { containerWindow2 });
+                        _bm5._zd9.Invoke(containerWindow, new object[] { containerWindow2 });
                     }
                 }
             }
@@ -72,7 +72,7 @@ namespace AHO
         // Token: 0x0600015E RID: 350 RVA: 0x00013FC0 File Offset: 0x000121C0
         protected virtual void OnEnable()
         {
-            bool flag = _bm5.HIIPPBCKMJCKALKAGJEOFMIMDFFMBDCOHBGB == 0;
+            bool flag = _bm5._ze4 == 0;
             if (flag)
             {
                 EditorApplication.delayCall = (EditorApplication.CallbackFunction)Delegate.Combine(EditorApplication.delayCall, new EditorApplication.CallbackFunction(delegate
@@ -93,21 +93,21 @@ namespace AHO
             }
             else
             {
-                _bm5.HIIPPBCKMJCKALKAGJEOFMIMDFFMBDCOHBGB--;
+                _bm5._ze4--;
             }
         }
 
         // Token: 0x0600015F RID: 351 RVA: 0x0001400C File Offset: 0x0001220C
         protected static T CreatePopup<T>() where T : _bm5
         {
-            _bm5.HIIPPBCKMJCKALKAGJEOFMIMDFFMBDCOHBGB++;
+            _bm5._ze4++;
             return ScriptableObject.CreateInstance<T>();
         }
 
         // Token: 0x06000160 RID: 352 RVA: 0x00014034 File Offset: 0x00012234
         private static object GetContainerWindow(EditorWindow window)
         {
-            bool flag = _bm5._ALH == null || _bm5.MDAEJPECLMIINJGKIAEPJBOGCAKOBEHFFICG == null;
+            bool flag = _bm5._ALH == null || _bm5._ze1 == null;
             object obj;
             if (flag)
             {
@@ -123,7 +123,7 @@ namespace AHO
                 }
                 else
                 {
-                    obj = _bm5.MDAEJPECLMIINJGKIAEPJBOGCAKOBEHFFICG.GetValue(value, null);
+                    obj = _bm5._ze1.GetValue(value, null);
                 }
             }
             return obj;
@@ -141,12 +141,12 @@ namespace AHO
             }
             else
             {
-                bool flag2 = _bm5.BMOHGNEIHHLBGGDBBFOALCOBNPHECALDMEEL != null;
+                bool flag2 = _bm5._zd8 != null;
                 if (flag2)
                 {
-                    _bm5.BMOHGNEIHHLBGGDBBFOALCOBNPHECALDMEEL.SetValue(containerWindow, _bm5.DGBCGPHIJFGHHLCHAPNMOGLHHLPJDBCECIPP);
+                    _bm5._zd8.SetValue(containerWindow, _bm5._ze5);
                 }
-                bool flag3 = _bm5.BDLFPOGMCKEAJDPNGAPNKEKDPHCDALNEIHLO == null;
+                bool flag3 = _bm5._zd7 == null;
                 if (flag3)
                 {
                     rect = rc;
@@ -154,11 +154,11 @@ namespace AHO
                 else
                 {
                     rc.height += 20f;
-                    rc = (Rect)_bm5.BDLFPOGMCKEAJDPNGAPNKEKDPHCDALNEIHLO.Invoke(containerWindow, new object[]
+                    rc = (Rect)_bm5._zd7.Invoke(containerWindow, new object[]
                     {
                         rc,
-                        _bm5.DGBCGPHIJFGHHLCHAPNMOGLHHLPJDBCECIPP,
-                        _bm5.DBMBBICBEAICBNJJGMEOBKEKGELPINPHMPID
+                        _bm5._ze5,
+                        _bm5._ze6
                     });
                     rc.height -= 20f;
                     rect = rc;
@@ -170,16 +170,16 @@ namespace AHO
         // Token: 0x06000162 RID: 354 RVA: 0x00014148 File Offset: 0x00012348
         public bool _CBD()
         {
-            return this.HMGBDHFGCCOCKEECFGJGPFALNBLAOEMPBBAI;
+            return this._ze7;
         }
 
         // Token: 0x06000163 RID: 355 RVA: 0x00014160 File Offset: 0x00012360
         public void _AEW(bool value)
         {
-            bool flag = value != this.HMGBDHFGCCOCKEECFGJGPFALNBLAOEMPBBAI;
+            bool flag = value != this._ze7;
             if (flag)
             {
-                this.HMGBDHFGCCOCKEECFGJGPFALNBLAOEMPBBAI = value;
+                this._ze7 = value;
                 bool flag2 = this._AEX;
                 if (flag2)
                 {
@@ -187,7 +187,7 @@ namespace AHO
                 }
                 else
                 {
-                    this.MNAOBEMFIPHCEEOLMMHCODEOOBBIIKEPPJHF = true;
+                    this._ze8 = true;
                 }
             }
         }
@@ -195,36 +195,36 @@ namespace AHO
         // Token: 0x06000164 RID: 356 RVA: 0x000141C4 File Offset: 0x000123C4
         protected void SetSize(float width, float height)
         {
-            float num = (this.EPALNJEIJOEJDLKLCLKPOGGLFMAECGHIPEBF ? (this.HMGBDHFGCCOCKEECFGJGPFALNBLAOEMPBBAI ? (this._AEZ.x - width) : this._AEZ.xMax) : this._AEZ.x);
-            float num2 = (this.EPALNJEIJOEJDLKLCLKPOGGLFMAECGHIPEBF ? this._AEZ.y : (this.HMGBDHFGCCOCKEECFGJGPFALNBLAOEMPBBAI ? (this._AEZ.y - height) : this._AEZ.yMax));
+            float num = (this._ze9 ? (this._ze7 ? (this._AEZ.x - width) : this._AEZ.xMax) : this._AEZ.x);
+            float num2 = (this._ze9 ? this._AEZ.y : (this._ze7 ? (this._AEZ.y - height) : this._AEZ.yMax));
             Rect rect;
             rect = new Rect(num, num2, width, height);
             Rect rect2 = _bm5.FitRectToScreen(rect, this);
-            bool flag = this.MNAOBEMFIPHCEEOLMMHCODEOOBBIIKEPPJHF == this.HMGBDHFGCCOCKEECFGJGPFALNBLAOEMPBBAI;
+            bool flag = this._ze8 == this._ze7;
             if (flag)
             {
-                bool flag2 = (this.EPALNJEIJOEJDLKLCLKPOGGLFMAECGHIPEBF ? (rect.x != rect2.x) : (rect.y != rect2.y));
+                bool flag2 = (this._ze9 ? (rect.x != rect2.x) : (rect.y != rect2.y));
                 if (flag2)
                 {
-                    this.HMGBDHFGCCOCKEECFGJGPFALNBLAOEMPBBAI = !this.HMGBDHFGCCOCKEECFGJGPFALNBLAOEMPBBAI;
-                    bool hmgbdhfgccockeecfgjgpfalnblaoempbbai = this.HMGBDHFGCCOCKEECFGJGPFALNBLAOEMPBBAI;
-                    if (hmgbdhfgccockeecfgjgpfalnblaoempbbai)
+                    this._ze7 = !this._ze7;
+                    bool _zf1 = this._ze7;
+                    if (_zf1)
                     {
-                        num = (this.EPALNJEIJOEJDLKLCLKPOGGLFMAECGHIPEBF ? (this._AEZ.x - width) : rect2.x);
-                        num2 = (this.EPALNJEIJOEJDLKLCLKPOGGLFMAECGHIPEBF ? rect2.y : (this._AEZ.y - height));
+                        num = (this._ze9 ? (this._AEZ.x - width) : rect2.x);
+                        num2 = (this._ze9 ? rect2.y : (this._AEZ.y - height));
                         rect = new Rect(num, num2, width, height);
                         rect2 = _bm5.FitRectToScreen(rect, this);
                     }
                     else
                     {
-                        num = (this.EPALNJEIJOEJDLKLCLKPOGGLFMAECGHIPEBF ? (this._AEZ.x - width) : rect2.x);
-                        num2 = (this.EPALNJEIJOEJDLKLCLKPOGGLFMAECGHIPEBF ? rect2.y : this._AEZ.yMax);
+                        num = (this._ze9 ? (this._AEZ.x - width) : rect2.x);
+                        num2 = (this._ze9 ? rect2.y : this._AEZ.yMax);
                         rect = new Rect(num, num2, width, height);
                         rect2 = _bm5.FitRectToScreen(rect, this);
                     }
                 }
             }
-            this.FFKGLBDLKIFNBNOHLILPEHDFCNCPHAFPGIED = true;
+            this._zf2 = true;
             base.minSize = Vector2.one;
             base.maxSize = new Vector2(4000f, 4000f);
             base.position = rect2;
@@ -232,11 +232,11 @@ namespace AHO
             vector = new Vector2(width, height);
             base.minSize = vector;
             base.maxSize = vector;
-            this.FFKGLBDLKIFNBNOHLILPEHDFCNCPHAFPGIED = false;
+            this._zf2 = false;
         }
 
         // Token: 0x04000180 RID: 384
-        private static int HIIPPBCKMJCKALKAGJEOFMIMDFFMBDCOHBGB;
+        private static int _ze4;
 
         // Token: 0x04000181 RID: 385
         [NonSerialized]
@@ -246,45 +246,45 @@ namespace AHO
         protected Rect _AEZ;
 
         // Token: 0x04000183 RID: 387
-        protected bool EPALNJEIJOEJDLKLCLKPOGGLFMAECGHIPEBF;
+        protected bool _ze9;
 
         // Token: 0x04000184 RID: 388
-        private bool HMGBDHFGCCOCKEECFGJGPFALNBLAOEMPBBAI;
+        private bool _ze7;
 
         // Token: 0x04000185 RID: 389
-        private bool MNAOBEMFIPHCEEOLMMHCODEOOBBIIKEPPJHF;
+        private bool _ze8;
 
         // Token: 0x04000186 RID: 390
-        protected bool FFKGLBDLKIFNBNOHLILPEHDFCNCPHAFPGIED;
+        protected bool _zf2;
 
         // Token: 0x04000187 RID: 391
         private static Type _AMB = typeof(EditorWindow).Assembly.GetType("UnityEditor.ContainerWindow");
 
         // Token: 0x04000188 RID: 392
-        private static MethodInfo BDLFPOGMCKEAJDPNGAPNKEKDPHCDALNEIHLO;
+        private static MethodInfo _zd7;
 
         // Token: 0x04000189 RID: 393
-        private static FieldInfo BMOHGNEIHHLBGGDBBFOALCOBNPHECALDMEEL;
+        private static FieldInfo _zd8;
 
         // Token: 0x0400018A RID: 394
         private static FieldInfo _ALH;
 
         // Token: 0x0400018B RID: 395
-        private static PropertyInfo MDAEJPECLMIINJGKIAEPJBOGCAKOBEHFFICG;
+        private static PropertyInfo _ze1;
 
         // Token: 0x0400018C RID: 396
-        private static MethodInfo JGEKFNHHHJPAHMKOPILBBKFEFEKNAIAKLOKL;
+        private static MethodInfo _zd9;
 
         // Token: 0x0400018D RID: 397
-        private static MethodInfo AAKGGGKCCLHPGBIOJGEAIGDAHMFBDBNNMKKD = typeof(EditorWindow).GetMethod("ShowTooltip", BindingFlags.Instance | BindingFlags.Public | BindingFlags.NonPublic);
+        private static MethodInfo _ze3 = typeof(EditorWindow).GetMethod("ShowTooltip", BindingFlags.Instance | BindingFlags.Public | BindingFlags.NonPublic);
 
         // Token: 0x0400018E RID: 398
-        private static MethodInfo OMKGMAEGOFGNOEPAGIHIKFEOOGMHNNNKJOEJ = typeof(EditorWindow).GetMethod("ShowPopupWithMode", BindingFlags.Instance | BindingFlags.Public | BindingFlags.NonPublic);
+        private static MethodInfo _ze2 = typeof(EditorWindow).GetMethod("ShowPopupWithMode", BindingFlags.Instance | BindingFlags.Public | BindingFlags.NonPublic);
 
         // Token: 0x0400018F RID: 399
-        private static readonly object DGBCGPHIJFGHHLCHAPNMOGLHHLPJDBCECIPP = true;
+        private static readonly object _ze5 = true;
 
         // Token: 0x04000190 RID: 400
-        private static readonly object DBMBBICBEAICBNJJGMEOBKEKGELPINPHMPID = false;
+        private static readonly object _ze6 = false;
     }
 }

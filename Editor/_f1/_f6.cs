@@ -12,8 +12,8 @@ namespace ODGL
         // Token: 0x060009A7 RID: 2471 RVA: 0x00102DD4 File Offset: 0x00100FD4
         internal _f6()
         {
-            this.PMCKBPLICDKNPBIABOEGEPGGPNDAAJJGMDHK = _fa2.GetInstance().GetTexture((_f2)10);
-            this.CAEEDINPMHCBIALMFFNFPBNBIOJPNPDIPCCK = _fa2.GetInstance().GetTexture((_f2)9);
+            this._yr3 = _fa2.GetInstance().GetTexture((_f2)10);
+            this._yr4 = _fa2.GetInstance().GetTexture((_f2)9);
             _f5.GetInstance().AddEventListener(HierarchySetting.ShowModifierWarning, new SettingChangedHandler(this.SettingsChanged));
             _f5.GetInstance().AddEventListener(HierarchySetting.ShowLock, new SettingChangedHandler(this.SettingsChanged));
             this.SettingsChanged();
@@ -22,7 +22,7 @@ namespace ODGL
         // Token: 0x060009A8 RID: 2472 RVA: 0x00102E4C File Offset: 0x0010104C
         private void SettingsChanged()
         {
-            this.JDBDGLPFEJANLDAHBBPAPLLLHODOBKMOOOCC = _f5.GetInstance().Get<bool>(HierarchySetting.ShowModifierWarning);
+            this._yr5 = _f5.GetInstance().Get<bool>(HierarchySetting.ShowModifierWarning);
             this.HHIK = _f5.GetInstance().Get<bool>(HierarchySetting.ShowLock);
         }
 
@@ -52,7 +52,7 @@ namespace ODGL
                     EditorUtility.SetDirty(gameObject);
                 }
             }
-            GUI.DrawTexture(curRect, flag ? this.PMCKBPLICDKNPBIABOEGEPGGPNDAAJJGMDHK : this.CAEEDINPMHCBIALMFFNFPBNBIOJPNPDIPCCK);
+            GUI.DrawTexture(curRect, flag ? this._yr3 : this._yr4);
         }
 
         // Token: 0x060009AB RID: 2475 RVA: 0x00102F24 File Offset: 0x00101124
@@ -65,17 +65,17 @@ namespace ODGL
                 bool flag3 = currentEvent.type == EventType.MouseDown;
                 if (flag3)
                 {
-                    this.HCNMBINKNOFJIPMAAALPDPBLADDBLNHDDLAD = ((!flag2) ? 1 : 0);
+                    this._yr6 = ((!flag2) ? 1 : 0);
                 }
                 else
                 {
-                    bool flag4 = currentEvent.type == EventType.MouseDrag && this.HCNMBINKNOFJIPMAAALPDPBLADDBLNHDDLAD != -1;
+                    bool flag4 = currentEvent.type == EventType.MouseDrag && this._yr6 != -1;
                     if (!flag4)
                     {
-                        this.HCNMBINKNOFJIPMAAALPDPBLADDBLNHDDLAD = -1;
+                        this._yr6 = -1;
                         return;
                     }
-                    bool flag5 = this.HCNMBINKNOFJIPMAAALPDPBLADDBLNHDDLAD == (flag2 ? 1 : 0);
+                    bool flag5 = this._yr6 == (flag2 ? 1 : 0);
                     if (flag5)
                     {
                         return;
@@ -85,7 +85,7 @@ namespace ODGL
                 bool shift = currentEvent.shift;
                 if (shift)
                 {
-                    bool flag6 = !this.JDBDGLPFEJANLDAHBBPAPLLLHODOBKMOOOCC || EditorUtility.DisplayDialog("Change locking", "Are you sure you want to " + (flag2 ? "unlock" : "lock") + " this GameObject and all its children? (You can disable this warning in the settings)", "Yes", "Cancel");
+                    bool flag6 = !this._yr5 || EditorUtility.DisplayDialog("Change locking", "Are you sure you want to " + (flag2 ? "unlock" : "lock") + " this GameObject and all its children? (You can disable this warning in the settings)", "Yes", "Cancel");
                     if (flag6)
                     {
                         base.GetGameObjectListRecursive(gameObject, ref list, int.MaxValue);
@@ -102,7 +102,7 @@ namespace ODGL
                             Debug.Log("This action for root objects is supported only for Unity3d 5.3.3 and above");
                             return;
                         }
-                        bool flag8 = !this.JDBDGLPFEJANLDAHBBPAPLLLHODOBKMOOOCC || EditorUtility.DisplayDialog("Change locking", "Are you sure you want to " + (flag2 ? "unlock" : "lock") + " this GameObject and its siblings? (You can disable this warning in the settings)", "Yes", "Cancel");
+                        bool flag8 = !this._yr5 || EditorUtility.DisplayDialog("Change locking", "Are you sure you want to " + (flag2 ? "unlock" : "lock") + " this GameObject and its siblings? (You can disable this warning in the settings)", "Yes", "Cancel");
                         if (flag8)
                         {
                             base.GetGameObjectListRecursive(gameObject.transform.parent.gameObject, ref list, 1);
@@ -181,15 +181,15 @@ namespace ODGL
         }
 
         // Token: 0x04000847 RID: 2119
-        private Texture2D PMCKBPLICDKNPBIABOEGEPGGPNDAAJJGMDHK;
+        private Texture2D _yr3;
 
         // Token: 0x04000848 RID: 2120
-        private Texture2D CAEEDINPMHCBIALMFFNFPBNBIOJPNPDIPCCK;
+        private Texture2D _yr4;
 
         // Token: 0x04000849 RID: 2121
-        private bool JDBDGLPFEJANLDAHBBPAPLLLHODOBKMOOOCC;
+        private bool _yr5;
 
         // Token: 0x0400084A RID: 2122
-        private int HCNMBINKNOFJIPMAAALPDPBLADDBLNHDDLAD = -1;
+        private int _yr6 = -1;
     }
 }

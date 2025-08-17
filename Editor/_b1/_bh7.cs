@@ -18,26 +18,26 @@ namespace AHO
         {
             get
             {
-                bool flag = this.FPNIPCAGFHAMPMOPKHBJLDNLIAOFDPNPODOH != null && !this.FPNIPCAGFHAMPMOPKHBJLDNLIAOFDPNPODOH.IsValid();
+                bool flag = this._zk2 != null && !this._zk2.IsValid();
                 if (flag)
                 {
-                    this.FPNIPCAGFHAMPMOPKHBJLDNLIAOFDPNPODOH = this.FPNIPCAGFHAMPMOPKHBJLDNLIAOFDPNPODOH.Rebind();
-                    bool flag2 = this.FPNIPCAGFHAMPMOPKHBJLDNLIAOFDPNPODOH != null && !this.FPNIPCAGFHAMPMOPKHBJLDNLIAOFDPNPODOH.IsValid();
+                    this._zk2 = this._zk2.Rebind();
+                    bool flag2 = this._zk2 != null && !this._zk2.IsValid();
                     if (flag2)
                     {
-                        this.FPNIPCAGFHAMPMOPKHBJLDNLIAOFDPNPODOH = null;
+                        this._zk2 = null;
                     }
                 }
-                bool flag3 = this.FPNIPCAGFHAMPMOPKHBJLDNLIAOFDPNPODOH != null;
+                bool flag3 = this._zk2 != null;
                 if (flag3)
                 {
-                    bool flag4 = (this._AEJ != null && this._AIW != _bb4._AIU) || !this.FPNIPCAGFHAMPMOPKHBJLDNLIAOFDPNPODOH.IsValid();
+                    bool flag4 = (this._AEJ != null && this._AIW != _bb4._AIU) || !this._zk2.IsValid();
                     if (flag4)
                     {
-                        this.FPNIPCAGFHAMPMOPKHBJLDNLIAOFDPNPODOH = null;
+                        this._zk2 = null;
                     }
                 }
-                bool flag5 = this.FPNIPCAGFHAMPMOPKHBJLDNLIAOFDPNPODOH == null;
+                bool flag5 = this._zk2 == null;
                 if (flag5)
                 {
                     bool flag6 = !this.LJFIGAEOEPDFDCBFGBENELPCPGFPDLGINLBE;
@@ -45,23 +45,23 @@ namespace AHO
                     {
                         return _bh4._AAA;
                     }
-                    bool eemmpgfnocikdepiendbnnmfcfaenpfcpdng = KJK.EEMMPGFNOCIKDEPIENDBNNMFCFAENPFCPDNG;
-                    if (eemmpgfnocikdepiendbnnmfcfaenpfcpdng)
+                    bool _zj5 = KJK._zj6;
+                    if (_zj5)
                     {
                         return _bh4._AAA;
                     }
                     this.LJFIGAEOEPDFDCBFGBENELPCPGFPDLGINLBE = true;
-                    this.FPNIPCAGFHAMPMOPKHBJLDNLIAOFDPNPODOH = _bh4.ResolveNode(this._AEJ, null, null, 0, false);
+                    this._zk2 = _bh4.ResolveNode(this._AEJ, null, null, 0, false);
                     this._AIW = _bb4._AIU;
                     this.LJFIGAEOEPDFDCBFGBENELPCPGFPDLGINLBE = false;
-                    bool flag7 = this.FPNIPCAGFHAMPMOPKHBJLDNLIAOFDPNPODOH == null;
+                    bool flag7 = this._zk2 == null;
                     if (flag7)
                     {
-                        this.FPNIPCAGFHAMPMOPKHBJLDNLIAOFDPNPODOH = _bh4._AHA;
+                        this._zk2 = _bh4._AHA;
                         this._AIW = _bb4._AIU;
                     }
                 }
-                return this.FPNIPCAGFHAMPMOPKHBJLDNLIAOFDPNPODOH;
+                return this._zk2;
             }
         }
 
@@ -79,7 +79,7 @@ namespace AHO
         // Token: 0x060004A8 RID: 1192 RVA: 0x000CDF03 File Offset: 0x000CC103
         public KJK(_bh4 definedSymbol)
         {
-            this.FPNIPCAGFHAMPMOPKHBJLDNLIAOFDPNPODOH = definedSymbol;
+            this._zk2 = definedSymbol;
         }
 
         // Token: 0x060004A9 RID: 1193 RVA: 0x000CDF1C File Offset: 0x000CC11C
@@ -91,7 +91,7 @@ namespace AHO
             {
                 _AAH = this.definition;
             }
-            bool flag2 = this._AEJ == null && (this.FPNIPCAGFHAMPMOPKHBJLDNLIAOFDPNPODOH == null || this.FPNIPCAGFHAMPMOPKHBJLDNLIAOFDPNPODOH._AT == SymbolKind.Error);
+            bool flag2 = this._AEJ == null && (this._zk2 == null || this._zk2._AT == SymbolKind.Error);
             bool flag3;
             if (flag2)
             {
@@ -144,12 +144,12 @@ namespace AHO
         protected uint _AIW;
 
         // Token: 0x040004BA RID: 1210
-        protected _bh4 FPNIPCAGFHAMPMOPKHBJLDNLIAOFDPNPODOH;
+        protected _bh4 _zk2;
 
         // Token: 0x040004BB RID: 1211
         protected bool LJFIGAEOEPDFDCBFGBENELPCPGFPDLGINLBE = false;
 
         // Token: 0x040004BC RID: 1212
-        public static bool EEMMPGFNOCIKDEPIENDBNNMFCFAENPFCPDNG;
+        public static bool _zj6;
     }
 }
