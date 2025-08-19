@@ -9310,7 +9310,7 @@ namespace AHO
                 genericMenu.AddItem(new GUIContent("Color Theme/New Theme..."), false, new GenericMenu.MenuFunction(_bi2.NewTheme));
                 genericMenu.AddItem(new GUIContent("Star it!"), false, delegate
                 {
-                    Application.OpenURL("https://github.com/UnitySuperEditor/SuperEditor");
+                    Application.OpenURL("https://github.com/skaraman/SuperEditorUnity6/");
                 });
                 rect2 = new Rect(this._AFO.xMax - 27f, this._AFO.yMin - 17f, 18f, 16f);
                 genericMenu.DropDown(rect2);
