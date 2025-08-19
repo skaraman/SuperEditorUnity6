@@ -25,7 +25,7 @@
 
   <!-- Conditionally include source files only when Unity is available -->
   <ItemGroup Condition="'$(UnityAvailable)' == 'true'">
-    <Compile Include="**/*.cs" Exclude="bin/**;obj/**;NoUnityStub.cs;MockUnity.cs" />
+    <Compile Include="**/*.cs" Exclude="bin/**;obj/**;NoUnityStub.cs;MockUnity.cs;Tests/**" />
   </ItemGroup>
 
   <!-- When Unity is not available, include stub files and mock Unity implementation -->
