@@ -184,8 +184,9 @@ namespace SuperEditor
             UnityEngine.Debug.Break();
         }
 
-        private static void OnPauseStateChanged(bool isPaused)
+        private static void OnPauseStateChanged(PauseState pauseState)
         {
+            bool isPaused = pauseState == PauseState.Paused;
             PauseStateChanged?.Invoke(isPaused);
             
             if (isPaused)
