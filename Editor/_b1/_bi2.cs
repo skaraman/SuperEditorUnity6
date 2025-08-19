@@ -14719,7 +14719,7 @@ namespace AHO
         // Token: 0x06000333 RID: 819 RVA: 0x00040D9C File Offset: 0x0003EF9C
         private bool ProcessCodeViewCommands()
         {
-            bool flag = Event.current.type == EventType.MouseUp;
+            bool flag = Event.current.type == EventType.ValidateCommand;
             if (flag)
             {
                 bool flag2 = Event.current.commandName == "SelectAll";
@@ -14786,7 +14786,7 @@ namespace AHO
                 {
                     return false;
                 }
-                bool flag12 = Event.current.type == EventType.MouseUp;
+                bool flag12 = Event.current.type == EventType.ExecuteCommand;
                 if (flag12)
                 {
                     this._CGY = 0f;
