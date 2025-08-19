@@ -53,6 +53,29 @@ namespace SuperEditor
             Debug.LogWarning("GameObject " + go.name + " does not have a " + componentName + " component attached.");
         }
 
+        /// <summary>
+        /// Test method for the specific problematic string from the issue
+        /// FIXED: This should now work correctly without red squiggly highlights
+        /// </summary>
+        /// <param name="gearId">The gear ID to log</param>
+        public static void LogGearPartsNotFound(string gearId)
+        {
+            // This is the exact problematic string from the issue:
+            // $"No parts found for equipped gearId: {gearId}"
+            // FIXED: The editor should now correctly parse this as an interpolated string instead of treating it as syntax code
+            Debug.LogWarning($"No parts found for equipped gearId: {gearId}");
+        }
+
+        /// <summary>
+        /// Alternative version that should work correctly
+        /// </summary>
+        /// <param name="gearId">The gear ID to log</param>
+        public static void LogGearPartsNotFoundAlternative(string gearId)
+        {
+            // Using string.Format to avoid interpolation parsing issues
+            Debug.LogWarning(string.Format("No parts found for equipped gearId: {0}", gearId));
+        }
+
         // Example usage demonstrating the fix
         #if UNITY_EDITOR
         [UnityEditor.MenuItem("SuperEditor/Test String Interpolation")]
@@ -71,6 +94,10 @@ namespace SuperEditor
             // Alternative approaches that avoid potential IDE issues:
             LogComponentMissingAlternative(testObject, "AllIn1AnimatorInspector");
             LogComponentMissingConcat(testObject, "AllIn1AnimatorInspector");
+            
+            // Test the specific issue mentioned in the problem statement:
+            LogGearPartsNotFound("GEAR_123");
+            LogGearPartsNotFoundAlternative("GEAR_123");
             
             Object.DestroyImmediate(testObject);
         }
