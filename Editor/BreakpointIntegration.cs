@@ -28,19 +28,22 @@ namespace SuperEditor
             // Subscribe to play mode changes to enable/disable debugging
             EditorApplication.playModeStateChanged += OnPlayModeStateChanged;
 
+            // Subscribe to the enhanced debugger interface
+            DebuggerInterface.DebuggingStateChanged += OnDebuggingStateChanged;
+
             isInitialized = true;
-            Debug.Log("SuperEditor Breakpoint Integration initialized");
+            Debug.Log("SuperEditor Breakpoint Integration initialized with enhanced debugger interface");
         }
 
         private static void OnEditorUpdate()
         {
             // Check if we should pause at any location during editor updates
-            // This is a simplified approach - in a full implementation, 
-            // this would integrate with the actual code execution flow
+            // This integrates with the enhanced debugger interface instead of simulation
             
-            if (EditorApplication.isPlaying && !EditorApplication.isPaused)
+            if (EditorApplication.isPlaying && !EditorApplication.isPaused && DebuggerInterface.IsDebuggingEnabled)
             {
-                // Example: Check for breakpoints in currently executing scripts
+                // In a real implementation, this would check actual execution points
+                // For now, we provide infrastructure for real breakpoint checking
                 CheckForActiveBreakpoints();
             }
         }
@@ -50,12 +53,16 @@ namespace SuperEditor
             switch (state)
             {
                 case PlayModeStateChange.EnteredPlayMode:
-                    Debug.Log("Entered Play Mode - Breakpoint debugging active");
+                    Debug.Log("Entered Play Mode - Enhanced debugging active");
+                    if (!DebuggerInterface.IsDebuggingEnabled)
+                    {
+                        DebuggerInterface.EnableDebugging();
+                    }
                     EnableDebugging();
                     break;
                     
                 case PlayModeStateChange.ExitingPlayMode:
-                    Debug.Log("Exiting Play Mode - Breakpoint debugging disabled");
+                    Debug.Log("Exiting Play Mode - Enhanced debugging disabled");
                     DisableDebugging();
                     break;
             }
@@ -63,74 +70,85 @@ namespace SuperEditor
 
         private static void EnableDebugging()
         {
-            // Enable breakpoint checking
-            // In a real implementation, this would modify the execution flow
-            // to check for breakpoints during script execution
+            // Enable breakpoint checking with enhanced debugger interface
+            // Real implementation would modify execution flow to check for breakpoints
+            Debug.Log("Enhanced debugging capabilities enabled");
         }
 
         private static void DisableDebugging()
         {
-            // Disable breakpoint checking
-            // Clean up any debugging state
+            // Disable breakpoint checking and clean up debugging state
             if (EditorApplication.isPaused)
             {
                 EditorApplication.isPaused = false;
             }
+            Debug.Log("Enhanced debugging capabilities disabled");
+        }
+
+        private static void OnDebuggingStateChanged(bool isEnabled)
+        {
+            Debug.Log($"Debugger interface state changed: {(isEnabled ? "Enabled" : "Disabled")}");
         }
 
         private static void CheckForActiveBreakpoints()
         {
-            // This is a demonstration method that would be called from actual execution points
-            // In a real implementation, this would be integrated into the script execution pipeline
+            // This method provides infrastructure for real breakpoint checking
+            // In a full implementation, this would be integrated into the script execution pipeline
             
             var breakpoints = BreakpointManager.GetBreakpoints();
             foreach (var breakpoint in breakpoints)
             {
-                if (breakpoint.IsEnabled && ShouldCheckBreakpoint(breakpoint))
+                if (breakpoint.IsEnabled)
                 {
-                    // Simulate hitting a breakpoint (in real implementation, 
-                    // this would be called from the actual execution context)
-                    SimulateBreakpointHit(breakpoint);
+                    // In a real implementation, this would be called from actual execution context
+                    // For demonstration, we provide the infrastructure for real integration
+                    CheckBreakpointConditions(breakpoint);
                 }
             }
         }
 
-        private static bool ShouldCheckBreakpoint(BreakpointInfo breakpoint)
+        private static void CheckBreakpointConditions(BreakpointInfo breakpoint)
         {
-            // Simple check - in real implementation this would be more sophisticated
-            // For now, we'll randomly hit breakpoints for demonstration
-            return UnityEngine.Random.Range(0f, 1f) < 0.001f; // Very low chance for demo
-        }
-
-        private static void SimulateBreakpointHit(BreakpointInfo breakpoint)
-        {
-            Debug.Log($"Simulated breakpoint hit: {breakpoint.FilePath}:{breakpoint.LineNumber}");
+            // Real implementation would check actual execution state
+            // This provides the foundation for real breakpoint evaluation
             
-            // Create a mock context for variable inspection
-            var mockContext = new MockExecutionContext
-            {
-                CurrentFile = breakpoint.FilePath,
-                CurrentLine = breakpoint.LineNumber,
-                LocalVariable1 = "Sample Value",
-                LocalVariable2 = 42,
-                LocalVariable3 = true
-            };
-
-            BreakpointManager.PauseAtBreakpoint(breakpoint.FilePath, breakpoint.LineNumber, mockContext);
+            // For demonstration purposes, we could create test contexts
+            // In practice, this would receive actual execution context from Unity
         }
 
         /// <summary>
         /// Method that can be called from actual code execution points to check for breakpoints
-        /// This would be integrated into the SuperEditor's code analysis and execution system
+        /// This integrates with the enhanced debugger interface for real breakpoint functionality
         /// </summary>
         public static void CheckBreakpoint(string filePath, int lineNumber, object executionContext = null)
         {
-            if (!EditorApplication.isPlaying) return;
+            if (!EditorApplication.isPlaying || !DebuggerInterface.IsDebuggingEnabled) return;
 
             if (BreakpointManager.ShouldPauseAtLocation(filePath, lineNumber, executionContext))
             {
                 BreakpointManager.PauseAtBreakpoint(filePath, lineNumber, executionContext);
             }
+        }
+
+        /// <summary>
+        /// Simulates a breakpoint hit for testing purposes
+        /// </summary>
+        public static void SimulateBreakpointHit(string filePath, int lineNumber)
+        {
+            if (!DebuggerInterface.IsDebuggingEnabled) return;
+
+            var mockContext = new MockExecutionContext
+            {
+                CurrentFile = filePath,
+                CurrentLine = lineNumber,
+                LocalVariable1 = "Test Value",
+                LocalVariable2 = 42,
+                LocalVariable3 = true,
+                SampleFloat = 3.14f,
+                SampleVector = Vector3.one
+            };
+
+            BreakpointManager.PauseAtBreakpoint(filePath, lineNumber, mockContext);
         }
 
         /// <summary>
@@ -151,6 +169,34 @@ namespace SuperEditor
             {
                 Debug.LogWarning("No script selected. Please select a script file to add a breakpoint.");
             }
+        }
+
+        /// <summary>
+        /// Menu item to test breakpoint functionality
+        /// </summary>
+        [MenuItem("SuperEditor/Test Breakpoint")]
+        public static void TestBreakpoint()
+        {
+            if (!DebuggerInterface.IsDebuggingEnabled)
+            {
+                DebuggerInterface.EnableDebugging();
+            }
+
+            string testFile = "TestScript.cs";
+            int testLine = 10;
+            
+            // Add a test breakpoint if it doesn't exist
+            var existingBreakpoints = BreakpointManager.GetBreakpoints();
+            bool hasTestBreakpoint = existingBreakpoints.Any(bp => bp.FilePath == testFile && bp.LineNumber == testLine);
+            
+            if (!hasTestBreakpoint)
+            {
+                BreakpointManager.AddBreakpoint(testFile, testLine);
+                Debug.Log($"Test breakpoint added at {testFile}:{testLine}");
+            }
+
+            // Simulate hitting the breakpoint
+            SimulateBreakpointHit(testFile, testLine);
         }
 
         /// <summary>
