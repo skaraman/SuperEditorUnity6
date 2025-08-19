@@ -1469,6 +1469,21 @@ namespace UnityEditor
         Error = 3
     }
 
+    /// <summary>
+    /// Enumeration specifying the current pause state of the Editor
+    /// </summary>
+    public enum PauseState
+    {
+        /// <summary>
+        /// Occurs as soon as the Editor is unpaused, which may occur during either edit mode or play mode
+        /// </summary>
+        Unpaused = 0,
+        /// <summary>
+        /// Occurs as soon as the Editor is paused, which may occur during either edit mode or play mode
+        /// </summary>
+        Paused = 1
+    }
+
     public enum HierarchyType
     {
         Assets = 0,
@@ -1514,7 +1529,7 @@ namespace UnityEditor
         public static event CallbackFunction update;
         public static event CallbackFunction delayCall;
         public static event System.Action<UnityEngine.PlayModeStateChange> playModeStateChanged;
-        public static event System.Action<bool> pauseStateChanged;
+        public static event System.Action<PauseState> pauseStateChanged;
         
         // Debugging methods
         public static void Step() 
@@ -1523,8 +1538,8 @@ namespace UnityEditor
             {
                 // Step one frame when paused
                 // In real Unity, this would advance execution by one frame
-                pauseStateChanged?.Invoke(false);
-                pauseStateChanged?.Invoke(true);
+                pauseStateChanged?.Invoke(PauseState.Unpaused);
+                pauseStateChanged?.Invoke(PauseState.Paused);
             }
         }
         
@@ -1537,7 +1552,7 @@ namespace UnityEditor
         internal static void TriggerPauseStateChange(bool paused) 
         {
             isPaused = paused;
-            pauseStateChanged?.Invoke(paused);
+            pauseStateChanged?.Invoke(paused ? PauseState.Paused : PauseState.Unpaused);
         }
     }
 
