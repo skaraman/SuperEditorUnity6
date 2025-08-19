@@ -32,7 +32,25 @@ Debug.LogWarning($"GameObject {go.name} does not have a component attached.");
 **Problem:** Older C# language versions don't support string interpolation
 **Solution:** Ensure project uses C# 6.0 or later (current project uses `<LangVersion>latest</LangVersion>`)
 
-##### 3. Special Characters in Interpolated Strings
+##### 3. Parser Bug with String Interpolation Detection
+**Problem:** SuperEditor's custom C# parser was not correctly detecting interpolated strings
+```csharp
+// ❌ This was incorrectly parsed as a regular string instead of interpolated string
+Debug.LogWarning($"No parts found for equipped gearId: {gearId}");
+```
+
+**Root Cause:** The `ScanStringLiteral` method was called for `$` characters but didn't check if it was followed by `"` to indicate an interpolated string. Instead, it treated all `$"..."` patterns as regular string literals.
+
+**Solution:** Modified the `ScanStringLiteral` method in `Editor/_b1/_bd5.cs` to detect `$"` patterns and call `ScanInterpolatedStringLiteral` instead.
+
+```csharp
+// ✅ Now correctly parsed as interpolated string
+Debug.LogWarning($"No parts found for equipped gearId: {gearId}");
+Debug.LogWarning($"Error message: {ex.Message}");
+Debug.LogWarning($"Status code: {statusCode}");
+```
+
+##### 4. Special Characters in Interpolated Strings
 **Problem:** Certain characters can cause parsing issues
 ```csharp
 // ❌ Potential issue with article "a" before component name
@@ -48,7 +66,7 @@ Debug.LogWarning($"GameObject {go.name} does not have an AllIn1AnimatorInspector
 Debug.LogWarning($"GameObject '{go.name}' does not have a AllIn1AnimatorInspector component attached.");
 ```
 
-##### 4. Alternative Approaches for Compatibility
+##### 5. Alternative Approaches for Compatibility
 
 If string interpolation continues to cause issues, use these alternatives:
 

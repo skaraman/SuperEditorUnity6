@@ -1139,6 +1139,15 @@ namespace AHO
         // Token: 0x0600020F RID: 527 RVA: 0x0001D278 File Offset: 0x0001B478
         private void ScanStringLiteral(string line, ref int startAt, GCE.PHFG formatedLine)
         {
+            // Check if this is an interpolated string ($"...")
+            bool isInterpolatedString = startAt < line.Length && line[startAt] == '$' && 
+                                       startAt + 1 < line.Length && line[startAt + 1] == '"';
+            if (isInterpolatedString)
+            {
+                this.ScanInterpolatedStringLiteral(line, ref startAt, formatedLine);
+                return;
+            }
+
             int i;
             for (i = startAt + 1; i < line.Length; i++)
             {
