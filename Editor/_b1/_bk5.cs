@@ -1809,7 +1809,11 @@ namespace AHO
                                 this._ADS = i;
                                 this._CIL = true;
                                 this._zv5 = true;
-                                Event.current.Use();
+                                bool flag30 = Event.current.type != EventType.Repaint;
+                                if (flag30)
+                                {
+                                    Event.current.Use();
+                                }
                             }
                             int num3 = 0;
                             bool flag29 = _zt6._zt7 == null;
