@@ -1106,7 +1106,7 @@ namespace AHO
             this._ASF.Add(new _bh2._AJQ("primaryExpression", (_AJU203 - new _bh2._BEG(_AJU204)) | new _bh2._BDS(new _bh2._ACW[]
             {
                 "new",
-                ((_AJU47 | ".EXPECTEDTYPE") - (_AJU205 | _AJU24)) | _AJU25 | _AJU206,
+                ((_AJU47 | ".EXPECTEDTYPE") - (_AJU205 | _AJU24)) | _AJU25 | _AJU206 | (_AJU74 - new _bh2._BDU(_AJU232)),
                 new _bh2._BEG(_AJU204)
             }) | _AJU211));
             _bh2._AEN _AJU214 = new _bh2._AEN("parenExpression");
