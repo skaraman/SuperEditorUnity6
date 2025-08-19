@@ -376,7 +376,11 @@ namespace OKPF
                     bool @bool = EditorPrefs.GetBool("FavoritesSort", false);
                     if (@bool)
                     {
-                        Event.current.Use();
+                        bool flag32 = Event.current.type != EventType.Repaint;
+                        if (flag32)
+                        {
+                            Event.current.Use();
+                        }
                     }
                 }
                 else
@@ -387,7 +391,11 @@ namespace OKPF
                         DragAndDrop.PrepareStartDrag();
                         DragAndDrop.SetGenericData("favorite", currentObject);
                         DragAndDrop.objectReferences = new UnityEngine.Object[] { currentObject };
-                        Event.current.Use();
+                        bool flag31 = Event.current.type != EventType.Repaint;
+                        if (flag31)
+                        {
+                            Event.current.Use();
+                        }
                     }
                     else
                     {
