@@ -1568,11 +1568,91 @@ namespace UnityEditor
 
     public static class EditorGUIUtility
     {
+        private static readonly System.Collections.Generic.Dictionary<string, UnityEngine.Texture2D> _iconCache = 
+            new System.Collections.Generic.Dictionary<string, UnityEngine.Texture2D>();
+            
         public static UnityEngine.GUIContent IconContent(string name) => new UnityEngine.GUIContent("", null, name);
+        public static UnityEngine.GUIContent ObjectContent(UnityEngine.Object obj, System.Type type)
+        {
+            // When running with mock Unity (no actual Unity installation), provide appropriate fallback icons
+            string typeName = "";
+            
+            if (obj != null)
+            {
+                typeName = obj.GetType().Name;
+            }
+            else if (type != null)
+            {
+                typeName = type.Name;
+            }
+            
+            // Create a simple texture for common Unity component types to avoid question mark icons
+            var texture = CreateFallbackIcon(typeName);
+            return new UnityEngine.GUIContent(typeName, texture, $"Mock {typeName} component");
+        }
+        
+        private static UnityEngine.Texture2D CreateFallbackIcon(string typeName)
+        {
+            // Check cache first to avoid recreating textures
+            if (_iconCache.TryGetValue(typeName, out var cachedTexture))
+            {
+                return cachedTexture;
+            }
+            
+            try
+            {
+                // Create a simple 16x16 colored square as fallback icon instead of question mark
+                var texture = new UnityEngine.Texture2D(16, 16);
+                var color = GetColorForType(typeName);
+                
+                // Fill the texture with the color
+                for (int x = 0; x < 16; x++)
+                {
+                    for (int y = 0; y < 16; y++)
+                    {
+                        texture.SetPixel(x, y, color);
+                    }
+                }
+                
+                texture.Apply();
+                
+                // Cache the texture for future use
+                _iconCache[typeName] = texture;
+                return texture;
+            }
+            catch
+            {
+                // If texture creation fails, return null so the system can use its normal fallback
+                return null;
+            }
+        }
+        
+        private static UnityEngine.Color GetColorForType(string typeName)
+        {
+            // Provide different colors for different component types to make them distinguishable
+            return typeName switch
+            {
+                "Transform" => UnityEngine.Color.blue,
+                "Renderer" => UnityEngine.Color.green,
+                "MeshRenderer" => UnityEngine.Color.green,
+                "Camera" => UnityEngine.Color.cyan,
+                "Light" => UnityEngine.Color.yellow,
+                "AudioSource" => UnityEngine.Color.magenta,
+                "Rigidbody" => UnityEngine.Color.red,
+                "Collider" => UnityEngine.Color.gray,
+                "MonoBehaviour" => UnityEngine.Color.white,
+                _ => UnityEngine.Color.lightGray // Default fallback color
+            };
+        }
+        
         public static void PingObject(UnityEngine.Object obj) { }
         public static float singleLineHeight => 18f;
         public static float standardVerticalSpacing => 2f;
         public static string systemCopyBuffer { get; set; } = "";
+        public static void SetIconSize(UnityEngine.Vector2 size) { }
+        public static int GetObjectPickerControlID() => 332553;
+        public static UnityEngine.Object GetObjectPickerObject() => null;
+        public static bool isProSkin => false;
     }
 
     public static class EditorUtility
