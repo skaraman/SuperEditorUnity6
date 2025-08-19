@@ -212,7 +212,7 @@ namespace AHO
             window._zm5 = editor._ABT._CFF;
             window._zm5.normal.textColor = (_bg8._BAF ? editor._CJL().text : editor._CJL().tooltipText);
             window._zm5.font = EditorStyles.standardFont;
-            window._zm5.fontSize = _bg8._AEP + 12;
+            window._zm5.fontSize = Math.Max(12, _bg8._AEP + 12);
             window._zm6 = new GUIStyle(window._zm5);
             window._zm6.font = EditorStyles.boldFont;
             window.position = rect;
