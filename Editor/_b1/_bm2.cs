@@ -1087,6 +1087,7 @@ namespace AHO
             _bh2._AEN _AJU204 = new _bh2._AEN("primaryExpressionPart");
             _bh2._AEN _AJU205 = new _bh2._AEN("objectCreationExpression");
             _bh2._AEN _AJU206 = new _bh2._AEN("anonymousObjectCreationExpression");
+            _bh2._AEN _AJU232 = new _bh2._AEN("objectOrCollectionInitializer");
             _bh2._AEN _AJU207 = new _bh2._AEN("sizeofExpression");
             _bh2._AEN _AJU208 = new _bh2._AEN("checkedExpression");
             _bh2._AEN _AJU209 = new _bh2._AEN("uncheckedExpression");
@@ -1197,7 +1198,6 @@ namespace AHO
                 _AJR = _bc1.MemberDeclarator
             });
             this._ASF.Add(new _bh2._AJQ("memberAccessExpression", _AJU20));
-            _bh2._AEN _AJU232 = new _bh2._AEN("objectOrCollectionInitializer");
             _bh2._AEN _AJU233 = new _bh2._AEN("objectInitializer");
             _bh2._AEN _AJU234 = new _bh2._AEN("collectionInitializer");
             _bh2._AEN _AJU235 = new _bh2._AEN("elementInitializerList");
