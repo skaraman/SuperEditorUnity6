@@ -61,6 +61,14 @@ namespace UnityEngine
         HideAndDontSave = 61
     }
 
+    public enum PlayModeStateChange
+    {
+        EnteredEditMode = 0,
+        ExitingEditMode = 1,
+        EnteredPlayMode = 2,
+        ExitingPlayMode = 3
+    }
+
     public struct Vector2
     {
         public float x, y;
@@ -1130,6 +1138,20 @@ namespace UnityEngine
         public static void Log(object message) { }
         public static void LogWarning(object message) { }
         public static void LogError(object message) { }
+        public static void LogException(System.Exception exception) { }
+        
+        // Breakpoint functionality
+        public static void Break() 
+        { 
+#if !NO_UNITY
+            if (UnityEditor.EditorApplication.isPlaying)
+            {
+                UnityEditor.EditorApplication.isPaused = true;
+            }
+#endif
+        }
+        
+        public static bool isDebugBuild => true;
     }
 
     public static class GUILayout
@@ -1473,6 +1495,50 @@ namespace UnityEditor
         protected virtual void OnEnable() { }
         protected virtual void OnDisable() { }
         protected virtual void Update() { }
+    }
+
+    public static class EditorApplication
+    {
+        // Delegate types
+        public delegate void CallbackFunction();
+        
+        // Play mode control
+        public static bool isPlaying { get; set; } = false;
+        public static bool isPaused { get; set; } = false;
+        public static bool isPlayingOrWillChangePlaymode => isPlaying;
+        public static bool isCompiling { get; set; } = false;
+        public static bool isUpdating { get; set; } = false;
+        public static double timeSinceStartup => System.DateTime.Now.TimeOfDay.TotalSeconds;
+        
+        // Events for debugging
+        public static event CallbackFunction update;
+        public static event CallbackFunction delayCall;
+        public static event System.Action<UnityEngine.PlayModeStateChange> playModeStateChanged;
+        public static event System.Action<bool> pauseStateChanged;
+        
+        // Debugging methods
+        public static void Step() 
+        {
+            if (isPaused && isPlaying)
+            {
+                // Step one frame when paused
+                // In real Unity, this would advance execution by one frame
+                pauseStateChanged?.Invoke(false);
+                pauseStateChanged?.Invoke(true);
+            }
+        }
+        
+        public static void ExecuteMenuItem(string menuItemPath) { }
+        
+        // Internal trigger methods for testing
+        internal static void TriggerUpdate() => update?.Invoke();
+        internal static void TriggerDelayCall() => delayCall?.Invoke();
+        internal static void TriggerPlayModeStateChange(UnityEngine.PlayModeStateChange state) => playModeStateChanged?.Invoke(state);
+        internal static void TriggerPauseStateChange(bool paused) 
+        {
+            isPaused = paused;
+            pauseStateChanged?.Invoke(paused);
+        }
     }
 
     public static class EditorGUILayout
