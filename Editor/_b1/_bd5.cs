@@ -1367,7 +1367,7 @@ namespace AHO
                 while (i < length)
                 {
                     char c = line[i];
-                    bool flag3 = c == '$' || c == '"' || (c == '@' && (int)(c + '\u0001') < length && line[(int)(c + '\u0001')] == '"');
+                    bool flag3 = c == '$' || c == '"' || (c == '@' && i + 1 < length && line[i + 1] == '"');
                     if (flag3)
                     {
                         this.ScanStringLiteral(line, ref i, null);
