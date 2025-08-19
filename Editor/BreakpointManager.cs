@@ -35,6 +35,10 @@ namespace SuperEditor
             // Subscribe to editor events
             EditorApplication.pauseStateChanged += OnPauseStateChanged;
             
+            // Subscribe to the enhanced debugger interface
+            DebuggerInterface.ExecutionPaused += OnDebuggerPaused;
+            DebuggerInterface.ExecutionResumed += OnDebuggerResumed;
+            
             isInitialized = true;
         }
 
@@ -117,7 +121,7 @@ namespace SuperEditor
         }
 
         /// <summary>
-        /// Pauses execution at a breakpoint
+        /// Pauses execution at a breakpoint using the enhanced debugger interface
         /// </summary>
         public static void PauseAtBreakpoint(string filePath, int lineNumber, object context = null)
         {
@@ -128,60 +132,72 @@ namespace SuperEditor
             if (breakpoint != null)
             {
                 breakpoint.HitCount++;
+                breakpoint.LastHit = DateTime.Now;
                 
-                // Capture variable state
-                CaptureVariableState(context);
+                // Use the enhanced debugger interface for better integration
+                var reason = $"Breakpoint hit: {System.IO.Path.GetFileName(filePath)}:{lineNumber}";
+                DebuggerInterface.PauseExecution(reason, context);
                 
-                // Pause Unity
-                if (EditorApplication.isPlaying)
-                {
-                    EditorApplication.isPaused = true;
-                    UnityEngine.Debug.Log($"Execution paused at breakpoint: {filePath}:{lineNumber}");
-                }
-
                 // Trigger breakpoint hit event
                 BreakpointHit?.Invoke(breakpoint);
             }
         }
 
         /// <summary>
-        /// Resumes execution from a paused state
+        /// Resumes execution from a paused state using enhanced debugger interface
         /// </summary>
         public static void Resume()
         {
-            if (EditorApplication.isPaused)
-            {
-                EditorApplication.isPaused = false;
-                UnityEngine.Debug.Log("Execution resumed");
-            }
+            DebuggerInterface.ResumeExecution();
         }
 
         /// <summary>
-        /// Steps to the next line of execution
+        /// Steps to the next line of execution using enhanced debugger interface
         /// </summary>
         public static void StepNext()
         {
-            if (EditorApplication.isPaused)
-            {
-                EditorApplication.Step();
-                UnityEngine.Debug.Log("Stepped to next line");
-            }
+            DebuggerInterface.StepNext();
         }
 
         /// <summary>
-        /// Gets the current variable state
+        /// Gets the current variable state from the enhanced debugger interface
         /// </summary>
         public static Dictionary<string, object> GetVariableState()
         {
-            return new Dictionary<string, object>(lastKnownVariables);
+            var debuggerContext = DebuggerInterface.GetExecutionContext();
+            var combined = new Dictionary<string, object>(lastKnownVariables);
+            
+            // Add variables from the enhanced debugger interface
+            foreach (var kvp in debuggerContext)
+            {
+                combined[kvp.Key] = kvp.Value;
+            }
+            
+            return combined;
         }
 
         /// <summary>
-        /// Forces a debug break - equivalent to Debug.Break()
+        /// Forces a debug break using enhanced debugger interface
         /// </summary>
         public static void ForceBreak()
         {
-            UnityEngine.Debug.Break();
+            DebuggerInterface.ForceBreak();
+        }
+
+        private static void OnDebuggerPaused(DebugInfo debugInfo)
+        {
+            // Update our variable state when the debugger pauses
+            foreach (var kvp in debugInfo.Variables)
+            {
+                lastKnownVariables[kvp.Key] = kvp.Value;
+            }
+            
+            UnityEngine.Debug.Log($"Debugger paused: {debugInfo.Reason}");
+        }
+
+        private static void OnDebuggerResumed()
+        {
+            UnityEngine.Debug.Log("Debugger resumed");
         }
 
         private static void OnPauseStateChanged(PauseState pauseState)

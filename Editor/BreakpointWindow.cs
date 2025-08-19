@@ -21,12 +21,19 @@ namespace SuperEditor
         private float lastVariableRefresh = 0f;
         private const float VARIABLE_REFRESH_INTERVAL = 0.5f; // Refresh every 0.5 seconds
 
-        [MenuItem("Window/SuperEditor/Breakpoint Debugger")]
+        [MenuItem("Window/SuperEditor/Debugger Interface")]
         public static void ShowWindow()
         {
-            var window = GetWindow<BreakpointWindow>("Breakpoint Debugger");
+            var window = GetWindow<BreakpointWindow>("SuperEditor Debugger");
             window.minSize = new Vector2(400, 300);
             window.Show();
+        }
+
+        // Additional menu item for quick access
+        [MenuItem("SuperEditor/Open Debugger Interface")]
+        public static void OpenDebugger()
+        {
+            ShowWindow();
         }
 
         private void OnEnable()
@@ -34,6 +41,17 @@ namespace SuperEditor
             // Subscribe to breakpoint events
             BreakpointManager.BreakpointHit += OnBreakpointHit;
             BreakpointManager.PauseStateChanged += OnPauseStateChanged;
+            
+            // Subscribe to enhanced debugger interface events
+            DebuggerInterface.DebuggingStateChanged += OnDebuggingStateChanged;
+            DebuggerInterface.ExecutionPaused += OnExecutionPaused;
+            DebuggerInterface.ExecutionResumed += OnExecutionResumed;
+            
+            // Enable debugging by default when window is opened
+            if (!DebuggerInterface.IsDebuggingEnabled)
+            {
+                DebuggerInterface.EnableDebugging();
+            }
         }
 
         private void OnDisable()
@@ -41,12 +59,18 @@ namespace SuperEditor
             // Unsubscribe from events
             BreakpointManager.BreakpointHit -= OnBreakpointHit;
             BreakpointManager.PauseStateChanged -= OnPauseStateChanged;
+            DebuggerInterface.DebuggingStateChanged -= OnDebuggingStateChanged;
+            DebuggerInterface.ExecutionPaused -= OnExecutionPaused;
+            DebuggerInterface.ExecutionResumed -= OnExecutionResumed;
         }
 
         private void OnGUI()
         {
             EditorGUILayout.BeginVertical();
 
+            DrawDebuggerStatus();
+            EditorGUILayout.Space();
+            
             DrawToolbar();
             EditorGUILayout.Space();
             
@@ -61,12 +85,58 @@ namespace SuperEditor
             EditorGUILayout.EndVertical();
         }
 
+        private void DrawDebuggerStatus()
+        {
+            EditorGUILayout.BeginHorizontal(EditorStyles.helpBox);
+            
+            // Debugging status
+            var statusColor = DebuggerInterface.IsDebuggingEnabled ? Color.green : Color.red;
+            var statusText = DebuggerInterface.IsDebuggingEnabled ? "DEBUGGING ENABLED" : "DEBUGGING DISABLED";
+            
+            var oldColor = GUI.color;
+            GUI.color = statusColor;
+            EditorGUILayout.LabelField(statusText, EditorStyles.boldLabel);
+            GUI.color = oldColor;
+            
+            GUILayout.FlexibleSpace();
+            
+            // Play/Pause status
+            if (EditorApplication.isPlaying)
+            {
+                var playStatus = EditorApplication.isPaused ? "PAUSED" : "PLAYING";
+                var playColor = EditorApplication.isPaused ? Color.yellow : Color.cyan;
+                GUI.color = playColor;
+                EditorGUILayout.LabelField(playStatus, EditorStyles.boldLabel);
+                GUI.color = oldColor;
+            }
+            else
+            {
+                GUI.color = Color.gray;
+                EditorGUILayout.LabelField("NOT PLAYING", EditorStyles.boldLabel);
+                GUI.color = oldColor;
+            }
+            
+            // Toggle debugging button
+            if (GUILayout.Button(DebuggerInterface.IsDebuggingEnabled ? "Disable Debug" : "Enable Debug", GUILayout.Width(100)))
+            {
+                if (DebuggerInterface.IsDebuggingEnabled)
+                {
+                    DebuggerInterface.DisableDebugging();
+                }
+                else
+                {
+                    DebuggerInterface.EnableDebugging();
+                }
+            }
+            
+            EditorGUILayout.EndHorizontal();
+        }
         private void DrawToolbar()
         {
             EditorGUILayout.BeginHorizontal(EditorStyles.toolbar);
 
             // Play mode controls
-            GUI.enabled = EditorApplication.isPlaying;
+            GUI.enabled = EditorApplication.isPlaying && DebuggerInterface.IsDebuggingEnabled;
             
             if (EditorApplication.isPaused)
             {
@@ -84,7 +154,7 @@ namespace SuperEditor
             {
                 if (GUILayout.Button("Pause", EditorStyles.toolbarButton))
                 {
-                    EditorApplication.isPaused = true;
+                    DebuggerInterface.PauseExecution("Manual pause from toolbar");
                 }
             }
 
@@ -92,11 +162,13 @@ namespace SuperEditor
             
             GUILayout.FlexibleSpace();
 
-            // Force break button
+            // Force break button - always enabled when debugging
+            GUI.enabled = DebuggerInterface.IsDebuggingEnabled;
             if (GUILayout.Button("Force Break", EditorStyles.toolbarButton))
             {
                 BreakpointManager.ForceBreak();
             }
+            GUI.enabled = true;
 
             // Show/hide variables toggle
             showVariables = GUILayout.Toggle(showVariables, "Variables", EditorStyles.toolbarButton);
@@ -268,6 +340,25 @@ namespace SuperEditor
             return $"{type.Name}: {value}";
         }
 
+        private void OnDebuggingStateChanged(bool isEnabled)
+        {
+            Repaint();
+            Debug.Log($"Debugging state changed: {(isEnabled ? "Enabled" : "Disabled")}");
+        }
+
+        private void OnExecutionPaused(DebugInfo debugInfo)
+        {
+            // Bring window to front when execution is paused
+            Focus();
+            Repaint();
+            Debug.Log($"Execution paused in debugger window: {debugInfo.Reason}");
+        }
+
+        private void OnExecutionResumed()
+        {
+            Repaint();
+            Debug.Log("Execution resumed in debugger window");
+        }
         private void OnBreakpointHit(BreakpointInfo breakpoint)
         {
             // Bring window to front when breakpoint is hit
