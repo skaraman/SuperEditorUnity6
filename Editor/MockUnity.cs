@@ -1568,6 +1568,9 @@ namespace UnityEditor
 
     public static class EditorGUIUtility
     {
+        private static readonly System.Collections.Generic.Dictionary<string, UnityEngine.Texture2D> _iconCache = 
+            new System.Collections.Generic.Dictionary<string, UnityEngine.Texture2D>();
+            
         public static UnityEngine.GUIContent IconContent(string name) => new UnityEngine.GUIContent("", null, name);
         public static UnityEngine.GUIContent ObjectContent(UnityEngine.Object obj, System.Type type)
         {
@@ -1590,21 +1593,38 @@ namespace UnityEditor
         
         private static UnityEngine.Texture2D CreateFallbackIcon(string typeName)
         {
-            // Create a simple 16x16 colored square as fallback icon instead of question mark
-            var texture = new UnityEngine.Texture2D(16, 16);
-            var color = GetColorForType(typeName);
-            
-            // Fill the texture with the color
-            for (int x = 0; x < 16; x++)
+            // Check cache first to avoid recreating textures
+            if (_iconCache.TryGetValue(typeName, out var cachedTexture))
             {
-                for (int y = 0; y < 16; y++)
-                {
-                    texture.SetPixel(x, y, color);
-                }
+                return cachedTexture;
             }
             
-            texture.Apply();
-            return texture;
+            try
+            {
+                // Create a simple 16x16 colored square as fallback icon instead of question mark
+                var texture = new UnityEngine.Texture2D(16, 16);
+                var color = GetColorForType(typeName);
+                
+                // Fill the texture with the color
+                for (int x = 0; x < 16; x++)
+                {
+                    for (int y = 0; y < 16; y++)
+                    {
+                        texture.SetPixel(x, y, color);
+                    }
+                }
+                
+                texture.Apply();
+                
+                // Cache the texture for future use
+                _iconCache[typeName] = texture;
+                return texture;
+            }
+            catch
+            {
+                // If texture creation fails, return null so the system can use its normal fallback
+                return null;
+            }
         }
         
         private static UnityEngine.Color GetColorForType(string typeName)
