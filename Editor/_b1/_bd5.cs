@@ -1177,6 +1177,7 @@ namespace AHO
         private void ScanInterpolatedStringLiteral(string line, ref int startAt, GCE.PHFG formatedLine)
         {
             SyntaxToken.Kind kind = SyntaxToken.Kind.InterpolatedStringStartLiteral;
+            int originalStartAt = startAt; // Preserve the original starting position
             int i = startAt + 1;
             bool flag = i < line.Length && line[i] == '"';
             if (flag)
@@ -1261,7 +1262,7 @@ namespace AHO
                 bool flag13 = kind == SyntaxToken.Kind.InterpolatedStringStartLiteral;
                 if (flag13)
                 {
-                    SyntaxToken syntaxToken4 = new SyntaxToken(SyntaxToken.Kind.InterpolatedStringWholeLiteral, line.Substring(startAt, i - startAt));
+                    SyntaxToken syntaxToken4 = new SyntaxToken(SyntaxToken.Kind.InterpolatedStringWholeLiteral, line.Substring(originalStartAt, i - originalStartAt));
                     formatedLine.EOIA.Add(syntaxToken4);
                     syntaxToken4.AIGN = formatedLine;
                 }
