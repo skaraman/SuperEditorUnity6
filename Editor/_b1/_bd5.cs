@@ -1243,12 +1243,13 @@ namespace AHO
                         }
                         i++;
                     }
-                    i++;
                     bool flag10 = c == '"';
                     if (flag10)
                     {
+                        i++; // Move past the closing quote
                         break;
                     }
+                    i++;
                     bool flag11 = c == '\\' && i < line.Length;
                     if (flag11)
                     {
