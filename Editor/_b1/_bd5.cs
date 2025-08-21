@@ -1195,7 +1195,7 @@ namespace AHO
                             bool flag4 = formatedLine != null;
                             if (flag4)
                             {
-                                SyntaxToken syntaxToken = new SyntaxToken(kind, line.Substring(startAt, i - startAt));
+                                SyntaxToken syntaxToken = new SyntaxToken(kind, line.Substring(originalStartAt, i - originalStartAt));
                                 formatedLine.EOIA.Add(syntaxToken);
                                 syntaxToken.AIGN = formatedLine;
                             }

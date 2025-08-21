@@ -52,22 +52,38 @@ Debug.LogWarning($"Error message: {ex.Message}");
 Debug.LogWarning($"Status code: {statusCode}");
 ```
 
-##### 4. Parser Bug with String Interpolation Display Truncation
+##### 4. Parser Bug with String Interpolation Display Truncation (FIXED)
 **Problem:** SuperEditor's custom C# parser was incorrectly displaying interpolated strings, showing only partial content
 ```csharp
 // ❌ This line: else gearId = $"{equip.Value.gearId}_{equip.Key}";
 // Was displayed as: {equip.Key}";
 // Missing the first part of the interpolated string
+
+// ❌ This line: Debug.LogError($"No parts found for equipped gearId: {gearId}");
+// Was displayed as: {gearId}");
+// Missing the first part of the interpolated string
 ```
 
-**Root Cause:** The `ScanInterpolatedStringLiteral` method was using the wrong starting position when creating the final token. It used the position after the last interpolation instead of the original starting position of the entire interpolated string.
+**Root Cause:** The `ScanInterpolatedStringLiteral` method was using the wrong starting position when creating the first token. It used the current `startAt` position instead of the preserved `originalStartAt` position of the entire interpolated string.
 
-**Solution:** Modified the `ScanInterpolatedStringLiteral` method in `Editor/_b1/_bd5.cs` to preserve the original starting position and use it for the final token creation.
+**Solution:** Fixed line 1198 in `ScanInterpolatedStringLiteral` method in `Editor/_b1/_bd5.cs` to use `originalStartAt` instead of `startAt` when creating the first token:
 
+```csharp
+// Changed from:
+SyntaxToken syntaxToken = new SyntaxToken(kind, line.Substring(startAt, i - startAt));
+
+// To:
+SyntaxToken syntaxToken = new SyntaxToken(kind, line.Substring(originalStartAt, i - originalStartAt));
+```
+
+**Result:**
 ```csharp
 // ✅ Now correctly displays full interpolated string
 else gearId = $"{equip.Value.gearId}_{equip.Key}";
 // Properly shows: $"{equip.Value.gearId}_{equip.Key}"
+
+Debug.LogError($"No parts found for equipped gearId: {gearId}");
+// Properly shows: $"No parts found for equipped gearId: {gearId}"
 ```
 
 ##### 5. Special Characters in Interpolated Strings
