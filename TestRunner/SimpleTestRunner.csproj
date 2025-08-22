@@ -1,0 +1,12 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net8.0</TargetFramework>
+    <RootNamespace>SuperEditor.Tests</RootNamespace>
+    <AssemblyName>ComprehensiveTestValidator</AssemblyName>
+    <LangVersion>latest</LangVersion>
+    <StartupObject>SuperEditor.Tests.ComprehensiveTestValidator</StartupObject>
+  </PropertyGroup>
+
+</Project>
