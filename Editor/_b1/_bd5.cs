@@ -1173,105 +1173,222 @@ namespace AHO
             startAt = i;
         }
 
+        /// <summary>
+        /// Find matching closing brace for balanced bracket counting
+        /// </summary>
+        /// <param name="line">The line to search in</param>
+        /// <param name="start">Starting position (should be at opening brace)</param>
+        /// <returns>Index of matching closing brace, or -1 if not found</returns>
+        private int FindMatchingBrace(string line, int start)
+        {
+            int braceCount = 1;
+            int i = start + 1;
+            
+            while (i < line.Length && braceCount > 0)
+            {
+                char c = line[i];
+                if (c == '{') 
+                {
+                    braceCount++;
+                }
+                else if (c == '}') 
+                {
+                    braceCount--;
+                }
+                else if (c == '"' || c == '\'')
+                {
+                    // Handle string literals - skip over them to avoid counting braces inside strings
+                    char quote = c;
+                    i++;
+                    while (i < line.Length && line[i] != quote)
+                    {
+                        if (line[i] == '\\' && i + 1 < line.Length)
+                        {
+                            i++; // Skip escaped character
+                        }
+                        i++;
+                    }
+                }
+                else if (c == '/' && i + 1 < line.Length)
+                {
+                    // Handle comments
+                    if (line[i + 1] == '/')
+                    {
+                        // Single line comment - skip to end
+                        break;
+                    }
+                    else if (line[i + 1] == '*')
+                    {
+                        // Multi-line comment - skip until */
+                        i += 2;
+                        while (i + 1 < line.Length && !(line[i] == '*' && line[i + 1] == '/'))
+                        {
+                            i++;
+                        }
+                        if (i + 1 < line.Length) i++; // Skip the '/'
+                    }
+                }
+                i++;
+            }
+            
+            return braceCount == 0 ? i - 1 : -1;
+        }
+
+        /// <summary>
+        /// Scan the start of an interpolated string ($" part)
+        /// </summary>
+        private void ScanInterpolatedStringStart(string line, int originalStartAt, int currentPos, GCE.PHFG formattedLine, SyntaxToken.Kind tokenKind)
+        {
+            if (formattedLine != null)
+            {
+                SyntaxToken syntaxToken = new SyntaxToken(tokenKind, line.Substring(originalStartAt, currentPos - originalStartAt));
+                formattedLine.EOIA.Add(syntaxToken);
+                syntaxToken.AIGN = formattedLine;
+            }
+        }
+
+        /// <summary>
+        /// Scan an expression within interpolated string ({expression} part)
+        /// </summary>
+        private void ScanInterpolatedStringExpression(string line, int startAt, int endAt, GCE.PHFG formattedLine)
+        {
+            if (formattedLine != null)
+            {
+                this.Tokenize(line.Substring(startAt, endAt - startAt), formattedLine);
+            }
+        }
+
+        /// <summary>
+        /// Scan format specifier within interpolated string ({expression:format} part)
+        /// </summary>
+        private void ScanInterpolatedStringFormat(string line, int formatStart, int formatEnd, GCE.PHFG formattedLine)
+        {
+            if (formattedLine != null)
+            {
+                // Add the colon punctuator
+                SyntaxToken colonToken = new SyntaxToken(SyntaxToken.Kind.Punctuator, ":");
+                formattedLine.EOIA.Add(colonToken);
+                colonToken.AIGN = formattedLine;
+
+                // Add the format specifier if there is content
+                int formatLength = formatEnd - (formatStart + 1);
+                if (formatLength > 0)
+                {
+                    SyntaxToken formatToken = new SyntaxToken(SyntaxToken.Kind.InterpolatedStringFormatLiteral, 
+                        line.Substring(formatStart + 1, formatLength));
+                    formattedLine.EOIA.Add(formatToken);
+                    formatToken.AIGN = formattedLine;
+                }
+            }
+        }
+
+        /// <summary>
+        /// Scan the end of an interpolated string (closing " and closing brace)
+        /// </summary>
+        private void ScanInterpolatedStringEnd(string line, int originalStartAt, int endPos, GCE.PHFG formattedLine, SyntaxToken.Kind tokenKind)
+        {
+            if (formattedLine != null)
+            {
+                SyntaxToken syntaxToken = new SyntaxToken(tokenKind, line.Substring(originalStartAt, endPos - originalStartAt));
+                formattedLine.EOIA.Add(syntaxToken);
+                syntaxToken.AIGN = formattedLine;
+            }
+        }
+
+        // Interpolation state tracking for proper state management
+        private enum InterpolationState
+        {
+            StringContent,
+            Expression,
+            FormatSpecifier
+        }
+
         // Token: 0x06000210 RID: 528 RVA: 0x0001D314 File Offset: 0x0001B514
         private void ScanInterpolatedStringLiteral(string line, ref int startAt, GCE.PHFG formatedLine)
         {
             SyntaxToken.Kind kind = SyntaxToken.Kind.InterpolatedStringStartLiteral;
             int originalStartAt = startAt; // Preserve the original starting position
-            int i = startAt + 1;
-            bool flag = i < line.Length && line[i] == '"';
-            if (flag)
+            // Fix starting position - skip both '$' and '"' directly
+            int i = startAt + 2;
+            
+            while (i < line.Length)
             {
-                i++;
-                while (i < line.Length)
+                char c = line[i];
+                bool flag2 = c == '{';
+                if (flag2)
                 {
-                    char c = line[i];
-                    bool flag2 = c == '{';
-                    if (flag2)
+                    bool flag3 = i + 1 < line.Length && line[i + 1] == '{';
+                    if (!flag3)
                     {
-                        bool flag3 = i + 1 < line.Length && line[i + 1] == '{';
-                        if (!flag3)
+                        // Found start of interpolation expression
+                        ScanInterpolatedStringStart(line, originalStartAt, i, formatedLine, kind);
+                        kind = SyntaxToken.Kind.InterpolatedStringMidLiteral;
+                        startAt = i;
+                        
+                        // Use the original SkipStringInterpolation logic
+                        int num = this.SkipStringInterpolation(line, ref i);
+                        bool flag5 = formatedLine != null;
+                        if (flag5)
                         {
-                            bool flag4 = formatedLine != null;
-                            if (flag4)
+                            bool flag6 = num >= 0;
+                            if (flag6)
                             {
-                                SyntaxToken syntaxToken = new SyntaxToken(kind, line.Substring(originalStartAt, i - originalStartAt));
-                                formatedLine.EOIA.Add(syntaxToken);
-                                syntaxToken.AIGN = formatedLine;
-                            }
-                            kind = SyntaxToken.Kind.InterpolatedStringMidLiteral;
-                            startAt = i;
-                            int num = this.SkipStringInterpolation(line, ref i);
-                            bool flag5 = formatedLine != null;
-                            if (flag5)
-                            {
-                                bool flag6 = num >= 0;
-                                if (flag6)
+                                ScanInterpolatedStringExpression(line, startAt + 1, num, formatedLine);
+                                bool flag7 = line[num] == ':';
+                                if (flag7)
                                 {
-                                    this.Tokenize(line.Substring(startAt, num - startAt), formatedLine);
-                                    bool flag7 = line[num] == ':';
-                                    if (flag7)
-                                    {
-                                        SyntaxToken syntaxToken2 = new SyntaxToken(SyntaxToken.Kind.Punctuator, ":");
-                                        formatedLine.EOIA.Add(syntaxToken2);
-                                        syntaxToken2.AIGN = formatedLine;
-                                        int num2 = i - (num + 1);
-                                        bool flag8 = num2 > 0;
-                                        if (flag8)
-                                        {
-                                            syntaxToken2 = new SyntaxToken(SyntaxToken.Kind.InterpolatedStringFormatLiteral, line.Substring(num + 1, num2));
-                                            formatedLine.EOIA.Add(syntaxToken2);
-                                            syntaxToken2.AIGN = formatedLine;
-                                        }
-                                    }
-                                }
-                                else
-                                {
-                                    this.Tokenize(line.Substring(startAt, i - startAt), formatedLine);
-                                }
-                                bool flag9 = i < line.Length && line[i] == '}';
-                                if (flag9)
-                                {
-                                    i++;
-                                    SyntaxToken syntaxToken3 = new SyntaxToken(SyntaxToken.Kind.Punctuator, "}");
-                                    formatedLine.EOIA.Add(syntaxToken3);
-                                    syntaxToken3.AIGN = formatedLine;
+                                    ScanInterpolatedStringFormat(line, num, i, formatedLine);
                                 }
                             }
-                            startAt = i;
-                            continue;
+                            else
+                            {
+                                ScanInterpolatedStringExpression(line, startAt + 1, i, formatedLine);
+                            }
+                            
+                            // Add closing brace token
+                            bool flag9 = i < line.Length && line[i] == '}';
+                            if (flag9)
+                            {
+                                i++;
+                                SyntaxToken syntaxToken3 = new SyntaxToken(SyntaxToken.Kind.Punctuator, "}");
+                                formatedLine.EOIA.Add(syntaxToken3);
+                                syntaxToken3.AIGN = formatedLine;
+                            }
                         }
-                        i++;
+                        
+                        startAt = i;
+                        continue;
                     }
-                    bool flag10 = c == '"';
-                    if (flag10)
-                    {
-                        i++; // Move past the closing quote
-                        break;
-                    }
-                    i++;
-                    bool flag11 = c == '\\' && i < line.Length;
-                    if (flag11)
-                    {
-                        i++;
-                    }
+                    i++; // Skip the second '{' in escaped "{{"
+                }
+                bool flag10 = c == '"';
+                if (flag10)
+                {
+                    i++; // Move past the closing quote
+                    break;
+                }
+                i++;
+                bool flag11 = c == '\\' && i < line.Length;
+                if (flag11)
+                {
+                    i++; // Skip escaped character
                 }
             }
+            
+            // Create final token
             bool flag12 = formatedLine != null;
             if (flag12)
             {
                 bool flag13 = kind == SyntaxToken.Kind.InterpolatedStringStartLiteral;
                 if (flag13)
                 {
-                    SyntaxToken syntaxToken4 = new SyntaxToken(SyntaxToken.Kind.InterpolatedStringWholeLiteral, line.Substring(originalStartAt, i - originalStartAt));
-                    formatedLine.EOIA.Add(syntaxToken4);
-                    syntaxToken4.AIGN = formatedLine;
+                    // Whole interpolated string without any expressions
+                    ScanInterpolatedStringEnd(line, originalStartAt, i, formatedLine, SyntaxToken.Kind.InterpolatedStringWholeLiteral);
                 }
                 else
                 {
-                    SyntaxToken syntaxToken4 = new SyntaxToken(SyntaxToken.Kind.InterpolatedStringEndLiteral, line.Substring(originalStartAt, i - originalStartAt));
-                    formatedLine.EOIA.Add(syntaxToken4);
-                    syntaxToken4.AIGN = formatedLine;
+                    // End part of interpolated string
+                    ScanInterpolatedStringEnd(line, originalStartAt, i, formatedLine, SyntaxToken.Kind.InterpolatedStringEndLiteral);
                 }
             }
             startAt = i;
