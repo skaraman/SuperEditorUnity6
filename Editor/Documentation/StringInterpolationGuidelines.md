@@ -66,14 +66,24 @@ Debug.LogWarning($"Status code: {statusCode}");
 
 **Root Cause:** The `ScanInterpolatedStringLiteral` method was using the wrong starting position when creating the first token. It used the current `startAt` position instead of the preserved `originalStartAt` position of the entire interpolated string.
 
-**Solution:** Fixed line 1198 in `ScanInterpolatedStringLiteral` method in `Editor/_b1/_bd5.cs` to use `originalStartAt` instead of `startAt` when creating the first token:
+**Solution:** Fixed two instances in `ScanInterpolatedStringLiteral` method in `Editor/_b1/_bd5.cs` to use `originalStartAt` instead of `startAt` when creating tokens:
 
+1. **Line 1198** - Fixed the first token creation:
 ```csharp
 // Changed from:
 SyntaxToken syntaxToken = new SyntaxToken(kind, line.Substring(startAt, i - startAt));
 
 // To:
 SyntaxToken syntaxToken = new SyntaxToken(kind, line.Substring(originalStartAt, i - originalStartAt));
+```
+
+2. **Line 1272** - Fixed the InterpolatedStringEndLiteral token creation:
+```csharp
+// Changed from:
+SyntaxToken syntaxToken4 = new SyntaxToken(SyntaxToken.Kind.InterpolatedStringEndLiteral, line.Substring(startAt, i - startAt));
+
+// To:
+SyntaxToken syntaxToken4 = new SyntaxToken(SyntaxToken.Kind.InterpolatedStringEndLiteral, line.Substring(originalStartAt, i - originalStartAt));
 ```
 
 **Result:**

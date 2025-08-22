@@ -1269,7 +1269,7 @@ namespace AHO
                 }
                 else
                 {
-                    SyntaxToken syntaxToken4 = new SyntaxToken(SyntaxToken.Kind.InterpolatedStringEndLiteral, line.Substring(startAt, i - startAt));
+                    SyntaxToken syntaxToken4 = new SyntaxToken(SyntaxToken.Kind.InterpolatedStringEndLiteral, line.Substring(originalStartAt, i - originalStartAt));
                     formatedLine.EOIA.Add(syntaxToken4);
                     syntaxToken4.AIGN = formatedLine;
                 }
