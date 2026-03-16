@@ -39,4 +39,3 @@ namespace SuperEditor.Tests
         }
     }
 }
-}
